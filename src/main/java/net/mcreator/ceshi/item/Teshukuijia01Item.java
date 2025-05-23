@@ -47,22 +47,4 @@ public abstract class Teshukuijia01Item extends ArmorItem {
 			super(ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(225)));
 		}
 	}
-
-	public static class Chestplate extends Teshukuijia01Item {
-		public Chestplate() {
-			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(225)));
-		}
-	}
-
-	public static class Leggings extends Teshukuijia01Item {
-		public Leggings() {
-			super(ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(225)));
-		}
-	}
-
-	public static class Boots extends Teshukuijia01Item {
-		public Boots() {
-			super(ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(225)));
-		}
-	}
 }

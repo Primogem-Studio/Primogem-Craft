@@ -921,9 +921,6 @@ public class PrimogemcraftModItems {
 	public static final DeferredItem<Item> QWGGZFENLIE_A = REGISTRY.register("qwggzfenlie_a", QwggzfenlieAItem::new);
 	public static final DeferredItem<Item> QWGGZFENLIE_B = REGISTRY.register("qwggzfenlie_b", QwggzfenlieBItem::new);
 	public static final DeferredItem<Item> TESHUKUIJIA_01_HELMET = REGISTRY.register("teshukuijia_01_helmet", Teshukuijia01Item.Helmet::new);
-	public static final DeferredItem<Item> TESHUKUIJIA_01_CHESTPLATE = REGISTRY.register("teshukuijia_01_chestplate", Teshukuijia01Item.Chestplate::new);
-	public static final DeferredItem<Item> TESHUKUIJIA_01_LEGGINGS = REGISTRY.register("teshukuijia_01_leggings", Teshukuijia01Item.Leggings::new);
-	public static final DeferredItem<Item> TESHUKUIJIA_01_BOOTS = REGISTRY.register("teshukuijia_01_boots", Teshukuijia01Item.Boots::new);
 	public static final DeferredItem<Item> GUZHONGLINGJIAN = REGISTRY.register("guzhonglingjian", GuzhonglingjianItem::new);
 	public static final DeferredItem<Item> YDGGZ = REGISTRY.register("ydggz", YdggzItem::new);
 	public static final DeferredItem<Item> SHENMILIHE = REGISTRY.register("shenmilihe", ShenmiliheItem::new);

@@ -4,11 +4,11 @@
   "definition": {
     "enableHelmet": true,
     "textureHelmet": "pingzhang",
-    "enableBody": true,
+    "enableBody": false,
     "textureBody": "pingzhang",
-    "enableLeggings": true,
+    "enableLeggings": false,
     "textureLeggings": "pingzhang",
-    "enableBoots": true,
+    "enableBoots": false,
     "textureBoots": "pingzhang",
     "creativeTabs": [],
     "armorTextureFile": "teshu01_",
@@ -56,6 +56,18 @@
     "bodyImmuneToFire": false,
     "leggingsImmuneToFire": false,
     "bootsImmuneToFire": false,
+    "helmetGlowCondition": {
+      "fixedValue": false
+    },
+    "bodyGlowCondition": {
+      "fixedValue": false
+    },
+    "leggingsGlowCondition": {
+      "fixedValue": false
+    },
+    "bootsGlowCondition": {
+      "fixedValue": false
+    },
     "helmetPiglinNeutral": {
       "fixedValue": false
     },
