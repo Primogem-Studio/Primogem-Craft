@@ -30,6 +30,15 @@
         "condition": {
           "name": "Bhmgsx"
         }
+      },
+      {
+        "model": "Modeljinguangshiti01_Converted_Converted",
+        "texture": "qq_caise.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "ScmjSx"
+        }
       }
     ],
     "animations": [],
@@ -132,6 +141,11 @@
     "entityDataEntries": [
       {
         "name": "bhmg",
+        "type": "logic",
+        "value": false
+      },
+      {
+        "name": "scmj",
         "type": "logic",
         "value": false
       }

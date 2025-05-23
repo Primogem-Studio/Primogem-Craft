@@ -37131,6 +37131,72 @@
           "src/main/resources/data/primogemcraft/painting_variant/jinqi_0.json"
         ]
       }
+    },
+    {
+      "name": "Scmj",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scmj",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ceshi/item/ScmjItem.java",
+          "src/main/resources/assets/primogemcraft/models/item/scmj_helmet.json"
+        ]
+      }
+    },
+    {
+      "name": "ScmjSx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scmj_sx",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/ScmjSxProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Scmjsx0",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scmjsx_0",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Scmjsx0Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "e1",
+            "type": "entity"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Scyjpf",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scyjpf",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/scyjpf.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -39350,6 +39416,7 @@
       "Blocks.MAGMA"
     ],
     "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:Scmj.helmet",
       "~CUSTOM:Teshukuijia01.helmet",
       "~CUSTOM:Axhjt.helmet",
       "~CUSTOM:Axzst.helmet",
@@ -39636,7 +39703,8 @@
       "Qwqxqwrhj",
       "Qwjcdm",
       "Qwxydsw",
-      "Qwxydd"
+      "Qwxydd",
+      "Scmj"
     ],
     "CUSTOM:Yuanshigongjuxuanxiangka": [
       "Jiuchanzhiyuangao",
@@ -40494,9 +40562,12 @@
       "item.primogemcraft.qwxxgg.description_0": "§6与异木果实效果一致，但",
       "item.primogemcraft.qwxxgg.description_1": "§e临终效果期间，每次拾取经验球将",
       "gui.primogemcraft.guiheitaxinyindao.tooltip_sscdang_qian_mei_you_zu_gou_de_sui_ji_cuo_wu_dai_ma_qiu": "§c当前没有足够的随机错误代码球！",
+      "item.primogemcraft.scmj_helmet.description_2": "§7祈愿“出金”率§e大大提升",
+      "item.primogemcraft.scmj_helmet.description_1": "§7用于防御或装饰，同时将",
       "item.primogemcraft.jlf.description_1": "§7 - 概率获得金锭（10%）",
       "item.primogemcraft.jlkjzs_leggings.description_0": "§6套装效果：",
       "item.primogemcraft.jlf.description_0": "§d破坏木制方块时：",
+      "item.primogemcraft.scmj_helmet.description_0": "§b彩蛋物品",
       "gui.primogemcraft.zhangquanzhezhinanggui.label_wu_pin_lan": "物品栏",
       "item.primogemcraft.jlf.description_2": "§7 - 小概率获得精致摩拉（1%）",
       "item.primogemcraft.qwxgjb.description_0": "§6§l随着时间推移，恢复生命值",
@@ -42539,6 +42610,7 @@
       "item.primogemcraft.sanyuezhufu": "§d三月祝福",
       "item.primogemcraft.qwjlbhy": "§5§l『奇物』§a俱乐部火焰",
       "item.primogemcraft.zstkj_chestplate.description_4": "§9+0.5 套装值（紫金）",
+      "item.primogemcraft.scmj_helmet": "色彩墨镜",
       "item.primogemcraft.ranyuankuai": "§c燃愿玛瑙 块",
       "item.primogemcraft.szkjtie_leggings.description_4": "§9+0.5 套装值（碧翡）",
       "item.primogemcraft.djtt_leggings.description_4": "§9+0.5 套装值（青金）",
@@ -43205,9 +43277,12 @@
       "item.primogemcraft.qwxxgg.description_0": "§6与异木果实效果一致，但",
       "item.primogemcraft.qwxxgg.description_1": "§e临终效果期间，每次拾取经验球将",
       "gui.primogemcraft.guiheitaxinyindao.tooltip_sscdang_qian_mei_you_zu_gou_de_sui_ji_cuo_wu_dai_ma_qiu": "§c当前没有足够的随机错误代码球！",
+      "item.primogemcraft.scmj_helmet.description_2": "§7祈愿“出金”率§e大大提升",
+      "item.primogemcraft.scmj_helmet.description_1": "§7用于防御或装饰，同时将",
       "item.primogemcraft.jlf.description_1": "§7 - 概率获得金锭（10%）",
       "item.primogemcraft.jlkjzs_leggings.description_0": "§6套装效果：",
       "item.primogemcraft.jlf.description_0": "§d破坏木制方块时：",
+      "item.primogemcraft.scmj_helmet.description_0": "§b彩蛋物品",
       "gui.primogemcraft.zhangquanzhezhinanggui.label_wu_pin_lan": "Inventory",
       "item.primogemcraft.jlf.description_2": "§7 - 小概率获得精致摩拉（1%）",
       "item.primogemcraft.qwxgjb.description_0": "§6§l随着时间推移，恢复生命值",
@@ -45250,6 +45325,7 @@
       "item.primogemcraft.sanyuezhufu": "§dBlessing of March",
       "item.primogemcraft.qwjlbhy": "§5§l『奇物』§a俱乐部火焰",
       "item.primogemcraft.zstkj_chestplate.description_4": "§9+0.5 套装值（紫金）",
+      "item.primogemcraft.scmj_helmet": "色彩墨镜",
       "item.primogemcraft.ranyuankuai": "§cVajrada Amethyst Chunk",
       "item.primogemcraft.szkjtie_leggings.description_4": "§9+0.5 套装值（碧翡）",
       "item.primogemcraft.djtt_leggings.description_4": "§9+0.5 套装值（青金）",
@@ -45913,9 +45989,12 @@
       "item.primogemcraft.qwxxgg.description_0": "§6与异木果实效果一致，但",
       "item.primogemcraft.qwxxgg.description_1": "§e临终效果期间，每次拾取经验球将",
       "gui.primogemcraft.guiheitaxinyindao.tooltip_sscdang_qian_mei_you_zu_gou_de_sui_ji_cuo_wu_dai_ma_qiu": "§c当前没有足够的随机错误代码球！",
+      "item.primogemcraft.scmj_helmet.description_2": "§7祈愿“出金”率§e大大提升",
+      "item.primogemcraft.scmj_helmet.description_1": "§7用于防御或装饰，同时将",
       "item.primogemcraft.jlf.description_1": "§7 - 概率获得金锭（10%）",
       "item.primogemcraft.jlkjzs_leggings.description_0": "§6套装效果：",
       "item.primogemcraft.jlf.description_0": "§d破坏木制方块时：",
+      "item.primogemcraft.scmj_helmet.description_0": "§b彩蛋物品",
       "gui.primogemcraft.zhangquanzhezhinanggui.label_wu_pin_lan": "物品栏",
       "item.primogemcraft.jlf.description_2": "§7 - 小概率获得精致摩拉（1%）",
       "item.primogemcraft.qwxgjb.description_0": "§6§l随着时间推移，恢复生命值",
@@ -47955,6 +48034,7 @@
       "item.primogemcraft.sanyuezhufu": "§d三月祝福",
       "item.primogemcraft.qwjlbhy": "§5§l『奇物』§a俱乐部火焰",
       "item.primogemcraft.zstkj_chestplate.description_4": "§9+0.5 套装值（紫金）",
+      "item.primogemcraft.scmj_helmet": "色彩墨镜",
       "item.primogemcraft.ranyuankuai": "§c燃愿玛瑙 块",
       "item.primogemcraft.szkjtie_leggings.description_4": "§9+0.5 套装值（碧翡）",
       "item.primogemcraft.djtt_leggings.description_4": "§9+0.5 套装值（青金）",
@@ -48079,7 +48159,7 @@
   "workspaceSettings": {
     "modid": "primogemcraft",
     "modName": "原石工艺",
-    "version": "25w16a",
+    "version": "25w21a",
     "description": "这是一个无厘头的娱乐性mod，包含一些米游物品和梗",
     "author": "Pepper某人, hackerm大神, MCreator",
     "websiteURL": "https://www.mcmod.cn/class/10429.html",

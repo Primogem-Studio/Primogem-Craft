@@ -143,6 +143,7 @@ public class Qiyuanshiti_chushengxiaoguoProcedure {
 							entityiterator.getPersistentData().putDouble("chouka", (entityiterator.getPersistentData().getDouble("chouka") - 1));
 							entityiterator.getPersistentData().putDouble("chouka_jiacheng", (entityiterator.getPersistentData().getDouble("chouka_jiacheng") - 1));
 							entity.getPersistentData().putBoolean("chouka_jiance_1", true);
+							Scmjsx0Procedure.execute(entityiterator, entity);
 						}
 					}
 				}
@@ -160,6 +161,7 @@ public class Qiyuanshiti_chushengxiaoguoProcedure {
 								entityiterator.getPersistentData().putDouble("chouka_jiacheng", (entityiterator.getPersistentData().getDouble("chouka_jiacheng") - 1));
 							}
 							entity.getPersistentData().putBoolean("chouka_jiance_2", true);
+							Scmjsx0Procedure.execute(entityiterator, entity);
 						}
 					}
 				}

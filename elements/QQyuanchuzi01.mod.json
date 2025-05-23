@@ -21,7 +21,17 @@
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
-    "modelLayers": [],
+    "modelLayers": [
+      {
+        "model": "Modeljinguangshiti01_Converted_Converted",
+        "texture": "texture.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "ScmjSx"
+        }
+      }
+    ],
     "animations": [],
     "modelWidth": 0.3,
     "modelHeight": 0.3,
@@ -119,7 +129,13 @@
     "raidCelebrationSound": {
       "value": ""
     },
-    "entityDataEntries": [],
+    "entityDataEntries": [
+      {
+        "name": "scmj",
+        "type": "logic",
+        "value": false
+      }
+    ],
     "whenMobIsHurt": {
       "name": "Qystsx"
     },

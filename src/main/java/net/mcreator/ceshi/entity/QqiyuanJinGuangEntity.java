@@ -42,6 +42,7 @@ import javax.annotation.Nullable;
 
 public class QqiyuanJinGuangEntity extends PathfinderMob {
 	public static final EntityDataAccessor<Boolean> DATA_bhmg = SynchedEntityData.defineId(QqiyuanJinGuangEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<Boolean> DATA_scmj = SynchedEntityData.defineId(QqiyuanJinGuangEntity.class, EntityDataSerializers.BOOLEAN);
 
 	public QqiyuanJinGuangEntity(EntityType<QqiyuanJinGuangEntity> type, Level world) {
 		super(type, world);
@@ -54,6 +55,7 @@ public class QqiyuanJinGuangEntity extends PathfinderMob {
 	protected void defineSynchedData(SynchedEntityData.Builder builder) {
 		super.defineSynchedData(builder);
 		builder.define(DATA_bhmg, false);
+		builder.define(DATA_scmj, false);
 	}
 
 	@Override
@@ -138,6 +140,7 @@ public class QqiyuanJinGuangEntity extends PathfinderMob {
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putBoolean("Databhmg", this.entityData.get(DATA_bhmg));
+		compound.putBoolean("Datascmj", this.entityData.get(DATA_scmj));
 	}
 
 	@Override
@@ -145,6 +148,8 @@ public class QqiyuanJinGuangEntity extends PathfinderMob {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Databhmg"))
 			this.entityData.set(DATA_bhmg, compound.getBoolean("Databhmg"));
+		if (compound.contains("Datascmj"))
+			this.entityData.set(DATA_scmj, compound.getBoolean("Datascmj"));
 	}
 
 	@Override

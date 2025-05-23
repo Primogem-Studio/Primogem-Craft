@@ -27,6 +27,10 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.ceshi.procedures.QystsxProcedure;
@@ -36,11 +40,19 @@ import net.mcreator.ceshi.procedures.QQyuanchuziProcedure;
 import javax.annotation.Nullable;
 
 public class QQyuanchuzi01Entity extends PathfinderMob {
+	public static final EntityDataAccessor<Boolean> DATA_scmj = SynchedEntityData.defineId(QQyuanchuzi01Entity.class, EntityDataSerializers.BOOLEAN);
+
 	public QQyuanchuzi01Entity(EntityType<QQyuanchuzi01Entity> type, Level world) {
 		super(type, world);
 		xpReward = 1;
 		setNoAi(false);
 		setPersistenceRequired();
+	}
+
+	@Override
+	protected void defineSynchedData(SynchedEntityData.Builder builder) {
+		super.defineSynchedData(builder);
+		builder.define(DATA_scmj, false);
 	}
 
 	@Override
@@ -117,6 +129,19 @@ public class QQyuanchuzi01Entity extends PathfinderMob {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata);
 		Qiyuanshiti_chushengxiaoguoProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
 		return retval;
+	}
+
+	@Override
+	public void addAdditionalSaveData(CompoundTag compound) {
+		super.addAdditionalSaveData(compound);
+		compound.putBoolean("Datascmj", this.entityData.get(DATA_scmj));
+	}
+
+	@Override
+	public void readAdditionalSaveData(CompoundTag compound) {
+		super.readAdditionalSaveData(compound);
+		if (compound.contains("Datascmj"))
+			this.entityData.set(DATA_scmj, compound.getBoolean("Datascmj"));
 	}
 
 	@Override
