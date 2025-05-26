@@ -3,12 +3,15 @@
   "category": "misc",
   "pattern": [
     "aaa",
-    "aaa",
+    "aba",
     "aaa"
   ],
   "key": {
     "a": {
       "tag": "pgc:qyhx_hc"
+    },
+    "b": {
+      "item": "primogemcraft:yssp"
     }
   },
   "result": {
