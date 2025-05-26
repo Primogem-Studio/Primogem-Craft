@@ -14,11 +14,7 @@ public class Scmjsx0Procedure {
 		if (e1 == null || entity == null)
 			return;
 		boolean o1 = false;
-		if ((e1 instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == PrimogemcraftModItems.SCMJ_HELMET.get()) {
-			o1 = true;
-		} else {
-			o1 = false;
-		}
+		o1 = (e1 instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == PrimogemcraftModItems.SCMJ_HELMET.get();
 		if (entity instanceof QqiyuanJinGuangEntity _datEntSetL)
 			_datEntSetL.getEntityData().set(QqiyuanJinGuangEntity.DATA_scmj, o1);
 		if (entity instanceof QQyuanchuzi01Entity _datEntSetL)
