@@ -47,11 +47,10 @@ public class Qiyuanshiti_chushengxiaoguoProcedure {
 					final Vec3 _center = new Vec3(x, (y - 10), z);
 					for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(40 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 						if (entityiterator.getPersistentData().getDouble("chouka") > 0) {
+							PrimogemcraftModVariables.PlayerVariables _vars = entityiterator.getData(PrimogemcraftModVariables.PLAYER_VARIABLES);
 							a = QyYoHuaProcedure.execute(entityiterator, 0.01, 0.03, 10);
 							b = QyYoHuaProcedure.execute(entityiterator, 0.1, 0.2, 5);
-							var QjBl = entityiterator.getData(PrimogemcraftModVariables.PLAYER_VARIABLES);
-							PrimogemcraftModVariables.PlayerVariables _vars = entityiterator.getData(PrimogemcraftModVariables.PLAYER_VARIABLES);
-							if (Math.random() < a || QjBl.jin_baodi >= 49) {
+							if (Math.random() < a || _vars.jin_baodi >= 49) {
 								_vars.jin_baodi = 0;
 								if (!entity.level().isClientSide())
 									entity.discard();
@@ -61,10 +60,10 @@ public class Qiyuanshiti_chushengxiaoguoProcedure {
 										entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 									}
 								}
-								_vars.wj_ck_jin = QjBl.wj_ck_jin++;
-								_vars.zi_baodi = QjBl.zi_baodi++;
+								_vars.wj_ck_jin++;
+								_vars.zi_baodi++;
 								entityiterator.getPersistentData().putBoolean("xiangyu", false);
-							} else if (Math.random() < b || QjBl.zi_baodi >= 9) {
+							} else if (Math.random() < b || _vars.zi_baodi >= 9) {
 								if (!entity.level().isClientSide())
 									entity.discard();
 								if (world instanceof ServerLevel _level) {
@@ -73,19 +72,19 @@ public class Qiyuanshiti_chushengxiaoguoProcedure {
 										entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 									}
 								}
-								_vars.wj_ck_zi = QjBl.wj_ck_zi++;
+								_vars.wj_ck_zi++;
 								if (!entityiterator.getPersistentData().getBoolean("xiangyu")) {
-									_vars.jin_baodi = QjBl.jin_baodi++;
+									_vars.jin_baodi++;
 								}
-								_vars.zi_baodi = QjBl.zi_baodi = 0;
+								_vars.zi_baodi = 0;
 								entityiterator.getPersistentData().putBoolean("xiangyu", false);
 							} else {
 								entity.getPersistentData().putString("qiyuan_guishu", (entityiterator.getDisplayName().getString()));
-								_vars.wj_ck_lan = QjBl.wj_ck_lan++;
+								_vars.wj_ck_lan++;
 								if (!entityiterator.getPersistentData().getBoolean("xiangyu")) {
-									_vars.jin_baodi = QjBl.jin_baodi++;
+									_vars.jin_baodi++;
 								}
-								_vars.zi_baodi = QjBl.zi_baodi++;
+								_vars.zi_baodi++;
 								entityiterator.getPersistentData().putDouble("chouka", (entityiterator.getPersistentData().getDouble("chouka") - 1));
 								entityiterator.getPersistentData().putDouble("chouka_jiacheng", (entityiterator.getPersistentData().getDouble("chouka_jiacheng") - 1));
 								entity.getPersistentData().putBoolean("chouka_jiance_0", true);
