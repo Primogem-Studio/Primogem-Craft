@@ -37197,6 +37197,37 @@
           "src/main/resources/data/primogemcraft/recipe/scyjpf.json"
         ]
       }
+    },
+    {
+      "name": "QyYoHua",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "qy_yo_hua",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/QyYoHuaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "zhia",
+            "type": "number"
+          },
+          {
+            "name": "zhib",
+            "type": "number"
+          },
+          {
+            "name": "zhic",
+            "type": "number"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
