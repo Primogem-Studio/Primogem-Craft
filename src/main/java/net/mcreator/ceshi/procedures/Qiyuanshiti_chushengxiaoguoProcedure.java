@@ -36,6 +36,7 @@ public class Qiyuanshiti_chushengxiaoguoProcedure {
 		boolean o1 = false;
 		double a = 0;
 		double b = 0;
+		//////////////////*史完了别看了不想改了头疼@PepperMO///////////////////////
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.DJQJKJXGXIANZHI, (int) (entity instanceof QQQyuanchulan01Entity ? 40 : 20), 0, false, false));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
