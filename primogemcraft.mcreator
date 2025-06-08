@@ -37228,6 +37228,36 @@
           }
         ]
       }
+    },
+    {
+      "name": "QyNBT",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "qy_nbt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/QyNBTProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entitiss",
+            "type": "entity"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "baodi",
+            "type": "logic"
+          },
+          {
+            "name": "zhi",
+            "type": "string"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [

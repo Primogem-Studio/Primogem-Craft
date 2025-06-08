@@ -36,7 +36,6 @@ public class Qiyuanshiti_chushengxiaoguoProcedure {
 		boolean o1 = false;
 		double a = 0;
 		double b = 0;
-		//////////////////*史完了别看了不想改了头疼@PepperMO///////////////////////
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.DJQJKJXGXIANZHI, (int) (entity instanceof QQQyuanchulan01Entity ? 40 : 20), 0, false, false));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -79,15 +78,12 @@ public class Qiyuanshiti_chushengxiaoguoProcedure {
 								_vars.zi_baodi = 0;
 								entityiterator.getPersistentData().putBoolean("xiangyu", false);
 							} else {
-								entity.getPersistentData().putString("qiyuan_guishu", (entityiterator.getDisplayName().getString()));
 								_vars.wj_ck_lan++;
 								if (!entityiterator.getPersistentData().getBoolean("xiangyu")) {
 									_vars.jin_baodi++;
 								}
 								_vars.zi_baodi++;
-								entityiterator.getPersistentData().putDouble("chouka", (entityiterator.getPersistentData().getDouble("chouka") - 1));
-								entityiterator.getPersistentData().putDouble("chouka_jiacheng", (entityiterator.getPersistentData().getDouble("chouka_jiacheng") - 1));
-								entity.getPersistentData().putBoolean("chouka_jiance_0", true);
+								QyNBTProcedure.execute(entityiterator, entity, true, "0");
 								entityiterator.getPersistentData().putBoolean("xiangyu", false);
 							}
 							_vars.syncPlayerVariables(entityiterator);
@@ -102,10 +98,7 @@ public class Qiyuanshiti_chushengxiaoguoProcedure {
 					final Vec3 _center = new Vec3(x, (y - 10), z);
 					for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(40 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 						if (entityiterator.getPersistentData().getBoolean("chouka")) {
-							entity.getPersistentData().putString("qiyuan_guishu", (entityiterator.getDisplayName().getString()));
-							entityiterator.getPersistentData().putDouble("chouka", (entityiterator.getPersistentData().getDouble("chouka") - 1));
-							entityiterator.getPersistentData().putDouble("chouka_jiacheng", (entityiterator.getPersistentData().getDouble("chouka_jiacheng") - 1));
-							entity.getPersistentData().putBoolean("chouka_jiance_1", true);
+							QyNBTProcedure.execute(entityiterator, entity, true, "1");
 							Scmjsx0Procedure.execute(entityiterator, entity);
 						}
 					}
@@ -115,15 +108,15 @@ public class Qiyuanshiti_chushengxiaoguoProcedure {
 				{
 					final Vec3 _center = new Vec3(x, (y - 10), z);
 					for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(40 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
-						if (entityiterator.getPersistentData().getBoolean("chouka") || entityiterator.getPersistentData().getBoolean("baodi_shoudong")) {
-							entity.getPersistentData().putString("qiyuan_guishu", (entityiterator.getDisplayName().getString()));
-							if (entityiterator.getPersistentData().getBoolean("baodi_shoudong")) {
-								entityiterator.getPersistentData().putBoolean("baodi_shoudong", false);
+						var n1 = entityiterator.getPersistentData();
+						var n2 = n1.getBoolean("baodi_shoudong");
+						if (n1.getBoolean("chouka") || n2) {
+							if (n2) {
+								n1.putBoolean("baodi_shoudong", false);
+								QyNBTProcedure.execute(entityiterator, entity, false, "2");
 							} else {
-								entityiterator.getPersistentData().putDouble("chouka", (entityiterator.getPersistentData().getDouble("chouka") - 1));
-								entityiterator.getPersistentData().putDouble("chouka_jiacheng", (entityiterator.getPersistentData().getDouble("chouka_jiacheng") - 1));
+								QyNBTProcedure.execute(entityiterator, entity, true, "2");
 							}
-							entity.getPersistentData().putBoolean("chouka_jiance_2", true);
 							Scmjsx0Procedure.execute(entityiterator, entity);
 						}
 					}
@@ -152,17 +145,15 @@ public class Qiyuanshiti_chushengxiaoguoProcedure {
 				{
 					final Vec3 _center = new Vec3(x, (y - 10), z);
 					for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(40 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
-						if ((entity.getPersistentData().getString("qiyuan_guishu")).equals(entityiterator.getDisplayName().getString())) {
-							if (!(entityiterator instanceof ServerPlayer _plr55 && _plr55.level() instanceof ServerLevel
-									&& _plr55.getAdvancements().getOrStartProgress(_plr55.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:bhmg"))).isDone())) {
-								if (entityiterator instanceof ServerPlayer _player) {
-									AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:bhmg"));
-									if (_adv != null) {
-										AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-										if (!_ap.isDone()) {
-											for (String criteria : _ap.getRemainingCriteria())
-												_player.getAdvancements().award(_adv, criteria);
-										}
+						if ((entity.getPersistentData().getString("qiyuan_guishu")).equals(entityiterator.getDisplayName().getString()) && !(entityiterator instanceof ServerPlayer _plr30 && _plr30.level() instanceof ServerLevel
+								&& _plr30.getAdvancements().getOrStartProgress(_plr30.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:bhmg"))).isDone())) {
+							if (entityiterator instanceof ServerPlayer _player) {
+								AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:bhmg"));
+								if (_adv != null) {
+									AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+									if (!_ap.isDone()) {
+										for (String criteria : _ap.getRemainingCriteria())
+											_player.getAdvancements().award(_adv, criteria);
 									}
 								}
 							}
