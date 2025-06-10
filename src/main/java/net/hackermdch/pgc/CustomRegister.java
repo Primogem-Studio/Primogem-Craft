@@ -15,7 +15,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-import static net.hacker.genshincraft.GenshinCraft.MOD_ID;
 import static net.mcreator.ceshi.PrimogemcraftMod.MODID;
 
 public class CustomRegister {
@@ -26,7 +25,7 @@ public class CustomRegister {
     public static final Supplier<LootItemConditionType> IS_CHEST = LOOT_CONDITION_TYPES.register("is_chest", () -> new LootItemConditionType(IsChestCondition.CODEC));
     public static final Supplier<RecipeType<StardustConverterRecipe>> STARDUST_CONVERTER = RECIPE_TYPES.register("stardust_converter", () -> new RecipeType<>() {
         public String toString() {
-            return String.format("%s:%s", MOD_ID, "stardust_converter");
+            return String.format("%s:%s", MODID, "stardust_converter");
         }
     });
 
