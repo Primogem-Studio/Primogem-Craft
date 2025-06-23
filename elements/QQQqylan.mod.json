@@ -826,25 +826,11 @@
           {
             "type": "item",
             "item": {
-              "value": "CUSTOM:Jlbj"
+              "value": "CUSTOM:Qwsp"
             },
             "weight": 1,
             "minCount": 1,
-            "maxCount": 1,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
-              "value": "CUSTOM:Qwkwzj"
-            },
-            "weight": 1,
-            "minCount": 1,
-            "maxCount": 1,
+            "maxCount": 3,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
@@ -1050,20 +1036,6 @@
           {
             "type": "item",
             "item": {
-              "value": "CUSTOM:Wanshinang"
-            },
-            "weight": 1,
-            "minCount": 1,
-            "maxCount": 1,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
               "value": "CUSTOM:Yishijieyuanmumuban"
             },
             "weight": 1,
@@ -1097,34 +1069,6 @@
             "weight": 1,
             "minCount": 1,
             "maxCount": 8,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
-              "value": "CUSTOM:Xiangdanganlao"
-            },
-            "weight": 1,
-            "minCount": 1,
-            "maxCount": 1,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
-              "value": "CUSTOM:Wufengjian"
-            },
-            "weight": 1,
-            "minCount": 1,
-            "maxCount": 1,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
