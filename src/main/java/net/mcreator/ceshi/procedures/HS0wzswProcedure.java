@@ -1,5 +1,7 @@
 package net.mcreator.ceshi.procedures;
 
+import net.neoforged.neoforge.items.ItemHandlerHelper;
+
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.block.Block;
@@ -22,6 +24,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
+import net.mcreator.ceshi.init.PrimogemcraftModItems;
 import net.mcreator.ceshi.init.PrimogemcraftModBlocks;
 
 public class HS0wzswProcedure {
@@ -60,10 +63,11 @@ public class HS0wzswProcedure {
 							world.destroyBlock(_pos, false);
 						}
 					}
-					{
-						final String _tagName = "shi_yong";
-						final boolean _tagValue = true;
-						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putBoolean(_tagName, _tagValue));
+					itemstack.shrink(1);
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PrimogemcraftModItems.QWSP.get()).copy();
+						_setstack.setCount(Mth.nextInt(RandomSource.create(), 1, 8));
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 					return true;
 				} else {
