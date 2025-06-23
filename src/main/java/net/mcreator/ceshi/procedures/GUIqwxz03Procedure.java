@@ -49,39 +49,42 @@ public class GUIqwxz03Procedure {
 				}
 			}, _bpos);
 		}
-		tag1 = "c:curio/" + _tag;
-		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = TagItemProcedure.execute(tag1).copy();
-			_setstack.setCount(1);
-			((Slot) _slots.get(0)).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		i1 = TagItemProcedure.execute(tag1).copy();
-		item0 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).copy();
-		item1 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).copy();
-		while (i1.getItem() == item0.getItem() || item1.getItem() == Blocks.AIR.asItem()) {
-			i1 = TagItemProcedure.execute(tag1).copy();
-			if (!(i1.getItem() == item0.getItem())) {
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = i1.copy();
-					_setstack.setCount(1);
-					((Slot) _slots.get(1)).set(_setstack);
-					_player.containerMenu.broadcastChanges();
-				}
-				break;
+		if (!world.isClientSide()) {
+			tag1 = "c:curio/" + _tag;
+			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+				ItemStack _setstack = TagItemProcedure.execute(tag1).copy();
+				_setstack.setCount(1);
+				((Slot) _slots.get(0)).set(_setstack);
+				_player.containerMenu.broadcastChanges();
 			}
-		}
-		item2 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).copy();
-		while (i1.getItem() == item2.getItem() || i1.getItem() == item0.getItem() || item2.getItem() == Blocks.AIR.asItem()) {
 			i1 = TagItemProcedure.execute(tag1).copy();
-			if (!(i1.getItem() == item2.getItem()) && !(i1.getItem() == item0.getItem())) {
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = i1.copy();
-					_setstack.setCount(1);
-					((Slot) _slots.get(2)).set(_setstack);
-					_player.containerMenu.broadcastChanges();
+			item0 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).copy();
+			item1 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).copy();
+			while (i1.getItem() == item0.getItem() || item1.getItem() == Blocks.AIR.asItem()) {
+				i1 = TagItemProcedure.execute(tag1).copy();
+				if (!(i1.getItem() == item0.getItem())) {
+					if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+						ItemStack _setstack = i1.copy();
+						_setstack.setCount(1);
+						((Slot) _slots.get(1)).set(_setstack);
+						_player.containerMenu.broadcastChanges();
+					}
+					break;
 				}
-				break;
+			}
+			item1 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).copy();
+			item2 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).copy();
+			while (i1.getItem() == item1.getItem() || i1.getItem() == item0.getItem() || item2.getItem() == Blocks.AIR.asItem()) {
+				i1 = TagItemProcedure.execute(tag1).copy();
+				if (!(i1.getItem() == item1.getItem()) && !(i1.getItem() == item0.getItem())) {
+					if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+						ItemStack _setstack = i1.copy();
+						_setstack.setCount(1);
+						((Slot) _slots.get(2)).set(_setstack);
+						_player.containerMenu.broadcastChanges();
+					}
+					break;
+				}
 			}
 		}
 	}
