@@ -23,7 +23,7 @@ public class QycjzlpProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		ItemStack i1 = ItemStack.EMPTY;
 		if (!world.isClientSide()) {
-			i1 = new ItemStack(PrimogemcraftModItems.XINGHUI.get());
+			i1 = new ItemStack(PrimogemcraftModItems.XINGHUI.get()).copy();
 			i1.setCount(Mth.nextInt(RandomSource.create(), 10, 20));
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),

@@ -27,7 +27,7 @@ public class Qwjlbbgsx1Procedure {
 			return;
 		double a = 0;
 		double b = 0;
-		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get())) : false) && !world.isClientSide()) {
+		if (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get())) && !world.isClientSide()) {
 			if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerIter) {
 				for (int _idx = 0; _idx < _modHandlerIter.getSlots(); _idx++) {
 					ItemStack itemstackiterator = _modHandlerIter.getStackInSlot(_idx).copy();
@@ -86,5 +86,11 @@ public class Qwjlbbgsx1Procedure {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.QWJLBBGSX_2, 60, 0, false, false));
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

@@ -1,14 +1,14 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:sztj",
-    "primogemcraft:szzsj",
-    "primogemcraft:szhjj",
-    "primogemcraft:szg",
     "primogemcraft:szf",
-    "primogemcraft:szq",
-    "primogemcraft:szc",
+    "primogemcraft:szg",
+    "primogemcraft:szzsj",
     "primogemcraft:zfg",
+    "primogemcraft:szc",
+    "primogemcraft:szq",
+    "primogemcraft:szhjj",
+    "primogemcraft:sztj",
     "primogemcraft:pyjl"
   ]
 }

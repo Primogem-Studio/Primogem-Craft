@@ -17,7 +17,7 @@ public class YsrzxgcsxProcedure {
 		if (entity == null)
 			return;
 		ItemStack a = ItemStack.EMPTY;
-		a = new ItemStack(PrimogemcraftModItems.YSRZ_0.get());
+		a = new ItemStack(PrimogemcraftModItems.YSRZ_0.get()).copy();
 		{
 			final String _tagName = "cao";
 			final double _tagValue = 1;
@@ -29,11 +29,17 @@ public class YsrzxgcsxProcedure {
 			final boolean _tagValue = true;
 			CustomData.update(DataComponents.CUSTOM_DATA, a, tag -> tag.putBoolean(_tagName, _tagValue));
 		}
-		if (!(entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(a) : false)) {
+		if (!hasEntityInInventory(entity, a)) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(PrimogemcraftModMobEffects.YSRZXG);
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(MobEffects.HEALTH_BOOST);
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

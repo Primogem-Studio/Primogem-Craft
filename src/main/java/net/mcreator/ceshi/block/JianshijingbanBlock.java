@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.minecraft.world.level.material.MapColor;
@@ -14,7 +13,7 @@ import net.minecraft.core.BlockPos;
 
 public class JianshijingbanBlock extends IronBarsBlock {
 	public JianshijingbanBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.HAT).mapColor(MapColor.COLOR_LIGHT_BLUE).sound(SoundType.GLASS).strength(300f, 1000f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_BLUE).sound(SoundType.GLASS).strength(300f, 1000f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.HAT));
 	}
 
 	@Override

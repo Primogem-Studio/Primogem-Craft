@@ -64,7 +64,7 @@ public class ZsgsxProcedure {
 									if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("c:ores_in_ground/deepslate")))) {
 										world.setBlock(BlockPos.containing(x, y, z), Blocks.DEEPSLATE_REDSTONE_ORE.defaultBlockState(), 3);
 									} else {
-										world.setBlock(BlockPos.containing(x, y, z), Blocks.REDSTONE_ORE.defaultBlockState(), 3);
+										world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 									}
 								} else {
 									if (Math.random() < 0.3) {
@@ -102,9 +102,15 @@ public class ZsgsxProcedure {
 					}
 				} else {
 					if (entity instanceof Player _player)
-						_player.getCooldowns().addCooldown(itemstack.getItem(), (int) ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQLEI.get())) : false) ? 600 : 1200));
+						_player.getCooldowns().addCooldown(itemstack.getItem(), (int) (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQLEI.get())) ? 600 : 1200));
 				}
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

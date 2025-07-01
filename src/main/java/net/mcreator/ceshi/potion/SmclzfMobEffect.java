@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.potion;
 
 import net.minecraft.world.entity.LivingEntity;

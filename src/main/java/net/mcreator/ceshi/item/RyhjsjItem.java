@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.item;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -14,7 +13,7 @@ import java.util.List;
 
 public class RyhjsjItem extends Item {
 	public RyhjsjItem() {
-		super(new Item.Properties().stacksTo(64).fireResistant().rarity(Rarity.UNCOMMON));
+		super(new Item.Properties().fireResistant().rarity(Rarity.UNCOMMON));
 	}
 
 	@Override

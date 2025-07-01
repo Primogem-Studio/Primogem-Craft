@@ -36,7 +36,7 @@ public class RyfsxxgProcedure {
 		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PrimogemcraftModMobEffects.RYFXGSX) && !world.isClientSide()) {
 			if (damagesource.is(DamageTypes.IN_FIRE)) {
 				if (entity instanceof LivingEntity _entity)
-					_entity.setHealth((float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + 2));
+					_entity.setHealth((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + 2);
 				if (event instanceof ICancellableEvent _cancellable) {
 					_cancellable.setCanceled(true);
 				}

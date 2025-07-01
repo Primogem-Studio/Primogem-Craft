@@ -1,9 +1,12 @@
 {
   "replace": false,
   "values": [
+    {
+      "id": "#c:curio/clock/division",
+      "required": false
+    },
     "primogemcraft:gongsideguguzhong",
-    "primogemcraft:qiwuheisenlinggz",
-    "#c:curio/clock/division",
-    "primogemcraft:ydggz"
+    "primogemcraft:ydggz",
+    "primogemcraft:qiwuheisenlinggz"
   ]
 }

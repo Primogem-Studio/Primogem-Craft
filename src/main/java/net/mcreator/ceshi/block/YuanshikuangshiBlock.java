@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -23,7 +22,7 @@ import java.util.List;
 
 public class YuanshikuangshiBlock extends Block {
 	public YuanshikuangshiBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).mapColor(MapColor.DIAMOND).sound(SoundType.ANCIENT_DEBRIS).strength(3f, 5f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.DIAMOND).sound(SoundType.ANCIENT_DEBRIS).strength(3f, 5f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

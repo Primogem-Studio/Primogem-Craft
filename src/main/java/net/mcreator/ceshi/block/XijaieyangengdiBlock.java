@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import org.checkerframework.checker.units.qual.s;
@@ -24,8 +23,8 @@ import net.mcreator.ceshi.procedures.Xiajieyangengdi_shuxingProcedure;
 
 public class XijaieyangengdiBlock extends Block {
 	public XijaieyangengdiBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).mapColor(MapColor.NETHER).sound(SoundType.NETHERRACK).strength(1f, 10f).lightLevel(s -> 6).requiresCorrectToolForDrops().noOcclusion()
-				.pushReaction(PushReaction.PUSH_ONLY).isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.NETHER).sound(SoundType.NETHERRACK).strength(1f, 10f).lightLevel(s -> 6).requiresCorrectToolForDrops().noOcclusion().pushReaction(PushReaction.PUSH_ONLY)
+				.isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

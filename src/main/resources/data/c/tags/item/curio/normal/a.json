@@ -1,19 +1,19 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:yiyinhedaletou",
-    "primogemcraft:fulinjiao",
-    "primogemcraft:fenliejinbi",
     "primogemcraft:qwflyb",
-    "primogemcraft:qwyzzm",
     "primogemcraft:qwtcjlbptbg",
-    "primogemcraft:quxgjibing",
-    "primogemcraft:xingjidaletou",
+    "primogemcraft:fenliejinbi",
+    "primogemcraft:qwyzzm",
     "primogemcraft:ssanbamiantou",
-    "primogemcraft:qwsjgzq",
     "primogemcraft:qwsklj",
-    "primogemcraft:qwwzsw",
     "primogemcraft:qwlzdlt",
-    "primogemcraft:qwsss"
+    "primogemcraft:yiyinhedaletou",
+    "primogemcraft:xingjidaletou",
+    "primogemcraft:qwsss",
+    "primogemcraft:qwwzsw",
+    "primogemcraft:qwsjgzq",
+    "primogemcraft:fulinjiao",
+    "primogemcraft:quxgjibing"
   ]
 }

@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:ziyousongshikuangshi",
-    "primogemcraft:jianlaokuangshi",
-    "primogemcraft:zuishengkuangshi",
-    "primogemcraft:shengzhangkuangshi",
-    "primogemcraft:dijingqinjingkuangshi",
     "primogemcraft:ranyuanmanaokuangshi",
     "primogemcraft:aixubingyukuangshi",
-    "primogemcraft:shenbanjianlaohuangyukuangshi"
+    "primogemcraft:shenbanjianlaohuangyukuangshi",
+    "primogemcraft:jianlaokuangshi",
+    "primogemcraft:ziyousongshikuangshi",
+    "primogemcraft:zuishengkuangshi",
+    "primogemcraft:dijingqinjingkuangshi",
+    "primogemcraft:shengzhangkuangshi"
   ]
 }

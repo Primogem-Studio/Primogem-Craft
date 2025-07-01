@@ -3,7 +3,6 @@ package net.mcreator.ceshi.procedures;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -15,9 +14,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.ceshi.world.inventory.GUIqiwuxuanzeMenu;
-
-import java.util.function.Supplier;
-import java.util.Map;
+import net.mcreator.ceshi.init.PrimogemcraftModMenus;
 
 import io.netty.buffer.Unpooled;
 
@@ -51,36 +48,36 @@ public class GUIqwxz03Procedure {
 		}
 		if (!world.isClientSide()) {
 			tag1 = "c:curio/" + _tag;
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = TagItemProcedure.execute(tag1).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(0)).set(_setstack);
+				_menu.getSlots().get(0).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 			i1 = TagItemProcedure.execute(tag1).copy();
-			item0 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).copy();
-			item1 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).copy();
+			item0 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(0).getItem() : ItemStack.EMPTY).copy();
+			item1 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(1).getItem() : ItemStack.EMPTY).copy();
 			while (i1.getItem() == item0.getItem() || item1.getItem() == Blocks.AIR.asItem()) {
 				i1 = TagItemProcedure.execute(tag1).copy();
 				if (!(i1.getItem() == item0.getItem())) {
-					if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+					if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
 						ItemStack _setstack = i1.copy();
 						_setstack.setCount(1);
-						((Slot) _slots.get(1)).set(_setstack);
+						_menu.getSlots().get(1).set(_setstack);
 						_player.containerMenu.broadcastChanges();
 					}
 					break;
 				}
 			}
-			item1 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).copy();
-			item2 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).copy();
+			item1 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(1).getItem() : ItemStack.EMPTY).copy();
+			item2 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(2).getItem() : ItemStack.EMPTY).copy();
 			while (i1.getItem() == item1.getItem() || i1.getItem() == item0.getItem() || item2.getItem() == Blocks.AIR.asItem()) {
 				i1 = TagItemProcedure.execute(tag1).copy();
 				if (!(i1.getItem() == item1.getItem()) && !(i1.getItem() == item0.getItem())) {
-					if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+					if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
 						ItemStack _setstack = i1.copy();
 						_setstack.setCount(1);
-						((Slot) _slots.get(2)).set(_setstack);
+						_menu.getSlots().get(2).set(_setstack);
 						_player.containerMenu.broadcastChanges();
 					}
 					break;

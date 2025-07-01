@@ -20,7 +20,7 @@ public class FrjssxProcedure {
 		ItemStack a = ItemStack.EMPTY;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) * 0.2) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
-				a = new ItemStack(PrimogemcraftModItems.HEIJIAN.get());
+				a = new ItemStack(PrimogemcraftModItems.HEIJIAN.get()).copy();
 				{
 					final String _tagName = "deng_ji";
 					final double _tagValue = (Mth.nextDouble(RandomSource.create(), 1, 10));

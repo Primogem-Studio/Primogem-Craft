@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.minecraft.world.level.material.MapColor;
@@ -13,7 +12,7 @@ import net.minecraft.core.BlockPos;
 
 public class YishijieyuanmumubanBlock extends Block {
 	public YishijieyuanmumubanBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).mapColor(MapColor.COLOR_PINK).sound(SoundType.WOOD).strength(1f));
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PINK).sound(SoundType.WOOD).strength(1f).ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override

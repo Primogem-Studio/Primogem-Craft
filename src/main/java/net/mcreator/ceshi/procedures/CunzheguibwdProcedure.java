@@ -9,22 +9,20 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.client.gui.components.EditBox;
 
+import net.mcreator.ceshi.init.PrimogemcraftModMenus;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 
-import java.util.HashMap;
-
 public class CunzheguibwdProcedure {
-	public static void execute(LevelAccessor world, Entity entity, HashMap guistate) {
-		if (entity == null || guistate == null)
+	public static void execute(LevelAccessor world, Entity entity) {
+		if (entity == null)
 			return;
 		ItemStack a1 = ItemStack.EMPTY;
 		double a = 0;
-		a1 = new ItemStack(PrimogemcraftModItems.CUNQUPINGZHENG.get());
+		a1 = new ItemStack(PrimogemcraftModItems.CUNQUPINGZHENG.get()).copy();
 		a = entity.getPersistentData().getDouble("GUI_yzsp_sl");
-		if (guistate.get("text:cunzhe_shuliang") instanceof EditBox _tf)
-			_tf.setValue((new java.text.DecimalFormat("##.##").format(a)));
+		if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu)
+			_menu.sendMenuStateUpdate(_player, 0, "cunzhe_shuliang", (new java.text.DecimalFormat("##.##").format(a)), true);
 		if (!world.isClientSide()) {
 			{
 				final String _tagName = "pgc_cunchu";

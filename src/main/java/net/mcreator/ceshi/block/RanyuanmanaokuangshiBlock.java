@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -21,7 +20,7 @@ import java.util.List;
 
 public class RanyuanmanaokuangshiBlock extends Block {
 	public RanyuanmanaokuangshiBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).mapColor(MapColor.FIRE).sound(SoundType.NETHER_ORE).strength(1f, 2f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.FIRE).sound(SoundType.NETHER_ORE).strength(1f, 2f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

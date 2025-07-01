@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.minecraft.world.level.material.MapColor;
@@ -11,7 +10,7 @@ import net.minecraft.core.BlockPos;
 
 public class DijingqingjinkuaiBlock extends Block {
 	public DijingqingjinkuaiBlock() {
-		super(BlockBehaviour.Properties.of().liquid().mapColor(MapColor.WATER).sound(SoundType.GLASS).strength(3f, 20f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).sound(SoundType.GLASS).strength(3f, 20f).requiresCorrectToolForDrops());
 	}
 
 	@Override

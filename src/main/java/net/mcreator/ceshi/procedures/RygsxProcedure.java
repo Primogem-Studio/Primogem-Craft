@@ -17,7 +17,7 @@ public class RygsxProcedure {
 		if (entity == null)
 			return;
 		if (blockstate.is(BlockTags.create(ResourceLocation.parse("c:ores/quartz")))) {
-			if (Math.random() < ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQHUO.get())) : false) ? 0.075 : 0.05)) {
+			if (Math.random() < (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQHUO.get())) ? 0.075 : 0.05)) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PrimogemcraftModItems.YSFC.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -25,5 +25,11 @@ public class RygsxProcedure {
 				}
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

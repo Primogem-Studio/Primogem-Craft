@@ -1,12 +1,12 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:rytj",
     "primogemcraft:ryzsj",
-    "primogemcraft:ryhjj",
     "primogemcraft:ryg",
     "primogemcraft:ryf",
     "primogemcraft:ryq",
-    "primogemcraft:ryc"
+    "primogemcraft:ryc",
+    "primogemcraft:ryhjj",
+    "primogemcraft:rytj"
   ]
 }

@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.item;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -7,7 +6,6 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
@@ -22,7 +20,7 @@ import java.util.List;
 
 public class QwkzhyItem extends Item {
 	public QwkzhyItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(1));
 	}
 
 	@Override

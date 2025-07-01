@@ -37,8 +37,7 @@ public class QwxgjibingsxProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		double n1 = 0;
-		if ((sourceentity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.QUXGJIBING.get())) : false)
-				&& (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) == (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) {
+		if (hasEntityInInventory(sourceentity, new ItemStack(PrimogemcraftModItems.QUXGJIBING.get())) && (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) == (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) {
 			n1 = sourceentity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1;
 			if (sourceentity instanceof Player _player)
 				_player.getCooldowns().addCooldown(PrimogemcraftModItems.QUXGJIBING.get(), (int) Math.ceil(n1 / 20));
@@ -52,5 +51,11 @@ public class QwxgjibingsxProcedure {
 				}
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

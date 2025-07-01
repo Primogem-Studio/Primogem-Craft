@@ -14,16 +14,15 @@ import net.mcreator.ceshi.procedures.GUIfumopinzhixianshi2Procedure;
 import net.mcreator.ceshi.procedures.GUIfumopinzhixianshi1Procedure;
 import net.mcreator.ceshi.procedures.GUIfumopinzhixianshi0Procedure;
 import net.mcreator.ceshi.procedures.GUIfumobaocuoProcedure;
-
-import java.util.HashMap;
+import net.mcreator.ceshi.init.PrimogemcraftModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class GUISJfumoScreen extends AbstractContainerScreen<GUISJfumoMenu> {
-	private final static HashMap<String, Object> guistate = GUISJfumoMenu.guistate;
+public class GUISJfumoScreen extends AbstractContainerScreen<GUISJfumoMenu> implements PrimogemcraftModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 
 	public GUISJfumoScreen(GUISJfumoMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -36,44 +35,60 @@ public class GUISJfumoScreen extends AbstractContainerScreen<GUISJfumoMenu> {
 		this.imageHeight = 166;
 	}
 
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
 	private static final ResourceLocation texture = ResourceLocation.parse("primogemcraft:textures/screens/guis_jfumo.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		boolean customTooltipShown = false;
 		if (GUIfumobaocuoProcedure.execute(entity))
 			if (mouseX > leftPos + 97 && mouseX < leftPos + 102 && mouseY > topPos + 29 && mouseY < topPos + 57) {
 				guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.guis_jfumo.tooltip_sscgai_wu_pin_bu_man_zu_fu_mo_tiao_jian"), mouseX, mouseY);
+				customTooltipShown = true;
 			}
 		if (GUIfumopinzhixianshi0Procedure.execute(world))
 			if (mouseX > leftPos + 74 && mouseX < leftPos + 98 && mouseY > topPos + 52 && mouseY < topPos + 57) {
 				guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.guis_jfumo.tooltip_sscgai_wu_pin_bu_man_zu_fu_mo_tiao_jian1"), mouseX, mouseY);
+				customTooltipShown = true;
 			}
 		if (GUIfumopinzhixianshi0Procedure.execute(world))
 			if (mouseX > leftPos + 74 && mouseX < leftPos + 79 && mouseY > topPos + 29 && mouseY < topPos + 52) {
 				guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.guis_jfumo.tooltip_sscgai_wu_pin_bu_man_zu_fu_mo_tiao_jian2"), mouseX, mouseY);
+				customTooltipShown = true;
 			}
 		if (GUIfumopinzhixianshi0Procedure.execute(world))
 			if (mouseX > leftPos + 79 && mouseX < leftPos + 97 && mouseY > topPos + 29 && mouseY < topPos + 34) {
 				guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.guis_jfumo.tooltip_sscgai_wu_pin_bu_man_zu_fu_mo_tiao_jian3"), mouseX, mouseY);
+				customTooltipShown = true;
 			}
 		if (GUIfumopinzhixianshi0Procedure.execute(world))
 			if (mouseX > leftPos + 80 && mouseX < leftPos + 97 && mouseY > topPos + 20 && mouseY < topPos + 28) {
 				guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.guis_jfumo.tooltip_ss7di_pin_zhi_fu_mo"), mouseX, mouseY);
+				customTooltipShown = true;
 			}
 		if (GUIfumopinzhixianshi1Procedure.execute(world))
 			if (mouseX > leftPos + 80 && mouseX < leftPos + 97 && mouseY > topPos + 20 && mouseY < topPos + 28) {
 				guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.guis_jfumo.tooltip_ssbzhong_pin_zhi_fu_mo"), mouseX, mouseY);
+				customTooltipShown = true;
 			}
 		if (GUIfumopinzhixianshi2Procedure.execute(world))
 			if (mouseX > leftPos + 80 && mouseX < leftPos + 97 && mouseY > topPos + 20 && mouseY < topPos + 28) {
 				guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.guis_jfumo.tooltip_ss6gao_pin_zhi_fu_mo"), mouseX, mouseY);
+				customTooltipShown = true;
 			}
 		if (GUIfumopinzhixianshi3Procedure.execute(world))
 			if (mouseX > leftPos + 80 && mouseX < leftPos + 97 && mouseY > topPos + 20 && mouseY < topPos + 28) {
 				guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.guis_jfumo.tooltip_sscte_ji_fu_mo"), mouseX, mouseY);
+				customTooltipShown = true;
 			}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override

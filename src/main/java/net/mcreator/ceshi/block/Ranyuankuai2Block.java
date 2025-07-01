@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -18,7 +17,7 @@ import net.mcreator.ceshi.procedures.Manaokuai_shuxingProcedure;
 
 public class Ranyuankuai2Block extends Block {
 	public Ranyuankuai2Block() {
-		super(BlockBehaviour.Properties.of().liquid().mapColor(MapColor.FIRE).sound(SoundType.GLASS).strength(3f, 18f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.FIRE).sound(SoundType.GLASS).strength(3f, 18f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override

@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.minecraft.world.level.material.MapColor;
@@ -13,8 +12,7 @@ import net.minecraft.core.BlockPos;
 
 public class YishijiemuzhalanBlock extends FenceBlock {
 	public YishijiemuzhalanBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).mapColor(MapColor.COLOR_PINK).sound(SoundType.WOOD).strength(3f, 30f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).dynamicShape()
-				.forceSolidOn());
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PINK).sound(SoundType.WOOD).strength(3f, 30f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).ignitedByLava().instrument(NoteBlockInstrument.BASS).forceSolidOn());
 	}
 
 	@Override

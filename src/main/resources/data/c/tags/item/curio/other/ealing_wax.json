@@ -1,12 +1,12 @@
 {
   "replace": false,
   "values": [
+    "primogemcraft:hqhuo",
     "primogemcraft:hqfeng",
     "primogemcraft:hqyan",
-    "primogemcraft:hqlei",
-    "primogemcraft:hqcao",
     "primogemcraft:hqshui",
-    "primogemcraft:hqhuo",
-    "primogemcraft:hqbing"
+    "primogemcraft:hqbing",
+    "primogemcraft:hqlei",
+    "primogemcraft:hqcao"
   ]
 }

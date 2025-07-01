@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.world.inventory;
 
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
@@ -29,9 +28,17 @@ import net.mcreator.ceshi.init.PrimogemcraftModMenus;
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Collections;
 
-public class LiulangzhezhinangguiMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
-	public final static HashMap<String, Object> guistate = new HashMap<>();
+public class LiulangzhezhinangguiMenu extends AbstractContainerMenu implements PrimogemcraftModMenus.MenuAccessor {
+	public final Map<String, Object> menuState = new HashMap<>() {
+		@Override
+		public Object put(String key, Object value) {
+			if (!this.containsKey(key) && this.size() >= 20)
+				return null;
+			return super.put(key, value);
+		}
+	};
 	public final Level world;
 	public final Player entity;
 	public int x, y, z;
@@ -216,12 +223,14 @@ public class LiulangzhezhinangguiMenu extends AbstractContainerMenu implements S
 				}
 				return ItemStack.EMPTY;
 			}
-			if (itemstack1.getCount() == 0)
-				slot.set(ItemStack.EMPTY);
-			else
+			if (itemstack1.isEmpty()) {
+				slot.setByPlayer(ItemStack.EMPTY);
+			} else {
 				slot.setChanged();
-			if (itemstack1.getCount() == itemstack.getCount())
+			}
+			if (itemstack1.getCount() == itemstack.getCount()) {
 				return ItemStack.EMPTY;
+			}
 			slot.onTake(playerIn, itemstack1);
 		}
 		return itemstack;
@@ -307,7 +316,13 @@ public class LiulangzhezhinangguiMenu extends AbstractContainerMenu implements S
 		}
 	}
 
-	public Map<Integer, Slot> get() {
-		return customSlots;
+	@Override
+	public Map<Integer, Slot> getSlots() {
+		return Collections.unmodifiableMap(customSlots);
+	}
+
+	@Override
+	public Map<String, Object> getMenuState() {
+		return menuState;
 	}
 }

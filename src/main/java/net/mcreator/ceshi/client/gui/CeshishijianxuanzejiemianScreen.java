@@ -13,16 +13,15 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.ceshi.world.inventory.CeshishijianxuanzejiemianMenu;
 import net.mcreator.ceshi.network.CeshishijianxuanzejiemianButtonMessage;
-
-import java.util.HashMap;
+import net.mcreator.ceshi.init.PrimogemcraftModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class CeshishijianxuanzejiemianScreen extends AbstractContainerScreen<CeshishijianxuanzejiemianMenu> {
-	private final static HashMap<String, Object> guistate = CeshishijianxuanzejiemianMenu.guistate;
+public class CeshishijianxuanzejiemianScreen extends AbstractContainerScreen<CeshishijianxuanzejiemianMenu> implements PrimogemcraftModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	Button button_shua_xin;
 
 	public CeshishijianxuanzejiemianScreen(CeshishijianxuanzejiemianMenu container, Inventory inventory, Component text) {
@@ -34,6 +33,12 @@ public class CeshishijianxuanzejiemianScreen extends AbstractContainerScreen<Ces
 		this.entity = container.entity;
 		this.imageWidth = 179;
 		this.imageHeight = 183;
+	}
+
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
 	}
 
 	private static final ResourceLocation texture = ResourceLocation.parse("primogemcraft:textures/screens/ceshishijianxuanzejiemian.png");
@@ -76,7 +81,6 @@ public class CeshishijianxuanzejiemianScreen extends AbstractContainerScreen<Ces
 				CeshishijianxuanzejiemianButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 98, this.topPos + 64, 35, 20).build();
-		guistate.put("button:button_shua_xin", button_shua_xin);
 		this.addRenderableWidget(button_shua_xin);
 	}
 }

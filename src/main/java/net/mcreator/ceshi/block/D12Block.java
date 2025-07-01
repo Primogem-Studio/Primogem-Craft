@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.minecraft.world.level.material.MapColor;
@@ -14,7 +13,7 @@ import net.minecraft.core.BlockPos;
 
 public class D12Block extends StairBlock {
 	public D12Block() {
-		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).mapColor(MapColor.COLOR_LIGHT_BLUE).sound(SoundType.WOOD).strength(3f, 2f).dynamicShape());
+		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_BLUE).sound(SoundType.WOOD).strength(3f, 2f).ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override

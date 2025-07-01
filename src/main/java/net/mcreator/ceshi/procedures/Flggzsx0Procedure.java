@@ -42,7 +42,7 @@ public class Flggzsx0Procedure {
 				entity.getPersistentData().putBoolean("fenlie_ggz_a", true);
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.FZGGZXG_0, 60, 0, false, false));
-				itemstack.setDamageValue((int) (itemstack.getMaxDamage() - 1));
+				itemstack.setDamageValue(itemstack.getMaxDamage() - 1);
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal("\u00A75\u3013\u00A74\u5206\u88C2\u5F00\u59CB\u4E86...."), false);
 				if (world instanceof Level _level) {

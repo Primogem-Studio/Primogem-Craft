@@ -12,18 +12,18 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.mcreator.ceshi.world.inventory.GUIhyzhqMenu;
 import net.mcreator.ceshi.procedures.GUIqxzhqsx0Procedure;
 import net.mcreator.ceshi.procedures.GUIhyzhqsxProcedure;
+import net.mcreator.ceshi.init.PrimogemcraftModScreens;
 
 import java.util.stream.Collectors;
-import java.util.HashMap;
 import java.util.Arrays;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class GUIhyzhqScreen extends AbstractContainerScreen<GUIhyzhqMenu> {
-	private final static HashMap<String, Object> guistate = GUIhyzhqMenu.guistate;
+public class GUIhyzhqScreen extends AbstractContainerScreen<GUIhyzhqMenu> implements PrimogemcraftModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 
 	public GUIhyzhqScreen(GUIhyzhqMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -36,18 +36,27 @@ public class GUIhyzhqScreen extends AbstractContainerScreen<GUIhyzhqMenu> {
 		this.imageHeight = 166;
 	}
 
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
 	private static final ResourceLocation texture = ResourceLocation.parse("primogemcraft:textures/screens/gu_ihyzhq.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 7 && mouseX < leftPos + 39 && mouseY > topPos + 9 && mouseY < topPos + 57) {
 			String hoverText = GUIhyzhqsxProcedure.execute(world, x, y, z);
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
+			customTooltipShown = true;
 		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
@@ -56,9 +65,7 @@ public class GUIhyzhqScreen extends AbstractContainerScreen<GUIhyzhqMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
 		guiGraphics.blit(ResourceLocation.parse("primogemcraft:textures/screens/qunxingzhuanhuanqi_sx.png"), this.leftPos + 7, this.topPos + 9, Mth.clamp((int) GUIqxzhqsx0Procedure.execute(world, x, y, z) * 32, 0, 320), 0, 32, 48, 352, 48);
-
 		RenderSystem.disableBlend();
 	}
 

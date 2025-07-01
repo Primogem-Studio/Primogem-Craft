@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.item;
 
 import net.minecraft.world.level.Level;

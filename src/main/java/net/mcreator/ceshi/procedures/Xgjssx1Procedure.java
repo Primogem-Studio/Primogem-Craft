@@ -39,7 +39,7 @@ public class Xgjssx1Procedure {
 		double b = 0;
 		if (!world.isClientSide()) {
 			if (sourceentity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(PrimogemcraftModMobEffects.JISHENG)) {
-				o1 = sourceentity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.QWKWZW.get())) : false;
+				o1 = hasEntityInInventory(sourceentity, new ItemStack(PrimogemcraftModItems.QWKWZW.get()));
 				a = a + 0.2;
 				if (o1) {
 					b = b + 0.2;
@@ -56,5 +56,11 @@ public class Xgjssx1Procedure {
 				}
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

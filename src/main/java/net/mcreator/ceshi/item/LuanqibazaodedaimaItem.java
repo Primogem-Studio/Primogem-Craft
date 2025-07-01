@@ -1,11 +1,9 @@
-
 package net.mcreator.ceshi.item;
 
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.Entity;
@@ -18,7 +16,7 @@ import java.util.List;
 
 public class LuanqibazaodedaimaItem extends Item {
 	public LuanqibazaodedaimaItem() {
-		super(new Item.Properties().durability(31).fireResistant().rarity(Rarity.COMMON));
+		super(new Item.Properties().durability(31).fireResistant());
 	}
 
 	@Override

@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.item;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -14,7 +13,7 @@ import java.util.List;
 
 public class MljnbItem extends Item {
 	public MljnbItem() {
-		super(new Item.Properties().stacksTo(64).fireResistant().rarity(Rarity.RARE));
+		super(new Item.Properties().fireResistant().rarity(Rarity.RARE));
 	}
 
 	@Override

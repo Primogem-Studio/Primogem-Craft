@@ -39,8 +39,7 @@ public class HuiguiProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.MENGYING.get())) : false) && entity instanceof LivingEntity _livEnt1
-				&& _livEnt1.hasEffect(PrimogemcraftModMobEffects.GUOQU)) {
+		if (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.MENGYING.get())) && entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(PrimogemcraftModMobEffects.GUOQU)) {
 			entity.getPersistentData().putDouble("mengying", 1);
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(PrimogemcraftModMobEffects.GUOQU);
@@ -63,5 +62,11 @@ public class HuiguiProcedure {
 				world.getServer().getPlayerList()
 						.broadcastSystemMessage(Component.literal(("\u00A77\u73A9\u5BB6\u00A7f" + "<" + entity.getDisplayName().getString() + ">" + "\u00A77\u88AB\u00A7d\u68A6\u6A31\u00A77\u633D\u6551\u4E86\u4E00\u6B21\u751F\u547D\uFF01")), false);
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

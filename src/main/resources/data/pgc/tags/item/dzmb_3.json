@@ -1,12 +1,12 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:shengjizizaihej",
-    "primogemcraft:shengjijlhjwp",
-    "primogemcraft:sjzshj",
-    "primogemcraft:szhjsj",
     "primogemcraft:djhjsj",
+    "primogemcraft:sjzshj",
+    "primogemcraft:shengjizizaihej",
     "primogemcraft:ryhjsj",
-    "primogemcraft:axhjsj"
+    "primogemcraft:axhjsj",
+    "primogemcraft:szhjsj",
+    "primogemcraft:shengjijlhjwp"
   ]
 }

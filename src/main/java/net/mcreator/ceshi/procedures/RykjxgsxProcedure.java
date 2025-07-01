@@ -37,7 +37,7 @@ public class RykjxgsxProcedure {
 			if (!(sourceentity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(PrimogemcraftModMobEffects.RYKJXGLQ))) {
 				sourceentity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.LAVA), (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null)), (float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)
 						* (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.RYKJXG) ? _livEnt.getEffect(PrimogemcraftModMobEffects.RYKJXG).getAmplifier() : 0) * 0.1));
-				sourceentity.igniteForSeconds((int) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.RYKJXG) ? _livEnt.getEffect(PrimogemcraftModMobEffects.RYKJXG).getAmplifier() : 0) * 3));
+				sourceentity.igniteForSeconds((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.RYKJXG) ? _livEnt.getEffect(PrimogemcraftModMobEffects.RYKJXG).getAmplifier() : 0) * 3);
 				if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.RYKJXGLQ, 40, 0, false, false));
 			}

@@ -1,12 +1,12 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:zziyousongshikuai",
-    "primogemcraft:zuishengkuai",
-    "primogemcraft:shengzhangkuai",
-    "primogemcraft:dijingkuai",
     "primogemcraft:ranyuankuai",
+    "primogemcraft:dijingkuai",
     "primogemcraft:aixubingyukuai",
-    "primogemcraft:jianlaokuaiwupin"
+    "primogemcraft:jianlaokuaiwupin",
+    "primogemcraft:shengzhangkuai",
+    "primogemcraft:zuishengkuai",
+    "primogemcraft:zziyousongshikuai"
   ]
 }

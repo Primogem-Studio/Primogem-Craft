@@ -19,8 +19,8 @@ public class SzjsxProcedure {
 				if (entity instanceof Player) {
 					if (entity instanceof LivingEntity _livEnt4 && _livEnt4.hasEffect(MobEffects.CONFUSION)) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, (int) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.CONFUSION) ? _livEnt.getEffect(MobEffects.CONFUSION).getDuration() : 0) + 100),
-									(int) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.CONFUSION) ? _livEnt.getEffect(MobEffects.CONFUSION).getAmplifier() : 0) - 1)));
+							_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.CONFUSION) ? _livEnt.getEffect(MobEffects.CONFUSION).getDuration() : 0) + 100,
+									(entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.CONFUSION) ? _livEnt.getEffect(MobEffects.CONFUSION).getAmplifier() : 0) - 1));
 					} else {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 100, 0));
@@ -29,8 +29,8 @@ public class SzjsxProcedure {
 					if (entity instanceof LivingEntity _livEnt9 && _livEnt9.hasEffect(PrimogemcraftModMobEffects.QIANYE)) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.QIANYE,
-									(int) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.QIANYE) ? _livEnt.getEffect(PrimogemcraftModMobEffects.QIANYE).getDuration() : 0) + 60),
-									(int) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.QIANYE) ? _livEnt.getEffect(PrimogemcraftModMobEffects.QIANYE).getAmplifier() : 0) - 1)));
+									(entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.QIANYE) ? _livEnt.getEffect(PrimogemcraftModMobEffects.QIANYE).getDuration() : 0) + 60,
+									(entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.QIANYE) ? _livEnt.getEffect(PrimogemcraftModMobEffects.QIANYE).getAmplifier() : 0) - 1));
 					} else {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.QIANYE, 60, 0));
@@ -45,8 +45,8 @@ public class SzjsxProcedure {
 				if (entity instanceof Player) {
 					if (entity instanceof LivingEntity _livEnt19 && _livEnt19.hasEffect(MobEffects.CONFUSION)) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, (int) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.CONFUSION) ? _livEnt.getEffect(MobEffects.CONFUSION).getDuration() : 0) + 160),
-									(int) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.CONFUSION) ? _livEnt.getEffect(MobEffects.CONFUSION).getAmplifier() : 0) - 1)));
+							_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.CONFUSION) ? _livEnt.getEffect(MobEffects.CONFUSION).getDuration() : 0) + 160,
+									(entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.CONFUSION) ? _livEnt.getEffect(MobEffects.CONFUSION).getAmplifier() : 0) - 1));
 					} else {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 160, 0));
@@ -55,8 +55,8 @@ public class SzjsxProcedure {
 					if (entity instanceof LivingEntity _livEnt24 && _livEnt24.hasEffect(PrimogemcraftModMobEffects.QIANYE)) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.QIANYE,
-									(int) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.QIANYE) ? _livEnt.getEffect(PrimogemcraftModMobEffects.QIANYE).getDuration() : 0) + 100),
-									(int) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.QIANYE) ? _livEnt.getEffect(PrimogemcraftModMobEffects.QIANYE).getAmplifier() : 0) - 1)));
+									(entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.QIANYE) ? _livEnt.getEffect(PrimogemcraftModMobEffects.QIANYE).getDuration() : 0) + 100,
+									(entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.QIANYE) ? _livEnt.getEffect(PrimogemcraftModMobEffects.QIANYE).getAmplifier() : 0) - 1));
 					} else {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.QIANYE, 100, 1));
@@ -71,8 +71,8 @@ public class SzjsxProcedure {
 				if (entity instanceof Player) {
 					if (entity instanceof LivingEntity _livEnt34 && _livEnt34.hasEffect(MobEffects.CONFUSION)) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, (int) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.CONFUSION) ? _livEnt.getEffect(MobEffects.CONFUSION).getDuration() : 0) + 200),
-									(int) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.CONFUSION) ? _livEnt.getEffect(MobEffects.CONFUSION).getAmplifier() : 0) - 1)));
+							_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.CONFUSION) ? _livEnt.getEffect(MobEffects.CONFUSION).getDuration() : 0) + 200,
+									(entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.CONFUSION) ? _livEnt.getEffect(MobEffects.CONFUSION).getAmplifier() : 0) - 1));
 					} else {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 200, 1));
@@ -81,8 +81,8 @@ public class SzjsxProcedure {
 					if (entity instanceof LivingEntity _livEnt39 && _livEnt39.hasEffect(PrimogemcraftModMobEffects.QIANYE)) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.QIANYE,
-									(int) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.QIANYE) ? _livEnt.getEffect(PrimogemcraftModMobEffects.QIANYE).getDuration() : 0) + 120),
-									(int) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.QIANYE) ? _livEnt.getEffect(PrimogemcraftModMobEffects.QIANYE).getAmplifier() : 0) - 1)));
+									(entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.QIANYE) ? _livEnt.getEffect(PrimogemcraftModMobEffects.QIANYE).getDuration() : 0) + 120,
+									(entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.QIANYE) ? _livEnt.getEffect(PrimogemcraftModMobEffects.QIANYE).getAmplifier() : 0) - 1));
 					} else {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.QIANYE, 120, 2));

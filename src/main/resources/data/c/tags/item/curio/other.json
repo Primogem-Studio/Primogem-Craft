@@ -1,8 +1,17 @@
 {
   "replace": false,
   "values": [
-    "#c:curio/bad",
-    "#c:curio/code",
-    "#c:curio/other/ealing_wax"
+    {
+      "id": "#c:curio/code",
+      "required": false
+    },
+    {
+      "id": "#c:curio/bad",
+      "required": false
+    },
+    {
+      "id": "#c:curio/other/ealing_wax",
+      "required": false
+    }
   ]
 }

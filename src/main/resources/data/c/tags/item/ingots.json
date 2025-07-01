@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "primogemcraft:zhongkouweitieding",
-    "#c:ysjinshu"
+    {
+      "id": "#c:ysjinshu",
+      "required": false
+    }
   ]
 }

@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -21,7 +20,7 @@ import java.util.List;
 
 public class ZiyousongshikuaiBlock extends Block {
 	public ZiyousongshikuaiBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).mapColor(MapColor.COLOR_CYAN).sound(SoundType.GLASS).strength(3f, 10f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_CYAN).sound(SoundType.GLASS).strength(3f, 10f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

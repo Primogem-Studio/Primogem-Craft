@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -39,7 +38,7 @@ import io.netty.buffer.Unpooled;
 
 public class HualiduanzaoBlock extends Block implements EntityBlock {
 	public HualiduanzaoBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).mapColor(MapColor.GOLD).sound(SoundType.WOOD).strength(3f, 10f));
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.GOLD).sound(SoundType.WOOD).strength(3f, 10f).ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override
@@ -98,7 +97,7 @@ public class HualiduanzaoBlock extends Block implements EntityBlock {
 	public boolean triggerEvent(BlockState state, Level world, BlockPos pos, int eventID, int eventParam) {
 		super.triggerEvent(state, world, pos, eventID, eventParam);
 		BlockEntity blockEntity = world.getBlockEntity(pos);
-		return blockEntity == null ? false : blockEntity.triggerEvent(eventID, eventParam);
+		return blockEntity != null && blockEntity.triggerEvent(eventID, eventParam);
 	}
 
 	@Override

@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:moladui_02",
+    "primogemcraft:mlxdml_03",
     "primogemcraft:mlxdml_01",
     "primogemcraft:mlxdml_02",
-    "primogemcraft:mlxdml_03",
-    "primogemcraft:dbmlk"
+    "primogemcraft:dbmlk",
+    "primogemcraft:moladui_02"
   ]
 }

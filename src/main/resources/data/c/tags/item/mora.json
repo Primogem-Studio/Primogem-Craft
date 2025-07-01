@@ -1,8 +1,11 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:mmola_01",
+    {
+      "id": "#c:mora/block",
+      "required": false
+    },
     "primogemcraft:jinzhimola",
-    "#c:mora/block"
+    "primogemcraft:mmola_01"
   ]
 }

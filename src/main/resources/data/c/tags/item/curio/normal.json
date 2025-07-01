@@ -1,8 +1,17 @@
 {
   "replace": false,
   "values": [
-    "#c:curio/normal/s",
-    "#c:curio/normal/a",
-    "#c:curio/normal/b"
+    {
+      "id": "#c:curio/normal/a",
+      "required": false
+    },
+    {
+      "id": "#c:curio/normal/s",
+      "required": false
+    },
+    {
+      "id": "#c:curio/normal/b",
+      "required": false
+    }
   ]
 }

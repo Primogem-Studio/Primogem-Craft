@@ -1,16 +1,16 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:ziyousongshikuai",
-    "primogemcraft:jingzhimolakuai",
-    "primogemcraft:molakuai_01",
-    "primogemcraft:jiuchanzhiyuankuai",
-    "primogemcraft:jianlaohuangyukuai",
-    "primogemcraft:zuisnegzijingkuai",
-    "primogemcraft:shengzhangbifeidakuai",
     "primogemcraft:dijingqingjinkuai",
+    "primogemcraft:jianlaohuangyukuai",
+    "primogemcraft:yuansujingshikuai",
+    "primogemcraft:shengzhangbifeidakuai",
+    "primogemcraft:jingzhimolakuai",
+    "primogemcraft:zuisnegzijingkuai",
+    "primogemcraft:jiuchanzhiyuankuai",
+    "primogemcraft:molakuai_01",
     "primogemcraft:ranyuankuai_2",
-    "primogemcraft:aixubingyufangku_i",
-    "primogemcraft:yuansujingshikuai"
+    "primogemcraft:ziyousongshikuai",
+    "primogemcraft:aixubingyufangku_i"
   ]
 }

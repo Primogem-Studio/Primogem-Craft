@@ -1,14 +1,14 @@
 {
   "replace": false,
   "values": [
+    "primogemcraft:zizaiqiao",
+    "primogemcraft:jlq",
+    "primogemcraft:yuanshiqiao",
     "primogemcraft:axq",
     "primogemcraft:ryq",
     "primogemcraft:djq",
     "primogemcraft:szq",
     "primogemcraft:zsq",
-    "primogemcraft:jlq",
-    "primogemcraft:zizaiqiao",
-    "primogemcraft:yuanshiqiao",
     "primogemcraft:mmolachan"
   ]
 }

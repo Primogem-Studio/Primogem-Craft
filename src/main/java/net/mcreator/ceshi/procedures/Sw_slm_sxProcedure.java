@@ -12,7 +12,7 @@ public class Sw_slm_sxProcedure {
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 100, 0, false, false));
 		if (entity instanceof LivingEntity _entity)
-			_entity.setHealth((float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + 4));
+			_entity.setHealth((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + 4);
 		entity.setTicksFrozen(100);
 	}
 }

@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import org.checkerframework.checker.units.qual.s;
@@ -28,8 +27,8 @@ import net.mcreator.ceshi.block.entity.HhzdbooBlockEntity;
 
 public class HhzdbooBlock extends Block implements EntityBlock {
 	public HhzdbooBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.WET_GRASS).strength(10f, 0f).lightLevel(s -> 10).noOcclusion().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true)
-				.isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().sound(SoundType.WET_GRASS).strength(10f, 0f).lightLevel(s -> 10).noOcclusion().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true).isRedstoneConductor((bs, br, bp) -> false)
+				.instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
@@ -80,7 +79,7 @@ public class HhzdbooBlock extends Block implements EntityBlock {
 	public boolean triggerEvent(BlockState state, Level world, BlockPos pos, int eventID, int eventParam) {
 		super.triggerEvent(state, world, pos, eventID, eventParam);
 		BlockEntity blockEntity = world.getBlockEntity(pos);
-		return blockEntity == null ? false : blockEntity.triggerEvent(eventID, eventParam);
+		return blockEntity != null && blockEntity.triggerEvent(eventID, eventParam);
 	}
 
 	@Override

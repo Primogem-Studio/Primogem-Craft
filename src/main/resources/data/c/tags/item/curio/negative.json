@@ -1,9 +1,15 @@
 {
   "replace": false,
   "values": [
-    "#c:curio/clock",
-    "primogemcraft:qwwxntdmj",
+    {
+      "id": "#c:curio/clock",
+      "required": false
+    },
     "primogemcraft:qwqskxjxt",
-    "#c:curio/negative/cf"
+    {
+      "id": "#c:curio/negative/cf",
+      "required": false
+    },
+    "primogemcraft:qwwxntdmj"
   ]
 }

@@ -18,13 +18,13 @@ public class JlfsxProcedure {
 		if (entity == null)
 			return;
 		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("minecraft:logs"))) || (world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("minecraft:planks")))) {
-			if (Math.random() < ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQYAN.get())) : false) ? 0.15 : 0.1)) {
+			if (Math.random() < (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQYAN.get())) ? 0.15 : 0.1)) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Items.GOLD_INGOT));
 					entityToSpawn.setPickUpDelay(10);
 					_level.addFreshEntity(entityToSpawn);
 				}
-			} else if (Math.random() < ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQYAN.get())) : false) ? 0.015 : 0.01)) {
+			} else if (Math.random() < (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQYAN.get())) ? 0.015 : 0.01)) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PrimogemcraftModItems.JINZHIMOLA.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -32,5 +32,11 @@ public class JlfsxProcedure {
 				}
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.network;
 
 import net.neoforged.neoforge.network.handling.IPayloadContext;
@@ -16,13 +15,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.ceshi.world.inventory.SJGUIfumo00Menu;
 import net.mcreator.ceshi.procedures.Sjguifumo00sx2Procedure;
 import net.mcreator.ceshi.procedures.Sjguifumo00sx1Procedure;
 import net.mcreator.ceshi.procedures.Sjguifumo00sx0Procedure;
 import net.mcreator.ceshi.PrimogemcraftMod;
-
-import java.util.HashMap;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public record SJGUIfumo00ButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
@@ -41,14 +37,7 @@ public record SJGUIfumo00ButtonMessage(int buttonID, int x, int y, int z) implem
 
 	public static void handleData(final SJGUIfumo00ButtonMessage message, final IPayloadContext context) {
 		if (context.flow() == PacketFlow.SERVERBOUND) {
-			context.enqueueWork(() -> {
-				Player entity = context.player();
-				int buttonID = message.buttonID;
-				int x = message.x;
-				int y = message.y;
-				int z = message.z;
-				handleButtonAction(entity, buttonID, x, y, z);
-			}).exceptionally(e -> {
+			context.enqueueWork(() -> handleButtonAction(context.player(), message.buttonID, message.x, message.y, message.z)).exceptionally(e -> {
 				context.connection().disconnect(Component.literal(e.getMessage()));
 				return null;
 			});
@@ -57,7 +46,6 @@ public record SJGUIfumo00ButtonMessage(int buttonID, int x, int y, int z) implem
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
-		HashMap guistate = SJGUIfumo00Menu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;

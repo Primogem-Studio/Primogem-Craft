@@ -25,7 +25,7 @@ public class HSqwwsnProcedure {
 		String a = "";
 		ItemStack item1 = ItemStack.EMPTY;
 		if (itemstack.isEnchanted()) {
-			item1 = itemstack;
+			item1 = itemstack.copy();
 			EnchantmentHelper.setEnchantments(item1, ItemEnchantments.EMPTY);
 		}
 		if (!world.isClientSide()) {

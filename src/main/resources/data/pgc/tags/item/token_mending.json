@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "#c:curio"
+    {
+      "id": "#c:curio",
+      "required": false
+    }
   ]
 }

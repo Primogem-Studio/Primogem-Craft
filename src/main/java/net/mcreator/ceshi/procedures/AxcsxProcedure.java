@@ -37,12 +37,18 @@ public class AxcsxProcedure {
 				}
 			}
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), (int) ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQBING.get())) : false) ? 5 : 10));
+				_player.getCooldowns().addCooldown(itemstack.getItem(), (int) (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQBING.get())) ? 5 : 10));
 			if (world instanceof ServerLevel _level) {
 				itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
 				});
 			}
 			DiaoyonghuishouProcedure.execute(entity, itemstack);
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

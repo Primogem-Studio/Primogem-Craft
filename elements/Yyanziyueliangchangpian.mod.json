@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -46,6 +46,7 @@
     },
     "musicDiscDescription": "HOYO-MiX",
     "musicDiscLengthInTicks": 5000,
-    "musicDiscAnalogOutput": 10
+    "musicDiscAnalogOutput": 10,
+    "providedBannerPatterns": []
   }
 }

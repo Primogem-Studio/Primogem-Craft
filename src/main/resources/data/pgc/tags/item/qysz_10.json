@@ -1,36 +1,48 @@
 {
   "replace": false,
   "values": [
-    "#c:ysjinshu",
-    "#pgc:dzmb_4",
-    "#c:yshjj",
-    "#primogemcraft:yuansutaoxiajiehejin",
-    "primogemcraft:qhzllh_4",
-    "primogemcraft:yuansujingshikuai",
-    "primogemcraft:kongyuezhufu",
-    "primogemcraft:jianglidayinxiongjingyan",
     "primogemcraft:ysrzspsx",
-    "primogemcraft:zziyousongshi",
-    "primogemcraft:jianlaohuangyu",
-    "primogemcraft:zuishengzijing",
-    "primogemcraft:shengzhangbifei",
-    "primogemcraft:diijingqingjing",
-    "primogemcraft:rranyuanmanao",
-    "primogemcraft:aixubingyu",
     "primogemcraft:zhaiquan",
+    "minecraft:netherite_axe",
+    "primogemcraft:qhzllh_4",
+    "minecraft:netherite_chestplate",
+    "primogemcraft:rranyuanmanao",
+    "minecraft:netherite_boots",
+    "minecraft:netherite_pickaxe",
+    "primogemcraft:kongyuezhufu",
+    "primogemcraft:yuansujingshikuai",
+    "primogemcraft:jianglidayinxiongjingyan",
+    {
+      "id": "#pgc:dzmb_4",
+      "required": false
+    },
+    {
+      "id": "#c:ysjinshu",
+      "required": false
+    },
+    "minecraft:netherite_leggings",
+    "primogemcraft:zziyousongshi",
     "minecraft:dragon_egg",
     "minecraft:dragon_head",
-    "minecraft:nether_star",
-    "minecraft:netherite_sword",
-    "minecraft:netherite_shovel",
-    "minecraft:netherite_pickaxe",
-    "minecraft:netherite_axe",
-    "minecraft:netherite_hoe",
+    "primogemcraft:aixubingyu",
+    {
+      "id": "#c:yshjj",
+      "required": false
+    },
     "minecraft:netherite_helmet",
-    "minecraft:netherite_chestplate",
-    "minecraft:netherite_leggings",
-    "minecraft:netherite_boots",
-    "primogemcraft:yingjicunchunang",
-    "minecraft:netherite_ingot"
+    "minecraft:netherite_sword",
+    {
+      "id": "#primogemcraft:yuansutaoxiajiehejin",
+      "required": false
+    },
+    "minecraft:netherite_shovel",
+    "primogemcraft:jianlaohuangyu",
+    "primogemcraft:diijingqingjing",
+    "minecraft:netherite_ingot",
+    "primogemcraft:shengzhangbifei",
+    "minecraft:netherite_hoe",
+    "minecraft:nether_star",
+    "primogemcraft:zuishengzijing",
+    "primogemcraft:yingjicunchunang"
   ]
 }

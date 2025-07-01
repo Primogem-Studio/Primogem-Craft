@@ -94,7 +94,7 @@ public class DadaletoushibiezhuangtaiProcedure {
 				}
 				if (HSYhdltsxProcedure
 						.execute(world, x, y, z, entity, new ItemStack(Items.DIAMOND), entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY, true, true, d, true, false, true, true,
-								entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.FEIQIUPINGZHENG.get())) : false, true, 0, 0.98, 0.4, b, 0,
+								hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.FEIQIUPINGZHENG.get())), true, 0, 0.98, 0.4, b, 0,
 								entity instanceof ServerPlayer _plr9 && _plr9.level() instanceof ServerLevel
 										&& _plr9.getAdvancements().getOrStartProgress(_plr9.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:lletouderenke"))).isDone() ? 0.8 : 0.5,
 								1, Mth.nextInt(RandomSource.create(), 1, 5), Mth.nextInt(RandomSource.create(), 1, 2), 1, c, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getDisplayName().getString(), a)) {
@@ -130,5 +130,11 @@ public class DadaletoushibiezhuangtaiProcedure {
 				}
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

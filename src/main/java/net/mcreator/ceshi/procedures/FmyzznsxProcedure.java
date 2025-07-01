@@ -43,7 +43,7 @@ public class FmyzznsxProcedure {
 					+ (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)
 							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("primogemcraft:fumoyuzhezn"))));
 			if (Math.random() < a * 0.02) {
-				sourceentity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MAGIC)), (float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * 2));
+				sourceentity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MAGIC)), (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * 2);
 			}
 		}
 		if ((immediatesourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
@@ -55,7 +55,7 @@ public class FmyzznsxProcedure {
 					+ (immediatesourceentity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)
 							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("primogemcraft:fumoyuzhezn"))));
 			if (Math.random() < a * 0.02) {
-				immediatesourceentity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MAGIC)), (float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * 2));
+				immediatesourceentity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MAGIC)), (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * 2);
 			}
 		}
 	}

@@ -14,16 +14,15 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.ceshi.world.inventory.CeshifumoguiMenu;
 import net.mcreator.ceshi.network.CeshifumoguiButtonMessage;
-
-import java.util.HashMap;
+import net.mcreator.ceshi.init.PrimogemcraftModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class CeshifumoguiScreen extends AbstractContainerScreen<CeshifumoguiMenu> {
-	private final static HashMap<String, Object> guistate = CeshifumoguiMenu.guistate;
+public class CeshifumoguiScreen extends AbstractContainerScreen<CeshifumoguiMenu> implements PrimogemcraftModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_heitasuijifumo;
 
 	public CeshifumoguiScreen(CeshifumoguiMenu container, Inventory inventory, Component text) {
@@ -37,15 +36,24 @@ public class CeshifumoguiScreen extends AbstractContainerScreen<CeshifumoguiMenu
 		this.imageHeight = 166;
 	}
 
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
 	private static final ResourceLocation texture = ResourceLocation.parse("primogemcraft:textures/screens/ceshifumogui.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 87 && mouseX < leftPos + 169 && mouseY > topPos + 5 && mouseY < topPos + 34) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.ceshifumogui.tooltip_ssesuo_xu_jing_yan_zhi_jiang_bei_yu_zhou_sui_pian_di_xiao"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
@@ -86,7 +94,6 @@ public class CeshifumoguiScreen extends AbstractContainerScreen<CeshifumoguiMenu
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_heitasuijifumo", imagebutton_heitasuijifumo);
 		this.addRenderableWidget(imagebutton_heitasuijifumo);
 	}
 }

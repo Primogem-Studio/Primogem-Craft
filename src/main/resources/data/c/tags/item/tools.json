@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "#c:tools/melee_weapon"
+    {
+      "id": "#c:tools/melee_weapon",
+      "required": false
+    }
   ]
 }

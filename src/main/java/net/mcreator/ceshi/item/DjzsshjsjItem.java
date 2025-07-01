@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.item;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -14,7 +13,7 @@ import java.util.List;
 
 public class DjzsshjsjItem extends Item {
 	public DjzsshjsjItem() {
-		super(new Item.Properties().stacksTo(64).fireResistant().rarity(Rarity.EPIC));
+		super(new Item.Properties().fireResistant().rarity(Rarity.EPIC));
 	}
 
 	@Override

@@ -32,12 +32,17 @@ public class QwcwsxProcedure {
 	private static void execute(@Nullable Event event, Entity sourceentity) {
 		if (sourceentity == null)
 			return;
-		if ((sourceentity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.QIWUCHONGWANG.get())) : false)
-				|| (sourceentity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.QWKWZW.get())) : false)) {
+		if (hasEntityInInventory(sourceentity, new ItemStack(PrimogemcraftModItems.QIWUCHONGWANG.get())) || hasEntityInInventory(sourceentity, new ItemStack(PrimogemcraftModItems.QWKWZW.get()))) {
 			if (!(sourceentity instanceof LivingEntity _livEnt2 && _livEnt2.hasEffect(PrimogemcraftModMobEffects.JISHENG))) {
 				if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.JISHENG, 200, 0, false, false));
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

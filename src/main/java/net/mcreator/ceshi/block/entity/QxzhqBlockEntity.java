@@ -1,7 +1,4 @@
-
 package net.mcreator.ceshi.block.entity;
-
-import net.neoforged.neoforge.items.wrapper.SidedInvWrapper;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
@@ -29,8 +26,7 @@ import java.util.stream.IntStream;
 import io.netty.buffer.Unpooled;
 
 public class QxzhqBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(5, ItemStack.EMPTY);
-	private final SidedInvWrapper handler = new SidedInvWrapper(this, null);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(5, ItemStack.EMPTY);
 
 	public QxzhqBlockEntity(BlockPos position, BlockState state) {
 		super(PrimogemcraftModBlockEntities.QXZHQ.get(), position, state);
@@ -133,9 +129,5 @@ public class QxzhqBlockEntity extends RandomizableContainerBlockEntity implement
 		if (index == 3)
 			return false;
 		return true;
-	}
-
-	public SidedInvWrapper getItemHandler() {
-		return handler;
 	}
 }

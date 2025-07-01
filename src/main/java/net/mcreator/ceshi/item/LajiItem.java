@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.item;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -19,7 +18,7 @@ import java.util.List;
 
 public class LajiItem extends Item {
 	public LajiItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.EPIC).food((new FoodProperties.Builder()).nutrition(2).saturationModifier(-10f).alwaysEdible().build()));
+		super(new Item.Properties().rarity(Rarity.EPIC).food((new FoodProperties.Builder()).nutrition(2).saturationModifier(-10f).alwaysEdible().build()));
 	}
 
 	@Override

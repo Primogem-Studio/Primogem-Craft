@@ -1,12 +1,12 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:ysjshuijingcu",
-    "primogemcraft:ysjshuijing_1",
-    "primogemcraft:ysjshuijing_0",
-    "primogemcraft:jianshijingban",
     "primogemcraft:yuansujingshikuai",
     "primogemcraft:jianlaohuangyukuai",
-    "primogemcraft:jiuchanzhiyuankuai"
+    "primogemcraft:ysjshuijing_1",
+    "primogemcraft:ysjshuijing_0",
+    "primogemcraft:jiuchanzhiyuankuai",
+    "primogemcraft:jianshijingban",
+    "primogemcraft:ysjshuijingcu"
   ]
 }

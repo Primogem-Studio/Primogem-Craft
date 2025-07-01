@@ -71,7 +71,7 @@ public class Wyzp_sx_1Procedure {
 				}
 			} else if (!itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("dai_kai_jiang")) {
 				itemstack.shrink(1);
-				i1 = new ItemStack(PrimogemcraftModItems.XYZP.get());
+				i1 = new ItemStack(PrimogemcraftModItems.XYZP.get()).copy();
 				i1.setCount(1);
 				{
 					final String _tagName = "dai_kai_jiang";

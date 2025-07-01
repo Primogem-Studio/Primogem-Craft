@@ -25,8 +25,8 @@ public class YxaxgsxProcedure {
 		if (!world.isClientSide()) {
 			if (blockstate.getBlock() == PrimogemcraftModBlocks.YUANSUJINGSHIKUAI.get()) {
 				if (entity instanceof Player _player)
-					_player.getCooldowns().addCooldown(itemstack.getItem(), (int) ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQBING.get())) : false) ? 10 : 20));
-				if (Math.random() < ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQBING.get())) : false) ? 1 : 0.95)) {
+					_player.getCooldowns().addCooldown(itemstack.getItem(), (int) (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQBING.get())) ? 10 : 20));
+				if (Math.random() < (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQBING.get())) ? 1 : 0.95)) {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1);
@@ -44,5 +44,11 @@ public class YxaxgsxProcedure {
 				}
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

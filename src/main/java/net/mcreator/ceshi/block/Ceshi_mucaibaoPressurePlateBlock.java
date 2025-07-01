@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.minecraft.world.level.material.MapColor;
@@ -14,7 +13,7 @@ import net.minecraft.core.BlockPos;
 
 public class Ceshi_mucaibaoPressurePlateBlock extends PressurePlateBlock {
 	public Ceshi_mucaibaoPressurePlateBlock() {
-		super(BlockSetType.OAK, BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).mapColor(MapColor.GRASS).sound(SoundType.WOOD).strength(2f, 3f).dynamicShape().forceSolidOn());
+		super(BlockSetType.OAK, BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).sound(SoundType.WOOD).strength(2f, 3f).ignitedByLava().instrument(NoteBlockInstrument.BASS).forceSolidOn());
 	}
 
 	@Override

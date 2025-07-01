@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.item;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -19,7 +18,7 @@ import java.util.List;
 
 public class GzsmzItem extends Item {
 	public GzsmzItem() {
-		super(new Item.Properties().stacksTo(64).fireResistant().rarity(Rarity.UNCOMMON).food((new FoodProperties.Builder()).nutrition(1).saturationModifier(-0.4f).alwaysEdible().build()));
+		super(new Item.Properties().fireResistant().rarity(Rarity.UNCOMMON).food((new FoodProperties.Builder()).nutrition(1).saturationModifier(-0.4f).alwaysEdible().build()));
 	}
 
 	@Override

@@ -5,27 +5,24 @@ import net.neoforged.neoforge.event.entity.item.ItemTossEvent;
 import net.neoforged.neoforge.common.MutableDataComponentHolder;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.client.Minecraft;
 
+import net.mcreator.ceshi.world.inventory.ZhangquanzhezhinangguiMenu;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
-import net.mcreator.ceshi.client.gui.ZhangquanzhezhinangguiScreen;
 
 import javax.annotation.Nonnull;
 
-@EventBusSubscriber(Dist.CLIENT)
+@EventBusSubscriber
 public class ZhangquanzhezhinangInventoryCapability extends ComponentItemHandler {
 	@SubscribeEvent
-	@OnlyIn(Dist.CLIENT)
 	public static void onItemDropped(ItemTossEvent event) {
 		if (event.getEntity().getItem().getItem() == PrimogemcraftModItems.YIBANGRENZHINANG.get()) {
-			if (Minecraft.getInstance().screen instanceof ZhangquanzhezhinangguiScreen) {
-				Minecraft.getInstance().player.closeContainer();
-			}
+			Player player = event.getPlayer();
+			if (player.containerMenu instanceof ZhangquanzhezhinangguiMenu)
+				player.closeContainer();
 		}
 	}
 

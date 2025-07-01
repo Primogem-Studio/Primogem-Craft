@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:cangsangshizhuanlouti",
-    "primogemcraft:xiuxiumulouqi",
-    "primogemcraft:d_12",
+    "primogemcraft:ceshi_mucaibao_stairs",
     "primogemcraft:yishijiemuban_stairs",
     "primogemcraft:caomu_31",
+    "primogemcraft:d_12",
     "primogemcraft:caomulouti_21",
-    "primogemcraft:ceshi_mucaibao_stairs",
+    "primogemcraft:xiuxiumulouqi",
+    "primogemcraft:cangsangshizhuanlouti",
     "primogemcraft:llianjiamolakuiaitaijie",
     "primogemcraft:yiyishijiemubanlouqi"
   ]

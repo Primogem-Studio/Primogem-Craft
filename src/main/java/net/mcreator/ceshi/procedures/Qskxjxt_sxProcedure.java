@@ -20,7 +20,7 @@ public class Qskxjxt_sxProcedure {
 		if (entity == null)
 			return;
 		if (!(entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PrimogemcraftModMobEffects.QSKXJXTXG)) && itemstack.getDamageValue() == 0) {
-			itemstack.setDamageValue((int) (itemstack.getMaxDamage() - 1));
+			itemstack.setDamageValue(itemstack.getMaxDamage() - 1);
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.QSKXJXTXG, 24000, 0, false, false));
 			if (world instanceof Level _level) {

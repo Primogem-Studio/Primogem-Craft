@@ -14,16 +14,15 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.ceshi.world.inventory.HeitayindaoyongguiMenu;
 import net.mcreator.ceshi.network.HeitayindaoyongguiButtonMessage;
-
-import java.util.HashMap;
+import net.mcreator.ceshi.init.PrimogemcraftModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class HeitayindaoyongguiScreen extends AbstractContainerScreen<HeitayindaoyongguiMenu> {
-	private final static HashMap<String, Object> guistate = HeitayindaoyongguiMenu.guistate;
+public class HeitayindaoyongguiScreen extends AbstractContainerScreen<HeitayindaoyongguiMenu> implements PrimogemcraftModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_heitaanniu;
 	ImageButton imagebutton_heitaanniu1;
 	ImageButton imagebutton_heitaanniu2;
@@ -37,6 +36,12 @@ public class HeitayindaoyongguiScreen extends AbstractContainerScreen<Heitayinda
 		this.entity = container.entity;
 		this.imageWidth = 176;
 		this.imageHeight = 166;
+	}
+
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
 	}
 
 	private static final ResourceLocation texture = ResourceLocation.parse("primogemcraft:textures/screens/heitayindaoyonggui.png");
@@ -89,7 +94,6 @@ public class HeitayindaoyongguiScreen extends AbstractContainerScreen<Heitayinda
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_heitaanniu", imagebutton_heitaanniu);
 		this.addRenderableWidget(imagebutton_heitaanniu);
 		imagebutton_heitaanniu1 = new ImageButton(this.leftPos + 96, this.topPos + 79, 56, 20,
 				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/heitaanniu.png"), ResourceLocation.parse("primogemcraft:textures/screens/heitaanniu.png")), e -> {
@@ -103,7 +107,6 @@ public class HeitayindaoyongguiScreen extends AbstractContainerScreen<Heitayinda
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_heitaanniu1", imagebutton_heitaanniu1);
 		this.addRenderableWidget(imagebutton_heitaanniu1);
 		imagebutton_heitaanniu2 = new ImageButton(this.leftPos + 96, this.topPos + 124, 56, 20,
 				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/heitaanniu.png"), ResourceLocation.parse("primogemcraft:textures/screens/heitaanniu.png")), e -> {
@@ -117,7 +120,6 @@ public class HeitayindaoyongguiScreen extends AbstractContainerScreen<Heitayinda
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_heitaanniu2", imagebutton_heitaanniu2);
 		this.addRenderableWidget(imagebutton_heitaanniu2);
 	}
 }

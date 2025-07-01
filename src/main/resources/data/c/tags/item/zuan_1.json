@@ -1,12 +1,12 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:zizaizuantao_chestplate",
-    "primogemcraft:jlkjzs_chestplate",
     "primogemcraft:zszst_chestplate",
-    "primogemcraft:szzskj_chestplate",
     "primogemcraft:djzst_chestplate",
     "primogemcraft:ruzst_chestplate",
-    "primogemcraft:axzst_chestplate"
+    "primogemcraft:axzst_chestplate",
+    "primogemcraft:zizaizuantao_chestplate",
+    "primogemcraft:szzskj_chestplate",
+    "primogemcraft:jlkjzs_chestplate"
   ]
 }

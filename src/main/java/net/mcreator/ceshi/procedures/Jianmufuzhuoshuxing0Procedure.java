@@ -7,6 +7,7 @@ import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.InteractionHand;
 
 import javax.annotation.Nullable;
 
@@ -14,7 +15,7 @@ import javax.annotation.Nullable;
 public class Jianmufuzhuoshuxing0Procedure {
 	@SubscribeEvent
 	public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
-		if (event.getHand() != event.getEntity().getUsedItemHand())
+		if (event.getHand() != InteractionHand.MAIN_HAND)
 			return;
 		execute(event, event.getLevel(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), event.getEntity());
 	}

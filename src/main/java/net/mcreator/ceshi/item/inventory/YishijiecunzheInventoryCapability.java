@@ -5,27 +5,24 @@ import net.neoforged.neoforge.event.entity.item.ItemTossEvent;
 import net.neoforged.neoforge.common.MutableDataComponentHolder;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.client.Minecraft;
 
+import net.mcreator.ceshi.world.inventory.CunzheshezhiMenu;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
-import net.mcreator.ceshi.client.gui.CunzheshezhiScreen;
 
 import javax.annotation.Nonnull;
 
-@EventBusSubscriber(Dist.CLIENT)
+@EventBusSubscriber
 public class YishijiecunzheInventoryCapability extends ComponentItemHandler {
 	@SubscribeEvent
-	@OnlyIn(Dist.CLIENT)
 	public static void onItemDropped(ItemTossEvent event) {
 		if (event.getEntity().getItem().getItem() == PrimogemcraftModItems.YISHIJIECUNZHE.get()) {
-			if (Minecraft.getInstance().screen instanceof CunzheshezhiScreen) {
-				Minecraft.getInstance().player.closeContainer();
-			}
+			Player player = event.getPlayer();
+			if (player.containerMenu instanceof CunzheshezhiMenu)
+				player.closeContainer();
 		}
 	}
 

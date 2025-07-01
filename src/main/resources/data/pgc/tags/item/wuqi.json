@@ -1,12 +1,15 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:wufengjian",
-    "primogemcraft:lmsj",
     "primogemcraft:dijian",
+    {
+      "id": "#pgc:wuqi/5",
+      "required": false
+    },
+    "primogemcraft:lmsj",
     "primogemcraft:xlly",
-    "primogemcraft:ftyj",
-    "#pgc:wuqi/5",
-    "primogemcraft:heijian"
+    "primogemcraft:heijian",
+    "primogemcraft:wufengjian",
+    "primogemcraft:ftyj"
   ]
 }

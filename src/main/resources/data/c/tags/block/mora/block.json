@@ -1,15 +1,15 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:moladui_02",
-    "primogemcraft:molakuai_01",
-    "primogemcraft:jingzhimolakuai",
     "primogemcraft:llianjiamolakuai",
-    "primogemcraft:lianjiamolakuaibankuai",
-    "primogemcraft:llianjiamolakuiaitaijie",
-    "primogemcraft:llianjiamolakuaiqiang",
+    "primogemcraft:mlxdml_03",
     "primogemcraft:mlxdml_01",
     "primogemcraft:mlxdml_02",
-    "primogemcraft:mlxdml_03"
+    "primogemcraft:lianjiamolakuaibankuai",
+    "primogemcraft:jingzhimolakuai",
+    "primogemcraft:molakuai_01",
+    "primogemcraft:moladui_02",
+    "primogemcraft:llianjiamolakuiaitaijie",
+    "primogemcraft:llianjiamolakuaiqiang"
   ]
 }

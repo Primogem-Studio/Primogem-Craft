@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "#c:curio/special/code"
+    {
+      "id": "#c:curio/special/code",
+      "required": false
+    }
   ]
 }

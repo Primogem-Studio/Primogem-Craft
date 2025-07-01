@@ -1,12 +1,12 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:zizaitiejia_helmet",
+    "primogemcraft:axtt_helmet",
     "primogemcraft:zstkj_helmet",
+    "primogemcraft:zizaitiejia_helmet",
+    "primogemcraft:rytt_helmet",
     "primogemcraft:kjjlt_helmet",
     "primogemcraft:szkjtie_helmet",
-    "primogemcraft:djtt_helmet",
-    "primogemcraft:rytt_helmet",
-    "primogemcraft:axtt_helmet"
+    "primogemcraft:djtt_helmet"
   ]
 }

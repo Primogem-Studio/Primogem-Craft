@@ -26,7 +26,7 @@ public class Rykj_xg_sx_xzProcedure {
 						+ (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("aixu_tao_zhi")
 						+ (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("aixu_tao_zhi") < 4
 				|| (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.RYKJXG) ? _livEnt.getEffect(PrimogemcraftModMobEffects.RYKJXG).getAmplifier() : 0) == 0) {
-			a = new ItemStack(PrimogemcraftModItems.YSRZ_0.get());
+			a = new ItemStack(PrimogemcraftModItems.YSRZ_0.get()).copy();
 			{
 				final String _tagName = "huo";
 				final double _tagValue = 1;
@@ -38,10 +38,16 @@ public class Rykj_xg_sx_xzProcedure {
 				final boolean _tagValue = true;
 				CustomData.update(DataComponents.CUSTOM_DATA, a, tag -> tag.putBoolean(_tagName, _tagValue));
 			}
-			if (!(entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(a) : false)) {
+			if (!hasEntityInInventory(entity, a)) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(PrimogemcraftModMobEffects.RYKJXG);
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

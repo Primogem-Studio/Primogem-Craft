@@ -9,16 +9,15 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.ceshi.world.inventory.YibangrenzhinangguiMenu;
-
-import java.util.HashMap;
+import net.mcreator.ceshi.init.PrimogemcraftModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class YibangrenzhinangguiScreen extends AbstractContainerScreen<YibangrenzhinangguiMenu> {
-	private final static HashMap<String, Object> guistate = YibangrenzhinangguiMenu.guistate;
+public class YibangrenzhinangguiScreen extends AbstractContainerScreen<YibangrenzhinangguiMenu> implements PrimogemcraftModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 
 	public YibangrenzhinangguiScreen(YibangrenzhinangguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -29,6 +28,12 @@ public class YibangrenzhinangguiScreen extends AbstractContainerScreen<Yibangren
 		this.entity = container.entity;
 		this.imageWidth = 324;
 		this.imageHeight = 238;
+	}
+
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
 	}
 
 	private static final ResourceLocation texture = ResourceLocation.parse("primogemcraft:textures/screens/yibangrenzhinanggui.png");

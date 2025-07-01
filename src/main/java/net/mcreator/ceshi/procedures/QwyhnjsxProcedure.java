@@ -39,7 +39,7 @@ public class QwyhnjsxProcedure {
 				_player.displayClientMessage(Component.literal((itemstack.getDisplayName().getString() + "\u00A7c\u00A7l\u5DF2\u635F\u574F")), false);
 			itemstack.shrink(1);
 			if (Math.random() < 0.3) {
-				a = new ItemStack(PrimogemcraftModItems.SJBCQ.get());
+				a = new ItemStack(PrimogemcraftModItems.SJBCQ.get()).copy();
 				{
 					final String _tagName = "shijianbuchang";
 					final double _tagValue = 3;

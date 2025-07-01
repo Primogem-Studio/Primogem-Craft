@@ -23,7 +23,7 @@ public class FenliejinbisxhsProcedure {
 			return false;
 		ItemStack item1 = ItemStack.EMPTY;
 		if (itemstack.getDamageValue() == 0) {
-			itemstack.setDamageValue((int) (itemstack.getMaxDamage() - 1));
+			itemstack.setDamageValue(itemstack.getMaxDamage() - 1);
 		}
 		{
 			final String _tagName = "jishu";
@@ -31,7 +31,7 @@ public class FenliejinbisxhsProcedure {
 			CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 		}
 		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jishu") >= naijiu * zhi_naijiu) {
-			itemstack.setDamageValue((int) (itemstack.getDamageValue() - 1));
+			itemstack.setDamageValue(itemstack.getDamageValue() - 1);
 			{
 				final String _tagName = "jishu";
 				final double _tagValue = 0;
@@ -44,7 +44,7 @@ public class FenliejinbisxhsProcedure {
 				entityToSpawn.setPickUpDelay(0);
 				_level.addFreshEntity(entityToSpawn);
 			}
-			itemstack.setDamageValue((int) (itemstack.getMaxDamage() - 1));
+			itemstack.setDamageValue(itemstack.getMaxDamage() - 1);
 			if (Math.random() < gailv) {
 				{
 					final String _tagName = "shouming";
@@ -69,7 +69,7 @@ public class FenliejinbisxhsProcedure {
 			}
 		}
 		if (itemstack.isEnchanted()) {
-			item1 = itemstack;
+			item1 = itemstack.copy();
 			EnchantmentHelper.setEnchantments(item1, ItemEnchantments.EMPTY);
 		}
 		return false;

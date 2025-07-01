@@ -21271,10 +21271,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -21346,10 +21342,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           }
         ]
       }
@@ -23376,10 +23368,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           }
         ]
       }
@@ -23398,10 +23386,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           }
         ]
       }
@@ -23420,10 +23404,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           }
         ]
       }
@@ -23442,10 +23422,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           }
         ]
       }
@@ -23464,10 +23440,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           }
         ]
       }
@@ -23486,10 +23458,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           }
         ]
       }
@@ -23526,10 +23494,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           }
         ]
       }
@@ -23548,10 +23512,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -39783,6 +39743,15 @@
     "ENCHANTMENTS:minecraft:on_random_loot": [
       "~CUSTOM:Fmyuzhousuipian",
       "~CUSTOM:Ceshifumo01"
+    ],
+    "BLOCKS:minecraft:wooden_fences": [
+      "~CUSTOM:Xiumuzhalan",
+      "~CUSTOM:D14",
+      "~CUSTOM:YishijiemubanFence",
+      "~CUSTOM:Caomu33",
+      "~CUSTOM:Caomo23",
+      "~CUSTOM:Ceshi_mucaibaoFence",
+      "~CUSTOM:Yishijiemuzhalan"
     ]
   },
   "tab_element_order": {
@@ -48470,6 +48439,42 @@
       "item.primogemcraft.zizaifu.description_1": "§7 - 步行时获得急速"
     }
   },
+  "metadata": {
+    "files": [
+      "src/main/resources/pack.mcmeta",
+      "src/main/resources/assets/primogemcraft/sounds.json",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModModels.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModTabs.java",
+      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/net/mcreator/ceshi/PrimogemcraftMod.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModSounds.java",
+      "src/main/java/net/mcreator/ceshi/network/PrimogemcraftModVariables.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModMenus.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModScreens.java",
+      "src/main/java/net/mcreator/ceshi/network/MenuStateUpdateMessage.java",
+      "src/main/java/net/mcreator/ceshi/world/features/configurations/StructureFeatureConfiguration.java",
+      "src/main/java/net/mcreator/ceshi/world/features/StructureFeature.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModKeyMappings.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModTrades.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModVillagerProfessions.java",
+      "src/main/resources/data/minecraft/tags/point_of_interest_type/acquirable_job_site.json",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModGameRules.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModFuels.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModMobEffects.java",
+      "src/main/resources/data/neoforge/data_maps/entity_type/monster_room_mobs.json",
+      "src/main/resources/data/minecraft/tags/painting_variant/placeable.json",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModParticleTypes.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModParticles.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModPotions.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModBlocks.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModBlockEntities.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModItems.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModEntities.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModEntityRenderers.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModFeatures.java"
+    ]
+  },
   "foldersRoot": {
     "name": "~",
     "children": []
@@ -48492,5 +48497,5 @@
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.ceshi"
   },
-  "mcreatorVersion": 202500113416
+  "mcreatorVersion": 202500226612
 }

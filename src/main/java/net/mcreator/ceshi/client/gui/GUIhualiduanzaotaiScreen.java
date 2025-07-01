@@ -14,16 +14,15 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.ceshi.world.inventory.GUIhualiduanzaotaiMenu;
 import net.mcreator.ceshi.network.GUIhualiduanzaotaiButtonMessage;
-
-import java.util.HashMap;
+import net.mcreator.ceshi.init.PrimogemcraftModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class GUIhualiduanzaotaiScreen extends AbstractContainerScreen<GUIhualiduanzaotaiMenu> {
-	private final static HashMap<String, Object> guistate = GUIhualiduanzaotaiMenu.guistate;
+public class GUIhualiduanzaotaiScreen extends AbstractContainerScreen<GUIhualiduanzaotaiMenu> implements PrimogemcraftModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_guifu_lan;
 	ImageButton imagebutton_guifu_huang;
 
@@ -38,18 +37,28 @@ public class GUIhualiduanzaotaiScreen extends AbstractContainerScreen<GUIhualidu
 		this.imageHeight = 166;
 	}
 
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
 	private static final ResourceLocation texture = ResourceLocation.parse("primogemcraft:textures/screens/gu_ihualiduanzaotai.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 130 && mouseX < leftPos + 147 && mouseY > topPos + 57 && mouseY < topPos + 65) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.gu_ihualiduanzaotai.tooltip_proc_gu_ihldztmiaoshu"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 130 && mouseX < leftPos + 147 && mouseY > topPos + 22 && mouseY < topPos + 30) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.gu_ihualiduanzaotai.tooltip_ssbssljing_lian"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
@@ -89,7 +98,6 @@ public class GUIhualiduanzaotaiScreen extends AbstractContainerScreen<GUIhualidu
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_guifu_lan", imagebutton_guifu_lan);
 		this.addRenderableWidget(imagebutton_guifu_lan);
 		imagebutton_guifu_huang = new ImageButton(this.leftPos + 130, this.topPos + 57, 17, 8,
 				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/guifu_huang.png"), ResourceLocation.parse("primogemcraft:textures/screens/anniu_bai.png")), e -> {
@@ -103,7 +111,6 @@ public class GUIhualiduanzaotaiScreen extends AbstractContainerScreen<GUIhualidu
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_guifu_huang", imagebutton_guifu_huang);
 		this.addRenderableWidget(imagebutton_guifu_huang);
 	}
 }

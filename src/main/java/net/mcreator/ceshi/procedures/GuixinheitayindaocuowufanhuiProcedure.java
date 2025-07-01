@@ -10,6 +10,12 @@ public class GuixinheitayindaocuowufanhuiProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		return !(entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.SUIJI_1SHIJIAN.get())) : false);
+		return !hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.SUIJI_1SHIJIAN.get()));
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

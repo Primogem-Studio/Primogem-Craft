@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "#primogemcraft:swords"
+    {
+      "id": "#primogemcraft:swords",
+      "required": false
+    }
   ]
 }

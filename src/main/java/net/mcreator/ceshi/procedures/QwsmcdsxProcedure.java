@@ -16,7 +16,7 @@ public class QwsmcdsxProcedure {
 		if (!world.isClientSide()) {
 			if (entity.getPersistentData().getBoolean("guan_zi_po_huai")) {
 				entity.getPersistentData().putBoolean("guan_zi_po_huai", false);
-				a = new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get());
+				a = new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()).copy();
 				a.setCount(Mth.nextInt(RandomSource.create(), 1, 5));
 				if (HSqwwsnProcedure.execute(world, x, y, z, entity, a, itemstack, true, true, 1, 1, "loot spawn ~ ~ ~ loot primogemcraft:blocks/daguanzi", itemstack.getDisplayName().getString(),
 						"loot spawn ~ ~ ~ loot primogemcraft:blocks/xiaoguanzi")) {

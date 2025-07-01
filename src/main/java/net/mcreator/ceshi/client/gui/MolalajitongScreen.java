@@ -9,16 +9,15 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.ceshi.world.inventory.MolalajitongMenu;
-
-import java.util.HashMap;
+import net.mcreator.ceshi.init.PrimogemcraftModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class MolalajitongScreen extends AbstractContainerScreen<MolalajitongMenu> {
-	private final static HashMap<String, Object> guistate = MolalajitongMenu.guistate;
+public class MolalajitongScreen extends AbstractContainerScreen<MolalajitongMenu> implements PrimogemcraftModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 
 	public MolalajitongScreen(MolalajitongMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -29,6 +28,12 @@ public class MolalajitongScreen extends AbstractContainerScreen<MolalajitongMenu
 		this.entity = container.entity;
 		this.imageWidth = 176;
 		this.imageHeight = 217;
+	}
+
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
 	}
 
 	private static final ResourceLocation texture = ResourceLocation.parse("primogemcraft:textures/screens/molalajitong.png");

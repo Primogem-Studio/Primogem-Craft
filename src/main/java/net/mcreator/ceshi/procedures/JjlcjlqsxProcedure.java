@@ -24,12 +24,11 @@ public class JjlcjlqsxProcedure {
 				});
 			}
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(),
-						Mth.nextInt(RandomSource.create(), (int) ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQYAN.get())) : false) ? 80 : 160),
-								(int) ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQYAN.get())) : false) ? 160 : 320)));
+				_player.getCooldowns().addCooldown(itemstack.getItem(), Mth.nextInt(RandomSource.create(), (int) (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQYAN.get())) ? 80 : 160),
+						(int) (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQYAN.get())) ? 160 : 320)));
 		}
 		if (itemstack.getItem() == PrimogemcraftModItems.JLC.get()) {
-			if (Math.random() < ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQYAN.get())) : false) ? 0.0015 : 0.001)) {
+			if (Math.random() < (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQYAN.get())) ? 0.0015 : 0.001)) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, (entity.getX()), (entity.getY()), (entity.getZ()), new ItemStack(PrimogemcraftModItems.JIANLAOHUANGYU.get()));
 					entityToSpawn.setPickUpDelay(0);
@@ -38,5 +37,11 @@ public class JjlcjlqsxProcedure {
 				}
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

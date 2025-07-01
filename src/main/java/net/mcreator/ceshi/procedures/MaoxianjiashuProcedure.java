@@ -13,7 +13,7 @@ public class MaoxianjiashuProcedure {
 			_player.getCooldowns().addCooldown(itemstack.getItem(), 5);
 		if (entity.isShiftKeyDown()) {
 			if (entity instanceof Player _player)
-				_player.giveExperiencePoints((int) (itemstack.getMaxDamage() - itemstack.getDamageValue()));
+				_player.giveExperiencePoints(itemstack.getMaxDamage() - itemstack.getDamageValue());
 			itemstack.setDamageValue(itemstack.getMaxDamage());
 		} else {
 			if ((entity instanceof Player _plr ? _plr.experienceLevel : 0) != 0) {

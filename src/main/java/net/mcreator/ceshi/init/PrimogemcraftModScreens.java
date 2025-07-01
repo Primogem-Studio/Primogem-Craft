@@ -1,4 +1,3 @@
-
 /*
  *	MCreator note: This file will be REGENERATED on each build.
  */
@@ -62,5 +61,9 @@ public class PrimogemcraftModScreens {
 		event.register(PrimogemcraftModMenus.GU_IHUALIDUANZAOTAI.get(), GUIhualiduanzaotaiScreen::new);
 		event.register(PrimogemcraftModMenus.GU_IBHMG.get(), GUIbhmgScreen::new);
 		event.register(PrimogemcraftModMenus.GU_IHYZHQ.get(), GUIhyzhqScreen::new);
+	}
+
+	public interface ScreenAccessor {
+		void updateMenuState(int elementType, String name, Object elementState);
 	}
 }

@@ -21,7 +21,7 @@ public class DjppguochengProcedure {
 				_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.DJPPXIANZHI, 40, 0, false, false));
 			if ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.DJPP) ? _livEnt.getEffect(PrimogemcraftModMobEffects.DJPP).getAmplifier() : 0) == 0) {
 				if (entity instanceof LivingEntity _entity)
-					_entity.setHealth((float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + 4));
+					_entity.setHealth((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + 4);
 			}
 			if ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.DJPP) ? _livEnt.getEffect(PrimogemcraftModMobEffects.DJPP).getAmplifier() : 0) == 1) {
 				if (entity instanceof LivingEntity _entity)

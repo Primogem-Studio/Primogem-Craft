@@ -19,10 +19,10 @@ public class Wfj_sxProcedure {
 		ItemStack stack = ItemStack.EMPTY;
 		double a = 0;
 		if (!world.isClientSide()) {
-			stack = itemstack;
+			stack = itemstack.copy();
 			var attr = CustomAPI.getAttributes(stack);
 			if (Math.random() < HSjinglianProcedure.execute(entity, itemstack) * 0.2) {
-				stack.setDamageValue((int) (stack.getDamageValue() - 1));
+				stack.setDamageValue(stack.getDamageValue() - 1);
 				if (!(sourceentity instanceof Player _plrCldCheck4 && _plrCldCheck4.getCooldowns().isOnCooldown(stack.getItem()))) {
 					a = Math.random() - Math.random();
 					if (sourceentity instanceof Player _player)

@@ -10,8 +10,14 @@ public class JijiuchanzhiyuanDangYouJianDianJiKongQiShiShiTiDeWeiZhiProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.JIJIUCHANZHIYUAN.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.JIJIUCHANZHIYUAN.get()))) {
 			new ItemStack(PrimogemcraftModItems.JIJIUCHANZHIYUAN.get()).shrink(1);
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

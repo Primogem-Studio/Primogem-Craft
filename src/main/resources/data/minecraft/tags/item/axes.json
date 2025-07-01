@@ -1,14 +1,14 @@
 {
   "replace": false,
   "values": [
+    "primogemcraft:szf",
+    "primogemcraft:djf",
+    "primogemcraft:zsf",
     "primogemcraft:axf",
     "primogemcraft:ryf",
-    "primogemcraft:djf",
-    "primogemcraft:szf",
-    "primogemcraft:zsf",
-    "primogemcraft:jlf",
-    "primogemcraft:zizaifu",
+    "primogemcraft:mmolafu",
     "primogemcraft:yuanshifu",
-    "primogemcraft:mmolafu"
+    "primogemcraft:jlf",
+    "primogemcraft:zizaifu"
   ]
 }

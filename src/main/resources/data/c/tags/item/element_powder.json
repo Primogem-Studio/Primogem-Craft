@@ -1,9 +1,21 @@
 {
   "replace": false,
   "values": [
-    "#c:ysdp_0",
-    "#c:yssx_0",
-    "#c:ysk_0",
-    "#primogemcraft:yuansujingticailiaobiaoqian"
+    {
+      "id": "#c:ysdp_0",
+      "required": false
+    },
+    {
+      "id": "#c:yssx_0",
+      "required": false
+    },
+    {
+      "id": "#c:ysk_0",
+      "required": false
+    },
+    {
+      "id": "#primogemcraft:yuansujingticailiaobiaoqian",
+      "required": false
+    }
   ]
 }

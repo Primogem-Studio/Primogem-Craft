@@ -9,16 +9,15 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.ceshi.world.inventory.GanjinglajitongMenu;
-
-import java.util.HashMap;
+import net.mcreator.ceshi.init.PrimogemcraftModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class GanjinglajitongScreen extends AbstractContainerScreen<GanjinglajitongMenu> {
-	private final static HashMap<String, Object> guistate = GanjinglajitongMenu.guistate;
+public class GanjinglajitongScreen extends AbstractContainerScreen<GanjinglajitongMenu> implements PrimogemcraftModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 
 	public GanjinglajitongScreen(GanjinglajitongMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -29,6 +28,12 @@ public class GanjinglajitongScreen extends AbstractContainerScreen<Ganjinglajito
 		this.entity = container.entity;
 		this.imageWidth = 176;
 		this.imageHeight = 200;
+	}
+
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
 	}
 
 	private static final ResourceLocation texture = ResourceLocation.parse("primogemcraft:textures/screens/ganjinglajitong.png");

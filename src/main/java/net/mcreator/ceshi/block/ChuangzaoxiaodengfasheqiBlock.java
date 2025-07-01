@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -30,7 +29,7 @@ import java.util.List;
 
 public class ChuangzaoxiaodengfasheqiBlock extends Block implements EntityBlock {
 	public ChuangzaoxiaodengfasheqiBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).mapColor(MapColor.COLOR_YELLOW).sound(SoundType.NETHERITE_BLOCK).strength(3f, 10f).pushReaction(PushReaction.BLOCK));
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).sound(SoundType.NETHERITE_BLOCK).strength(3f, 10f).pushReaction(PushReaction.BLOCK).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
@@ -69,7 +68,7 @@ public class ChuangzaoxiaodengfasheqiBlock extends Block implements EntityBlock 
 	public boolean triggerEvent(BlockState state, Level world, BlockPos pos, int eventID, int eventParam) {
 		super.triggerEvent(state, world, pos, eventID, eventParam);
 		BlockEntity blockEntity = world.getBlockEntity(pos);
-		return blockEntity == null ? false : blockEntity.triggerEvent(eventID, eventParam);
+		return blockEntity != null && blockEntity.triggerEvent(eventID, eventParam);
 	}
 
 	@Override

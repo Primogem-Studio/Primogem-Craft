@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.minecraft.world.level.material.MapColor;
@@ -11,7 +10,7 @@ import net.minecraft.core.BlockPos;
 
 public class ZyjskBlock extends Block {
 	public ZyjskBlock() {
-		super(BlockBehaviour.Properties.of().liquid().mapColor(MapColor.WATER).sound(SoundType.NETHERITE_BLOCK).strength(3f, 15f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).sound(SoundType.NETHERITE_BLOCK).strength(3f, 15f).requiresCorrectToolForDrops());
 	}
 
 	@Override

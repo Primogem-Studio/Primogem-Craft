@@ -1,19 +1,19 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:zfg",
-    "primogemcraft:yxaxg",
-    "primogemcraft:axg",
-    "primogemcraft:ryg",
-    "primogemcraft:djg",
-    "primogemcraft:szg",
-    "primogemcraft:zsg",
-    "primogemcraft:jlg",
-    "primogemcraft:zizgao",
-    "primogemcraft:yuanshigao",
-    "primogemcraft:tiaoguozhang",
-    "primogemcraft:mmolagao",
     "primogemcraft:qinlaodezhexue",
-    "primogemcraft:jiuchanzhiyuangao"
+    "primogemcraft:yuanshigao",
+    "primogemcraft:axg",
+    "primogemcraft:zsg",
+    "primogemcraft:yxaxg",
+    "primogemcraft:zizgao",
+    "primogemcraft:jiuchanzhiyuangao",
+    "primogemcraft:szg",
+    "primogemcraft:ryg",
+    "primogemcraft:zfg",
+    "primogemcraft:mmolagao",
+    "primogemcraft:jlg",
+    "primogemcraft:tiaoguozhang",
+    "primogemcraft:djg"
   ]
 }

@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.minecraft.world.level.material.MapColor;
@@ -14,7 +13,7 @@ import net.minecraft.core.BlockPos;
 
 public class Caomu36Block extends ButtonBlock {
 	public Caomu36Block() {
-		super(BlockSetType.OAK, 30, BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).mapColor(MapColor.TERRACOTTA_GREEN).sound(SoundType.WOOD).strength(2f, 3f).dynamicShape());
+		super(BlockSetType.OAK, 30, BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_GREEN).sound(SoundType.WOOD).strength(2f, 3f).ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override

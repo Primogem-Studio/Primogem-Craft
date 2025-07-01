@@ -34,7 +34,7 @@ public class MlsxProcedure {
 			}
 			if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 				ItemStack _setstack = new ItemStack(PrimogemcraftModItems.MMOLA_01.get()).copy();
-				_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount() + 1));
+				_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount() + 1);
 				_itemHandlerModifiable.setStackInSlot(0, _setstack);
 			}
 			itemstack.shrink(1);

@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -8,7 +7,6 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.TooltipFlag;
@@ -21,7 +19,7 @@ import java.util.List;
 
 public class AixubingyukuangshiBlock extends Block {
 	public AixubingyukuangshiBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).mapColor(MapColor.ICE).sound(SoundType.STONE).strength(3f, 5f).requiresCorrectToolForDrops().friction(1f));
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.ICE).strength(3f, 5f).requiresCorrectToolForDrops().friction(1f).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

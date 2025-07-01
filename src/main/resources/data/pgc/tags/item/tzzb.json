@@ -1,7 +1,13 @@
 {
   "replace": false,
   "values": [
-    "#c:ystj",
-    "#primogemcraft:yuansutaotie"
+    {
+      "id": "#c:ystj",
+      "required": false
+    },
+    {
+      "id": "#primogemcraft:yuansutaotie",
+      "required": false
+    }
   ]
 }

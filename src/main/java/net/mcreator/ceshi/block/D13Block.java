@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.minecraft.world.level.material.MapColor;
@@ -13,7 +12,7 @@ import net.minecraft.core.BlockPos;
 
 public class D13Block extends SlabBlock {
 	public D13Block() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).mapColor(MapColor.COLOR_LIGHT_BLUE).sound(SoundType.WOOD).strength(2f, 3f).dynamicShape());
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_BLUE).sound(SoundType.WOOD).strength(2f, 3f).ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override

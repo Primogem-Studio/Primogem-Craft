@@ -7,7 +7,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.Entity;
@@ -20,11 +19,9 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.ceshi.init.PrimogemcraftModMenus;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 import net.mcreator.ceshi.init.PrimogemcraftModBlocks;
-
-import java.util.function.Supplier;
-import java.util.Map;
 
 public class GUIyinhangcunruProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -32,31 +29,31 @@ public class GUIyinhangcunruProcedure {
 			return;
 		double a = 0;
 		ItemStack b = ItemStack.EMPTY;
-		if (!((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
-				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
-				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
-				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(3)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+		if (!((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
+				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
+				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(2).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
+				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(3).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
 			a = (getAmountInGUISlot(entity, 0) + getAmountInGUISlot(entity, 1) + getAmountInGUISlot(entity, 2) + getAmountInGUISlot(entity, 3)) * 2;
-			b = new ItemStack(PrimogemcraftModItems.CUNQUPINGZHENG.get());
+			b = new ItemStack(PrimogemcraftModItems.CUNQUPINGZHENG.get()).copy();
 			{
 				final String _tagName = "pgc_cunchu";
 				final double _tagValue = a;
 				CustomData.update(DataComponents.CUSTOM_DATA, b, tag -> tag.putDouble(_tagName, _tagValue));
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				((Slot) _slots.get(0)).set(ItemStack.EMPTY);
+			if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
+				_menu.getSlots().get(0).set(ItemStack.EMPTY);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				((Slot) _slots.get(1)).set(ItemStack.EMPTY);
+			if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
+				_menu.getSlots().get(1).set(ItemStack.EMPTY);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				((Slot) _slots.get(2)).set(ItemStack.EMPTY);
+			if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
+				_menu.getSlots().get(2).set(ItemStack.EMPTY);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				((Slot) _slots.get(3)).set(ItemStack.EMPTY);
+			if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
+				_menu.getSlots().get(3).set(ItemStack.EMPTY);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (entity instanceof Player _player)
@@ -82,8 +79,8 @@ public class GUIyinhangcunruProcedure {
 	}
 
 	private static int getAmountInGUISlot(Entity entity, int sltid) {
-		if (entity instanceof Player player && player.containerMenu instanceof Supplier slotSupplier && slotSupplier.get() instanceof Map guiSlots) {
-			ItemStack stack = ((Slot) guiSlots.get(sltid)).getItem();
+		if (entity instanceof Player player && player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
+			ItemStack stack = _menu.getSlots().get(sltid).getItem();
 			if (stack != null)
 				return stack.getCount();
 		}

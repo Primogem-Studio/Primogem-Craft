@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -36,7 +35,7 @@ public class DijingqinjingkuangshiBlock extends FallingBlock {
 	}
 
 	public DijingqinjingkuangshiBlock() {
-		super(BlockBehaviour.Properties.of().liquid().mapColor(MapColor.WATER).sound(SoundType.GRAVEL).strength(2f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).sound(SoundType.GRAVEL).strength(2f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override

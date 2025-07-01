@@ -27,7 +27,7 @@ public class Wxntdmj_wp_sxProcedure {
 						entity.getPersistentData().putBoolean("wxntdmj_sx", true);
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.WXNTDMJ, 60, 0, false, false));
-						itemstack.setDamageValue((int) (itemstack.getMaxDamage() - 1));
+						itemstack.setDamageValue(itemstack.getMaxDamage() - 1);
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
 								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("primogemcraft:qiwusunhuai066")), SoundSource.NEUTRAL, 1, 1);

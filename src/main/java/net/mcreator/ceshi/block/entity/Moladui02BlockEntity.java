@@ -1,7 +1,4 @@
-
 package net.mcreator.ceshi.block.entity;
-
-import net.neoforged.neoforge.items.wrapper.SidedInvWrapper;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
@@ -26,8 +23,7 @@ import javax.annotation.Nullable;
 import java.util.stream.IntStream;
 
 public class Moladui02BlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(1, ItemStack.EMPTY);
-	private final SidedInvWrapper handler = new SidedInvWrapper(this, null);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(1, ItemStack.EMPTY);
 
 	public Moladui02BlockEntity(BlockPos position, BlockState state) {
 		super(PrimogemcraftModBlockEntities.MOLADUI_02.get(), position, state);
@@ -124,9 +120,5 @@ public class Moladui02BlockEntity extends RandomizableContainerBlockEntity imple
 		if (index == 0)
 			return false;
 		return true;
-	}
-
-	public SidedInvWrapper getItemHandler() {
-		return handler;
 	}
 }

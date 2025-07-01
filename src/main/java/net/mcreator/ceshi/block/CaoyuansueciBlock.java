@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -17,6 +16,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.BlockGetter;
@@ -29,7 +29,7 @@ public class CaoyuansueciBlock extends Block implements SimpleWaterloggedBlock {
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
 	public CaoyuansueciBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.HAT).mapColor(MapColor.GRASS).sound(SoundType.GLASS).strength(1f, 20f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).sound(SoundType.GLASS).strength(1f, 20f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.HAT));
 		this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y).setValue(WATERLOGGED, false));
 	}
 
@@ -71,14 +71,7 @@ public class CaoyuansueciBlock extends Block implements SimpleWaterloggedBlock {
 
 	@Override
 	public BlockState rotate(BlockState state, Rotation rot) {
-		if (rot == Rotation.CLOCKWISE_90 || rot == Rotation.COUNTERCLOCKWISE_90) {
-			if (state.getValue(AXIS) == Direction.Axis.X) {
-				return state.setValue(AXIS, Direction.Axis.Z);
-			} else if (state.getValue(AXIS) == Direction.Axis.Z) {
-				return state.setValue(AXIS, Direction.Axis.X);
-			}
-		}
-		return state;
+		return RotatedPillarBlock.rotatePillar(state, rot);
 	}
 
 	@Override

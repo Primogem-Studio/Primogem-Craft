@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.minecraft.world.level.material.MapColor;
@@ -13,7 +12,7 @@ import net.minecraft.core.BlockPos;
 
 public class XiumuBlock extends Block {
 	public XiumuBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).mapColor(MapColor.WOOD).sound(SoundType.WOOD).strength(0.5f, 1f));
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).sound(SoundType.WOOD).strength(0.5f, 1f).ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override

@@ -1,8 +1,17 @@
 {
   "replace": false,
   "values": [
-    "#pgc:tzzb",
-    "#pgc:hjzzb",
-    "#pgc:zzzb"
+    {
+      "id": "#pgc:hjzzb",
+      "required": false
+    },
+    {
+      "id": "#pgc:tzzb",
+      "required": false
+    },
+    {
+      "id": "#pgc:zzzb",
+      "required": false
+    }
   ]
 }

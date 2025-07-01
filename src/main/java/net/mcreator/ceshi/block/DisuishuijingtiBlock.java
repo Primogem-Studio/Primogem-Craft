@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import org.checkerframework.checker.units.qual.s;
@@ -37,8 +36,8 @@ public class DisuishuijingtiBlock extends Block {
 	public static final EnumProperty<AttachFace> FACE = FaceAttachedHorizontalDirectionalBlock.FACE;
 
 	public DisuishuijingtiBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).mapColor(MapColor.COLOR_YELLOW).sound(SoundType.GLASS).strength(5f, 20f).lightLevel(s -> 15).requiresCorrectToolForDrops().friction(0.7f).speedFactor(0.9f)
-				.jumpFactor(1.2f).noOcclusion().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true).isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).sound(SoundType.GLASS).strength(5f, 20f).lightLevel(s -> 15).requiresCorrectToolForDrops().friction(0.7f).speedFactor(0.9f).jumpFactor(1.2f).noOcclusion()
+				.hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true).isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(FACE, AttachFace.WALL));
 	}
 

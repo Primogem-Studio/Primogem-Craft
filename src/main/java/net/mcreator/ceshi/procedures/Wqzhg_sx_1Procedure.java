@@ -42,7 +42,7 @@ public class Wqzhg_sx_1Procedure {
 						if ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) >= 1) {
 							if ((entityiterator instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == entity) {
 								if (entity instanceof Player _player)
-									_player.getFoodData().setFoodLevel((int) ((entity instanceof Player _plr ? _plr.getFoodData().getFoodLevel() : 0) - 9));
+									_player.getFoodData().setFoodLevel((entity instanceof Player _plr ? _plr.getFoodData().getFoodLevel() : 0) - 9);
 								entityiterator.hurt(ElementDamageSetApplyProcedure.execute(ToElementDamageProcedure.execute(new DamageSource(world.holderOrThrow(DamageTypes.LIGHTNING_BOLT), entityiterator, entity), 1, 3), false), (float) b);
 								if (world instanceof ServerLevel _level) {
 									LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);

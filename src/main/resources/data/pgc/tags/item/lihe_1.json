@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
+    "primogemcraft:shenmiwanou",
     "primogemcraft:gongsideguguzhong",
-    "primogemcraft:qiwuheisenlinggz",
-    "primogemcraft:qwggzfenlie_a",
     "primogemcraft:ydggz",
-    "primogemcraft:shenmiwanou"
+    "primogemcraft:qiwuheisenlinggz",
+    "primogemcraft:qwggzfenlie_a"
   ]
 }

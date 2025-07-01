@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.potion;
 
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;

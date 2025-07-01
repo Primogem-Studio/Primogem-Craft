@@ -3,7 +3,10 @@
   "values": [
     "primogemcraft:sanyuezhufu",
     "primogemcraft:ysrz_0",
-    "primogemcraft:feiqiupingzheng",
-    "#c:curio/curios"
+    {
+      "id": "#c:curio/curios",
+      "required": false
+    },
+    "primogemcraft:feiqiupingzheng"
   ]
 }

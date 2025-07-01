@@ -1,7 +1,8 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "procedure",
   "definition": {
-    "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><variables><variable id=\"a\" type=\"Direction\">a</variable><variable id=\"d1\" type=\"Direction\">d1</variable></variables><block deletable=\"false\" type=\"event_trigger\" x=\"54\" y=\"107\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"return_logic\"><value name=\"return\"><block type=\"compare_mcblocks\"><value name=\"a\"><block type=\"world_data_blockat\"><value name=\"x\"><block type=\"coord_x\"/></value><value name=\"y\"><block type=\"coord_y\"/></value><value name=\"z\"><block type=\"coord_z\"/></value></block></value><value name=\"b\"><block type=\"mcitem_allblocks\"><field name=\"value\">Blocks.AIR</field></block></value></block></value></block></next></block></xml>"
+    "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><variables><variable id=\"a\" type=\"Direction\">a</variable><variable id=\"d1\" type=\"Direction\">d1</variable></variables><block deletable=\"false\" type=\"event_trigger\" x=\"54\" y=\"107\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"return_logic\"><value name=\"return\"><block type=\"compare_mcblocks\"><value name=\"a\"><block type=\"world_data_blockat\"><value name=\"x\"><block type=\"coord_x\"/></value><value name=\"y\"><block type=\"coord_y\"/></value><value name=\"z\"><block type=\"coord_z\"/></value></block></value><value name=\"b\"><block type=\"mcitem_allblocks\"><field name=\"value\">Blocks.AIR</field></block></value></block></value></block></next></block></xml>",
+    "skipDependencyNullCheck": false
   }
 }

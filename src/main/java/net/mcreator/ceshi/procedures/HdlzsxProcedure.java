@@ -48,10 +48,10 @@ public class HdlzsxProcedure {
 			return;
 		if (!world.isClientSide()) {
 			if (entity.getType().is(EntityTypeTags.UNDEAD) || entity.getType().is(EntityTypeTags.ARTHROPOD)) {
-				if (sourceentity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.QWHDLZ.get())) : false) {
+				if (hasEntityInInventory(sourceentity, new ItemStack(PrimogemcraftModItems.QWHDLZ.get()))) {
 					sourceentity.getPersistentData().putBoolean("qw_hdlz", true);
 				}
-				if (sourceentity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.JLBJ.get())) : false) {
+				if (hasEntityInInventory(sourceentity, new ItemStack(PrimogemcraftModItems.JLBJ.get()))) {
 					if (Math.random() < 0.05) {
 						if (world instanceof ServerLevel _level) {
 							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()));
@@ -60,7 +60,7 @@ public class HdlzsxProcedure {
 						}
 					}
 				}
-				if (sourceentity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.QWXBZSQ.get())) : false) {
+				if (hasEntityInInventory(sourceentity, new ItemStack(PrimogemcraftModItems.QWXBZSQ.get()))) {
 					if (Math.random() <= (!((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("xinbiao_zhuoseji_sx"))
 							? 0.01
 							: (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("xinbiao_zhuoseji_sx") * 0.1)) {
@@ -91,5 +91,11 @@ public class HdlzsxProcedure {
 				}
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

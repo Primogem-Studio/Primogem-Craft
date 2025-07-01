@@ -1,11 +1,29 @@
 {
   "replace": false,
   "values": [
-    "#c:curio/normal",
-    "#c:curio/negative",
-    "#c:curio/other",
-    "#c:curio/fusion",
-    "#c:curio/tianhuihejin",
-    "#c:curio/special"
+    {
+      "id": "#c:curio/negative",
+      "required": false
+    },
+    {
+      "id": "#c:curio/other",
+      "required": false
+    },
+    {
+      "id": "#c:curio/tianhuihejin",
+      "required": false
+    },
+    {
+      "id": "#c:curio/normal",
+      "required": false
+    },
+    {
+      "id": "#c:curio/fusion",
+      "required": false
+    },
+    {
+      "id": "#c:curio/special",
+      "required": false
+    }
   ]
 }

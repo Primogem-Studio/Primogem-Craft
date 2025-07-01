@@ -63,7 +63,7 @@ public class YzzmsxProcedure {
 				} else {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal("\u00A75\u300E\u5947\u7269\u300F\u00A7c\u611A\u8005\u4E4B\u9762\u00A77\u5DF2\u6D88\u8017\uFF01\u00A72\u6C38\u4E0D\u4F24\u5BB3\uFF01"), false);
-					(entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).setDamageValue((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getMaxDamage() - 1));
+					(entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).setDamageValue((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getMaxDamage() - 1);
 					itemstack.shrink(1);
 				}
 				if (world instanceof Level _level) {

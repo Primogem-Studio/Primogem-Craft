@@ -1,23 +1,23 @@
 {
   "replace": false,
   "values": [
-    "minecraft:raw_iron",
-    "minecraft:iron_ingot",
-    "minecraft:raw_copper",
-    "minecraft:copper_ingot",
-    "minecraft:redstone",
     "minecraft:raw_gold",
     "minecraft:gold_ingot",
-    "minecraft:diamond",
-    "minecraft:netherite_scrap",
+    "minecraft:lapis_lazuli",
     "minecraft:emerald",
-    "minecraft:quartz",
     "minecraft:prismarine_shard",
-    "minecraft:amethyst_shard",
-    "minecraft:echo_shard",
-    "primogemcraft:yuanshi",
-    "primogemcraft:xinghui",
+    "minecraft:iron_ingot",
+    "minecraft:diamond",
     "primogemcraft:xingchen",
-    "minecraft:lapis_lazuli"
+    "minecraft:raw_iron",
+    "primogemcraft:xinghui",
+    "minecraft:echo_shard",
+    "minecraft:redstone",
+    "primogemcraft:yuanshi",
+    "minecraft:netherite_scrap",
+    "minecraft:quartz",
+    "minecraft:raw_copper",
+    "minecraft:copper_ingot",
+    "minecraft:amethyst_shard"
   ]
 }

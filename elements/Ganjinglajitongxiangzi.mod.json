@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "block",
   "definition": {
     "texture": "cx_gjljt_tt",
@@ -14,8 +14,10 @@
     "enablePitch": true,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
+    "animations": [],
     "itemTexture": "",
     "particleTexture": "",
+    "blockSetType": "OAK",
     "tintType": "No tint",
     "isItemTinted": true,
     "hasTransparency": true,
@@ -44,6 +46,10 @@
     "resistance": 15.0,
     "hasGravity": false,
     "isWaterloggable": true,
+    "hasBlockItem": true,
+    "maxStackSize": 64,
+    "rarity": "COMMON",
+    "immuneToFire": false,
     "creativeTabs": [
       {
         "value": "CUSTOM:Zhenghuo"
@@ -60,9 +66,6 @@
     "plantsGrowOn": true,
     "canRedstoneConnect": false,
     "lightOpacity": 0,
-    "material": {
-      "value": "NONE"
-    },
     "tickRate": 0,
     "tickRandomly": false,
     "isReplaceable": false,
@@ -71,11 +74,13 @@
       "fixedValue": 15.0
     },
     "colorOnMap": "IRON",
+    "noteBlockInstrument": "harp",
     "creativePickItem": {
       "value": ""
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
+    "ignitedByLava": false,
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
@@ -107,6 +112,8 @@
     "unbreakable": false,
     "vanillaToolTier": "STONE",
     "isBonemealable": false,
+    "sensitiveToVibration": false,
+    "vibrationalEvents": [],
     "hasInventory": true,
     "guiBoundTo": "Ganjinglajitong",
     "openGUIOnRightClick": true,

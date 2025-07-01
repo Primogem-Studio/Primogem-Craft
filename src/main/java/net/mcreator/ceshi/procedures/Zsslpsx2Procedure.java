@@ -27,13 +27,11 @@ public class Zsslpsx2Procedure {
 			final Vec3 _center = new Vec3(x, (y + 1), z);
 			for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 				if ((entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).getItem() == Items.DIAMOND) {
-					a = new ItemStack(PrimogemcraftModItems.ZSSP.get());
-					a.setCount(
-							(int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE)) != 0
-									? Mth.nextInt(RandomSource.create(), 0,
-											(int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-													.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE)) * 6))
-									: Mth.nextInt(RandomSource.create(), 0, 6)));
+					a = new ItemStack(PrimogemcraftModItems.ZSSP.get()).copy();
+					a.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE)) != 0
+							? Mth.nextInt(RandomSource.create(), 0,
+									(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE)) * 6)
+							: Mth.nextInt(RandomSource.create(), 0, 6)));
 					if (world instanceof ServerLevel _level) {
 						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, a);
 						entityToSpawn.setPickUpDelay(10);

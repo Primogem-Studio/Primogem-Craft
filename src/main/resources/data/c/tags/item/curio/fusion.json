@@ -1,8 +1,17 @@
 {
   "replace": false,
   "values": [
-    "#c:curio/normal/fusion/s",
-    "#c:curio/normal/fusion/a",
-    "#c:curio/normal/fusion/b"
+    {
+      "id": "#c:curio/normal/fusion/s",
+      "required": false
+    },
+    {
+      "id": "#c:curio/normal/fusion/a",
+      "required": false
+    },
+    {
+      "id": "#c:curio/normal/fusion/b",
+      "required": false
+    }
   ]
 }

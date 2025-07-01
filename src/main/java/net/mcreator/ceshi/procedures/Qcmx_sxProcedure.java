@@ -30,7 +30,7 @@ public class Qcmx_sxProcedure {
 		double b = 0;
 		double s1 = 0;
 		double s2 = 0;
-		if (!world.isClientSide() && (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get())) : false)) {
+		if (!world.isClientSide() && hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()))) {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("primogemcraft:qiwusunhuai066")), SoundSource.PLAYERS, 1, 1);
@@ -73,7 +73,7 @@ public class Qcmx_sxProcedure {
 						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 					}
 					if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("quchi_sx") < 1) {
-						c = itemstack;
+						c = itemstack.copy();
 						if (entity instanceof Player _player) {
 							ItemStack _stktoremove = c;
 							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
@@ -108,5 +108,11 @@ public class Qcmx_sxProcedure {
 									: new java.text.DecimalFormat("\u00A7b##.s##").format(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("quchi_sx")))))));
 		}
 		DiaoyonghuishouProcedure.execute(entity, itemstack);
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

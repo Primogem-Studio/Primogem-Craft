@@ -17,7 +17,7 @@ public class Qyhc_wjc_sxProcedure {
 		if (entity.isShiftKeyDown()) {
 			a = itemstack.getCount();
 			itemstack.shrink((int) a);
-			i = new ItemStack(PrimogemcraftModItems.QYHX.get());
+			i = new ItemStack(PrimogemcraftModItems.QYHX.get()).copy();
 			i.setCount((int) a);
 			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, i);

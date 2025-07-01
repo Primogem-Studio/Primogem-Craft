@@ -1,7 +1,4 @@
-
 package net.mcreator.ceshi.block.entity;
-
-import net.neoforged.neoforge.items.wrapper.SidedInvWrapper;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
@@ -26,8 +23,7 @@ import javax.annotation.Nullable;
 import java.util.stream.IntStream;
 
 public class CeshixiaodengfasheqiBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(0, ItemStack.EMPTY);
-	private final SidedInvWrapper handler = new SidedInvWrapper(this, null);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(0, ItemStack.EMPTY);
 
 	public CeshixiaodengfasheqiBlockEntity(BlockPos position, BlockState state) {
 		super(PrimogemcraftModBlockEntities.CESHIXIAODENGFASHEQI.get(), position, state);
@@ -120,9 +116,5 @@ public class CeshixiaodengfasheqiBlockEntity extends RandomizableContainerBlockE
 	@Override
 	public boolean canTakeItemThroughFace(int index, ItemStack itemstack, Direction direction) {
 		return true;
-	}
-
-	public SidedInvWrapper getItemHandler() {
-		return handler;
 	}
 }

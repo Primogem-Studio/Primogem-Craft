@@ -1,16 +1,16 @@
 {
   "replace": false,
   "values": [
+    "primogemcraft:zhjsl",
+    "primogemcraft:lajsl",
     "primogemcraft:yuanshi",
     "primogemcraft:xiaodaimola",
-    "primogemcraft:jlliang",
-    "primogemcraft:zzjll",
-    "primogemcraft:jljsl",
-    "primogemcraft:yhjsl",
-    "primogemcraft:zhjsl",
     "primogemcraft:zyjsl",
+    "primogemcraft:jljsl",
+    "primogemcraft:zzjll",
+    "primogemcraft:yhjsl",
     "primogemcraft:ryjll",
-    "primogemcraft:lajsl",
+    "primogemcraft:jlliang",
     "primogemcraft:ysjsj"
   ]
 }

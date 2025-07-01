@@ -40,7 +40,7 @@ public class XxiangdangaolaozaibeibaoshiProcedure {
 		if (entity == null)
 			return;
 		if (!world.isClientSide()) {
-			if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.XIANGDANGANLAO.get())) : false) {
+			if (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.XIANGDANGANLAO.get()))) {
 				if (Math.random() <= 0.1) {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 4, 100));
@@ -68,5 +68,11 @@ public class XxiangdangaolaozaibeibaoshiProcedure {
 			}
 			entity.getPersistentData().putBoolean("jingyanzhi_shiqu", true);
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

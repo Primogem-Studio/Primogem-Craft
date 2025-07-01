@@ -19,7 +19,7 @@ public class Szqsx2Procedure {
 		if (entity == null)
 			return;
 		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("shengzhangqiao_geiguole")) {
-			if (Math.random() < ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQCAO.get())) : false) ? 0.015 : 0.01)) {
+			if (Math.random() < (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQCAO.get())) ? 0.015 : 0.01)) {
 				if (Math.random() < 0.5) {
 					if (world instanceof ServerLevel _level) {
 						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PrimogemcraftModBlocks.CAOYUANSUECI.get()));
@@ -42,5 +42,11 @@ public class Szqsx2Procedure {
 				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putBoolean(_tagName, _tagValue));
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

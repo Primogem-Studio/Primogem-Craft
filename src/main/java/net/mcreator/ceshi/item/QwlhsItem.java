@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.item;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -20,7 +19,7 @@ import java.util.List;
 
 public class QwlhsItem extends Item {
 	public QwlhsItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.EPIC));
+		super(new Item.Properties().rarity(Rarity.EPIC));
 	}
 
 	@Override

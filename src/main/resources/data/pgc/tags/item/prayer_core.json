@@ -1,7 +1,13 @@
 {
   "replace": false,
   "values": [
-    "#pgc:prayer_core_x1",
-    "#pgc:prayer_core_x10"
+    {
+      "id": "#pgc:prayer_core_x10",
+      "required": false
+    },
+    {
+      "id": "#pgc:prayer_core_x1",
+      "required": false
+    }
   ]
 }

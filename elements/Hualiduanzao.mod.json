@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "block",
   "definition": {
     "texture": "hldzt_di",
@@ -14,8 +14,10 @@
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
+    "animations": [],
     "itemTexture": "",
     "particleTexture": "",
+    "blockSetType": "OAK",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": false,
@@ -44,6 +46,10 @@
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
+    "hasBlockItem": true,
+    "maxStackSize": 64,
+    "rarity": "COMMON",
+    "immuneToFire": false,
     "creativeTabs": [
       {
         "value": "CUSTOM:Yuanshigongjuxuanxiangka"
@@ -60,9 +66,6 @@
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
     "lightOpacity": 15,
-    "material": {
-      "value": "WOOD"
-    },
     "tickRate": 0,
     "tickRandomly": false,
     "isReplaceable": false,
@@ -71,11 +74,13 @@
       "fixedValue": 15.0
     },
     "colorOnMap": "GOLD",
+    "noteBlockInstrument": "bass",
     "creativePickItem": {
       "value": ""
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
+    "ignitedByLava": true,
     "flammability": 1,
     "fireSpreadSpeed": 1,
     "isLadder": false,
@@ -107,6 +112,8 @@
     "unbreakable": false,
     "vanillaToolTier": "STONE",
     "isBonemealable": false,
+    "sensitiveToVibration": false,
+    "vibrationalEvents": [],
     "hasInventory": true,
     "guiBoundTo": "GUIhualiduanzaotai",
     "openGUIOnRightClick": true,

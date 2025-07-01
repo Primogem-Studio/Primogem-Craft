@@ -20,8 +20,7 @@ public class AxjsxProcedure {
 		if (entity == null)
 			return;
 		if (!(entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(MobEffects.MOVEMENT_SLOWDOWN))) {
-			if (itemstack.getItem() == PrimogemcraftModItems.AXTJ.get()
-					&& Math.random() <= ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQBING.get())) : false) ? 0.15 : 0.1)) {
+			if (itemstack.getItem() == PrimogemcraftModItems.AXTJ.get() && Math.random() <= (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQBING.get())) ? 0.15 : 0.1)) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 1));
 				if (world instanceof Level _level) {
@@ -32,8 +31,7 @@ public class AxjsxProcedure {
 					}
 				}
 			}
-			if (itemstack.getItem() == PrimogemcraftModItems.AXZSJ.get()
-					&& Math.random() <= ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQBING.get())) : false) ? 0.45 : 0.3)) {
+			if (itemstack.getItem() == PrimogemcraftModItems.AXZSJ.get() && Math.random() <= (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQBING.get())) ? 0.45 : 0.3)) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.glass.hit")), SoundSource.PLAYERS, (float) 0.5, 1);
@@ -44,8 +42,7 @@ public class AxjsxProcedure {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 160, 1));
 			}
-			if (itemstack.getItem() == PrimogemcraftModItems.AXHJJ.get()
-					&& Math.random() <= ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQBING.get())) : false) ? 0.45 : 0.3)) {
+			if (itemstack.getItem() == PrimogemcraftModItems.AXHJJ.get() && Math.random() <= (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQBING.get())) ? 0.45 : 0.3)) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.glass.hit")), SoundSource.PLAYERS, (float) 0.5, 1);
@@ -57,7 +54,7 @@ public class AxjsxProcedure {
 					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 240, 1));
 			}
 		} else {
-			if (itemstack.getItem() == PrimogemcraftModItems.AXTJ.get() && Math.random() <= ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQBING.get())) : false) ? 0.3 : 0.2)) {
+			if (itemstack.getItem() == PrimogemcraftModItems.AXTJ.get() && Math.random() <= (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQBING.get())) ? 0.3 : 0.2)) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.glass.hit")), SoundSource.PLAYERS, (float) 0.5, 1);
@@ -68,8 +65,7 @@ public class AxjsxProcedure {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 127));
 			}
-			if (itemstack.getItem() == PrimogemcraftModItems.AXZSJ.get()
-					&& Math.random() <= ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQBING.get())) : false) ? 0.3 : 0.2)) {
+			if (itemstack.getItem() == PrimogemcraftModItems.AXZSJ.get() && Math.random() <= (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQBING.get())) ? 0.3 : 0.2)) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.glass.hit")), SoundSource.PLAYERS, (float) 0.5, 1);
@@ -80,8 +76,7 @@ public class AxjsxProcedure {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 160, 127));
 			}
-			if (itemstack.getItem() == PrimogemcraftModItems.AXHJJ.get()
-					&& Math.random() <= ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQBING.get())) : false) ? 0.75 : 0.5)) {
+			if (itemstack.getItem() == PrimogemcraftModItems.AXHJJ.get() && Math.random() <= (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQBING.get())) ? 0.75 : 0.5)) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.glass.hit")), SoundSource.PLAYERS, (float) 0.5, 1);
@@ -94,5 +89,11 @@ public class AxjsxProcedure {
 			}
 		}
 		entity.setTicksFrozen(200);
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

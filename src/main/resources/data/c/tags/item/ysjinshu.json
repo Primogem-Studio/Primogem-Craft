@@ -1,12 +1,12 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:zzjs",
+    "primogemcraft:ryjs",
     "primogemcraft:jlzs",
+    "primogemcraft:lijs",
+    "primogemcraft:zyjs",
     "primogemcraft:yhjs",
     "primogemcraft:zhjs",
-    "primogemcraft:zyjs",
-    "primogemcraft:ryjs",
-    "primogemcraft:lijs"
+    "primogemcraft:zzjs"
   ]
 }

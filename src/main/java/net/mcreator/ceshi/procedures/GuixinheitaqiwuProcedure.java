@@ -29,7 +29,7 @@ public class GuixinheitaqiwuProcedure {
 			return;
 		double a = 0;
 		if (!world.isClientSide()) {
-			if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get())) : false) {
+			if (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()))) {
 				if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerIter) {
 					for (int _idx = 0; _idx < _modHandlerIter.getSlots(); _idx++) {
 						ItemStack itemstackiterator = _modHandlerIter.getStackInSlot(_idx).copy();
@@ -71,5 +71,11 @@ public class GuixinheitaqiwuProcedure {
 				}
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

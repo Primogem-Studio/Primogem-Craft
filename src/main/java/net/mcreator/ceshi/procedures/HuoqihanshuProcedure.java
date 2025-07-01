@@ -14,7 +14,7 @@ public class HuoqihanshuProcedure {
 			return;
 		double a = 0;
 		String b = "";
-		a = (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(huoqi) : false) ? 0.5 : 0;
+		a = hasEntityInInventory(entity, huoqi) ? 0.5 : 0;
 		b = zhi;
 		if (itemstack.is(ItemTags.create(ResourceLocation.parse("primogemcraft:yuansutaotie")))) {
 			{
@@ -37,5 +37,11 @@ public class HuoqihanshuProcedure {
 				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

@@ -17,16 +17,15 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.ceshi.world.inventory.CunzheshezhiMenu;
 import net.mcreator.ceshi.network.CunzheshezhiButtonMessage;
-
-import java.util.HashMap;
+import net.mcreator.ceshi.init.PrimogemcraftModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class CunzheshezhiScreen extends AbstractContainerScreen<CunzheshezhiMenu> {
-	private final static HashMap<String, Object> guistate = CunzheshezhiMenu.guistate;
+public class CunzheshezhiScreen extends AbstractContainerScreen<CunzheshezhiMenu> implements PrimogemcraftModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	EditBox cunzhe_shuliang;
 	Button button_10;
 	Button button_100;
@@ -48,22 +47,37 @@ public class CunzheshezhiScreen extends AbstractContainerScreen<CunzheshezhiMenu
 		this.imageHeight = 166;
 	}
 
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		if (elementType == 0 && elementState instanceof String stringState) {
+			if (name.equals("cunzhe_shuliang"))
+				cunzhe_shuliang.setValue(stringState);
+		}
+		menuStateUpdateActive = false;
+	}
+
 	private static final ResourceLocation texture = ResourceLocation.parse("primogemcraft:textures/screens/cunzheshezhi.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		cunzhe_shuliang.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 66 && mouseX < leftPos + 111 && mouseY > topPos + 14 && mouseY < topPos + 32) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.cunzheshezhi.tooltip_cong_xia_fang_an_niu_shu_ru"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 62 && mouseX < leftPos + 86 && mouseY > topPos + 57 && mouseY < topPos + 81) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.cunzheshezhi.tooltip_dian_ci_huo_qu_bu_wen_ding_ban_ben"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 96 && mouseX < leftPos + 120 && mouseY > topPos + 57 && mouseY < topPos + 81) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.cunzheshezhi.tooltip_huo_qu"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
@@ -102,28 +116,13 @@ public class CunzheshezhiScreen extends AbstractContainerScreen<CunzheshezhiMenu
 	@Override
 	public void init() {
 		super.init();
-		cunzhe_shuliang = new EditBox(this.font, this.leftPos + 65, this.topPos + 14, 45, 18, Component.translatable("gui.primogemcraft.cunzheshezhi.cunzhe_shuliang")) {
-			@Override
-			public void insertText(String text) {
-				super.insertText(text);
-				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.primogemcraft.cunzheshezhi.cunzhe_shuliang").getString());
-				else
-					setSuggestion(null);
-			}
-
-			@Override
-			public void moveCursorTo(int pos, boolean flag) {
-				super.moveCursorTo(pos, flag);
-				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.primogemcraft.cunzheshezhi.cunzhe_shuliang").getString());
-				else
-					setSuggestion(null);
-			}
-		};
-		cunzhe_shuliang.setMaxLength(32767);
-		cunzhe_shuliang.setSuggestion(Component.translatable("gui.primogemcraft.cunzheshezhi.cunzhe_shuliang").getString());
-		guistate.put("text:cunzhe_shuliang", cunzhe_shuliang);
+		cunzhe_shuliang = new EditBox(this.font, this.leftPos + 65, this.topPos + 14, 45, 18, Component.translatable("gui.primogemcraft.cunzheshezhi.cunzhe_shuliang"));
+		cunzhe_shuliang.setMaxLength(8192);
+		cunzhe_shuliang.setResponder(content -> {
+			if (!menuStateUpdateActive)
+				menu.sendMenuStateUpdate(entity, 0, "cunzhe_shuliang", content, false);
+		});
+		cunzhe_shuliang.setHint(Component.translatable("gui.primogemcraft.cunzheshezhi.cunzhe_shuliang"));
 		this.addWidget(this.cunzhe_shuliang);
 		button_10 = Button.builder(Component.translatable("gui.primogemcraft.cunzheshezhi.button_10"), e -> {
 			if (true) {
@@ -131,7 +130,6 @@ public class CunzheshezhiScreen extends AbstractContainerScreen<CunzheshezhiMenu
 				CunzheshezhiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 97, this.topPos + 35, 14, 20).build();
-		guistate.put("button:button_10", button_10);
 		this.addRenderableWidget(button_10);
 		button_100 = Button.builder(Component.translatable("gui.primogemcraft.cunzheshezhi.button_100"), e -> {
 			if (true) {
@@ -139,7 +137,6 @@ public class CunzheshezhiScreen extends AbstractContainerScreen<CunzheshezhiMenu
 				CunzheshezhiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 113, this.topPos + 35, 17, 20).build();
-		guistate.put("button:button_100", button_100);
 		this.addRenderableWidget(button_100);
 		button_1000 = Button.builder(Component.translatable("gui.primogemcraft.cunzheshezhi.button_1000"), e -> {
 			if (true) {
@@ -147,7 +144,6 @@ public class CunzheshezhiScreen extends AbstractContainerScreen<CunzheshezhiMenu
 				CunzheshezhiButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}).bounds(this.leftPos + 132, this.topPos + 35, 23, 20).build();
-		guistate.put("button:button_1000", button_1000);
 		this.addRenderableWidget(button_1000);
 		button_11 = Button.builder(Component.translatable("gui.primogemcraft.cunzheshezhi.button_11"), e -> {
 			if (true) {
@@ -155,7 +151,6 @@ public class CunzheshezhiScreen extends AbstractContainerScreen<CunzheshezhiMenu
 				CunzheshezhiButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}).bounds(this.leftPos + 66, this.topPos + 35, 13, 20).build();
-		guistate.put("button:button_11", button_11);
 		this.addRenderableWidget(button_11);
 		button_101 = Button.builder(Component.translatable("gui.primogemcraft.cunzheshezhi.button_101"), e -> {
 			if (true) {
@@ -163,7 +158,6 @@ public class CunzheshezhiScreen extends AbstractContainerScreen<CunzheshezhiMenu
 				CunzheshezhiButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}).bounds(this.leftPos + 47, this.topPos + 35, 16, 20).build();
-		guistate.put("button:button_101", button_101);
 		this.addRenderableWidget(button_101);
 		button_1001 = Button.builder(Component.translatable("gui.primogemcraft.cunzheshezhi.button_1001"), e -> {
 			if (true) {
@@ -171,7 +165,6 @@ public class CunzheshezhiScreen extends AbstractContainerScreen<CunzheshezhiMenu
 				CunzheshezhiButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		}).bounds(this.leftPos + 21, this.topPos + 35, 23, 20).build();
-		guistate.put("button:button_1001", button_1001);
 		this.addRenderableWidget(button_1001);
 		imagebutton_dui = new ImageButton(this.leftPos + 96, this.topPos + 57, 21, 21, new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/duia1.png"), ResourceLocation.parse("primogemcraft:textures/screens/duia2.png")), e -> {
 			if (true) {
@@ -184,7 +177,6 @@ public class CunzheshezhiScreen extends AbstractContainerScreen<CunzheshezhiMenu
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_dui", imagebutton_dui);
 		this.addRenderableWidget(imagebutton_dui);
 		imagebutton_cuo = new ImageButton(this.leftPos + 62, this.topPos + 57, 21, 21, new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/cuoa1.png"), ResourceLocation.parse("primogemcraft:textures/screens/cuoa2.png")), e -> {
 			if (true) {
@@ -197,7 +189,6 @@ public class CunzheshezhiScreen extends AbstractContainerScreen<CunzheshezhiMenu
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_cuo", imagebutton_cuo);
 		this.addRenderableWidget(imagebutton_cuo);
 	}
 }

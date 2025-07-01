@@ -1,11 +1,11 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:d_11",
-    "primogemcraft:yishijiemuban_planks",
     "primogemcraft:ccaoyuanhehuamuban_3",
-    "primogemcraft:caoyuanhehuabuban_2",
+    "primogemcraft:yishijieyuanmumuban",
     "primogemcraft:caoyuanhehuamuban",
-    "primogemcraft:yishijieyuanmumuban"
+    "primogemcraft:caoyuanhehuabuban_2",
+    "primogemcraft:d_11",
+    "primogemcraft:yishijiemuban_planks"
   ]
 }

@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -31,15 +30,21 @@ import net.mcreator.ceshi.PrimogemcraftMod;
 public class PrimogemcraftModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, PrimogemcraftMod.MODID);
 	public static final DeferredHolder<EntityType<?>, EntityType<QqiyuanJinGuangEntity>> QQIYUAN_JIN_GUANG = register("qqiyuan_jin_guang",
-			EntityType.Builder.<QqiyuanJinGuangEntity>of(QqiyuanJinGuangEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(1).setUpdateInterval(3).fireImmune().sized(0.3f, 0.3f));
+			EntityType.Builder.<QqiyuanJinGuangEntity>of(QqiyuanJinGuangEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(1).setUpdateInterval(3).fireImmune()
+
+					.sized(0.3f, 0.3f));
 	public static final DeferredHolder<EntityType<?>, EntityType<QQyuanchuzi01Entity>> Q_QYUANCHUZI_01 = register("q_qyuanchuzi_01",
-			EntityType.Builder.<QQyuanchuzi01Entity>of(QQyuanchuzi01Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(1).setUpdateInterval(3).fireImmune().sized(0.3f, 0.3f));
+			EntityType.Builder.<QQyuanchuzi01Entity>of(QQyuanchuzi01Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(1).setUpdateInterval(3).fireImmune()
+
+					.sized(0.3f, 0.3f));
 	public static final DeferredHolder<EntityType<?>, EntityType<QQQyuanchulan01Entity>> QQ_QYUANCHULAN_01 = register("qq_qyuanchulan_01",
-			EntityType.Builder.<QQQyuanchulan01Entity>of(QQQyuanchulan01Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(1).setUpdateInterval(3).fireImmune().sized(0.3f, 0.3f));
+			EntityType.Builder.<QQQyuanchulan01Entity>of(QQQyuanchulan01Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(1).setUpdateInterval(3).fireImmune()
+
+					.sized(0.3f, 0.3f));
 	public static final DeferredHolder<EntityType<?>, EntityType<QqiwuzhanlipinshitiEntity>> QQIWUZHANLIPINSHITI = register("qqiwuzhanlipinshiti",
 			EntityType.Builder.<QqiwuzhanlipinshitiEntity>of(QqiwuzhanlipinshitiEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3)
 
-					.sized(0.1f, 0.1f));
+					.ridingOffset(-0.6f).sized(0.1f, 0.1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<BaiguangguodushengwuEntity>> BAIGUANGGUODUSHENGWU = register("baiguangguodushengwu",
 			EntityType.Builder.<BaiguangguodushengwuEntity>of(BaiguangguodushengwuEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(1).setUpdateInterval(3)
 
@@ -49,11 +54,15 @@ public class PrimogemcraftModEntities {
 
 					.sized(0.2f, 0.2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<XiaodengEntity>> XIAODENG = register("xiaodeng",
-			EntityType.Builder.<XiaodengEntity>of(XiaodengEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(1).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<XiaodengEntity>of(XiaodengEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(1).setUpdateInterval(3).fireImmune()
+
+					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<XiaoheitaEntity>> XIAOHEITA = register("xiaoheita",
-			EntityType.Builder.<XiaoheitaEntity>of(XiaoheitaEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<XiaoheitaEntity>of(XiaoheitaEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
+
+					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<SWfengraojiangshiEntity>> S_WFENGRAOJIANGSHI = register("s_wfengraojiangshi",
-			EntityType.Builder.<SWfengraojiangshiEntity>of(SWfengraojiangshiEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<SWfengraojiangshiEntity>of(SWfengraojiangshiEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().ridingOffset(-0.6f).sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

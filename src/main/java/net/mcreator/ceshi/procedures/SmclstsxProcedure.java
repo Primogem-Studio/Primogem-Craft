@@ -95,7 +95,7 @@ public class SmclstsxProcedure {
 									_player.getInventory().setChanged();
 							}
 						}
-						if (sourceentity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.QWCLHY.get())) : false) {
+						if (hasEntityInInventory(sourceentity, new ItemStack(PrimogemcraftModItems.QWCLHY.get()))) {
 							sourceentity.getPersistentData().putBoolean("cl_hy", true);
 							s1 = BuiltInRegistries.ENTITY_TYPE.getKey(entity.getType()).toString();
 							var t = entity.getType();
@@ -129,5 +129,11 @@ public class SmclstsxProcedure {
 				}
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

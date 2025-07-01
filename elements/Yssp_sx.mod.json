@@ -1,7 +1,8 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "procedure",
   "definition": {
-    "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"event_trigger\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"controls_if\"><value name=\"IF0\"><block type=\"logic_binary_ops\"><field name=\"OP\">AND</field><value name=\"A\"><block type=\"java_code_get\"><field name=\"CODE\">world != null</field></block></value><value name=\"B\"><block type=\"world_data_isremote\"/></value></block></value><statement name=\"DO0\"><block type=\"return_number\"><value name=\"return\"><block type=\"itemstack_get_count\"><value name=\"item\"><block type=\"itemstack_to_mcitem\"/></value></block></value></block></statement><next><block type=\"return_number\"><value name=\"return\"><block type=\"math_number\"><field name=\"NUM\">0</field></block></value></block></next></block></next></block></xml>"
+    "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"event_trigger\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"controls_if\"><value name=\"IF0\"><block type=\"logic_binary_ops\"><field name=\"OP\">AND</field><value name=\"A\"><block type=\"java_code_get\"><field name=\"CODE\">world != null</field></block></value><value name=\"B\"><block type=\"world_data_isremote\"/></value></block></value><statement name=\"DO0\"><block type=\"return_number\"><value name=\"return\"><block type=\"itemstack_get_count\"><value name=\"item\"><block type=\"itemstack_to_mcitem\"/></value></block></value></block></statement><next><block type=\"return_number\"><value name=\"return\"><block type=\"math_number\"><field name=\"NUM\">0</field></block></value></block></next></block></next></block></xml>",
+    "skipDependencyNullCheck": false
   }
 }

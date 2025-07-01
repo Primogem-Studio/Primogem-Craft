@@ -1,15 +1,15 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:fengdandaibiao",
-    "primogemcraft:gongzhuxinghua",
-    "primogemcraft:zhapiandingzhengshi",
     "primogemcraft:tashanglvtuchangpian",
-    "primogemcraft:yyanziyueliangchangpian",
-    "primogemcraft:taikongmanbuchangpian",
-    "primogemcraft:ccangruimilinjian_014",
     "primogemcraft:sshenhudezhufu_013",
+    "primogemcraft:gongzhuxinghua",
     "primogemcraft:bbuzainianqingdeqincezhuang_012",
-    "primogemcraft:xiwangdeyitian_011"
+    "primogemcraft:yyanziyueliangchangpian",
+    "primogemcraft:fengdandaibiao",
+    "primogemcraft:zhapiandingzhengshi",
+    "primogemcraft:taikongmanbuchangpian",
+    "primogemcraft:xiwangdeyitian_011",
+    "primogemcraft:ccangruimilinjian_014"
   ]
 }

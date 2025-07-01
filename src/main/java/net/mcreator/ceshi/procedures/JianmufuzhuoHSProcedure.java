@@ -16,7 +16,7 @@ public class JianmufuzhuoHSProcedure {
 		ItemStack i1 = ItemStack.EMPTY;
 		double n1 = 0;
 		double n2 = 0;
-		i1 = item;
+		i1 = item.copy();
 		n1 = i1.getDamageValue();
 		n2 = i1.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("primogemcraft:ceshifumo_01"))));
 		if (n1 > i1.getMaxDamage() - zhi) {

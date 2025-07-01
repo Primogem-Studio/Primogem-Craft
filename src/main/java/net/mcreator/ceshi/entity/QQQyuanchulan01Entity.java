@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.entity;
 
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;

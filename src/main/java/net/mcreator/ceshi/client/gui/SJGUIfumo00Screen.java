@@ -14,16 +14,15 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.ceshi.world.inventory.SJGUIfumo00Menu;
 import net.mcreator.ceshi.network.SJGUIfumo00ButtonMessage;
-
-import java.util.HashMap;
+import net.mcreator.ceshi.init.PrimogemcraftModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class SJGUIfumo00Screen extends AbstractContainerScreen<SJGUIfumo00Menu> {
-	private final static HashMap<String, Object> guistate = SJGUIfumo00Menu.guistate;
+public class SJGUIfumo00Screen extends AbstractContainerScreen<SJGUIfumo00Menu> implements PrimogemcraftModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_heita_xuanzeanniu;
 	ImageButton imagebutton_heita_xuanzeanniu1;
 	ImageButton imagebutton_heita_xuanzeanniu2;
@@ -37,6 +36,12 @@ public class SJGUIfumo00Screen extends AbstractContainerScreen<SJGUIfumo00Menu> 
 		this.entity = container.entity;
 		this.imageWidth = 176;
 		this.imageHeight = 166;
+	}
+
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
 	}
 
 	private static final ResourceLocation texture = ResourceLocation.parse("primogemcraft:textures/screens/sjgu_ifumo_00.png");
@@ -91,7 +96,6 @@ public class SJGUIfumo00Screen extends AbstractContainerScreen<SJGUIfumo00Menu> 
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_heita_xuanzeanniu", imagebutton_heita_xuanzeanniu);
 		this.addRenderableWidget(imagebutton_heita_xuanzeanniu);
 		imagebutton_heita_xuanzeanniu1 = new ImageButton(this.leftPos + 31, this.topPos + 61, 114, 43,
 				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/heita_xuanzeanniu.png"), ResourceLocation.parse("primogemcraft:textures/screens/heita_xuanzeanniu0.png")), e -> {
@@ -105,7 +109,6 @@ public class SJGUIfumo00Screen extends AbstractContainerScreen<SJGUIfumo00Menu> 
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_heita_xuanzeanniu1", imagebutton_heita_xuanzeanniu1);
 		this.addRenderableWidget(imagebutton_heita_xuanzeanniu1);
 		imagebutton_heita_xuanzeanniu2 = new ImageButton(this.leftPos + 31, this.topPos + 109, 114, 43,
 				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/heita_xuanzeanniu.png"), ResourceLocation.parse("primogemcraft:textures/screens/heita_xuanzeanniu0.png")), e -> {
@@ -119,7 +122,6 @@ public class SJGUIfumo00Screen extends AbstractContainerScreen<SJGUIfumo00Menu> 
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_heita_xuanzeanniu2", imagebutton_heita_xuanzeanniu2);
 		this.addRenderableWidget(imagebutton_heita_xuanzeanniu2);
 	}
 }

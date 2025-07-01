@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import org.checkerframework.checker.units.qual.s;
@@ -27,8 +26,8 @@ public class ShizuoyuanshikuaiBlock extends Block {
 	public static final EnumProperty<AttachFace> FACE = FaceAttachedHorizontalDirectionalBlock.FACE;
 
 	public ShizuoyuanshikuaiBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.HAT).mapColor(MapColor.COLOR_PINK).sound(SoundType.GLASS).strength(6f, 14f).lightLevel(s -> 8).requiresCorrectToolForDrops().friction(0.7f)
-				.hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true));
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PINK).sound(SoundType.GLASS).strength(6f, 14f).lightLevel(s -> 8).requiresCorrectToolForDrops().friction(0.7f).hasPostProcess((bs, br, bp) -> true)
+				.emissiveRendering((bs, br, bp) -> true).instrument(NoteBlockInstrument.HAT));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(FACE, AttachFace.WALL));
 	}
 

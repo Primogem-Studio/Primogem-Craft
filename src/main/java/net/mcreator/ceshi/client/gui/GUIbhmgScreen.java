@@ -14,16 +14,15 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.ceshi.world.inventory.GUIbhmgMenu;
 import net.mcreator.ceshi.network.GUIbhmgButtonMessage;
-
-import java.util.HashMap;
+import net.mcreator.ceshi.init.PrimogemcraftModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class GUIbhmgScreen extends AbstractContainerScreen<GUIbhmgMenu> {
-	private final static HashMap<String, Object> guistate = GUIbhmgMenu.guistate;
+public class GUIbhmgScreen extends AbstractContainerScreen<GUIbhmgMenu> implements PrimogemcraftModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_xuanze0;
 	ImageButton imagebutton_xuanze01;
 	ImageButton imagebutton_xuanze02;
@@ -40,33 +39,48 @@ public class GUIbhmgScreen extends AbstractContainerScreen<GUIbhmgMenu> {
 		this.imageHeight = 166;
 	}
 
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
 	private static final ResourceLocation texture = ResourceLocation.parse("primogemcraft:textures/screens/gu_ibhmg.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 59 && mouseX < leftPos + 75 && mouseY > topPos + 53 && mouseY < topPos + 69) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.gu_ibhmg.tooltip_sseque_ren_xuan_ze"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 99 && mouseX < leftPos + 115 && mouseY > topPos + 53 && mouseY < topPos + 69) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.gu_ibhmg.tooltip_sseque_ren_xuan_ze1"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 141 && mouseX < leftPos + 157 && mouseY > topPos + 53 && mouseY < topPos + 69) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.gu_ibhmg.tooltip_sseque_ren_xuan_ze2"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 3 && mouseX < leftPos + 37 && mouseY > topPos + 6 && mouseY < topPos + 14) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.gu_ibhmg.tooltip_sscqiang_zhi_tui_chu_jie_mian_hui_sui_ji_xuan_ze_ge_qi_wu"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 13 && mouseX < leftPos + 22 && mouseY > topPos + 20 && mouseY < topPos + 29) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.gu_ibhmg.tooltip_sscsslbu_huo_ming_guang_jin_ke_xuan_ze_ge_wu_pin_zuo_wei_zi_xuan_dui_xiang"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 13 && mouseX < leftPos + 22 && mouseY > topPos + 31 && mouseY < topPos + 40) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.gu_ibhmg.tooltip_sscsslfang_qi_bu_huo_ming_guang_wei_ke_xuan_xiang"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 13 && mouseX < leftPos + 34 && mouseY > topPos + 49 && mouseY < topPos + 70) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.gu_ibhmg.tooltip_fang_qi_bu_huo_ming_guang_li_ji_sheng_cheng_ci_chang_gui_chu_jin_zhan_li_pin"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
@@ -75,11 +89,8 @@ public class GUIbhmgScreen extends AbstractContainerScreen<GUIbhmgMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
 		guiGraphics.blit(ResourceLocation.parse("primogemcraft:textures/screens/xuzhi.png"), this.leftPos + 6, this.topPos + 20, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("primogemcraft:textures/screens/xuzhi_hong.png"), this.leftPos + 13, this.topPos + 31, 0, 0, 9, 9, 9, 9);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -112,7 +123,6 @@ public class GUIbhmgScreen extends AbstractContainerScreen<GUIbhmgMenu> {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_xuanze0", imagebutton_xuanze0);
 		this.addRenderableWidget(imagebutton_xuanze0);
 		imagebutton_xuanze01 = new ImageButton(this.leftPos + 99, this.topPos + 53, 16, 16, new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/xuanze0.png"), ResourceLocation.parse("primogemcraft:textures/screens/xuanze1.png")),
 				e -> {
@@ -126,7 +136,6 @@ public class GUIbhmgScreen extends AbstractContainerScreen<GUIbhmgMenu> {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_xuanze01", imagebutton_xuanze01);
 		this.addRenderableWidget(imagebutton_xuanze01);
 		imagebutton_xuanze02 = new ImageButton(this.leftPos + 141, this.topPos + 53, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/xuanze0.png"), ResourceLocation.parse("primogemcraft:textures/screens/xuanze1.png")), e -> {
@@ -140,7 +149,6 @@ public class GUIbhmgScreen extends AbstractContainerScreen<GUIbhmgMenu> {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_xuanze02", imagebutton_xuanze02);
 		this.addRenderableWidget(imagebutton_xuanze02);
 		imagebutton_cuoa1 = new ImageButton(this.leftPos + 13, this.topPos + 49, 21, 21, new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/cuoa1.png"), ResourceLocation.parse("primogemcraft:textures/screens/cuoa2.png")), e -> {
 			if (true) {
@@ -153,7 +161,6 @@ public class GUIbhmgScreen extends AbstractContainerScreen<GUIbhmgMenu> {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_cuoa1", imagebutton_cuoa1);
 		this.addRenderableWidget(imagebutton_cuoa1);
 	}
 }

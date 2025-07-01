@@ -31,10 +31,8 @@ public class MmowangwuzhuanghuoquProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.KKUIJIACESHI_HELMET.get())) : false)
-				&& (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.KKUIJIACESHI_CHESTPLATE.get())) : false)
-				&& (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.KKUIJIACESHI_LEGGINGS.get())) : false)
-				&& (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.KKUIJIACESHI_BOOTS.get())) : false)) {
+		if (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.KKUIJIACESHI_HELMET.get())) && hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.KKUIJIACESHI_CHESTPLATE.get()))
+				&& hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.KKUIJIACESHI_LEGGINGS.get())) && hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.KKUIJIACESHI_BOOTS.get()))) {
 			if (entity instanceof ServerPlayer _player) {
 				AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:mmowangwuzhuang"));
 				if (_adv != null) {
@@ -46,5 +44,11 @@ public class MmowangwuzhuanghuoquProcedure {
 				}
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

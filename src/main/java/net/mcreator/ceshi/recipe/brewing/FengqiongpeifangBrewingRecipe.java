@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.recipe.brewing;
 
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;

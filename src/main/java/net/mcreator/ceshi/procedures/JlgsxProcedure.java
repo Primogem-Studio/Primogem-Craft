@@ -32,7 +32,7 @@ public class JlgsxProcedure {
 						});
 					}
 					if (entity instanceof Player _player)
-						_player.getCooldowns().addCooldown(itemstack.getItem(), (int) ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQYAN.get())) : false) ? 200 : 400));
+						_player.getCooldowns().addCooldown(itemstack.getItem(), (int) (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQYAN.get())) ? 200 : 400));
 					if (Math.random() < 0.6) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
@@ -63,5 +63,11 @@ public class JlgsxProcedure {
 				}
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

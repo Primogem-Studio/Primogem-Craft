@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.client.renderer;
 
 import net.minecraft.world.level.Level;

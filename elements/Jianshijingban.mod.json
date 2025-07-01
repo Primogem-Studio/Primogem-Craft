@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "block",
   "definition": {
     "texture": "jianshijingban",
@@ -14,9 +14,11 @@
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
+    "animations": [],
     "itemTexture": "",
     "particleTexture": "",
     "blockBase": "Pane",
+    "blockSetType": "OAK",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": false,
@@ -43,6 +45,10 @@
     "resistance": 1000.0,
     "hasGravity": false,
     "isWaterloggable": false,
+    "hasBlockItem": true,
+    "maxStackSize": 64,
+    "rarity": "COMMON",
+    "immuneToFire": false,
     "creativeTabs": [
       {
         "value": "CUSTOM:Yuanshifangkuaika"
@@ -59,9 +65,6 @@
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
     "lightOpacity": 0,
-    "material": {
-      "value": "GLASS"
-    },
     "tickRate": 0,
     "tickRandomly": false,
     "isReplaceable": false,
@@ -70,6 +73,7 @@
       "fixedValue": 15.0
     },
     "colorOnMap": "LIGHT_BLUE",
+    "noteBlockInstrument": "hat",
     "creativePickItem": {
       "value": ""
     },
@@ -79,6 +83,7 @@
       "value": -7416586,
       "falpha": 0.0
     },
+    "ignitedByLava": false,
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
@@ -110,6 +115,8 @@
     "unbreakable": false,
     "vanillaToolTier": "DIAMOND",
     "isBonemealable": false,
+    "sensitiveToVibration": false,
+    "vibrationalEvents": [],
     "hasInventory": false,
     "openGUIOnRightClick": false,
     "inventorySize": 9,

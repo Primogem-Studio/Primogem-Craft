@@ -46,7 +46,7 @@ public class QWSXypzjzyjcmzpProcedure {
 		double b = 0;
 		if (!world.isClientSide()) {
 			if (!damagesource.is(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("primogemcraft:s_hchixushanghai")))) {
-				if ((sourceentity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.CHUNMEIZHIPAO.get())) : false)
+				if (hasEntityInInventory(sourceentity, new ItemStack(PrimogemcraftModItems.CHUNMEIZHIPAO.get()))
 						&& !(sourceentity instanceof Player _plrCldCheck3 && _plrCldCheck3.getCooldowns().isOnCooldown(PrimogemcraftModItems.CHUNMEIZHIPAO.get()))) {
 					if (sourceentity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerIter) {
 						for (int _idx = 0; _idx < _modHandlerIter.getSlots(); _idx++) {
@@ -62,8 +62,7 @@ public class QWSXypzjzyjcmzpProcedure {
 					entity.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("primogemcraft:s_hchixushanghai"))), sourceentity),
 							Math.round((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) * 0.016 * b));
 				}
-				if ((sourceentity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.QWJZYJ.get())) : false)
-						&& !(sourceentity instanceof Player _plrCldCheck14 && _plrCldCheck14.getCooldowns().isOnCooldown(PrimogemcraftModItems.QWJZYJ.get()))) {
+				if (hasEntityInInventory(sourceentity, new ItemStack(PrimogemcraftModItems.QWJZYJ.get())) && !(sourceentity instanceof Player _plrCldCheck14 && _plrCldCheck14.getCooldowns().isOnCooldown(PrimogemcraftModItems.QWJZYJ.get()))) {
 					if (sourceentity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerIter) {
 						for (int _idx = 0; _idx < _modHandlerIter.getSlots(); _idx++) {
 							ItemStack itemstackiterator = _modHandlerIter.getStackInSlot(_idx).copy();
@@ -79,7 +78,7 @@ public class QWSXypzjzyjcmzpProcedure {
 									? Math.round((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) * 0.3)
 									: Math.round((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) * 0.003 * a)));
 				}
-				if (sourceentity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.QWYBTZDYPJ.get())) : false) {
+				if (hasEntityInInventory(sourceentity, new ItemStack(PrimogemcraftModItems.QWYBTZDYPJ.get()))) {
 					{
 						final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
 						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
@@ -92,5 +91,11 @@ public class QWSXypzjzyjcmzpProcedure {
 				}
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

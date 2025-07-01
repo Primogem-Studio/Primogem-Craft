@@ -21,7 +21,7 @@ public class AxgsxProcedure {
 			return;
 		if (!world.isClientSide()) {
 			if (blockstate.is(BlockTags.create(ResourceLocation.parse("c:yuansujingtikuai")))) {
-				if (Math.random() < ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQBING.get())) : false) ? 0.15 : 0.1)) {
+				if (Math.random() < (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQBING.get())) ? 0.15 : 0.1)) {
 					world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 					if (world instanceof ServerLevel _level) {
 						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PrimogemcraftModBlocks.YUANSUJINGSHIKUAI.get()));
@@ -33,5 +33,11 @@ public class AxgsxProcedure {
 				}
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

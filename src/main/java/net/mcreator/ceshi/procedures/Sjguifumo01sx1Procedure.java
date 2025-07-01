@@ -59,7 +59,7 @@ public class Sjguifumo01sx1Procedure {
 					}
 				}
 			}
-			b = new ItemStack(PrimogemcraftModItems.SJBCQ.get());
+			b = new ItemStack(PrimogemcraftModItems.SJBCQ.get()).copy();
 			{
 				final String _tagName = "shijianbuchang";
 				final double _tagValue = (Mth.nextInt(RandomSource.create(), 1, 3));

@@ -30,15 +30,13 @@ public class ShengfaqishuxingProcedure {
 					world.getLevelData().getGameRules().getRule(PrimogemcraftModGameRules.GUIZEMOYINSHENSHENGCHENGBEILV).set(0, world.getServer());
 				}
 			} else {
-				world.getLevelData().getGameRules().getRule(PrimogemcraftModGameRules.GUIZEMOYINSHENSHENGCHENGBEILV).set((int) ((world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZEMOYINSHENSHENGCHENGBEILV)) - 1),
-						world.getServer());
+				world.getLevelData().getGameRules().getRule(PrimogemcraftModGameRules.GUIZEMOYINSHENSHENGCHENGBEILV).set((world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZEMOYINSHENSHENGCHENGBEILV)) - 1, world.getServer());
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal(("\u00A72\u9B54\u9634\u8EAB\u751F\u6210\u500D\u7387\u5DF2\u8C03\u6574\u81F3" + (world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZEMOYINSHENSHENGCHENGBEILV)))),
 							false);
 			}
 		} else {
-			world.getLevelData().getGameRules().getRule(PrimogemcraftModGameRules.GUIZEMOYINSHENSHENGCHENGBEILV).set((int) ((world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZEMOYINSHENSHENGCHENGBEILV)) + 1),
-					world.getServer());
+			world.getLevelData().getGameRules().getRule(PrimogemcraftModGameRules.GUIZEMOYINSHENSHENGCHENGBEILV).set((world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZEMOYINSHENSHENGCHENGBEILV)) + 1, world.getServer());
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal(("\u00A7c\u9B54\u9634\u8EAB\u751F\u6210\u500D\u7387\u5DF2\u63D0\u9AD8\u81F3" + (world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZEMOYINSHENSHENGCHENGBEILV)))),
 						false);

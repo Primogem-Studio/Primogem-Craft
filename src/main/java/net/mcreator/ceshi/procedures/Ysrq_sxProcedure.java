@@ -27,7 +27,7 @@ public class Ysrq_sxProcedure {
 		double f = 0;
 		if (!world.isClientSide()) {
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("yan")) {
-				c = (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQYAN.get())) : false) ? 10 : 8;
+				c = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQYAN.get())) ? 10 : 8;
 				if (!(entity instanceof LivingEntity _livEnt4 && _livEnt4.hasEffect(MobEffects.DAMAGE_RESISTANCE))) {
 					if (c >= 2) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -44,7 +44,7 @@ public class Ysrq_sxProcedure {
 				}
 			}
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("feng")) {
-				b = (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQFENG.get())) : false) ? 10 : 8;
+				b = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQFENG.get())) ? 10 : 8;
 				if (!(entity instanceof LivingEntity _livEnt13 && _livEnt13.hasEffect(MobEffects.SLOW_FALLING)) && !entity.getPersistentData().getBoolean("zzss_kj_hjxz")) {
 					if (b >= 2) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -64,7 +64,7 @@ public class Ysrq_sxProcedure {
 				}
 			}
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("lei")) {
-				d = (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQLEI.get())) : false) ? 10 : 8;
+				d = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQLEI.get())) ? 10 : 8;
 				if (entity instanceof LivingEntity _livEnt23 && _livEnt23.hasEffect(PrimogemcraftModMobEffects.GOUYU)) {
 					if (d >= 2) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -83,7 +83,7 @@ public class Ysrq_sxProcedure {
 				}
 			}
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("cao")) {
-				a = (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQCAO.get())) : false) ? 10 : 8;
+				a = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQCAO.get())) ? 10 : 8;
 				if (a >= 2) {
 					if (Math.random() < 0.0005) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -112,7 +112,7 @@ public class Ysrq_sxProcedure {
 				}
 			}
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("shui")) {
-				e = (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQSHUI.get())) : false) ? 10 : 8;
+				e = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQSHUI.get())) ? 10 : 8;
 				if (e >= 2) {
 					if (!(entity instanceof LivingEntity _livEnt49 && _livEnt49.hasEffect(MobEffects.CONDUIT_POWER))) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -138,7 +138,7 @@ public class Ysrq_sxProcedure {
 				}
 			}
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("huo")) {
-				f = (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.HQHUO.get())) : false) ? 10 : 8;
+				f = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQHUO.get())) ? 10 : 8;
 				if (!(entity instanceof LivingEntity _livEnt64 && _livEnt64.hasEffect(MobEffects.FIRE_RESISTANCE))) {
 					if (f >= 2) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -159,5 +159,11 @@ public class Ysrq_sxProcedure {
 				}
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.item;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -7,7 +6,6 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.InteractionResult;
@@ -20,7 +18,7 @@ import java.util.List;
 
 public class ShenshenghuabanItem extends Item {
 	public ShenshenghuabanItem() {
-		super(new Item.Properties().durability(100).fireResistant().rarity(Rarity.COMMON));
+		super(new Item.Properties().durability(100).fireResistant());
 	}
 
 	@Override

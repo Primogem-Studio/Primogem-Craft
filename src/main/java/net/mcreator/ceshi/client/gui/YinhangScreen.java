@@ -14,16 +14,15 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.ceshi.world.inventory.YinhangMenu;
 import net.mcreator.ceshi.network.YinhangButtonMessage;
-
-import java.util.HashMap;
+import net.mcreator.ceshi.init.PrimogemcraftModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class YinhangScreen extends AbstractContainerScreen<YinhangMenu> {
-	private final static HashMap<String, Object> guistate = YinhangMenu.guistate;
+public class YinhangScreen extends AbstractContainerScreen<YinhangMenu> implements PrimogemcraftModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_dui;
 	ImageButton imagebutton_cuo;
 
@@ -38,18 +37,28 @@ public class YinhangScreen extends AbstractContainerScreen<YinhangMenu> {
 		this.imageHeight = 166;
 	}
 
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
 	private static final ResourceLocation texture = ResourceLocation.parse("primogemcraft:textures/screens/yinhang.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 126 && mouseX < leftPos + 147 && mouseY > topPos + 26 && mouseY < topPos + 47) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.yinhang.tooltip_ssacun_ru_zhe_xie_bing_huo_de_ping_zheng"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 126 && mouseX < leftPos + 147 && mouseY > topPos + 53 && mouseY < topPos + 73) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.yinhang.tooltip_sscqing_ni_gun_kai_ss8cui_hui_she_shi"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
@@ -92,7 +101,6 @@ public class YinhangScreen extends AbstractContainerScreen<YinhangMenu> {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_dui", imagebutton_dui);
 		this.addRenderableWidget(imagebutton_dui);
 		imagebutton_cuo = new ImageButton(this.leftPos + 126, this.topPos + 53, 21, 21, new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/cuoa1.png"), ResourceLocation.parse("primogemcraft:textures/screens/cuoa2.png")), e -> {
 			if (true) {
@@ -105,7 +113,6 @@ public class YinhangScreen extends AbstractContainerScreen<YinhangMenu> {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_cuo", imagebutton_cuo);
 		this.addRenderableWidget(imagebutton_cuo);
 	}
 }

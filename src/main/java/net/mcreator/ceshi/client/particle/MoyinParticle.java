@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.client.particle;
 
 import net.neoforged.api.distmarker.OnlyIn;

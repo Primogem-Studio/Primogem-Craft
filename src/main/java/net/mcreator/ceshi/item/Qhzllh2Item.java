@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.item;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -20,7 +19,7 @@ import java.util.List;
 
 public class Qhzllh2Item extends Item {
 	public Qhzllh2Item() {
-		super(new Item.Properties().stacksTo(64).fireResistant().rarity(Rarity.RARE));
+		super(new Item.Properties().fireResistant().rarity(Rarity.RARE));
 	}
 
 	@Override

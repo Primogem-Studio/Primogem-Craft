@@ -9,16 +9,15 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.ceshi.world.inventory.CeshiguiMenu;
-
-import java.util.HashMap;
+import net.mcreator.ceshi.init.PrimogemcraftModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class CeshiguiScreen extends AbstractContainerScreen<CeshiguiMenu> {
-	private final static HashMap<String, Object> guistate = CeshiguiMenu.guistate;
+public class CeshiguiScreen extends AbstractContainerScreen<CeshiguiMenu> implements PrimogemcraftModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 
 	public CeshiguiScreen(CeshiguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -29,6 +28,12 @@ public class CeshiguiScreen extends AbstractContainerScreen<CeshiguiMenu> {
 		this.entity = container.entity;
 		this.imageWidth = 176;
 		this.imageHeight = 166;
+	}
+
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
 	}
 
 	private static final ResourceLocation texture = ResourceLocation.parse("primogemcraft:textures/screens/ceshigui.png");

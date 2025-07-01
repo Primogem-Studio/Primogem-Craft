@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -13,7 +12,7 @@ import net.minecraft.core.BlockPos;
 
 public class Ccaoyuanhehuamuban3Block extends Block {
 	public Ccaoyuanhehuamuban3Block() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f, 10f));
+		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2f, 10f).ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override

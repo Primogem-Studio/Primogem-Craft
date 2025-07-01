@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.network;
 
 import net.neoforged.neoforge.network.handling.IPayloadContext;

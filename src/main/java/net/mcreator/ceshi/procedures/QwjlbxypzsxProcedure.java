@@ -37,8 +37,7 @@ public class QwjlbxypzsxProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if (!world.isClientSide()) {
-			if ((sourceentity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.QWJLBXYQ.get())) : false)
-					&& !(sourceentity instanceof Player _plrCldCheck2 && _plrCldCheck2.getCooldowns().isOnCooldown(PrimogemcraftModItems.QWJLBXYQ.get()))) {
+			if (hasEntityInInventory(sourceentity, new ItemStack(PrimogemcraftModItems.QWJLBXYQ.get())) && !(sourceentity instanceof Player _plrCldCheck2 && _plrCldCheck2.getCooldowns().isOnCooldown(PrimogemcraftModItems.QWJLBXYQ.get()))) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.X_GSMCW, 200,
 							(int) ((sourceentity instanceof LivingEntity _livingEntity3 && _livingEntity3.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity3.getAttribute(Attributes.MAX_HEALTH).getValue() : 0) * 0.1 - 1)));
@@ -53,5 +52,11 @@ public class QwjlbxypzsxProcedure {
 					_player.getCooldowns().addCooldown(PrimogemcraftModItems.QWJLBXYQ.get(), 300);
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

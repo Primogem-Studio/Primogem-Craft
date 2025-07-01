@@ -42,7 +42,7 @@ public class YdggzsxProcedure {
 				entity.getPersistentData().putBoolean("yongdongguguzhong", true);
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.YYDGGZXG, 60, 0));
-				itemstack.setDamageValue((int) (itemstack.getMaxDamage() - 1));
+				itemstack.setDamageValue(itemstack.getMaxDamage() - 1);
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal("\u00A7b\u6C38\u52A8\u5495\u5495\u949F\u5F00\u59CB\u4E86\u8FD0\u4F5C....."), false);
 				if (world instanceof Level _level) {

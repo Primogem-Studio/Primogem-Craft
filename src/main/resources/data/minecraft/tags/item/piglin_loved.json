@@ -1,19 +1,19 @@
 {
   "replace": false,
   "values": [
+    "primogemcraft:kkuijiaceshi_chestplate",
+    "primogemcraft:mmolapeiziwupin",
+    "primogemcraft:kkuijiaceshi_leggings",
+    "primogemcraft:mmolafu",
+    "primogemcraft:jingzhimolakuai",
+    "primogemcraft:mmolachan",
+    "primogemcraft:kkuijiaceshi_boots",
+    "primogemcraft:mmolajian",
+    "primogemcraft:xiaodaimola",
+    "primogemcraft:kkuijiaceshi_helmet",
+    "primogemcraft:mmolagao",
     "primogemcraft:jinzhimola",
     "primogemcraft:molakuai_01",
-    "primogemcraft:jingzhimolakuai",
-    "primogemcraft:mmolajian",
-    "primogemcraft:mmolachan",
-    "primogemcraft:mmolafu",
-    "primogemcraft:mmolagao",
-    "primogemcraft:kkuijiaceshi_leggings",
-    "primogemcraft:kkuijiaceshi_boots",
-    "primogemcraft:kkuijiaceshi_chestplate",
-    "primogemcraft:kkuijiaceshi_helmet",
-    "primogemcraft:xiaodaimola",
-    "primogemcraft:wmoladai",
-    "primogemcraft:mmolapeiziwupin"
+    "primogemcraft:wmoladai"
   ]
 }

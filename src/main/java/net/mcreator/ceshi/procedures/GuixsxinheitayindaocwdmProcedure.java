@@ -23,7 +23,7 @@ public class GuixsxinheitayindaocwdmProcedure {
 		if (entity == null)
 			return;
 		if (!world.isClientSide()) {
-			if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PrimogemcraftModItems.SUIJI_1SHIJIAN.get())) : false) {
+			if (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.SUIJI_1SHIJIAN.get()))) {
 				if (entity instanceof Player _player) {
 					ItemStack _stktoremove = new ItemStack(PrimogemcraftModItems.SUIJI_1SHIJIAN.get());
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
@@ -54,5 +54,11 @@ public class GuixsxinheitayindaocwdmProcedure {
 				});
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

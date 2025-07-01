@@ -1,4 +1,3 @@
-
 package net.mcreator.ceshi.block;
 
 import net.neoforged.neoforge.common.util.DeferredSoundType;
@@ -44,7 +43,7 @@ public class XiaoguanziBlock extends FallingBlock {
 				.sound(new DeferredSoundType(1.0f, 1.0f, () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("primogemcraft:xiaoguanzi")), () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.glass.step")),
 						() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.glass.step")), () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.glass.step")),
 						() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.glass.step"))))
-				.strength(0f, 1f).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).dynamicShape().offsetType(Block.OffsetType.XZ));
+				.strength(0f, 1f).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).offsetType(Block.OffsetType.XZ));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
