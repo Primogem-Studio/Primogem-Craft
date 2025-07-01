@@ -11,7 +11,7 @@ public class XsfHSProcedure {
 	public static void execute(ItemStack itemstack, boolean bai_fen, boolean zui_da, double zhi) {
 		ItemStack stack = ItemStack.EMPTY;
 		double a = 0;
-		stack = itemstack.copy();
+		stack = itemstack;
 		a = zhi;
 		var attr = CustomAPI.getAttributes(stack);
 		if (zui_da) {

@@ -16,7 +16,7 @@ public class HyxsxhsProcedure {
 			return;
 		ItemStack a = ItemStack.EMPTY;
 		a = new ItemStack((BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(ResourceLocation.parse((wen_ben).toLowerCase(java.util.Locale.ENGLISH)))).getRandomElement(RandomSource.create())
-				.orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value())).copy();
+				.orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value()));
 		if (world instanceof ServerLevel _level) {
 			ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, a);
 			entityToSpawn.setPickUpDelay(10);

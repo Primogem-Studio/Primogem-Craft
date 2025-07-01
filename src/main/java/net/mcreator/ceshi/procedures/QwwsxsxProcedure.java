@@ -16,7 +16,7 @@ public class QwwsxsxProcedure {
 		if (!world.isClientSide()) {
 			if (entity.getPersistentData().getBoolean("guan_zi_po_huai")) {
 				entity.getPersistentData().putBoolean("guan_zi_po_huai", false);
-				a = new ItemStack(PrimogemcraftModItems.SJBCQ.get()).copy();
+				a = new ItemStack(PrimogemcraftModItems.SJBCQ.get());
 				{
 					final String _tagName = "shijianbuchang";
 					final double _tagValue = (Math.random() < 0.3 ? 2 : 1);

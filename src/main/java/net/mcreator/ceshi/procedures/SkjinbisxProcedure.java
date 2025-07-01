@@ -27,9 +27,9 @@ public class SkjinbisxProcedure {
 				}
 			}
 			if (Math.random() < n1 * 0.01) {
-				a = new ItemStack(PrimogemcraftModItems.ZHAIQUAN.get()).copy();
+				a = new ItemStack(PrimogemcraftModItems.ZHAIQUAN.get());
 			} else {
-				a = new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()).copy();
+				a = new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get());
 				a.setCount((int) Mth.nextDouble(RandomSource.create(), 1, 10));
 			}
 			FenliejinbisxhsProcedure.execute(world, x, y, z, entity, a, itemstack, true, 3, 1, 12, 10);

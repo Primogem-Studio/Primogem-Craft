@@ -41,7 +41,7 @@ public class RyqsxProcedure {
 						a = (world instanceof Level _lvlSmeltResult
 								? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()))), _lvlSmeltResult)
 										.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-								: ItemStack.EMPTY).copy();
+								: ItemStack.EMPTY);
 						a.setCount(Mth.nextInt(RandomSource.create(), 1, 4));
 						if (world instanceof ServerLevel _level) {
 							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, a);

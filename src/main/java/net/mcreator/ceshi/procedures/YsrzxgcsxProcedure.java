@@ -17,7 +17,7 @@ public class YsrzxgcsxProcedure {
 		if (entity == null)
 			return;
 		ItemStack a = ItemStack.EMPTY;
-		a = new ItemStack(PrimogemcraftModItems.YSRZ_0.get()).copy();
+		a = new ItemStack(PrimogemcraftModItems.YSRZ_0.get());
 		{
 			final String _tagName = "cao";
 			final double _tagValue = 1;

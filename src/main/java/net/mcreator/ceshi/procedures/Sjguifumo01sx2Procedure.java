@@ -61,7 +61,7 @@ public class Sjguifumo01sx2Procedure {
 			}
 			if (entity instanceof Player _player)
 				_player.closeContainer();
-			b = new ItemStack(PrimogemcraftModItems.SJBCQ.get()).copy();
+			b = new ItemStack(PrimogemcraftModItems.SJBCQ.get());
 			{
 				final String _tagName = "shijianbuchang";
 				final double _tagValue = (Mth.nextInt(RandomSource.create(), 2, 4));

@@ -25,7 +25,7 @@ public class Suijifumoanniu01Procedure {
 		if (entity == null)
 			return;
 		ItemStack i1 = ItemStack.EMPTY;
-		i1 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(2).getItem() : ItemStack.EMPTY).copy();
+		i1 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(2).getItem() : ItemStack.EMPTY);
 		if (getAmountInGUISlot(entity, 0) >= 1 && i1.isEnchantable() && !i1.isEnchanted() && getAmountInGUISlot(entity, 1) >= 10) {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {

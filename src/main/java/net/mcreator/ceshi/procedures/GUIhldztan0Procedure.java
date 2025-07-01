@@ -24,7 +24,7 @@ public class GUIhldztan0Procedure {
 		ItemStack i1 = ItemStack.EMPTY;
 		double b = 0;
 		boolean lg0 = false;
-		i1 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(0).getItem() : ItemStack.EMPTY).copy();
+		i1 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(0).getItem() : ItemStack.EMPTY);
 		if (!(i1.getItem() == Blocks.AIR.asItem()) && i1.is(ItemTags.create(ResourceLocation.parse("pgc:wuqi")))) {
 			for (int index0 = 0; index0 < 4; index0++) {
 				b = b + 1;

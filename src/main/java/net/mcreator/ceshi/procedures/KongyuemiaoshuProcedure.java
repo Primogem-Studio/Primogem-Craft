@@ -8,7 +8,7 @@ import net.hackermdch.pgc.CustomAPI;
 public class KongyuemiaoshuProcedure {
 	public static String execute(ItemStack itemstack) {
 		ItemStack stack = ItemStack.EMPTY;
-		stack = itemstack.copy();
+		stack = itemstack;
 		var bar = CustomAPI.getCustomBar(stack);
 		if (Screen.hasShiftDown()) {
 			bar.visible = true;

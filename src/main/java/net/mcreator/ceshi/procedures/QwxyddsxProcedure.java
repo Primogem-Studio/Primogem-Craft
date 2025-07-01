@@ -22,7 +22,7 @@ public class QwxyddsxProcedure {
 		ItemStack i1 = ItemStack.EMPTY;
 		if (!world.isClientSide()) {
 			n1 = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("zhi");
-			i1 = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).copy();
+			i1 = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
 			if (n1 > 0 && i1.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("deng_ji") < 0) {
 				WuqidengjiHSProcedure.execute(world, entity, i1, 1, Double.POSITIVE_INFINITY);
 				{

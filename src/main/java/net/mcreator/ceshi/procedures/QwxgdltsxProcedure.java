@@ -55,7 +55,7 @@ public class QwxgdltsxProcedure {
 					c = "\u83B7\u5F97\u666E\u901A\u5956\u52B1";
 					b = Mth.nextInt(RandomSource.create(), 1, 2);
 				}
-				f = (Math.random() < 0.5 ? new ItemStack(PrimogemcraftModItems.YUANSHI.get()) : new ItemStack(Items.DIAMOND)).copy();
+				f = (Math.random() < 0.5 ? new ItemStack(PrimogemcraftModItems.YUANSHI.get()) : new ItemStack(Items.DIAMOND));
 				if (HSYhdltsxProcedure.execute(world, x, y, z, entity, f, entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY, false, false, d, true, false, true, true, false, true, 0, 0, 0.9, b, 0, 0.5, 1, 0, 0, 1, c,
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getDisplayName().getString(), a)) {
 					if (entity instanceof Player _player) {

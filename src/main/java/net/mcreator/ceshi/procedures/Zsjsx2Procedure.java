@@ -28,7 +28,7 @@ public class Zsjsx2Procedure {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.GOUYU, 200, 2));
 			}
-			i1 = new ItemStack(PrimogemcraftModItems.HQLEI.get()).copy();
+			i1 = new ItemStack(PrimogemcraftModItems.HQLEI.get());
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(PrimogemcraftModItems.ZSTJ.get(), (int) HuoqiHSProcedure.execute(world, entity, i1, false, 300));
 			if (entity instanceof Player _player)

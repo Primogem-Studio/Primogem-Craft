@@ -42,8 +42,7 @@ public class QwlzdltsxProcedure {
 		if (!world.isClientSide()) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PrimogemcraftModItems.QWLZDLT.get()) {
 				d = false;
-				f = new ItemStack((BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(ResourceLocation.parse("c:curio/negative"))).getRandomElement(RandomSource.create()).orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value()))
-						.copy();
+				f = new ItemStack((BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(ResourceLocation.parse("c:curio/negative"))).getRandomElement(RandomSource.create()).orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value()));
 				if (HSYhdltsxProcedure.execute(world, x, y, z, entity, f, entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY, false, false, true, true, false, false, true, false, false, 0, 0, 0.7, 1, 0, 0.5, 0, 0, 0,
 						0, "\u00A7c\u83B7\u5F97\u8D1F\u9762\u5947\u7269", (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getDisplayName().getString(), "")) {
 					if (entity instanceof Player _player) {

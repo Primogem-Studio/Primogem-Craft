@@ -22,7 +22,7 @@ public class QwsksjsxProcedure {
 		double n1 = 0;
 		ItemStack i1 = ItemStack.EMPTY;
 		if (!world.isClientSide()) {
-			i1 = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).copy();
+			i1 = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
 			n1 = i1.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jing_lian");
 			if (i1.is(ItemTags.create(ResourceLocation.parse("pgc:wuqi"))) && n1 <= 4) {
 				if (Math.random() < 0.5) {

@@ -17,7 +17,7 @@ public class Qwsczzsx0Procedure {
 		ItemStack i1 = ItemStack.EMPTY;
 		if (!world.isClientSide()) {
 			if (!itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("qw")) {
-				i1 = (itemstack.copy()).copy();
+				i1 = (itemstack.copy());
 				itemstack.shrink(1);
 				if (Math.random() < 0.1) {
 					a = 3;

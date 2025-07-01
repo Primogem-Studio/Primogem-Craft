@@ -21,7 +21,7 @@ public class HsnjxfProcedure {
 			if (pan_ding) {
 				entity.getPersistentData().putBoolean(NBT, NBTi);
 				if (Math.random() < gai_lv) {
-					a = item.copy();
+					a = item;
 					if (a.is(ItemTags.create(ResourceLocation.parse((TAG).toLowerCase(java.util.Locale.ENGLISH)))) && a.getDamageValue() >= 1) {
 						a.setDamageValue((int) (a.getDamageValue() - (1 + beilv)));
 						if (entity instanceof Player _player && !_player.level().isClientSide())

@@ -20,7 +20,7 @@ public class CunzheshuxingProcedure {
 		double a = 0;
 		boolean b = false;
 		ItemStack a1 = ItemStack.EMPTY;
-		a1 = new ItemStack(PrimogemcraftModItems.CUNQUPINGZHENG.get()).copy();
+		a1 = new ItemStack(PrimogemcraftModItems.CUNQUPINGZHENG.get());
 		a = entity.getPersistentData().getDouble("GUI_yzsp_sl");
 		if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu)
 			_menu.sendMenuStateUpdate(_player, 0, "cunzhe_shuliang", (new java.text.DecimalFormat("##.##").format(a)), true);

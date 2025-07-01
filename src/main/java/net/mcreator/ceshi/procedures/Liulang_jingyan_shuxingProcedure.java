@@ -16,7 +16,7 @@ public class Liulang_jingyan_shuxingProcedure {
 		ItemStack stack = ItemStack.EMPTY;
 		double jingyan = 0;
 		double a = 0;
-		stack = itemstack.copy();
+		stack = itemstack;
 		var bar = CustomAPI.getCustomBar(stack);
 		if (entity.isShiftKeyDown()) {
 			if (bar.numerator == 0) {

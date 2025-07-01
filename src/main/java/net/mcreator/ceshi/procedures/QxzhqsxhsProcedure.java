@@ -20,8 +20,8 @@ public class QxzhqsxhsProcedure {
 		double n1 = 0;
 		double bn1 = 0;
 		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "shan_bian") >= 1) {
-			i1 = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) zhi).copy()).copy();
-			i2 = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) (zhi + 1)).copy()).copy();
+			i1 = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) zhi).copy());
+			i2 = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) (zhi + 1)).copy());
 			n1 = i2.getCount() + zhi_1;
 			bn1 = getBlockNBTNumber(world, BlockPos.containing(x, y, z), "shan_bian");
 			if ((i2.getItem() == Blocks.AIR.asItem() || n1 <= i2.getMaxStackSize()) && bn1 - shan_bian >= 0 && i1.getCount() >= zhi_0 && i1.getItem() == item0.getItem() && (i2.getItem() == item.getItem() || i2.getItem() == Blocks.AIR.asItem())) {

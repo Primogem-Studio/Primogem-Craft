@@ -24,7 +24,7 @@ public class GUIbhmgsxProcedure {
 		double n1 = 0;
 		ItemStack i1 = ItemStack.EMPTY;
 		if (!world.isClientSide()) {
-			i1 = new ItemStack(PrimogemcraftModItems.XINGHUI.get()).copy();
+			i1 = new ItemStack(PrimogemcraftModItems.XINGHUI.get());
 			i1.setCount(Mth.nextInt(RandomSource.create(), 10, 20));
 			if (!GUIbhmgsxhs1Procedure.execute(entity)) {
 				if (world instanceof ServerLevel _level) {

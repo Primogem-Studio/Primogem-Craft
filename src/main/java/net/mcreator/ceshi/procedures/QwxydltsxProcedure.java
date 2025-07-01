@@ -39,7 +39,7 @@ public class QwxydltsxProcedure {
 		if (!world.isClientSide()) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PrimogemcraftModItems.QWXYDLT.get()) {
 				d = false;
-				f = (Math.random() < 0.7 ? new ItemStack(PrimogemcraftModItems.JLLIANG.get()) : new ItemStack(PrimogemcraftModItems.JLMO.get())).copy();
+				f = (Math.random() < 0.7 ? new ItemStack(PrimogemcraftModItems.JLLIANG.get()) : new ItemStack(PrimogemcraftModItems.JLMO.get()));
 				if (HSYhdltsxProcedure.execute(world, x, y, z, entity, f, entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY, false, false, true, true, false, false, true, false, false, 0, 0, 0.2,
 						Mth.nextDouble(RandomSource.create(), 1, 5), 0, 0.5, 0, 0, 0, 0, "\u00A7d\u83B7\u5F97\u7CBE\u953B\u77FF\u77F3\uFF01",
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getDisplayName().getString(), "")) {
