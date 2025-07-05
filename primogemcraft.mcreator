@@ -10586,7 +10586,6 @@
       "registry_name": "ceshifumogui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ceshi/network/CeshifumoguiButtonMessage.java",
           "src/main/java/net/mcreator/ceshi/world/inventory/CeshifumoguiMenu.java",
           "src/main/java/net/mcreator/ceshi/network/CeshifumoguiSlotMessage.java",
           "src/main/java/net/mcreator/ceshi/client/gui/CeshifumoguiScreen.java"

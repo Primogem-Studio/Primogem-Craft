@@ -1,7 +1,5 @@
 package net.mcreator.ceshi.client.gui;
 
-import net.neoforged.neoforge.network.PacketDistributor;
-
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -13,7 +11,6 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.ceshi.world.inventory.CeshifumoguiMenu;
-import net.mcreator.ceshi.network.CeshifumoguiButtonMessage;
 import net.mcreator.ceshi.init.PrimogemcraftModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -84,10 +81,6 @@ public class CeshifumoguiScreen extends AbstractContainerScreen<CeshifumoguiMenu
 		super.init();
 		imagebutton_heitasuijifumo = new ImageButton(this.leftPos + 55, this.topPos + 59, 64, 19,
 				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/heitasuijifumo.png"), ResourceLocation.parse("primogemcraft:textures/screens/heitasuijifumo.png")), e -> {
-					if (true) {
-						PacketDistributor.sendToServer(new CeshifumoguiButtonMessage(0, x, y, z));
-						CeshifumoguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
-					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {

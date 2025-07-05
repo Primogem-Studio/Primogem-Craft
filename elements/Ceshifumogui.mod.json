@@ -108,9 +108,6 @@
           "name": "imagebutton_heitasuijifumo",
           "image": "heitasuijifumo.png",
           "hoveredImage": "",
-          "onClick": {
-            "name": "Suijifumoanniu01"
-          },
           "x": 181,
           "y": 96,
           "locked": false
