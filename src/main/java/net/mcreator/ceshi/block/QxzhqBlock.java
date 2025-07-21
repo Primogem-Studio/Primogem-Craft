@@ -1,5 +1,8 @@
 package net.mcreator.ceshi.block;
 
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.BlockState;
@@ -10,6 +13,9 @@ import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -27,11 +33,20 @@ import net.mcreator.ceshi.world.inventory.GUIhyzhqMenu;
 import net.mcreator.ceshi.procedures.Qxzhq_sx_0Procedure;
 import net.mcreator.ceshi.block.entity.QxzhqBlockEntity;
 
+import java.util.List;
+
 import io.netty.buffer.Unpooled;
 
 public class QxzhqBlock extends Block implements EntityBlock {
 	public QxzhqBlock() {
 		super(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_WHITE).sound(SoundType.METAL).strength(10f, 20f).requiresCorrectToolForDrops());
+	}
+
+	@Override
+	@OnlyIn(Dist.CLIENT)
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, list, flag);
+		list.add(Component.translatable("block.primogemcraft.qxzhq.description_0"));
 	}
 
 	@Override

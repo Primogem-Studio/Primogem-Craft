@@ -38,7 +38,9 @@
     "customProperties": [],
     "name": "§b群星转化器",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "使用 嬗变之尘 充能"
+      ]
     },
     "hardness": 10.0,
     "resistance": 20.0,
@@ -112,6 +114,9 @@
     "isBonemealable": false,
     "sensitiveToVibration": false,
     "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    },
     "hasInventory": true,
     "guiBoundTo": "GUIhyzhq",
     "openGUIOnRightClick": true,
