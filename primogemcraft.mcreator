@@ -595,9 +595,9 @@
       "registry_name": "qqiyuan_jin_guang",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ceshi/client/renderer/QqiyuanJinGuangRenderer.java",
           "src/main/resources/assets/primogemcraft/models/item/qqiyuan_jin_guang_spawn_egg.json",
-          "src/main/java/net/mcreator/ceshi/entity/QqiyuanJinGuangEntity.java"
+          "src/main/java/net/mcreator/ceshi/entity/QqiyuanJinGuangEntity.java",
+          "src/main/java/net/mcreator/ceshi/client/renderer/QqiyuanJinGuangRenderer.java"
         ]
       }
     },
@@ -697,8 +697,8 @@
       "registry_name": "q_qyuanchuzi_01",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ceshi/entity/QQyuanchuzi01Entity.java",
           "src/main/java/net/mcreator/ceshi/client/renderer/QQyuanchuzi01Renderer.java",
+          "src/main/java/net/mcreator/ceshi/entity/QQyuanchuzi01Entity.java",
           "src/main/resources/assets/primogemcraft/models/item/q_qyuanchuzi_01_spawn_egg.json"
         ]
       }
@@ -787,9 +787,9 @@
       "registry_name": "qq_qyuanchulan_01",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ceshi/client/renderer/QQQyuanchulan01Renderer.java",
+          "src/main/java/net/mcreator/ceshi/entity/QQQyuanchulan01Entity.java",
           "src/main/resources/assets/primogemcraft/models/item/qq_qyuanchulan_01_spawn_egg.json",
-          "src/main/java/net/mcreator/ceshi/entity/QQQyuanchulan01Entity.java"
+          "src/main/java/net/mcreator/ceshi/client/renderer/QQQyuanchulan01Renderer.java"
         ]
       }
     },
@@ -3627,8 +3627,8 @@
       "registry_name": "ceshiyongwupin",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ceshi/item/CeshiyongwupinItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/ceshiyongwupin.json"
+          "src/main/resources/assets/primogemcraft/models/item/ceshiyongwupin.json",
+          "src/main/java/net/mcreator/ceshi/item/CeshiyongwupinItem.java"
         ]
       }
     },
@@ -7170,22 +7170,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -48443,17 +48427,17 @@
   },
   "metadata": {
     "files": [
-      "src/main/resources/pack.mcmeta",
-      "src/main/resources/assets/primogemcraft/sounds.json",
-      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModModels.java",
-      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModTabs.java",
+      "src/main/java/net/mcreator/ceshi/network/PrimogemcraftModVariables.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModSounds.java",
       "src/main/resources/META-INF/accesstransformer.cfg",
       "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModTabs.java",
       "src/main/java/net/mcreator/ceshi/PrimogemcraftMod.java",
-      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModSounds.java",
-      "src/main/java/net/mcreator/ceshi/network/PrimogemcraftModVariables.java",
-      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModMenus.java",
+      "src/main/resources/assets/primogemcraft/sounds.json",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModModels.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModScreens.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModMenus.java",
       "src/main/java/net/mcreator/ceshi/network/MenuStateUpdateMessage.java",
       "src/main/java/net/mcreator/ceshi/world/features/configurations/StructureFeatureConfiguration.java",
       "src/main/java/net/mcreator/ceshi/world/features/StructureFeature.java",
@@ -48466,14 +48450,14 @@
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModMobEffects.java",
       "src/main/resources/data/neoforge/data_maps/entity_type/monster_room_mobs.json",
       "src/main/resources/data/minecraft/tags/painting_variant/placeable.json",
-      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModParticleTypes.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModParticles.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModParticleTypes.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModPotions.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModBlocks.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModBlockEntities.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModItems.java",
-      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModEntities.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModEntityRenderers.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModEntities.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModFeatures.java"
     ]
   },
@@ -48484,7 +48468,7 @@
   "workspaceSettings": {
     "modid": "primogemcraft",
     "modName": "原石工艺",
-    "version": "25w26a",
+    "version": "25w32a",
     "description": "这是一个无厘头的娱乐性mod，包含一些米游物品和梗",
     "author": "Pepper某人, hackerm大神, MCreator",
     "websiteURL": "https://www.mcmod.cn/class/10429.html",

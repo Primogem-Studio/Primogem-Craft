@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "yuanshi",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "开发者物品",
@@ -60,6 +61,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []

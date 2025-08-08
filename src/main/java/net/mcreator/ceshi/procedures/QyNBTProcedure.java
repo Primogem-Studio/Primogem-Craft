@@ -7,7 +7,7 @@ public class QyNBTProcedure {
 		if (entitiss == null || entity == null || zhi == null)
 			return;
 		entity.getPersistentData().putString("qiyuan_guishu", (entitiss.getDisplayName().getString()));
-		if (!baodi) {
+		if (baodi) {
 			entitiss.getPersistentData().putDouble("chouka", (entitiss.getPersistentData().getDouble("chouka") - 1));
 			entitiss.getPersistentData().putDouble("chouka_jiacheng", (entitiss.getPersistentData().getDouble("chouka_jiacheng") - 1));
 		}
