@@ -1,0 +1,12 @@
+{
+  "type": "primogemcraft:stardust_converter",
+  "first": {
+    "id": "primogemcraft:xinghui",
+    "count": 64
+  },
+  "second": {
+    "id": "primogemcraft:jinguangbaodi_01",
+    "count": 1
+  },
+  "cost": 100
+}

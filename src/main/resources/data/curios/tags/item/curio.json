@@ -1,12 +1,10 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:sanyuezhufu",
     "primogemcraft:ysrz_0",
     {
       "id": "#c:curio/curios",
       "required": false
-    },
-    "primogemcraft:feiqiupingzheng"
+    }
   ]
 }

@@ -37446,6 +37446,18 @@
           }
         ]
       }
+    },
+    {
+      "name": "Convertxhzhzp",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "convertxhzhzp",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/convertxhzhzp.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
