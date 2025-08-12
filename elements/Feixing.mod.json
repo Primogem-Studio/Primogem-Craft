@@ -8,17 +8,14 @@
       "value": -1,
       "falpha": 0.0
     },
+    "onAddedSound": {
+      "value": ""
+    },
     "isInstant": false,
     "mobEffectCategory": "NEUTRAL",
     "renderStatusInInventory": false,
     "renderStatusInHUD": false,
     "isCuredbyHoney": false,
-    "modifiers": [],
-    "onActiveTick": {
-      "name": "Feixing_kaishi"
-    },
-    "onExpired": {
-      "name": "Feixing_shuxinG_2"
-    }
+    "modifiers": []
   }
 }

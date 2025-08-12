@@ -30,7 +30,6 @@ import net.mcreator.ceshi.procedures.Gongjixiangzengyi_shuxingProcedure;
 import net.mcreator.ceshi.procedures.Flggzxgsx2Procedure;
 import net.mcreator.ceshi.procedures.Flggzxgsx1Procedure;
 import net.mcreator.ceshi.procedures.Fengrao_shuxing_4Procedure;
-import net.mcreator.ceshi.procedures.Feixing_shuxinG_2Procedure;
 import net.mcreator.ceshi.procedures.DjpppolieProcedure;
 import net.mcreator.ceshi.potion.ZhuoshaoMobEffect;
 import net.mcreator.ceshi.potion.ZhongguizhongjuxiaoguoMobEffect;
@@ -175,8 +174,6 @@ public class PrimogemcraftModMobEffects {
 			QylqsxProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ());
 		} else if (effectInstance.getEffect().is(DJPP)) {
 			DjpppolieProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(FEIXING)) {
-			Feixing_shuxinG_2Procedure.execute(entity.level(), entity);
 		} else if (effectInstance.getEffect().is(TLDHY)) {
 			Tldhy_sxProcedure.execute(entity.level(), entity);
 		} else if (effectInstance.getEffect().is(HEISENLINGGZ)) {

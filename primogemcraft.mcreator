@@ -16066,7 +16066,7 @@
       "name": "Feixing",
       "type": "potioneffect",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "feixing",
       "metadata": {
         "files": [
@@ -16084,12 +16084,7 @@
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/Feixing_kaishiProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
@@ -16102,16 +16097,7 @@
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/Feixing_shuxinG_2Procedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
