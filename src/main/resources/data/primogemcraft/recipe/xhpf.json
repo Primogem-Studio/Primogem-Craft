@@ -11,11 +11,11 @@
       "item": "primogemcraft:shanbianzhichen"
     },
     "b": {
-      "item": "primogemcraft:xinghui"
+      "item": "primogemcraft:xingchen"
     }
   },
   "result": {
-    "id": "primogemcraft:xingchen",
+    "id": "primogemcraft:xinghui",
     "count": 1
   }
 }

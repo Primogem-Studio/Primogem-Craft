@@ -249,6 +249,7 @@ public class PrimogemcraftModTabs {
 				tabData.accept(PrimogemcraftModItems.CAOYUANHESHENGWU_SPAWN_EGG.get());
 				tabData.accept(PrimogemcraftModItems.XIAOHEITA_SPAWN_EGG.get());
 				tabData.accept(PrimogemcraftModItems.XIAODENG_SPAWN_EGG.get());
+				tabData.accept(PrimogemcraftModItems.QWMHS.get());
 			}).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> PRIMOGEMCRAFT_EQUIPMENT = REGISTRY.register("primogemcraft_equipment",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.primogemcraft.primogemcraft_equipment")).icon(() -> new ItemStack(PrimogemcraftModItems.WUFENGJIAN.get())).displayItems((parameters, tabData) -> {

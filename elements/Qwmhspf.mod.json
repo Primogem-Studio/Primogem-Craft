@@ -13,37 +13,37 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:Shanbianzhichen"
+        "value": "CUSTOM:Qwrhj"
       },
       {
-        "value": "CUSTOM:Xingchen"
+        "value": "CUSTOM:Qwyzzm"
       },
       {
-        "value": "CUSTOM:Xingchen"
+        "value": ""
       },
       {
-        "value": "CUSTOM:Xingchen"
+        "value": "CUSTOM:Qwsss"
       },
       {
-        "value": "CUSTOM:Xingchen"
+        "value": ""
       },
       {
-        "value": "CUSTOM:Xingchen"
+        "value": ""
       },
       {
-        "value": "CUSTOM:Xingchen"
+        "value": ""
       },
       {
-        "value": "CUSTOM:Xingchen"
+        "value": ""
       },
       {
-        "value": "CUSTOM:Xingchen"
+        "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Xinghui"
+      "value": "CUSTOM:Qwmhs"
     },
-    "name": "xhpf",
+    "name": "qwmhspf",
     "namespace": "mod"
   }
 }

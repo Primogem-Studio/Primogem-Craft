@@ -2709,5 +2709,13 @@
   "gui.primogemcraft.sjgu_ifumo_00.label_dui_wu_pin_jin_xing_1ci_gao_pin_zhi_fu_mo": "对物品进行1次高品质附魔。",
   "item.primogemcraft.zizaifu.description_0": "§d手持工具时：",
   "item.primogemcraft.zizaifu.description_1": "§7 - 步行时获得急速",
-  "block.primogemcraft.qxzhq.description_0": "使用 嬗变之尘 充能"
+  "block.primogemcraft.qxzhq.description_0": "使用 嬗变之尘 充能",
+  "effect.primogemcraft.chicuna": "尺寸 大",
+  "effect.primogemcraft.chicunb": "尺寸 小",
+  "item.primogemcraft.qwmhs.description_4": "§c注意：严重影响渲染效率！",
+  "item.primogemcraft.qwmhs.description_3": "§7后损失耐久",
+  "item.primogemcraft.qwmhs": "§5『奇物』§c漫画书",
+  "item.primogemcraft.qwmhs.description_1": "§6持续3分钟，冷却5分钟",
+  "item.primogemcraft.qwmhs.description_0": "§6对自身和附近的生物赋予增益",
+  "item.primogemcraft.qwmhs.description_2": "§7左键移除范围内生物部分增益"
 }

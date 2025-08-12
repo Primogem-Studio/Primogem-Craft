@@ -7168,8 +7168,20 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -27288,7 +27300,7 @@
       "name": "Diaoyongqwyisunhuai",
       "type": "procedure",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "diaoyongqwyisunhuai",
       "metadata": {
         "files": [
@@ -27302,6 +27314,22 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -36813,8 +36841,8 @@
       "registry_name": "qwxydsw",
       "metadata": {
         "files": [
-          "src/main/resources/assets/primogemcraft/models/item/qwxydsw.json",
-          "src/main/java/net/mcreator/ceshi/item/QwxydswItem.java"
+          "src/main/java/net/mcreator/ceshi/item/QwxydswItem.java",
+          "src/main/resources/assets/primogemcraft/models/item/qwxydsw.json"
         ]
       }
     },
@@ -36945,8 +36973,8 @@
       "registry_name": "qwxydd",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ceshi/item/QwxyddItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/qwxydd.json"
+          "src/main/resources/assets/primogemcraft/models/item/qwxydd.json",
+          "src/main/java/net/mcreator/ceshi/item/QwxyddItem.java"
         ]
       }
     },
@@ -37479,6 +37507,131 @@
           "src/main/resources/data/primogemcraft/recipe/convertysrzzhpf.json"
         ]
       }
+    },
+    {
+      "name": "Chicuna",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chicuna",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ceshi/potion/ChicunaMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "Chicunb",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chicunb",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ceshi/potion/ChicunbMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "Qwmhs",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "qwmhs",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/primogemcraft/models/item/qwmhs.json",
+          "src/main/java/net/mcreator/ceshi/item/QwmhsItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Qwmhs_sx_0",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "qwmhs_sx_0",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Qwmhs_sx_0Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Qw_mhs_sx_1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "qw_mhs_sx_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Qw_mhs_sx_1Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Qwmhspf",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "qwmhspf",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/qwmhspf.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -37905,7 +38058,8 @@
       "CUSTOM:Qwsksj",
       "CUSTOM:Skjinb",
       "CUSTOM:Qwxydsw",
-      "CUSTOM:Qwxydd"
+      "CUSTOM:Qwxydd",
+      "CUSTOM:Qwmhs"
     ],
     "ITEMS:c:curio/normal/fusion/b": [
       "CUSTOM:Qwkwzg",
@@ -38888,7 +39042,8 @@
       "CUSTOM:Xyzp",
       "CUSTOM:Skjinb",
       "CUSTOM:Qwsss",
-      "CUSTOM:Qwxydsw"
+      "CUSTOM:Qwxydsw",
+      "CUSTOM:Qwmhs"
     ],
     "ITEMS:pgc:zzzb": [
       "TAG:c:yszsj",
@@ -39634,6 +39789,7 @@
       "CUSTOM:Axhjt.boots"
     ],
     "ITEMS:minecraft:enchantable/durability": [
+      "~CUSTOM:Qwmhs",
       "~CUSTOM:Jdsbcf2",
       "~CUSTOM:Jdsbcf1",
       "~CUSTOM:Jdsbcf0",
@@ -40019,7 +40175,8 @@
       "QQQyuanchulan01",
       "Caoyuanheshengwu",
       "Xiaoheita",
-      "Xiaodeng"
+      "Xiaodeng",
+      "Qwmhs"
     ],
     "CUSTOM:Yuanshigongjuxuanxiangka": [
       "Jiuchanzhiyuangao",
@@ -43044,7 +43201,15 @@
       "gui.primogemcraft.sjgu_ifumo_00.label_dui_wu_pin_jin_xing_1ci_gao_pin_zhi_fu_mo": "对物品进行1次高品质附魔。",
       "item.primogemcraft.zizaifu.description_0": "§d手持工具时：",
       "item.primogemcraft.zizaifu.description_1": "§7 - 步行时获得急速",
-      "block.primogemcraft.qxzhq.description_0": "使用 嬗变之尘 充能"
+      "block.primogemcraft.qxzhq.description_0": "使用 嬗变之尘 充能",
+      "effect.primogemcraft.chicuna": "尺寸 大",
+      "effect.primogemcraft.chicunb": "尺寸 小",
+      "item.primogemcraft.qwmhs.description_4": "§c注意：严重影响渲染效率！",
+      "item.primogemcraft.qwmhs.description_3": "§7后损失耐久",
+      "item.primogemcraft.qwmhs": "§5『奇物』§c漫画书",
+      "item.primogemcraft.qwmhs.description_1": "§6持续3分钟，冷却5分钟",
+      "item.primogemcraft.qwmhs.description_0": "§6对自身和附近的生物赋予增益",
+      "item.primogemcraft.qwmhs.description_2": "§7左键移除范围内生物部分增益"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -45763,7 +45928,15 @@
       "gui.primogemcraft.sjgu_ifumo_00.label_dui_wu_pin_jin_xing_1ci_gao_pin_zhi_fu_mo": "对物品进行1次高品质附魔。",
       "item.primogemcraft.zizaifu.description_0": "§d手持工具时：",
       "item.primogemcraft.zizaifu.description_1": "§7 - 步行时获得急速",
-      "block.primogemcraft.qxzhq.description_0": "使用 嬗变之尘 充能"
+      "block.primogemcraft.qxzhq.description_0": "使用 嬗变之尘 充能",
+      "effect.primogemcraft.chicuna": "尺寸 大",
+      "effect.primogemcraft.chicunb": "尺寸 小",
+      "item.primogemcraft.qwmhs.description_4": "§c注意：严重影响渲染效率！",
+      "item.primogemcraft.qwmhs.description_3": "§7后损失耐久",
+      "item.primogemcraft.qwmhs": "§5『奇物』§c漫画书",
+      "item.primogemcraft.qwmhs.description_1": "§6持续3分钟，冷却5分钟",
+      "item.primogemcraft.qwmhs.description_0": "§6对自身和附近的生物赋予增益",
+      "item.primogemcraft.qwmhs.description_2": "§7左键移除范围内生物部分增益"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -48476,7 +48649,15 @@
       "gui.primogemcraft.sjgu_ifumo_00.label_dui_wu_pin_jin_xing_1ci_gao_pin_zhi_fu_mo": "对物品进行1次高品质附魔。",
       "item.primogemcraft.zizaifu.description_0": "§d手持工具时：",
       "item.primogemcraft.zizaifu.description_1": "§7 - 步行时获得急速",
-      "block.primogemcraft.qxzhq.description_0": "使用 嬗变之尘 充能"
+      "block.primogemcraft.qxzhq.description_0": "使用 嬗变之尘 充能",
+      "effect.primogemcraft.chicuna": "尺寸 大",
+      "effect.primogemcraft.chicunb": "尺寸 小",
+      "item.primogemcraft.qwmhs.description_4": "§c注意：严重影响渲染效率！",
+      "item.primogemcraft.qwmhs.description_3": "§7后损失耐久",
+      "item.primogemcraft.qwmhs": "§5『奇物』§c漫画书",
+      "item.primogemcraft.qwmhs.description_1": "§6持续3分钟，冷却5分钟",
+      "item.primogemcraft.qwmhs.description_0": "§6对自身和附近的生物赋予增益",
+      "item.primogemcraft.qwmhs.description_2": "§7左键移除范围内生物部分增益"
     }
   },
   "metadata": {

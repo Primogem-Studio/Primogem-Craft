@@ -83,6 +83,8 @@ import net.mcreator.ceshi.potion.DjppxianzhiMobEffect;
 import net.mcreator.ceshi.potion.DjppMobEffect;
 import net.mcreator.ceshi.potion.DiguixiaoguoMobEffect;
 import net.mcreator.ceshi.potion.ChunmeipaoxianzhixiaoguoMobEffect;
+import net.mcreator.ceshi.potion.ChicunbMobEffect;
+import net.mcreator.ceshi.potion.ChicunaMobEffect;
 import net.mcreator.ceshi.PrimogemcraftMod;
 
 @EventBusSubscriber
@@ -140,6 +142,8 @@ public class PrimogemcraftModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> JDSBCF_1XG = REGISTRY.register("jdsbcf_1xg", () -> new Jdsbcf1xgMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> JDSBCF_2XG = REGISTRY.register("jdsbcf_2xg", () -> new Jdsbcf2xgMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> JQYYDM = REGISTRY.register("jqyydm", () -> new JqyydmMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> CHICUNA = REGISTRY.register("chicuna", () -> new ChicunaMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> CHICUNB = REGISTRY.register("chicunb", () -> new ChicunbMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
