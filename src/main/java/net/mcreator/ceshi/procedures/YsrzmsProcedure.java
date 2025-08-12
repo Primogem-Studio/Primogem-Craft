@@ -15,9 +15,9 @@ public class YsrzmsProcedure {
 		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("qidong")) {
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("feng")) {
 				if (entity.getPersistentData().getBoolean("zzss_kj_hjxz")) {
-					s1 = "\u00A7a\u542F\u7528";
+					s1 = "\u00A7c\u7981\u7528";
 				} else {
-					s1 = "\u00A7c\u7981\u6B62";
+					s1 = "\u00A7a\u542F\u7528";
 				}
 				s2 = "\u00A75\u98CE\u5143\u7D20\u62A4\u7532\u7981\u7528\u540E\u4FDD\u7559\u8DF3\u8DC3\u63D0\u5347\u6548\u679C" + "\n" + "\u00A77\u836F\u6C34\u72B6\u6001\uFF1A" + s1;
 			} else {
