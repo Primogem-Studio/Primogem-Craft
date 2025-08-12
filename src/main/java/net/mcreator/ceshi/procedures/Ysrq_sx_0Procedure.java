@@ -74,9 +74,8 @@ public class Ysrq_sx_0Procedure {
 	public static void NBTteshu(String y1, String s1, ItemStack itemstack) {
 		var n = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag();
 		if (n.getBoolean(y1)) {
-			boolean o1 = !n.getBoolean(s1);
 			{
-				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putBoolean(s1, o1));
+				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putBoolean(s1, !n.getBoolean(s1)));
 			}
 		}
 	}
