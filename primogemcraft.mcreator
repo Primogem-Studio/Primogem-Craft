@@ -37467,6 +37467,18 @@
           "src/main/java/net/mcreator/ceshi/procedures/YsrzmsProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Convertysrzzhpf",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "convertysrzzhpf",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/convertysrzzhpf.json"
+        ]
+      }
     }
   ],
   "variable_elements": [

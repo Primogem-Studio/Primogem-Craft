@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "primogemcraft:ysrz_0"
+  },
+  "base": {
+    "item": "primogemcraft:jinguangbaodi_01"
+  },
+  "addition": {
+    "item": "primogemcraft:shanbianzhichen"
+  },
+  "result": {
+    "id": "primogemcraft:ysrz_0"
+  }
+}
