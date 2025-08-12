@@ -19,7 +19,9 @@ public class YsrzmsProcedure {
 				} else {
 					s1 = "\u00A7a\u542F\u7528";
 				}
-				s2 = "\u00A75\u98CE\u5143\u7D20\u62A4\u7532\u7981\u7528\u540E\u4FDD\u7559\u8DF3\u8DC3\u63D0\u5347\u6548\u679C" + "\n" + "\u00A77\u836F\u6C34\u72B6\u6001\uFF1A" + s1;
+				s2 = "\u00A75\u98CE\u5143\u7D20\u62A4\u7532\u7981\u7528\u540E\u4FDD\u7559\u8DF3\u8DC3\u63D0\u5347\u6548\u679C" + "\n" + "\u00A77\u836F\u6C34\u72B6\u6001\uFF1A" + s1 + "\n"
+						+ "\u00A77\u59CB\u7EC8\u7981\u7528\u836F\u6C34\u72B6\u6001\uFF1A" + (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("feng_teshu") ? "\u00A7a\u5F00\u542F" : "\u00A7c\u5173\u95ED")
+						+ "\n" + "\u00A78\u53F3\u952E\u8C03\u6574\u662F\u5426\u59CB\u7EC8\u7981\u7528";
 			} else {
 				s2 = "";
 			}

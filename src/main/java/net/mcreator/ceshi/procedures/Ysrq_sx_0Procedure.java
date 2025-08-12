@@ -59,6 +59,7 @@ public class Ysrq_sx_0Procedure {
 					CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putBoolean(_tagName, _tagValue));
 				}
 			}
+			NBTteshu("feng", "feng_teshu", itemstack);
 		}
 	}
 
@@ -68,5 +69,15 @@ public class Ysrq_sx_0Procedure {
 		itemstack.set(DataComponents.CUSTOM_NAME, Component.literal(String.valueOf(s2)));
 		final String ss1 = "ms";
 		CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putString(ss1, s3));
+	}
+
+	public static void NBTteshu(String y1, String s1, ItemStack itemstack) {
+		var n = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag();
+		if (n.getBoolean(y1)) {
+			boolean o1 = !n.getBoolean(s1);
+			{
+				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putBoolean(s1, o1));
+			}
+		}
 	}
 }
