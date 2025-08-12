@@ -16,29 +16,31 @@ public class Ysrq_sx_0Procedure {
 		if (!world.isClientSide()) {
 			if (!itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("qidong")) {
 				a = Mth.nextInt(RandomSource.create(), 0, 5);
-				if (a == 0) {
-					s1 = "feng";
-					s2 = "\u00A72\u5143\u7D20\u7194\u73E0";
-				}
-				if (a == 1) {
-					s1 = "yan";
-					s2 = "\u00A76\u5143\u7D20\u7194\u73E0";
-				}
-				if (a == 2) {
-					s1 = "lei";
-					s2 = "\u00A7d\u5143\u7D20\u7194\u73E0";
-				}
-				if (a == 3) {
-					s1 = "cao";
-					s2 = "\u00A7a\u5143\u7D20\u7194\u73E0";
-				}
-				if (a == 4) {
-					s1 = "shui";
-					s2 = "\u00A79\u5143\u7D20\u7194\u73E0";
-				}
-				if (a == 5) {
-					s1 = "huo";
-					s2 = "\u00A7c\u5143\u7D20\u7194\u73E0";
+				switch ((int) a) {
+					case 0 :
+						s1 = "feng";
+						s2 = "\u00A72\u5143\u7D20\u7194\u73E0";
+						break;
+					case 1 :
+						s1 = "yan";
+						s2 = "\u00A76\u5143\u7D20\u7194\u73E0";
+						break;
+					case 2 :
+						s1 = "lei";
+						s2 = "\u00A7d\u5143\u7D20\u7194\u73E0";
+						break;
+					case 3 :
+						s1 = "cao";
+						s2 = "\u00A7a\u5143\u7D20\u7194\u73E0";
+						break;
+					case 4 :
+						s1 = "shui";
+						s2 = "\u00A79\u5143\u7D20\u7194\u73E0";
+						break;
+					case 5 :
+						s1 = "huo";
+						s2 = "\u00A7c\u5143\u7D20\u7194\u73E0";
+						break;
 				}
 				Ysrz_hs_hs(s1, s2, itemstack);
 				{
