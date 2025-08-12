@@ -12,7 +12,9 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.Minecraft;
 
+import net.mcreator.ceshi.procedures.YsrzmsProcedure;
 import net.mcreator.ceshi.procedures.Ysrq_sx_0Procedure;
 import net.mcreator.ceshi.procedures.Ysrq_sxProcedure;
 
@@ -27,10 +29,13 @@ public class Ysrz0Item extends Item {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.primogemcraft.ysrz_0.description_0"));
-		list.add(Component.translatable("item.primogemcraft.ysrz_0.description_1"));
-		list.add(Component.translatable("item.primogemcraft.ysrz_0.description_2"));
-		list.add(Component.translatable("item.primogemcraft.ysrz_0.description_3"));
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+		String hoverText = YsrzmsProcedure.execute(entity, itemstack);
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 
 	@Override

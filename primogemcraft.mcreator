@@ -26355,13 +26355,13 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/primogemcraft/models/item/ysrz_0_2.json",
-          "src/main/resources/assets/primogemcraft/models/item/ysrz_0_4.json",
+          "src/main/resources/assets/primogemcraft/models/item/ysrz_0_5.json",
           "src/main/java/net/mcreator/ceshi/item/Ysrz0Item.java",
           "src/main/resources/assets/primogemcraft/models/item/ysrz_0_0.json",
-          "src/main/resources/assets/primogemcraft/models/item/ysrz_0_3.json",
+          "src/main/resources/assets/primogemcraft/models/item/ysrz_0_4.json",
           "src/main/resources/assets/primogemcraft/models/item/ysrz_0.json",
           "src/main/resources/assets/primogemcraft/models/item/ysrz_0_1.json",
-          "src/main/resources/assets/primogemcraft/models/item/ysrz_0_5.json"
+          "src/main/resources/assets/primogemcraft/models/item/ysrz_0_3.json"
         ]
       }
     },
@@ -37442,6 +37442,29 @@
       "metadata": {
         "files": [
           "src/main/resources/data/primogemcraft/recipe/convertxhzhzp.json"
+        ]
+      }
+    },
+    {
+      "name": "Ysrzms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ysrzms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/YsrzmsProcedure.java"
         ]
       }
     }

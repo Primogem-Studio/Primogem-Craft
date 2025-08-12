@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "yuansurongzhu",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {
       "feng": {
         "name": "Ysrqa0"
@@ -150,7 +151,8 @@
         "§6使其能够提供随机元素套装效果",
         "§6存在物品栏时将为玩家提供增益",
         "§8提供8点套装值增益 受火漆影响"
-      ]
+      ],
+      "name": "Ysrzms"
     },
     "glowCondition": {
       "fixedValue": false
@@ -180,6 +182,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []
