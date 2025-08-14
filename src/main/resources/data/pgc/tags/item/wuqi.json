@@ -3,6 +3,10 @@
   "values": [
     "primogemcraft:dijian",
     {
+      "id": "#pgc:wuqi/changbing",
+      "required": false
+    },
+    {
       "id": "#pgc:wuqi/danshou",
       "required": false
     },

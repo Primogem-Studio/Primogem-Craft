@@ -1,0 +1,8 @@
+{
+  "_fv": 79,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><variables><variable type=\"MCItem\" id=\"i\">i</variable><variable type=\"String\" id=\"s1\">s1</variable></variables><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"variables_set_itemstack\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" is_player_var=\"false\" has_entity=\"false\"></mutation><field name=\"VAR\">local:i</field><value name=\"VAL\"><block type=\"itemstack_to_mcitem\"></block></value><next><block type=\"java_code\"><field name=\"CODE\">\t\ts1 = qywqmslei(i,\"danshou\",\"§e单手剑\");&amp;#10;\t\ts1 = qywqmslei(i,\"changbing\",\"§e长柄武器\");</field><next><block type=\"java_code\"><field name=\"CODE\">\t\treturn s1;&amp;#10;\t}&amp;#10;&amp;#10;\tpublic static String qywqmslei(ItemStack itemstack, String qw_lei, String lei) {&amp;#10;\t\tif (itemstack.is(ItemTags.create(ResourceLocation.parse((qw_lei).toLowerCase(java.util.Locale.ENGLISH))))) {&amp;#10;\t\t\treturn lei;&amp;#10;\t\t}</field><next><block type=\"return_string\"><value name=\"return\"><block type=\"text\"><field name=\"TEXT\"></field></block></value></block></next></block></next></block></next></block></next></block></xml>",
+    "skipDependencyNullCheck": false
+  }
+}
