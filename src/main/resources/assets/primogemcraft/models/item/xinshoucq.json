@@ -2,28 +2,28 @@
   "parent": "item/handheld",
   "textures": {
     "layer0": "primogemcraft:item/xscq"
-  }, "display": {
+  },  "display": {
   "thirdperson_righthand": {
     "rotation": [
       -60,
-      -230,
+      260,
       -40
     ],
     "translation": [
-      -3.25,
-      10,
-      6
+      -2,
+      8,
+      5
     ],
     "scale": [
-      1.4,
       2,
-      1.4
+      2,
+      1
     ]
   },
   "thirdperson_lefthand": {
     "rotation": [
       -60,
-      -230,
+      -280,
       40
     ],
     "translation": [
@@ -32,9 +32,9 @@
       6
     ],
     "scale": [
-      1.4,
-      2,
-      1.4
+      0,
+      0,
+      0
     ]
   },
   "firstperson_righthand": {
@@ -49,8 +49,8 @@
       1
     ],
     "scale": [
-      1.4,
-      1.4,
+      2,
+      2,
       1
     ]
   },
@@ -66,9 +66,9 @@
       1
     ],
     "scale": [
-      1.4,
-      1.4,
-      1
+      0,
+      0,
+      0
     ]
   }
 }
