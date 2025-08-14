@@ -43,7 +43,7 @@ public class WuqishuaxinProcedure {
 			c = c + b;
 			c = c + (a - a2) * a11 * (0.03 + a12 * 2);
 			return WuqishuaxinProcedure.wuqishixian(stack, c);
-		} else if (a >= a1 && a < a2) {
+		} else if (a >= a1) {
 			b = a1 * a11 * (0.01 + a12);
 			c = c + b;
 			c = c + (a - a1) * a11 * (0.02 + a12 * 1.5);
