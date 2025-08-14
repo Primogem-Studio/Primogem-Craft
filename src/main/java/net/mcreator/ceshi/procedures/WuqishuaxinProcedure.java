@@ -58,12 +58,12 @@ public class WuqishuaxinProcedure {
 	public static boolean wuqishixian(ItemStack stack, double c) {
 		var z = Attributes.ATTACK_DAMAGE;
 		boolean o1 = false;
-		if (NBTwuqi(stack, "wuqi", 1.3f, c, z)) {
+		if (NBTwuqi(stack, "pgc:wuqi/danshou", 1f, c, z)) {
 			o1 = true;
-		} else if (NBTwuqi(stack, "danshou", 1.3f, c, z)) {
-			o1 = true;
-		}
-		return false;
+		} // else if (NBTwuqi(stack, "pgc:wuqi/changbing", 1.3f, c, z)) {
+			// o1 = true;
+			// }
+		return o1;
 	}
 
 	public static boolean NBTwuqi(ItemStack stack, String tag, float cheng, double c, Holder<Attribute> z) {
