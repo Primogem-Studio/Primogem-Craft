@@ -1,23 +1,32 @@
 package net.mcreator.ceshi.procedures;
 
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
 
-public class QywuqimsleiProcedure {
-	public static String execute(ItemStack itemstack) {
-		ItemStack i = ItemStack.EMPTY;
-		String s1 = "";
-		i = itemstack;
-		s1 = qywqmslei(i, "danshou", "§e单手剑");
-		s1 = qywqmslei(i, "changbing", "§e长柄武器");
-		return s1;
-	}
+import java.util.List;
 
-	public static String qywqmslei(ItemStack itemstack, String qw_lei, String lei) {
-		if (itemstack.is(ItemTags.create(ResourceLocation.parse((qw_lei).toLowerCase(java.util.Locale.ENGLISH))))) {
-			return lei;
-		}
-		return "";
-	}
+import static net.mcreator.ceshi.PrimogemcraftMod.MODID;
+
+public class QywuqimsleiProcedure {
+    private static class Type {
+        public TagKey<Item> tag;
+        public String desc;
+
+        public Type(String tag, String desc) {
+            this.tag = ItemTags.create(ResourceLocation.fromNamespaceAndPath(MODID, tag));
+            this.desc = desc;
+        }
+    }
+
+    private static final List<Type> types = List.of(new Type("danshou", "§e单手剑"), new Type("changbing", "§e长柄武器"), new Type("qiang", "§e枪"), new Type("shuangshou", "§e双手剑"), new Type("daojian", "§e刀剑"));
+
+    public static String execute(ItemStack itemstack) {
+        for (var t : types) {
+            if (itemstack.is(t.tag)) return t.desc;
+        }
+        return "";
+    }
 }
