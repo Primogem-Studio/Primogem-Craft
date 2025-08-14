@@ -8,7 +8,7 @@
     "texture": "xscq",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
-    "guiTexture": "",
+    "guiTexture": "xscqit",
     "name": "新手长枪",
     "specialInformation": {
       "fixedValue": [],
