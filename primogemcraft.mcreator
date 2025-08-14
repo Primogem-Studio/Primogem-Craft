@@ -37632,6 +37632,50 @@
           "src/main/resources/data/primogemcraft/recipe/qwmhspf.json"
         ]
       }
+    },
+    {
+      "name": "Qywuqimslei",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "qywuqimslei",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/QywuqimsleiProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Xinshoucq",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xinshoucq",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/primogemcraft/models/item/xinshoucq.json",
+          "src/main/java/net/mcreator/ceshi/item/XinshoucqItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Xinshoucqpf",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xinshoucqpf",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/xinshoucqpf.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -38526,7 +38570,9 @@
       "CUSTOM:Xlly",
       "CUSTOM:Ftyj",
       "TAG:pgc:wuqi/5",
-      "CUSTOM:Heijian"
+      "CUSTOM:Heijian",
+      "TAG:pgc:wuqi/danshou",
+      "TAG:pgc:wuqi/changbing"
     ],
     "ITEMS:pgc:prayer_core_x10": [
       "CUSTOM:Qyhxshilian"
@@ -39449,6 +39495,7 @@
       "CUSTOM:Shenbanjianlaohuangyukuangshi"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:Xinshoucq",
       "~CUSTOM:Heijian",
       "~CUSTOM:Pyjl",
       "~CUSTOM:Tkzr",
@@ -39945,6 +39992,22 @@
       "~CUSTOM:Caomo23",
       "~CUSTOM:Ceshi_mucaibaoFence",
       "~CUSTOM:Yishijiemuzhalan"
+    ],
+    "ITEMS:pgc:wuqi/danshou": [
+      "CUSTOM:Zfzr",
+      "CUSTOM:Lmsj",
+      "CUSTOM:Dijian",
+      "CUSTOM:Xlly",
+      "CUSTOM:Ftyj",
+      "CUSTOM:Jslyzh",
+      "CUSTOM:Tkzr",
+      "CUSTOM:Pyjl",
+      "CUSTOM:Heijian",
+      "CUSTOM:Wufengjian",
+      "CUSTOM:Wqzhg"
+    ],
+    "ITEMS:pgc:wuqi/changbing": [
+      "CUSTOM:Xinshoucq"
     ]
   },
   "tab_element_order": {
@@ -40375,7 +40438,8 @@
       "Sztj",
       "Djtj",
       "Rytj",
-      "Axtj"
+      "Axtj",
+      "Xinshoucq"
     ],
     "CUSTOM:Yuanshifangkuaika": [
       "Yuanshikuangshi",
@@ -43209,7 +43273,8 @@
       "item.primogemcraft.qwmhs": "§5『奇物』§c漫画书",
       "item.primogemcraft.qwmhs.description_1": "§6持续3分钟，冷却5分钟",
       "item.primogemcraft.qwmhs.description_0": "§6对自身和附近的生物赋予增益",
-      "item.primogemcraft.qwmhs.description_2": "§7左键移除范围内生物部分增益"
+      "item.primogemcraft.qwmhs.description_2": "§7左键移除范围内生物部分增益",
+      "item.primogemcraft.xinshoucq": "新手长枪"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -45936,7 +46001,8 @@
       "item.primogemcraft.qwmhs": "§5『奇物』§c漫画书",
       "item.primogemcraft.qwmhs.description_1": "§6持续3分钟，冷却5分钟",
       "item.primogemcraft.qwmhs.description_0": "§6对自身和附近的生物赋予增益",
-      "item.primogemcraft.qwmhs.description_2": "§7左键移除范围内生物部分增益"
+      "item.primogemcraft.qwmhs.description_2": "§7左键移除范围内生物部分增益",
+      "item.primogemcraft.xinshoucq": "新手长枪"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -48657,7 +48723,8 @@
       "item.primogemcraft.qwmhs": "§5『奇物』§c漫画书",
       "item.primogemcraft.qwmhs.description_1": "§6持续3分钟，冷却5分钟",
       "item.primogemcraft.qwmhs.description_0": "§6对自身和附近的生物赋予增益",
-      "item.primogemcraft.qwmhs.description_2": "§7左键移除范围内生物部分增益"
+      "item.primogemcraft.qwmhs.description_2": "§7左键移除范围内生物部分增益",
+      "item.primogemcraft.xinshoucq": "新手长枪"
     }
   },
   "metadata": {

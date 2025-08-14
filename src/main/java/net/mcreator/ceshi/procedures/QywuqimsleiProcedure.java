@@ -21,7 +21,11 @@ public class QywuqimsleiProcedure {
         }
     }
 
-    private static final List<Type> types = List.of(new Type("danshou", "§e单手剑"), new Type("changbing", "§e长柄武器"), new Type("qiang", "§e枪"), new Type("shuangshou", "§e双手剑"), new Type("daojian", "§e刀剑"));
+    private static final List<Type> types = List.of(
+			new Type("pgc:wuqi/danshou", "§e单手剑"),
+			new Type("pgc:wuqi/changbing", "§e长柄武器"),
+			new Type("pgc:wuqi/shuangshou", "§e双手剑")
+	);
 
     public static String execute(ItemStack itemstack) {
         for (var t : types) {
