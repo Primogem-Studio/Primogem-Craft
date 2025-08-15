@@ -89,36 +89,26 @@ public class Ysrq_sxProcedure {
 							_entity.addEffect(new MobEffectInstance(MobEffects.SATURATION, 10, 0, true, false));
 					}
 				}
-				if (!(entity instanceof LivingEntity _livEnt34 && _livEnt34.hasEffect(MobEffects.HEALTH_BOOST)) && !(entity instanceof LivingEntity _livEnt35 && _livEnt35.hasEffect(PrimogemcraftModMobEffects.SZTSXCWDP))) {
-					entity.getPersistentData().putDouble("yuanbenshengminzhi", (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1));
-					if (a >= 4) {
-						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 200000, (int) (((entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) / 4) * Math.round(a) * 0.1), true, false));
-						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.YSRZXG, 200000, 0, false, false));
-					}
-				} else {
-					if ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.HEALTH_BOOST) ? _livEnt.getEffect(MobEffects.HEALTH_BOOST).getAmplifier() : 0) != Math
-							.floor((entity.getPersistentData().getDouble("yuanbenshengminzhi") / 4) * Math.floor(a) * 0.1) || a < 4) {
-						entity.getPersistentData().putBoolean("yuanbenshengminzhi", false);
-						if ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.HEALTH_BOOST) ? _livEnt.getEffect(MobEffects.HEALTH_BOOST).getAmplifier() : 0) < 254) {
-							if (entity instanceof LivingEntity _entity)
-								_entity.removeEffect(MobEffects.HEALTH_BOOST);
-							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.SZTSXCWDP, 20, 0, false, false));
-						}
-					}
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.YSRZXG, 60, 0, false, false));
+				if (!(entity instanceof LivingEntity _livEnt35 && _livEnt35.hasEffect(PrimogemcraftModMobEffects.CYST)) && a >= 4) {
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.CYST, -1, (int) (a - 1), false, false));
+				}
+				if ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.CYST) ? _livEnt.getEffect(PrimogemcraftModMobEffects.CYST).getAmplifier() : 0) != a - 1) {
+					if (entity instanceof LivingEntity _entity)
+						_entity.removeEffect(PrimogemcraftModMobEffects.CYST);
 				}
 			}
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("shui")) {
 				e = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQSHUI.get())) ? 10 : 8;
 				if (e >= 2) {
-					if (!(entity instanceof LivingEntity _livEnt50 && _livEnt50.hasEffect(MobEffects.CONDUIT_POWER))) {
+					if (!(entity instanceof LivingEntity _livEnt42 && _livEnt42.hasEffect(MobEffects.CONDUIT_POWER))) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 80, 0, true, false));
 					}
 				}
-				if (!(entity instanceof LivingEntity _livEnt52 && _livEnt52.hasEffect(PrimogemcraftModMobEffects.DJQJKJXGXIANZHI)) && entity.isAlive()) {
+				if (!(entity instanceof LivingEntity _livEnt44 && _livEnt44.hasEffect(PrimogemcraftModMobEffects.DJQJKJXGXIANZHI)) && entity.isAlive()) {
 					if (e >= 4) {
 						if (e < 6) {
 							a1 = e * 20;
@@ -138,19 +128,19 @@ public class Ysrq_sxProcedure {
 			}
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("huo")) {
 				f = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQHUO.get())) ? 10 : 8;
-				if (!(entity instanceof LivingEntity _livEnt65 && _livEnt65.hasEffect(MobEffects.FIRE_RESISTANCE))) {
+				if (!(entity instanceof LivingEntity _livEnt57 && _livEnt57.hasEffect(MobEffects.FIRE_RESISTANCE))) {
 					if (f >= 2) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 80, 0, true, false));
 					}
 				}
-				if (!(entity instanceof LivingEntity _livEnt67 && _livEnt67.hasEffect(PrimogemcraftModMobEffects.RYKJXG))) {
+				if (!(entity instanceof LivingEntity _livEnt59 && _livEnt59.hasEffect(PrimogemcraftModMobEffects.RYKJXG))) {
 					if (f >= 4) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.RYKJXG, 1200, (int) Math.round(f - 1), false, false));
 					}
 				}
-				if (entity instanceof LivingEntity _livEnt69 && _livEnt69.hasEffect(PrimogemcraftModMobEffects.RYKJXG)) {
+				if (entity instanceof LivingEntity _livEnt61 && _livEnt61.hasEffect(PrimogemcraftModMobEffects.RYKJXG)) {
 					if ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.RYKJXG) ? _livEnt.getEffect(PrimogemcraftModMobEffects.RYKJXG).getAmplifier() : 0) != Math.round(f - 1)) {
 						if (entity instanceof LivingEntity _entity)
 							_entity.removeEffect(PrimogemcraftModMobEffects.RYKJXG);

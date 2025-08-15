@@ -37874,6 +37874,18 @@
           "src/main/resources/data/primogemcraft/recipe/hmzzpf.json"
         ]
       }
+    },
+    {
+      "name": "Cyst",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cyst",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ceshi/potion/CystMobEffect.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -43483,7 +43495,8 @@
       "item.primogemcraft.xinshoucq": "新手长枪",
       "item.primogemcraft.heiyinq": "黑缨枪",
       "effect.primogemcraft.jingu": "禁锢",
-      "item.primogemcraft.hmzz": "§c护摩之杖"
+      "item.primogemcraft.hmzz": "§c护摩之杖",
+      "effect.primogemcraft.cyst": "草元素套"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -46214,7 +46227,8 @@
       "item.primogemcraft.xinshoucq": "新手长枪",
       "item.primogemcraft.heiyinq": "黑缨枪",
       "effect.primogemcraft.jingu": "禁锢",
-      "item.primogemcraft.hmzz": "§c护摩之杖"
+      "item.primogemcraft.hmzz": "§c护摩之杖",
+      "effect.primogemcraft.cyst": "草元素套"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -48939,7 +48953,8 @@
       "item.primogemcraft.xinshoucq": "新手长枪",
       "item.primogemcraft.heiyinq": "黑缨枪",
       "effect.primogemcraft.jingu": "禁锢",
-      "item.primogemcraft.hmzz": "§c护摩之杖"
+      "item.primogemcraft.hmzz": "§c护摩之杖",
+      "effect.primogemcraft.cyst": "草元素套"
     }
   },
   "metadata": {

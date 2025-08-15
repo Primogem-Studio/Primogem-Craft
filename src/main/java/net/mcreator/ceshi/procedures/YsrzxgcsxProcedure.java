@@ -5,7 +5,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.component.DataComponents;
 
@@ -33,7 +32,7 @@ public class YsrzxgcsxProcedure {
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(PrimogemcraftModMobEffects.YSRZXG);
 			if (entity instanceof LivingEntity _entity)
-				_entity.removeEffect(MobEffects.HEALTH_BOOST);
+				_entity.removeEffect(PrimogemcraftModMobEffects.CYST);
 		}
 	}
 

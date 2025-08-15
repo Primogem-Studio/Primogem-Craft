@@ -30,21 +30,17 @@ public class SzkjsxProcedure {
 						_entity.addEffect(new MobEffectInstance(MobEffects.SATURATION, 10, 0, true, false));
 				}
 			}
-			if (!(entity instanceof LivingEntity _livEnt10 && _livEnt10.hasEffect(MobEffects.HEALTH_BOOST)) && !(entity instanceof LivingEntity _livEnt11 && _livEnt11.hasEffect(PrimogemcraftModMobEffects.SZTSXCWDP))) {
-				entity.getPersistentData().putDouble("yuanbenshengminzhi", (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1));
-				if (a >= 4) {
+			if (a >= 4) {
+				if (!(entity instanceof LivingEntity _livEnt10 && _livEnt10.hasEffect(PrimogemcraftModMobEffects.CYST)) && !(entity instanceof LivingEntity _livEnt11 && _livEnt11.hasEffect(PrimogemcraftModMobEffects.SZTSXCWDP))) {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 200000, (int) (((entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) / 4) * Math.round(a) * 0.1), true, false));
-				}
-			} else {
-				if ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.HEALTH_BOOST) ? _livEnt.getEffect(MobEffects.HEALTH_BOOST).getAmplifier() : 0) != Math
-						.floor((entity.getPersistentData().getDouble("yuanbenshengminzhi") / 4) * Math.floor(a) * 0.1) || a < 4) {
-					entity.getPersistentData().putBoolean("yuanbenshengminzhi", false);
-					if (entity instanceof LivingEntity _entity)
-						_entity.removeEffect(MobEffects.HEALTH_BOOST);
+						_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.CYST, -1, (int) (a - 1), false, false));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.SZTSXCWDP, 20, 0, false, false));
 				}
+			}
+			if ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.CYST) ? _livEnt.getEffect(PrimogemcraftModMobEffects.CYST).getAmplifier() : 0) != a - 1) {
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PrimogemcraftModMobEffects.CYST);
 			}
 		}
 	}
