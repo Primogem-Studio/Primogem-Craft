@@ -13,8 +13,8 @@
     },
     "isInstant": false,
     "mobEffectCategory": "NEUTRAL",
-    "renderStatusInInventory": false,
-    "renderStatusInHUD": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
     "isCuredbyHoney": false,
     "modifiers": [
       {
@@ -24,6 +24,9 @@
         "amount": 0.1,
         "operation": "ADD_MULTIPLIED_BASE"
       }
-    ]
+    ],
+    "onActiveTick": {
+      "name": "Cyst_sx"
+    }
   }
 }
