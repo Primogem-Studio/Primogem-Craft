@@ -37676,6 +37676,92 @@
           "src/main/resources/data/primogemcraft/recipe/xinshoucqpf.json"
         ]
       }
+    },
+    {
+      "name": "Heiyinq",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heiyinq",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ceshi/item/HeiyinqItem.java",
+          "src/main/resources/assets/primogemcraft/models/item/heiyinq.json"
+        ]
+      }
+    },
+    {
+      "name": "Jingu",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jingu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ceshi/potion/JinguMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "Heiyinq_sx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heiyinq_sx",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Heiyinq_sxProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Heiyinqms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heiyinqms",
+      "metadata": {
+        "return_type": "string",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/HeiyinqmsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Heiyinqpf",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heiyinqpf",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/heiyinqpf.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -39495,6 +39581,7 @@
       "CUSTOM:Shenbanjianlaohuangyukuangshi"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:Heiyinq",
       "~CUSTOM:Xinshoucq",
       "~CUSTOM:Heijian",
       "~CUSTOM:Pyjl",
@@ -40007,7 +40094,8 @@
       "CUSTOM:Wqzhg"
     ],
     "ITEMS:pgc:wuqi/changbing": [
-      "CUSTOM:Xinshoucq"
+      "CUSTOM:Xinshoucq",
+      "CUSTOM:Heiyinq"
     ]
   },
   "tab_element_order": {
@@ -40439,7 +40527,8 @@
       "Djtj",
       "Rytj",
       "Axtj",
-      "Xinshoucq"
+      "Xinshoucq",
+      "Heiyinq"
     ],
     "CUSTOM:Yuanshifangkuaika": [
       "Yuanshikuangshi",
@@ -43274,7 +43363,9 @@
       "item.primogemcraft.qwmhs.description_1": "§6持续3分钟，冷却5分钟",
       "item.primogemcraft.qwmhs.description_0": "§6对自身和附近的生物赋予增益",
       "item.primogemcraft.qwmhs.description_2": "§7左键移除范围内生物部分增益",
-      "item.primogemcraft.xinshoucq": "新手长枪"
+      "item.primogemcraft.xinshoucq": "新手长枪",
+      "item.primogemcraft.heiyinq": "黑缨枪",
+      "effect.primogemcraft.jingu": "禁锢"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -46002,7 +46093,9 @@
       "item.primogemcraft.qwmhs.description_1": "§6持续3分钟，冷却5分钟",
       "item.primogemcraft.qwmhs.description_0": "§6对自身和附近的生物赋予增益",
       "item.primogemcraft.qwmhs.description_2": "§7左键移除范围内生物部分增益",
-      "item.primogemcraft.xinshoucq": "新手长枪"
+      "item.primogemcraft.xinshoucq": "新手长枪",
+      "item.primogemcraft.heiyinq": "黑缨枪",
+      "effect.primogemcraft.jingu": "禁锢"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -48724,7 +48817,9 @@
       "item.primogemcraft.qwmhs.description_1": "§6持续3分钟，冷却5分钟",
       "item.primogemcraft.qwmhs.description_0": "§6对自身和附近的生物赋予增益",
       "item.primogemcraft.qwmhs.description_2": "§7左键移除范围内生物部分增益",
-      "item.primogemcraft.xinshoucq": "新手长枪"
+      "item.primogemcraft.xinshoucq": "新手长枪",
+      "item.primogemcraft.heiyinq": "黑缨枪",
+      "effect.primogemcraft.jingu": "禁锢"
     }
   },
   "metadata": {
