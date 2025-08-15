@@ -37,7 +37,7 @@ public class JslyzhsxProcedure {
 						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("primogemcraft:djpp1")), SoundSource.PLAYERS, 1, 1, false);
 					}
 				}
-				XsfHSProcedure.execute(itemstack, false, true, -0.2);
+				XsfHSProcedure.execute(itemstack, false, true, -0.2, "jslyzh_gjl");
 				HSxsfshengmingProcedure.execute(itemstack, false, true, 0.22 + 0.055 * a);
 				if (entity instanceof Player _player)
 					_player.getCooldowns().addCooldown(itemstack.getItem(), 10);

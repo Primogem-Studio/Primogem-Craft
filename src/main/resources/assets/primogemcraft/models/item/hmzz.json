@@ -3,7 +3,7 @@
   "base": {
     "parent": "item/handheld",
     "textures": {
-      "layer0": "primogemcraft:item/heiyingq"
+      "layer0": "primogemcraft:item/humo"
     },"display": {
       "thirdperson_righthand": {
         "rotation": [
@@ -79,19 +79,19 @@
     "gui": {
       "parent": "item/generated",
       "textures": {
-        "layer0": "primogemcraft:item/heiyinqi"
+        "layer0": "primogemcraft:item/humoi"
       }
     },
     "fixed": {
       "parent": "item/generated",
       "textures": {
-        "layer0": "primogemcraft:item/heiyinqi"
+        "layer0": "primogemcraft:item/humoi"
       }
     },
     "ground": {
       "parent": "item/generated",
       "textures": {
-        "layer0": "primogemcraft:item/heiyinqi"
+        "layer0": "primogemcraft:item/humoi"
       }
     }
   }

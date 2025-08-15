@@ -31999,6 +31999,10 @@
           {
             "name": "zhi",
             "type": "number"
+          },
+          {
+            "name": "ming_cheng",
+            "type": "string"
           }
         ]
       }
@@ -32011,8 +32015,8 @@
       "registry_name": "lmsj",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ceshi/item/LmsjItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/lmsj.json"
+          "src/main/resources/assets/primogemcraft/models/item/lmsj.json",
+          "src/main/java/net/mcreator/ceshi/item/LmsjItem.java"
         ]
       }
     },
@@ -32243,8 +32247,8 @@
       "registry_name": "xlly",
       "metadata": {
         "files": [
-          "src/main/resources/assets/primogemcraft/models/item/xlly.json",
-          "src/main/java/net/mcreator/ceshi/item/XllyItem.java"
+          "src/main/java/net/mcreator/ceshi/item/XllyItem.java",
+          "src/main/resources/assets/primogemcraft/models/item/xlly.json"
         ]
       }
     },
@@ -32343,8 +32347,8 @@
       "registry_name": "ftyj",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ceshi/item/FtyjItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/ftyj.json"
+          "src/main/resources/assets/primogemcraft/models/item/ftyj.json",
+          "src/main/java/net/mcreator/ceshi/item/FtyjItem.java"
         ]
       }
     },
@@ -32505,8 +32509,8 @@
       "registry_name": "jslyzh",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ceshi/item/JslyzhItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/jslyzh.json"
+          "src/main/resources/assets/primogemcraft/models/item/jslyzh.json",
+          "src/main/java/net/mcreator/ceshi/item/JslyzhItem.java"
         ]
       }
     },
@@ -32837,8 +32841,8 @@
       "registry_name": "pyjl",
       "metadata": {
         "files": [
-          "src/main/resources/assets/primogemcraft/models/item/pyjl.json",
-          "src/main/java/net/mcreator/ceshi/item/PyjlItem.java"
+          "src/main/java/net/mcreator/ceshi/item/PyjlItem.java",
+          "src/main/resources/assets/primogemcraft/models/item/pyjl.json"
         ]
       }
     },
@@ -37762,6 +37766,114 @@
           "src/main/resources/data/primogemcraft/recipe/heiyinqpf.json"
         ]
       }
+    },
+    {
+      "name": "Hmzz",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hmzz",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/primogemcraft/models/item/hmzz.json",
+          "src/main/java/net/mcreator/ceshi/item/HmzzItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Hmzzsx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hmzzsx",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/HmzzsxProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Hmzzms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hmzzms",
+      "metadata": {
+        "return_type": "string",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/HmzzmsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Hmzz_sx_2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hmzz_sx_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Hmzz_sx_2Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Hmzzpf",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hmzzpf",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/hmzzpf.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -38765,7 +38877,8 @@
       "CUSTOM:Wqzhg",
       "CUSTOM:Jslyzh",
       "CUSTOM:Tkzr",
-      "CUSTOM:Pyjl"
+      "CUSTOM:Pyjl",
+      "CUSTOM:Hmzz"
     ],
     "ITEMS:pgc:prayer_core": [
       "TAG:pgc:prayer_core_x1",
@@ -39012,7 +39125,8 @@
       "CUSTOM:Ryg",
       "CUSTOM:Ryf",
       "CUSTOM:Ryq",
-      "CUSTOM:Ryc"
+      "CUSTOM:Ryc",
+      "CUSTOM:Hmzz"
     ],
     "ITEMS:genshincraft:electro_infusion": [
       "CUSTOM:Zstj",
@@ -39581,6 +39695,7 @@
       "CUSTOM:Shenbanjianlaohuangyukuangshi"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:Hmzz",
       "~CUSTOM:Heiyinq",
       "~CUSTOM:Xinshoucq",
       "~CUSTOM:Heijian",
@@ -40095,7 +40210,8 @@
     ],
     "ITEMS:pgc:wuqi/changbing": [
       "CUSTOM:Xinshoucq",
-      "CUSTOM:Heiyinq"
+      "CUSTOM:Heiyinq",
+      "CUSTOM:Hmzz"
     ]
   },
   "tab_element_order": {
@@ -40528,7 +40644,8 @@
       "Rytj",
       "Axtj",
       "Xinshoucq",
-      "Heiyinq"
+      "Heiyinq",
+      "Hmzz"
     ],
     "CUSTOM:Yuanshifangkuaika": [
       "Yuanshikuangshi",
@@ -43365,7 +43482,8 @@
       "item.primogemcraft.qwmhs.description_2": "§7左键移除范围内生物部分增益",
       "item.primogemcraft.xinshoucq": "新手长枪",
       "item.primogemcraft.heiyinq": "黑缨枪",
-      "effect.primogemcraft.jingu": "禁锢"
+      "effect.primogemcraft.jingu": "禁锢",
+      "item.primogemcraft.hmzz": "§c护摩之杖"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -46095,7 +46213,8 @@
       "item.primogemcraft.qwmhs.description_2": "§7左键移除范围内生物部分增益",
       "item.primogemcraft.xinshoucq": "新手长枪",
       "item.primogemcraft.heiyinq": "黑缨枪",
-      "effect.primogemcraft.jingu": "禁锢"
+      "effect.primogemcraft.jingu": "禁锢",
+      "item.primogemcraft.hmzz": "§c护摩之杖"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -48819,7 +48938,8 @@
       "item.primogemcraft.qwmhs.description_2": "§7左键移除范围内生物部分增益",
       "item.primogemcraft.xinshoucq": "新手长枪",
       "item.primogemcraft.heiyinq": "黑缨枪",
-      "effect.primogemcraft.jingu": "禁锢"
+      "effect.primogemcraft.jingu": "禁锢",
+      "item.primogemcraft.hmzz": "§c护摩之杖"
     }
   },
   "metadata": {

@@ -44,6 +44,9 @@ class GlobalAttributeModifier {
          modifiers.put("primogemcraft:heiyinq", e -> {
             e.replaceModifier(ENTITY_INTERACTION_RANGE, modifier("hyq", 1.5, ADD_VALUE), MAINHAND);
         });
+        modifiers.put("primogemcraft:hmzz", e -> {
+            e.replaceModifier(ENTITY_INTERACTION_RANGE, modifier("hmzz", 2, ADD_VALUE), MAINHAND);
+        });
         enableForInventory("primogemcraft:qwjlbhy");
         enableForInventory("primogemcraft:qwtldhy");
     }

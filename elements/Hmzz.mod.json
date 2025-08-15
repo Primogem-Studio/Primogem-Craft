@@ -1,0 +1,50 @@
+{
+  "_fv": 79,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "humo",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "guiTexture": "humoi",
+    "name": "§c护摩之杖",
+    "specialInformation": {
+      "fixedValue": [],
+      "name": "Hmzzms"
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Yuanshigongjuxuanxiangka"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 2.0,
+    "enchantability": 20,
+    "damageVsEntity": 10.0,
+    "usageCount": 3000,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:Jlliang"
+      }
+    ],
+    "immuneToFire": true,
+    "blockDropsTier": "WOOD",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": true,
+    "damageOnCrafting": true,
+    "onRightClickedInAir": {
+      "name": "Hmzz_sx_2"
+    },
+    "onItemInInventoryTick": {
+      "name": "Jlqhewai"
+    },
+    "onItemInUseTick": {
+      "name": "Hmzzsx"
+    }
+  }
+}

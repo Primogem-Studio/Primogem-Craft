@@ -12,6 +12,6 @@ public class PyjlsxProcedure {
 			return;
 		double a = 0;
 		a = 0.12 + 0.03 * HSjinglianupProcedure.execute(entity, itemstack);
-		XsfHSProcedure.execute(itemstack, false, false, (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) * (ModList.get().isLoaded("genshincraft") ? a * 0.025 : a));
+		XsfHSProcedure.execute(itemstack, false, false, (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) * (ModList.get().isLoaded("genshincraft") ? a * 0.025 : a), "");
 	}
 }

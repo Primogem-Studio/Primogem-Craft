@@ -27,7 +27,7 @@ public class Jslyzhsx0Procedure {
 						}
 					}
 					a = HSjinglianupProcedure.execute(entity, itemstack);
-					XsfHSProcedure.execute(itemstack, false, true, 0.22 + 0.055 * a);
+					XsfHSProcedure.execute(itemstack, false, true, 0.22 + 0.055 * a, "jslyzh_gjl");
 					HSxsfshengmingProcedure.execute(itemstack, false, true, -0.2);
 					if (entity instanceof Player _player)
 						_player.getCooldowns().addCooldown(itemstack.getItem(), 10);
