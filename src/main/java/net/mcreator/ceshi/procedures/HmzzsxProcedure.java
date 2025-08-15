@@ -15,7 +15,7 @@ public class HmzzsxProcedure {
 		a = 0.16 + 0.08 * HSjinglianupProcedure.execute(entity, itemstack);
 		o1 = ModList.get().isLoaded("genshincraft");
 		XsfHSProcedure.execute(itemstack, false, false, (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) * (o1 ? a * 0.025 : a), "humoa");
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) < (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) + 0.5) {
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) < (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) * 0.5) {
 			XsfHSProcedure.execute(itemstack, false, false, (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) * (o1 ? a * 2 * 0.025 : a * 2), "humob");
 		}
 	}
