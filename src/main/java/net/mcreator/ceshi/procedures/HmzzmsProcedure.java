@@ -12,7 +12,7 @@ public class HmzzmsProcedure {
 		double a = 0;
 		double b = 0;
 		a = HSjinglianupProcedure.execute(entity, itemstack);
-		b = 0.16 + 0.18 * a;
+		b = 0.16 + 0.08 * a;
 		return MSHSwuqi00Procedure.execute(entity, itemstack,
 				"\u00A76\u00A7l\u00A7n\u53F3\u952E" + "\n" + "\u00A7e\u7ACB\u5373\u635F\u5931\u81EA\u8EAB\u5F53\u524D\u751F\u547D\u503C\u768430%\u6362\u53D6\u6301\u7EED18\u79D2\u6297\u6027\u63D0\u5347\u6548\u679C\uFF0C\u51B7\u537420\u79D2" + "\n"
 						+ "\u00A76\u00A7l\u00A7n\u88AB\u52A8" + "\n" + "\u00A7e\u83B7\u5F97\u57FA\u4E8E\u88C5\u5907\u8005\u6700\u5927\u751F\u547D\u503C\u00A7b"
