@@ -8,7 +8,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:diamond",
-          "weight": 20,
+          "weight": 200,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -22,7 +22,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:diamond",
-          "weight": 20,
+          "weight": 200,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -36,7 +36,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:diamond",
-          "weight": 60,
+          "weight": 600,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -50,7 +50,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:diamond",
-          "weight": 15,
+          "weight": 150,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -64,7 +64,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:diamond",
-          "weight": 5,
+          "weight": 50,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -78,7 +78,7 @@
         {
           "type": "minecraft:item",
           "name": "primogemcraft:xixiangyuzhiyuan",
-          "weight": 50,
+          "weight": 500,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -92,7 +92,7 @@
         {
           "type": "minecraft:item",
           "name": "primogemcraft:yuanshi",
-          "weight": 16,
+          "weight": 160,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -106,7 +106,7 @@
         {
           "type": "minecraft:item",
           "name": "primogemcraft:yuanshi",
-          "weight": 32,
+          "weight": 320,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -120,7 +120,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:diamond",
-          "weight": 70,
+          "weight": 700,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -134,7 +134,21 @@
         {
           "type": "minecraft:item",
           "name": "primogemcraft:laoshi",
-          "weight": 30,
+          "weight": 300,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "primogemcraft:feiqiupingzheng",
+          "weight": 10,
           "functions": [
             {
               "function": "minecraft:set_count",

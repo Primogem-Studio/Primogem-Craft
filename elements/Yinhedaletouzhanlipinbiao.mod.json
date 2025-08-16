@@ -16,7 +16,7 @@
             "item": {
               "value": "Items.DIAMOND"
             },
-            "weight": 20,
+            "weight": 200,
             "minCount": 2,
             "maxCount": 2,
             "minEnchantmentLevel": 0,
@@ -30,7 +30,7 @@
             "item": {
               "value": "Items.DIAMOND"
             },
-            "weight": 20,
+            "weight": 200,
             "minCount": 4,
             "maxCount": 4,
             "minEnchantmentLevel": 0,
@@ -44,7 +44,7 @@
             "item": {
               "value": "Items.DIAMOND"
             },
-            "weight": 60,
+            "weight": 600,
             "minCount": 8,
             "maxCount": 8,
             "minEnchantmentLevel": 0,
@@ -58,7 +58,7 @@
             "item": {
               "value": "Items.DIAMOND"
             },
-            "weight": 15,
+            "weight": 150,
             "minCount": 16,
             "maxCount": 16,
             "minEnchantmentLevel": 0,
@@ -72,7 +72,7 @@
             "item": {
               "value": "Items.DIAMOND"
             },
-            "weight": 5,
+            "weight": 50,
             "minCount": 32,
             "maxCount": 32,
             "minEnchantmentLevel": 0,
@@ -86,7 +86,7 @@
             "item": {
               "value": "CUSTOM:Xixiangyuzhiyuan"
             },
-            "weight": 50,
+            "weight": 500,
             "minCount": 1,
             "maxCount": 5,
             "minEnchantmentLevel": 0,
@@ -100,7 +100,7 @@
             "item": {
               "value": "CUSTOM:Yuanshi"
             },
-            "weight": 16,
+            "weight": 160,
             "minCount": 1,
             "maxCount": 9,
             "minEnchantmentLevel": 0,
@@ -114,7 +114,7 @@
             "item": {
               "value": "CUSTOM:Yuanshi"
             },
-            "weight": 32,
+            "weight": 320,
             "minCount": 1,
             "maxCount": 6,
             "minEnchantmentLevel": 0,
@@ -128,7 +128,7 @@
             "item": {
               "value": "Items.DIAMOND"
             },
-            "weight": 70,
+            "weight": 700,
             "minCount": 5,
             "maxCount": 5,
             "minEnchantmentLevel": 0,
@@ -142,7 +142,21 @@
             "item": {
               "value": "CUSTOM:Laoshi"
             },
-            "weight": 30,
+            "weight": 300,
+            "minCount": 1,
+            "maxCount": 1,
+            "minEnchantmentLevel": 0,
+            "maxEnchantmentLevel": 0,
+            "affectedByFortune": false,
+            "explosionDecay": false,
+            "silkTouchMode": 0
+          },
+          {
+            "type": "item",
+            "item": {
+              "value": "CUSTOM:Feiqiupingzheng"
+            },
+            "weight": 10,
             "minCount": 1,
             "maxCount": 1,
             "minEnchantmentLevel": 0,

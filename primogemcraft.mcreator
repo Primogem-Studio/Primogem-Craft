@@ -37886,6 +37886,24 @@
           "src/main/java/net/mcreator/ceshi/potion/CystMobEffect.java"
         ]
       }
+    },
+    {
+      "name": "Cyst_sx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cyst_sx",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Cyst_sxProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
