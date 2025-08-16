@@ -35,7 +35,7 @@
     "immuneToFire": true,
     "blockDropsTier": "WOOD",
     "blocksAffected": [],
-    "stayInGridWhenCrafting": true,
+    "stayInGridWhenCrafting": false,
     "damageOnCrafting": true,
     "onRightClickedInAir": {
       "name": "Hmzz_sx_2"

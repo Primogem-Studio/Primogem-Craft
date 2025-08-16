@@ -35,7 +35,7 @@
     "immuneToFire": false,
     "blockDropsTier": "WOOD",
     "blocksAffected": [],
-    "stayInGridWhenCrafting": true,
+    "stayInGridWhenCrafting": false,
     "damageOnCrafting": true,
     "onEntityHitWith": {
       "name": "Wfj_sx"

@@ -68,26 +68,6 @@ public class XinshoucqItem extends SwordItem {
 	}
 
 	@Override
-	public boolean hasCraftingRemainingItem(ItemStack stack) {
-		return true;
-	}
-
-	@Override
-	public ItemStack getCraftingRemainingItem(ItemStack itemstack) {
-		ItemStack retval = new ItemStack(this);
-		retval.setDamageValue(itemstack.getDamageValue() + 1);
-		if (retval.getDamageValue() >= retval.getMaxDamage()) {
-			return ItemStack.EMPTY;
-		}
-		return retval;
-	}
-
-	@Override
-	public boolean isRepairable(ItemStack itemstack) {
-		return false;
-	}
-
-	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
