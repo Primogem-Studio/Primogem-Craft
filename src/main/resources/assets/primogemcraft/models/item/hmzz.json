@@ -94,5 +94,6 @@
         "layer0": "primogemcraft:item/humoi"
       }
     }
-  }
+  },
+  "gui_light": "front"
 }
