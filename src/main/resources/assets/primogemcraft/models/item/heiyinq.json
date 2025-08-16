@@ -94,5 +94,6 @@
         "layer0": "primogemcraft:item/heiyinqi"
       }
     }
-  }
+  },
+  "gui_light": "front"
 }
