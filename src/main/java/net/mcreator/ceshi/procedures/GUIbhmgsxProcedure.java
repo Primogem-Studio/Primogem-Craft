@@ -24,12 +24,12 @@ public class GUIbhmgsxProcedure {
 		double n1 = 0;
 		ItemStack i1 = ItemStack.EMPTY;
 		if (!world.isClientSide()) {
-			i1 = new ItemStack(PrimogemcraftModItems.XINGHUI.get());
+			i1 = new ItemStack(PrimogemcraftModItems.XINGHUI.get()).copy();
 			i1.setCount(Mth.nextInt(RandomSource.create(), 10, 20));
 			if (!GUIbhmgsxhs1Procedure.execute(entity)) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z,
-							(entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(Mth.nextInt(RandomSource.create(), 0, 2)).getItem() : ItemStack.EMPTY));
+							(entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu4 ? _menu4.getSlots().get(Mth.nextInt(RandomSource.create(), 0, 2)).getItem() : ItemStack.EMPTY));
 					entityToSpawn.setPickUpDelay(0);
 					entityToSpawn.setUnlimitedLifetime();
 					_level.addFreshEntity(entityToSpawn);

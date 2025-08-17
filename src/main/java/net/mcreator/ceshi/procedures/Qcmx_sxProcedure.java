@@ -73,7 +73,7 @@ public class Qcmx_sxProcedure {
 						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 					}
 					if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("quchi_sx") < 1) {
-						c = itemstack;
+						c = itemstack.copy();
 						if (entity instanceof Player _player) {
 							ItemStack _stktoremove = c;
 							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());

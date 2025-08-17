@@ -50,17 +50,10 @@ public class DadaletoushibiezhuangtaiProcedure {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PrimogemcraftModItems.YIYINHEDALETOU.get()) {
 				d = true;
 				if (Math.random() < 0.006) {
-					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PrimogemcraftModItems.FEIQIUPINGZHENG.get()).copy();
-						_setstack.setCount(1);
-						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-					}
-				}
-				if (Math.random() < 0.006) {
 					c = "\u00A7c\u00A7l\u53F2\u65E0\u524D\u4F8B\u7684\u5956\u52B1\uFF01\uFF01";
 					b = Mth.nextInt(RandomSource.create(), 64, 32);
-					if (!(entity instanceof ServerPlayer _plr5 && _plr5.level() instanceof ServerLevel
-							&& _plr5.getAdvancements().getOrStartProgress(_plr5.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:nibaodimeila"))).isDone())) {
+					if (!(entity instanceof ServerPlayer _plr4 && _plr4.level() instanceof ServerLevel
+							&& _plr4.getAdvancements().getOrStartProgress(_plr4.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:nibaodimeila"))).isDone())) {
 						if (entity instanceof ServerPlayer _player) {
 							AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:nibaodimeila"));
 							if (_adv != null) {
@@ -88,8 +81,8 @@ public class DadaletoushibiezhuangtaiProcedure {
 							a = "loot spawn ~ ~ ~ loot primogemcraft:entities/curionegative";
 							c = "\u00A7a\u83B7\u5F97\u968F\u673A\u00A7c\u8D1F\u9762\u5947\u7269";
 						} else {
-							if (entity instanceof ServerPlayer _plr9 && _plr9.level() instanceof ServerLevel
-									&& _plr9.getAdvancements().getOrStartProgress(_plr9.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:lletouderenke"))).isDone()) {
+							if (entity instanceof ServerPlayer _plr8 && _plr8.level() instanceof ServerLevel
+									&& _plr8.getAdvancements().getOrStartProgress(_plr8.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:lletouderenke"))).isDone()) {
 								a = "loot spawn ~ ~ ~ loot primogemcraft:feiqiutongdao";
 								c = "\u00A7a\u7A33\u8D5A\u4E0D\u8D54";
 							} else {
@@ -102,8 +95,8 @@ public class DadaletoushibiezhuangtaiProcedure {
 				if (HSYhdltsxProcedure
 						.execute(world, x, y, z, entity, new ItemStack(Items.DIAMOND), entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY, true, true, d, true, false, true, true,
 								hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.FEIQIUPINGZHENG.get())), true, 0, 0.98, 0.4, b, 0,
-								entity instanceof ServerPlayer _plr10 && _plr10.level() instanceof ServerLevel
-										&& _plr10.getAdvancements().getOrStartProgress(_plr10.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:lletouderenke"))).isDone() ? 0.8 : 0.5,
+								entity instanceof ServerPlayer _plr9 && _plr9.level() instanceof ServerLevel
+										&& _plr9.getAdvancements().getOrStartProgress(_plr9.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:lletouderenke"))).isDone() ? 0.8 : 0.5,
 								1, Mth.nextInt(RandomSource.create(), 1, 5), Mth.nextInt(RandomSource.create(), 1, 2), 1, c, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getDisplayName().getString(), a)) {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.HUNGER, 100, 127));
@@ -118,8 +111,8 @@ public class DadaletoushibiezhuangtaiProcedure {
 						_vars.syncPlayerVariables(entity);
 					}
 					if (entity.getData(PrimogemcraftModVariables.PLAYER_VARIABLES).daletou_jishu >= 100) {
-						if (!(entity instanceof ServerPlayer _plr19 && _plr19.level() instanceof ServerLevel
-								&& _plr19.getAdvancements().getOrStartProgress(_plr19.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:lletouderenke"))).isDone())) {
+						if (!(entity instanceof ServerPlayer _plr18 && _plr18.level() instanceof ServerLevel
+								&& _plr18.getAdvancements().getOrStartProgress(_plr18.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:lletouderenke"))).isDone())) {
 							if (entity instanceof ServerPlayer _player) {
 								AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:lletouderenke"));
 								if (_adv != null) {

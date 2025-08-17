@@ -50,7 +50,7 @@ public class SJwpsxProcedure {
 			return;
 		ItemStack a = ItemStack.EMPTY;
 		if (!world.isClientSide()) {
-			a = (itemstack.copy());
+			a = (itemstack.copy()).copy();
 			if (a.getItem() == BuiltInRegistries.ITEM.get(ResourceLocation.parse("primogemcraft:sh_jwupin"))) {
 				if (event instanceof ItemEntityPickupEvent.Pre _event)
 					_event.setCanPickup(TriState.FALSE);

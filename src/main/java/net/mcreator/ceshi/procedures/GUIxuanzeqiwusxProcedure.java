@@ -25,9 +25,9 @@ public class GUIxuanzeqiwusxProcedure {
 		double b = 0;
 		double c = 0;
 		if (!world.isClientSide()) {
-			if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
-					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
-					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(2).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
+			if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu1 ? _menu1.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
+					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu3 ? _menu3.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
+					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu5 ? _menu5.getSlots().get(2).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 				if (entity.getPersistentData().getDouble("pgc_qiwuxuanze") == 1) {
 					a = Mth.nextInt(RandomSource.create(), 0, 2);
 					if (!world.isClientSide() && world.getServer() != null) {
@@ -42,16 +42,18 @@ public class GUIxuanzeqiwusxProcedure {
 						}
 					}
 					b = Mth.nextInt(RandomSource.create(), 0, 2);
-					if (!((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get((int) b).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+					if (!((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu13 ? _menu13.getSlots().get((int) b).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
 						b = Mth.nextInt(RandomSource.create(), 0, 2);
-						if (!((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get((int) b).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+						if (!((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu16 ? _menu16.getSlots().get((int) b).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR
+								.asItem())) {
 							b = Mth.nextInt(RandomSource.create(), 0, 2);
-							if (!((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get((int) b).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR
+							if (!((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu19 ? _menu19.getSlots().get((int) b).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR
 									.asItem())) {
-								if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
+								if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu21 ? _menu21.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR
+										.asItem()) {
 									b = 0;
 								} else {
-									if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR
+									if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu23 ? _menu23.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR
 											.asItem()) {
 										b = 1;
 									} else {
@@ -78,10 +80,10 @@ public class GUIxuanzeqiwusxProcedure {
 							}
 						}
 					}
-					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
+					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu28 ? _menu28.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 						c = 0;
 					} else {
-						if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
+						if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu30 ? _menu30.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 							c = 1;
 						} else {
 							c = 2;
@@ -116,21 +118,23 @@ public class GUIxuanzeqiwusxProcedure {
 						}
 					}
 					b = Mth.nextInt(RandomSource.create(), 0, 2);
-					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get((int) b).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
+					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu40 ? _menu40.getSlots().get((int) b).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 						b = b;
 					} else {
 						b = Mth.nextInt(RandomSource.create(), 0, 2);
-						if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get((int) b).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
+						if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu43 ? _menu43.getSlots().get((int) b).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 							b = b;
 						} else {
 							b = Mth.nextInt(RandomSource.create(), 0, 2);
-							if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get((int) b).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
+							if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu46 ? _menu46.getSlots().get((int) b).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR
+									.asItem()) {
 								b = b;
 							} else {
-								if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
+								if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu48 ? _menu48.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR
+										.asItem()) {
 									b = 0;
 								} else {
-									if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR
+									if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu50 ? _menu50.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR
 											.asItem()) {
 										b = 1;
 									} else {
@@ -155,10 +159,10 @@ public class GUIxuanzeqiwusxProcedure {
 							_player.containerMenu.broadcastChanges();
 						}
 					}
-					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
+					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu54 ? _menu54.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 						c = 0;
 					} else {
-						if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
+						if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu56 ? _menu56.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 							c = 1;
 						} else {
 							c = 2;

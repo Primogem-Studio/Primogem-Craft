@@ -27,7 +27,7 @@ public class MlxsxProcedure {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"loot spawn ~ ~ ~ loot primogemcraft:chests/tmolayiji_01");
-			i1 = new ItemStack(PrimogemcraftModItems.XINGCHEN.get());
+			i1 = new ItemStack(PrimogemcraftModItems.XINGCHEN.get()).copy();
 			i1.setCount(5);
 			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, i1);

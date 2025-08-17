@@ -84,7 +84,7 @@ public class GUIbhmgScreen extends AbstractContainerScreen<GUIbhmgMenu> implemen
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
@@ -113,6 +113,8 @@ public class GUIbhmgScreen extends AbstractContainerScreen<GUIbhmgMenu> implemen
 		super.init();
 		imagebutton_xuanze0 = new ImageButton(this.leftPos + 59, this.topPos + 53, 16, 16, new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/xuanze0.png"), ResourceLocation.parse("primogemcraft:textures/screens/xuanze1.png")),
 				e -> {
+					int x = GUIbhmgScreen.this.x;
+					int y = GUIbhmgScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new GUIbhmgButtonMessage(0, x, y, z));
 						GUIbhmgButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -126,6 +128,8 @@ public class GUIbhmgScreen extends AbstractContainerScreen<GUIbhmgMenu> implemen
 		this.addRenderableWidget(imagebutton_xuanze0);
 		imagebutton_xuanze01 = new ImageButton(this.leftPos + 99, this.topPos + 53, 16, 16, new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/xuanze0.png"), ResourceLocation.parse("primogemcraft:textures/screens/xuanze1.png")),
 				e -> {
+					int x = GUIbhmgScreen.this.x;
+					int y = GUIbhmgScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new GUIbhmgButtonMessage(1, x, y, z));
 						GUIbhmgButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -139,6 +143,8 @@ public class GUIbhmgScreen extends AbstractContainerScreen<GUIbhmgMenu> implemen
 		this.addRenderableWidget(imagebutton_xuanze01);
 		imagebutton_xuanze02 = new ImageButton(this.leftPos + 141, this.topPos + 53, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/xuanze0.png"), ResourceLocation.parse("primogemcraft:textures/screens/xuanze1.png")), e -> {
+					int x = GUIbhmgScreen.this.x;
+					int y = GUIbhmgScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new GUIbhmgButtonMessage(2, x, y, z));
 						GUIbhmgButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -151,6 +157,8 @@ public class GUIbhmgScreen extends AbstractContainerScreen<GUIbhmgMenu> implemen
 		};
 		this.addRenderableWidget(imagebutton_xuanze02);
 		imagebutton_cuoa1 = new ImageButton(this.leftPos + 13, this.topPos + 49, 21, 21, new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/cuoa1.png"), ResourceLocation.parse("primogemcraft:textures/screens/cuoa2.png")), e -> {
+			int x = GUIbhmgScreen.this.x;
+			int y = GUIbhmgScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new GUIbhmgButtonMessage(3, x, y, z));
 				GUIbhmgButtonMessage.handleButtonAction(entity, 3, x, y, z);

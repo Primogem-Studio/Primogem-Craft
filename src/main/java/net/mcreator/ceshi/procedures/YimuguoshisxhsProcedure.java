@@ -55,7 +55,7 @@ public class YimuguoshisxhsProcedure {
 			return true;
 		}
 		if (itemstack.isEnchanted()) {
-			item1 = itemstack;
+			item1 = itemstack.copy();
 			EnchantmentHelper.setEnchantments(item1, ItemEnchantments.EMPTY);
 		}
 		if (!(entity instanceof LivingEntity _livEnt14 && _livEnt14.hasEffect(PrimogemcraftModMobEffects.QWYMGS)) && !(entity instanceof LivingEntity _livEnt15 && _livEnt15.hasEffect(PrimogemcraftModMobEffects.LINZHONG))) {

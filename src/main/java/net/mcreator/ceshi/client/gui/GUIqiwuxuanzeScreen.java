@@ -71,7 +71,7 @@ public class GUIqiwuxuanzeScreen extends AbstractContainerScreen<GUIqiwuxuanzeMe
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
@@ -98,6 +98,8 @@ public class GUIqiwuxuanzeScreen extends AbstractContainerScreen<GUIqiwuxuanzeMe
 		super.init();
 		imagebutton_xuanze0 = new ImageButton(this.leftPos + 35, this.topPos + 53, 16, 16, new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/xuanze0.png"), ResourceLocation.parse("primogemcraft:textures/screens/xuanze1.png")),
 				e -> {
+					int x = GUIqiwuxuanzeScreen.this.x;
+					int y = GUIqiwuxuanzeScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new GUIqiwuxuanzeButtonMessage(0, x, y, z));
 						GUIqiwuxuanzeButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -111,6 +113,8 @@ public class GUIqiwuxuanzeScreen extends AbstractContainerScreen<GUIqiwuxuanzeMe
 		this.addRenderableWidget(imagebutton_xuanze0);
 		imagebutton_xuanze01 = new ImageButton(this.leftPos + 79, this.topPos + 53, 16, 16, new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/xuanze0.png"), ResourceLocation.parse("primogemcraft:textures/screens/xuanze1.png")),
 				e -> {
+					int x = GUIqiwuxuanzeScreen.this.x;
+					int y = GUIqiwuxuanzeScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new GUIqiwuxuanzeButtonMessage(1, x, y, z));
 						GUIqiwuxuanzeButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -124,6 +128,8 @@ public class GUIqiwuxuanzeScreen extends AbstractContainerScreen<GUIqiwuxuanzeMe
 		this.addRenderableWidget(imagebutton_xuanze01);
 		imagebutton_xuanze02 = new ImageButton(this.leftPos + 124, this.topPos + 53, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/xuanze0.png"), ResourceLocation.parse("primogemcraft:textures/screens/xuanze1.png")), e -> {
+					int x = GUIqiwuxuanzeScreen.this.x;
+					int y = GUIqiwuxuanzeScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new GUIqiwuxuanzeButtonMessage(2, x, y, z));
 						GUIqiwuxuanzeButtonMessage.handleButtonAction(entity, 2, x, y, z);

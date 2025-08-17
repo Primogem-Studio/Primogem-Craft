@@ -20,7 +20,7 @@ public class QwclgssxProcedure {
 		ItemStack a = ItemStack.EMPTY;
 		if (!world.isClientSide()) {
 			if (YimuguoshisxhsProcedure.execute(world, x, y, z, entity, itemstack, itemstack, false, true, 5, 600, 2)) {
-				a = new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get());
+				a = new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()).copy();
 				a.setCount(Mth.nextInt(RandomSource.create(), 2, 20));
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, a);

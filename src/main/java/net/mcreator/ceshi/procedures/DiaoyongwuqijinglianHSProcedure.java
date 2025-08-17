@@ -7,7 +7,7 @@ import net.minecraft.core.component.DataComponents;
 public class DiaoyongwuqijinglianHSProcedure {
 	public static void execute(ItemStack item, double xian_zhi, double zhi) {
 		ItemStack a = ItemStack.EMPTY;
-		a = item;
+		a = item.copy();
 		{
 			final String _tagName = "jing_lian";
 			final double _tagValue = (a.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jing_lian") + zhi);

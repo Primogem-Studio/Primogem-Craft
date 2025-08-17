@@ -50,7 +50,7 @@ public class SuijiqiwuScreen extends AbstractContainerScreen<SuijiqiwuMenu> impl
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
@@ -76,6 +76,8 @@ public class SuijiqiwuScreen extends AbstractContainerScreen<SuijiqiwuMenu> impl
 	public void init() {
 		super.init();
 		button_shua_xin = Button.builder(Component.translatable("gui.primogemcraft.suijiqiwu.button_shua_xin"), e -> {
+			int x = SuijiqiwuScreen.this.x;
+			int y = SuijiqiwuScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new SuijiqiwuButtonMessage(0, x, y, z));
 				SuijiqiwuButtonMessage.handleButtonAction(entity, 0, x, y, z);

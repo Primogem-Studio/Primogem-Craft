@@ -15,7 +15,7 @@ public class QwcbzgsxProcedure {
 		if (entity == null)
 			return;
 		ItemStack a = ItemStack.EMPTY;
-		a = new ItemStack(PrimogemcraftModItems.SJBCQ.get());
+		a = new ItemStack(PrimogemcraftModItems.SJBCQ.get()).copy();
 		{
 			final String _tagName = "shijianbuchang";
 			final double _tagValue = (Mth.nextInt(RandomSource.create(), 1, 2));

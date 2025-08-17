@@ -24,7 +24,7 @@ public class Ydfms_sxProcedure {
 		if (entity == null)
 			return;
 		ItemStack a = ItemStack.EMPTY;
-		a = new ItemStack(Items.BOOK);
+		a = new ItemStack(Items.BOOK).copy();
 		for (int index0 = 0; index0 < Mth.nextInt(RandomSource.create(), 1, 5); index0++) {
 			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z,

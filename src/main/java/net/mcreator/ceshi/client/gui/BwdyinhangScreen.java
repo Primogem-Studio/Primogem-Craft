@@ -62,7 +62,7 @@ public class BwdyinhangScreen extends AbstractContainerScreen<BwdyinhangMenu> im
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
@@ -92,6 +92,8 @@ public class BwdyinhangScreen extends AbstractContainerScreen<BwdyinhangMenu> im
 	public void init() {
 		super.init();
 		imagebutton_dui = new ImageButton(this.leftPos + 127, this.topPos + 27, 21, 21, new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/duia1.png"), ResourceLocation.parse("primogemcraft:textures/screens/duia2.png")), e -> {
+			int x = BwdyinhangScreen.this.x;
+			int y = BwdyinhangScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new BwdyinhangButtonMessage(0, x, y, z));
 				BwdyinhangButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -104,6 +106,8 @@ public class BwdyinhangScreen extends AbstractContainerScreen<BwdyinhangMenu> im
 		};
 		this.addRenderableWidget(imagebutton_dui);
 		imagebutton_cuo = new ImageButton(this.leftPos + 127, this.topPos + 54, 21, 21, new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/cuoa1.png"), ResourceLocation.parse("primogemcraft:textures/screens/cuoa2.png")), e -> {
+			int x = BwdyinhangScreen.this.x;
+			int y = BwdyinhangScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new BwdyinhangButtonMessage(1, x, y, z));
 				BwdyinhangButtonMessage.handleButtonAction(entity, 1, x, y, z);

@@ -30,7 +30,7 @@ public class Kongyuezhufu_shuxingProcedure {
 		if (!(entity instanceof Player _plrCldCheck1 && _plrCldCheck1.getCooldowns().isOnCooldown(itemstack.getItem()))) {
 			if (world.isClientSide())
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
-			stack = itemstack;
+			stack = itemstack.copy();
 			var bar = CustomAPI.getCustomBar(stack);
 			bar.numerator -= 1;
 			if (!world.isClientSide()) {

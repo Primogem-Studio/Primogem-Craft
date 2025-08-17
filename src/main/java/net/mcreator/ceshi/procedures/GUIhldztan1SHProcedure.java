@@ -37,8 +37,8 @@ public class GUIhldztan1SHProcedure {
 	}
 
 	private static int getAmountInGUISlot(Entity entity, int sltid) {
-		if (entity instanceof Player player && player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-			ItemStack stack = _menu.getSlots().get(sltid).getItem();
+		if (entity instanceof Player player && player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor menuAccessor) {
+			ItemStack stack = menuAccessor.getSlots().get(sltid).getItem();
 			if (stack != null)
 				return stack.getCount();
 		}

@@ -36,7 +36,7 @@ public class CunqupingzhengshiyongProcedure {
 				if (!itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("bwd_yinhang")) {
 					if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PrimogemcraftModBlocks.XJHPYHFH.get()) {
 						a = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("pgc_cunchu");
-						a0 = new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get());
+						a0 = new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()).copy();
 						a0.setCount((int) a);
 						if (world instanceof ServerLevel _level) {
 							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, a0);
@@ -65,7 +65,7 @@ public class CunqupingzhengshiyongProcedure {
 					b = Mth.nextDouble(RandomSource.create(), 0.5, 2.4);
 					a = Math.round(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("pgc_cunchu") * b);
 					if (Math.random() < 0.5) {
-						a0 = new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get());
+						a0 = new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()).copy();
 						a0.setCount((int) a);
 						if (world instanceof ServerLevel _level) {
 							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, a0);

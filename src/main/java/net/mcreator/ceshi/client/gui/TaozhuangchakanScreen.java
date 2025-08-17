@@ -82,7 +82,7 @@ public class TaozhuangchakanScreen extends AbstractContainerScreen<Taozhuangchak
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
@@ -204,6 +204,8 @@ public class TaozhuangchakanScreen extends AbstractContainerScreen<Taozhuangchak
 		taozhuang_6.setHint(Component.translatable("gui.primogemcraft.taozhuangchakan.taozhuang_6"));
 		this.addWidget(this.taozhuang_6);
 		button_shua_xin = Button.builder(Component.translatable("gui.primogemcraft.taozhuangchakan.button_shua_xin"), e -> {
+			int x = TaozhuangchakanScreen.this.x;
+			int y = TaozhuangchakanScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new TaozhuangchakanButtonMessage(0, x, y, z));
 				TaozhuangchakanButtonMessage.handleButtonAction(entity, 0, x, y, z);

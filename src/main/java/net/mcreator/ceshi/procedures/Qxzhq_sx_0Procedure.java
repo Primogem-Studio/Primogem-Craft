@@ -24,7 +24,7 @@ public class Qxzhq_sx_0Procedure {
 			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getCount() > 0 || (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getCount() > 0) {
 				QxzhqsxpfProcedure.execute(world, x, y, z);
 			}
-			i1 = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy());
+			i1 = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).copy();
 			if (nbt1 + 3 <= 330 && i1.getCount() >= 1 && i1.getItem() == PrimogemcraftModItems.SHANBIANZHICHEN.get()) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);

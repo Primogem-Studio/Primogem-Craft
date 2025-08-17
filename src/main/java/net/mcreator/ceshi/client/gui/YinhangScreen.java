@@ -62,7 +62,7 @@ public class YinhangScreen extends AbstractContainerScreen<YinhangMenu> implemen
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
@@ -91,6 +91,8 @@ public class YinhangScreen extends AbstractContainerScreen<YinhangMenu> implemen
 	public void init() {
 		super.init();
 		imagebutton_dui = new ImageButton(this.leftPos + 126, this.topPos + 26, 21, 21, new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/duia1.png"), ResourceLocation.parse("primogemcraft:textures/screens/duia2.png")), e -> {
+			int x = YinhangScreen.this.x;
+			int y = YinhangScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new YinhangButtonMessage(0, x, y, z));
 				YinhangButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -103,6 +105,8 @@ public class YinhangScreen extends AbstractContainerScreen<YinhangMenu> implemen
 		};
 		this.addRenderableWidget(imagebutton_dui);
 		imagebutton_cuo = new ImageButton(this.leftPos + 126, this.topPos + 53, 21, 21, new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/cuoa1.png"), ResourceLocation.parse("primogemcraft:textures/screens/cuoa2.png")), e -> {
+			int x = YinhangScreen.this.x;
+			int y = YinhangScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new YinhangButtonMessage(1, x, y, z));
 				YinhangButtonMessage.handleButtonAction(entity, 1, x, y, z);

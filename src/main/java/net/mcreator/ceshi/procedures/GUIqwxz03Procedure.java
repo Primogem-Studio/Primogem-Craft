@@ -54,11 +54,11 @@ public class GUIqwxz03Procedure {
 				_menu.getSlots().get(0).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			i1 = TagItemProcedure.execute(tag1);
-			item0 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(0).getItem() : ItemStack.EMPTY);
-			item1 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(1).getItem() : ItemStack.EMPTY);
+			i1 = TagItemProcedure.execute(tag1).copy();
+			item0 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu3 ? _menu3.getSlots().get(0).getItem() : ItemStack.EMPTY).copy();
+			item1 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu4 ? _menu4.getSlots().get(1).getItem() : ItemStack.EMPTY).copy();
 			while (i1.getItem() == item0.getItem() || item1.getItem() == Blocks.AIR.asItem()) {
-				i1 = TagItemProcedure.execute(tag1);
+				i1 = TagItemProcedure.execute(tag1).copy();
 				if (!(i1.getItem() == item0.getItem())) {
 					if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
 						ItemStack _setstack = i1.copy();
@@ -69,10 +69,10 @@ public class GUIqwxz03Procedure {
 					break;
 				}
 			}
-			item1 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(1).getItem() : ItemStack.EMPTY);
-			item2 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get(2).getItem() : ItemStack.EMPTY);
+			item1 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu9 ? _menu9.getSlots().get(1).getItem() : ItemStack.EMPTY).copy();
+			item2 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu10 ? _menu10.getSlots().get(2).getItem() : ItemStack.EMPTY).copy();
 			while (i1.getItem() == item1.getItem() || i1.getItem() == item0.getItem() || item2.getItem() == Blocks.AIR.asItem()) {
-				i1 = TagItemProcedure.execute(tag1);
+				i1 = TagItemProcedure.execute(tag1).copy();
 				if (!(i1.getItem() == item1.getItem()) && !(i1.getItem() == item0.getItem())) {
 					if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
 						ItemStack _setstack = i1.copy();

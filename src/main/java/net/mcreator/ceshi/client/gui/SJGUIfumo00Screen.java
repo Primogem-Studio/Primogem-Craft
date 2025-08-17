@@ -53,7 +53,7 @@ public class SJGUIfumo00Screen extends AbstractContainerScreen<SJGUIfumo00Menu> 
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
@@ -86,6 +86,8 @@ public class SJGUIfumo00Screen extends AbstractContainerScreen<SJGUIfumo00Menu> 
 		super.init();
 		imagebutton_heita_xuanzeanniu = new ImageButton(this.leftPos + 31, this.topPos + 13, 114, 43,
 				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/heita_xuanzeanniu.png"), ResourceLocation.parse("primogemcraft:textures/screens/heita_xuanzeanniu0.png")), e -> {
+					int x = SJGUIfumo00Screen.this.x;
+					int y = SJGUIfumo00Screen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new SJGUIfumo00ButtonMessage(0, x, y, z));
 						SJGUIfumo00ButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -99,6 +101,8 @@ public class SJGUIfumo00Screen extends AbstractContainerScreen<SJGUIfumo00Menu> 
 		this.addRenderableWidget(imagebutton_heita_xuanzeanniu);
 		imagebutton_heita_xuanzeanniu1 = new ImageButton(this.leftPos + 31, this.topPos + 61, 114, 43,
 				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/heita_xuanzeanniu.png"), ResourceLocation.parse("primogemcraft:textures/screens/heita_xuanzeanniu0.png")), e -> {
+					int x = SJGUIfumo00Screen.this.x;
+					int y = SJGUIfumo00Screen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new SJGUIfumo00ButtonMessage(1, x, y, z));
 						SJGUIfumo00ButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -112,6 +116,8 @@ public class SJGUIfumo00Screen extends AbstractContainerScreen<SJGUIfumo00Menu> 
 		this.addRenderableWidget(imagebutton_heita_xuanzeanniu1);
 		imagebutton_heita_xuanzeanniu2 = new ImageButton(this.leftPos + 31, this.topPos + 109, 114, 43,
 				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/heita_xuanzeanniu.png"), ResourceLocation.parse("primogemcraft:textures/screens/heita_xuanzeanniu0.png")), e -> {
+					int x = SJGUIfumo00Screen.this.x;
+					int y = SJGUIfumo00Screen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new SJGUIfumo00ButtonMessage(2, x, y, z));
 						SJGUIfumo00ButtonMessage.handleButtonAction(entity, 2, x, y, z);

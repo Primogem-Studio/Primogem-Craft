@@ -35,7 +35,7 @@ public class QwyznjsxProcedure {
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal((itemstack.getDisplayName().getString() + "\u00A7c\u00A7l\u5DF2\u635F\u574F\uFF01")), false);
 				itemstack.shrink(1);
-				a = ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).copy());
+				a = ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).copy()).copy();
 				b = Math.random() < 0.2 ? Mth.nextInt(RandomSource.create(), 1, 20) : Mth.nextInt(RandomSource.create(), 1, 5);
 				if (a.getItem() instanceof ArmorItem) {
 					if (Math.random() < 0.05) {

@@ -50,7 +50,7 @@ public class CeshishijianxuanzejiemianScreen extends AbstractContainerScreen<Ces
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
@@ -76,6 +76,8 @@ public class CeshishijianxuanzejiemianScreen extends AbstractContainerScreen<Ces
 	public void init() {
 		super.init();
 		button_shua_xin = Button.builder(Component.translatable("gui.primogemcraft.ceshishijianxuanzejiemian.button_shua_xin"), e -> {
+			int x = CeshishijianxuanzejiemianScreen.this.x;
+			int y = CeshishijianxuanzejiemianScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new CeshishijianxuanzejiemianButtonMessage(0, x, y, z));
 				CeshishijianxuanzejiemianButtonMessage.handleButtonAction(entity, 0, x, y, z);

@@ -69,7 +69,7 @@ public class FenliejinbisxhsProcedure {
 			}
 		}
 		if (itemstack.isEnchanted()) {
-			item1 = itemstack;
+			item1 = itemstack.copy();
 			EnchantmentHelper.setEnchantments(item1, ItemEnchantments.EMPTY);
 		}
 		return false;

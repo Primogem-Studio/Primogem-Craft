@@ -299,11 +299,11 @@ public class GUIbhmgMenu extends AbstractContainerMenu implements PrimogemcraftM
 	@SubscribeEvent
 	public static void onPlayerTick(PlayerTickEvent.Post event) {
 		Player entity = event.getEntity();
-		if (entity.containerMenu instanceof GUIbhmgMenu) {
-			Level world = entity.level();
-			double x = entity.getX();
-			double y = entity.getY();
-			double z = entity.getZ();
+		if (entity.containerMenu instanceof GUIbhmgMenu menu) {
+			Level world = menu.world;
+			double x = menu.x;
+			double y = menu.y;
+			double z = menu.z;
 			GUIbhmgsx0Procedure.execute(world, entity);
 		}
 	}

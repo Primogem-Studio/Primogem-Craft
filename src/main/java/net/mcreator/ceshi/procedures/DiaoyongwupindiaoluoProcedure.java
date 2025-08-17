@@ -14,7 +14,7 @@ public class DiaoyongwupindiaoluoProcedure {
 		double b = 0;
 		double c = 0;
 		ItemStack i1 = ItemStack.EMPTY;
-		i1 = item;
+		i1 = item.copy();
 		i1.setCount((int) shu_liang);
 		if (world instanceof ServerLevel _level) {
 			ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, i1);

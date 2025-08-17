@@ -14,7 +14,7 @@ public class Qwxydswsx0Procedure {
 			return;
 		ItemStack i1 = ItemStack.EMPTY;
 		if (!world.isClientSide()) {
-			i1 = new ItemStack(PrimogemcraftModItems.JLLIANG.get());
+			i1 = new ItemStack(PrimogemcraftModItems.JLLIANG.get()).copy();
 			i1.setCount(Mth.nextInt(RandomSource.create(), 32, 64));
 			HS0wzswProcedure.execute(world, x, y, z, entity, i1, itemstack, false, 0, 0, "");
 		}

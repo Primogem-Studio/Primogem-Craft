@@ -53,7 +53,7 @@ public class HeitayindaoyongguiScreen extends AbstractContainerScreen<Heitayinda
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
@@ -84,6 +84,8 @@ public class HeitayindaoyongguiScreen extends AbstractContainerScreen<Heitayinda
 		super.init();
 		imagebutton_heitaanniu = new ImageButton(this.leftPos + 96, this.topPos + 34, 56, 20,
 				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/heitaanniu.png"), ResourceLocation.parse("primogemcraft:textures/screens/heitaanniu.png")), e -> {
+					int x = HeitayindaoyongguiScreen.this.x;
+					int y = HeitayindaoyongguiScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new HeitayindaoyongguiButtonMessage(0, x, y, z));
 						HeitayindaoyongguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -97,6 +99,8 @@ public class HeitayindaoyongguiScreen extends AbstractContainerScreen<Heitayinda
 		this.addRenderableWidget(imagebutton_heitaanniu);
 		imagebutton_heitaanniu1 = new ImageButton(this.leftPos + 96, this.topPos + 79, 56, 20,
 				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/heitaanniu.png"), ResourceLocation.parse("primogemcraft:textures/screens/heitaanniu.png")), e -> {
+					int x = HeitayindaoyongguiScreen.this.x;
+					int y = HeitayindaoyongguiScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new HeitayindaoyongguiButtonMessage(1, x, y, z));
 						HeitayindaoyongguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -110,6 +114,8 @@ public class HeitayindaoyongguiScreen extends AbstractContainerScreen<Heitayinda
 		this.addRenderableWidget(imagebutton_heitaanniu1);
 		imagebutton_heitaanniu2 = new ImageButton(this.leftPos + 96, this.topPos + 124, 56, 20,
 				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/heitaanniu.png"), ResourceLocation.parse("primogemcraft:textures/screens/heitaanniu.png")), e -> {
+					int x = HeitayindaoyongguiScreen.this.x;
+					int y = HeitayindaoyongguiScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new HeitayindaoyongguiButtonMessage(2, x, y, z));
 						HeitayindaoyongguiButtonMessage.handleButtonAction(entity, 2, x, y, z);

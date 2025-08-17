@@ -62,7 +62,7 @@ public class GUIhualiduanzaotaiScreen extends AbstractContainerScreen<GUIhualidu
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
@@ -88,6 +88,8 @@ public class GUIhualiduanzaotaiScreen extends AbstractContainerScreen<GUIhualidu
 		super.init();
 		imagebutton_guifu_lan = new ImageButton(this.leftPos + 130, this.topPos + 22, 17, 8,
 				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/guifu_lan.png"), ResourceLocation.parse("primogemcraft:textures/screens/anniu_bai.png")), e -> {
+					int x = GUIhualiduanzaotaiScreen.this.x;
+					int y = GUIhualiduanzaotaiScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new GUIhualiduanzaotaiButtonMessage(0, x, y, z));
 						GUIhualiduanzaotaiButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -101,6 +103,8 @@ public class GUIhualiduanzaotaiScreen extends AbstractContainerScreen<GUIhualidu
 		this.addRenderableWidget(imagebutton_guifu_lan);
 		imagebutton_guifu_huang = new ImageButton(this.leftPos + 130, this.topPos + 57, 17, 8,
 				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/guifu_huang.png"), ResourceLocation.parse("primogemcraft:textures/screens/anniu_bai.png")), e -> {
+					int x = GUIhualiduanzaotaiScreen.this.x;
+					int y = GUIhualiduanzaotaiScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new GUIhualiduanzaotaiButtonMessage(1, x, y, z));
 						GUIhualiduanzaotaiButtonMessage.handleButtonAction(entity, 1, x, y, z);

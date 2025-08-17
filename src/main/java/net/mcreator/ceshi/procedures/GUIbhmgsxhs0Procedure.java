@@ -11,6 +11,6 @@ public class GUIbhmgsxhs0Procedure {
 	public static boolean execute(Entity entity, double zhi) {
 		if (entity == null)
 			return false;
-		return (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu ? _menu.getSlots().get((int) zhi).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem();
+		return (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu0 ? _menu0.getSlots().get((int) zhi).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem();
 	}
 }
