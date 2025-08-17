@@ -37904,6 +37904,80 @@
           "src/main/java/net/mcreator/ceshi/procedures/Cyst_sxProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Xfcq",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xfcq",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/primogemcraft/models/item/xfcq.json",
+          "src/main/java/net/mcreator/ceshi/item/XfcqItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Xfcq_sx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xfcq_sx",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Xfcq_sxProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Xfcqms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xfcqms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/XfcqmsProcedure.java"
+        ],
+        "return_type": "string"
+      }
+    },
+    {
+      "name": "Xfcqpf",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xfcqpf",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/xfcqpf.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
