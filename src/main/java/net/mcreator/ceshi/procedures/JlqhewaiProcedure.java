@@ -47,5 +47,10 @@ public class JlqhewaiProcedure {
 			attr.add(Attributes.MAX_HEALTH, "bd", a, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, EquipmentSlotGroup.MAINHAND);
 			attr.apply();
 		}
+		if (stack.getItem() == PrimogemcraftModItems.XFCQ.get()) {
+			a = 0.1 + 0.025 * b;
+			attr.add(Attributes.MAX_HEALTH, "bd", a, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, EquipmentSlotGroup.MAINHAND);
+			attr.apply();
+		}
 	}
 }
