@@ -11,7 +11,8 @@
     "guiTexture": "tczdgi",
     "name": "§d薙草之稻光",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "Tczdgms"
     },
     "creativeTabs": [
       {
@@ -36,6 +37,9 @@
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "Tczdgsx0"
+    },
     "onItemInUseTick": {
       "name": "Tczdgsx"
     }

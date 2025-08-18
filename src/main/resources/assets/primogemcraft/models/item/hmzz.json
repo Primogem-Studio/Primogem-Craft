@@ -4,7 +4,8 @@
     "parent": "item/handheld",
     "textures": {
       "layer0": "primogemcraft:item/humo"
-    },"display": {
+    },
+    "display": {
       "thirdperson_righthand": {
         "rotation": [
           -60,

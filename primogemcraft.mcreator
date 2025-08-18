@@ -37986,10 +37986,187 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/TczdgsxProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Daoqixiaoguo0",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "daoqixiaoguo_0",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "shifou",
+            "type": "logic"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Daoqixiaoguo0Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Tczdgsx0",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tczdgsx_0",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Tczdgsx0Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Tczdgxg",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tczdgxg",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ceshi/potion/TczdgxgMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "Tczdg_xg_sx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tczdg_xg_sx",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Tczdg_xg_sxProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Daoqixiaoguoms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "daoqixiaoguoms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "zhi",
+            "type": "string"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/DaoqixiaoguomsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Tczdgms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tczdgms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/TczdgmsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Tczdgpf",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tczdgpf",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/tczdgpf.json"
         ]
       }
     }
@@ -38996,7 +39173,8 @@
       "CUSTOM:Jslyzh",
       "CUSTOM:Tkzr",
       "CUSTOM:Pyjl",
-      "CUSTOM:Hmzz"
+      "CUSTOM:Hmzz",
+      "CUSTOM:Tczdg"
     ],
     "ITEMS:pgc:prayer_core": [
       "TAG:pgc:prayer_core_x1",
@@ -40332,7 +40510,8 @@
       "CUSTOM:Xinshoucq",
       "CUSTOM:Heiyinq",
       "CUSTOM:Hmzz",
-      "CUSTOM:Xfcq"
+      "CUSTOM:Xfcq",
+      "CUSTOM:Tczdg"
     ]
   },
   "tab_element_order": {
@@ -43609,7 +43788,8 @@
       "item.primogemcraft.hmzz": "§c护摩之杖",
       "effect.primogemcraft.cyst": "草元素套",
       "item.primogemcraft.xfcq": "§b西风长枪",
-      "item.primogemcraft.tczdg": "§d薙草之稻光"
+      "item.primogemcraft.tczdg": "§d薙草之稻光",
+      "effect.primogemcraft.tczdgxg": "薙草之稻光效果"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -46343,7 +46523,8 @@
       "item.primogemcraft.hmzz": "§c护摩之杖",
       "effect.primogemcraft.cyst": "草元素套",
       "item.primogemcraft.xfcq": "§b西风长枪",
-      "item.primogemcraft.tczdg": "§d薙草之稻光"
+      "item.primogemcraft.tczdg": "§d薙草之稻光",
+      "effect.primogemcraft.tczdgxg": "薙草之稻光效果"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -49071,7 +49252,8 @@
       "item.primogemcraft.hmzz": "§c护摩之杖",
       "effect.primogemcraft.cyst": "草元素套",
       "item.primogemcraft.xfcq": "§b西风长枪",
-      "item.primogemcraft.tczdg": "§d薙草之稻光"
+      "item.primogemcraft.tczdg": "§d薙草之稻光",
+      "effect.primogemcraft.tczdgxg": "薙草之稻光效果"
     }
   },
   "metadata": {

@@ -1,0 +1,24 @@
+{
+  "_fv": 79,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "薙草之稻光效果",
+    "icon": "djppxianzhi",
+    "color": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "onAddedSound": {
+      "value": ""
+    },
+    "isInstant": false,
+    "mobEffectCategory": "NEUTRAL",
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": false,
+    "isCuredbyHoney": false,
+    "modifiers": [],
+    "onExpired": {
+      "name": "Tczdg_xg_sx"
+    }
+  }
+}

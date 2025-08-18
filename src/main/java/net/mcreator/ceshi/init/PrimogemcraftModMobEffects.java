@@ -20,6 +20,7 @@ import net.mcreator.ceshi.procedures.Xgjssx0Procedure;
 import net.mcreator.ceshi.procedures.XGsmcwsx0Procedure;
 import net.mcreator.ceshi.procedures.WxntdmjxgsxProcedure;
 import net.mcreator.ceshi.procedures.Tldhy_sxProcedure;
+import net.mcreator.ceshi.procedures.Tczdg_xg_sxProcedure;
 import net.mcreator.ceshi.procedures.Smcl_zf_sx_0Procedure;
 import net.mcreator.ceshi.procedures.QylqsxProcedure;
 import net.mcreator.ceshi.procedures.LtcgxgsxProcedure;
@@ -42,6 +43,7 @@ import net.mcreator.ceshi.potion.XishoulengqueMobEffect;
 import net.mcreator.ceshi.potion.XGsmcwMobEffect;
 import net.mcreator.ceshi.potion.WxntdmjMobEffect;
 import net.mcreator.ceshi.potion.TldhyMobEffect;
+import net.mcreator.ceshi.potion.TczdgxgMobEffect;
 import net.mcreator.ceshi.potion.SztsxcwdpMobEffect;
 import net.mcreator.ceshi.potion.SyzfMobEffect;
 import net.mcreator.ceshi.potion.SmclzfMobEffect;
@@ -148,6 +150,7 @@ public class PrimogemcraftModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> CHICUNB = REGISTRY.register("chicunb", () -> new ChicunbMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> JINGU = REGISTRY.register("jingu", () -> new JinguMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> CYST = REGISTRY.register("cyst", () -> new CystMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> TCZDGXG = REGISTRY.register("tczdgxg", () -> new TczdgxgMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -200,6 +203,8 @@ public class PrimogemcraftModMobEffects {
 			Smcl_zf_sx_0Procedure.execute(entity.level(), entity);
 		} else if (effectInstance.getEffect().is(X_GSMCW)) {
 			XGsmcwsx0Procedure.execute();
+		} else if (effectInstance.getEffect().is(TCZDGXG)) {
+			Tczdg_xg_sxProcedure.execute(entity);
 		}
 	}
 }
