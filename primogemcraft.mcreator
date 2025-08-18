@@ -37957,6 +37957,41 @@
           "src/main/resources/data/primogemcraft/recipe/xfcqpf.json"
         ]
       }
+    },
+    {
+      "name": "Tczdg",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tczdg",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ceshi/item/TczdgItem.java",
+          "src/main/resources/assets/primogemcraft/models/item/tczdg.json"
+        ]
+      }
+    },
+    {
+      "name": "Tczdgsx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tczdgsx",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/TczdgsxProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -39778,6 +39813,7 @@
       "CUSTOM:Shenbanjianlaohuangyukuangshi"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:Tczdg",
       "~CUSTOM:Xfcq",
       "~CUSTOM:Hmzz",
       "~CUSTOM:Heiyinq",
@@ -40731,7 +40767,8 @@
       "Xinshoucq",
       "Heiyinq",
       "Hmzz",
-      "Xfcq"
+      "Xfcq",
+      "Tczdg"
     ],
     "CUSTOM:Yuanshifangkuaika": [
       "Yuanshikuangshi",
@@ -43571,7 +43608,8 @@
       "effect.primogemcraft.jingu": "禁锢",
       "item.primogemcraft.hmzz": "§c护摩之杖",
       "effect.primogemcraft.cyst": "草元素套",
-      "item.primogemcraft.xfcq": "§b西风长枪"
+      "item.primogemcraft.xfcq": "§b西风长枪",
+      "item.primogemcraft.tczdg": "§d薙草之稻光"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -46304,7 +46342,8 @@
       "effect.primogemcraft.jingu": "禁锢",
       "item.primogemcraft.hmzz": "§c护摩之杖",
       "effect.primogemcraft.cyst": "草元素套",
-      "item.primogemcraft.xfcq": "§b西风长枪"
+      "item.primogemcraft.xfcq": "§b西风长枪",
+      "item.primogemcraft.tczdg": "§d薙草之稻光"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -49031,7 +49070,8 @@
       "effect.primogemcraft.jingu": "禁锢",
       "item.primogemcraft.hmzz": "§c护摩之杖",
       "effect.primogemcraft.cyst": "草元素套",
-      "item.primogemcraft.xfcq": "§b西风长枪"
+      "item.primogemcraft.xfcq": "§b西风长枪",
+      "item.primogemcraft.tczdg": "§d薙草之稻光"
     }
   },
   "metadata": {

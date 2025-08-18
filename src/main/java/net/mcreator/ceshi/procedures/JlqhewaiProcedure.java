@@ -52,5 +52,10 @@ public class JlqhewaiProcedure {
 			attr.add(Attributes.MAX_HEALTH, "bd", a, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, EquipmentSlotGroup.MAINHAND);
 			attr.apply();
 		}
+		if (stack.getItem() == PrimogemcraftModItems.TCZDG.get()) {
+			a = 0.16 + 0.04 * b;
+			attr.add(Attributes.ATTACK_DAMAGE, "bd", a, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, EquipmentSlotGroup.MAINHAND);
+			attr.apply();
+		}
 	}
 }
