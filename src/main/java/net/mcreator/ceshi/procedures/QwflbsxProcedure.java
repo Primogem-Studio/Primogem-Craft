@@ -14,7 +14,7 @@ public class QwflbsxProcedure {
 			return;
 		ItemStack a = ItemStack.EMPTY;
 		if (!world.isClientSide()) {
-			a = new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()).copy();
+			a = new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get());
 			a.setCount((int) (Math.random() < 0.5 ? Mth.nextInt(RandomSource.create(), 1, 10) : 1));
 			FenliejinbisxhsProcedure.execute(world, x, y, z, entity, a, itemstack, true, 10, 0.8, 24, 10);
 		}

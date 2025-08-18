@@ -64,7 +64,7 @@ public class QwhydltsxProcedure {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"/summon minecraft:firework_rocket ~-4 ~1 ~ {CustomName:\"[{\\\"text\\\":\\\"\\\",\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"strikethrough\\\":false,\\\"obfuscated\\\":false}]\",FireworksItem:{tag:{Fireworks:{Flight:20,Explosions:[{Trail:1b,Type:1,Colors:[I;15095794],FadeColors:[I;16331918]},{Flicker:1b,Type:3,Colors:[I;2757375],FadeColors:[I;4784112]}]}},id:\"minecraft:firework_rocket\",Count:1},Life:30,LifeTime:50}");
-				a = new ItemStack(PrimogemcraftModItems.YHDLTYIDIE.get()).copy();
+				a = new ItemStack(PrimogemcraftModItems.YHDLTYIDIE.get());
 				{
 					final String _tagName = "shuliang";
 					final double _tagValue = (Mth.nextInt(RandomSource.create(), 5, 9));

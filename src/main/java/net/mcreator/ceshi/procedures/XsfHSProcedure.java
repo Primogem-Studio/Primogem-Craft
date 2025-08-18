@@ -15,7 +15,7 @@ public class XsfHSProcedure {
 		double a = 0;
 		String ss1 = "";
 		ss1 = (ming_cheng).equals("") ? "s1" : ming_cheng;
-		stack = itemstack.copy();
+		stack = itemstack;
 		a = zhi;
 		var attr = CustomAPI.getAttributes(stack);
 		if (zui_da) {

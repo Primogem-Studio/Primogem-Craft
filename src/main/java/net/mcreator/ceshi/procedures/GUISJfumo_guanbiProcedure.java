@@ -16,7 +16,7 @@ public class GUISJfumo_guanbiProcedure {
 			return;
 		ItemStack a = ItemStack.EMPTY;
 		if (entity.getPersistentData().getDouble("pgc_shijian_fumo_pinzhi") > 0) {
-			a = new ItemStack(PrimogemcraftModItems.SJBCQ.get()).copy();
+			a = new ItemStack(PrimogemcraftModItems.SJBCQ.get());
 			{
 				final String _tagName = "shijianbuchang";
 				final double _tagValue = (entity.getPersistentData().getDouble("pgc_shijian_fumo_pinzhi"));

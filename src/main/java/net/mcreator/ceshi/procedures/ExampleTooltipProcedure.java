@@ -9,7 +9,7 @@ public class ExampleTooltipProcedure {
 		if (zhi == null)
 			return "";
 		ItemStack stack = ItemStack.EMPTY;
-		stack = itemstack.copy();
+		stack = itemstack;
 		var bar = CustomAPI.getCustomBar(stack);
 		return (zhi + ":") + "" + bar.numerator + "/" + bar.denominator;
 	}

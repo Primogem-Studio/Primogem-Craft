@@ -34,7 +34,7 @@ public class GUIyinhangcunruProcedure {
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu4 ? _menu4.getSlots().get(2).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu6 ? _menu6.getSlots().get(3).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
 			a = (getAmountInGUISlot(entity, 0) + getAmountInGUISlot(entity, 1) + getAmountInGUISlot(entity, 2) + getAmountInGUISlot(entity, 3)) * 2;
-			b = new ItemStack(PrimogemcraftModItems.CUNQUPINGZHENG.get()).copy();
+			b = new ItemStack(PrimogemcraftModItems.CUNQUPINGZHENG.get());
 			{
 				final String _tagName = "pgc_cunchu";
 				final double _tagValue = a;

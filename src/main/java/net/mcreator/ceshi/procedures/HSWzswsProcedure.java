@@ -25,7 +25,7 @@ public class HSWzswsProcedure {
 		double n1 = 0;
 		if (!world.isClientSide()) {
 			n1 = fan_wei;
-			i1 = itemstack.copy();
+			i1 = itemstack;
 			if (i1.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("wzsw") <= deng_dai_ke) {
 				{
 					final String _tagName = "wzsw";

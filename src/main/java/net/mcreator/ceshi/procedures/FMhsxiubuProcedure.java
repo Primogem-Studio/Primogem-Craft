@@ -17,7 +17,7 @@ public class FMhsxiubuProcedure {
 			return;
 		ItemStack a = ItemStack.EMPTY;
 		if (!world.isClientSide()) {
-			a = item.copy();
+			a = item;
 			if (a.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("primogemcraft:fmyuzhousuipian")))) != 0
 					&& !a.is(ItemTags.create(ResourceLocation.parse("pgc:token_mending")))) {
 				if (a.getDamageValue() > a.getMaxDamage() * 0.01

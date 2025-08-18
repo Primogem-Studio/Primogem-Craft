@@ -32,7 +32,7 @@ public class QwlbtclsxProcedure {
 		ItemStack b = ItemStack.EMPTY;
 		double a = 0;
 		double c = 0;
-		b = (new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()).copy()).copy();
+		b = (new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()).copy());
 		if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerIter) {
 			for (int _idx = 0; _idx < _modHandlerIter.getSlots(); _idx++) {
 				ItemStack itemstackiterator = _modHandlerIter.getStackInSlot(_idx).copy();

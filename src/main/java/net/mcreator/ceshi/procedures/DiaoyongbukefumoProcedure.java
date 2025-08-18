@@ -8,7 +8,7 @@ public class DiaoyongbukefumoProcedure {
 	public static void execute(ItemStack itemstack) {
 		ItemStack item1 = ItemStack.EMPTY;
 		if (itemstack.isEnchanted()) {
-			item1 = itemstack.copy();
+			item1 = itemstack;
 			EnchantmentHelper.setEnchantments(item1, ItemEnchantments.EMPTY);
 		}
 	}

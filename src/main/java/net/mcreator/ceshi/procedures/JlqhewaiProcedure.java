@@ -18,7 +18,7 @@ public class JlqhewaiProcedure {
 		String s1 = "";
 		double a = 0;
 		double b = 0;
-		stack = itemstack.copy();
+		stack = itemstack;
 		b = HSjinglianupProcedure.execute(entity, stack);
 		var attr = CustomAPI.getAttributes(stack);
 		if (stack.getItem() == PrimogemcraftModItems.JSLYZH.get()) {

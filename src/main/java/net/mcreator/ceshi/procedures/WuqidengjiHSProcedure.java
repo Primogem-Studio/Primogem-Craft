@@ -21,7 +21,7 @@ public class WuqidengjiHSProcedure {
 		double b = 0;
 		if (item.is(ItemTags.create(ResourceLocation.parse("pgc:wuqi")))) {
 			a = xian_zhi == Double.POSITIVE_INFINITY ? (world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZEWUQISHANGXIAN)) : xian_zhi - 1;
-			i1 = item.copy();
+			i1 = item;
 			b = i1.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("deng_ji");
 			if (b >= a) {
 				if (entity instanceof Player _player && !_player.level().isClientSide())

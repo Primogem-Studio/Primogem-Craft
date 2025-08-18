@@ -30,7 +30,7 @@ public class WuqishuaxinProcedure {
 		double b = 0;
 		double a12 = 0;
 		double c = 0;
-		stack = item.copy();
+		stack = item;
 		a = stack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("deng_ji") + 1;
 		a1 = 30;
 		a2 = 60;

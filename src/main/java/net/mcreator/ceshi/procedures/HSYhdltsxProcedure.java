@@ -44,7 +44,7 @@ public class HSYhdltsxProcedure {
 					if (!zeng_yi) {
 						if (gailv_lei) {
 							if (item) {
-								it_1 = item0.copy();
+								it_1 = item0;
 								it_1.setCount((int) item_shu_liang);
 								if (world instanceof ServerLevel _level) {
 									ItemEntity entityToSpawn = new ItemEntity(_level, (entity.getX()), (entity.getY()), (entity.getZ()), it_1);

@@ -36,7 +36,7 @@ public class TcllksxProcedure {
 				}
 			}
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("fu_mo") > 0) {
-				i1 = new ItemStack(Items.ENCHANTED_BOOK).copy();
+				i1 = new ItemStack(Items.ENCHANTED_BOOK);
 				i1.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FIRE_ASPECT), 2);
 				DiaoyongwupindiaoluoProcedure.execute(world, x, y, z, i1, Math.floor(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("fu_mo") / 2));
 			}

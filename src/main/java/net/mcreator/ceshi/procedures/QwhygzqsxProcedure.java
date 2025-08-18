@@ -21,7 +21,7 @@ public class QwhygzqsxProcedure {
 			return;
 		ItemStack i1 = ItemStack.EMPTY;
 		if (!world.isClientSide()) {
-			i1 = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).copy();
+			i1 = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
 			if (i1.is(ItemTags.create(ResourceLocation.parse("pgc:wuqi")))) {
 				if (Math.random() < 0.1) {
 					WuqidengjiHSProcedure.execute(world, entity, i1, Double.POSITIVE_INFINITY, 30);
