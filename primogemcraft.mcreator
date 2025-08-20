@@ -38189,6 +38189,10 @@
           {
             "name": "zhi",
             "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "return_type": "logic",
