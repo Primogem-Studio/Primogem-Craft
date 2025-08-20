@@ -19,15 +19,17 @@ import net.mcreator.ceshi.init.PrimogemcraftModItems;
 
 public class TcllksxProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, ItemStack itemstack) {
+		ItemStack i1 = ItemStack.EMPTY;
 		double a = 0;
 		double b = 0;
 		double a1 = 0;
 		double a2 = 0;
 		double c = 0;
-		ItemStack i1 = ItemStack.EMPTY;
+		double bb = 0;
 		a = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("deng_ji") + 1;
-		b = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jing_lian");
-		if (a > 1 || b > 0 || itemstack.getItem() == PrimogemcraftModItems.TCLLK.get()) {
+		b = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jing_lian_zhen") + (DiaoyongNBTluojiProcedure.execute(itemstack, "jing_lian_zhen") && JinglianmmkjProcedure.execute(itemstack) ? 1 : 0);
+		bb = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jing_lian_jia") + (DiaoyongNBTluojiProcedure.execute(itemstack, "jing_lian_jia") ? 1 : 0);
+		if (a > 1 || b > 0 || bb > 0 || itemstack.getItem() == PrimogemcraftModItems.TCLLK.get()) {
 			if (itemstack.getItem() == PrimogemcraftModItems.TCLLK.get()) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PrimogemcraftModItems.TCLZHAIQUAN.get()));
@@ -42,6 +44,7 @@ public class TcllksxProcedure {
 			}
 			itemstack.shrink(1);
 			DiaoyongwupindiaoluoProcedure.execute(world, x, y, z, new ItemStack(PrimogemcraftModItems.TEZHIDIEYINGQI.get()), b);
+			DiaoyongwupindiaoluoProcedure.execute(world, x, y, z, new ItemStack(PrimogemcraftModItems.XINGHUI.get()), bb * 4);
 			a1 = 30;
 			a2 = 60;
 			if (a > a2) {

@@ -38200,6 +38200,71 @@
           "src/main/java/net/mcreator/ceshi/procedures/GUIhldztjlhsProcedure.java"
         ]
       }
+    },
+    {
+      "name": "DiaoyongNBTshuzi",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diaoyong_nb_tshuzi",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "zhi",
+            "type": "string"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/DiaoyongNBTshuziProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "DiaoyongNBTluoji",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diaoyong_nb_tluoji",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "zhi",
+            "type": "string"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/DiaoyongNBTluojiProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Jinglianmmkj",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jinglianmmkj",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/JinglianmmkjProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

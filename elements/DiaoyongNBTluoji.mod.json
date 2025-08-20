@@ -1,0 +1,8 @@
+{
+  "_fv": 79,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"return_logic\"><value name=\"return\"><block type=\"item_nbt_logic_get\"><value name=\"item\"><block type=\"itemstack_to_mcitem\"></block></value><value name=\"tagName\"><block type=\"custom_dependency_string\"><field name=\"NAME\">zhi</field></block></value></block></value></block></next></block></xml>",
+    "skipDependencyNullCheck": false
+  }
+}
