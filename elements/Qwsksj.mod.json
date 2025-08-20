@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "sksj",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "§5§l『奇物』§b时空三角",
@@ -31,7 +32,8 @@
     "specialInformation": {
       "fixedValue": [
         "§7右键使用，50%概率为副手祈愿武器",
-        "§7立即精炼强化一次，可突破一次上限"
+        "§7立即精炼强化一次，可突破一次上限",
+        "§e提供的精炼等级视为非叠影器"
       ]
     },
     "glowCondition": {

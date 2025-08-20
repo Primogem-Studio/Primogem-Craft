@@ -27,6 +27,7 @@ public class QwsksjItem extends Item {
 		super.appendHoverText(itemstack, context, list, flag);
 		list.add(Component.translatable("item.primogemcraft.qwsksj.description_0"));
 		list.add(Component.translatable("item.primogemcraft.qwsksj.description_1"));
+		list.add(Component.translatable("item.primogemcraft.qwsksj.description_2"));
 	}
 
 	@Override
