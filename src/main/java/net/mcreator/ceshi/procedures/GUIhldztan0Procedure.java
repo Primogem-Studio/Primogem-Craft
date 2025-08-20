@@ -3,7 +3,6 @@ package net.mcreator.ceshi.procedures;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
@@ -11,7 +10,6 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.ceshi.init.PrimogemcraftModMenus;
@@ -36,11 +34,6 @@ public class GUIhldztan0Procedure {
 							}
 						}
 						JlqhewaiProcedure.execute(entity, i1);
-						{
-							final String _tagName = "jing_lian_mmkj";
-							final String _tagValue = (BuiltInRegistries.ITEM.getKey(i1.getItem()).toString());
-							CustomData.update(DataComponents.CUSTOM_DATA, i1, tag -> tag.putString(_tagName, _tagValue));
-						}
 					}
 				}
 			}

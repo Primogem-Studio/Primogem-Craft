@@ -9,6 +9,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.component.DataComponents;
 
 import net.mcreator.ceshi.init.PrimogemcraftModMenus;
@@ -59,6 +60,9 @@ public class GUIhldztjlhsProcedure {
 		final double jzhi = (itemstack.getOrDefault(a, ab).copyTag().getDouble(s));
 		CustomData.update(a, itemstack, tag -> tag.putDouble(s + s2, nzhi + zhi));
 		CustomData.update(a, itemstack, tag -> tag.putDouble(s, jzhi + zhi));
+		final String _tagName = "jing_lian_mmkj";
+		final String _tagValue = (BuiltInRegistries.ITEM.getKey(itemstack.getItem()).toString());
+		CustomData.update(a, itemstack, tag -> tag.putString(_tagName, _tagValue));
 	}
 
 	public static double NBTzhi(ItemStack itemstack) {
