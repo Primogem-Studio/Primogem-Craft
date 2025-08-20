@@ -1,0 +1,8 @@
+{
+  "_fv": 79,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><variables><variable type=\"MCItem\" id=\"i\">i</variable><variable type=\"Number\" id=\"n\">n</variable><variable type=\"Boolean\" id=\"o\">o</variable></variables><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"variables_set_itemstack\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" is_player_var=\"false\" has_entity=\"false\"></mutation><field name=\"VAR\">local:i</field><value name=\"VAL\"><block type=\"itemstack_to_mcitem\"></block></value><next><block type=\"variables_set_number\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" is_player_var=\"false\" has_entity=\"false\"></mutation><field name=\"VAR\">local:n</field><value name=\"VAL\"><block type=\"custom_dependency_number\"><field name=\"NAME\">zhi</field></block></value><next><block type=\"variables_set_logic\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" is_player_var=\"false\" has_entity=\"false\"></mutation><field name=\"VAR\">local:o</field><value name=\"VAL\"><block type=\"custom_dependency_logic\"><field name=\"NAME\">zhen</field></block></value><next><block type=\"java_code\"><field name=\"CODE\">GUIhldztjlhsProcedure.JLnbt(i,(int)n,o);</field></block></next></block></next></block></next></block></next></block></xml>",
+    "skipDependencyNullCheck": false
+  }
+}

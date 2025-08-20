@@ -38265,6 +38265,32 @@
           "src/main/java/net/mcreator/ceshi/procedures/JinglianmmkjProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Diaoyongjinglianhs",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diaoyongjinglianhs",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "zhen",
+            "type": "logic"
+          },
+          {
+            "name": "zhi",
+            "type": "number"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/DiaoyongjinglianhsProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
