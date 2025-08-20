@@ -33,7 +33,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": "CUSTOM:Tezhidieyingqi"
+            "value": ""
           },
           "disablePlacement": {
             "fixedValue": false
@@ -52,7 +52,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": "CUSTOM:Tezhidieyingqi"
+            "value": ""
           },
           "disablePlacement": {
             "fixedValue": false
@@ -71,7 +71,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": "CUSTOM:Tezhidieyingqi"
+            "value": ""
           },
           "disablePlacement": {
             "fixedValue": false
@@ -90,7 +90,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": "CUSTOM:Tezhidieyingqi"
+            "value": ""
           },
           "disablePlacement": {
             "fixedValue": false

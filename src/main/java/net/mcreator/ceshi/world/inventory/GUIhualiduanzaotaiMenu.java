@@ -99,41 +99,21 @@ public class GUIhualiduanzaotaiMenu extends AbstractContainerMenu implements Pri
 			private final int slot = 1;
 			private int x = GUIhualiduanzaotaiMenu.this.x;
 			private int y = GUIhualiduanzaotaiMenu.this.y;
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return PrimogemcraftModItems.TEZHIDIEYINGQI.get() == stack.getItem();
-			}
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 71, 17) {
 			private final int slot = 2;
 			private int x = GUIhualiduanzaotaiMenu.this.x;
 			private int y = GUIhualiduanzaotaiMenu.this.y;
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return PrimogemcraftModItems.TEZHIDIEYINGQI.get() == stack.getItem();
-			}
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 91, 17) {
 			private final int slot = 3;
 			private int x = GUIhualiduanzaotaiMenu.this.x;
 			private int y = GUIhualiduanzaotaiMenu.this.y;
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return PrimogemcraftModItems.TEZHIDIEYINGQI.get() == stack.getItem();
-			}
 		}));
 		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 111, 17) {
 			private final int slot = 4;
 			private int x = GUIhualiduanzaotaiMenu.this.x;
 			private int y = GUIhualiduanzaotaiMenu.this.y;
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return PrimogemcraftModItems.TEZHIDIEYINGQI.get() == stack.getItem();
-			}
 		}));
 		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 51, 53) {
 			private final int slot = 5;

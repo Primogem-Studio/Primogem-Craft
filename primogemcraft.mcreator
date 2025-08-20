@@ -38169,6 +38169,33 @@
           "src/main/resources/data/primogemcraft/recipe/tczdgpf.json"
         ]
       }
+    },
+    {
+      "name": "GUIhldztjlhs",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gu_ihldztjlhs",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "zhi",
+            "type": "number"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/GUIhldztjlhsProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

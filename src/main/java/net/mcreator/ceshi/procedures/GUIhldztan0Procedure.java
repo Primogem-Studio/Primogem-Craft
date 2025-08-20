@@ -15,7 +15,6 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.ceshi.init.PrimogemcraftModMenus;
-import net.mcreator.ceshi.init.PrimogemcraftModItems;
 
 public class GUIhldztan0Procedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -28,21 +27,7 @@ public class GUIhldztan0Procedure {
 		if (!(i1.getItem() == Blocks.AIR.asItem()) && i1.is(ItemTags.create(ResourceLocation.parse("pgc:wuqi")))) {
 			for (int index0 = 0; index0 < 4; index0++) {
 				b = b + 1;
-				if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu3 ? _menu3.getSlots().get((int) b).getItem() : ItemStack.EMPTY)
-						.getItem() == PrimogemcraftModItems.TEZHIDIEYINGQI.get()) {
-					if (i1.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jing_lian") < 4) {
-						{
-							final String _tagName = "jing_lian";
-							final double _tagValue = (i1.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jing_lian") + 1);
-							CustomData.update(DataComponents.CUSTOM_DATA, i1, tag -> tag.putDouble(_tagName, _tagValue));
-						}
-						if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-							_menu.getSlots().get((int) b).set(ItemStack.EMPTY);
-							_player.containerMenu.broadcastChanges();
-						}
-						lg0 = true;
-					}
-				}
+				lg0 = GUIhldztjlhsProcedure.execute(entity, i1, b);
 			}
 			if (!world.isClientSide()) {
 				if (lg0) {
