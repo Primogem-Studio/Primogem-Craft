@@ -20,22 +20,24 @@ public class GUIhldztan0Procedure {
 			return;
 		ItemStack i1 = ItemStack.EMPTY;
 		double b = 0;
+		double aa = 0;
 		i1 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu0 ? _menu0.getSlots().get(0).getItem() : ItemStack.EMPTY);
 		if (!(i1.getItem() == Blocks.AIR.asItem()) && i1.is(ItemTags.create(ResourceLocation.parse("pgc:wuqi")))) {
 			for (int index0 = 0; index0 < 4; index0++) {
 				b = b + 1;
 				if (!world.isClientSide()) {
-					if (GUIhldztjlhsProcedure.execute(world, entity, i1, b)) {
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("primogemcraft:jingyanshu00")), SoundSource.BLOCKS, 1, 1);
-							} else {
-								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("primogemcraft:jingyanshu00")), SoundSource.BLOCKS, 1, 1, false);
-							}
-						}
-						JlqhewaiProcedure.execute(entity, i1);
+					aa = aa + (GUIhldztjlhsProcedure.execute(world, entity, i1, b) ? 1 : 0);
+				}
+			}
+			if (aa > 0) {
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("primogemcraft:jingyanshu00")), SoundSource.BLOCKS, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("primogemcraft:jingyanshu00")), SoundSource.BLOCKS, 1, 1, false);
 					}
 				}
+				JlqhewaiProcedure.execute(entity, i1);
 			}
 		}
 	}
