@@ -14,7 +14,7 @@ public class TcllkmsProcedure {
 				+ new java.text.DecimalFormat("").format(DiaoyongNBTshuziProcedure.execute(itemstack, "jing_lian_zhen") + (JinglianmmkjProcedure.execute(itemstack, "/5") ? 1 : 0)) + "\u4E2A\u00A76\u53E0\u5F71\u5668" + "\n"
 				+ "\u00A76\u8FD4\u8FD8\u00A7b"
 				+ new java.text.DecimalFormat("").format(
-						(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jing_lian_jia") + (JinglianmmkjProcedure.execute(itemstack, "") && !JinglianmmkjProcedure.execute(itemstack, "/5") ? 1 : 0)) * 4)
+						(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jing_lian_jia") + (JinglianmmkjProcedure.execute(itemstack, "") && !JinglianmmkjProcedure.execute(itemstack, "/5") ? 1 : 0)) * 2)
 				+ "\u4E2A\u00A76\u65E0\u4E3B\u661F\u8F89" + "\n" + "\u00A76\u8FD4\u8FD8\u00A7b" + new java.text.DecimalFormat("").format(a <= 0 ? 0 : a + 1) + "\u7EA7\u00A76\u5F3A\u5316\u6750\u6599"
 				+ (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("fu_mo")
 						? "\n" + "\u00A7c\u8FD4\u8FD8\u00A7e"
