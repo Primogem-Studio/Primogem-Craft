@@ -38,7 +38,7 @@ public class WishCategory implements DisplayCategory<WishDisplay> {
         entity.setCustomName(null);
         entity.setCustomNameVisible(false);
         widgets.add(Widgets.createRecipeBase(bounds));
-        widgets.add(Widgets.createDrawableWidget(((graphics, mouseX, mouseY, delta) -> InventoryScreen.renderEntityInInventory(graphics, startPoint.x - 30, startPoint.y - 8, 30, new Vector3f(), new Quaternionf().rotateXYZ(0.3f, Mth.DEG_TO_RAD * ((float) GLFW.glfwGetTime()*1000), 0), new Quaternionf(), entity))));
+        widgets.add(Widgets.createDrawableWidget(((graphics, mouseX, mouseY, delta) -> InventoryScreen.renderEntityInInventory(graphics, startPoint.x - 30, startPoint.y - 8, 30, new Vector3f(), new Quaternionf().rotateXYZ(0.3f, Mth.DEG_TO_RAD * ((float) GLFW.glfwGetTime() * 500), 0), new Quaternionf(), entity))));
         widgets.add(Widgets.createArrow(new Point(startPoint.x - 12, startPoint.y - 9)));
         widgets.add(Widgets.createSlot(new Point(startPoint.x + 20, startPoint.y - 8)).entries(display.getOutputEntries().getFirst()).markOutput());
         return widgets.build();
