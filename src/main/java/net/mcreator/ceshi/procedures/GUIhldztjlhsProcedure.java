@@ -34,13 +34,8 @@ public class GUIhldztjlhsProcedure {
 					double aa = NBTzhi(i1, "jing_lian_jia");
 					JLnbt(itemstack, (int) a, true);
 					JLnbt(itemstack, (int) aa, false);
-					if (itemstack.is(ItemTags.create(ResourceLocation.parse("pgc:wuqi/5")))) {
-						JLnbt(itemstack, 1, true);
-						on1 = on1 + 1;
-					} else {
-						JLnbt(itemstack, 1, false);
-						on1 = on1 + 1;
-					}
+					JLnbt(itemstack, 1, itemstack.is(ItemTags.create(ResourceLocation.parse("pgc:wuqi/5"))));
+					on1 = on1 + 1;
 				}
 				if (on1 == 1) {
 					if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
