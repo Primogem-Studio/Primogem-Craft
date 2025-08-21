@@ -17,6 +17,7 @@ public class Tczdgsx0Procedure {
 		if (!world.isClientSide()) {
 			if (!entity.isShiftKeyDown() && !(entity instanceof Player _plrCldCheck3 && _plrCldCheck3.getCooldowns().isOnCooldown(itemstack.getItem()))) {
 				a = Daoqixiaoguo0Procedure.execute(world, x, y, z, entity, itemstack, true);
+				a = a > 20 ? 20 : a;
 				if (a != -1) {
 					if (entity instanceof Player _player)
 						_player.getFoodData().setSaturation((float) ((entity instanceof Player _plr ? _plr.getFoodData().getSaturationLevel() : 0) + a));

@@ -53,7 +53,7 @@ public class JlqhewaiProcedure {
 			attr.apply();
 		}
 		if (stack.getItem() == PrimogemcraftModItems.TCZDG.get()) {
-			a = 0.16 + 0.04 * b;
+			a = 0.08 + 0.02 * b;
 			attr.add(Attributes.ATTACK_DAMAGE, "bd", a, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, EquipmentSlotGroup.MAINHAND);
 			attr.apply();
 		}
