@@ -27,8 +27,8 @@ public class TcllksxProcedure {
 		double c = 0;
 		double bb = 0;
 		a = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("deng_ji") + 1;
-		b = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jing_lian_zhen") + (DiaoyongNBTluojiProcedure.execute(itemstack, "jing_lian_zhen") || JinglianmmkjProcedure.execute(itemstack) ? 1 : 0);
-		bb = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jing_lian_jia") + (DiaoyongNBTluojiProcedure.execute(itemstack, "jing_lian_jia") ? 1 : 0);
+		b = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jing_lian_zhen") + (JinglianmmkjProcedure.execute(itemstack, "/5") ? 1 : 0);
+		bb = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jing_lian_jia") + (JinglianmmkjProcedure.execute(itemstack, "") && !JinglianmmkjProcedure.execute(itemstack, "/5") ? 1 : 0);
 		if (a > 1 || b > 0 || bb > 0 || itemstack.getItem() == PrimogemcraftModItems.TCLLK.get()) {
 			if (itemstack.getItem() == PrimogemcraftModItems.TCLLK.get()) {
 				if (world instanceof ServerLevel _level) {
@@ -44,7 +44,7 @@ public class TcllksxProcedure {
 			}
 			itemstack.shrink(1);
 			DiaoyongwupindiaoluoProcedure.execute(world, x, y, z, new ItemStack(PrimogemcraftModItems.TEZHIDIEYINGQI.get()), b);
-			DiaoyongwupindiaoluoProcedure.execute(world, x, y, z, new ItemStack(PrimogemcraftModItems.XINGHUI.get()), bb * 4);
+			DiaoyongwupindiaoluoProcedure.execute(world, x, y, z, new ItemStack(PrimogemcraftModItems.XINGHUI.get()), bb * 2);
 			a1 = 30;
 			a2 = 60;
 			if (a > a2) {

@@ -38258,6 +38258,10 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "ss",
+            "type": "string"
           }
         ],
         "return_type": "logic",

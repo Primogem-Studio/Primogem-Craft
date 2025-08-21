@@ -25,17 +25,20 @@ public class GUIhldztjlhsProcedure {
 		if (!world.isClientSide()) {
 			b = zhi;
 			i1 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu1 ? _menu1.getSlots().get((int) b).getItem() : ItemStack.EMPTY);
-			if (NBTzhi(itemstack) + NBTzhi(i1) < 4) {
+			if (NBTzhi(itemstack, "jing_lian") + NBTzhi(i1, "jing_lian") < 4) {
 				if (i1.getItem() == PrimogemcraftModItems.TEZHIDIEYINGQI.get()) {
 					JLnbt(itemstack, 1, true);
 					on1 = on1 + 1;
-				} else if (i1.getItem() == itemstack.getItem()) {
-					double a = NBTzhi(i1) + 1;
+				} else if (i1.getItem() == itemstack.getItem() && i1.is(ItemTags.create(ResourceLocation.parse("pgc:wuqi")))) {
+					double a = NBTzhi(i1, "jing_lian_zhen");
+					double aa = NBTzhi(i1, "jing_lian_jia");
+					JLnbt(itemstack, (int) a, true);
+					JLnbt(itemstack, (int) aa, false);
 					if (itemstack.is(ItemTags.create(ResourceLocation.parse("pgc:wuqi/5")))) {
-						JLnbt(itemstack, (int) a, true);
+						JLnbt(itemstack, 1, true);
 						on1 = on1 + 1;
 					} else {
-						JLnbt(itemstack, (int) a, false);
+						JLnbt(itemstack, 1, false);
 						on1 = on1 + 1;
 					}
 				}
@@ -65,8 +68,8 @@ public class GUIhldztjlhsProcedure {
 		CustomData.update(a, itemstack, tag -> tag.putString(_tagName, _tagValue));
 	}
 
-	public static double NBTzhi(ItemStack itemstack) {
-		return (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jing_lian"));
+	public static double NBTzhi(ItemStack itemstack, String ss) {
+		return (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble(ss));
 	}
 
 	public boolean abc() {
