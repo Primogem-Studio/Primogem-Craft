@@ -35,7 +35,7 @@ public class ForgeCategory implements DisplayCategory<ForgeDisplay> {
         var startPoint = new Point(bounds.getCenterX() - 44, bounds.getCenterY());
         widgets.add(Widgets.createRecipeBase(bounds));
         widgets.add(Widgets.createSlot(new Point(startPoint.x - 9, startPoint.y - 20)).entries(EntryIngredients.ofItemTag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("pgc", "wuqi")))).markInput());
-        widgets.add(Widgets.createSlot(new Point(startPoint.x + 34, startPoint.y - 38)).entries(EntryIngredients.of(TEZHIDIEYINGQI)).markInput());
+        widgets.add(Widgets.createSlot(new Point(startPoint.x + 34, startPoint.y - 38)).entries(EntryIngredients.ofItemTag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("pgc", "wuqi")))).markInput());
         widgets.add(Widgets.createSlot(new Point(startPoint.x + 52, startPoint.y - 38)).entries(EntryIngredients.of(TEZHIDIEYINGQI)).markInput());
         widgets.add(Widgets.createSlot(new Point(startPoint.x + 70, startPoint.y - 38)).entries(EntryIngredients.of(TEZHIDIEYINGQI)).markInput());
         widgets.add(Widgets.createSlot(new Point(startPoint.x + 88, startPoint.y - 38)).entries(EntryIngredients.of(TEZHIDIEYINGQI)).markInput());
