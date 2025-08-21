@@ -188,10 +188,10 @@
           "text": {
             "fixedValue": "§d§l强化"
           },
-          "width": 17,
-          "height": 8,
-          "x": 256,
-          "y": 94,
+          "width": 18,
+          "height": 18,
+          "x": 257,
+          "y": 89,
           "locked": false
         }
       },
@@ -199,13 +199,13 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_guifu_lan",
-          "image": "guifu_lan.png",
-          "hoveredImage": "anniu_bai.png",
+          "image": "chui_lan.png",
+          "hoveredImage": "chui_moren.png",
           "onClick": {
             "name": "GUIhldztan0"
           },
-          "x": 256,
-          "y": 59,
+          "x": 257,
+          "y": 53,
           "locked": false
         }
       },
@@ -213,13 +213,13 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_guifu_huang",
-          "image": "guifu_huang.png",
-          "hoveredImage": "anniu_bai.png",
+          "image": "chui_cheng.png",
+          "hoveredImage": "chui_moren.png",
           "onClick": {
             "name": "GUIhldztan1"
           },
-          "x": 256,
-          "y": 94,
+          "x": 257,
+          "y": 89,
           "locked": false
         }
       },
@@ -230,10 +230,10 @@
           "text": {
             "fixedValue": "§b§l精炼"
           },
-          "width": 17,
-          "height": 8,
-          "x": 256,
-          "y": 59,
+          "width": 18,
+          "height": 18,
+          "x": 257,
+          "y": 53,
           "locked": false
         }
       }

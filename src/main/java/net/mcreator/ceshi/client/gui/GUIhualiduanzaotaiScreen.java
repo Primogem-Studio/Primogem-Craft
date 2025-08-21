@@ -49,11 +49,11 @@ public class GUIhualiduanzaotaiScreen extends AbstractContainerScreen<GUIhualidu
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
-		if (mouseX > leftPos + 130 && mouseX < leftPos + 147 && mouseY > topPos + 57 && mouseY < topPos + 65) {
+		if (mouseX > leftPos + 131 && mouseX < leftPos + 149 && mouseY > topPos + 52 && mouseY < topPos + 70) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.gu_ihualiduanzaotai.tooltip_proc_gu_ihldztmiaoshu"), mouseX, mouseY);
 			customTooltipShown = true;
 		}
-		if (mouseX > leftPos + 130 && mouseX < leftPos + 147 && mouseY > topPos + 22 && mouseY < topPos + 30) {
+		if (mouseX > leftPos + 131 && mouseX < leftPos + 149 && mouseY > topPos + 16 && mouseY < topPos + 34) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.gu_ihualiduanzaotai.tooltip_ssbssljing_lian"), mouseX, mouseY);
 			customTooltipShown = true;
 		}
@@ -86,8 +86,8 @@ public class GUIhualiduanzaotaiScreen extends AbstractContainerScreen<GUIhualidu
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_guifu_lan = new ImageButton(this.leftPos + 130, this.topPos + 22, 17, 8,
-				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/guifu_lan.png"), ResourceLocation.parse("primogemcraft:textures/screens/anniu_bai.png")), e -> {
+		imagebutton_guifu_lan = new ImageButton(this.leftPos + 131, this.topPos + 16, 18, 18,
+				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/chui_lan.png"), ResourceLocation.parse("primogemcraft:textures/screens/chui_moren.png")), e -> {
 					int x = GUIhualiduanzaotaiScreen.this.x;
 					int y = GUIhualiduanzaotaiScreen.this.y;
 					if (true) {
@@ -101,8 +101,8 @@ public class GUIhualiduanzaotaiScreen extends AbstractContainerScreen<GUIhualidu
 			}
 		};
 		this.addRenderableWidget(imagebutton_guifu_lan);
-		imagebutton_guifu_huang = new ImageButton(this.leftPos + 130, this.topPos + 57, 17, 8,
-				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/guifu_huang.png"), ResourceLocation.parse("primogemcraft:textures/screens/anniu_bai.png")), e -> {
+		imagebutton_guifu_huang = new ImageButton(this.leftPos + 131, this.topPos + 52, 18, 18,
+				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/chui_cheng.png"), ResourceLocation.parse("primogemcraft:textures/screens/chui_moren.png")), e -> {
 					int x = GUIhualiduanzaotaiScreen.this.x;
 					int y = GUIhualiduanzaotaiScreen.this.y;
 					if (true) {
