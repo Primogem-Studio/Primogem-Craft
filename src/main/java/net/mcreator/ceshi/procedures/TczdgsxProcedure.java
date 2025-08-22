@@ -20,7 +20,7 @@ public class TczdgsxProcedure {
 			i1 = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
 			a = HSjinglianupProcedure.execute(entity, itemstack);
 			b = entity instanceof Player _plr ? _plr.getFoodData().getSaturationLevel() : 0;
-			c = (b * (0.28 + 0.07 * a) + b * (0.28 + 0.07 * a) * (0.4 + 0.1 * a)) * (i1.getItem() == PrimogemcraftModItems.WQZHG.get() ? 1 + HSjinglianProcedure.execute(entity, i1) * (0.06 + 0.015 * a) : 1);
+			c = (b * (0.28 + 0.07 * a) + b * (0.28 + 0.07 * a) * (0.2 + 0.05 * a)) * (i1.getItem() == PrimogemcraftModItems.WQZHG.get() ? 1 + HSjinglianProcedure.execute(entity, i1) * (0.04 + 0.01 * a) : 1);
 			XsfHSProcedure.execute(itemstack, false, false, (float) c, "tcsx");
 			JlqhewaiProcedure.execute(entity, itemstack);
 			if ((entity instanceof Player _plr ? _plr.getFoodData().getFoodLevel() : 0) < 20) {
