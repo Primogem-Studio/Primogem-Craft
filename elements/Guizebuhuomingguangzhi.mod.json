@@ -4,9 +4,9 @@
   "definition": {
     "type": "Number",
     "displayName": "§d捕获明光触发倍率",
-    "description": "默认10%",
+    "description": "祈愿出金时触发捕获明光的概率，默认20%",
     "category": "MOBS",
     "defaultValueLogic": false,
-    "defaultValueNumber": 25
+    "defaultValueNumber": 20
   }
 }
