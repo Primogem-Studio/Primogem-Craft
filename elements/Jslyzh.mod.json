@@ -8,7 +8,8 @@
     "texture": "jslyzh",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
-    "name": "§9净水流涌之辉",
+    "guiTexture": "",
+    "name": "§9静水流涌之辉",
     "specialInformation": {
       "fixedValue": [],
       "name": "Jslyzhms"
