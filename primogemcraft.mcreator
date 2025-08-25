@@ -38703,6 +38703,18 @@
           "src/main/java/net/mcreator/ceshi/procedures/JczygmsProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Myzjpf",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "myzjpf",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/myzjpf.json"
+        ]
+      }
     }
   ],
   "variable_elements": [

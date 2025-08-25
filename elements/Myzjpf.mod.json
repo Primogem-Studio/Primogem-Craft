@@ -13,37 +13,37 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "Items.AMETHYST_SHARD"
+        "value": "CUSTOM:Myzj"
       },
       {
-        "value": "Blocks.CRYING_OBSIDIAN"
+        "value": "CUSTOM:Myzj"
       },
       {
-        "value": "Items.AMETHYST_SHARD"
+        "value": ""
       },
       {
-        "value": "CUSTOM:Jinzhimola"
+        "value": ""
       },
       {
-        "value": "CUSTOM:Cchonggaodaodedezanxu"
+        "value": ""
       },
       {
-        "value": "Items.DIAMOND"
+        "value": ""
       },
       {
-        "value": "Items.AMETHYST_SHARD"
+        "value": ""
       },
       {
-        "value": "Blocks.CRYING_OBSIDIAN"
+        "value": ""
       },
       {
-        "value": "Items.AMETHYST_SHARD"
+        "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Jhsb0"
+      "value": "CUSTOM:Myzj"
     },
-    "name": "jhsbpf_0",
+    "name": "myzjpf",
     "namespace": "mod"
   }
 }
