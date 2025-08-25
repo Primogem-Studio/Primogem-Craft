@@ -62,6 +62,8 @@ public class WuqishuaxinProcedure {
 			o1 = true;
 		} else if (NBTwuqi(stack, "pgc:wuqi/changbing", 1.3f, c, z)) {
 			o1 = true;
+		} else if (NBTwuqi(stack, "pgc:wuqi/gongju", 0.7f, c, Attributes.MINING_EFFICIENCY)) {
+			o1 = true;
 		} else if (NBTwuqi(stack, "pgc:wuqi", 1, c, z)) {
 			o1 = true;
 		}

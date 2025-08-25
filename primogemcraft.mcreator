@@ -38395,6 +38395,141 @@
           "src/main/java/net/mcreator/ceshi/procedures/Jdzqsx2Procedure.java"
         ]
       }
+    },
+    {
+      "name": "Mlgjsx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mlgjsx",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/MlgjsxProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Mlwq",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mlwq",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/MlwqProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Mlgjbdms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mlgjbdms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/MlgjbdmsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Mlwqbdms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mlwqbdms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/MlwqbdmsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Mlf_sx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mlf_sx",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Mlf_sxProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Mlf_ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mlf_ms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Mlf_msProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -39283,15 +39418,12 @@
       "CUSTOM:Jianlaokuaiwupin"
     ],
     "ITEMS:pgc:wuqi": [
-      "CUSTOM:Wufengjian",
-      "CUSTOM:Lmsj",
-      "CUSTOM:Dijian",
-      "CUSTOM:Xlly",
-      "CUSTOM:Ftyj",
       "TAG:pgc:wuqi/5",
-      "CUSTOM:Heijian",
       "TAG:pgc:wuqi/danshou",
-      "TAG:pgc:wuqi/changbing"
+      "TAG:pgc:wuqi/changbing",
+      "CUSTOM:Mmolajian",
+      "CUSTOM:Ffanrongdezhexue",
+      "TAG:pgc:wuqi/gongju"
     ],
     "ITEMS:pgc:prayer_core_x10": [
       "CUSTOM:Qyhxshilian"
@@ -40741,6 +40873,15 @@
       "CUSTOM:Xfcq",
       "CUSTOM:Tczdg",
       "CUSTOM:Jdzq"
+    ],
+    "ITEMS:pgc:wuqi/gongju": [
+      "CUSTOM:Jiuchanzhiyuangao",
+      "CUSTOM:Qinlaodezhexue",
+      "CUSTOM:Huangjindezhexue",
+      "CUSTOM:Mmolagao",
+      "CUSTOM:Mmolafu",
+      "CUSTOM:Mmolachan",
+      "CUSTOM:Molachutou"
     ]
   },
   "tab_element_order": {

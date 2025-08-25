@@ -1,0 +1,8 @@
+{
+  "_fv": 79,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><variables><variable type=\"Number\" id=\"a\">a</variable></variables><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"variables_set_number\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" is_player_var=\"false\" has_entity=\"false\"></mutation><field name=\"VAR\">local:a</field><value name=\"VAL\"><block type=\"procedure_retval_number\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"0\"></mutation><field name=\"procedure\">HSjinglianup</field></block></value><next><block type=\"java_code\"><field name=\"CODE\">\t\tvar attr = CustomAPI.getAttributes(itemstack);&amp;#10;\t\tattr.add(Attributes.BLOCK_BREAK_SPEED, \"mlgj\", 1 + (0.25 * a), AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.MAINHAND);&amp;#10;\t\tattr.apply();</field></block></next></block></next></block></xml>",
+    "skipDependencyNullCheck": false
+  }
+}

@@ -8,9 +8,11 @@
     "texture": "xin_mlc",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§e摩拉 锄",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "Mlf_ms"
     },
     "creativeTabs": [
       {
@@ -21,7 +23,10 @@
     "attackSpeed": 1.0,
     "enchantability": 5,
     "damageVsEntity": 4.0,
-    "usageCount": 320,
+    "usageCount": 1024,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Mmola01"
@@ -31,6 +36,9 @@
     "blockDropsTier": "IRON",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "damageOnCrafting": false,
+    "onItemInUseTick": {
+      "name": "Mlf_sx"
+    }
   }
 }

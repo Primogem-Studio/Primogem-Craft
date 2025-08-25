@@ -8,9 +8,11 @@
     "texture": "xin_mlg",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§e摩拉 镐",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "Mlgjbdms"
     },
     "creativeTabs": [
       {
@@ -21,7 +23,10 @@
     "attackSpeed": 1.2,
     "enchantability": 20,
     "damageVsEntity": 4.5,
-    "usageCount": 560,
+    "usageCount": 1024,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Mmola01"
@@ -31,6 +36,9 @@
     "blockDropsTier": "IRON",
     "blocksAffected": [],
     "stayInGridWhenCrafting": true,
-    "damageOnCrafting": true
+    "damageOnCrafting": true,
+    "onItemInUseTick": {
+      "name": "Mlgjsx"
+    }
   }
 }
