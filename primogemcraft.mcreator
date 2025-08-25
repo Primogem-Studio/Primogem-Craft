@@ -38295,6 +38295,106 @@
           "src/main/java/net/mcreator/ceshi/procedures/DiaoyongjinglianhsProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Jdzq",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jdzq",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ceshi/item/JdzqItem.java",
+          "src/main/resources/assets/primogemcraft/models/item/jdzq.json"
+        ]
+      }
+    },
+    {
+      "name": "Jdzqsx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jdzqsx",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/JdzqsxProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Jdzqms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jdzqms",
+      "metadata": {
+        "return_type": "string",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/JdzqmsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Jdzqpf",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jdzqpf",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/jdzqpf.json"
+        ]
+      }
+    },
+    {
+      "name": "Jdzqsx2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jdzqsx_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Jdzqsx2Procedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -40118,6 +40218,7 @@
       "CUSTOM:Shenbanjianlaohuangyukuangshi"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:Jdzq",
       "~CUSTOM:Tczdg",
       "~CUSTOM:Xfcq",
       "~CUSTOM:Hmzz",
@@ -40638,7 +40739,8 @@
       "CUSTOM:Heiyinq",
       "CUSTOM:Hmzz",
       "CUSTOM:Xfcq",
-      "CUSTOM:Tczdg"
+      "CUSTOM:Tczdg",
+      "CUSTOM:Jdzq"
     ]
   },
   "tab_element_order": {
@@ -41074,7 +41176,8 @@
       "Heiyinq",
       "Hmzz",
       "Xfcq",
-      "Tczdg"
+      "Tczdg",
+      "Jdzq"
     ],
     "CUSTOM:Yuanshifangkuaika": [
       "Yuanshikuangshi",
@@ -43917,7 +44020,8 @@
       "item.primogemcraft.xfcq": "§b西风长枪",
       "item.primogemcraft.tczdg": "§d薙草之稻光",
       "effect.primogemcraft.tczdgxg": "薙草之稻光效果",
-      "item.primogemcraft.qwsksj.description_2": "§e提供的精炼等级视为非叠影器"
+      "item.primogemcraft.qwsksj.description_2": "§e提供的精炼等级视为非叠影器",
+      "item.primogemcraft.jdzq": "§c决斗之枪"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -46653,7 +46757,8 @@
       "item.primogemcraft.xfcq": "§b西风长枪",
       "item.primogemcraft.tczdg": "§d薙草之稻光",
       "effect.primogemcraft.tczdgxg": "薙草之稻光效果",
-      "item.primogemcraft.qwsksj.description_2": "§e提供的精炼等级视为非叠影器"
+      "item.primogemcraft.qwsksj.description_2": "§e提供的精炼等级视为非叠影器",
+      "item.primogemcraft.jdzq": "§c决斗之枪"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -49383,7 +49488,8 @@
       "item.primogemcraft.xfcq": "§b西风长枪",
       "item.primogemcraft.tczdg": "§d薙草之稻光",
       "effect.primogemcraft.tczdgxg": "薙草之稻光效果",
-      "item.primogemcraft.qwsksj.description_2": "§e提供的精炼等级视为非叠影器"
+      "item.primogemcraft.qwsksj.description_2": "§e提供的精炼等级视为非叠影器",
+      "item.primogemcraft.jdzq": "§c决斗之枪"
     }
   },
   "metadata": {
