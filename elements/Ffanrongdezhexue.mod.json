@@ -8,11 +8,13 @@
     "texture": "xinqinliao01",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "『繁荣』的哲学",
     "specialInformation": {
       "fixedValue": [
         "§4战斗时§f有小概率掉落§e摩拉"
-      ]
+      ],
+      "name": "Fazxms"
     },
     "creativeTabs": [
       {

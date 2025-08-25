@@ -11,11 +11,14 @@ import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.Minecraft;
 
 import net.mcreator.ceshi.procedures.FfanrongzhexuemoladiaoluoProcedure;
+import net.mcreator.ceshi.procedures.FazxmsProcedure;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 
 import java.util.List;
@@ -60,7 +63,7 @@ public class FfanrongdezhexueItem extends SwordItem {
 	@Override
 	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
-		FfanrongzhexuemoladiaoluoProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ());
+		FfanrongzhexuemoladiaoluoProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), sourceentity, itemstack);
 		return retval;
 	}
 
@@ -68,6 +71,12 @@ public class FfanrongdezhexueItem extends SwordItem {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.primogemcraft.ffanrongdezhexue.description_0"));
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+		String hoverText = FazxmsProcedure.execute(entity, itemstack);
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 }

@@ -8,11 +8,13 @@
     "texture": "xinzhexue01",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "『勤劳』的哲学",
     "specialInformation": {
       "fixedValue": [
         "§b挖掘时§f有小概率掉落§e摩拉"
-      ]
+      ],
+      "name": "Qlzxms"
     },
     "creativeTabs": [
       {

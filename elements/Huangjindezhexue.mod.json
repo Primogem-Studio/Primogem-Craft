@@ -8,11 +8,13 @@
     "texture": "xinhuangjin01",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "『黄金』的哲学",
     "specialInformation": {
       "fixedValue": [
         "§2耕作时§f有小概率掉落§e摩拉"
-      ]
+      ],
+      "name": "Hjzxms"
     },
     "creativeTabs": [
       {

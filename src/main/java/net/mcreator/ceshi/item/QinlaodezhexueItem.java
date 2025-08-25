@@ -14,11 +14,14 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
 
+import net.mcreator.ceshi.procedures.QlzxmsProcedure;
 import net.mcreator.ceshi.procedures.PpohuaifangkuaisuijimolaProcedure;
 import net.mcreator.ceshi.init.PrimogemcraftModBlocks;
 
@@ -64,7 +67,7 @@ public class QinlaodezhexueItem extends PickaxeItem {
 	@Override
 	public boolean mineBlock(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
 		boolean retval = super.mineBlock(itemstack, world, blockstate, pos, entity);
-		PpohuaifangkuaisuijimolaProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		PpohuaifangkuaisuijimolaProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity, itemstack);
 		return retval;
 	}
 
@@ -72,6 +75,12 @@ public class QinlaodezhexueItem extends PickaxeItem {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.primogemcraft.qinlaodezhexue.description_0"));
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+		String hoverText = QlzxmsProcedure.execute(entity, itemstack);
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 }

@@ -1256,6 +1256,14 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -1395,6 +1403,14 @@
           "src/main/java/net/mcreator/ceshi/procedures/FfanrongzhexuemoladiaoluoProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
           {
             "name": "x",
             "type": "number"
@@ -38528,6 +38544,140 @@
         "return_type": "string",
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/Mlf_msProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Moladlhs",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moladlhs",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/MoladlhsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Zhexuemshs",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zhexuemshs",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "zhi",
+            "type": "string"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/ZhexuemshsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Fazxms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fazxms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/FazxmsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Qlzxms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "qlzxms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/QlzxmsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Hjzxms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hjzxms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/HjzxmsProcedure.java"
         ]
       }
     }
