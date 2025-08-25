@@ -35,7 +35,7 @@
     "immuneToFire": false,
     "blockDropsTier": "IRON",
     "blocksAffected": [],
-    "stayInGridWhenCrafting": true,
+    "stayInGridWhenCrafting": false,
     "damageOnCrafting": true,
     "onItemInUseTick": {
       "name": "Mlgjsx"
