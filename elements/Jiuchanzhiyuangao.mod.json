@@ -8,6 +8,7 @@
     "texture": "jiuchanzhigao_xin_02",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§d纠缠之缘镐",
     "specialInformation": {
       "fixedValue": [
@@ -17,7 +18,8 @@
         "§2有概率掉落§e摩拉§f",
         "§2小概率掉落§b原石",
         "§7每秒至多触发1次"
-      ]
+      ],
+      "name": "Jczygms"
     },
     "creativeTabs": [
       {

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_transform",
   "template": {
-    "item": "primogemcraft:qhmbml"
+    "item": "primogemcraft:qhmbmlys_01"
   },
   "base": {
     "item": "primogemcraft:qinlaodezhexue"

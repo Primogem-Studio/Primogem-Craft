@@ -14,12 +14,15 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
 
 import net.mcreator.ceshi.procedures.JiuchanzhigaosuijidiaoluoProcedure;
+import net.mcreator.ceshi.procedures.JczygmsProcedure;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 
 import java.util.List;
@@ -92,11 +95,12 @@ public class JiuchanzhiyuangaoItem extends PickaxeItem {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.primogemcraft.jiuchanzhiyuangao.description_0"));
-		list.add(Component.translatable("item.primogemcraft.jiuchanzhiyuangao.description_1"));
-		list.add(Component.translatable("item.primogemcraft.jiuchanzhiyuangao.description_2"));
-		list.add(Component.translatable("item.primogemcraft.jiuchanzhiyuangao.description_3"));
-		list.add(Component.translatable("item.primogemcraft.jiuchanzhiyuangao.description_4"));
-		list.add(Component.translatable("item.primogemcraft.jiuchanzhiyuangao.description_5"));
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+		String hoverText = JczygmsProcedure.execute(entity, itemstack);
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 }

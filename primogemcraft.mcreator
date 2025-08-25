@@ -38680,6 +38680,29 @@
           "src/main/java/net/mcreator/ceshi/procedures/HjzxmsProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Jczygms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jczygms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/JczygmsProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
