@@ -38715,6 +38715,19 @@
           "src/main/resources/data/primogemcraft/recipe/myzjpf.json"
         ]
       }
+    },
+    {
+      "name": "Qywuqihsz",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "qywuqihsz",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/QywuqihszProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
