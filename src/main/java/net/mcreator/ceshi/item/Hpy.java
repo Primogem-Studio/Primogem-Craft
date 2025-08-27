@@ -3,6 +3,7 @@ package net.mcreator.ceshi.item;
 import net.hackermdch.pgc.interfaces.UseAlways;
 import net.mcreator.ceshi.procedures.HpymsProcedure;
 import net.mcreator.ceshi.procedures.Hpysx0Procedure;
+import net.mcreator.ceshi.procedures.HpysxProcedure;
 import net.mcreator.ceshi.procedures.JlqhewaiProcedure;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
@@ -55,7 +56,7 @@ public class Hpy extends MaceItem implements UseAlways {
     @Override
     public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
         var ar = super.use(world, entity, hand);
-        HpymsProcedure.execute(entity, ar.getObject());
+        HpysxProcedure.execute(entity, ar.getObject());
         return ar;
     }
 
