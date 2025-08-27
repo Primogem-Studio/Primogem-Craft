@@ -5,6 +5,7 @@ import net.mcreator.ceshi.procedures.Hpysx0Procedure;
 import net.mcreator.ceshi.procedures.JlqhewaiProcedure;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.Entity;
@@ -23,6 +24,7 @@ import net.neoforged.api.distmarker.OnlyIn;
 
 import java.util.List;
 
+import static net.mcreator.ceshi.PrimogemcraftMod.MODID;
 import static net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation.ADD_VALUE;
 
 public class Hpy extends MaceItem {
@@ -41,6 +43,10 @@ public class Hpy extends MaceItem {
                         Attributes.ATTACK_SPEED,
                         new AttributeModifier(BASE_ATTACK_SPEED_ID, -2, ADD_VALUE),
                         EquipmentSlotGroup.MAINHAND
+                ).add(
+                        Attributes.ENTITY_INTERACTION_RANGE,
+                        new AttributeModifier(ResourceLocation.fromNamespaceAndPath(MODID, "hmzz"), 3, ADD_VALUE),
+                        EquipmentSlotGroup.MAINHAND
                 )
                 .build();
     }
@@ -55,7 +61,6 @@ public class Hpy extends MaceItem {
     @Override
     @OnlyIn(Dist.CLIENT)
     public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
-        super.appendHoverText(itemstack, context, list, flag);
         var entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
         var hoverText = HpymsProcedure.execute(entity, itemstack);
         for (var line : hoverText.split("\n")) list.add(Component.literal(line));
@@ -63,7 +68,6 @@ public class Hpy extends MaceItem {
 
     @Override
     public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-        super.inventoryTick(itemstack, world, entity, slot, selected);
         if (selected) Hpysx0Procedure.execute(entity, itemstack);
         JlqhewaiProcedure.execute(entity, itemstack);
     }
