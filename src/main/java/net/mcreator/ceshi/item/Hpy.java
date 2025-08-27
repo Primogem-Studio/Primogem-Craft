@@ -27,7 +27,7 @@ import static net.minecraft.world.entity.ai.attributes.AttributeModifier.Operati
 
 public class Hpy extends MaceItem {
     public Hpy() {
-        super(new Properties().attributes(createCustomAttributes()).stacksTo(1).durability(100).fireResistant());
+        super(new Properties().attributes(createCustomAttributes()).stacksTo(1).durability(2048).fireResistant());
     }
 
     private static ItemAttributeModifiers createCustomAttributes() {
