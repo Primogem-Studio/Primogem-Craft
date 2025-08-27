@@ -38804,10 +38804,6 @@
           {
             "name": "itemstack",
             "type": "itemstack"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ],
         "files": [
@@ -38822,7 +38818,17 @@
       "locked_code": false,
       "registry_name": "hpyms",
       "metadata": {
-        "dependencies": [],
+        "return_type": "string",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/HpymsProcedure.java"
         ]

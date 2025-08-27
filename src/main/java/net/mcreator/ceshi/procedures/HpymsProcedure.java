@@ -15,6 +15,6 @@ public class HpymsProcedure {
 				+ "\u00A7e\u6062\u590D\u4E00\u6B21\uFF0C\u81F3\u591A\u5B58\u50A8\u00A7b" + new java.text.DecimalFormat("##.##\u00A7e\u6B21").format(2 + 1 * (a - 3)) + "\n" + "\u00A76\u00A7l\u00A7n\u6F5C\u884C\u53F3\u952E" + "\n"
 				+ "\u00A7e\u83B7\u5F97\u8DF3\u8DC3\u63D0\u5347\u6548\u679C\uFF0C\u51B7\u537430\u79D2\uFF0C\u8D4B\u4E88\u00A7b" + new java.text.DecimalFormat("##.##\u00A7e\u7EA7\uFF0C\u6301\u7EED\u00A7b").format(5 + 1 * a)
 				+ new java.text.DecimalFormat("##.##\u00A7e\u79D2").format(10 + 2.5 * a) + "\n" + ("\u00A76\u00A7l\u00A7n\u88AB\u52A8" + "\n" + "\u00A7e\u6700\u7EC8\u653B\u51FB\u529B\u63D0\u5347\u00A7b"
-						+ new java.text.DecimalFormat("##.##%").format(0.2 + 0.05 * a) + "\n" + "\u00A7e\u653B\u51FB\u8DDD\u79BB\u63D0\u5347\u00A7b" + new java.text.DecimalFormat("##.##%").format((0.2 + 0.05 * a) * 1.5)));
+						+ new java.text.DecimalFormat("##.##%").format(0.1 + 0.05 * a) + "\n" + "\u00A7e\u653B\u51FB\u8DDD\u79BB\u63D0\u5347\u00A7b" + new java.text.DecimalFormat("##.##%").format((0.1 + 0.05 * a) * 1.5)));
 	}
 }
