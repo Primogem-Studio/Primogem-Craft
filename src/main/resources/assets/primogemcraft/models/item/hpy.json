@@ -1,0 +1,100 @@
+{
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "item/handheld",
+    "textures": {
+      "layer0": "primogemcraft:item/humo"
+    },
+    "display": {
+      "thirdperson_righthand": {
+        "rotation": [
+          -60,
+          260,
+          -40
+        ],
+        "translation": [
+          -2,
+          8,
+          5
+        ],
+        "scale": [
+          2,
+          2,
+          1
+        ]
+      },
+      "thirdperson_lefthand": {
+        "rotation": [
+          -60,
+          -280,
+          40
+        ],
+        "translation": [
+          -3.25,
+          10,
+          6
+        ],
+        "scale": [
+          0,
+          0,
+          0
+        ]
+      },
+      "firstperson_righthand": {
+        "rotation": [
+          0,
+          -90,
+          25
+        ],
+        "translation": [
+          0,
+          3,
+          1
+        ],
+        "scale": [
+          2,
+          2,
+          1
+        ]
+      },
+      "firstperson_lefthand": {
+        "rotation": [
+          0,
+          90,
+          -25
+        ],
+        "translation": [
+          0,
+          3,
+          1
+        ],
+        "scale": [
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "primogemcraft:item/humoi"
+      }
+    },
+    "fixed": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "primogemcraft:item/humoi"
+      }
+    },
+    "ground": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "primogemcraft:item/humoi"
+      }
+    }
+  },
+  "gui_light": "front"
+}
