@@ -1,5 +1,6 @@
 package net.hackermdch.pgc;
 
+import net.hackermdch.pgc.interfaces.UseOnAlways;
 import net.hackermdch.pgc.network.ParticlePacket;
 import net.hackermdch.pgc.network.WishInfoConfiguration;
 import net.hackermdch.pgc.network.WishInfoPacket;
@@ -15,8 +16,10 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterItemDecorationsEvent;
+import net.neoforged.neoforge.common.util.TriState;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.network.event.RegisterConfigurationTasksEvent;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.registries.RegisterEvent;
@@ -68,6 +71,14 @@ public class EventHandler {
         BiConsumer<ItemStack, ItemStack> insert = (point, stack) -> event.insertAfter(point, stack, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         if (event.getTabKey() == PrimogemcraftModTabs.PRIMOGEMCRAFT_EQUIPMENT.getKey()) {
             insert.accept(PrimogemcraftModItems.TCZDG.toStack(), PrimogemcraftModItems.HPY.toStack());
+        }
+    }
+
+    @EventBusSubscriber(modid = MODID)
+    private static class Game {
+        @SubscribeEvent
+        private static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
+            if (event.getItemStack().getItem() instanceof UseOnAlways) event.setUseItem(TriState.TRUE);
         }
     }
 }
