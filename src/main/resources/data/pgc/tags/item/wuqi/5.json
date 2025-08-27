@@ -7,6 +7,10 @@
     "primogemcraft:tczdg",
     "primogemcraft:jslyzh",
     "primogemcraft:hmzz",
+    {
+      "id": "#pgc:wuqi/5/hpy",
+      "required": false
+    },
     "primogemcraft:pyjl"
   ]
 }
