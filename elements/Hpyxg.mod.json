@@ -16,7 +16,15 @@
     "renderStatusInInventory": false,
     "renderStatusInHUD": false,
     "isCuredbyHoney": false,
-    "modifiers": [],
+    "modifiers": [
+      {
+        "attribute": {
+          "value": "STEP_HEIGHT"
+        },
+        "amount": 3.0,
+        "operation": "ADD_VALUE"
+      }
+    ],
     "onActiveTick": {
       "name": "Hpy_xg_sx"
     }

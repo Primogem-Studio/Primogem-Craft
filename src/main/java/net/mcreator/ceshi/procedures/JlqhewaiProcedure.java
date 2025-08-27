@@ -58,7 +58,7 @@ public class JlqhewaiProcedure {
 			attr.apply();
 		}
 		if (stack.getItem() == PrimogemcraftModItems.HPY.get()) {
-			a = 0.1 + 0.05 * b;
+			a = 0.1 + 0.025 * b;
 			attr.add(Attributes.ATTACK_DAMAGE, "bd", a, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, EquipmentSlotGroup.MAINHAND);
 			attr.add(Attributes.ENTITY_INTERACTION_RANGE, "bd", a * 1.5, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, EquipmentSlotGroup.MAINHAND);
 			attr.apply();

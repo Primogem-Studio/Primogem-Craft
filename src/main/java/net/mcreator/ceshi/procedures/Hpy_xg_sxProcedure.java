@@ -27,7 +27,7 @@ public class Hpy_xg_sxProcedure {
 				if (!(entityiterator == entity)) {
 					entityiterator.hurt(ElementDamageSetApplyProcedure.execute(ToElementDamageProcedure.execute(new DamageSource(world.holderOrThrow(DamageTypes.SONIC_BOOM), entityiterator, entity), 1, 6), false),
 							(float) ((entity instanceof LivingEntity _livingEntity1 && _livingEntity1.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE) ? _livingEntity1.getAttribute(Attributes.ATTACK_DAMAGE).getValue() : 0)
-									* (1 + 0.25 * HSjinglianupProcedure.execute(entity, entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))));
+									* (0.5 + 0.125 * HSjinglianupProcedure.execute(entity, entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))));
 				}
 			}
 		}

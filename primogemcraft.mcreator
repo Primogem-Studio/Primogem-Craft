@@ -38729,6 +38729,18 @@
             "type": "itemstack"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -38830,6 +38842,18 @@
         ],
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/HpymsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Hpypf",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "hpypf",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/hpypf.json"
         ]
       }
     }
@@ -41059,7 +41083,8 @@
       "~CUSTOM:Gongsideguguzhong",
       "~CUSTOM:Xiangdanganlao",
       "~CUSTOM:Yiyinhedaletou",
-      "~CUSTOM:Bushizidanhe"
+      "~CUSTOM:Bushizidanhe",
+      "TAG:pgc:wuqi/5/hpy"
     ],
     "BLOCKS:minecraft:slabs": [
       "~CUSTOM:Cangsangshizhuantaijie",
@@ -41186,6 +41211,12 @@
       "CUSTOM:Mmolafu",
       "CUSTOM:Mmolachan",
       "CUSTOM:Molachutou"
+    ],
+    "ITEMS:minecraft:enchantable/weapon": [
+      "TAG:pgc:wuqi/5/hpy"
+    ],
+    "ITEMS:minecraft:enchantable/mace": [
+      "TAG:pgc:wuqi/5/hpy"
     ]
   },
   "tab_element_order": {

@@ -54,8 +54,11 @@ public class Hpy extends MaceItem {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
+        double x = entity.getX();
+        double y = entity.getY();
+        double z = entity.getZ();
         var ar = super.use(world, entity, hand);
-        HpysxProcedure.execute(world, entity, ar.getObject());
+        HpysxProcedure.execute(world, x, y, z, entity, ar.getObject());
         return ar;
     }
 
