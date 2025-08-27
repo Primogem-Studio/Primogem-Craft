@@ -21,7 +21,7 @@ public class HpysxProcedure {
 			if (!(entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(MobEffects.JUMP)) && !net.hackermdch.pgc.Timer.isDone(entity, "hpy_t")) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, (int) (200 + 50 * a), (int) (4 + 1 * a), false, false));
-				net.hackermdch.pgc.Timer.set(entity, (int) (160 - 20 * a), "hpy_t");
+				net.hackermdch.pgc.Timer.set(entity, "hpy_t", (int) (160 - 20 * a));
 			}
 		} else {
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("hpy_bd_j") > 0) {

@@ -20,7 +20,7 @@ public class Timer {
         this.tick = tick;
     }
 
-    public static void set(Entity entity, double name, String tick) {
+    public static void set(Entity entity, String name, int tick) {
         if (!map.containsKey(entity)) map.put(entity, new HashMap<>());
         var timers = map.get(entity);
         timers.put(name, new Timer(tick));

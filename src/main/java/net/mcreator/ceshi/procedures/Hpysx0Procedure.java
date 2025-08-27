@@ -19,7 +19,7 @@ public class Hpysx0Procedure {
 				final double _tagValue = (n + 1);
 				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 			}
-			net.hackermdch.pgc.Timer.set(entity, (int) (160 - 20 * a), "hpy_e");
+			net.hackermdch.pgc.Timer.set(entity, "hpy_e", (int) (160 - 20 * a));
 		}
 	}
 }
