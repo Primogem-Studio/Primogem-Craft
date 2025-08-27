@@ -38,8 +38,10 @@ public class Timer {
         var actions = new ArrayList<Runnable>();
         for (var entry : map.values()) {
             for (var timer : entry.entrySet()) {
-                timer.getValue().tick--;
-                if (timer.getValue().tick <= 0) actions.add(() -> entry.remove(timer.getKey()));
+                var key = timer.getKey();
+                var value = timer.getValue();
+                value.tick--;
+                if (value.tick <= 0) actions.add(() -> entry.remove(key));
             }
         }
         actions.forEach(Runnable::run);
