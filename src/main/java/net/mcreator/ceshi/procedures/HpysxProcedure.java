@@ -33,13 +33,13 @@ public class HpysxProcedure {
 					final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("hpy_bd_j") - 1);
 					CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 				}
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.HPYXG, (int) (5 + 1 * a), 0, false, false));
 				boolean d = entity.onGround();
 				var f = (2 + 0.5 * a) * (d ? 2 : 1);
 				Vec3 lookAngle = entity.getLookAngle();
 				Vec3 movement = new Vec3(lookAngle.x * f, d ? 0 : 0.2, lookAngle.z * f);
 				entity.setDeltaMovement(movement);
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.HPYXG, (int) (5 + 1 * a), 0, false, false));
 			}
 		}
 	}
