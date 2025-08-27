@@ -1,6 +1,7 @@
 package net.mcreator.ceshi.procedures;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
@@ -12,16 +13,18 @@ import net.minecraft.core.component.DataComponents;
 import net.mcreator.ceshi.init.PrimogemcraftModMobEffects;
 
 public class HpysxProcedure {
-	public static void execute(Entity entity, ItemStack itemstack) {
+	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		double a = 0;
 		a = HSjinglianupProcedure.execute(entity, itemstack);
 		if (entity.isShiftKeyDown()) {
-			if (!(entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(MobEffects.JUMP)) && net.hackermdch.pgc.Timer.isDone(entity, "hpy_t")) {
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, (int) (200 + 50 * a), (int) (4 + 1 * a), false, false));
-				net.hackermdch.pgc.Timer.set(entity, "hpy_t", (int) (160 - 20 * a));
+			if (!world.isClientSide()) {
+				if (!(entity instanceof LivingEntity _livEnt2 && _livEnt2.hasEffect(MobEffects.JUMP)) && net.hackermdch.pgc.Timer.isDone(entity, "hpy_t")) {
+					net.hackermdch.pgc.Timer.set(entity, "hpy_t", 600);
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, (int) (200 + 50 * a), (int) (4 + 1 * a), false, false));
+				}
 			}
 		} else {
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("hpy_bd_j") > 0) {

@@ -55,7 +55,7 @@ public class Hpy extends MaceItem {
     @Override
     public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
         var ar = super.use(world, entity, hand);
-        HpysxProcedure.execute(entity, ar.getObject());
+        HpysxProcedure.execute(world,entity, ar.getObject());
         return ar;
     }
 
@@ -69,7 +69,7 @@ public class Hpy extends MaceItem {
 
     @Override
     public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-        if (selected) Hpysx0Procedure.execute(entity, itemstack);
+        if (selected) Hpysx0Procedure.execute(world,entity, itemstack);
         JlqhewaiProcedure.execute(entity, itemstack);
     }
 }
