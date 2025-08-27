@@ -9,7 +9,8 @@ public class HpymsProcedure {
 			return "";
 		double a = 0;
 		a = HSjinglianupProcedure.execute(entity, itemstack);
-		return MSHSwuqi00Procedure.execute(entity, itemstack, "\u00A76\u00A7l\u00A7n\u57FA\u7840\u6280\u80FD" + "\n" + "\u00A7e\u5177\u6709\u4E0E\u91CD\u9524\u4E00\u81F4\u7684\u653B\u51FB\u6A21\u7EC4" + "\n" + "\u00A76\u00A7l\u00A7n\u53F3\u952E"
+		return MSHSwuqi00Procedure.execute(entity, itemstack, "\u00A76\u00A7l\u00A7n\u57FA\u7840\u6280\u80FD" + "\n" + "\u00A7e\u5177\u6709\u4E0E\u91CD\u9524\u4E00\u81F4\u7684\u653B\u51FB\u6A21\u7EC4" + "\n"
+				+ ("\u00A76\u00A7l\u00A7n\u53F3\u952E" + "\n")
 				+ "\u00A7e\u5411\u524D\u65B9\u79FB\u52A8\u4E00\u6BB5\u8DDD\u79BB\uFF0C\u53D7\u7CBE\u70BC\u7B49\u7EA7\u5F71\u54CD\uFF0C\u540C\u65F6\u5BF9\u63A5\u89E6\u5230\u4EFB\u4F55\u751F\u7269\u9020\u6210\u4E00\u6B21\u7B49\u540C\u4E8E\u5F53\u524D\u653B\u51FB\u529B\u00A7b"
 				+ new java.text.DecimalFormat("##.##%").format(1 + 0.25 * a) + "\u00A7e\u7684\u7279\u6B8A\u4F24\u5BB3\uFF0C\u8BE5\u6548\u679C\u00A7b" + new java.text.DecimalFormat("##.##\u00A7e\u79D2").format(8 - 1 * a)
 				+ "\u00A7e\u6062\u590D\u4E00\u6B21\uFF0C\u81F3\u591A\u5B58\u50A8\u00A7b" + new java.text.DecimalFormat("##.##\u00A7e\u6B21").format(2 + 1 * (a - 3)) + "\n" + "\u00A76\u00A7l\u00A7n\u6F5C\u884C\u53F3\u952E" + "\n"
