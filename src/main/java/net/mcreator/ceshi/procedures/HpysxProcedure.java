@@ -3,7 +3,6 @@ package net.mcreator.ceshi.procedures;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
@@ -19,11 +18,10 @@ public class HpysxProcedure {
 		double a = 0;
 		a = HSjinglianupProcedure.execute(entity, itemstack);
 		if (entity.isShiftKeyDown()) {
-			if (!(entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(MobEffects.JUMP)) && !(entity instanceof Player _plrCldCheck3 && _plrCldCheck3.getCooldowns().isOnCooldown(itemstack.getItem()))) {
+			if (!(entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(MobEffects.JUMP)) && !net.hackermdch.pgc.Timer.isDone(entity, "hpy_t")) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, (int) (200 + 50 * a), (int) (4 + 1 * a), false, false));
-				if (entity instanceof Player _player)
-					_player.getCooldowns().addCooldown(itemstack.getItem(), 300);
+				net.hackermdch.pgc.Timer.set(entity, (int) (160 - 20 * a), "hpy_t");
 			}
 		} else {
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("hpy_bd_j") > 0) {
