@@ -1,4 +1,9 @@
 package net.mcreator.ceshi.item;
 
-public class Hpy {
+import net.minecraft.world.item.MaceItem;
+
+public class Hpy extends MaceItem {
+    public Hpy() {
+        super(new Properties());
+    }
 }

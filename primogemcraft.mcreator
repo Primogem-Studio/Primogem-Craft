@@ -44360,7 +44360,8 @@
       "item.primogemcraft.tczdg": "§d薙草之稻光",
       "effect.primogemcraft.tczdgxg": "薙草之稻光效果",
       "item.primogemcraft.qwsksj.description_2": "§e提供的精炼等级视为非叠影器",
-      "item.primogemcraft.jdzq": "§c决斗之枪"
+      "item.primogemcraft.jdzq": "§c决斗之枪",
+      "item.primogemcraft.hpy": "§a和璞鸢"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -47097,7 +47098,8 @@
       "item.primogemcraft.tczdg": "§d薙草之稻光",
       "effect.primogemcraft.tczdgxg": "薙草之稻光效果",
       "item.primogemcraft.qwsksj.description_2": "§e提供的精炼等级视为非叠影器",
-      "item.primogemcraft.jdzq": "§c决斗之枪"
+      "item.primogemcraft.jdzq": "§c决斗之枪",
+      "item.primogemcraft.hpy": "§a和璞鸢"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -49828,7 +49830,8 @@
       "item.primogemcraft.tczdg": "§d薙草之稻光",
       "effect.primogemcraft.tczdgxg": "薙草之稻光效果",
       "item.primogemcraft.qwsksj.description_2": "§e提供的精炼等级视为非叠影器",
-      "item.primogemcraft.jdzq": "§c决斗之枪"
+      "item.primogemcraft.jdzq": "§c决斗之枪",
+      "item.primogemcraft.hpy": "§a和璞鸢"
     }
   },
   "metadata": {

@@ -3,7 +3,7 @@
   "base": {
     "parent": "item/handheld",
     "textures": {
-      "layer0": "primogemcraft:item/humo"
+      "layer0": "primogemcraft:item/hpy"
     },
     "display": {
       "thirdperson_righthand": {
@@ -80,19 +80,19 @@
     "gui": {
       "parent": "item/generated",
       "textures": {
-        "layer0": "primogemcraft:item/humoi"
+        "layer0": "primogemcraft:item/hpyi"
       }
     },
     "fixed": {
       "parent": "item/generated",
       "textures": {
-        "layer0": "primogemcraft:item/humoi"
+        "layer0": "primogemcraft:item/hpyi"
       }
     },
     "ground": {
       "parent": "item/generated",
       "textures": {
-        "layer0": "primogemcraft:item/humoi"
+        "layer0": "primogemcraft:item/hpyi"
       }
     }
   },

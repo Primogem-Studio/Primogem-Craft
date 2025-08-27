@@ -1,6 +1,6 @@
 /*
- *    MCreator note: This file will be REGENERATED on each build.
- */
+*    MCreator note: This file will be REGENERATED on each build.
+*/
 package net.mcreator.ceshi.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -394,6 +394,7 @@ import net.mcreator.ceshi.item.HqhuoItem;
 import net.mcreator.ceshi.item.HqfengItem;
 import net.mcreator.ceshi.item.HqcaoItem;
 import net.mcreator.ceshi.item.HqbingItem;
+import net.mcreator.ceshi.item.Hpy;
 import net.mcreator.ceshi.item.HmzzItem;
 import net.mcreator.ceshi.item.HhaokandelajiItem;
 import net.mcreator.ceshi.item.HeiyinqItem;
@@ -1092,8 +1093,9 @@ public class PrimogemcraftModItems {
 	public static final DeferredItem<Item> XFCQ = REGISTRY.register("xfcq", XfcqItem::new);
 	public static final DeferredItem<Item> TCZDG = REGISTRY.register("tczdg", TczdgItem::new);
 	public static final DeferredItem<Item> JDZQ = REGISTRY.register("jdzq", JdzqItem::new);
-
 	// Start of user code block custom items
+	public static final DeferredItem<Item> HPY = REGISTRY.register("hpy", Hpy::new);
+
 	// End of user code block custom items
 	@SubscribeEvent
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
