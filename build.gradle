@@ -11,14 +11,18 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 neoForge {
     version = "21.1.176"
 
+    parchment {
+        mappingsVersion = project.parchment_mappings_version
+        minecraftVersion = project.parchment_minecraft_version
+    }
+
     runs {
         client {
             client()
 
             def mcreatorJvmOptions = System.getenv('MCREATOR_JVM_OPTIONS')
             if (mcreatorJvmOptions) {
-                mcreatorJvmOptions.split("\\s+").findAll { it.trim() }.each { arg ->
-                    jvmArgument(arg)
+                mcreatorJvmOptions.split("\\s+").findAll { it.trim() }.each { arg -> jvmArgument(arg)
                 }
             }
         }
@@ -36,54 +40,54 @@ neoForge {
         mcreator {
             sourceSet sourceSets.main
         }
-    } 
-    accessTransformers { 
-        from "src/main/resources/pgc.at" 
-    } 
-} 
- 
-repositories { 
-    exclusiveContent { 
-        forRepository { 
-            maven { 
-                url "https://api.modrinth.com/maven" 
-            } 
-        } 
-        filter { 
-            includeGroup "maven.modrinth" 
-        } 
-    } 
-    exclusiveContent { 
-        forRepository { 
-            maven { 
-                url "https://raw.githubusercontent.com/hackermdch/maven-repo/master/repository" 
-            } 
-        } 
-        filter { 
-            includeGroup "com.tacz" 
-        } 
-    } 
-    maven { url "https://maven.shedaniel.me/" } 
-} 
- 
+    }
+    accessTransformers {
+        from "src/main/resources/pgc.at"
+    }
+}
+
+repositories {
+    exclusiveContent {
+        forRepository {
+            maven {
+                url "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
+    exclusiveContent {
+        forRepository {
+            maven {
+                url "https://raw.githubusercontent.com/hackermdch/maven-repo/master/repository"
+            }
+        }
+        filter {
+            includeGroup "com.tacz"
+        }
+    }
+    maven { url "https://maven.shedaniel.me/" }
+}
+
 /* 
  * implementation = true 
  * compileOnly = false 
- */ 
-dependencies { 
-    compileOnly "maven.modrinth:genshincraft:2.9.0" 
-    implementation "com.tacz:tacz-neoforge:1.1.4-snapshot-0417" 
-    api "me.shedaniel:RoughlyEnoughItems-neoforge:16.0.799" 
+ */
+dependencies {
+    compileOnly "maven.modrinth:genshincraft:2.9.0"
+    implementation "com.tacz:tacz-neoforge:1.1.4-snapshot-0417"
+    api "me.shedaniel:RoughlyEnoughItems-neoforge:16.0.799"
 }
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
-        dependsOn overwriteJava 
-} 
- 
-tasks.register('overwriteJava', Copy) { 
-    from 'overwrite/src/main/java' 
-    into 'src/main/java' 
+    dependsOn overwriteJava
+}
+
+tasks.register('overwriteJava', Copy) {
+    from 'overwrite/src/main/java'
+    into 'src/main/java'
 }
 
 apply from: 'mcreator.gradle'
