@@ -7184,20 +7184,12 @@
         ],
         "dependencies": [
           {
-            "name": "x",
-            "type": "number"
+            "name": "entity",
+            "type": "entity"
           },
           {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
+            "name": "itemstack",
+            "type": "itemstack"
           }
         ]
       }
@@ -38728,6 +38720,113 @@
           "src/main/java/net/mcreator/ceshi/procedures/QywuqihszProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Hpysx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hpysx",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/HpysxProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Hpyxg",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hpyxg",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ceshi/potion/HpyxgMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "Hpy_xg_sx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hpy_xg_sx",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Hpy_xg_sxProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Hpysx0",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hpysx_0",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Hpysx0Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Hpyms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hpyms",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/HpymsProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -44363,7 +44462,8 @@
       "effect.primogemcraft.tczdgxg": "薙草之稻光效果",
       "item.primogemcraft.qwsksj.description_2": "§e提供的精炼等级视为非叠影器",
       "item.primogemcraft.jdzq": "§c决斗之枪",
-      "item.primogemcraft.hpy": "§a和璞鸢"
+      "item.primogemcraft.hpy": "§a和璞鸢",
+      "effect.primogemcraft.hpyxg": "和璞鸢效果"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -47101,7 +47201,8 @@
       "effect.primogemcraft.tczdgxg": "薙草之稻光效果",
       "item.primogemcraft.qwsksj.description_2": "§e提供的精炼等级视为非叠影器",
       "item.primogemcraft.jdzq": "§c决斗之枪",
-      "item.primogemcraft.hpy": "§a和璞鸢"
+      "item.primogemcraft.hpy": "§a和璞鸢",
+      "effect.primogemcraft.hpyxg": "和璞鸢效果"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -49833,7 +49934,8 @@
       "effect.primogemcraft.tczdgxg": "薙草之稻光效果",
       "item.primogemcraft.qwsksj.description_2": "§e提供的精炼等级视为非叠影器",
       "item.primogemcraft.jdzq": "§c决斗之枪",
-      "item.primogemcraft.hpy": "§a和璞鸢"
+      "item.primogemcraft.hpy": "§a和璞鸢",
+      "effect.primogemcraft.hpyxg": "和璞鸢效果"
     }
   },
   "metadata": {

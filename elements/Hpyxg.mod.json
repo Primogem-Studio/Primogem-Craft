@@ -1,0 +1,24 @@
+{
+  "_fv": 79,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "和璞鸢效果",
+    "icon": "djppxianzhi",
+    "color": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "onAddedSound": {
+      "value": ""
+    },
+    "isInstant": false,
+    "mobEffectCategory": "NEUTRAL",
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": false,
+    "isCuredbyHoney": false,
+    "modifiers": [],
+    "onActiveTick": {
+      "name": "Hpy_xg_sx"
+    }
+  }
+}

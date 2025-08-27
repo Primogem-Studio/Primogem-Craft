@@ -73,6 +73,7 @@ import net.mcreator.ceshi.potion.Jdsbcf1xgMobEffect;
 import net.mcreator.ceshi.potion.Jdsbcf0xgMobEffect;
 import net.mcreator.ceshi.potion.HtdzMobEffect;
 import net.mcreator.ceshi.potion.HslggzfuzhipinMobEffect;
+import net.mcreator.ceshi.potion.HpyxgMobEffect;
 import net.mcreator.ceshi.potion.HeisenlinggzMobEffect;
 import net.mcreator.ceshi.potion.GuoquMobEffect;
 import net.mcreator.ceshi.potion.GouyuMobEffect;
@@ -151,6 +152,7 @@ public class PrimogemcraftModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> JINGU = REGISTRY.register("jingu", () -> new JinguMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> CYST = REGISTRY.register("cyst", () -> new CystMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> TCZDGXG = REGISTRY.register("tczdgxg", () -> new TczdgxgMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> HPYXG = REGISTRY.register("hpyxg", () -> new HpyxgMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
