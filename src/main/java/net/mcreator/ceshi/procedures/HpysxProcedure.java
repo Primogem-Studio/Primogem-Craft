@@ -6,6 +6,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -16,6 +17,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.ceshi.init.PrimogemcraftModMobEffects;
+import net.mcreator.ceshi.init.PrimogemcraftModItems;
 
 public class HpysxProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
@@ -41,10 +43,20 @@ public class HpysxProcedure {
 		} else {
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("hpy_bd_j") > 0) {
 				Hpy_xg_sxProcedure.execute(world, x, y, z, entity);
-				{
-					final String _tagName = "hpy_bd_j";
-					final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("hpy_bd_j") - 1);
-					CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
+				if (!world.isClientSide()) {
+					{
+						final String _tagName = "hpy_bd_j";
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("hpy_bd_j") - 1);
+						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
+					}
+					boolean xi = (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == PrimogemcraftModItems.SCMJ_HELMET.get();
+					{
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse(xi ? "primogemcraft:xingxingxing" : "item.trident.throw")), SoundSource.PLAYERS, xi ? 5 : 1, 1);
+							}
+						}
+					}
 				}
 				boolean d = entity.onGround();
 				var f = (2 + 0.2 * a) * (d ? 2 : 1);
@@ -53,13 +65,6 @@ public class HpysxProcedure {
 				Vec3 lookAngle = entity.getLookAngle();
 				Vec3 movement = new Vec3(lookAngle.x * f, d ? 0 : 0.2, lookAngle.z * f);
 				entity.setDeltaMovement(movement);
-				if (world instanceof Level _level) {
-					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.trident.throw")), SoundSource.PLAYERS, 1, 1);
-					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.trident.throw")), SoundSource.PLAYERS, 1, 1, false);
-					}
-				}
 			}
 		}
 	}

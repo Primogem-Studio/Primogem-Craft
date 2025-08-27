@@ -49,4 +49,5 @@ public class PrimogemcraftModSounds {
 	public static final DeferredHolder<SoundEvent, SoundEvent> HH_CHAI_0 = REGISTRY.register("hh_chai_0", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("primogemcraft", "hh_chai_0")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> HH_CHAI_1 = REGISTRY.register("hh_chai_1", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("primogemcraft", "hh_chai_1")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> BHMG_Y = REGISTRY.register("bhmg_y", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("primogemcraft", "bhmg_y")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> XINGXINGXING = REGISTRY.register("xingxingxing", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("primogemcraft", "xingxingxing")));
 }

@@ -296,5 +296,14 @@
         "stream": false
       }
     ]
+  },
+  "xingxingxing": {
+    "subtitle": "subtitles.xingxingxing",
+    "sounds": [
+      {
+        "name": "primogemcraft:xingxing",
+        "stream": false
+      }
+    ]
   }
 }
