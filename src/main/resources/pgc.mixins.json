@@ -6,11 +6,9 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "AttributeUtilMixin",
-    "InventoryMixin",
-    "ServerPlayerGameModeMixin"
+    "InventoryMixin"
   ],
   "client": [
-    "MultiPlayerGameModeMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -1,6 +1,5 @@
 package net.mcreator.ceshi.item;
 
-import net.hackermdch.pgc.interfaces.UseAlways;
 import net.mcreator.ceshi.procedures.HpymsProcedure;
 import net.mcreator.ceshi.procedures.Hpysx0Procedure;
 import net.mcreator.ceshi.procedures.HpysxProcedure;
@@ -29,7 +28,7 @@ import java.util.List;
 import static net.mcreator.ceshi.PrimogemcraftMod.MODID;
 import static net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation.ADD_VALUE;
 
-public class Hpy extends MaceItem implements UseAlways {
+public class Hpy extends MaceItem {
     public Hpy() {
         super(new Properties().attributes(createCustomAttributes()).stacksTo(1).durability(2048).fireResistant());
     }
