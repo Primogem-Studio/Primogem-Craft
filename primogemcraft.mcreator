@@ -39620,7 +39620,7 @@
       "CUSTOM:Zizaiqiao",
       "CUSTOM:Zizaichu",
       "CUSTOM:Tkzr",
-      "TAG:pgc:wuqi/5/hpy"
+      "Items.HePuYuan"
     ],
     "ENTITIES:pgc:qiyuan": [
       "CUSTOM:QQyuanchuzi01",
@@ -39868,7 +39868,7 @@
       "CUSTOM:Pyjl",
       "CUSTOM:Hmzz",
       "CUSTOM:Tczdg",
-      "TAG:pgc:wuqi/5/hpy"
+      "Items.HePuYuan"
     ],
     "ITEMS:pgc:prayer_core": [
       "TAG:pgc:prayer_core_x1",
@@ -41093,7 +41093,7 @@
       "~CUSTOM:Xiangdanganlao",
       "~CUSTOM:Yiyinhedaletou",
       "~CUSTOM:Bushizidanhe",
-      "TAG:pgc:wuqi/5/hpy"
+      "Items.HePuYuan"
     ],
     "BLOCKS:minecraft:slabs": [
       "~CUSTOM:Cangsangshizhuantaijie",
@@ -41210,7 +41210,7 @@
       "CUSTOM:Xfcq",
       "CUSTOM:Tczdg",
       "CUSTOM:Jdzq",
-      "TAG:pgc:wuqi/5/hpy"
+      "Items.HePuYuan"
     ],
     "ITEMS:pgc:wuqi/gongju": [
       "CUSTOM:Jiuchanzhiyuangao",
@@ -41222,10 +41222,10 @@
       "CUSTOM:Molachutou"
     ],
     "ITEMS:minecraft:enchantable/weapon": [
-      "TAG:pgc:wuqi/5/hpy"
+      "Items.HePuYuan"
     ],
     "ITEMS:minecraft:enchantable/mace": [
-      "TAG:pgc:wuqi/5/hpy"
+      "Items.HePuYuan"
     ]
   },
   "tab_element_order": {

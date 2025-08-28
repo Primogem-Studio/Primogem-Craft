@@ -6,12 +6,9 @@
     "primogemcraft:zizaizuanshijian",
     "primogemcraft:zizaichu",
     "primogemcraft:zizaihejinjian",
-    {
-      "id": "#pgc:wuqi/5/hpy",
-      "required": false
-    },
     "primogemcraft:zizaitiejian",
     "primogemcraft:zizgao",
-    "primogemcraft:zizaifu"
+    "primogemcraft:zizaifu",
+    "primogemcraft:hpy"
   ]
 }
