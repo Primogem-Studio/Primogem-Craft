@@ -42,7 +42,7 @@
     "immuneToFire": true,
     "blockDropsTier": "NETHERITE",
     "blocksAffected": [],
-    "stayInGridWhenCrafting": true,
+    "stayInGridWhenCrafting": false,
     "damageOnCrafting": true,
     "onBlockDestroyedWithTool": {
       "name": "Jiuchanzhigaosuijidiaoluo"
