@@ -1,0 +1,14 @@
+{
+  "id": "subtempplugin1756372191512",
+  "supportedversions": [
+    202500299999,
+    2025002
+  ],
+  "weight": 0,
+  "info": {
+    "name": "SubTempPlugin1756372191512",
+    "version": "1.0",
+    "description": "Child plugin 1756372191512",
+    "author": "cdc12345,You"
+  }
+}
