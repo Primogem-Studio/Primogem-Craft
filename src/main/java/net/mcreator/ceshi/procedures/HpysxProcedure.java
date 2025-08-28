@@ -58,13 +58,12 @@ public class HpysxProcedure {
 						}
 					}
 				}
-				boolean d = entity.onGround();
+				var d = entity.onGround();
 				var f = (2 + 0.2 * a) * (d ? 2 : 1);
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.HPYXG, (int) (d ? 10 : 6), 0, false, false));
-				Vec3 lookAngle = entity.getLookAngle();
-				Vec3 movement = new Vec3(lookAngle.x * f, d ? 0 : 0.2, lookAngle.z * f);
-				entity.setDeltaMovement(movement);
+				var dir = Vec3.directionFromRotation(0, entity.getYRot());
+				entity.setDeltaMovement(new Vec3(dir.x * f, d ? 0 : 0.2, dir.z * f));
 			}
 		}
 	}
