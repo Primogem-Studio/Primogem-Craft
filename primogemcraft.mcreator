@@ -41226,6 +41226,9 @@
     ],
     "ITEMS:minecraft:enchantable/mace": [
       "Items.HePuYuan"
+    ],
+    "ITEMS:minecraft:enchantable/sharp_weapon": [
+      "Items.HePuYuan"
     ]
   },
   "tab_element_order": {
