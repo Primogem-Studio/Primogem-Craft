@@ -13,7 +13,7 @@ import net.neoforged.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
 class HpyOverlayer implements LayeredDraw.Layer {
-    private static final Component[] com = {Component.literal("◆"), Component.literal("◆◆"), Component.literal("◆◆◆")};
+    private static final Component[] com = {Component.literal("◆"), Component.literal("◆◆"), Component.literal("◆◆◆"), Component.literal("◆◆◆◆"), Component.literal("◆◆◆◆◆")};
 
     @Override
     public void render(GuiGraphics graphics, DeltaTracker deltaTracker) {
@@ -23,7 +23,7 @@ class HpyOverlayer implements LayeredDraw.Layer {
         if (stack.getItem() != PrimogemcraftModItems.HPY.get()) return;
         var font = Minecraft.getInstance().font;
         var count = (int) stack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("hpy_bd_j");
-        if (count < 1 || count > 3) return;
+        if (count < 1 || count > 5) return;
         var text = com[count - 1];
         var spx = graphics.guiWidth() / 2f - font.width(text) / 2f;
         var spy = graphics.guiHeight() - 39;

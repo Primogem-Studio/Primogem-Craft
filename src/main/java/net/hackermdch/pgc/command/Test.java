@@ -19,7 +19,7 @@ public class Test {
                 if (it.is(tag)) {
                     CustomData.update(DataComponents.CUSTOM_DATA, it, t -> {
                         t.putDouble("deng_ji", 89);
-                        t.putDouble("jing_lian", 4);
+                        t.putDouble("jing_lian", 7);
                     });
                     c.getSource().sendSuccess(() -> Component.literal("已强化至最大"), true);
                     return 0;
