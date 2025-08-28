@@ -49,13 +49,13 @@ public class HpysxProcedure {
 						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("hpy_bd_j") - 1);
 						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 					}
-					boolean xi = (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == PrimogemcraftModItems.SCMJ_HELMET.get();
-					{
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse(xi ? "primogemcraft:xingxingxing" : "item.trident.throw")), SoundSource.PLAYERS, xi ? 5 : 1, 1);
-							}
-						}
+					var xi = (entity instanceof LivingEntity le ? le.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == PrimogemcraftModItems.SCMJ_HELMET.get();
+					if (!world.isClientSide()) {
+						world.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getOptional(ResourceLocation.parse(xi ? "primogemcraft:xingxingxing" : "item.trident.throw")).orElseThrow(), SoundSource.PLAYERS, xi ? 5 : 1,
+								1);
+					}
+					if (net.hackermdch.pgc.Timer.isDone(entity, "hpy_e")) {
+						net.hackermdch.pgc.Timer.set(entity, "hpy_e", 160 - 20 * (int) HSjinglianupProcedure.execute(entity, itemstack));
 					}
 				}
 				var d = entity.onGround();

@@ -21,7 +21,7 @@ public class HpymsProcedure {
 				+ new java.text.DecimalFormat("##.##%").format(0.5 + 0.125 * a) + "\u00A7e\u7684\u7279\u6B8A\u4F24\u5BB3\uFF0C\u8BE5\u6548\u679C\u00A7b" + new java.text.DecimalFormat("##.##\u00A7e\u79D2").format(8 - 1 * a)
 				+ "\u00A7e\u6062\u590D\u4E00\u6B21\uFF0C\u81F3\u591A\u5B58\u50A8\u00A7b" + new java.text.DecimalFormat("##.##\u00A7e\u6B21").format(2 + (a > 3 ? 1 * (a - 3) : 0))
 				+ ("\n" + ("\u00A7e\u53F3\u952E\u79FB\u52A8\u65F6\u6309\u4F4F\u00A7b W \u00A7e\u53EF\u4EE5\u8D8A\u8FC7\u81F3\u591A3\u683C\u65B9\u5757\u7684\u969C\u788D" + "\n" + "\u00A77\u5F53\u524D\u5B58\u50A8\uFF1A\u00A7b"
-						+ new java.text.DecimalFormat("").format(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("hpy_bd_j") + (net.hackermdch.pgc.Timer.isDone(entity, s1) ? 1 : 0))) + "\n")
+						+ new java.text.DecimalFormat("").format(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("hpy_bd_j"))) + "\n")
 				+ "\u00A76\u00A7l\u00A7n\u6F5C\u884C\u53F3\u952E" + "\n" + "\u00A7e\u83B7\u5F97\u8DF3\u8DC3\u63D0\u5347\u6548\u679C\uFF0C\u51B7\u537430\u79D2\uFF0C\u8D4B\u4E88\u00A7b"
 				+ new java.text.DecimalFormat("##.##\u00A7e\u7EA7\uFF0C\u6301\u7EED\u00A7b").format(5 + 1 * a) + new java.text.DecimalFormat("##.##\u00A7e\u79D2").format(10 + 2.5 * a)
 				+ ("\n" + ("\u00A77\u5F53\u524D\u72B6\u6001\uFF1A"

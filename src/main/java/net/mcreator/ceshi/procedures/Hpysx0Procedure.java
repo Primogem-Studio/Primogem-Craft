@@ -16,8 +16,8 @@ public class Hpysx0Procedure {
 		if (!world.isClientSide()) {
 			a = HSjinglianupProcedure.execute(entity, itemstack);
 			n = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("hpy_bd_j");
-			s1 = "hpy_e_" + new java.text.DecimalFormat("").format(a);
-			if (n < 1 + (a > 3 ? 1 * (a - 3) : 0) && net.hackermdch.pgc.Timer.isDone(entity, s1)) {
+			s1 = "hpy_e";
+			if (n < 2 + (a > 3 ? a - 3 : 1) && net.hackermdch.pgc.Timer.isDone(entity, s1)) {
 				{
 					final String _tagName = "hpy_bd_j";
 					final double _tagValue = (n + 1);
