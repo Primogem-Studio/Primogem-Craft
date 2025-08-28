@@ -28,7 +28,7 @@
         "attribute": {
           "value": "ENTITY_GRAVITY"
         },
-        "amount": -1.0,
+        "amount": -0.9,
         "operation": "ADD_MULTIPLIED_TOTAL"
       }
     ],

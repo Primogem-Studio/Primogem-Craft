@@ -24,7 +24,7 @@ public class HpyxgMobEffect extends MobEffect {
 	public HpyxgMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 		this.addAttributeModifier(Attributes.STEP_HEIGHT, ResourceLocation.fromNamespaceAndPath(PrimogemcraftMod.MODID, "effect.hpyxg_0"), 3, AttributeModifier.Operation.ADD_VALUE);
-		this.addAttributeModifier(Attributes.GRAVITY, ResourceLocation.fromNamespaceAndPath(PrimogemcraftMod.MODID, "effect.hpyxg_1"), -1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
+		this.addAttributeModifier(Attributes.GRAVITY, ResourceLocation.fromNamespaceAndPath(PrimogemcraftMod.MODID, "effect.hpyxg_1"), -0.9, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
 	}
 
 	@Override
