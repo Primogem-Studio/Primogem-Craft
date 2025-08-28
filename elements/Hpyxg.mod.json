@@ -23,6 +23,13 @@
         },
         "amount": 3.0,
         "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "ENTITY_GRAVITY"
+        },
+        "amount": -1.0,
+        "operation": "ADD_MULTIPLIED_TOTAL"
       }
     ],
     "onActiveTick": {
