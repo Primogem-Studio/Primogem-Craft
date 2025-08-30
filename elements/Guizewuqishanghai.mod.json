@@ -7,6 +7,6 @@
     "description": "影响强化后的武器数值",
     "category": "PLAYER",
     "defaultValueLogic": false,
-    "defaultValueNumber": 10
+    "defaultValueNumber": 9
   }
 }
