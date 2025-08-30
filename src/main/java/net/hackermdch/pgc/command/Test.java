@@ -22,8 +22,8 @@ public class Test {
                     var level = IntegerArgumentType.getInteger(c, "level");
                     var qua = IntegerArgumentType.getInteger(c, "qua");
                     CustomData.update(DataComponents.CUSTOM_DATA, it, t -> {
-                        t.putDouble("deng_ji", level - 99);
-                        t.putDouble("jing_lian", qua - 6);
+                        t.putDouble("deng_ji", level - 1);
+                        t.putDouble("jing_lian", qua - 1);
                     });
                     WuqishuaxinProcedure.execute(p.level(), p, it);
                     c.getSource().sendSuccess(() -> Component.literal("已设置至：精炼" + qua + "等级" + level), true);
