@@ -13,15 +13,14 @@ authors="Pepper\u67D0\u4EBA, hackerm\u5927\u795E, MCreator"
 description="\u8FD9\u662F\u4E00\u4E2A\u65E0\u5398\u5934\u7684\u5A31\u4E50\u6027mod\uFF0C\u5305\u542B\u4E00\u4E9B\u7C73\u6E38\u7269\u54C1\u548C\u6897"
 
 # Start of user code block mod configuration
-[[mixins]]
-config = "pgc.mixins.json"
-
 [[accessTransformers]]
 file = "pgc.at"
 # End of user code block mod configuration
 
 
 # Start of user code block custom mixins
+[[mixins]]
+config = "pgc.mixins.json"
 # End of user code block custom mixins
 
 [[dependencies.primogemcraft]]
