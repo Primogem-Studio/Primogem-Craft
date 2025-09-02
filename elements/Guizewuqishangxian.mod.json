@@ -7,6 +7,6 @@
     "description": "最大强化等级",
     "category": "PLAYER",
     "defaultValueLogic": false,
-    "defaultValueNumber": 99
+    "defaultValueNumber": 89
   }
 }

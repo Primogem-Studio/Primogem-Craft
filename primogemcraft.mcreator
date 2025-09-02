@@ -38856,6 +38856,33 @@
           "src/main/resources/data/primogemcraft/recipe/hpypf.json"
         ]
       }
+    },
+    {
+      "name": "WuqidengjjishangxianHS",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wuqidengjjishangxian_hs",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/WuqidengjjishangxianHSProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

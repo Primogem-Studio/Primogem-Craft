@@ -29,7 +29,7 @@ public class PrimogemcraftModGameRules {
 		JINYONGNANG = GameRules.register("jinyongnang", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
 		GUIZESUIJISHIJIAN = GameRules.register("guizesuijishijian", GameRules.Category.SPAWNING, GameRules.IntegerValue.create(100));
 		GUIZESHIJIANXIANZHI = GameRules.register("guizeshijianxianzhi", GameRules.Category.SPAWNING, GameRules.IntegerValue.create(5));
-		GUIZEWUQISHANGXIAN = GameRules.register("guizewuqishangxian", GameRules.Category.PLAYER, GameRules.IntegerValue.create(99));
+		GUIZEWUQISHANGXIAN = GameRules.register("guizewuqishangxian", GameRules.Category.PLAYER, GameRules.IntegerValue.create(89));
 		GUIZEWUQISHANGHAI = GameRules.register("guizewuqishanghai", GameRules.Category.PLAYER, GameRules.IntegerValue.create(9));
 		GUIZEBUHUOMINGGUANGZHI = GameRules.register("guizebuhuomingguangzhi", GameRules.Category.MOBS, GameRules.IntegerValue.create(20));
 	}

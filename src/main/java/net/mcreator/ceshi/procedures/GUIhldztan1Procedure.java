@@ -20,7 +20,6 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.ceshi.init.PrimogemcraftModMenus;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
-import net.mcreator.ceshi.init.PrimogemcraftModGameRules;
 
 public class GUIhldztan1Procedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -60,7 +59,7 @@ public class GUIhldztan1Procedure {
 			a = i1.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("deng_ji");
 			if (a >= 59 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu17 ? _menu17.getSlots().get(8).getItem() : ItemStack.EMPTY).getItem() == PrimogemcraftModItems.JLMO
 					.get()) {
-				lg0 = GUIhldztan1SHProcedure.execute(world, entity, i1, (world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZEWUQISHANGXIAN)), b, c, 8);
+				lg0 = GUIhldztan1SHProcedure.execute(world, entity, i1, WuqidengjjishangxianHSProcedure.execute(world, entity, i1), b, c, 8);
 			}
 			if (!world.isClientSide()) {
 				if (lg0) {
