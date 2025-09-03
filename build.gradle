@@ -75,8 +75,8 @@ repositories {
  * compileOnly = false 
  */
 dependencies {
-    compileOnly "maven.modrinth:genshincraft:2.9.0"
-    implementation "com.tacz:tacz-neoforge:1.1.4-snapshot-0417"
+    implementation "maven.modrinth:genshincraft:2.11.0"
+    implementation "com.tacz:tacz-neoforge:1.1.6-hotfix-r5-hm"
     api "me.shedaniel:RoughlyEnoughItems-neoforge:16.0.799"
 }
 
