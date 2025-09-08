@@ -16,6 +16,10 @@
     "primogemcraft:ffanrongdezhexue",
     "primogemcraft:mmolajian",
     {
+      "id": "#pgc:wuqi/shuangshou",
+      "required": false
+    },
+    {
       "id": "#pgc:wuqi/gongju",
       "required": false
     }

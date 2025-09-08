@@ -38883,6 +38883,31 @@
           "src/main/java/net/mcreator/ceshi/procedures/WuqidengjjishangxianHSProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Xldj",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xldj",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ceshi/item/XldjItem.java",
+          "src/main/resources/assets/primogemcraft/models/item/xldj.json"
+        ]
+      }
+    },
+    {
+      "name": "Xldjpf",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xldjpf",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/xldjpf.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -39785,7 +39810,8 @@
       "TAG:pgc:wuqi/changbing",
       "CUSTOM:Mmolajian",
       "CUSTOM:Ffanrongdezhexue",
-      "TAG:pgc:wuqi/gongju"
+      "TAG:pgc:wuqi/gongju",
+      "TAG:pgc:wuqi/shuangshou"
     ],
     "ITEMS:pgc:prayer_core_x10": [
       "CUSTOM:Qyhxshilian"
@@ -40714,6 +40740,7 @@
       "CUSTOM:Shenbanjianlaohuangyukuangshi"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:Xldj",
       "~CUSTOM:Jdzq",
       "~CUSTOM:Tczdg",
       "~CUSTOM:Xfcq",
@@ -41257,6 +41284,9 @@
     ],
     "ITEMS:minecraft:enchantable/sharp_weapon": [
       "Items.HePuYuan"
+    ],
+    "ITEMS:pgc:wuqi/shuangshou": [
+      "CUSTOM:Xldj"
     ]
   },
   "tab_element_order": {
@@ -41693,7 +41723,8 @@
       "Hmzz",
       "Xfcq",
       "Tczdg",
-      "Jdzq"
+      "Jdzq",
+      "Xldj"
     ],
     "CUSTOM:Yuanshifangkuaika": [
       "Yuanshikuangshi",
@@ -44540,7 +44571,8 @@
       "item.primogemcraft.jdzq": "§c决斗之枪",
       "item.primogemcraft.hpy": "§2和璞鸢",
       "effect.primogemcraft.hpyxg": "和璞鸢效果",
-      "subtitles.xingxingxing": "xingxingxing"
+      "subtitles.xingxingxing": "xingxingxing",
+      "item.primogemcraft.xldj": "训练大剑"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -47280,7 +47312,8 @@
       "item.primogemcraft.jdzq": "§c决斗之枪",
       "item.primogemcraft.hpy": "§2和璞鸢",
       "effect.primogemcraft.hpyxg": "和璞鸢效果",
-      "subtitles.xingxingxing": "xingxingxing"
+      "subtitles.xingxingxing": "xingxingxing",
+      "item.primogemcraft.xldj": "训练大剑"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -50014,7 +50047,8 @@
       "item.primogemcraft.jdzq": "§c决斗之枪",
       "item.primogemcraft.hpy": "§2和璞鸢",
       "effect.primogemcraft.hpyxg": "和璞鸢效果",
-      "subtitles.xingxingxing": "xingxingxing"
+      "subtitles.xingxingxing": "xingxingxing",
+      "item.primogemcraft.xldj": "训练大剑"
     }
   },
   "metadata": {

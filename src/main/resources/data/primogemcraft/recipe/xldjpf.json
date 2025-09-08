@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " ab",
+    "abb",
+    "cb "
+  ],
+  "key": {
+    "a": {
+      "item": "primogemcraft:jlza"
+    },
+    "b": {
+      "item": "minecraft:iron_ingot"
+    },
+    "c": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "primogemcraft:xldj",
+    "count": 1
+  }
+}

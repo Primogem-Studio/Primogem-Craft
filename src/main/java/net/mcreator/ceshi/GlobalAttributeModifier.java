@@ -56,6 +56,10 @@ class GlobalAttributeModifier {
         modifiers.put("primogemcraft:jdzq", e -> {
             e.replaceModifier(ENTITY_INTERACTION_RANGE, modifier("hmzz", 2, ADD_VALUE), MAINHAND);
         });
+        modifiers.put("primogemcraft:xldj", e -> {
+            e.replaceModifier(SWEEPING_DAMAGE_RATIO, modifier("hmzz", 1, ADD_VALUE), MAINHAND);
+        });
+
         enableForInventory("primogemcraft:qwjlbhy");
         enableForInventory("primogemcraft:qwtldhy");
     }
