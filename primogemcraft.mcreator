@@ -31158,10 +31158,6 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "sourceentity",
             "type": "entity"
           },
@@ -38906,6 +38902,29 @@
       "metadata": {
         "files": [
           "src/main/resources/data/primogemcraft/recipe/xldjpf.json"
+        ]
+      }
+    },
+    {
+      "name": "Msnaijiuqywq",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "msnaijiuqywq",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/MsnaijiuqywqProcedure.java"
         ]
       }
     }

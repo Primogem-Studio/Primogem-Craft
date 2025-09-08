@@ -63,7 +63,7 @@ public class XldjItem extends SwordItem {
 	@Override
 	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
-		Wfj_sxProcedure.execute(entity.level(), entity, sourceentity, itemstack);
+		Wfj_sxProcedure.execute(entity.level(), sourceentity, itemstack);
 		return retval;
 	}
 

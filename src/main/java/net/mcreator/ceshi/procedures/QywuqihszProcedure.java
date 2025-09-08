@@ -42,7 +42,7 @@ public class QywuqihszProcedure {
             new WQType("wuqi/danshou", 1f, Attributes.ATTACK_DAMAGE),
             new WQType("wuqi/changbing", 1.3f, Attributes.ATTACK_DAMAGE),
             new WQType("wuqi/gongju", 0.7f, Attributes.MINING_EFFICIENCY),
-            new WQType("wuqi/shuangshou", 2f, Attributes.ATTACK_DAMAGE),
+            new WQType("wuqi/shuangshou", 1.6f, Attributes.ATTACK_DAMAGE),
             new WQType("wuqi", 1, Attributes.ATTACK_DAMAGE)
     );
 
