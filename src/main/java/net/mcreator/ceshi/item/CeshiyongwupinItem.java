@@ -33,7 +33,7 @@ public class CeshiyongwupinItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		Ceshi_3Procedure.execute();
+		Ceshi_3Procedure.execute(ar.getObject());
 		return ar;
 	}
 }
