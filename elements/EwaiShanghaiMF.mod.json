@@ -2,7 +2,7 @@
   "_fv": 79,
   "_type": "attribute",
   "definition": {
-    "name": "额外魔法伤害_P",
+    "name": "额外魔法伤害_p",
     "minValue": 0.0,
     "maxValue": 10240.0,
     "defaultValue": 0.0,
