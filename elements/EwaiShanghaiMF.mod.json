@@ -1,0 +1,14 @@
+{
+  "_fv": 79,
+  "_type": "attribute",
+  "definition": {
+    "name": "额外魔法伤害_P",
+    "minValue": 0.0,
+    "maxValue": 10240.0,
+    "defaultValue": 0.0,
+    "sentiment": "POSITIVE",
+    "addToAllEntities": false,
+    "addToPlayers": true,
+    "entities": []
+  }
+}

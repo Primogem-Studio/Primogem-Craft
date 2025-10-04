@@ -2,10 +2,10 @@
   "_fv": 79,
   "_type": "attribute",
   "definition": {
-    "name": "额外物理伤害",
-    "minValue": 0.0,
+    "name": "冷却缩减_p",
+    "minValue": -10240.0,
     "maxValue": 10240.0,
-    "defaultValue": 0.0,
+    "defaultValue": -20.0,
     "sentiment": "POSITIVE",
     "addToAllEntities": false,
     "addToPlayers": true,

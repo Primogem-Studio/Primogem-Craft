@@ -7184,8 +7184,16 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -38934,11 +38942,47 @@
       }
     },
     {
-      "name": "EwaiShanghaiWL",
+      "name": "EwaiShanghaiWLsx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ewai_shanghai_w_lsx",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/EwaiShanghaiWLsxProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Lqsjp",
       "type": "attribute",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ewai_shanghai_wl",
+      "registry_name": "lqsjp",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "EwaiShanghaiMF",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ewai_shanghai_mf",
       "metadata": {
         "files": []
       }
@@ -44607,7 +44651,8 @@
       "effect.primogemcraft.hpyxg": "和璞鸢效果",
       "subtitles.xingxingxing": "xingxingxing",
       "item.primogemcraft.xldj": "训练大剑",
-      "attribute.primogemcraft.ewai_shanghai_wl": "额外物理伤害"
+      "attribute.primogemcraft.lqsjp": "冷却缩减_p",
+      "attribute.primogemcraft.ewai_shanghai_mf": "额外魔法伤害_P"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -47349,7 +47394,8 @@
       "effect.primogemcraft.hpyxg": "和璞鸢效果",
       "subtitles.xingxingxing": "xingxingxing",
       "item.primogemcraft.xldj": "训练大剑",
-      "attribute.primogemcraft.ewai_shanghai_wl": "额外物理伤害"
+      "attribute.primogemcraft.lqsjp": "冷却缩减_p",
+      "attribute.primogemcraft.ewai_shanghai_mf": "额外魔法伤害_P"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -50085,7 +50131,8 @@
       "effect.primogemcraft.hpyxg": "和璞鸢效果",
       "subtitles.xingxingxing": "xingxingxing",
       "item.primogemcraft.xldj": "训练大剑",
-      "attribute.primogemcraft.ewai_shanghai_wl": "额外物理伤害"
+      "attribute.primogemcraft.lqsjp": "冷却缩减_p",
+      "attribute.primogemcraft.ewai_shanghai_mf": "额外魔法伤害_P"
     }
   },
   "metadata": {

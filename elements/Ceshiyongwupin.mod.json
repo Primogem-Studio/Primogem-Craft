@@ -44,6 +44,9 @@
     "onRightClickedInAir": {
       "name": "Ceshi_3"
     },
+    "onItemInInventoryTick": {
+      "name": "Ceshi_3"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
