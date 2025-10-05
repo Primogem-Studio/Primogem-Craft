@@ -14,8 +14,7 @@ import net.neoforged.neoforge.items.IItemHandlerModifiable;
 
 public class EwaishhsProcedure {
     public static boolean execute(Entity entity, String ss1) {
-        if (entity == null || ss1 == null)
-            return false;
+        if (entity == null || ss1 == null) return false;
         if (Timer.isDone(entity, ss1)) {
             Timer.set(entity, ss1, 40);
             return true;
@@ -38,7 +37,8 @@ public class EwaishhsProcedure {
 
     public static void sl(double z, String s1, ItemStack itemstack) {
         var attr = CustomAPI.getAttributes(itemstack);
-        attr.add(PrimogemcraftModAttributes.EWAI_SHANGHAI_MF, s1, z, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.ANY);
+        if (z != 0)
+            attr.add(PrimogemcraftModAttributes.EWAI_SHANGHAI_MF, s1, z, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.ANY);
         attr.apply();
     }
 }

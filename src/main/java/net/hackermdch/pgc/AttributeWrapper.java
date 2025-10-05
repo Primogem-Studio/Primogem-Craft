@@ -35,6 +35,7 @@ public class AttributeWrapper {
     }
 
     public void apply() {
+        if (entries.isEmpty()) item.set(DataComponents.ATTRIBUTE_MODIFIERS, ItemAttributeModifiers.EMPTY);
         var builder = ImmutableList.<ItemAttributeModifiers.Entry>builder();
         item.getOrDefault(DataComponents.ATTRIBUTE_MODIFIERS, ItemAttributeModifiers.EMPTY).modifiers().forEach(e -> {
             if (entries.stream().noneMatch(e2 -> e.matches(e2.attribute(), e2.modifier().id()))) builder.add(e);
