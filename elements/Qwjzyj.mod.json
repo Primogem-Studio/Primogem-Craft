@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "jia_zu_yuan_jie_",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "§5『奇物』§a家族缘结",
@@ -43,6 +44,9 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onItemInInventoryTick": {
+      "name": "QwJzyjsx"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

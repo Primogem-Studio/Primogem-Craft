@@ -19,16 +19,16 @@ import net.mcreator.ceshi.init.PrimogemcraftModAttributes;
 import net.hackermdch.pgc.CustomAPI;
 
 public class QwJzyjsxProcedure {
-	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity) {
-		if (entity == null || sourceentity == null)
+	public static void execute(LevelAccessor world, Entity entity) {
+		if (entity == null)
 			return;
 		double a = 0;
 		double z = 0;
 		double h = 0;
 		ItemStack stack = ItemStack.EMPTY;
 		if (!world.isClientSide()) {
-			if (net.hackermdch.pgc.Timer.isDone(sourceentity, "jzyj")) {
-				net.hackermdch.pgc.Timer.set(sourceentity, "jzyj", 40);
+			if (net.hackermdch.pgc.Timer.isDone(entity, "jzyj")) {
+				net.hackermdch.pgc.Timer.set(entity, "jzyj", 40);
 				h = entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1;
 				if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerIter) {
 					for (int _idx = 0; _idx < _modHandlerIter.getSlots(); _idx++) {
@@ -38,7 +38,7 @@ public class QwJzyjsxProcedure {
 						}
 					}
 				}
-				z = Math.round(h * 0.003 * a) > Math.round((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) * 0.3) ? Math.round(h * 0.3) : Math.round(h * 0.003 * a);
+				z = Math.round(h * 0.003 * a) > Math.round(h * 0.3) ? Math.round(h * 0.3) : Math.round(h * 0.003 * a);
 				var attr = CustomAPI.getAttributes(stack);
 				attr.add(PrimogemcraftModAttributes.EWAI_SHANGHAI_MF, "jzyj", z, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.ANY);
 				attr.apply();

@@ -39009,17 +39009,13 @@
     {
       "name": "QwJzyjsx",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "qw_jzyjsx",
       "metadata": {
         "dependencies": [
           {
             "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
             "type": "entity"
           },
           {
