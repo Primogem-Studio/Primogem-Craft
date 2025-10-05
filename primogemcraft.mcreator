@@ -38978,6 +38978,59 @@
       "metadata": {
         "files": []
       }
+    },
+    {
+      "name": "Itemshul",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "itemshul",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "io1",
+            "type": "logic"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/ItemshulProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "QwJzyjsx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "qw_jzyjsx",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/QwJzyjsxProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

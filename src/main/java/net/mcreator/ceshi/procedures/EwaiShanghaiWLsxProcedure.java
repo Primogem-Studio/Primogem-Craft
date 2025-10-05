@@ -38,8 +38,8 @@ public class EwaiShanghaiWLsxProcedure {
 		if (!world.isClientSide()) {
 			s = sourceentity instanceof LivingEntity _livingEntity1 && _livingEntity1.getAttributes().hasAttribute(PrimogemcraftModAttributes.EWAI_SHANGHAI_MF) ? _livingEntity1.getAttribute(PrimogemcraftModAttributes.EWAI_SHANGHAI_MF).getValue() : 0;
 			if (net.hackermdch.pgc.Timer.isDone(sourceentity, "ewsh_mf_lq") && s > 0) {
-				net.hackermdch.pgc.Timer.set(sourceentity, "ewsh_mf_lq", (int) (0 - a < 20 ? 20 : 0 - a));
 				a = sourceentity instanceof LivingEntity _livingEntity2 && _livingEntity2.getAttributes().hasAttribute(PrimogemcraftModAttributes.LQSJP) ? _livingEntity2.getAttribute(PrimogemcraftModAttributes.LQSJP).getValue() : 0;
+				net.hackermdch.pgc.Timer.set(sourceentity, "ewsh_mf_lq", (int) (0 - a < 20 ? 20 : 0 - a));
 				entity.invulnerableTime = 0;
 				entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MAGIC), sourceentity), (float) s);
 				entity.invulnerableTime = 10;
