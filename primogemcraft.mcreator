@@ -39009,7 +39009,7 @@
     {
       "name": "QwJzyjsx",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "qw_jzyjsx",
       "metadata": {
