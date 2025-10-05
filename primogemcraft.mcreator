@@ -39057,6 +39057,29 @@
           "src/main/java/net/mcreator/ceshi/procedures/Cmzp_sxProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Ewaishhs",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ewaishhs",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "ss1",
+            "type": "string"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/EwaishhsProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
