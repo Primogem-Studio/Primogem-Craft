@@ -19,7 +19,7 @@ import net.mcreator.ceshi.init.PrimogemcraftModAttributes;
 import net.hackermdch.pgc.CustomAPI;
 
 public class QwJzyjsxProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		double a = 0;
@@ -39,7 +39,8 @@ public class QwJzyjsxProcedure {
 					}
 				}
 				z = Math.round(h * 0.003 * a) > Math.round(h * 0.3) ? Math.round(h * 0.3) : Math.round(h * 0.003 * a);
-				var attr = CustomAPI.getAttributes(itemstack);
+				stack = itemstack;
+				var attr = CustomAPI.getAttributes(stack);
 				attr.add(PrimogemcraftModAttributes.EWAI_SHANGHAI_MF, "jzyj", z, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.ANY);
 				attr.apply();
 			}
