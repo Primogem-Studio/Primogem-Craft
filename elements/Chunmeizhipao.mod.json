@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "chun_mei_zhi_pao_",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "§5『奇物』§f纯美之袍",
@@ -42,6 +43,9 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onItemInInventoryTick": {
+      "name": "Cmzp_sx"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
@@ -59,6 +63,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []

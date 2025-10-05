@@ -38992,8 +38992,8 @@
             "type": "entity"
           },
           {
-            "name": "io1",
-            "type": "logic"
+            "name": "item",
+            "type": "itemstack"
           },
           {
             "name": "world",
@@ -39029,6 +39029,32 @@
         ],
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/QwJzyjsxProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Cmzp_sx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cmzp_sx",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Cmzp_sxProcedure.java"
         ]
       }
     }

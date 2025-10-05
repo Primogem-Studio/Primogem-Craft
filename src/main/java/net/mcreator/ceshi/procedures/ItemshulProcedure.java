@@ -8,14 +8,14 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
 
 public class ItemshulProcedure {
-	public static double execute(LevelAccessor world, Entity entity, boolean io1) {
+	public static double execute(LevelAccessor world, Entity entity, ItemStack item) {
 		if (entity == null)
 			return 0;
 		double a = 0;
 		if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerIter) {
 			for (int _idx = 0; _idx < _modHandlerIter.getSlots(); _idx++) {
 				ItemStack itemstackiterator = _modHandlerIter.getStackInSlot(_idx).copy();
-				if (io1) {
+				if (itemstackiterator.getItem() == item.getItem()) {
 					a = a + itemstackiterator.getCount();
 				}
 			}
