@@ -38,7 +38,7 @@ public class QwJzyjsxProcedure {
 						}
 					}
 				}
-				z = h * 0.003 * a > h * 0.3 ? h * 0.3 : h * 0.003 * a;
+				z = Math.min(h * 0.3, h * 0.003 * a);
 				stack = itemstack;
 				var attr = CustomAPI.getAttributes(stack);
 				attr.add(PrimogemcraftModAttributes.EWAI_SHANGHAI_MF, "jzyj", z, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.ANY);
