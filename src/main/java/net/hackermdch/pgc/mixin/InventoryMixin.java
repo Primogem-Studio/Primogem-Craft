@@ -31,7 +31,7 @@ public abstract class InventoryMixin implements Container, Nameable {
     @Final
     public Player player;
     @Unique
-    private final Set<Item> items = CustomUtils.enableInventoryAttribute.stream().map(s -> BuiltInRegistries.ITEM.getHolder(ResourceLocation.parse(s)).orElseThrow().value()).collect(ImmutableSet.toImmutableSet());
+    private static final Set<Item> items = CustomUtils.enableInventoryAttribute.stream().map(s -> BuiltInRegistries.ITEM.getHolder(ResourceLocation.parse(s)).orElseThrow().value()).collect(ImmutableSet.toImmutableSet());
     @Unique
     private final Set<ItemStack> cache = new ObjectArraySet<>(), snapshot = new ObjectArraySet<>();
 
