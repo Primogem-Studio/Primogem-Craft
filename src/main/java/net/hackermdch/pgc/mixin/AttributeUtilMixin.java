@@ -22,9 +22,7 @@ public class AttributeUtilMixin {
 
     @Redirect(method = "applyModifierTooltips", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/EquipmentSlotGroup;getSerializedName()Ljava/lang/String;"))
     private static String applyModifierTooltips(EquipmentSlotGroup group, ItemStack stack) {
-        if (group == EquipmentSlotGroup.ANY && items.contains(stack.getItem())) {
-            return "inventory";
-        }
+        if (group == EquipmentSlotGroup.ANY && items.contains(stack.getItem())) return "inventory";
         return group.getSerializedName();
     }
 }

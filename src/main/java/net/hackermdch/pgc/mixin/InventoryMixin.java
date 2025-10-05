@@ -37,8 +37,8 @@ public abstract class InventoryMixin implements Container, Nameable {
 
     @Inject(method = "<init>", at = @At("RETURN"))
     private void init(Player player, CallbackInfo ci) {
-        if (items == null)
-            items = GlobalAttributeModifier.inventoryAttributeItems.stream().map(s -> BuiltInRegistries.ITEM.getHolder(ResourceLocation.parse(s)).orElseThrow().value()).collect(ImmutableSet.toImmutableSet());
+        if (items != null) return;
+        items = GlobalAttributeModifier.inventoryAttributeItems.stream().map(s -> BuiltInRegistries.ITEM.getHolder(ResourceLocation.parse(s)).orElseThrow().value()).collect(ImmutableSet.toImmutableSet());
     }
 
     @Inject(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;inventoryTick(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/Entity;IZ)V"))

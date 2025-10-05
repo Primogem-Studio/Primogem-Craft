@@ -47,6 +47,7 @@ public class GlobalAttributeModifier {
         return new AttributeModifier(ResourceLocation.parse(id), amount, operation);
     }
 
+    @SuppressWarnings("DataFlowIssue")
     private static Map<ResourceLocation, Consumer<ItemAttributeModifierEvent>> getModifiers() {
         var modifiers = new HashMap<String, Consumer<ItemAttributeModifierEvent>>();
         init(modifiers);
