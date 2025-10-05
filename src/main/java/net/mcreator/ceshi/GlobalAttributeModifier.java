@@ -62,6 +62,8 @@ class GlobalAttributeModifier {
 
         enableForInventory("primogemcraft:qwjlbhy");
         enableForInventory("primogemcraft:qwtldhy");
+        enableForInventory("primogemcraft:qwjzyj");
+
 
     }
 
