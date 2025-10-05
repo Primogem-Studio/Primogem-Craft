@@ -3,7 +3,7 @@ package net.hackermdch.pgc.mixin;
 import com.google.common.collect.ImmutableSet;
 import com.llamalad7.mixinextras.sugar.Local;
 import it.unimi.dsi.fastutil.objects.ObjectArraySet;
-import net.hackermdch.pgc.CustomUtils;
+import net.mcreator.ceshi.GlobalAttributeModifier;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -31,9 +31,15 @@ public abstract class InventoryMixin implements Container, Nameable {
     @Final
     public Player player;
     @Unique
-    private final Set<Item> items = CustomUtils.enableInventoryAttribute.stream().map(s -> BuiltInRegistries.ITEM.getHolder(ResourceLocation.parse(s)).orElseThrow().value()).collect(ImmutableSet.toImmutableSet());
+    private static Set<Item> items;
     @Unique
     private final Set<ItemStack> cache = new ObjectArraySet<>(), snapshot = new ObjectArraySet<>();
+
+    @Inject(method = "<init>", at = @At("RETURN"))
+    private void init(Player player, CallbackInfo ci) {
+        if (items == null)
+            items = GlobalAttributeModifier.inventoryAttributeItems.stream().map(s -> BuiltInRegistries.ITEM.getHolder(ResourceLocation.parse(s)).orElseThrow().value()).collect(ImmutableSet.toImmutableSet());
+    }
 
     @Inject(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;inventoryTick(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/Entity;IZ)V"))
     private void inventoryTick(CallbackInfo ci, @Local(ordinal = 1) int i, @Local NonNullList<ItemStack> stacks) {

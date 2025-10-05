@@ -1,7 +1,7 @@
 package net.hackermdch.pgc.mixin;
 
 import com.google.common.collect.ImmutableSet;
-import net.hackermdch.pgc.CustomUtils;
+import net.mcreator.ceshi.GlobalAttributeModifier;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -18,7 +18,7 @@ import java.util.Set;
 @Mixin(AttributeUtil.class)
 public class AttributeUtilMixin {
     @Unique
-    private static final Set<Item> items = CustomUtils.enableInventoryAttribute.stream().map(s -> BuiltInRegistries.ITEM.getHolder(ResourceLocation.parse(s)).orElseThrow().value()).collect(ImmutableSet.toImmutableSet());
+    private static final Set<Item> items = GlobalAttributeModifier.inventoryAttributeItems.stream().map(s -> BuiltInRegistries.ITEM.getHolder(ResourceLocation.parse(s)).orElseThrow().value()).collect(ImmutableSet.toImmutableSet());
 
     @Redirect(method = "applyModifierTooltips", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/EquipmentSlotGroup;getSerializedName()Ljava/lang/String;"))
     private static String applyModifierTooltips(EquipmentSlotGroup group, ItemStack stack) {
