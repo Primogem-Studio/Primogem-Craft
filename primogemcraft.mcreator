@@ -39062,7 +39062,7 @@
       "name": "Ewaishhs",
       "type": "procedure",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "ewaishhs",
       "metadata": {
         "dependencies": [
