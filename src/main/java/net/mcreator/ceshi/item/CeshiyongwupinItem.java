@@ -8,7 +8,6 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
@@ -34,13 +33,7 @@ public class CeshiyongwupinItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		Ceshi_3Procedure.execute(world, entity, ar.getObject());
+		Ceshi_3Procedure.execute(entity);
 		return ar;
-	}
-
-	@Override
-	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-		super.inventoryTick(itemstack, world, entity, slot, selected);
-		Ceshi_3Procedure.execute(world, entity, itemstack);
 	}
 }

@@ -62,6 +62,7 @@ class GlobalAttributeModifier {
 
         enableForInventory("primogemcraft:qwjlbhy");
         enableForInventory("primogemcraft:qwtldhy");
+
     }
 
     private static void custom(ItemAttributeModifierEvent event) {
