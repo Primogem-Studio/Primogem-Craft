@@ -39080,6 +39080,71 @@
           "src/main/java/net/mcreator/ceshi/procedures/EwaishhsProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Qwtxzp",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "qwtxzp",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/primogemcraft/models/item/qwtxzp.json",
+          "src/main/java/net/mcreator/ceshi/item/QwtxzpItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Qwtxzpsx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "qwtxzpsx",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/QwtxzpsxProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Qwtxzpms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "qwtxzpms",
+      "metadata": {
+        "return_type": "string",
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/QwtxzpmsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Txzppf",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "txzppf",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/txzppf.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -40426,7 +40491,8 @@
       "CUSTOM:Axtt.boots"
     ],
     "ITEMS:c:curio/normal/fusion/s": [
-      "CUSTOM:Qwzjxxmx"
+      "CUSTOM:Qwzjxxmx",
+      "CUSTOM:Qwtxzp"
     ],
     "ITEMS:c:yszsj": [
       "CUSTOM:Zizaizuanshijian",
@@ -41690,7 +41756,8 @@
       "Caoyuanheshengwu",
       "Xiaoheita",
       "Xiaodeng",
-      "Qwmhs"
+      "Qwmhs",
+      "Qwtxzp"
     ],
     "CUSTOM:Yuanshigongjuxuanxiangka": [
       "Jiuchanzhiyuangao",
@@ -44746,7 +44813,8 @@
       "subtitles.xingxingxing": "xingxingxing",
       "item.primogemcraft.xldj": "训练大剑",
       "attribute.primogemcraft.lqsjp": "冷却缩减_p",
-      "attribute.primogemcraft.ewai_shanghai_mf": "额外魔法伤害_p"
+      "attribute.primogemcraft.ewai_shanghai_mf": "额外魔法伤害_p",
+      "item.primogemcraft.qwtxzp": "§5§l『奇物』§a同协之袍"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -47489,7 +47557,8 @@
       "subtitles.xingxingxing": "xingxingxing",
       "item.primogemcraft.xldj": "训练大剑",
       "attribute.primogemcraft.lqsjp": "冷却缩减_p",
-      "attribute.primogemcraft.ewai_shanghai_mf": "额外魔法伤害_p"
+      "attribute.primogemcraft.ewai_shanghai_mf": "额外魔法伤害_p",
+      "item.primogemcraft.qwtxzp": "§5§l『奇物』§a同协之袍"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -50226,7 +50295,8 @@
       "subtitles.xingxingxing": "xingxingxing",
       "item.primogemcraft.xldj": "训练大剑",
       "attribute.primogemcraft.lqsjp": "冷却缩减_p",
-      "attribute.primogemcraft.ewai_shanghai_mf": "额外魔法伤害_p"
+      "attribute.primogemcraft.ewai_shanghai_mf": "额外魔法伤害_p",
+      "item.primogemcraft.qwtxzp": "§5§l『奇物』§a同协之袍"
     }
   },
   "metadata": {

@@ -23,7 +23,7 @@ import static net.minecraft.world.entity.ai.attributes.Attributes.*;
 public class GlobalAttributeModifier {
     private static final Map<ResourceLocation, Consumer<ItemAttributeModifierEvent>> modifiers = getModifiers();
 
-    public static final Set<String> inventoryAttributeItems = Set.of("primogemcraft:qwjlbhy", "primogemcraft:qwtldhy", "primogemcraft:qwjzyj", "primogemcraft:chunmeizhipao");
+    public static final Set<String> inventoryAttributeItems = Set.of("primogemcraft:qwjlbhy", "primogemcraft:qwtldhy", "primogemcraft:qwjzyj", "primogemcraft:chunmeizhipao","primogemcraft:qwtxzp");
 
     private static void init(Map<String, Consumer<ItemAttributeModifierEvent>> modifiers) {
         modifiers.put("primogemcraft:ljtg_02", e -> e.replaceModifier(ARMOR_TOUGHNESS, modifier("ljta", 1.5, ADD_VALUE), HAND));
