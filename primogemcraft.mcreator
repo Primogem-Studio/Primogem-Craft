@@ -39194,6 +39194,19 @@
           "src/main/java/net/mcreator/ceshi/procedures/YsqhsxProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Ysqhsx0",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ysqhsx_0",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Ysqhsx0Procedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
