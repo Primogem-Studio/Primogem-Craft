@@ -13,6 +13,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class SmithingMenuMixin {
     @Inject(method = "onTake", at = @At("HEAD"))
     private void onTake(Player player, ItemStack item, CallbackInfo ci) {
-        YsqhsxProcedure.execute(item);
+//        YsqhsxProcedure.execute(item);
     }
 }

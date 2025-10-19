@@ -39196,15 +39196,43 @@
       }
     },
     {
-      "name": "Ysqhsx0",
+      "name": "Ysqhsx1",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ysqhsx_0",
+      "registry_name": "ysqhsx_1",
       "metadata": {
-        "dependencies": [],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "wen",
+            "type": "string"
+          }
+        ],
+        "return_type": "number",
         "files": [
-          "src/main/java/net/mcreator/ceshi/procedures/Ysqhsx0Procedure.java"
+          "src/main/java/net/mcreator/ceshi/procedures/Ysqhsx1Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "YsqhSx0",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ysqh_sx_0",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/YsqhSx0Procedure.java"
         ]
       }
     }
@@ -41601,7 +41629,8 @@
       "CUSTOM:Zhjs",
       "CUSTOM:Zyjs",
       "CUSTOM:Ryjs",
-      "CUSTOM:Lijs"
+      "CUSTOM:Lijs",
+      "Items.QUARTZ"
     ],
     "ITEMS:minecraft:trim_materials": [
       "CUSTOM:Yuanshi"
@@ -44898,7 +44927,8 @@
       "trim_material.primogemcraft.yuanshi": "原石",
       "trim_pattern.primogemcraft.yuansu_2": "元素升级IV",
       "trim_pattern.primogemcraft.yuansu_0": "元素升级II",
-      "trim_pattern.primogemcraft.yuansu_1": "元素升级III"
+      "trim_pattern.primogemcraft.yuansu_1": "元素升级III",
+      "attribute.primogemcraft.ysjcls": "临时原石加成"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -47646,7 +47676,8 @@
       "trim_material.primogemcraft.yuanshi": "原石",
       "trim_pattern.primogemcraft.yuansu_2": "元素升级IV",
       "trim_pattern.primogemcraft.yuansu_0": "元素升级II",
-      "trim_pattern.primogemcraft.yuansu_1": "元素升级III"
+      "trim_pattern.primogemcraft.yuansu_1": "元素升级III",
+      "attribute.primogemcraft.ysjcls": "临时原石加成"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -50388,7 +50419,8 @@
       "trim_material.primogemcraft.yuanshi": "原石",
       "trim_pattern.primogemcraft.yuansu_2": "元素升级IV",
       "trim_pattern.primogemcraft.yuansu_0": "元素升级II",
-      "trim_pattern.primogemcraft.yuansu_1": "元素升级III"
+      "trim_pattern.primogemcraft.yuansu_1": "元素升级III",
+      "attribute.primogemcraft.ysjcls": "临时原石加成"
     }
   },
   "metadata": {
