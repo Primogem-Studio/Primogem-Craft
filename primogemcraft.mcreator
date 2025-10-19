@@ -41576,6 +41576,9 @@
       "CUSTOM:Zyjs",
       "CUSTOM:Ryjs",
       "CUSTOM:Lijs"
+    ],
+    "ITEMS:minecraft:trim_materials": [
+      "CUSTOM:Yuanshi"
     ]
   },
   "tab_element_order": {
