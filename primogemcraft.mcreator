@@ -39196,29 +39196,6 @@
       }
     },
     {
-      "name": "Ysqhsx1",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ysqhsx_1",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "wen",
-            "type": "string"
-          }
-        ],
-        "return_type": "number",
-        "files": [
-          "src/main/java/net/mcreator/ceshi/procedures/Ysqhsx1Procedure.java"
-        ]
-      }
-    },
-    {
       "name": "YsqhSx0",
       "type": "procedure",
       "compiles": true,
