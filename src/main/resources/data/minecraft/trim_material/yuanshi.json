@@ -1,0 +1,9 @@
+{
+  "asset_name": "yuanshi",
+  "description": {
+    "color": "#FECCFF",
+    "translate": "trim_material.primogemcraft.yuanshi"
+  },
+  "ingredient": "primogemcraft:yuanshi",
+  "item_model_index": 0.9
+}
