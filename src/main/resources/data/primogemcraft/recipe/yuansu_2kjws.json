@@ -6,7 +6,7 @@
   "base": {
     "tag": "minecraft:trimmable_armor"
   },
-  "tamplate": {
+  "template": {
     "item": "primogemcraft:qhmbmlys_01"
   }
 }

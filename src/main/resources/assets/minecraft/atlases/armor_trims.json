@@ -38,7 +38,9 @@
         "trims/models/armor/flow",
         "trims/models/armor/flow_leggings",
         "trims/models/armor/bolt",
-        "trims/models/armor/bolt_leggings"
+        "trims/models/armor/bolt_leggings",
+        "primogemcraft:trims/models/armor/yuansu_2",
+        "primogemcraft:trims/models/armor/yuansu_2_leggings"
       ],
       "palette_key": "trims/color_palettes/trim_palette",
       "permutations": {
