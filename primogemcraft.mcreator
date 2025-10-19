@@ -41525,6 +41525,9 @@
     ],
     "ITEMS:pgc:wuqi/shuangshou": [
       "CUSTOM:Xldj"
+    ],
+    "ITEMS:minecraft:trim_materials": [
+      "CUSTOM:Yuanshi"
     ]
   },
   "tab_element_order": {
