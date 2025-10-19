@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_trim",
   "addition": {
-    "tag": "minecraft:trim_materials"
+    "tag": "pgc:yuansu_qianghua"
   },
   "base": {
     "tag": "minecraft:trimmable_armor"
