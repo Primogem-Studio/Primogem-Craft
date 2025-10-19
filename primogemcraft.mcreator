@@ -39199,7 +39199,7 @@
       "name": "YsqhSx0",
       "type": "procedure",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "ysqh_sx_0",
       "metadata": {
         "dependencies": [
