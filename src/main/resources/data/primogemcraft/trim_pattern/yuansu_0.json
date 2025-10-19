@@ -1,8 +1,8 @@
 {
-  "asset_id": "primogemcraft:yuansu_2",
+  "asset_id": "primogemcraft:yuansu_0",
   "decal": false,
   "description": {
-    "translate": "trim_pattern.primogemcraft.yuansu_2"
+    "translate": "trim_pattern.primogemcraft.yuansu_0"
   },
-  "template_item": "primogemcraft:qhmbmlys_01"
+  "template_item": "primogemcraft:qhmbml"
 }

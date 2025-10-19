@@ -2736,5 +2736,7 @@
   "attribute.primogemcraft.ewai_shanghai_mf": "额外魔法伤害_p",
   "item.primogemcraft.qwtxzp": "§5§l『奇物』§a同协之袍",
   "trim_material.primogemcraft.yuanshi": "原石",
-  "trim_pattern.primogemcraft.yuansu_2": "元素升级IV"
+  "trim_pattern.primogemcraft.yuansu_2": "元素升级IV",
+  "trim_pattern.primogemcraft.yuansu_0": "元素升级II",
+  "trim_pattern.primogemcraft.yuansu_1": "元素升级III"
 }
