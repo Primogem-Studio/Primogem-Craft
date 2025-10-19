@@ -39145,6 +39145,18 @@
           "src/main/resources/data/primogemcraft/recipe/txzppf.json"
         ]
       }
+    },
+    {
+      "name": "Yuansu2kjws",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "yuansu_2kjws",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/yuansu_2kjws.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -41528,6 +41540,11 @@
     ],
     "ITEMS:minecraft:trim_materials": [
       "CUSTOM:Yuanshi"
+    ],
+    "ITEMS:minecraft:trim_templates": [
+      "CUSTOM:Qhmbml",
+      "CUSTOM:Qhmbmlys01",
+      "CUSTOM:Qhmbmlys02"
     ]
   },
   "tab_element_order": {
@@ -44818,7 +44835,8 @@
       "attribute.primogemcraft.lqsjp": "冷却缩减_p",
       "attribute.primogemcraft.ewai_shanghai_mf": "额外魔法伤害_p",
       "item.primogemcraft.qwtxzp": "§5§l『奇物』§a同协之袍",
-      "trim_material.primogemcraft.yuanshi": "原石"
+      "trim_material.primogemcraft.yuanshi": "原石",
+      "trim_pattern.primogemcraft.yuansu_2": "元素升级IV"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -47563,7 +47581,8 @@
       "attribute.primogemcraft.lqsjp": "冷却缩减_p",
       "attribute.primogemcraft.ewai_shanghai_mf": "额外魔法伤害_p",
       "item.primogemcraft.qwtxzp": "§5§l『奇物』§a同协之袍",
-      "trim_material.primogemcraft.yuanshi": "原石"
+      "trim_material.primogemcraft.yuanshi": "原石",
+      "trim_pattern.primogemcraft.yuansu_2": "元素升级IV"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -50302,7 +50321,8 @@
       "attribute.primogemcraft.lqsjp": "冷却缩减_p",
       "attribute.primogemcraft.ewai_shanghai_mf": "额外魔法伤害_p",
       "item.primogemcraft.qwtxzp": "§5§l『奇物』§a同协之袍",
-      "trim_material.primogemcraft.yuanshi": "原石"
+      "trim_material.primogemcraft.yuanshi": "原石",
+      "trim_pattern.primogemcraft.yuansu_2": "元素升级IV"
     }
   },
   "metadata": {
