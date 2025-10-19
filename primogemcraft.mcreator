@@ -39181,6 +39181,19 @@
           "src/main/resources/data/primogemcraft/recipe/yuansu_0kjws.json"
         ]
       }
+    },
+    {
+      "name": "Ysqhsx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ysqhsx",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/YsqhsxProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

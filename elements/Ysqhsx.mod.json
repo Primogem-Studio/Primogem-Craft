@@ -1,0 +1,8 @@
+{
+  "_fv": 79,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field></block><block type=\"variables_set_itemstack\" x=\"77\" y=\"165\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" is_player_var=\"false\" has_entity=\"false\"></mutation><field name=\"VAR\">local:i1</field><value name=\"VAL\"><block type=\"procedure_retval_itemstack\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"1\"></mutation><field name=\"procedure\">Ysqhsx0</field><field name=\"name0\">zhi</field><value name=\"arg0\"><block type=\"math_number\"><field name=\"NUM\">2</field></block></value></block></value><next><block type=\"world_send_chat\"><value name=\"text\"><block type=\"item_name\"><value name=\"item\"><block type=\"variables_get_itemstack\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" is_player_var=\"false\" has_entity=\"false\"></mutation><field name=\"VAR\">local:i1</field></block></value></block></value><next><block type=\"world_send_chat\"><value name=\"text\"><block type=\"item_nbt_text_get\"><value name=\"item\"><block type=\"itemstack_to_mcitem\"></block></value><value name=\"tagName\"><block type=\"text\"><field name=\"TEXT\">materiar</field></block></value></block></value><next><block type=\"world_send_chat\"><value name=\"text\"><block type=\"item_nbt_text_get\"><value name=\"item\"><block type=\"itemstack_to_mcitem\"></block></value><value name=\"tagName\"><block type=\"text\"><field name=\"TEXT\">pattern</field></block></value></block></value></block></next></block></next></block></next></block></xml>",
+    "skipDependencyNullCheck": false
+  }
+}
