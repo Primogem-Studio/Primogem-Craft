@@ -1,5 +1,6 @@
 package net.mcreator.ceshi.procedures;
 
+import net.hackermdch.pgc.Timer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -27,8 +28,8 @@ public class YsqhSx0Procedure {
     private static void execute(@Nullable Event event, Entity entity) {
         if (entity == null)
             return;
-        if (net.hackermdch.pgc.Timer.isDone(entity, "ysqh")) {
-            net.hackermdch.pgc.Timer.set(entity,"ysqh",40);
+        if (Timer.isDone(entity, "ysqh")) {
+            Timer.set(entity,"ysqh",40);
             YsqhsxProcedure.execute(Bw(FEET, entity), Bw(LEGS, entity), Bw(CHEST, entity), Bw(HEAD, entity));
         }
     }
