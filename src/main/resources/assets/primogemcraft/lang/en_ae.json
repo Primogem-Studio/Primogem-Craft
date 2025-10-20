@@ -2752,5 +2752,6 @@
   "trim_material.primogemcraft.ys_cao": "草元素强化",
   "trim_material.primogemcraft.ys_shui": "水元素强化",
   "trim_material.primogemcraft.ys_huo": "火元素强化",
-  "trim_material.primogemcraft.ys_bing": "冰元素强化"
+  "trim_material.primogemcraft.ys_bing": "冰元素强化",
+  "effect.primogemcraft.cxbd": "§b持续冰冻"
 }
