@@ -1,6 +1,7 @@
 package net.mcreator.ceshi.procedures;
 
 import net.hackermdch.pgc.Timer;
+import net.hackermdch.pgc.interfaces.IPlayerExt;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 import net.mcreator.ceshi.init.PrimogemcraftModMobEffects;
 import net.minecraft.core.Holder;
@@ -91,6 +92,7 @@ public class YstzsxOProcedure {
         var x = hasEntityInInventory(player, PrimogemcraftModItems.HQBING.toStack()) ? zhi + zhi * 0.25 : zhi;
         if (x >= 2) addEffect(player, PrimogemcraftModMobEffects.BNXXU, 60, (int) ((x - 1) * 0.5), true, false);
         if (x >= 4) addEffect(player, PrimogemcraftModMobEffects.XXUFS, 60, (int) ((x - 1) * 0.5), true, false);
+        ((IPlayerExt) player).pgc$setWalkSnow(x >= 2);
     }
 
     private static void addEffect(LivingEntity entity, Holder<MobEffect> effect, int duration, int amplifier, boolean ambient, boolean visible) {
