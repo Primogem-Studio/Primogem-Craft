@@ -49,8 +49,8 @@ public class YstzsxOProcedure {
             Timer.set(player, "cys_02", 400 - (int) a * 2);
             addEffect(player, MobEffects.SATURATION, 10, 0, true, false);
         }
-        if (a >= 4 && !player.hasEffect(PrimogemcraftModMobEffects.CYST))
-            addEffect(player, PrimogemcraftModMobEffects.CYST, -1, (int) (a - 1), false, false);
+        if (a >= 4)
+            player.forceAddEffect(new MobEffectInstance(PrimogemcraftModMobEffects.CYST, -1, (int) (a - 1), false, false), null);
     }
 
     public static void shui(Player player, double zhi) {

@@ -19,6 +19,7 @@ public class YsqhsxProcedure {
     public static void process(List<ItemStack> items, Player player) {
         var result = new Int2DoubleOpenHashMap();
         var map = new Int2BooleanOpenHashMap();
+        var flag = false;
         process(player.getInventory().items, map);
         process(player.getInventory().offhand, map);
         for (var item : items) process(item, result);
@@ -31,7 +32,10 @@ public class YsqhsxProcedure {
                 case 1 -> YstzsxOProcedure.feng(player, zhi);
                 case 2 -> YstzsxOProcedure.yan(player, zhi);
                 case 3 -> YstzsxOProcedure.lei(player, zhi);
-                case 4 -> YstzsxOProcedure.cao(player, zhi);
+                case 4 -> {
+                    flag = zhi >= 4;
+                    YstzsxOProcedure.cao(player, zhi);
+                }
                 case 5 -> YstzsxOProcedure.shui(player, zhi);
                 case 6 -> YstzsxOProcedure.huo(player, zhi);
             }
@@ -46,7 +50,7 @@ public class YsqhsxProcedure {
                 case 6 -> YstzsxOProcedure.huo(player, 8);
             }
         }
-        if (!map.get(4)) player.removeEffect(PrimogemcraftModMobEffects.CYST);
+        if (!map.get(4) && !flag) player.removeEffect(PrimogemcraftModMobEffects.CYST);
     }
 
     private static void process(List<ItemStack> items, Int2BooleanMap map) {

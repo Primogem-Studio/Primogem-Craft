@@ -24,9 +24,6 @@
         "amount": 0.1,
         "operation": "ADD_MULTIPLIED_BASE"
       }
-    ],
-    "onActiveTick": {
-      "name": "Cyst_sx"
-    }
+    ]
   }
 }
