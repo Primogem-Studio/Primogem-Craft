@@ -5,7 +5,6 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.tick.ServerTickEvent;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,15 +34,12 @@ public class Timer {
 
     @SubscribeEvent
     private static void onTick(ServerTickEvent.Post event) {
-        var actions = new ArrayList<Runnable>();
-        for (var entry : map.values()) {
-            for (var timer : entry.entrySet()) {
-                var key = timer.getKey();
-                var value = timer.getValue();
-                value.tick--;
-                if (value.tick <= 0) actions.add(() -> entry.remove(key));
-            }
+        for (var timers : map.values()) {
+            timers.entrySet().removeIf(entry -> {
+                var timer = entry.getValue();
+                timer.tick--;
+                return timer.tick <= 0;
+            });
         }
-        actions.forEach(Runnable::run);
     }
 }

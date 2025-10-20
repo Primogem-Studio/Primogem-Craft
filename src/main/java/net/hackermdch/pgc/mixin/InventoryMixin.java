@@ -15,6 +15,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.neoforge.common.util.Lazy;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -31,20 +32,15 @@ public abstract class InventoryMixin implements Container, Nameable {
     @Final
     public Player player;
     @Unique
-    private static Set<Item> items;
+    private static final Lazy<Set<Item>> items = Lazy.of(() -> GlobalAttributeModifier.inventoryAttributeItems.stream().map(s -> BuiltInRegistries.ITEM.getHolder(ResourceLocation.parse(s)).orElseThrow().value()).collect(ImmutableSet.toImmutableSet()));
     @Unique
     private final Set<ItemStack> cache = new ObjectArraySet<>(), snapshot = new ObjectArraySet<>();
 
-    @Inject(method = "<init>", at = @At("RETURN"))
-    private void init(Player player, CallbackInfo ci) {
-        if (items != null) return;
-        items = GlobalAttributeModifier.inventoryAttributeItems.stream().map(s -> BuiltInRegistries.ITEM.getHolder(ResourceLocation.parse(s)).orElseThrow().value()).collect(ImmutableSet.toImmutableSet());
-    }
-
     @Inject(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;inventoryTick(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/Entity;IZ)V"))
     private void inventoryTick(CallbackInfo ci, @Local(ordinal = 1) int i, @Local NonNullList<ItemStack> stacks) {
+        if (player.level().isClientSide) return;
         var item = stacks.get(i);
-        if (items.contains(item.getItem())) {
+        if (items.get().contains(item.getItem())) {
             var flag = false;
             for (var m : item.getAttributeModifiers().modifiers()) {
                 if (m.slot() == EquipmentSlotGroup.ANY) {
@@ -63,7 +59,8 @@ public abstract class InventoryMixin implements Container, Nameable {
 
     @Inject(method = "tick", at = @At("RETURN"))
     private void tick(CallbackInfo ci) {
-        cache.forEach(item -> {
+        if (player.level().isClientSide) return;
+        cache.removeIf(item -> {
             if (snapshot.stream().noneMatch(i -> ItemStack.isSameItemSameComponents(item, i))) {
                 item.getAttributeModifiers().modifiers().forEach(m -> {
                     if (m.slot() == EquipmentSlotGroup.ANY) {
@@ -73,8 +70,9 @@ public abstract class InventoryMixin implements Container, Nameable {
                         }
                     }
                 });
-                cache.remove(item);
+                return true;
             }
+            return false;
         });
         snapshot.clear();
     }
