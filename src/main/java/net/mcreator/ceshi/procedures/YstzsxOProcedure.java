@@ -87,6 +87,15 @@ public class YstzsxOProcedure {
         }
     }
 
+    public static void bing(Player player, double zhi) {
+        var x = hasEntityInInventory(player, PrimogemcraftModItems.HQBING.toStack()) ? zhi + zhi * 0.25 : zhi;
+        if (x >= 2) {
+            addEffect(player, PrimogemcraftModMobEffects.BNXXU, (int) (x * 0.5), 0, true, false);
+        }
+        if (x >= 4)
+            addEffect(player, PrimogemcraftModMobEffects.XXUFS, (int) (x*0.5), 0, true, false);
+    }
+
     private static void addEffect(LivingEntity entity, Holder<MobEffect> effect, int duration, int amplifier, boolean ambient, boolean visible) {
         entity.addEffect(new MobEffectInstance(effect, duration, amplifier, ambient, visible));
     }

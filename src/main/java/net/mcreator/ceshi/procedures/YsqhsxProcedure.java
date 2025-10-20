@@ -38,6 +38,7 @@ public class YsqhsxProcedure {
                 }
                 case 5 -> YstzsxOProcedure.shui(player, zhi);
                 case 6 -> YstzsxOProcedure.huo(player, zhi);
+                case 7 -> YstzsxOProcedure.bing(player, zhi);
             }
         }
         for (var entry : map.int2BooleanEntrySet()) {
@@ -48,6 +49,7 @@ public class YsqhsxProcedure {
                 case 4 -> YstzsxOProcedure.cao(player, 8);
                 case 5 -> YstzsxOProcedure.shui(player, 8);
                 case 6 -> YstzsxOProcedure.huo(player, 8);
+                case 7 -> YstzsxOProcedure.bing(player, 8);
             }
         }
         if (!map.get(4) && !flag) player.removeEffect(PrimogemcraftModMobEffects.CYST);
@@ -66,6 +68,7 @@ public class YsqhsxProcedure {
                 case 4 -> map.put(4, true);
                 case 5 -> map.put(5, true);
                 case 6 -> map.put(6, true);
+                case 7 -> map.put(7, true);
             }
         }
     }
