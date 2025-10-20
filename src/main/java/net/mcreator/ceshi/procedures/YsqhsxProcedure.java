@@ -4,16 +4,28 @@ import it.unimi.dsi.fastutil.ints.Int2DoubleMap;
 import it.unimi.dsi.fastutil.ints.Int2DoubleOpenHashMap;
 import net.mcreator.ceshi.PrimogemcraftMod;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.List;
 
 public class YsqhsxProcedure {
-    public static void process(List<ItemStack> items) {
+    public static void process(List<ItemStack> items, Entity entity) {
         var result = new Int2DoubleOpenHashMap();
         for (var item : items) process(item, result);
         for (var entry : result.int2DoubleEntrySet()) {
             PrimogemcraftMod.LOGGER.info("ys{} 的结果输出: {}", entry.getIntKey(), entry.getDoubleValue());
+            var zhi = entry.getDoubleValue();
+            switch (entry.getIntKey()){
+                case 1 -> YstzsxOProcedure.feng(entity, zhi);
+                case 2 ->YstzsxOProcedure.yan(entity, zhi);
+                case 3->YstzsxOProcedure.lei(entity, zhi);
+                case 4->YstzsxOProcedure.cao(entity, zhi);
+                case 5->YstzsxOProcedure.shui(entity, zhi);
+                case 6->YstzsxOProcedure.huo(entity, zhi);
+                case 8 -> YstzsxOProcedure.feng(entity, zhi);
+                case 9 ->YstzsxOProcedure.yan(entity, zhi);
+            }
         }
     }
 

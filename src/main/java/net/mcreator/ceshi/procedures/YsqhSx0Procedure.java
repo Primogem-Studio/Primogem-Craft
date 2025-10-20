@@ -12,7 +12,7 @@ public class YsqhSx0Procedure {
         var player = event.getEntity();
         if (!player.level().isClientSide && Timer.isDone(player, "ysqh")) {
             Timer.set(player, "ysqh", 40);
-            YsqhsxProcedure.process(player.getInventory().armor);
+            YsqhsxProcedure.process(player.getInventory().armor,player);
         }
     }
 }

@@ -39214,19 +39214,6 @@
       }
     },
     {
-      "name": "Ystzsx",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "ystzsx",
-      "metadata": {
-        "dependencies": [],
-        "files": [
-          "src/main/java/net/mcreator/ceshi/procedures/YstzsxProcedure.java"
-        ]
-      }
-    },
-    {
       "name": "Ystzsx0",
       "type": "procedure",
       "compiles": true,

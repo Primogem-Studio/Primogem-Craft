@@ -1,5 +1,6 @@
 package net.mcreator.ceshi.procedures;
 
+import net.hackermdch.pgc.Timer;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 import net.mcreator.ceshi.init.PrimogemcraftModMobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -8,7 +9,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.LevelAccessor;
 
 public class YstzsxOProcedure {
 
@@ -21,11 +21,11 @@ public class YstzsxOProcedure {
         var b = zhi;
         zzss_kj_hjxz = entity.getPersistentData().getBoolean("zzss_kj_hjxz");
         b = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQFENG.get())) ? zhi + zhi * 0.25 : zhi;
-        if (!(entity instanceof LivingEntity _livEnt3 && _livEnt3.hasEffect(MobEffects.SLOW_FALLING)) && b >= 2 && !zzss_kj_hjxz) {
+        if (b >= 2 && !zzss_kj_hjxz) {
             if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
                 _entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 100, (int) (b * 0.5 - 1), true, false));
         }
-        if (!(entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(MobEffects.JUMP)) && b >= 4) {
+        if (b >= 4) {
             if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
                 _entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 100, (int) (b + 2), true, false));
         }
@@ -34,11 +34,9 @@ public class YstzsxOProcedure {
     public static void yan(Entity entity, double zhi) {
         var c = zhi;
         c = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQYAN.get())) ? zhi + zhi * 0.25 : zhi;
-        if (!(entity instanceof LivingEntity _livEnt8 && _livEnt8.hasEffect(MobEffects.DAMAGE_RESISTANCE))) {
-            if (c >= 2) {
-                if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-                    _entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100, (int) (c - 7), true, false));
-            }
+        if (c >= 2) {
+            if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+                _entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100, (int) (c - 7), true, false));
         }
         if (!(entity instanceof LivingEntity _livEnt10 && _livEnt10.hasEffect(PrimogemcraftModMobEffects.XISHOULENGQUE)) && !(entity instanceof LivingEntity _livEnt11 && _livEnt11.hasEffect(MobEffects.ABSORPTION))) {
             if (c >= 4) {
@@ -50,7 +48,7 @@ public class YstzsxOProcedure {
         }
     }
 
-    public static void lei(LevelAccessor world, Entity entity, double zhi) {
+    public static void lei(Entity entity, double zhi) {
         var d = zhi;
         d = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQLEI.get())) ? zhi + zhi * 0.25 : zhi;
         if (entity instanceof LivingEntity _livEnt15 && _livEnt15.hasEffect(PrimogemcraftModMobEffects.GOUYU)) {
@@ -59,7 +57,7 @@ public class YstzsxOProcedure {
                     _entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 60, (int) (d - 6), true, false));
             }
         }
-        if (world.getLevelData().isRaining() || world.getLevelData().isThundering()) {
+        if (entity.isInWaterRainOrBubble()) {
             if (d >= 4) {
                 if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
                     _entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 60, (int) (d * 0.5 - 2), true, false));
@@ -75,7 +73,8 @@ public class YstzsxOProcedure {
         var a = zhi;
         a = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQCAO.get())) ? zhi + zhi * 0.25 : zhi;
         if (a >= 2) {
-            if (Math.random() < 0.0005) {
+            if (Timer.isDone(entity, "cys_02")) {
+                Timer.set(entity, "cys_02", 400 - (int) a * 2);
                 if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
                     _entity.addEffect(new MobEffectInstance(MobEffects.SATURATION, 10, 0, true, false));
             }
@@ -97,10 +96,9 @@ public class YstzsxOProcedure {
         double b1 = 0;
         e = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQSHUI.get())) ? zhi + zhi * 0.25 : zhi;
         if (e >= 2) {
-            if (!(entity instanceof LivingEntity _livEnt29 && _livEnt29.hasEffect(MobEffects.CONDUIT_POWER))) {
-                if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-                    _entity.addEffect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 80, 0, true, false));
-            }
+            if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+                _entity.addEffect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 80, 0, true, false));
+
         }
         if (!(entity instanceof LivingEntity _livEnt31 && _livEnt31.hasEffect(PrimogemcraftModMobEffects.DJQJKJXGXIANZHI)) && entity.isAlive()) {
             if (e >= 4) {
@@ -124,17 +122,13 @@ public class YstzsxOProcedure {
     public static void huo(Entity entity, double zhi) {
         var f = zhi;
         f = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQHUO.get())) ? zhi + zhi * 0.25 : zhi;
-        if (!(entity instanceof LivingEntity _livEnt42 && _livEnt42.hasEffect(MobEffects.FIRE_RESISTANCE))) {
-            if (f >= 2) {
-                if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-                    _entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 80, 0, true, false));
-            }
+        if (f >= 2) {
+            if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+                _entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 80, 0, true, false));
         }
-        if (!(entity instanceof LivingEntity _livEnt44 && _livEnt44.hasEffect(PrimogemcraftModMobEffects.RYKJXG))) {
-            if (f >= 4) {
-                if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-                    _entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.RYKJXG, 1200, (int) Math.round(f - 1), false, false));
-            }
+        if (f >= 4) {
+            if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+                _entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.RYKJXG, 1200, (int) Math.round(f - 1), false, false));
         }
         if (entity instanceof LivingEntity _livEnt46 && _livEnt46.hasEffect(PrimogemcraftModMobEffects.RYKJXG)) {
             if ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.RYKJXG) ? _livEnt.getEffect(PrimogemcraftModMobEffects.RYKJXG).getAmplifier() : 0) != Math.round(f - 1)) {

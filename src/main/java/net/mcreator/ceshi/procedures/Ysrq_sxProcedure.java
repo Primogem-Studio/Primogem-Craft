@@ -23,27 +23,30 @@ public class Ysrq_sxProcedure {
 		double b1 = 0;
 		double f = 0;
 		if (!world.isClientSide()) {
-			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("feng")) {
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.FEIXING, 20, 0, false, false));
-				if (!itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("feng_teshu")) {
-					YstzsxOProcedure.feng(entity, 8);
+			if (net.hackermdch.pgc.Timer.isDone(entity, "ysqh")) {
+				net.hackermdch.pgc.Timer.set(entity, "ysqh", 40);
+				if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("feng")) {
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.FEIXING, 20, 0, false, false));
+					if (!itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("feng_teshu")) {
+						YstzsxOProcedure.feng(entity, 8);
+					}
 				}
-			}
-			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("yan")) {
-				YstzsxOProcedure.yan(entity, 8);
-			}
-			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("lei")) {
-				YstzsxOProcedure.lei(world, entity, 8);
-			}
-			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("cao")) {
-				YstzsxOProcedure.cao(entity, 8);
-			}
-			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("shui")) {
-				YstzsxOProcedure.shui(entity, 8);
-			}
-			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("huo")) {
-				YstzsxOProcedure.huo(entity, 8);
+				if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("yan")) {
+					YstzsxOProcedure.yan(entity, 8);
+				}
+				if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("lei")) {
+					YstzsxOProcedure.lei(entity, 8);
+				}
+				if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("cao")) {
+					YstzsxOProcedure.cao(entity, 8);
+				}
+				if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("shui")) {
+					YstzsxOProcedure.shui(entity, 8);
+				}
+				if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("huo")) {
+					YstzsxOProcedure.huo(entity, 8);
+				}
 			}
 		} //先这样，布几把改了
 	}
