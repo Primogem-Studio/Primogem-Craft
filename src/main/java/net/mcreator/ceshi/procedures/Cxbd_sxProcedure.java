@@ -1,5 +1,7 @@
 package net.mcreator.ceshi.procedures;
 
+import net.neoforged.fml.ModList;
+
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -13,6 +15,7 @@ public class Cxbd_sxProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
+		double a = 0;
 		Entity e1 = null;
 		if (world instanceof ServerLevel e) {
 			e1 = e.getEntity((int) entity.getPersistentData().getDouble("cxbd"));
@@ -21,8 +24,8 @@ public class Cxbd_sxProcedure {
 		if (net.hackermdch.pgc.Timer.isDone(entity, "cxbd")) {
 			net.hackermdch.pgc.Timer.set(entity, "cxbd", 10);
 			entity.invulnerableTime = 0;
-			entity.hurt(ToElementDamageProcedure.execute(new DamageSource(world.holderOrThrow(DamageTypes.FREEZE), e1), 1, 4),
-					entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.CXBD) ? _livEnt.getEffect(PrimogemcraftModMobEffects.CXBD).getAmplifier() : 0);
+			a = entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.CXBD) ? _livEnt.getEffect(PrimogemcraftModMobEffects.CXBD).getAmplifier() : 0;
+			entity.hurt(ToElementDamageProcedure.execute(new DamageSource(world.holderOrThrow(DamageTypes.FREEZE), e1), 1, 4), (float) (ModList.get().isLoaded("genshincraft") ? a * 25 : a));
 			entity.invulnerableTime = 10;
 		}
 	}
