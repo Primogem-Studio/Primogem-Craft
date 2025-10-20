@@ -39212,6 +39212,19 @@
           "src/main/java/net/mcreator/ceshi/procedures/YsqhSx0Procedure.java"
         ]
       }
+    },
+    {
+      "name": "Ystzsx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ystzsx",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/YstzsxProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

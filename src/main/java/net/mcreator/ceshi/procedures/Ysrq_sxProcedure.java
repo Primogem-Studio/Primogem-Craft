@@ -28,15 +28,32 @@ public class Ysrq_sxProcedure {
 		boolean zzss_kj_hjxz = false;
 		zzss_kj_hjxz = entity.getPersistentData().getBoolean("zzss_kj_hjxz");
 		if (!world.isClientSide()) {
+			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("feng")) {
+				b = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQFENG.get())) ? 10 : 8;
+				if (!itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("feng_teshu") && !zzss_kj_hjxz) {
+					if (!(entity instanceof LivingEntity _livEnt7 && _livEnt7.hasEffect(MobEffects.SLOW_FALLING))) {
+						if (b >= 2) {
+							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 100, (int) (b * 0.5 - 1), true, false));
+						}
+					}
+					if (!(entity instanceof LivingEntity _livEnt9 && _livEnt9.hasEffect(MobEffects.JUMP)) && b >= 4) {
+						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+							_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 100, (int) (b + 2), true, false));
+					}
+				}
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.FEIXING, 20, 0, false, false));
+			}
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("yan")) {
 				c = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQYAN.get())) ? 10 : 8;
-				if (!(entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(MobEffects.DAMAGE_RESISTANCE))) {
+				if (!(entity instanceof LivingEntity _livEnt15 && _livEnt15.hasEffect(MobEffects.DAMAGE_RESISTANCE))) {
 					if (c >= 2) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100, (int) (c - 7), true, false));
 					}
 				}
-				if (!(entity instanceof LivingEntity _livEnt7 && _livEnt7.hasEffect(PrimogemcraftModMobEffects.XISHOULENGQUE)) && !(entity instanceof LivingEntity _livEnt8 && _livEnt8.hasEffect(MobEffects.ABSORPTION))) {
+				if (!(entity instanceof LivingEntity _livEnt17 && _livEnt17.hasEffect(PrimogemcraftModMobEffects.XISHOULENGQUE)) && !(entity instanceof LivingEntity _livEnt18 && _livEnt18.hasEffect(MobEffects.ABSORPTION))) {
 					if (c >= 4) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 900, (int) (c * 0.5 - 1), true, false));
@@ -44,23 +61,6 @@ public class Ysrq_sxProcedure {
 							_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.XISHOULENGQUE, 900, 0, false, false));
 					}
 				}
-			}
-			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("feng")) {
-				b = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQFENG.get())) ? 10 : 8;
-				if (!itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("feng_teshu") && !zzss_kj_hjxz) {
-					if (!(entity instanceof LivingEntity _livEnt16 && _livEnt16.hasEffect(MobEffects.SLOW_FALLING))) {
-						if (b >= 2) {
-							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 100, (int) (b * 0.5 - 1), true, false));
-						}
-					}
-					if (!(entity instanceof LivingEntity _livEnt18 && _livEnt18.hasEffect(MobEffects.JUMP)) && b >= 4) {
-						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 100, (int) (b + 2), true, false));
-					}
-				}
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.FEIXING, 20, 0, false, false));
 			}
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("lei")) {
 				d = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQLEI.get())) ? 10 : 8;
