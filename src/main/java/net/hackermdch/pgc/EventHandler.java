@@ -6,7 +6,9 @@ import net.hackermdch.pgc.network.WishInfoPacket;
 import net.mcreator.ceshi.CustomBarRegister;
 import net.mcreator.ceshi.GenshinCraftLinkage;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
+import net.mcreator.ceshi.init.PrimogemcraftModMobEffects;
 import net.mcreator.ceshi.init.PrimogemcraftModTabs;
+import net.minecraft.client.gui.Gui;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -17,6 +19,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterItemDecorationsEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerHeartTypeEvent;
 import net.neoforged.neoforge.network.event.RegisterConfigurationTasksEvent;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.registries.RegisterEvent;
@@ -68,6 +71,14 @@ public class EventHandler {
         BiConsumer<ItemStack, ItemStack> insert = (point, stack) -> event.insertAfter(point, stack, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         if (event.getTabKey() == PrimogemcraftModTabs.PRIMOGEMCRAFT_EQUIPMENT.getKey()) {
             insert.accept(PrimogemcraftModItems.TCZDG.toStack(), PrimogemcraftModItems.HPY.toStack());
+        }
+    }
+
+    @EventBusSubscriber(modid = MODID)
+    private static class Game {
+        @SubscribeEvent
+        private static void on(PlayerHeartTypeEvent event) {
+            if (event.getEntity().hasEffect(PrimogemcraftModMobEffects.CXBD)) event.setType(Gui.HeartType.FROZEN);
         }
     }
 }
