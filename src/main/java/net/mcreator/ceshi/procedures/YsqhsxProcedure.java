@@ -23,8 +23,6 @@ public class YsqhsxProcedure {
                 case 4->YstzsxOProcedure.cao(entity, zhi);
                 case 5->YstzsxOProcedure.shui(entity, zhi);
                 case 6->YstzsxOProcedure.huo(entity, zhi);
-                case 8 -> YstzsxOProcedure.feng(entity, zhi);
-                case 9 ->YstzsxOProcedure.yan(entity, zhi);
             }
         }
     }
@@ -40,15 +38,13 @@ public class YsqhsxProcedure {
             case "primogemcraft:ys_shui" -> 5;
             case "primogemcraft:ys_huo" -> 6;
             case "primogemcraft:ys_bing" -> 7;
-            case "primogemcraft:yuanshi" -> 8;
-            case "minecraft:quartz" -> 9;
             default -> 0;
         };
         var mb = switch (trim.pattern().getRegisteredName()) {
-            case "primogemcraft:yuansu_0" -> 0.5;
-            case "primogemcraft:yuansu_1" -> 1.0;
-            case "primogemcraft:yuansu_2" -> 2.0;
-            default -> 0.25;
+            case "primogemcraft:yuansu_0" -> 1;
+            case "primogemcraft:yuansu_1" -> 1.5;
+            case "primogemcraft:yuansu_2", "minecraft:silence" -> 2.0;
+            default -> 0.5;
         };
         if (y != 0) totals.put(y, totals.getOrDefault(y, 0.0) + mb);
     }

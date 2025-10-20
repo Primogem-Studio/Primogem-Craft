@@ -41628,11 +41628,17 @@
       "CUSTOM:Zhjs",
       "CUSTOM:Zyjs",
       "CUSTOM:Ryjs",
-      "CUSTOM:Lijs",
-      "Items.QUARTZ"
+      "CUSTOM:Lijs"
     ],
     "ITEMS:minecraft:trim_materials": [
-      "CUSTOM:Yuanshi"
+      "CUSTOM:Yuanshi",
+      "CUSTOM:Zzjs",
+      "CUSTOM:Jlzs",
+      "CUSTOM:Yhjs",
+      "CUSTOM:Zhjs",
+      "CUSTOM:Zyjs",
+      "CUSTOM:Ryjs",
+      "CUSTOM:Lijs"
     ]
   },
   "tab_element_order": {
