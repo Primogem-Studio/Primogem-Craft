@@ -26,12 +26,12 @@ public class BnxxusxProcedure {
 			}
 			entity.setTicksFrozen(1);
 		} else if (b > 0 && net.hackermdch.pgc.Timer.isDone(entity, "bnxxu_h")) {
-			net.hackermdch.pgc.Timer.set(entity, "bnxxu_h", 20);
+			net.hackermdch.pgc.Timer.set(entity, "bnxxu_h", 200);
 			if (a >= 4) {
 				entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.FREEZE)), (float) Math.min(hp - 1, b / 20));
 				entity.getPersistentData().putDouble("bnxxu", 0);
 			} else {
-				hp(world, entity, b);
+				hp(world, entity, ((b / 40) * a) / 20);
 			}
 		}
 	}
