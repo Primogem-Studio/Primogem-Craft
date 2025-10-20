@@ -3,6 +3,7 @@ package net.mcreator.ceshi.procedures;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -22,32 +23,32 @@ public class Ysrq_sxProcedure {
 		double a1 = 0;
 		double b1 = 0;
 		double f = 0;
-		if (!world.isClientSide()) {
+		if (!world.isClientSide() && entity instanceof Player player) {
 			if (net.hackermdch.pgc.Timer.isDone(entity, "ysrz") && itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("qidong")) {
 				net.hackermdch.pgc.Timer.set(entity, "ysrz", 40);
 				if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("feng")) {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.FEIXING, 20, 0, false, false));
 					if (!itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("feng_teshu")) {
-						YstzsxOProcedure.feng(entity, 8);
+						YstzsxOProcedure.feng(player, 8);
 					}
 				}
 				if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("yan")) {
-					YstzsxOProcedure.yan(entity, 8);
+					YstzsxOProcedure.yan(player, 8);
 				}
 				if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("lei")) {
-					YstzsxOProcedure.lei(entity, 8);
+					YstzsxOProcedure.lei(player, 8);
 				}
 				if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("cao")) {
-					YstzsxOProcedure.cao(entity, 8);
+					YstzsxOProcedure.cao(player, 8);
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.YSRZXG, 60, 0, false, false));
 				}
 				if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("shui")) {
-					YstzsxOProcedure.shui(entity, 8);
+					YstzsxOProcedure.shui(player, 8);
 				}
 				if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("huo")) {
-					YstzsxOProcedure.huo(entity, 8);
+					YstzsxOProcedure.huo(player, 8);
 				}
 			}
 		} //先这样，布几把改了
