@@ -23,8 +23,8 @@ public class Ysrq_sxProcedure {
 		double b1 = 0;
 		double f = 0;
 		if (!world.isClientSide()) {
-			if (net.hackermdch.pgc.Timer.isDone(entity, "ysqh")) {
-				net.hackermdch.pgc.Timer.set(entity, "ysqh", 40);
+			if (net.hackermdch.pgc.Timer.isDone(entity, "ysrz") && itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("qidong")) {
+				net.hackermdch.pgc.Timer.set(entity, "ysrz", 40);
 				if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("feng")) {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.FEIXING, 20, 0, false, false));
