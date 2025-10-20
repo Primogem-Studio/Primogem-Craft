@@ -15,6 +15,6 @@ public class Ceshi_3Procedure {
 		double a = 0;
 		ItemStack stack = ItemStack.EMPTY;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.XXUFS, 200, 5, false, false));
+			_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.BNXXU, 200, 5, false, false));
 	}
 }
