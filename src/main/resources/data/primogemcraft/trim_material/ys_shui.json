@@ -1,0 +1,9 @@
+{
+  "asset_name": "ys_shui",
+  "description": {
+    "color": "#FECCFF",
+    "translate": "trim_material.primogemcraft.ys_shui"
+  },
+  "ingredient": "primogemcraft:zyjs",
+  "item_model_index": 1
+}

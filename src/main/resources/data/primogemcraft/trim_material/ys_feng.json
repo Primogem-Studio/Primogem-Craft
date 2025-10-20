@@ -1,0 +1,9 @@
+{
+  "asset_name": "ys_feng",
+  "description": {
+    "color": "#FECCFF",
+    "translate": "trim_material.primogemcraft.ys_feng"
+  },
+  "ingredient": "primogemcraft:zzjs",
+  "item_model_index": 1
+}

@@ -48,7 +48,14 @@
       ],
       "palette_key": "trims/color_palettes/trim_palette",
       "permutations": {
-        "yuanshi":"primogemcraft:trims/color_palettes/yuanshi"
+        "yuanshi":"primogemcraft:trims/color_palettes/yuanshi",
+        "ys_feng":"primogemcraft:trims/color_palettes/ys_feng",
+        "ys_yan":"primogemcraft:trims/color_palettes/ys_yan",
+        "ys_lei":"primogemcraft:trims/color_palettes/ys_lei",
+        "ys_cao":"primogemcraft:trims/color_palettes/ys_cao",
+        "ys_shui":"primogemcraft:trims/color_palettes/ys_shui",
+        "ys_huo":"primogemcraft:trims/color_palettes/ys_huo",
+        "ys_bing":"primogemcraft:trims/color_palettes/ys_bing"
       }
     }
   ]

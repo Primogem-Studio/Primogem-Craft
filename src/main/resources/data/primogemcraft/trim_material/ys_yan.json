@@ -1,0 +1,9 @@
+{
+  "asset_name": "ys_yan",
+  "description": {
+    "color": "#FECCFF",
+    "translate": "trim_material.primogemcraft.ys_yan"
+  },
+  "ingredient": "primogemcraft:jljs",
+  "item_model_index": 1
+}

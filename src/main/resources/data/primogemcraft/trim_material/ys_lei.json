@@ -1,0 +1,9 @@
+{
+  "asset_name": "ys_lei",
+  "description": {
+    "color": "#FECCFF",
+    "translate": "trim_material.primogemcraft.ys_lei"
+  },
+  "ingredient": "primogemcraft:yhjs",
+  "item_model_index": 1
+}
