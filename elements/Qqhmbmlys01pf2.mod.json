@@ -13,31 +13,31 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:Yuanshi"
-      },
-      {
-        "value": "CUSTOM:Yuanshi"
-      },
-      {
-        "value": "CUSTOM:Yuanshi"
-      },
-      {
-        "value": "CUSTOM:Yuanshi"
-      },
-      {
-        "value": "CUSTOM:Qhmbmlys01"
-      },
-      {
-        "value": "CUSTOM:Yuanshi"
-      },
-      {
-        "value": "CUSTOM:Yuanshi"
+        "value": "CUSTOM:Molakuai01"
       },
       {
         "value": "CUSTOM:Molakuai01"
       },
       {
-        "value": "CUSTOM:Yuanshi"
+        "value": "CUSTOM:Molakuai01"
+      },
+      {
+        "value": "CUSTOM:Molakuai01"
+      },
+      {
+        "value": "CUSTOM:Qhmbmlys01"
+      },
+      {
+        "value": "CUSTOM:Molakuai01"
+      },
+      {
+        "value": "CUSTOM:Molakuai01"
+      },
+      {
+        "value": "CUSTOM:Shizuoyuanshikuai"
+      },
+      {
+        "value": "CUSTOM:Molakuai01"
       }
     ],
     "recipeReturnStack": {
