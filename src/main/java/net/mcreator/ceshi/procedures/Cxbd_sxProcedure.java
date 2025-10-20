@@ -21,7 +21,7 @@ public class Cxbd_sxProcedure {
 		if (net.hackermdch.pgc.Timer.isDone(entity, "cxbd")) {
 			net.hackermdch.pgc.Timer.set(entity, "cxbd", 10);
 			entity.invulnerableTime = 0;
-			entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.FREEZE), e1),
+			entity.hurt(ToElementDamageProcedure.execute(new DamageSource(world.holderOrThrow(DamageTypes.FREEZE), e1), 1, 4),
 					entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.CXBD) ? _livEnt.getEffect(PrimogemcraftModMobEffects.CXBD).getAmplifier() : 0);
 			entity.invulnerableTime = 10;
 		}

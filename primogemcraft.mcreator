@@ -39125,6 +39125,44 @@
           "src/main/java/net/mcreator/ceshi/procedures/Cxbd_sxProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Xxufs",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xxufs",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ceshi/potion/XxufsMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "Ysqhbingsx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ysqhbingsx",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/YsqhbingsxProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -44832,7 +44870,8 @@
       "trim_material.primogemcraft.ys_shui": "水元素强化",
       "trim_material.primogemcraft.ys_huo": "火元素强化",
       "trim_material.primogemcraft.ys_bing": "冰元素强化",
-      "effect.primogemcraft.cxbd": "§b持续冰冻"
+      "effect.primogemcraft.cxbd": "§b持续冰冻",
+      "effect.primogemcraft.xxufs": "细雪反噬"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -47589,7 +47628,8 @@
       "trim_material.primogemcraft.ys_shui": "水元素强化",
       "trim_material.primogemcraft.ys_huo": "火元素强化",
       "trim_material.primogemcraft.ys_bing": "冰元素强化",
-      "effect.primogemcraft.cxbd": "§b持续冰冻"
+      "effect.primogemcraft.cxbd": "§b持续冰冻",
+      "effect.primogemcraft.xxufs": "细雪反噬"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -50340,7 +50380,8 @@
       "trim_material.primogemcraft.ys_shui": "水元素强化",
       "trim_material.primogemcraft.ys_huo": "火元素强化",
       "trim_material.primogemcraft.ys_bing": "冰元素强化",
-      "effect.primogemcraft.cxbd": "§b持续冰冻"
+      "effect.primogemcraft.cxbd": "§b持续冰冻",
+      "effect.primogemcraft.xxufs": "细雪反噬"
     }
   },
   "metadata": {
