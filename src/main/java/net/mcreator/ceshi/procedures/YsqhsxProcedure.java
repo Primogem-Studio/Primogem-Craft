@@ -24,7 +24,6 @@ public class YsqhsxProcedure {
         process(player.getInventory().offhand, map);
         for (var item : items) process(item, result);
         for (var entry : result.int2DoubleEntrySet()) {
-            PrimogemcraftMod.LOGGER.info("ys{} 的结果输出: {}", entry.getIntKey(), entry.getDoubleValue());
             var zhi = entry.getDoubleValue();
             var key = entry.getIntKey();
             if (map.get(key)) continue;
