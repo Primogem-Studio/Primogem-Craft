@@ -19,7 +19,7 @@ public class BnxxusxProcedure {
 			a = entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.BNXXU) ? _livEnt.getEffect(PrimogemcraftModMobEffects.BNXXU).getAmplifier() : 0;
 			b = entity.getPersistentData().getDouble("bnxxu");
 			hp = entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1;
-			if (entity.getTicksFrozen() > 1) {
+			if (entity.getTicksFrozen() > 1 && !(entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(PrimogemcraftModMobEffects.CXBD))) {
 				entity.getPersistentData().putDouble("bnxxu", (b + 1));
 				if (net.hackermdch.pgc.Timer.isDone(entity, "bnxxu")) {
 					net.hackermdch.pgc.Timer.set(entity, "bnxxu", (int) (40 - a * 5));

@@ -23,7 +23,7 @@ public class Cxbd_sxProcedure {
 			level.sendParticles(ParticleTypes.SNOWFLAKE, entity.getX(), entity.getY() + entity.getBbHeight() / 2, entity.getZ(), 5, 0.3, 0.3, 0.3, 0.05);
 		}
 		entity.setTicksFrozen(139);
-		if (net.hackermdch.pgc.Timer.isDone(entity, "cxbd")) {
+		if (net.hackermdch.pgc.Timer.isDone(entity, "cxbd") && !(entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(PrimogemcraftModMobEffects.BNXXU))) {
 			net.hackermdch.pgc.Timer.set(entity, "cxbd", 10);
 			entity.invulnerableTime = 0;
 			a = entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.CXBD) ? _livEnt.getEffect(PrimogemcraftModMobEffects.CXBD).getAmplifier() : 0;
