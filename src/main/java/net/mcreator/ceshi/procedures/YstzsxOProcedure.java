@@ -72,6 +72,7 @@ public class YstzsxOProcedure {
     public static void cao(Entity entity, double zhi) {
         var a = zhi;
         a = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQCAO.get())) ? zhi + zhi * 0.25 : zhi;
+        entity.getPersistentData().putDouble("qysx_a", a);
         if (a >= 2) {
             if (Timer.isDone(entity, "cys_02")) {
                 Timer.set(entity, "cys_02", 400 - (int) a * 2);
@@ -79,15 +80,13 @@ public class YstzsxOProcedure {
                     _entity.addEffect(new MobEffectInstance(MobEffects.SATURATION, 10, 0, true, false));
             }
         }
-        if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-            _entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.YSRZXG, 60, 0, false, false));
         if (!(entity instanceof LivingEntity _livEnt24 && _livEnt24.hasEffect(PrimogemcraftModMobEffects.CYST)) && a >= 4) {
             if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
                 _entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.CYST, -1, (int) (a - 1), false, false));
         }
-        if ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.CYST) ? _livEnt.getEffect(PrimogemcraftModMobEffects.CYST).getAmplifier() : 0) != a - 1) {
-            if (entity instanceof LivingEntity _entity) _entity.removeEffect(PrimogemcraftModMobEffects.CYST);
-        }
+//        if ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.CYST) ? _livEnt.getEffect(PrimogemcraftModMobEffects.CYST).getAmplifier() : 0) != a - 1) {
+//            if (entity instanceof LivingEntity _entity) _entity.removeEffect(PrimogemcraftModMobEffects.CYST);
+//        }
     }
 
     public static void shui(Entity entity, double zhi) {

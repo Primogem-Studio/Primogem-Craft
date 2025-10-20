@@ -16,13 +16,13 @@ public class YsqhsxProcedure {
         for (var entry : result.int2DoubleEntrySet()) {
             PrimogemcraftMod.LOGGER.info("ys{} 的结果输出: {}", entry.getIntKey(), entry.getDoubleValue());
             var zhi = entry.getDoubleValue();
-            switch (entry.getIntKey()){
+            switch (entry.getIntKey()) {
                 case 1 -> YstzsxOProcedure.feng(entity, zhi);
-                case 2 ->YstzsxOProcedure.yan(entity, zhi);
-                case 3->YstzsxOProcedure.lei(entity, zhi);
-                case 4->YstzsxOProcedure.cao(entity, zhi);
-                case 5->YstzsxOProcedure.shui(entity, zhi);
-                case 6->YstzsxOProcedure.huo(entity, zhi);
+                case 2 -> YstzsxOProcedure.yan(entity, zhi);
+                case 3 -> YstzsxOProcedure.lei(entity, zhi);
+                case 4 -> YstzsxOProcedure.cao(entity, zhi);
+                case 5 -> YstzsxOProcedure.shui(entity, zhi);
+                case 6 -> YstzsxOProcedure.huo(entity, zhi);
             }
         }
     }

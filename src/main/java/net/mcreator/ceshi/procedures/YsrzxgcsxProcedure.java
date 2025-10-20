@@ -2,19 +2,13 @@ package net.mcreator.ceshi.procedures;
 
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.component.DataComponents;
 
-import net.mcreator.ceshi.init.PrimogemcraftModMobEffects;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 
 public class YsrzxgcsxProcedure {
-	public static void execute(Entity entity) {
-		if (entity == null)
-			return;
+	public static ItemStack execute() {
 		ItemStack a = ItemStack.EMPTY;
 		a = new ItemStack(PrimogemcraftModItems.YSRZ_0.get());
 		{
@@ -34,17 +28,6 @@ public class YsrzxgcsxProcedure {
 					+ "\u00A76\u9971\u548C\u548C\u751F\u547D\u63D0\u5347\u6548\u679C");
 			CustomData.update(DataComponents.CUSTOM_DATA, a, tag -> tag.putString(_tagName, _tagValue));
 		}
-		if (!hasEntityInInventory(entity, a)) {
-			if (entity instanceof LivingEntity _entity)
-				_entity.removeEffect(PrimogemcraftModMobEffects.YSRZXG);
-			if (entity instanceof LivingEntity _entity)
-				_entity.removeEffect(PrimogemcraftModMobEffects.CYST);
-		}
-	}
-
-	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
-		if (entity instanceof Player player)
-			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
-		return false;
+		return a;
 	}
 }

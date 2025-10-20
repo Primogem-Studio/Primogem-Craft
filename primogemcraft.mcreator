@@ -26572,12 +26572,8 @@
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/YsrzxgcsxProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": [],
+        "return_type": "itemstack"
       }
     },
     {
@@ -37877,6 +37873,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "files": [

@@ -23,7 +23,7 @@ public class CystMobEffect extends MobEffect {
 
 	@Override
 	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-		Cyst_sxProcedure.execute(entity);
+		Cyst_sxProcedure.execute(entity.level(), entity);
 		return super.applyEffectTick(entity, amplifier);
 	}
 }

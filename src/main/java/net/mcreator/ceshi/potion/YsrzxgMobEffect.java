@@ -28,7 +28,7 @@ public class YsrzxgMobEffect extends MobEffect {
 
 	@Override
 	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-		YsrzxgcsxProcedure.execute(entity);
+		YsrzxgcsxProcedure.execute();
 		return super.applyEffectTick(entity, amplifier);
 	}
 

@@ -11,7 +11,7 @@ public class YsqhSx0Procedure {
     public static void onPlayerTick(PlayerTickEvent.Post event) {
         var player = event.getEntity();
         if (!player.level().isClientSide && Timer.isDone(player, "ysqh")) {
-            Timer.set(player, "ysqh", 40);
+            Timer.set(player, "ysqh", 10);
             YsqhsxProcedure.process(player.getInventory().armor,player);
         }
     }

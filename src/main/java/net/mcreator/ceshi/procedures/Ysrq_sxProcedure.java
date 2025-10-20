@@ -40,6 +40,8 @@ public class Ysrq_sxProcedure {
 				}
 				if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("cao")) {
 					YstzsxOProcedure.cao(entity, 8);
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.YSRZXG, 60, 0, false, false));
 				}
 				if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("shui")) {
 					YstzsxOProcedure.shui(entity, 8);
