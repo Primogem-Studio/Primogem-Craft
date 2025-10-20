@@ -14,8 +14,10 @@ public class BnxxusxProcedure {
 			return;
 		double a = 0;
 		double b = 0;
+		double hp = 0;
 		a = entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.BNXXU) ? _livEnt.getEffect(PrimogemcraftModMobEffects.BNXXU).getAmplifier() : 0;
 		b = entity.getPersistentData().getDouble("bnxxu");
+		hp = entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1;
 		if (entity.getTicksFrozen() > 1) {
 			entity.getPersistentData().putDouble("bnxxu", (b + 1));
 			if (net.hackermdch.pgc.Timer.isDone(entity, "bnxxu")) {
@@ -23,9 +25,10 @@ public class BnxxusxProcedure {
 				hp(world, entity, a);
 			}
 			entity.setTicksFrozen(1);
-		} else if (b > 0) {
+		} else if (b > 0 && net.hackermdch.pgc.Timer.isDone(entity, "bnxxu_h")) {
+			net.hackermdch.pgc.Timer.set(entity, "bnxxu_h", 20);
 			if (a >= 4) {
-				entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.FREEZE)), (float) (b / 20));
+				entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.FREEZE)), (float) Math.min(hp - 1, b / 20));
 				entity.getPersistentData().putDouble("bnxxu", 0);
 			} else {
 				hp(world, entity, b);
