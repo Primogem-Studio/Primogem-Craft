@@ -2739,5 +2739,12 @@
   "trim_pattern.primogemcraft.yuansu_2": "元素升级IV",
   "trim_pattern.primogemcraft.yuansu_0": "元素升级II",
   "trim_pattern.primogemcraft.yuansu_1": "元素升级III",
-  "attribute.primogemcraft.ysjcls": "临时原石加成"
+  "attribute.primogemcraft.ysjcls": "临时原石加成",
+  "\"trim_material.primogemcraft.ys_feng\"": "",
+  "\"trim_material.primogemcraft.ys_yan\"": "",
+  "\"trim_material.primogemcraft.ys_lei\"": "",
+  "\"trim_material.primogemcraft.ys_cao\"": "",
+  "\"trim_material.primogemcraft.ys_shui\"": "",
+  "\"trim_material.primogemcraft.ys_huo\"": "",
+  "\"trim_material.primogemcraft.ys_bing\"": ""
 }
