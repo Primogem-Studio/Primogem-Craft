@@ -8,6 +8,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.particles.ParticleTypes;
 
 import net.mcreator.ceshi.init.PrimogemcraftModMobEffects;
 
@@ -17,8 +18,9 @@ public class Cxbd_sxProcedure {
 			return;
 		double a = 0;
 		Entity e1 = null;
-		if (world instanceof ServerLevel e) {
-			e1 = e.getEntity((int) entity.getPersistentData().getDouble("cxbd"));
+		if (world instanceof ServerLevel level) {
+			e1 = level.getEntity((int) entity.getPersistentData().getDouble("cxbd"));
+			level.sendParticles(ParticleTypes.SNOWFLAKE, entity.getX(), entity.getY() + entity.getBbHeight() / 2, entity.getZ(), 5, 0.3, 0.3, 0.3, 0.05);
 		}
 		entity.setTicksFrozen(139);
 		if (net.hackermdch.pgc.Timer.isDone(entity, "cxbd")) {
