@@ -16,7 +16,7 @@ public class Ysrq_sx_0Procedure {
         String desc;
         if (!itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("qidong")) {
             var str = "§6获得相当于8点套装值且受火漆影响的";
-            var a = Mth.nextInt(RandomSource.create(), 0, 5);
+            var a = Mth.nextInt(RandomSource.create(), 0, 6);
             desc = switch (a) {
                 case 0 -> {
                     name = "§2元素熔珠";
@@ -41,6 +41,10 @@ public class Ysrq_sx_0Procedure {
                 case 5 -> {
                     name = "§c元素熔珠";
                     yield "§c火元素熔珠" + "\n" + str + "\n" + "§6抗火和反伤效果";
+                }
+                case 6 -> {
+                    name = "§b元素熔珠";
+                    yield "§b冰元素熔珠" + "\n" + str + "\n" + "§6冰元素附着和冻伤治疗效果";
                 }
                 default -> "";
             };

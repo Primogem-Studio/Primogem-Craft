@@ -39,6 +39,12 @@
         "primogemcraft:ysrz_0_type": 6
       },
       "model": "primogemcraft:item/ysrz_0_5"
+    },
+    {
+      "predicate": {
+        "primogemcraft:ysrz_0_type": 7
+      },
+      "model": "primogemcraft:item/ysrz_0_6"
     }
   ]
 }

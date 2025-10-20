@@ -107,6 +107,22 @@
             "value": 6.0
           }
         ]
+      },
+      {
+        "renderType": 0,
+        "texture": "ysrz_bing",
+        "customModelName": "Normal",
+        "stateMap": [
+          {
+            "property": {
+              "min": -1.7976931348623157E308,
+              "max": 1.7976931348623157E308,
+              "name": "CUSTOM:type",
+              "type": "number"
+            },
+            "value": 7.0
+          }
+        ]
       }
     ],
     "name": "元素熔珠",
