@@ -7,23 +7,8 @@
     "customModelName": "Normal",
     "guiTexture": "",
     "customProperties": {
-      "feng": {
-        "name": "Ysrqa0"
-      },
-      "yan": {
-        "name": "Ysrqa1"
-      },
-      "lei": {
-        "name": "Ysrqa2"
-      },
-      "cao": {
-        "name": "Ysrqa3"
-      },
-      "shui": {
-        "name": "Ysrqa4"
-      },
-      "huo": {
-        "name": "Ysrqa5"
+      "type": {
+        "name": "YsrzType"
       }
     },
     "states": [
@@ -36,7 +21,7 @@
             "property": {
               "min": -1.7976931348623157E308,
               "max": 1.7976931348623157E308,
-              "name": "CUSTOM:feng",
+              "name": "CUSTOM:type",
               "type": "number"
             },
             "value": 1.0
@@ -52,10 +37,10 @@
             "property": {
               "min": -1.7976931348623157E308,
               "max": 1.7976931348623157E308,
-              "name": "CUSTOM:yan",
+              "name": "CUSTOM:type",
               "type": "number"
             },
-            "value": 1.0
+            "value": 2.0
           }
         ]
       },
@@ -68,10 +53,10 @@
             "property": {
               "min": -1.7976931348623157E308,
               "max": 1.7976931348623157E308,
-              "name": "CUSTOM:lei",
+              "name": "CUSTOM:type",
               "type": "number"
             },
-            "value": 1.0
+            "value": 3.0
           }
         ]
       },
@@ -84,10 +69,10 @@
             "property": {
               "min": -1.7976931348623157E308,
               "max": 1.7976931348623157E308,
-              "name": "CUSTOM:cao",
+              "name": "CUSTOM:type",
               "type": "number"
             },
-            "value": 1.0
+            "value": 4.0
           }
         ]
       },
@@ -100,10 +85,10 @@
             "property": {
               "min": -1.7976931348623157E308,
               "max": 1.7976931348623157E308,
-              "name": "CUSTOM:shui",
+              "name": "CUSTOM:type",
               "type": "number"
             },
-            "value": 1.0
+            "value": 5.0
           }
         ]
       },
@@ -116,10 +101,10 @@
             "property": {
               "min": -1.7976931348623157E308,
               "max": 1.7976931348623157E308,
-              "name": "CUSTOM:huo",
+              "name": "CUSTOM:type",
               "type": "number"
             },
-            "value": 1.0
+            "value": 6.0
           }
         ]
       }
@@ -161,9 +146,6 @@
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
       "name": "Ysrq_sx_0"
-    },
-    "onItemInInventoryTick": {
-      "name": "Ysrq_sx"
     },
     "enableRanged": false,
     "shootConstantly": false,

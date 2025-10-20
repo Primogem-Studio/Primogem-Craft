@@ -16,7 +16,6 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.ceshi.procedures.YsrzmsProcedure;
 import net.mcreator.ceshi.procedures.Ysrq_sx_0Procedure;
-import net.mcreator.ceshi.procedures.Ysrq_sxProcedure;
 
 import java.util.List;
 
@@ -43,11 +42,5 @@ public class Ysrz0Item extends Item {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
 		Ysrq_sx_0Procedure.execute(world, ar.getObject());
 		return ar;
-	}
-
-	@Override
-	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-		super.inventoryTick(itemstack, world, entity, slot, selected);
-		Ysrq_sxProcedure.execute(world, entity, itemstack);
 	}
 }

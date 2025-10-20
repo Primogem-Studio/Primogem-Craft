@@ -26350,13 +26350,13 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/primogemcraft/models/item/ysrz_0_2.json",
-          "src/main/resources/assets/primogemcraft/models/item/ysrz_0_5.json",
+          "src/main/resources/assets/primogemcraft/models/item/ysrz_0_3.json",
           "src/main/java/net/mcreator/ceshi/item/Ysrz0Item.java",
-          "src/main/resources/assets/primogemcraft/models/item/ysrz_0_0.json",
-          "src/main/resources/assets/primogemcraft/models/item/ysrz_0_4.json",
           "src/main/resources/assets/primogemcraft/models/item/ysrz_0.json",
+          "src/main/resources/assets/primogemcraft/models/item/ysrz_0_5.json",
+          "src/main/resources/assets/primogemcraft/models/item/ysrz_0_0.json",
           "src/main/resources/assets/primogemcraft/models/item/ysrz_0_1.json",
-          "src/main/resources/assets/primogemcraft/models/item/ysrz_0_3.json"
+          "src/main/resources/assets/primogemcraft/models/item/ysrz_0_4.json"
         ]
       }
     },
@@ -26389,156 +26389,16 @@
       }
     },
     {
-      "name": "Ysrqa0",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ysrqa_0",
-      "metadata": {
-        "return_type": "number",
-        "files": [
-          "src/main/java/net/mcreator/ceshi/procedures/Ysrqa0Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Ysrqa1",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ysrqa_1",
-      "metadata": {
-        "return_type": "number",
-        "files": [
-          "src/main/java/net/mcreator/ceshi/procedures/Ysrqa1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Ysrqa2",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ysrqa_2",
-      "metadata": {
-        "return_type": "number",
-        "files": [
-          "src/main/java/net/mcreator/ceshi/procedures/Ysrqa2Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Ysrqa3",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ysrqa_3",
-      "metadata": {
-        "return_type": "number",
-        "files": [
-          "src/main/java/net/mcreator/ceshi/procedures/Ysrqa3Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Ysrqa4",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ysrqa_4",
-      "metadata": {
-        "return_type": "number",
-        "files": [
-          "src/main/java/net/mcreator/ceshi/procedures/Ysrqa4Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Ysrqa5",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ysrqa_5",
-      "metadata": {
-        "return_type": "number",
-        "files": [
-          "src/main/java/net/mcreator/ceshi/procedures/Ysrqa5Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      }
-    },
-    {
       "name": "Ysrq_sx_0",
       "type": "procedure",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "ysrq_sx_0",
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/Ysrq_sx_0Procedure.java"
         ],
         "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Ysrq_sx",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ysrq_sx",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/procedures/Ysrq_sxProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
           {
             "name": "itemstack",
             "type": "itemstack"
@@ -37873,10 +37733,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ],
         "files": [
@@ -39232,6 +39088,25 @@
         ],
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/Ystzsx0Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "YsrzType",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ysrz_type",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/YsrzTypeProcedure.java"
         ]
       }
     }
@@ -50451,25 +50326,25 @@
   },
   "metadata": {
     "files": [
-      "src/main/java/net/mcreator/ceshi/network/PrimogemcraftModVariables.java",
-      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModSounds.java",
-      "src/main/resources/META-INF/accesstransformer.cfg",
-      "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/resources/pack.mcmeta",
-      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModTabs.java",
-      "src/main/java/net/mcreator/ceshi/PrimogemcraftMod.java",
-      "src/main/resources/assets/primogemcraft/sounds.json",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModModels.java",
+      "src/main/resources/assets/primogemcraft/sounds.json",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModTabs.java",
+      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModSounds.java",
+      "src/main/java/net/mcreator/ceshi/PrimogemcraftMod.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/net/mcreator/ceshi/network/PrimogemcraftModVariables.java",
+      "src/main/java/net/mcreator/ceshi/network/MenuStateUpdateMessage.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModScreens.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModMenus.java",
-      "src/main/java/net/mcreator/ceshi/network/MenuStateUpdateMessage.java",
       "src/main/java/net/mcreator/ceshi/world/features/configurations/StructureFeatureConfiguration.java",
       "src/main/java/net/mcreator/ceshi/world/features/StructureFeature.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModAttributes.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModKeyMappings.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModTrades.java",
-      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModVillagerProfessions.java",
       "src/main/resources/data/minecraft/tags/point_of_interest_type/acquirable_job_site.json",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModVillagerProfessions.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModGameRules.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModFuels.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModMobEffects.java",
@@ -50481,8 +50356,8 @@
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModBlocks.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModBlockEntities.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModItems.java",
-      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModEntityRenderers.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModEntities.java",
+      "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModEntityRenderers.java",
       "src/main/java/net/mcreator/ceshi/init/PrimogemcraftModFeatures.java"
     ]
   },

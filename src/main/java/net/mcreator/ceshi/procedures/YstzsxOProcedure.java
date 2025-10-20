@@ -42,24 +42,15 @@ public class YstzsxOProcedure {
         }
     }
 
-    public static void cao(Player entity, double zhi) {
-        var a = zhi;
-        a = hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQCAO.get())) ? zhi + zhi * 0.25 : zhi;
-        entity.getPersistentData().putDouble("qysx_a", a);
-        if (a >= 2) {
-            if (Timer.isDone(entity, "cys_02")) {
-                Timer.set(entity, "cys_02", 400 - (int) a * 2);
-                if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-                    _entity.addEffect(new MobEffectInstance(MobEffects.SATURATION, 10, 0, true, false));
-            }
+    public static void cao(Player player, double zhi) {
+        var a = hasEntityInInventory(player, PrimogemcraftModItems.HQCAO.toStack()) ? zhi + zhi * 0.25 : zhi;
+        player.getPersistentData().putDouble("qysx_a", a);
+        if (a >= 2 && Timer.isDone(player, "cys_02")) {
+            Timer.set(player, "cys_02", 400 - (int) a * 2);
+            addEffect(player, MobEffects.SATURATION, 10, 0, true, false);
         }
-        if (!(entity instanceof LivingEntity _livEnt24 && _livEnt24.hasEffect(PrimogemcraftModMobEffects.CYST)) && a >= 4) {
-            if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-                _entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.CYST, -1, (int) (a - 1), false, false));
-        }
-//        if ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.CYST) ? _livEnt.getEffect(PrimogemcraftModMobEffects.CYST).getAmplifier() : 0) != a - 1) {
-//            if (entity instanceof LivingEntity _entity) _entity.removeEffect(PrimogemcraftModMobEffects.CYST);
-//        }
+        if (a >= 4 && !player.hasEffect(PrimogemcraftModMobEffects.CYST))
+            addEffect(player, PrimogemcraftModMobEffects.CYST, -1, (int) (a - 1), false, false);
     }
 
     public static void shui(Player player, double zhi) {
@@ -67,7 +58,7 @@ public class YstzsxOProcedure {
         if (e >= 2) {
             addEffect(player, MobEffects.CONDUIT_POWER, 80, 0, true, false);
         }
-        if (!(player instanceof LivingEntity _livEnt31 && _livEnt31.hasEffect(PrimogemcraftModMobEffects.DJQJKJXGXIANZHI)) && player.isAlive()) {
+        if (!player.hasEffect(PrimogemcraftModMobEffects.DJQJKJXGXIANZHI) && player.isAlive()) {
             if (e >= 4) {
                 if (e < 6) {
                     var a1 = e * 20;

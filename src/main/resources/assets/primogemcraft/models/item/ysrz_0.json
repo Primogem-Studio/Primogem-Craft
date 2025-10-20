@@ -6,37 +6,37 @@
   "overrides": [
     {
       "predicate": {
-        "primogemcraft:ysrz_0_feng": 1
+        "primogemcraft:ysrz_0_type": 1
       },
       "model": "primogemcraft:item/ysrz_0_0"
     },
     {
       "predicate": {
-        "primogemcraft:ysrz_0_yan": 1
+        "primogemcraft:ysrz_0_type": 2
       },
       "model": "primogemcraft:item/ysrz_0_1"
     },
     {
       "predicate": {
-        "primogemcraft:ysrz_0_lei": 1
+        "primogemcraft:ysrz_0_type": 3
       },
       "model": "primogemcraft:item/ysrz_0_2"
     },
     {
       "predicate": {
-        "primogemcraft:ysrz_0_cao": 1
+        "primogemcraft:ysrz_0_type": 4
       },
       "model": "primogemcraft:item/ysrz_0_3"
     },
     {
       "predicate": {
-        "primogemcraft:ysrz_0_shui": 1
+        "primogemcraft:ysrz_0_type": 5
       },
       "model": "primogemcraft:item/ysrz_0_4"
     },
     {
       "predicate": {
-        "primogemcraft:ysrz_0_huo": 1
+        "primogemcraft:ysrz_0_type": 6
       },
       "model": "primogemcraft:item/ysrz_0_5"
     }
