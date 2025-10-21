@@ -1,7 +1,6 @@
 package net.hackermdch.pgc.mixin;
 
 import net.mcreator.ceshi.custom.TrimTooltip;
-import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.TooltipFlag;
@@ -24,6 +23,6 @@ public class ArmorTrimMixin {
     @Inject(method = "addToTooltip", at = @At("RETURN"))
     private void addToTooltip(Item.TooltipContext context, Consumer<Component> tooltip, TooltipFlag flag, CallbackInfo ci) {
         if (!showInTooltip) return;
-        TrimTooltip.addToTooltip(Minecraft.getInstance().player, (ArmorTrim) (Object) this).forEach(tooltip);
+        TrimTooltip.addToTooltip((ArmorTrim) (Object) this).forEach(tooltip);
     }
 }

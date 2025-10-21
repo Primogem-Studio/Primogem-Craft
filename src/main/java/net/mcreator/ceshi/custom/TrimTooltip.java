@@ -3,14 +3,13 @@ package net.mcreator.ceshi.custom;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.armortrim.ArmorTrim;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class TrimTooltip {
-    public static List<Component> addToTooltip(Player player, ArmorTrim component) {
+    public static List<Component> addToTooltip(ArmorTrim component) {
         var tooltip = new ArrayList<Component>();
         switch (component.material().getRegisteredName()) {
             case "primogemcraft:ys_feng" -> {
