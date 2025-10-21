@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "id": "primogemcraft:qhmbmlys_02"
+    },
+    "title": {
+      "translate": "advancements.jdyshj_2.title"
+    },
+    "description": {
+      "translate": "advancements.jdyshj_2.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "jdyshj_2_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "primogemcraft:qhmbmlys_02"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "primogemcraft:jdyshj_1"
+}

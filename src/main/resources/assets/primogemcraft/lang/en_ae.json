@@ -1824,5 +1824,13 @@
   "trim_material.primogemcraft.ys_bing": "冰元素强化",
   "effect.primogemcraft.cxbd": "§b持续冰冻",
   "effect.primogemcraft.xxufs": "细雪反噬",
-  "effect.primogemcraft.bnxxu": "保暖细雪"
+  "effect.primogemcraft.bnxxu": "保暖细雪",
+  "advancements.jdyshj_1.descr": "获得模板后去试试强化吧！",
+  "advancements.jdyshj_1.title": "元素装备I",
+  "advancements.jdyshj_2.descr": "更强的元素！",
+  "advancements.jdyshj_2.title": "元素装备II",
+  "advancements.jdyshj_3.title": "元素装备IV",
+  "advancements.jdyshj_3.descr": "至强升级！",
+  "advancements.jdyshj_0.descr": "试试用元素金属给装备升级！",
+  "advancements.jdyshj_0.title": "元素装备？"
 }

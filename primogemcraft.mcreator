@@ -35335,6 +35335,54 @@
           "src/main/java/net/mcreator/ceshi/procedures/GUIhldztzujianmlProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Jdyshj1",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jdyshj_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/advancement/jdyshj_1.json"
+        ]
+      }
+    },
+    {
+      "name": "Jdyshj2",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jdyshj_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/advancement/jdyshj_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Jdyshj3",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jdyshj_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/advancement/jdyshj_3.json"
+        ]
+      }
+    },
+    {
+      "name": "Jdyshj0",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jdyshj_0",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/advancement/jdyshj_0.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -39931,7 +39979,15 @@
       "trim_material.primogemcraft.ys_bing": "冰元素强化",
       "effect.primogemcraft.cxbd": "§b持续冰冻",
       "effect.primogemcraft.xxufs": "细雪反噬",
-      "effect.primogemcraft.bnxxu": "保暖细雪"
+      "effect.primogemcraft.bnxxu": "保暖细雪",
+      "advancements.jdyshj_1.descr": "获得模板后去试试强化吧！",
+      "advancements.jdyshj_1.title": "元素装备II",
+      "advancements.jdyshj_2.descr": "更强的元素！",
+      "advancements.jdyshj_2.title": "元素装备III",
+      "advancements.jdyshj_3.title": "元素装备IV",
+      "advancements.jdyshj_3.descr": "至强升级！",
+      "advancements.jdyshj_0.descr": "试试用元素金属给装备升级！",
+      "advancements.jdyshj_0.title": "元素装备？"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -41759,7 +41815,15 @@
       "trim_material.primogemcraft.ys_bing": "冰元素强化",
       "effect.primogemcraft.cxbd": "§b持续冰冻",
       "effect.primogemcraft.xxufs": "细雪反噬",
-      "effect.primogemcraft.bnxxu": "保暖细雪"
+      "effect.primogemcraft.bnxxu": "保暖细雪",
+      "advancements.jdyshj_1.descr": "获得模板后去试试强化吧！",
+      "advancements.jdyshj_1.title": "元素装备I",
+      "advancements.jdyshj_2.descr": "更强的元素！",
+      "advancements.jdyshj_2.title": "元素装备II",
+      "advancements.jdyshj_3.title": "元素装备IV",
+      "advancements.jdyshj_3.descr": "至强升级！",
+      "advancements.jdyshj_0.descr": "试试用元素金属给装备升级！",
+      "advancements.jdyshj_0.title": "元素装备？"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -43581,7 +43645,15 @@
       "trim_material.primogemcraft.ys_bing": "冰元素强化",
       "effect.primogemcraft.cxbd": "§b持续冰冻",
       "effect.primogemcraft.xxufs": "细雪反噬",
-      "effect.primogemcraft.bnxxu": "保暖细雪"
+      "effect.primogemcraft.bnxxu": "保暖细雪",
+      "advancements.jdyshj_1.descr": "获得模板后去试试强化吧！",
+      "advancements.jdyshj_1.title": "元素装备I",
+      "advancements.jdyshj_2.descr": "更强的元素！",
+      "advancements.jdyshj_2.title": "元素装备II",
+      "advancements.jdyshj_3.title": "元素装备IV",
+      "advancements.jdyshj_3.descr": "至强升级！",
+      "advancements.jdyshj_0.descr": "试试用元素金属给装备升级！",
+      "advancements.jdyshj_0.title": "元素装备？"
     }
   },
   "metadata": {
