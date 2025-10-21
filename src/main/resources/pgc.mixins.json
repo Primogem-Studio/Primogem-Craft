@@ -5,6 +5,7 @@
   "plugin": "net.hackermdch.pgc.mixin.MixinPlugin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "ArmorTrimMixin",
     "AttributeUtilMixin",
     "InventoryMixin",
     "PlayerMixin",
