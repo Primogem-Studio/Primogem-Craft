@@ -32,6 +32,7 @@ public class CustomRegister {
     static {
         DATA_COMPONENT_TYPES.register("custom_bar", () -> CustomComponents.CUSTOM_BAR);
         DATA_COMPONENT_TYPES.register("element_type", () -> CustomComponents.ELEMENT_TYPE);
+        DATA_COMPONENT_TYPES.register("yszujian", () -> CustomComponents.YSZUJIAN);
         ShapedWithComponentsRecipe.register();
         MaterialRecoveryRecipe.register();
         StardustConverterRecipe.register();
