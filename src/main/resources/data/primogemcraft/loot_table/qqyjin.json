@@ -210,34 +210,6 @@
         },
         {
           "type": "minecraft:item",
-          "name": "primogemcraft:qhzllh_2",
-          "weight": 4,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 2,
-                "max": 4
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "primogemcraft:q_qu_hang_zhoullh",
-          "weight": 4,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 2
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
           "name": "primogemcraft:molakuai_01",
           "weight": 4,
           "functions": [
@@ -314,8 +286,8 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 2,
-                "max": 3
+                "min": 1,
+                "max": 1
               }
             }
           ]
@@ -329,7 +301,7 @@
               "function": "minecraft:set_count",
               "count": {
                 "min": 2,
-                "max": 3
+                "max": 2
               }
             }
           ]
@@ -365,7 +337,7 @@
         {
           "type": "minecraft:item",
           "name": "primogemcraft:ysrqsp",
-          "weight": 6,
+          "weight": 4,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -399,7 +371,7 @@
               "function": "minecraft:set_count",
               "count": {
                 "min": 1,
-                "max": 6
+                "max": 4
               }
             }
           ]
@@ -413,7 +385,7 @@
               "function": "minecraft:set_count",
               "count": {
                 "min": 1,
-                "max": 6
+                "max": 4
               }
             }
           ]
@@ -427,7 +399,7 @@
               "function": "minecraft:set_count",
               "count": {
                 "min": 1,
-                "max": 6
+                "max": 4
               }
             }
           ]
@@ -441,7 +413,7 @@
               "function": "minecraft:set_count",
               "count": {
                 "min": 1,
-                "max": 6
+                "max": 4
               }
             }
           ]
@@ -455,7 +427,7 @@
               "function": "minecraft:set_count",
               "count": {
                 "min": 1,
-                "max": 6
+                "max": 4
               }
             }
           ]
@@ -469,7 +441,7 @@
               "function": "minecraft:set_count",
               "count": {
                 "min": 1,
-                "max": 6
+                "max": 4
               }
             }
           ]
@@ -483,7 +455,7 @@
               "function": "minecraft:set_count",
               "count": {
                 "min": 1,
-                "max": 6
+                "max": 4
               }
             }
           ]

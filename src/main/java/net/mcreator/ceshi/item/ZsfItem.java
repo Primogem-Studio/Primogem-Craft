@@ -63,7 +63,7 @@ public class ZsfItem extends AxeItem {
 	@Override
 	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
-		ZsfsxProcedure.execute();
+		ZsfsxProcedure.execute(entity, sourceentity, itemstack);
 		return retval;
 	}
 

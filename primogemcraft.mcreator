@@ -11278,106 +11278,6 @@
       }
     },
     {
-      "name": "Shengjizizaitie",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shengjizizaitie",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/ShengjizizaitieItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/shengjizizaitie.json"
-        ]
-      }
-    },
-    {
-      "name": "Shengjizizaitiepeifang",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shengjizizaitiepeifang",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/shengjizizaitiepeifang.json"
-        ]
-      }
-    },
-    {
-      "name": "Shengjizizaizuan",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shengjizizaizuan",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/ShengjizizaizuanItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/shengjizizaizuan.json"
-        ]
-      }
-    },
-    {
-      "name": "Shengjizizaihej",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shengjizizaihej",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/primogemcraft/models/item/shengjizizaihej.json",
-          "src/main/java/net/mcreator/ceshi/item/ShengjizizaihejItem.java"
-        ]
-      }
-    },
-    {
-      "name": "Shengjizizaizuanpeifang",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shengjizizaizuanpeifang",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/shengjizizaizuanpeifang.json"
-        ]
-      }
-    },
-    {
-      "name": "Shengjizizaihejinpeifang",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shengjizizaihejinpeifang",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/shengjizizaihejinpeifang.json"
-        ]
-      }
-    },
-    {
-      "name": "Shengjizuanshejin",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shengjizuanshejin",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/ShengjizuanshejinItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/shengjizuanshejin.json"
-        ]
-      }
-    },
-    {
-      "name": "Shengjizuanshejinpeifang",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shengjizuanshejinpeifang",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/shengjizuanshejinpeifang.json"
-        ]
-      }
-    },
-    {
       "name": "Diaoyonghuishou",
       "type": "procedure",
       "compiles": true,
@@ -11621,106 +11521,6 @@
       }
     },
     {
-      "name": "Shengjijltiewp",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shengjijltiewp",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/primogemcraft/models/item/shengjijltiewp.json",
-          "src/main/java/net/mcreator/ceshi/item/ShengjijltiewpItem.java"
-        ]
-      }
-    },
-    {
-      "name": "Shengjijlzswp",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shengjijlzswp",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/ShengjijlzswpItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/shengjijlzswp.json"
-        ]
-      }
-    },
-    {
-      "name": "Shengjijlhjwp",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shengjijlhjwp",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/ShengjijlhjwpItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/shengjijlhjwp.json"
-        ]
-      }
-    },
-    {
-      "name": "Sshengjijlzsshjwp",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sshengjijlzsshjwp",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/SshengjijlzsshjwpItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/sshengjijlzsshjwp.json"
-        ]
-      }
-    },
-    {
-      "name": "Sjpfjl01",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sjpfjl_01",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/sjpfjl_01.json"
-        ]
-      }
-    },
-    {
-      "name": "Sjpfjl02",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sjpfjl_02",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/sjpfjl_02.json"
-        ]
-      }
-    },
-    {
-      "name": "Sjpfjl03",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sjpfjl_03",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/sjpfjl_03.json"
-        ]
-      }
-    },
-    {
-      "name": "Sjpfjl04",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sjpfjl_04",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/sjpfjl_04.json"
-        ]
-      }
-    },
-    {
       "name": "Jlg",
       "type": "tool",
       "compiles": true,
@@ -11953,106 +11753,6 @@
       }
     },
     {
-      "name": "Sjzst",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sjzst",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/SjzstItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/sjzst.json"
-        ]
-      }
-    },
-    {
-      "name": "Ssjzszs",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ssjzszs",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/SsjzszsItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/ssjzszs.json"
-        ]
-      }
-    },
-    {
-      "name": "Sjzshj",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sjzshj",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/primogemcraft/models/item/sjzshj.json",
-          "src/main/java/net/mcreator/ceshi/item/SjzshjItem.java"
-        ]
-      }
-    },
-    {
-      "name": "Sjzszsshj",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sjzszsshj",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/primogemcraft/models/item/sjzszsshj.json",
-          "src/main/java/net/mcreator/ceshi/item/SjzszsshjItem.java"
-        ]
-      }
-    },
-    {
-      "name": "Sjpfzs01",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sjpfzs_01",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/sjpfzs_01.json"
-        ]
-      }
-    },
-    {
-      "name": "Sjpfzs02",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sjpfzs_02",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/sjpfzs_02.json"
-        ]
-      }
-    },
-    {
-      "name": "Sjpfzs03",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sjpfzs_03",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/sjpfzs_03.json"
-        ]
-      }
-    },
-    {
-      "name": "Sjpfzs04",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sjpfzs_04",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/sjpfzs_04.json"
-        ]
-      }
-    },
-    {
       "name": "Zsg",
       "type": "tool",
       "compiles": true,
@@ -12249,7 +11949,20 @@
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/ZsfsxProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
       }
     },
     {
@@ -12400,106 +12113,6 @@
             "name": "world",
             "type": "world"
           }
-        ]
-      }
-    },
-    {
-      "name": "Szsjtie",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "szsjtie",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/SzsjtieItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/szsjtie.json"
-        ]
-      }
-    },
-    {
-      "name": "Szzssj",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "szzssj",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/SzzssjItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/szzssj.json"
-        ]
-      }
-    },
-    {
-      "name": "Szhjsj",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "szhjsj",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/primogemcraft/models/item/szhjsj.json",
-          "src/main/java/net/mcreator/ceshi/item/SzhjsjItem.java"
-        ]
-      }
-    },
-    {
-      "name": "Szbfzsshjsj",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "szbfzsshjsj",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/SzbfzsshjsjItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/szbfzsshjsj.json"
-        ]
-      }
-    },
-    {
-      "name": "Szsjpf",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "szsjpf",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/szsjpf.json"
-        ]
-      }
-    },
-    {
-      "name": "Szshpf2",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "szshpf_2",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/szshpf_2.json"
-        ]
-      }
-    },
-    {
-      "name": "Szsjpf3",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "szsjpf_3",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/szsjpf_3.json"
-        ]
-      }
-    },
-    {
-      "name": "Szsjpf4",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "szsjpf_4",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/szsjpf_4.json"
         ]
       }
     },
@@ -12859,106 +12472,6 @@
             "name": "world",
             "type": "world"
           }
-        ]
-      }
-    },
-    {
-      "name": "Djtsj",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "djtsj",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/primogemcraft/models/item/djtsj.json",
-          "src/main/java/net/mcreator/ceshi/item/DjtsjItem.java"
-        ]
-      }
-    },
-    {
-      "name": "Djzssj",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "djzssj",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/primogemcraft/models/item/djzssj.json",
-          "src/main/java/net/mcreator/ceshi/item/DjzssjItem.java"
-        ]
-      }
-    },
-    {
-      "name": "Djhjsj",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "djhjsj",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/DjhjsjItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/djhjsj.json"
-        ]
-      }
-    },
-    {
-      "name": "Djzsshjsj",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "djzsshjsj",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/DjzsshjsjItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/djzsshjsj.json"
-        ]
-      }
-    },
-    {
-      "name": "Djtsjpf",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "djtsjpf",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/djtsjpf.json"
-        ]
-      }
-    },
-    {
-      "name": "Djzssjpf",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "djzssjpf",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/djzssjpf.json"
-        ]
-      }
-    },
-    {
-      "name": "Djzsssjhj",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "djzsssjhj",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/djzsssjhj.json"
-        ]
-      }
-    },
-    {
-      "name": "Djzsshjpf",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "djzsshjpf",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/djzsshjpf.json"
         ]
       }
     },
@@ -13452,106 +12965,6 @@
       }
     },
     {
-      "name": "Rytsj",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rytsj",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/RytsjItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/rytsj.json"
-        ]
-      }
-    },
-    {
-      "name": "Ryzssj",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ryzssj",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/RyzssjItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/ryzssj.json"
-        ]
-      }
-    },
-    {
-      "name": "Ryhjsj",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ryhjsj",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/RyhjsjItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/ryhjsj.json"
-        ]
-      }
-    },
-    {
-      "name": "Ryzsshjsj",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ryzsshjsj",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/RyzsshjsjItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/ryzsshjsj.json"
-        ]
-      }
-    },
-    {
-      "name": "Rytsjpf",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rytsjpf",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/rytsjpf.json"
-        ]
-      }
-    },
-    {
-      "name": "Ryzssjpf",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ryzssjpf",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/ryzssjpf.json"
-        ]
-      }
-    },
-    {
-      "name": "Ryhjsjpf",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ryhjsjpf",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/ryhjsjpf.json"
-        ]
-      }
-    },
-    {
-      "name": "Ryzsshjsjpf",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ryzsshjsjpf",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/ryzsshjsjpf.json"
-        ]
-      }
-    },
-    {
       "name": "Zhuoshao",
       "type": "potioneffect",
       "compiles": true,
@@ -13959,106 +13372,6 @@
       }
     },
     {
-      "name": "Axtsj",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "axtsj",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/primogemcraft/models/item/axtsj.json",
-          "src/main/java/net/mcreator/ceshi/item/AxtsjItem.java"
-        ]
-      }
-    },
-    {
-      "name": "Axzssj",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "axzssj",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/primogemcraft/models/item/axzssj.json",
-          "src/main/java/net/mcreator/ceshi/item/AxzssjItem.java"
-        ]
-      }
-    },
-    {
-      "name": "Axhjsj",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "axhjsj",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/primogemcraft/models/item/axhjsj.json",
-          "src/main/java/net/mcreator/ceshi/item/AxhjsjItem.java"
-        ]
-      }
-    },
-    {
-      "name": "Axzsshjsj",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "axzsshjsj",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/AxzsshjsjItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/axzsshjsj.json"
-        ]
-      }
-    },
-    {
-      "name": "Axtsjpf",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "axtsjpf",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/axtsjpf.json"
-        ]
-      }
-    },
-    {
-      "name": "Axzssjpf",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "axzssjpf",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/axzssjpf.json"
-        ]
-      }
-    },
-    {
-      "name": "Axhjsjpf",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "axhjsjpf",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/axhjsjpf.json"
-        ]
-      }
-    },
-    {
-      "name": "Axzsshjsjpf",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "axzsshjsjpf",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/axzsshjsjpf.json"
-        ]
-      }
-    },
-    {
       "name": "Axg",
       "type": "tool",
       "compiles": true,
@@ -14378,120 +13691,6 @@
       }
     },
     {
-      "name": "Mzsj",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mzsj",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/primogemcraft/models/item/mzsj.json",
-          "src/main/java/net/mcreator/ceshi/item/MzsjItem.java"
-        ]
-      }
-    },
-    {
-      "name": "Mzsj2",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mzsj_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/Mzsj2Item.java",
-          "src/main/resources/assets/primogemcraft/models/item/mzsj_2.json"
-        ]
-      }
-    },
-    {
-      "name": "Mzsj3",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mzsj_3",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/Mzsj3Item.java",
-          "src/main/resources/assets/primogemcraft/models/item/mzsj_3.json"
-        ]
-      }
-    },
-    {
-      "name": "Mzsj1",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mzsj_1",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/mzsj_1.json"
-        ]
-      }
-    },
-    {
-      "name": "Mzsjpf2",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mzsjpf_2",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/mzsjpf_2.json"
-        ]
-      }
-    },
-    {
-      "name": "Mzsjpf3",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mzsjpf_3",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/mzsjpf_3.json"
-        ]
-      }
-    },
-    {
-      "name": "Qhzlh",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "qhzlh",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/QhzlhItem.java",
-          "src/main/resources/assets/primogemcraft/models/item/qhzlh.json"
-        ]
-      }
-    },
-    {
-      "name": "Qhzllh2",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "qhzllh_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/item/Qhzllh2Item.java",
-          "src/main/resources/assets/primogemcraft/models/item/qhzllh_2.json"
-        ]
-      }
-    },
-    {
-      "name": "QQuHangZhoullh",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "q_qu_hang_zhoullh",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/primogemcraft/models/item/q_qu_hang_zhoullh.json",
-          "src/main/java/net/mcreator/ceshi/item/QQuHangZhoullhItem.java"
-        ]
-      }
-    },
-    {
       "name": "Axbyks",
       "type": "loottable",
       "compiles": true,
@@ -14572,260 +13771,6 @@
       "metadata": {
         "files": [
           "src/main/resources/data/primogemcraft/recipe/djqjzfg.json"
-        ]
-      }
-    },
-    {
-      "name": "Tjpf",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tjpf",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/tjpf.json"
-        ]
-      }
-    },
-    {
-      "name": "Zsjpf",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "zsjpf",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/zsjpf.json"
-        ]
-      }
-    },
-    {
-      "name": "Hjjpf",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "hjjpf",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/hjjpf.json"
-        ]
-      }
-    },
-    {
-      "name": "Lhpf1",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lhpf_1",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/lhpf_1.json"
-        ]
-      }
-    },
-    {
-      "name": "Lhpf2",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lhpf_2",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/lhpf_2.json"
-        ]
-      }
-    },
-    {
-      "name": "Lhpf3",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lhpf_3",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/lhpf_3.json"
-        ]
-      }
-    },
-    {
-      "name": "Zllh01",
-      "type": "loottable",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "zllh_01",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/loot_table/blocks/zllh_01.json"
-        ]
-      }
-    },
-    {
-      "name": "Zllh02",
-      "type": "loottable",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "zllh_02",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/loot_table/blocks/zllh_02.json"
-        ]
-      }
-    },
-    {
-      "name": "Zllh03",
-      "type": "loottable",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "zllh_03",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/loot_table/blocks/zllh_03.json"
-        ]
-      }
-    },
-    {
-      "name": "Zllhsx",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "zllhsx",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/procedures/ZllhsxProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Lhpf04",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lhpf_04",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/lhpf_04.json"
-        ]
-      }
-    },
-    {
-      "name": "Lhpf05",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lhpf_05",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/lhpf_05.json"
-        ]
-      }
-    },
-    {
-      "name": "Lhpf06",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lhpf_06",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/lhpf_06.json"
-        ]
-      }
-    },
-    {
-      "name": "Lhpf07",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lhpf_07",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/lhpf_07.json"
-        ]
-      }
-    },
-    {
-      "name": "Lhpf08",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lhpf_08",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/lhpf_08.json"
-        ]
-      }
-    },
-    {
-      "name": "Lhpf09",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lhpf_09",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/lhpf_09.json"
-        ]
-      }
-    },
-    {
-      "name": "Lhpf10",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lhpf_10",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/lhpf_10.json"
-        ]
-      }
-    },
-    {
-      "name": "Lhpf11",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lhpf_11",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/lhpf_11.json"
-        ]
-      }
-    },
-    {
-      "name": "Lhpf12",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lhpf_12",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/recipe/lhpf_12.json"
         ]
       }
     },
@@ -17113,112 +16058,6 @@
       "metadata": {
         "files": [
           "src/main/resources/data/primogemcraft/advancement/jdljhs.json"
-        ]
-      }
-    },
-    {
-      "name": "Jdhszly",
-      "type": "achievement",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jdhszly",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/advancement/jdhszly.json"
-        ]
-      }
-    },
-    {
-      "name": "Ysmbjdsx",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ysmbjdsx",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/procedures/YsmbjdsxProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Jdlyzsj",
-      "type": "achievement",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jdlyzsj",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/advancement/jdlyzsj.json"
-        ]
-      }
-    },
-    {
-      "name": "Jdszzqh",
-      "type": "achievement",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jdszzqh",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/advancement/jdszzqh.json"
-        ]
-      }
-    },
-    {
-      "name": "Jdbfwb",
-      "type": "achievement",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jdbfwb",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/advancement/jdbfwb.json"
-        ]
-      }
-    },
-    {
-      "name": "Jdybdw",
-      "type": "achievement",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jdybdw",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/advancement/jdybdw.json"
-        ]
-      }
-    },
-    {
-      "name": "Jdwhhl",
-      "type": "achievement",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jdwhhl",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/advancement/jdwhhl.json"
-        ]
-      }
-    },
-    {
-      "name": "Jdkx",
-      "type": "achievement",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jdkx",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/advancement/jdkx.json"
         ]
       }
     },
@@ -20254,57 +19093,6 @@
           {
             "name": "z",
             "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Qhzllh4",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "qhzllh_4",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/primogemcraft/models/item/qhzllh_4.json",
-          "src/main/java/net/mcreator/ceshi/item/Qhzllh4Item.java"
-        ]
-      }
-    },
-    {
-      "name": "Zllh4zlp",
-      "type": "loottable",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "zllh_4zlp",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/primogemcraft/loot_table/entities/zllh_4zlp.json"
-        ]
-      }
-    },
-    {
-      "name": "Qhlh3sx",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "qhlh_3sx",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/procedures/Qhlh3sxProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
           },
           {
             "name": "world",
@@ -39138,13 +37926,6 @@
       "Zyjsl",
       "Ryjll",
       "Lajsl",
-      "Mzsj",
-      "Mzsj2",
-      "Mzsj3",
-      "Qhzlh",
-      "Qhzllh2",
-      "QQuHangZhoullh",
-      "Qhzllh4",
       "Yuanshijian",
       "Yuanshigao",
       "Yuanshifu",
@@ -39179,34 +37960,6 @@
       "Aixubingyukuai",
       "Aixubingyu",
       "Yuansujingti",
-      "Shengjizizaitie",
-      "Shengjizizaizuan",
-      "Shengjizizaihej",
-      "Shengjizuanshejin",
-      "Shengjijltiewp",
-      "Shengjijlzswp",
-      "Shengjijlhjwp",
-      "Sshengjijlzsshjwp",
-      "Sjzst",
-      "Ssjzszs",
-      "Sjzshj",
-      "Sjzszsshj",
-      "Szsjtie",
-      "Szzssj",
-      "Szhjsj",
-      "Szbfzsshjsj",
-      "Djtsj",
-      "Djzssj",
-      "Djhjsj",
-      "Djzsshjsj",
-      "Rytsj",
-      "Ryzssj",
-      "Ryhjsj",
-      "Ryzsshjsj",
-      "Axtsj",
-      "Axzssj",
-      "Axhjsj",
-      "Axzsshjsj",
       "Zizgao",
       "Jlg",
       "Zsg",
@@ -39367,7 +38120,6 @@
       "block.primogemcraft.hhyinbaoqi": "引爆器",
       "block.primogemcraft.zuishengkuangshi.description_0": "§8在河流群戏浅层深处生成",
       "item.primogemcraft.kaifaqiangzhi_01": "§4需知",
-      "advancements.jdhszly.title": "回收利用",
       "block.primogemcraft.jingzhimolakuai.description_0": "§7或许能用来做§e屋顶的中心！",
       "gui.primogemcraft.cunzheshezhi.tooltip_shi_shu_liang_jian_shao": "使数量减少",
       "block.primogemcraft.chuangzaoxiaodengfasheqi.description_0": "§7红石驱动",
@@ -39435,7 +38187,6 @@
       "item.primogemcraft.cchonggaodaodedezanxu": "§f崇高道德的赞许",
       "item.primogemcraft.qwwshy.description_1": "§7§l罐子将额外掉落10倍战利品",
       "item.primogemcraft.qwwshy.description_0": "§7破坏罐子时：",
-      "item.primogemcraft.rytsj": "『铁质升级』§c燃愿玛瑙",
       "item.primogemcraft.qwjlbxyq": "§5§l『奇物』§a俱乐部信仰凭证",
       "gui.primogemcraft.cunzheshezhi.tooltip_qu_chu_shi_you_gu_ding_shu_liang_zhuan_bian_wei_0240": "取出时由固定数量转变为0~240%",
       "item.primogemcraft.qwhygzq.description_2": "§c§l极大概率使祈愿武器等级变为 -999",
@@ -39451,7 +38202,6 @@
       "item.primogemcraft.ydggz.description_1": "§7每3分钟扣除自身5%当前经验值",
       "item.primogemcraft.ydggz.description_4": "§6该物品，完全修复时解除负面效果",
       "item.primogemcraft.ydggz.description_3": "§6手持该物品右键消耗咕钟零件修复",
-      "advancements.jdszzqh.title": "升级再强化",
       "item.primogemcraft.qwkwzw.description_3": " 命值",
       "effect.primogemcraft.jqyydm": "集成代码",
       "item.primogemcraft.qwkwzw.description_4": "§9寄生伤害概率 -20%",
@@ -39464,10 +38214,8 @@
       "item.primogemcraft.qwqskxjxt.description_0": "§7食用食物后减少50%饱食度收益",
       "item.primogemcraft.qwqskxjxt.description_1": "§7同时减少80%饱和度收益",
       "item.primogemcraft.ydggz.description_0": "§9拾取后触发：",
-      "item.primogemcraft.q_qu_hang_zhoullh.description_1": "§b[潜行+右键]§7使用全部",
       "item.primogemcraft.qwlhb": "奇物礼盒",
       "item.primogemcraft.qwlha": "奇物礼盒",
-      "item.primogemcraft.q_qu_hang_zhoullh.description_0": "§e[右键]§7使用一个",
       "item.primogemcraft.qwqskxjxt.description_2": "§8放置类食物不受影响",
       "item.primogemcraft.feiqiupingzheng": "§e§kaha§8§r非酋凭证§e§kaha",
       "item.minecraft.tipped_arrow.effect.fengraoqiongjiang": "§e丰饶琼浆 箭矢",
@@ -39516,7 +38264,6 @@
       "gamerule.cs": "ces",
       "death.attack.s_hchixushanghai.item": "%1$s 被 %2$s 使用 %3$s触发反伤死了",
       "item.primogemcraft.yuzhousuipian.description_0": "§7在这个世界貌似是以实体形式存在......",
-      "item.primogemcraft.shengjizizaizuan": "§b『钻石升级』§a自在松石",
       "advancements.bhmg.descr": "祈愿首次触发捕获明光",
       "item.primogemcraft.tezhidieyingqi.description_0": "§7感恩戴德吧！我都替你考虑好了！",
       "item.primogemcraft.tezhidieyingqi.description_1": "§",
@@ -39572,11 +38319,6 @@
       "item.primogemcraft.zsq": "§d『最胜紫晶』锹",
       "item.primogemcraft.qwlbtdgcl.description_4": "§7有宇宙碎片并清除自身§5并产出少量材料",
       "gui.primogemcraft.gu_ihualiduanzaotai.tooltip_ssbsslke_fang_ru_die_ying_qi": "§b§l可放入叠影器",
-      "item.primogemcraft.ryzssj.description_0": "§7可在锻造台升级钻石质装备",
-      "item.primogemcraft.ryzssj.description_1": "§",
-      "item.primogemcraft.ryzssj.description_2": "§7可应用于：",
-      "item.primogemcraft.ryzssj.description_3": "§9 钻石剑",
-      "item.primogemcraft.ryzssj.description_4": "§9 钻石制盔甲",
       "item.primogemcraft.jinzhimola.description_0": "§7进阶材料",
       "block.primogemcraft.caomu_26": "草原核化木 按钮",
       "item.primogemcraft.yishijiemugun": "Yishijiemugun",
@@ -39661,7 +38403,6 @@
       "item.primogemcraft.xckf.description_0": "§7别在家里喝",
       "block.primogemcraft.ceshi_mucaibao_pressure_plate": "草原核化木 压力板",
       "item.primogemcraft.ggongzhuxinghua": "§6Chasing Starlight With You",
-      "item.primogemcraft.shengjijltiewp": "『铁质升级』§6坚牢黄玉",
       "block.primogemcraft.shenbanjianlaohuangyukuangshi": "深层坚牢黄玉矿石",
       "gui.primogemcraft.yinhang.button_qing_ni_gun_kai": "Out,Plz label_jiang_yu_zhou_sui_pian_cun_ru_zhe_li_dang_xia_ci_yu_jian_shi_gei_yu_shuang_bei",
       "item.primogemcraft.jiangliliulangzhejingyan": "流浪者的经验",
@@ -39700,7 +38441,6 @@
       "item.primogemcraft.mmola_01.description_1": "§7但绝对不是这里",
       "gui.primogemcraft.cunzheshezhi.tooltip_cong_xia_fang_an_niu_shu_ru": "从下方按钮输入",
       "gui.primogemcraft.sjgu_ifumo_00.label_xiao_hao_20dang_qian_zui_da_hp": "消耗20%当前最大HP。",
-      "item.primogemcraft.q_qu_hang_zhoullh": "史诗 强化助力礼盒",
       "item.primogemcraft.xingjidaletou.description_4": "§7   清除玩家§c所有经验值！",
       "item.primogemcraft.xingjidaletou.description_3": "§7 - 但也有小概率损坏奇物，并",
       "item.primogemcraft.xingjidaletou.description_2": "§7   添加一个§f1~20级§7的随机附魔",
@@ -39717,29 +38457,19 @@
       "item.primogemcraft.zziyousongshi": "§a自由松石",
       "item.primogemcraft.axg": "§b『哀叙冰玉』镐",
       "item.primogemcraft.axf": "§b『哀叙冰玉』斧",
-      "item.primogemcraft.shengjizizaizuan.description_4": "§9 钻石制盔甲",
-      "item.primogemcraft.shengjizizaizuan.description_3": "§9 钻石剑",
-      "item.primogemcraft.shengjizizaizuan.description_2": "§7可应用于：",
       "advancements.b_bao_di_ren.title": "保---底---人---",
-      "item.primogemcraft.shengjizizaizuan.description_1": "§",
-      "item.primogemcraft.shengjizizaizuan.description_0": "§7可在锻造台升级钻石质装备",
       "gui.primogemcraft.gu_ibhmg.tooltip_sscqiang_zhi_tui_chu_jie_mian_hui_sui_ji_xuan_ze_ge_qi_wu": "选择一个物品",
       "item.primogemcraft.qwxgdbmt": "§5§l『奇物』§b虚构的三八面骰",
       "item.primogemcraft.axq": "§b『哀叙冰玉』锹",
       "advancements.yysgj.descr": "获得任意元素工具",
       "advancements.yzam.title": "宇宙奥秘",
       "block.primogemcraft.dangaoliyue": "§6赠糕于你",
-      "item.primogemcraft.djzsshjsj.description_2": "§7可应用于：",
       "gui.primogemcraft.bwdyinhang.label_de_shuang_bei_yu_zhou_sui_pian": "得双倍宇宙碎片！",
-      "item.primogemcraft.djzsshjsj.description_1": "§",
       "item.primogemcraft.yuzhousuipian": "宇宙碎片",
-      "item.primogemcraft.djzsshjsj.description_0": "§7可直接强化至合金等级",
       "item.primogemcraft.qwlhs": "奇物礼盒",
       "item.primogemcraft.liulangzhezhinang.description_0": "§7存储空间：18",
-      "item.primogemcraft.djzsshjsj.description_4": "§d『元素晶体』§9钻石制盔甲",
       "subtitles.chujinle02": "hahaha",
       "effect.lengquezhongguizhongju": "Implement Error Cool Down",
-      "item.primogemcraft.djzsshjsj.description_3": "§d『元素晶体』§9钻石剑",
       "item.primogemcraft.qwxxgg.description_2": "§e重置一次已消耗的免伤次数",
       "item.primogemcraft.qwxxgg.description_0": "§6与异木果实效果一致，但",
       "item.primogemcraft.qwxxgg.description_1": "§e临终效果期间，每次拾取经验球将",
@@ -39777,15 +38507,10 @@
       "advancements.yysgj.title": "五彩斑斓的嘿",
       "advancements.b_bao_di_ren.descr": "在祈愿中获得保底",
       "item.primogemcraft.jingqueyouyadaima": "§5『奇物』§f精确优雅的代码",
-      "item.primogemcraft.axzssj.description_1": "§",
-      "item.primogemcraft.axzssj.description_2": "§7可应用于：",
       "item.primogemcraft.qwjcdm": "§5『奇物』§e集成代码",
-      "item.primogemcraft.axzssj.description_0": "§7可在锻造台升级钻石质装备",
       "item.primogemcraft.yuanshiyuanpei": "§b原石原胚",
       "advancements.jzdz.descr": "获得华丽锻造台",
       "block.primogemcraft.mmolazhilajitong": "§d摩拉制垃圾桶",
-      "item.primogemcraft.axzssj.description_3": "§9 钻石剑",
-      "item.primogemcraft.axzssj.description_4": "§9 钻石制盔甲",
       "item.primogemcraft.tclzhaiquan.description_1": "§7使用§b祈愿武器用良矿§7分解高阶武器得到",
       "item.primogemcraft.tclzhaiquan.description_0": "§7用于合成任意祈愿武器",
       "item.primogemcraft.jdsbcf_1.description_0": "§7降低各项属性",
@@ -39818,11 +38543,9 @@
       "item.primogemcraft.shilianchou": "十枚纠缠之缘",
       "item.primogemcraft.qwypzgs": "§5§l『奇物』§d邪恶的异木果实",
       "block.primogemcraft.mmolazhilajitong.description_0": "§7可以用来存放更多物品",
-      "item.primogemcraft.qhzllh_4": "§6特殊产出 强化助力礼盒",
       "effect.primogemcraft.qwjlbbgsx_2": "俱乐部普通八卦",
       "gui.primogemcraft.cunzheshezhi.tooltip_fang_ru_bei_bao": "放入背包",
       "advancements.beiguotiejiang.title": "§6北国铁匠",
-      "item.primogemcraft.qhzllh_2": "珍稀 强化助力礼盒",
       "item.primogemcraft.qhmbmlys_01": "锻造模板",
       "advancements.djmszb.descr": "获得无锋剑",
       "item.primogemcraft.qhmbmlys_02": "锻造模板",
@@ -39869,14 +38592,9 @@
       "advancements.huhuangjinwu_2.title": "§6黄金屋",
       "item.primogemcraft.xingjidaletou": "§5『奇物』§b星际大乐透",
       "item.primogemcraft.tiankongsp": "枪械碎片",
-      "item.primogemcraft.szzssj.description_3": "§9 钻石剑",
-      "item.primogemcraft.szzssj.description_4": "§9 钻石制盔甲",
       "item.primogemcraft.qwthhjiii.description_0": "“它似乎除了叫奇物以外......”",
-      "item.primogemcraft.szzssj.description_0": "§7可在锻造台升级钻石质装备",
       "block.primogemcraft.hhzd_0": "炸..弹？",
-      "item.primogemcraft.szzssj.description_1": "§",
       "block.primogemcraft.hhzd_1": "炸弹！",
-      "item.primogemcraft.szzssj.description_2": "§7可应用于：",
       "advancements.xdfsqjd.title": "§4§m烟花§6霄灯来咯~",
       "block.primogemcraft.xijaieyangengdi": "下界岩耕地",
       "item.primogemcraft.qwsmcd.description_1": "§7§l罐子将额外掉落宇宙碎片",
@@ -39899,7 +38617,6 @@
       "advancements.jdyszb.title": "钻石降级版",
       "block.primogemcraft.disuikuai_1": "地髓水晶块",
       "item.primogemcraft.cllk": "特处理良矿",
-      "item.primogemcraft.qhzlh": "强化助力礼盒",
       "item.primogemcraft.lajitongzunyan.description_3": "§9抗性提升II（3:00）",
       "entity.primogemcraft.qq_qyuanchulan_01": "祈愿出蓝",
       "advancements.mjdl.descr": "获得均衡石板3",
@@ -39917,40 +38634,23 @@
       "advancements.qwhc.title": "寰宇502",
       "gui.primogemcraft.sjgu_ifumo_00.tooltip_sscdang_qian_yu_zhou_sui_pian_shu_liang_bu_zu": "§c当前宇宙碎片数量不足！",
       "item.primogemcraft.qwyhjb": "§5§l『奇物』§f虚构大乐透",
-      "item.primogemcraft.ssjzszs": "§b『钻石升级』§d最胜紫晶",
       "gui.primogemcraft.ceshishijianxuanzejiemian.button_shua_xin": "刷新",
       "item.primogemcraft.ydfms": "一叠附魔书",
-      "item.primogemcraft.shengjizizaihej.description_0": "§7可在锻造台升级下界合金质装备",
-      "item.primogemcraft.shengjizizaihej.description_1": "§",
-      "item.primogemcraft.shengjizizaihej.description_2": "§7可应用于：",
-      "item.primogemcraft.shengjizizaihej.description_3": "§9 下界合金剑",
-      "item.primogemcraft.shengjizizaihej.description_4": "§9 下界合金制盔甲",
       "item.primogemcraft.xiaodaimola": "小块精致摩拉",
       "item.primogemcraft.qhmbmlys_02.description_5": "§9 元素晶体",
       "item.primogemcraft.qhmbmlys_02.description_4": "§7所需原材料：",
-      "item.primogemcraft.shengjijlzswp.description_4": "§9 钻石制盔甲",
       "item.primogemcraft.weizhiyepian": "§e未知叶片",
-      "advancements.jdkx.descr": "获得强化助力礼盒",
       "item.primogemcraft.qwfldyhdlb": "§5§l『奇物』§b分裂的银河大乐币",
       "block.primogemcraft.yishijiemuban_slab": "单色异世界木木板 台阶",
-      "item.primogemcraft.sjzshj.description_2": "§7可应用于：",
-      "item.primogemcraft.sjzshj.description_3": "§9 下界合金剑",
-      "item.primogemcraft.sjzshj.description_0": "§7可在锻造台升级下界合金质装备",
       "item.primogemcraft.qwsbmb.description_4": "§6 奇物效果",
       "item.primogemcraft.hqyan": "§5『奇物』§6契约火漆",
-      "item.primogemcraft.sjzshj.description_1": "§",
-      "item.primogemcraft.shengjijlzswp.description_3": "§9 钻石剑",
       "item.primogemcraft.qhmbmlys_02.description_1": "§",
       "item.primogemcraft.qwsbmb.description_2": "§6 但每次触发时§l35%§r§6概率进行",
-      "item.primogemcraft.shengjijlzswp.description_2": "§7可应用于：",
       "item.primogemcraft.qhmbmlys_02.description_0": "§7元素晶体强化",
       "item.primogemcraft.qwsbmb.description_3": "§6 一次§e§l闪耀的偏方三八面骰§r§6的",
       "item.primogemcraft.dayingxiongdejingyan": "大英雄的经验书",
-      "item.primogemcraft.shengjijlzswp.description_1": "§",
-      "item.primogemcraft.sjzshj.description_4": "§9 下界合金制盔甲",
       "item.primogemcraft.qhmbmlys_02.description_3": "§9 原石工具",
       "item.primogemcraft.qwsbmb.description_0": "§5随着时间的推移，获得奇物",
-      "item.primogemcraft.shengjijlzswp.description_0": "§7可在锻造台升级钻石质装备",
       "item.primogemcraft.qhmbmlys_02.description_2": "§7可应用于：",
       "item.primogemcraft.qwsbmb.description_1": "§e§l必定为负面奇物！",
       "item.primogemcraft.qwggzfenlie_b.description_2": "§6手持右键支付35%生命值以减轻",
@@ -40017,7 +38717,6 @@
       "gui.primogemcraft.cunzheshezhi.button_1": "1",
       "item.primogemcraft.luanqibazaodedaima.description_1": "§7击杀30只生物",
       "item.primogemcraft.jingqueyouyadaima.description_1": "§7击杀30只生物",
-      "item.primogemcraft.axzssj": "§b『钻石升级』§b哀叙冰玉",
       "item.primogemcraft.qwxydsw": "§5『奇物』§f谐乐丢失物",
       "gui.primogemcraft.bwdyinhang.label_yu_dao_lei_si_she_shi_shi": "遇到类似设施时，",
       "advancements.rhsys.descr": "获得奇物融合剂",
@@ -40026,8 +38725,6 @@
       "effect.primogemcraft.zhandouzhuangtai": "战斗状态",
       "item.primogemcraft.ysjfr": "腐肉！",
       "item.primogemcraft.qwcbzg.description_2": "§7允许使用3次§c§l不能连续触发",
-      "item.primogemcraft.mzsj": "反致精炼用魔矿",
-      "advancements.jdlyzsj.descr": "制作钻石制元素模板",
       "item.primogemcraft.jlq.description_0": "§6[SHIFT+右键]§d地面时：",
       "item.primogemcraft.qinlaodezhexue.description_0": "§b挖掘时§f有小概率掉落§e摩拉",
       "item.primogemcraft.qwymzj.description_1": "§7等级 力量 I ~ IV 效果",
@@ -40076,12 +38773,10 @@
       "item.primogemcraft.hqfeng.description_0": "§9对于自在松石系列装备：",
       "item.primogemcraft.teshukuijia_01_helmet": "特殊01",
       "item.primogemcraft.zuishengduanpian": "§d最胜紫晶 断片",
-      "item.primogemcraft.shengjizuanshejin": "§d『钻石合金升级』§a自在松石",
       "itemGroup.tabzhenghuo": "Primogem Craft",
       "advancements.huhuangjinjindu_01.title": "『黄金』的哲学",
       "item.primogemcraft.dijian": "§b笛剑",
       "gui.primogemcraft.guis_jfumo.tooltip_sscgai_wu_pin_bu_man_zu_fu_mo_tiao_jian": "§c该物品不满足附魔条件！",
-      "item.primogemcraft.axhjsj": "§e『下界合金升级』§b哀叙冰玉",
       "item.primogemcraft.hqfeng.description_5": "§8仅作用于正面效果",
       "item.primogemcraft.hqfeng.description_4": " §7冷却",
       "item.primogemcraft.skjinb": "§5§l『奇物』§d时空金币",
@@ -40108,7 +38803,6 @@
       "gui.primogemcraft.bwdyinhang.label_gong_xiang_ying_ping_zheng_bing_you": "供相应凭证，并有",
       "gamerule.guizewuqishangxian": "§b原石工艺§e武器等级上限",
       "item.primogemcraft.yuanshifu": "§b原石 斧",
-      "item.primogemcraft.sjzshj": "§e『下界合金升级』§d最胜紫晶",
       "advancements.qwhc.descr": "获得奇物合成剂",
       "item.primogemcraft.aixubingyukuai": "§b哀叙冰玉 块",
       "gamerule.guizebuhuomingguangzhi.description": "祈愿出金时触发捕获明光的概率，默认20%",
@@ -40119,11 +38813,9 @@
       "item.primogemcraft.fulinjiao.description_0": "§7右键使用后使副手物品获得",
       "death.attack.chiwuwuli": "%1$s 被持续物理伤害撕裂！",
       "block.primogemcraft.yuansujingshikuai": "§kaha§f元素晶石块§kaha",
-      "item.primogemcraft.djzsshjsj": "§d『钻石合金升级』§b涤净青金",
       "item.primogemcraft.qwclgs": "§5§l『奇物』§c磁力果实",
       "item.primogemcraft.xzcfyxwzd.description_0": "§7更华丽的垃圾桶盖罢了！",
       "item.primogemcraft.kkuijiaceshi_chestplate": "摩拉 胸甲",
-      "advancements.jdszzqh.descr": "制作合金制模板",
       "item.primogemcraft.xzcfyxwzd.description_2": "§6 • 抗性提升",
       "item.primogemcraft.xzcfyxwzd.description_1": "",
       "block.primogemcraft.xiutiekuai": "锈铁块",
@@ -40164,7 +38856,6 @@
       "item.primogemcraft.yiyinhedaletou": "Yiyinhedaletou",
       "gui.primogemcraft.taozhuangchakan.taozhuang_1": "0",
       "gui.primogemcraft.taozhuangchakan.taozhuang_0": "0",
-      "item.primogemcraft.djtsj": "『铁质升级』§b涤净青金",
       "block.primogemcraft.xydx.description_0": "§e只有幸运星才能拥有它",
       "gui.primogemcraft.cunzheshezhi.tooltip_shi_shu_liang_zeng_jia": "使数量增加",
       "block.primogemcraft.shizuoyuanshikuai": "试作原石块",
@@ -40233,26 +38924,18 @@
       "item.primogemcraft.jhsb_0.description_0": "§e均衡等级\u003e1",
       "item.primogemcraft.jhsb_0.description_1": "§9右键使用",
       "block.primogemcraft.xiaoguanzi": "小罐子",
-      "item.primogemcraft.sshengjijlzsshjwp.description_1": "§",
-      "item.primogemcraft.sshengjijlzsshjwp.description_0": "§7可直接强化至合金等级",
       "item.primogemcraft.zssp": "钻石碎片",
       "item.primogemcraft.wuxiandiguidedaima.description_7": "§2持续到增益结束",
       "item.primogemcraft.wuxiandiguidedaima.description_6": "§2击杀目标后概率提升经验值",
-      "advancements.jdybdw.title": "一步到位！",
       "item.primogemcraft.wuxiandiguidedaima.description_5": "§7代码修复后：",
       "item.primogemcraft.szf.description_1": "§7 - 创造一棵树，并将自身送至树顶",
       "item.primogemcraft.wuxiandiguidedaima.description_4": "§2玩家攻击目标时，概率减少自身经验值",
-      "item.primogemcraft.szbfzsshjsj.description_3": "§d『元素晶体』§9钻石剑",
       "item.primogemcraft.wuxiandiguidedaima.description_3": "§7修复期间：",
-      "item.primogemcraft.szbfzsshjsj.description_2": "§7可应用于：",
       "item.primogemcraft.wuxiandiguidedaima.description_2": "§",
-      "item.primogemcraft.szbfzsshjsj.description_1": "§",
       "item.primogemcraft.wuxiandiguidedaima.description_1": "§7击杀30只生物",
-      "item.primogemcraft.szbfzsshjsj.description_0": "§7可直接强化至合金等级",
       "item.primogemcraft.jdsbcf_2.description_0": "§7降低各项速度类属性",
       "item.primogemcraft.szc": "§a『生长碧翡』锄",
       "item.primogemcraft.wuxiandiguidedaima.description_0": "§7将这段代码修复成正常的奇物需要",
-      "item.primogemcraft.szbfzsshjsj.description_4": "§d『元素晶体』§9钻石制盔甲",
       "item.primogemcraft.szg": "§a『生长碧翡』镐",
       "item.primogemcraft.szf": "§a『生长碧翡』斧",
       "subtitles.sanyueennnn": "ennnn？",
@@ -40261,13 +38944,9 @@
       "gamerule.guizeyuanshishengcheng": "§b原石工艺 §e是否生成原石矿石",
       "item.primogemcraft.xiaoheita_spawn_egg": "黑塔----异世界分塔 Spawn Egg",
       "item.primogemcraft.szq": "§a『生长碧翡』锹",
-      "item.primogemcraft.sshengjijlzsshjwp.description_3": "§d『元素晶体』§9钻石剑",
-      "item.primogemcraft.sshengjijlzsshjwp.description_2": "§7可应用于：",
       "entity.minecraft.villager.primogemcraft.cesysxj": "原石学家",
-      "item.primogemcraft.sshengjijlzsshjwp.description_4": "§d『元素晶体』§9钻石制盔甲",
       "gui.primogemcraft.sjgu_ifumo_00.label_xiao_hao_70dang_qian_zui_da_hp": "消耗70%当前最大HP。",
       "item.primogemcraft.qqiyuan_jin_guang_spawn_egg": "祈愿出金 Spawn Egg",
-      "advancements.jdhszly.descr": "制作任意铁制元素模板",
       "item.primogemcraft.yiyinhedaletou.description_9": "§9全员透露结果冷却1分钟",
       "item.primogemcraft.yiyinhedaletou.description_8": "§7损坏银河大乐透的数量",
       "item.primogemcraft.yiyinhedaletou.description_7": "§7主手持右键空气查询当前",
@@ -40342,13 +39021,8 @@
       "item.primogemcraft.lajitongzunyan": "垃圾桶的尊严",
       "gui.primogemcraft.bwdyinhang.label_yu_zhou_sui_pian": "cosmic fragment！",
       "block.primogemcraft.dijingqinjingkuangshi": "§9涤净青金 矿石",
-      "item.primogemcraft.szhjsj.description_0": "§7可在锻造台升级下界合金质装备",
-      "item.primogemcraft.szhjsj.description_1": "§",
       "item.primogemcraft.mmolajian": "§e摩拉 剑",
       "item.primogemcraft.huangjindezhexue": "『黄金』的哲学",
-      "item.primogemcraft.szhjsj.description_4": "§9 下界合金制盔甲",
-      "item.primogemcraft.szhjsj.description_2": "§7可应用于：",
-      "item.primogemcraft.szhjsj.description_3": "§9 下界合金剑",
       "advancements.nibaodimeila.descr": "使用银河大乐透时获得大量钻石（概率小于0.6%）",
       "item.primogemcraft.kkuijiaceshi_leggings": "摩拉 护腿",
       "block.primogemcraft.ysjtsj_1": "深层元素晶体矿石",
@@ -40359,7 +39033,6 @@
       "item.primogemcraft.tezhidieyingqi": "特制叠影器",
       "item.primogemcraft.shqwyhdlt.description_0": "§c已损坏！",
       "item.primogemcraft.jinzhimola": "§6精致摩拉",
-      "advancements.jdlyzsj.title": "利用再升级",
       "effect.feixing": "Flying",
       "gui.primogemcraft.ceshigui.label_wu_pin_lan": "物品栏",
       "item.primogemcraft.yxaxg.description_1": "§7 - 95%概率转化§f§n通用元素晶体块§7为随机元素晶体块",
@@ -40369,12 +39042,10 @@
       "item.primogemcraft.zuishengkuai": "§d最胜紫晶 块",
       "gui.primogemcraft.heitayindaoyonggui.label_xiao_hao_1_ge_sui_ji_cuo_wu_dai_ma_zhuang_zhi_xuan_ze_1": "消耗 1 个 随机错误代码装置 选择 1 ",
       "item.primogemcraft.sshenhudezhufu_013": "神狐的祝福",
-      "item.primogemcraft.ryzssj": "§b『钻石升级』§c燃愿玛瑙",
       "block.primogemcraft.caoyuanhehuabuban_2": "草原核化木板",
       "item.primogemcraft.taikongmanbuchangpian.desc": "HOYO-MiX",
       "item.primogemcraft.huangjindezhexue.description_0": "§2耕作时§f有小概率掉落§e摩拉",
       "advancements.qinlaodezhexuejindu.title": "『勤劳』的哲学",
-      "item.primogemcraft.djzssj": "§b『钻石升级』涤净青金",
       "item.primogemcraft.qwxyzq.description_0": "§7在黑塔商店中使用宇宙碎片时",
       "item.primogemcraft.qwxyzq.description_1": "§7减少20%宇宙碎片消耗",
       "item.primogemcraft.ceshiyongwupin": "开发者物品",
@@ -40385,31 +39056,17 @@
       "item.primogemcraft.hqbing": "§5『奇物』§b§k怜爱§r§b火漆",
       "block.primogemcraft.yhjsk": "永恒金属块",
       "item.primogemcraft.qq_qyuanchulan_01_spawn_egg": "祈愿出蓝 Spawn Egg",
-      "item.primogemcraft.axzsshjsj": "§d『钻石合金升级』§b哀叙冰玉",
       "advancements.cchangchangkan.descr": "获得§5垃圾",
-      "item.primogemcraft.qhzllh_2.description_1": "§b[潜行+右键]§7使用全部",
-      "advancements.jdybdw.descr": "获得钻石合金制元素模板",
-      "item.primogemcraft.qhzllh_2.description_0": "§e[右键]§7使用一个",
       "item.primogemcraft.lmsj": "黎明神剑",
       "gamerule.guizeshijianxianzhi.description": "每个游戏日至多掉落几次随机事件",
       "block.primogemcraft.jianlaokuangshi.description_0": "§8主世界地形浅层生成",
       "block.primogemcraft.lajsk": "§klsjs§r金属块",
       "gamerule.guizesuijishijian.description": "概率\u003d\u003c值\u003e* 0.01（%）",
-      "item.primogemcraft.mzsj_2.description_2": "§7可应用于：",
-      "item.primogemcraft.mzsj_2.description_1": "§",
-      "item.primogemcraft.mzsj_2.description_0": "§9抹除元素晶体附着",
-      "item.primogemcraft.shengjijlhjwp.description_0": "§7可在锻造台升级下界合金质装备",
-      "item.primogemcraft.shengjijlhjwp.description_1": "§",
-      "item.primogemcraft.shengjijlhjwp.description_2": "§7可应用于：",
       "advancements.zzenmezhemechoua.title": "怎么这么臭啊！",
       "gui.primogemcraft.cunzheshezhi.tooltip_dian_ci_huo_qu_bu_wen_ding_ban_ben": "点此获取不稳定版本",
-      "item.primogemcraft.shengjijlhjwp.description_3": "§9 下界合金剑",
-      "item.primogemcraft.shengjijlhjwp.description_4": "§9 下界合金制盔甲",
       "gui.primogemcraft.cunzheshezhi.button_qing_ling": "reset",
       "effect.primogemcraft.tldhy": "塔拉毒火焰",
       "block.primogemcraft.ziyousongshikuangshi.description_0": "§8平原任意层生成",
-      "item.primogemcraft.mzsj_2.description_4": "§d『元素晶体』§9钻石制盔甲",
-      "item.primogemcraft.mzsj_2.description_3": "§d『元素晶体』§9钻石剑",
       "item.primogemcraft.qwsmcl.description_3": "§6率掉落2~20宇宙碎片",
       "item.primogemcraft.qwsmcl.description_4": "§9触发5次后该奇物将损坏",
       "item.primogemcraft.qwsmcl.description_1": "§7强化",
@@ -40429,13 +39086,10 @@
       "item.primogemcraft.qwjzyj.description_4": "§",
       "item.primogemcraft.qwjzyj.description_5": "§d该效果每秒至多触发一次",
       "item.primogemcraft.zhapiandingzhengshi.description_0": "§7表面留有细纹",
-      "item.primogemcraft.qhzllh_4.description_2": "§b[潜行+右键]§7使用全部",
       "item.primogemcraft.qwjzyj.description_0": "§7每拥有一个已损坏奇物，攻击目标后会对其额外",
       "item.primogemcraft.ftyj": "§2飞天御剑",
       "item.primogemcraft.qwjzyj.description_1": "§7造成一次等同于自身最大生命0.3%的额外伤害",
-      "item.primogemcraft.qhzllh_4.description_0": "§8史诗礼盒20%概率转化",
       "item.primogemcraft.qwjzyj.description_2": "§7至多以这种方式造成额外30%自身最大生命值",
-      "item.primogemcraft.qhzllh_4.description_1": "§e[右键]§7使用一个",
       "item.primogemcraft.qwyznj": "§5§l『奇物』§c§l愚者凝胶",
       "item.primogemcraft.zhapiandingzhengshi.description_1": "§7或许可以放进唱片机....",
       "item.primogemcraft.qwwszj.description_1": "可用次数超级加倍",
@@ -40449,22 +39103,17 @@
       "advancements.zhzhiyexuanshou.title": "“职业选手”",
       "advancements.bbaozang.title": "宝藏！",
       "gui.primogemcraft.yinhang.label_yu_jian_shi_gei_yu_shuang_bei": "doubles when met",
-      "item.primogemcraft.djhjsj": "§e『下界合金升级』§b涤净青金",
       "block.primogemcraft.yuanshikuangshi": "Yuanshikuangshi",
       "gui.primogemcraft.heitayindaoyonggui.label_ge_cuo_wu_dai_ma": "个错误代码",
       "gui.primogemcraft.bwdyinhang.label_xia_ci_yu_dao_shi_ke_ti": "withdrawable when met next",
       "item.primogemcraft.maoxianjiazhinang": "§7冒险家之囊",
       "item.primogemcraft.yuanshiqiao": "§b原石 锹",
-      "item.primogemcraft.ryhjsj": "§e『下界合金升级』§c燃愿玛瑙",
       "item.primogemcraft.yuanshif": "原石粉尘",
       "item.primogemcraft.kongyuezhufu.description_0": "每天领取1~9颗原石",
       "item.primogemcraft.yiyimuguoshi": "§5『奇物』§6异木果实",
       "item.primogemcraft.qwyhjb.description_2": "§e提供的奖品质量大大降低",
       "item.primogemcraft.qwyhjb.description_1": "§e损坏概率仅为10%，且不会消耗饱食度",
       "item.primogemcraft.qwyhjb.description_0": "§6与§b§l银河大乐透§r§6效果一致，但",
-      "item.primogemcraft.shengjijltiewp.description_0": "§7可在锻造台升级铁质装备",
-      "item.primogemcraft.shengjijltiewp.description_1": "§",
-      "item.primogemcraft.shengjijltiewp.description_2": "§7可应用于：",
       "item.primogemcraft.ccangruimilinjian_014": "葳蕤林野间",
       "gui.primogemcraft.cunzheshezhi.label_empty": "+",
       "item.primogemcraft.qwjzyj": "§5『奇物』§a家族缘结",
@@ -40475,15 +39124,8 @@
       "advancements.rhsys.title": "缝合艺术",
       "item.primogemcraft.liulangzhedejingyan.description_2": "§c  升级后不保留经验",
       "block.primogemcraft.ceshi_mucaibao_slab": "草原核化木 台阶",
-      "item.primogemcraft.shengjijltiewp.description_3": "§9 铁剑",
       "item.primogemcraft.wufengjian": "无锋剑",
-      "item.primogemcraft.shengjijltiewp.description_4": "§9 铁质盔甲",
-      "item.primogemcraft.axtsj.description_4": "§9 铁质盔甲",
-      "item.primogemcraft.axtsj.description_1": "§",
       "item.primogemcraft.cchonggaodaodedezanxu.description_0": "§7掠夺者系列生物小概率掉落",
-      "item.primogemcraft.axtsj.description_0": "§7可在锻造台升级铁质装备",
-      "item.primogemcraft.axtsj.description_3": "§9 铁剑",
-      "item.primogemcraft.axtsj.description_2": "§7可应用于：",
       "block.primogemcraft.mutankuai": "木炭块",
       "item.primogemcraft.fenliejinbi": "§5『奇物』§e分裂金币",
       "item.primogemcraft.jlbj": "§5『奇物』§c俱乐部券",
@@ -40495,7 +39137,6 @@
       "gamerule.guizesuijishijian": "§b原石工艺 随机事件掉落概率",
       "gui.primogemcraft.heitayindaoyonggui.label_xiao_hao_da_liang_yu_zhou_sui_pian_wei_gong_ju_huo_kui_jia_gai_lu_tian": "消耗大量宇宙碎片为工具或盔甲概率添",
       "item.primogemcraft.mmolachutou": "§e摩拉 锄",
-      "item.primogemcraft.szbfzsshjsj": "§d『钻石合金升级』§a生长碧翡",
       "item.primogemcraft.yuanshichutou": "§b原石 锄",
       "advancements.jdwxjyjh.descr": "获得任意元素碎屑或晶体",
       "block.primogemcraft.caoyuansueci": "§a草元素恩赐",
@@ -40540,27 +39181,12 @@
       "item.primogemcraft.djg.description_0": "§d水下右键空气时：",
       "item.primogemcraft.djg.description_2": "§9 - 急迫II（1:00）",
       "item.primogemcraft.djg.description_1": "§9 - 水下呼吸（1:00）",
-      "item.primogemcraft.mzsj_3.description_0": "§9抹除元素晶体附着",
       "item.primogemcraft.djg.description_3": "§7冷却2分钟",
-      "item.primogemcraft.mzsj_3.description_1": "§",
       "advancements.jdwmypszyd.descr": "§b获得原石原胚",
-      "item.primogemcraft.mzsj_3.description_4": "§d『元素晶体』§9下界合金盔甲",
-      "item.primogemcraft.mzsj_3.description_2": "§7可应用于：",
-      "item.primogemcraft.mzsj_3.description_3": "§d『元素晶体』§9下界合金剑",
       "advancements.jushouzhilao.descr": "获得干净的垃圾桶",
       "advancements.qqzp.title": "去其糟粕",
-      "item.primogemcraft.szsjtie.description_0": "§7可在锻造台升级铁质装备",
-      "item.primogemcraft.szsjtie.description_1": "§",
-      "item.primogemcraft.szsjtie.description_2": "§7可应用于：",
-      "item.primogemcraft.szsjtie.description_3": "§9 铁剑",
-      "item.primogemcraft.szsjtie.description_4": "§9 铁质盔甲",
       "item.primogemcraft.zyjsl": "正义金属粒",
-      "item.primogemcraft.djhjsj.description_0": "§7可在锻造台升级下界合金质装备",
-      "item.primogemcraft.djhjsj.description_1": "§",
       "gui.primogemcraft.cunzheshezhi.tooltip_ssczhong_zhi_she_ding_shu_liang_he_ping_zheng": "§c重置设定数量和凭证",
-      "item.primogemcraft.djhjsj.description_2": "§7可应用于：",
-      "item.primogemcraft.djhjsj.description_3": "§9 下界合金剑",
-      "item.primogemcraft.djhjsj.description_4": "§9 下界合金制盔甲",
       "item.primogemcraft.yuansujingti": "§kaha§f元素晶体§kaha",
       "item.primogemcraft.qwwxntdmj.description_0": "§7攻击满生命值生物时扣除",
       "item.primogemcraft.qwwxntdmj.description_1": "§7自身50%当前饱食度",
@@ -40607,13 +39233,8 @@
       "subtitles.choukatiaoguoguocheng01": "23333",
       "item.primogemcraft.qwhcj.description_2": "§5为更高级别随机奇物",
       "item.primogemcraft.qwhcj.description_1": "§5可将两个同级别奇物合成",
-      "item.primogemcraft.axzsshjsj.description_2": "§7可应用于：",
       "subtitles.xiaoguanzi": "",
-      "item.primogemcraft.axzsshjsj.description_3": "§d『元素晶体』§9钻石剑",
       "block.primogemcraft.cangsangshizhuantaijie": "沧桑石砖 台阶",
-      "item.primogemcraft.axzsshjsj.description_0": "§7可直接强化至合金等级",
-      "item.primogemcraft.axzsshjsj.description_1": "§",
-      "item.primogemcraft.axzsshjsj.description_4": "§d『元素晶体』§9钻石制盔甲",
       "item.primogemcraft.qwymzj": "§5『奇物』§6湮灭烛剪",
       "item.ceshi.yuanshi": "Primogem",
       "item.primogemcraft.qwrhj.description_2": "§6成为更多功能性同级奇物",
@@ -40627,14 +39248,9 @@
       "item.primogemcraft.qwybtzdypj": "§5『奇物』§d永不停嘴的羊皮卷",
       "effect.primogemcraft.hslggzfuzhipin": "咕钟把戏",
       "advancements.anqqh.descr": "获得任意祈愿武器",
-      "item.primogemcraft.sjzst.description_4": "§9 铁质盔甲",
       "block.primogemcraft.ysx": "§b原石匣",
       "item.primogemcraft.tclwqcjq.description_0": "§7用于将祈愿武器分解为碎片",
-      "item.primogemcraft.sjzst.description_3": "§9 铁剑",
       "item.primogemcraft.shqwfnj.description_0": "§c已损坏！",
-      "item.primogemcraft.sjzst.description_2": "§7可应用于：",
-      "item.primogemcraft.sjzst.description_1": "§",
-      "item.primogemcraft.sjzst.description_0": "§7可在锻造台升级铁质装备",
       "block.primogemcraft.d_12": "单色异世界木木板 楼梯",
       "block.primogemcraft.d_11": "单色异世界木木板",
       "block.primogemcraft.d_14": "单色异世界木木板 栅栏",
@@ -40642,13 +39258,10 @@
       "item.primogemcraft.zzjll": "自在金属粒",
       "block.primogemcraft.d_16": "单色异世界木木板 压力板",
       "block.primogemcraft.d_15": "单色异世界木木板 栅栏门",
-      "item.primogemcraft.mzsj_3": "§6增强 反致精炼用魔矿",
       "block.primogemcraft.d_17": "单色异世界木木板 按钮",
       "subtitles.kaixiang": "Trash Can",
-      "item.primogemcraft.mzsj_2": "§b稀有 反致精炼用魔矿",
       "effect.primogemcraft.jdsbcf_0xg": "绝对失败处方 零",
       "item.primogemcraft.ryjll": "燃愿金属粒",
-      "item.primogemcraft.shengjizizaitie": "『铁质升级』§a自在松石",
       "effect.primogemcraft.gongjitisheng": "攻击项增益",
       "block.primogemcraft.zuishengkuangshi": "§d最胜紫晶 矿石",
       "gui.primogemcraft.sjgu_ifumo_00.label_xiao_hao_dang_qian_95zui_da_hp": "消耗当前95%最大HP。",
@@ -40661,7 +39274,6 @@
       "item.primogemcraft.qwwxntdmj": "§5『奇物』§f「无效念头」代码机",
       "advancements.qqzp.descr": "获得奇物分解剂",
       "block.primogemcraft.cangsangshizhuan": "沧桑石砖",
-      "item.primogemcraft.szhjsj": "§e『下界合金升级』§a生长碧翡",
       "block.primogemcraft.molakuai_01.description_0": "§6你们有带钱吗....",
       "block.primogemcraft.ranyuanmanaokuangshi.description_0": "§8在下届岩位置生成",
       "gui.primogemcraft.zhangquanzhezhinanggui.label_yi_bang_ren_zhi_nang": "异邦人之囊",
@@ -40693,7 +39305,6 @@
       "item.primogemcraft.zsf.description_1": "§7手持潜行左键调整效果持续时间",
       "item.primogemcraft.zsf.description_0": "§7攻击目标时为目标施加§d『过去』§7效果",
       "item.primogemcraft.laoshi": "§b老石",
-      "item.primogemcraft.szzssj": "§b『钻石升级』§a生长碧翡",
       "item.primogemcraft.qwlha.description_0": "§6§l获得随机 §b§lA §6§l级奇物",
       "gui.primogemcraft.sjgu_ifumo_00.label_yi_ji_20yu_zhou_sui_pian": "以及20宇宙碎片。",
       "item.primogemcraft.qwymwct": "§5§l『奇物』§e丰饶果骰",
@@ -40741,7 +39352,6 @@
       "dengji_hs_2": "§c提供的物品非祈愿武器！",
       "effect.primogemcraft.jiazuxianzhi": "家族缘结冷却",
       "dengji_hs_0": "§c提供的武器属性大于加成范围",
-      "item.primogemcraft.shengjijlzswp": "§b『钻石升级』§6坚牢黄玉",
       "block.primogemcraft.mlxz": "摩拉匣",
       "block.primogemcraft.molakuai_01": "Molakuai 0 1",
       "item.primogemcraft.dayingxiongdejingyan.description_0": "§6store§dEXP§6of",
@@ -40807,7 +39417,6 @@
       "item.primogemcraft.lijs": "§klianai§r金属",
       "item.primogemcraft.xlly": "§6匣里龙吟",
       "item.primogemcraft.luanqibazaodedaima": "§5『奇物』§f乱七八糟的代码",
-      "item.primogemcraft.shengjijlhjwp": "§e『下界合金升级』§6坚牢黄玉",
       "gui.primogemcraft.gu_ibhmg.label_xuan_ze_ge_qi_wu": "捕获明光",
       "enchantment.primogemcraft.fumoyuzhezn.desc": "§8攻击目标后对自己造成一次主手+副手附魔等级*2%概率的目标当前血量200%的魔法伤害",
       "advancements.wanwuqiyuan.title": "万物起“源”",
@@ -40833,19 +39442,13 @@
       "subtitles.gongzhuxinghua": "[ ]~~[ ]~~~！",
       "block.primogemcraft.caomo_23": "草原核化木 栅栏",
       "advancements.jdwqqcb.title": "雾切之回光",
-      "item.primogemcraft.shengjizizaitie.description_3": "§9 铁剑",
-      "item.primogemcraft.shengjizizaitie.description_4": "§9 铁质盔甲",
       "item.primogemcraft.yssp": "§b原石碎片",
       "item.primogemcraft.xiaodeng_spawn_egg": "霄灯 Spawn Egg",
       "entity.primogemcraft.caoyuanheshengwu": "§a草原核",
-      "item.primogemcraft.shengjizizaitie.description_0": "§7可在锻造台升级铁质装备",
-      "item.primogemcraft.shengjizizaitie.description_1": "§",
-      "item.primogemcraft.shengjizizaitie.description_2": "§7可应用于：",
       "item.primogemcraft.mmolachan": "§e摩拉 铲",
       "gui.primogemcraft.yinhang.button_ju_jue_bing_wei_xie_ta_rang_kai": "拒绝并威胁它让开",
       "item.primogemcraft.qyhx_0wujiacheng": "祈愿核心§c[暂无加成]",
       "item.primogemcraft.qwqxqwrhj.description_0": "§b融合高级奇物使用",
-      "advancements.jdkx.title": "开箱！",
       "item.primogemcraft.qwqxqwrhj.description_1": "§6部分奇普通融合剂无法融合",
       "item.primogemcraft.qwqxqwrhj.description_2": "§6强效融合剂奇物功能更强大",
       "entity.primogemcraft.baiguangguodushengwu": "金...？",
@@ -40907,15 +39510,10 @@
       "item.minecraft.lingering_potion.effect.fengraoqiongjiang": "§e滞留型丰饶琼浆",
       "item.primogemcraft.qwsss": "§5『奇物』§f水上书",
       "item.primogemcraft.meiyouzhushidaima": "§5『奇物』§d没有注释的代码",
-      "item.primogemcraft.shengjizuanshejin.description_1": "§",
-      "item.primogemcraft.shengjizuanshejin.description_2": "§7可应用于：",
-      "item.primogemcraft.shengjizuanshejin.description_3": "§d『元素晶体』§9钻石剑",
-      "item.primogemcraft.shengjizuanshejin.description_4": "§d『元素晶体』§9钻石制盔甲",
       "gui.primogemcraft.sjgu_ifumo_01.label_jin_xing_1ci_di_pin_zhi_fu_mo": "进行1次低品质附魔。",
       "item.primogemcraft.youdianqiqiaodedaima.description_0": "§7击杀生物来修复这段代码，使其提供完整增益",
       "item.primogemcraft.youdianqiqiaodedaima.description_1": "§",
       "gui.primogemcraft.sjgu_ifumo_00.label_chi_kai_zhe_li": "离开这里。",
-      "advancements.jdwhhl.descr": "制作任意等级元素去除模板（保留附魔）",
       "block.primogemcraft.jiuchanzhiyuankuai.description_1": "用来当地板怎么样...？",
       "block.primogemcraft.jiuchanzhiyuankuai.description_0": "我全做了....",
       "item.primogemcraft.youdianqiqiaodedaima.description_6": "§5每名玩家至多提供§b100%§5增益层数上限，不含敌友",
@@ -40931,7 +39529,6 @@
       "item.primogemcraft.zizaiqiao.description_2": "§7 - 急迫效果可持续叠加",
       "item.primogemcraft.quxgjibing": "§5『奇物』§f虚构机兵",
       "item.primogemcraft.zizaiqiao.description_0": "§d挖掘方块时：",
-      "item.primogemcraft.shengjizuanshejin.description_0": "§7可直接强化至合金等级",
       "advancements.bhmg.title": "§d捕获明日星光！",
       "item.primogemcraft.suijiwupin": "随机掉落物品",
       "item.primogemcraft.shenshenghuaban.description_1": "§7右键虚拟黑塔以§e回收",
@@ -40940,7 +39537,6 @@
       "item.primogemcraft.hqshui.description_1": " §a+50%§8 §/ §d+0.5",
       "item.primogemcraft.kkuijiaceshi_helmet": "摩拉 头盔",
       "item.primogemcraft.weizhiyepian.description_0": "可与§b浓稠的药水§f酿造§e丰饶琼浆",
-      "item.primogemcraft.ssjzszs.description_4": "§9 钻石制盔甲",
       "item.primogemcraft.hqshui.description_0": "§9对于涤净青金系列装备：",
       "item.primogemcraft.hqshui.description_3": " §e-50%",
       "item.primogemcraft.hqshui.description_2": " §7概率§8 §/ §/ §/ §7套装数值",
@@ -40949,18 +39545,9 @@
       "advancements.chengjingle.descr": "获得小三月......的雕像",
       "item.primogemcraft.shenshenghuaban.description_2": "§8它真好看",
       "item.primogemcraft.hqshui.description_4": " §7冷却",
-      "item.primogemcraft.mzsj.description_2": "§7可应用于：",
-      "item.primogemcraft.mzsj.description_3": "§d『元素晶体』§9铁剑",
       "item.primogemcraft.qwsmcl": "§5『奇物』§d「神秘」磁力",
-      "item.primogemcraft.mzsj.description_4": "§d『元素晶体』§9铁质盔甲",
       "item.primogemcraft.gongzhuxinghua.desc": "§eHOYO-MiX",
-      "item.primogemcraft.ssjzszs.description_1": "§",
-      "item.primogemcraft.ssjzszs.description_0": "§7可在锻造台升级钻石质装备",
       "gui.primogemcraft.heitayindaoyonggui.button_empty": "\u003e\u003e\u003e\u003e",
-      "item.primogemcraft.ssjzszs.description_3": "§9 钻石剑",
-      "item.primogemcraft.mzsj.description_0": "§9抹除元素晶体附着",
-      "item.primogemcraft.ssjzszs.description_2": "§7可应用于：",
-      "item.primogemcraft.mzsj.description_1": "§",
       "item.primogemcraft.qwsmcd": "§5§l『奇物』§e神秘磁袋",
       "item.primogemcraft.zziyousongshiduanpian": "§a自由松石 断片",
       "enchantment.primogemcraft.ceshifumo_01.desc": "§eRepair certain durability before being destroyed",
@@ -40982,7 +39569,6 @@
       "item.primogemcraft.mllphj": "摩拉罗盘 下届合金",
       "item.primogemcraft.shengzhangkuai": "§a生长碧翡 块",
       "item.primogemcraft.zfg.description_0": "§d挖掘方块时：",
-      "item.primogemcraft.ryzsshjsj": "§d『钻石合金升级』§c燃愿玛瑙",
       "item.primogemcraft.zfg.description_1": "§7 - 概率在玩家位置生成草原核",
       "item.primogemcraft.ggongzhuxinghua.desc": "§eChasing Starlight With You HOYO-MiX",
       "item.primogemcraft.shengzhangbifeisuixie": "§a生长碧翡 碎屑",
@@ -40999,12 +39585,9 @@
       "advancements.jdtwtylc.descr": "获得任意元素金属",
       "block.primogemcraft.hualiduanzao": "华丽锻造台",
       "block.primogemcraft.shenbanjianlaohuangyukuangshi.description_0": "§8主世界地形深层生成",
-      "item.primogemcraft.ryhjsj.description_3": "§9 下界合金剑",
       "item.primogemcraft.qwtldhy": "§5『奇物』§9塔拉毒火焰",
-      "item.primogemcraft.ryhjsj.description_2": "§7可应用于：",
       "item.primogemcraft.ysfc": "元素晶石粉尘",
       "advancements.mmolachujindu.title": "摩拉锄",
-      "item.primogemcraft.ryhjsj.description_4": "§9 下界合金制盔甲",
       "item.primogemcraft.qqiwuzhanlipinshiti_spawn_egg": "奇物战利品实体 Spawn Egg",
       "item.primogemcraft.mingwei_yiqiedekaishi": "§4名为一切的开始",
       "gui.primogemcraft.ceshifumogui.tooltip_ssesuo_xu_jing_yan_zhi_jiang_bei_yu_zhou_sui_pian_di_xiao": "§e所需经验值将被宇宙碎片抵消",
@@ -41012,22 +39595,15 @@
       "item.primogemcraft.mllp.description_2": "§c当前状态仅可寻找元素晶体矿石！",
       "item.primogemcraft.mllp.description_0": "§7潜行右键对脚下方块进行记录",
       "advancements.sshehuifeirenjindu.title": "社会废人",
-      "item.primogemcraft.ryhjsj.description_1": "§",
-      "item.primogemcraft.ryhjsj.description_0": "§7可在锻造台升级下界合金质装备",
       "advancements.ttazhenhaokan.title": "§d她真好看",
       "subtitles.mengdeyewai011": "",
       "subtitles.choukatiaoguo.1": "",
       "item.primogemcraft.djq.description_0": "§6[SHIFT+右键]§d方块时：",
-      "item.primogemcraft.szsjtie": "『铁质升级』§a生长碧翡",
       "item.primogemcraft.djq.description_4": "§7 - 25%转化失败",
-      "item.primogemcraft.ryzsshjsj.description_3": "§d『元素晶体』§9钻石剑",
       "item.primogemcraft.qwtcjlbptbg": "§5『奇物』§f天才俱乐部普通八卦",
       "item.primogemcraft.djq.description_3": "§7 - 转化粘土为沙子",
-      "item.primogemcraft.ryzsshjsj.description_2": "§7可应用于：",
       "item.primogemcraft.djq.description_2": "§7 - 转化泥土为粘土",
-      "item.primogemcraft.ryzsshjsj.description_1": "§",
       "item.primogemcraft.djq.description_1": "§7消耗耐久",
-      "item.primogemcraft.ryzsshjsj.description_0": "§7可直接强化至合金等级",
       "subtitles.sanyueexixi": "hehe",
       "gamerule.guizemoyinshenshengchengbeilv.description": "§b正常：1 §a禁止：0 §c噩梦：100",
       "gui.primogemcraft.sjgu_ifumo_01.label_dui_wu_pin_jin_xing_1ci_di_pin_zhi_fu_mo": "对物品进行1次低品质附魔。",
@@ -41053,11 +39629,9 @@
       "item.primogemcraft.pengkeluodejingshen.description_1": "§d处于战斗状态下：",
       "item.primogemcraft.pengkeluodejingshen.description_0": "§9赋予战斗状态",
       "item.primogemcraft.djg": "§b『涤净青金』 镐",
-      "item.primogemcraft.ryzsshjsj.description_4": "§d『元素晶体』§9钻石制盔甲",
       "block.primogemcraft.ceshixiaodengfasheqi.description_0": "§7红石驱动，触发十次后",
       "block.primogemcraft.ceshixiaodengfasheqi.description_1": "§7变为掉落物",
       "advancements.zhongjifeiqiu.title": "终极非酋",
-      "item.primogemcraft.axtsj": "『铁质升级』§b哀叙冰玉",
       "effect.primogemcraft.ryfxgsx": "燃烧恢复",
       "item.primogemcraft.pengkeluodejingshen.description_7": "§7其中一种",
       "item.primogemcraft.pengkeluodejingshen.description_6": "§7 - 黑暗 III （5s）",
@@ -41068,7 +39642,6 @@
       "item.primogemcraft.wanshinang.description_0": "§7破坏罐子时掉落双倍战利品",
       "effect.primogemcraft.djppxianzhi": "泡泡限制",
       "gui.primogemcraft.sjgu_ifumo_00.label_xiao_hao_95dang_qian_zui_da_hp": "消耗95%当前最大HP，",
-      "item.primogemcraft.shengjizizaihej": "§e『下界合金升级』§a自在松石",
       "block.primogemcraft.ceshi_mucaibao_fence_gate": "草原核化木 栅栏门",
       "item.primogemcraft.yiyimuguoshi.description_3": "§a不能连续触发",
       "advancements.mmolachanjindu.descr": "富裕",
@@ -41089,11 +39662,6 @@
       "item.primogemcraft.yishijiecunzhe.description_1": "§7潜行右键§8星际和平银行可使其§7不会损坏！",
       "gui.primogemcraft.gu_iqiwuxuanze.tooltip_sseque_ren_xuan_ze": "§e确认选择",
       "gui.primogemcraft.guiheitaxinyindao.label_chi_kai_zhe_li": "离开这里。",
-      "item.primogemcraft.rytsj.description_0": "§7可在锻造台升级铁质装备",
-      "item.primogemcraft.rytsj.description_1": "§",
-      "item.primogemcraft.rytsj.description_2": "§7可应用于：",
-      "item.primogemcraft.rytsj.description_3": "§9 铁剑",
-      "item.primogemcraft.rytsj.description_4": "§9 铁质盔甲",
       "gui.primogemcraft.molalajitong.label_wu_pin_lan": "物品栏",
       "item.primogemcraft.qwzjxxmx.description_1": "§6挖掘时根据方块硬度将有不同概率",
       "item.primogemcraft.qwzjxxmx.description_2": "§6掉落宇宙碎片",
@@ -41130,7 +39698,6 @@
       "item.primogemcraft.qwwsg.description_0": "§6与异木果实效果一致，但",
       "item.primogemcraft.qwwsg.description_2": "§e且免伤次数增加到10次",
       "item.primogemcraft.qwwsg.description_1": "§e额外获得一倍的效果时长",
-      "advancements.jdwhhl.title": "我后悔了",
       "gui.primogemcraft.sjgu_ifumo_01.label_xiao_hao_95dang_qian_zui_da_hp": "消耗95%当前最大HP，",
       "item.primogemcraft.xixiangyuzhiyuan.description_2": "§c使用者必须在附近",
       "item.primogemcraft.xixiangyuzhiyuan.description_3": "§510%§7、§61%",
@@ -41175,29 +39742,17 @@
       "item.primogemcraft.q_qyuanchuzi_01_spawn_egg": "祈愿出紫色 Spawn Egg",
       "advancements.yqyxw.title": "§6有钱有希望！",
       "item.primogemcraft.qwkzhy": "§5§l『奇物』§a空烛火焰",
-      "item.primogemcraft.sshengjijlzsshjwp": "§d『钻石合金升级』§6坚牢黄玉",
-      "item.primogemcraft.djtsj.description_1": "§",
-      "item.primogemcraft.djtsj.description_2": "§7可应用于：",
-      "item.primogemcraft.djtsj.description_0": "§7可在锻造台升级铁质装备",
       "item.primogemcraft.jdsbcf_1": "§5§l『奇物』§f绝对失败处方",
       "item.primogemcraft.jdsbcf_0": "§5§l『奇物』§f绝对失败处方",
-      "item.primogemcraft.djtsj.description_3": "§9 铁剑",
-      "item.primogemcraft.djtsj.description_4": "§9 铁质盔甲",
       "effect.primogemcraft.jdsbcf_1xg": "绝对失败处方 壹",
       "item.primogemcraft.jdsbcf_2": "§5§l『奇物』§f绝对失败处方",
-      "advancements.jdbfwb.title": "变废为宝！",
       "item.primogemcraft.gzsmz": "咕钟三明治",
       "effect.primogemcraft.smclzf": "神秘磁力[增幅]",
-      "item.primogemcraft.djzssj.description_4": "§9 钻石制盔甲",
       "effect.paopaolengque": "§9Bubble§cCooldown",
       "item.primogemcraft.qwlhcc": "残次的奇物礼盒",
       "advancements.jdzlyp.title": "再来亿§m瓶§r张！",
       "advancements.yiyidantashang.title": "一旦踏上了这条路",
-      "item.primogemcraft.djzssj.description_3": "§9 钻石剑",
-      "item.primogemcraft.djzssj.description_2": "§7可应用于：",
       "item.primogemcraft.axf.description_0": "§d右键空气时：",
-      "item.primogemcraft.djzssj.description_1": "§",
-      "item.primogemcraft.djzssj.description_0": "§7可在锻造台升级钻石质装备",
       "gui.primogemcraft.ceshifumogui.button_cao_zuo": "Operate",
       "item.primogemcraft.qwkwzj.description_0": "§7可在工作台中修复个别奇物",
       "item.primogemcraft.gongsideguguzhong.description_3": "§7可合成修复后重复使用",
@@ -41247,7 +39802,6 @@
       "block.ceshi.yiyishijieyuanmu": "The Another World Wood",
       "item.primogemcraft.qiwuheisenlinggz": "§5『奇物』§8黑森林咕咕钟",
       "item.primogemcraft.qhmbml.description_0": "§7摩拉材质升级",
-      "item.primogemcraft.qhzlh.description_0": "§e[右键]§7使用一个",
       "item.primogemcraft.qhmbml.description_2": "§7可应用于：",
       "item.primogemcraft.qhmbml.description_1": "§",
       "item.primogemcraft.qhmbml.description_4": "§7所需原材料：",
@@ -41260,8 +39814,6 @@
       "item.primogemcraft.zhongguizhongjudedaima": "§5『奇物』§6中规中矩的代码",
       "block.primogemcraft.llianjiamolakuaiqiang": "廉价摩拉块 围墙",
       "item.primogemcraft.xinghui": "§e无主的星辉",
-      "item.primogemcraft.qhzlh.description_1": "§b[潜行+右键]§7使用全部",
-      "item.primogemcraft.sjzst": "『铁质升级』§d最胜紫晶",
       "item.primogemcraft.zsq.description_4": "§a[SHIFT+左键]调整效果延迟！",
       "subtitles.dashengchujin": "hahaha",
       "item.primogemcraft.zsq.description_1": "§7 - 记录当前坐标",
@@ -41269,7 +39821,6 @@
       "item.primogemcraft.zsq.description_0": "§d手持§6[SHIFT右键]：",
       "item.primogemcraft.zsq.description_3": "§",
       "item.primogemcraft.zsq.description_2": "§d - 『过去』效果结束时回到这里",
-      "advancements.jdbfwb.descr": "获得精锻用魔矿",
       "block.primogemcraft.chuangzaoxiaodengfasheqi": "§5创造模式§6霄灯发射器",
       "item.primogemcraft.sanyuezhufu": "§d三月祝福",
       "item.primogemcraft.qwjlbhy": "§5§l『奇物』§a俱乐部火焰",
@@ -41297,11 +39848,7 @@
       "item.primogemcraft.taikongmanbuchangpian": "太空漫步",
       "block.primogemcraft.caomulouti_21": "草原核化木 楼梯",
       "advancements.yhxyx.descr": "通过幸运专票获得5000星琼",
-      "item.primogemcraft.sjzszsshj.description_0": "§7可直接强化至合金等级",
       "item.primogemcraft.guzhonglingjian": "咕钟零件",
-      "item.primogemcraft.sjzszsshj.description_1": "§",
-      "item.primogemcraft.sjzszsshj.description_2": "§7可应用于：",
-      "item.primogemcraft.sjzszsshj.description_3": "§d『元素晶体』§9钻石剑",
       "item.primogemcraft.suiji_1shijian.description_0": "§8右键获得错误代码",
       "item.primogemcraft.disui": "§e地髓",
       "item.primogemcraft.cebuzhunxia": "§5『奇物』§e测不准匣",
@@ -41311,17 +39858,13 @@
       "itemGroup.tabyuanshigongjuxuanxiangka": "Primogem Craft Weapons and Tools",
       "item.primogemcraft.bbuzainianqingdeqincezhuang_012.desc": "陈致逸,HOYO-MiX",
       "item.primogemcraft.xiantiaoqiang.description_2": "§5当食用后：",
-      "item.primogemcraft.sjzszsshj.description_4": "§d『元素晶体』§9钻石制盔甲",
       "item.primogemcraft.xiantiaoqiang.description_1": "§",
       "item.primogemcraft.xiantiaoqiang.description_0": "§c别把碗吃了！！！",
-      "item.primogemcraft.axhjsj.description_0": "§7可在锻造台升级下界合金质装备",
-      "item.primogemcraft.axhjsj.description_1": "§",
       "subtitles.jingyanshu00": "吸取经验",
       "effect.diguixiaoguo": "§aFixed§fCode",
       "item.primogemcraft.xiantiaoqiang.description_3": "§9+20% 最终攻击力（5:00）",
       "effect.primogemcraft.gouyu": "勾玉",
       "item.primogemcraft.qwhdlz": "§5『奇物』§f混沌灵芝",
-      "item.primogemcraft.sjzszsshj": "§d『钻石合金升级』§d最胜紫晶",
       "item.primogemcraft.ranyuansuixie": "§c燃愿玛瑙 碎屑",
       "item.primogemcraft.qwyznj.description_2": "§c§l并使其获得 愚者之怒V 诅咒",
       "item.primogemcraft.qwyznj.description_1": "§l将给予:锋利、保护、效率 其中一种",
@@ -41342,9 +39885,6 @@
       "item.primogemcraft.ljtg_01.description_0": "§7真的不是一个普通的",
       "effect.primogemcraft.zhengchangdaima": "§a已修复§f代码",
       "item.primogemcraft.rranyuanmanao": "§c燃愿玛瑙",
-      "item.primogemcraft.axhjsj.description_2": "§7可应用于：",
-      "item.primogemcraft.axhjsj.description_3": "§9 下界合金剑",
-      "item.primogemcraft.axhjsj.description_4": "§9 下界合金制盔甲",
       "item.primogemcraft.wufengjian.description_0": "有能力改变一个世界的人才能拥有它",
       "block.primogemcraft.yuanshikuangshi.description_0": "§8再氪两单嘛",
       "item.primogemcraft.zizaifu.description_2": "§7 - 游泳时获得海豚的恩惠",
@@ -41408,7 +39948,6 @@
       "block.primogemcraft.hhyinbaoqi": "引爆器",
       "block.primogemcraft.zuishengkuangshi.description_0": "§8在河流群戏浅层深处生成",
       "item.primogemcraft.kaifaqiangzhi_01": "§4需知",
-      "advancements.jdhszly.title": "reuse",
       "gui.primogemcraft.cunzheshezhi.tooltip_shi_shu_liang_jian_shao": "使数量减少",
       "block.primogemcraft.jingzhimolakuai.description_0": "§7maybe be used as§ethe center of the roof！",
       "block.primogemcraft.chuangzaoxiaodengfasheqi.description_0": "§7activated by redstone signal",
@@ -41475,7 +40014,6 @@
       "item.primogemcraft.qwkwzw.description_0": "§a§l可以使用合成来修复一个奇物",
       "item.primogemcraft.cchonggaodaodedezanxu": "§fPraise of High Morals",
       "item.primogemcraft.qwwshy.description_1": "§7§l罐子将额外掉落10倍战利品",
-      "item.primogemcraft.rytsj": "『Iron Upgrade』§cAgnidus Agate",
       "item.primogemcraft.qwwshy.description_0": "§7破坏罐子时：",
       "gui.primogemcraft.cunzheshezhi.tooltip_qu_chu_shi_you_gu_ding_shu_liang_zhuan_bian_wei_0240": "取出时由固定数量转变为0~240%",
       "item.primogemcraft.qwjlbxyq": "§5§l『奇物』§a俱乐部信仰凭证",
@@ -41492,7 +40030,6 @@
       "item.primogemcraft.ydggz.description_1": "§7每3分钟扣除自身5%当前经验值",
       "item.primogemcraft.ydggz.description_4": "§6该物品，完全修复时解除负面效果",
       "item.primogemcraft.ydggz.description_3": "§6手持该物品右键消耗咕钟零件修复",
-      "advancements.jdszzqh.title": "upgrading and enhancing",
       "item.primogemcraft.qwkwzw.description_3": " 命值",
       "effect.primogemcraft.jqyydm": "集成代码",
       "item.primogemcraft.qwkwzw.description_4": "§9寄生伤害概率 -20%",
@@ -41504,11 +40041,9 @@
       "advancements.ffanrongjindu_1.title": "Philosophies of 『Prosperity』",
       "item.primogemcraft.qwqskxjxt.description_0": "§7食用食物后减少50%饱食度收益",
       "item.primogemcraft.qwlhb": "奇物礼盒",
-      "item.primogemcraft.q_qu_hang_zhoullh.description_1": "§b[潜行+右键]§7使用全部",
       "item.primogemcraft.ydggz.description_0": "§9拾取后触发：",
       "item.primogemcraft.qwqskxjxt.description_1": "§7同时减少80%饱和度收益",
       "item.primogemcraft.qwlha": "奇物礼盒",
-      "item.primogemcraft.q_qu_hang_zhoullh.description_0": "§e[右键]§7使用一个",
       "item.primogemcraft.qwqskxjxt.description_2": "§8放置类食物不受影响",
       "item.primogemcraft.feiqiupingzheng": "§e§kaha§8§rVochur of Unlucky§e§kaha",
       "gamerule.cs.description": "ces",
@@ -41557,7 +40092,6 @@
       "gamerule.cs": "ces",
       "death.attack.s_hchixushanghai.item": "%1$s 被 %2$s 使用 %3$s触发反伤死了",
       "item.primogemcraft.yuzhousuipian.description_0": "§7在这个世界貌似是以实体形式存在......",
-      "item.primogemcraft.shengjizizaizuan": "§b『Diamond Upgrade』§aVayuda Turquoise",
       "advancements.bhmg.descr": "祈愿首次触发捕获明光",
       "item.primogemcraft.tezhidieyingqi.description_0": "§7感恩戴德吧！我都替你考虑好了！",
       "item.primogemcraft.tezhidieyingqi.description_1": "§",
@@ -41613,11 +40147,6 @@
       "item.primogemcraft.zsq": "§d『Vajrada Amethyst』Shovel",
       "item.primogemcraft.qwlbtdgcl.description_4": "§7有宇宙碎片并清除自身§5并产出少量材料",
       "gui.primogemcraft.gu_ihualiduanzaotai.tooltip_ssbsslke_fang_ru_die_ying_qi": "§b§l可放入叠影器",
-      "item.primogemcraft.ryzssj.description_0": "§7可在锻造台升级钻石质装备",
-      "item.primogemcraft.ryzssj.description_1": "§",
-      "item.primogemcraft.ryzssj.description_2": "§7可应用于：",
-      "item.primogemcraft.ryzssj.description_3": "§9 钻石剑",
-      "item.primogemcraft.ryzssj.description_4": "§9 钻石制盔甲",
       "item.primogemcraft.jinzhimola.description_0": "§7精湛的铸造工艺....",
       "block.primogemcraft.caomu_26": "Dendro-Core Wood Button",
       "item.primogemcraft.yishijiemugun": "Tewatt Stick",
@@ -41702,7 +40231,6 @@
       "item.primogemcraft.xckf.description_0": "§7别在家里喝",
       "block.primogemcraft.ceshi_mucaibao_pressure_plate": "Dendro Core Wood Pressure Plate",
       "item.primogemcraft.ggongzhuxinghua": "§6Chasing Starlight With You",
-      "item.primogemcraft.shengjijltiewp": "『Iron Upgrade』§6Prithiva Topaz",
       "block.primogemcraft.shenbanjianlaohuangyukuangshi": "Deep Slate Prithiva Topaz Ore",
       "gui.primogemcraft.yinhang.button_qing_ni_gun_kai": "Out,Plz label_jiang_yu_zhou_sui_pian_cun_ru_zhe_li_dang_xia_ci_yu_jian_shi_gei_yu_shuang_bei",
       "item.primogemcraft.jiangliliulangzhejingyan": "Wanderer\u0027s Advice",
@@ -41741,7 +40269,6 @@
       "item.primogemcraft.mmola_01.description_1": "§7但绝对不是这里",
       "gui.primogemcraft.cunzheshezhi.tooltip_cong_xia_fang_an_niu_shu_ru": "从下方按钮输入",
       "gui.primogemcraft.sjgu_ifumo_00.label_xiao_hao_20dang_qian_zui_da_hp": "消耗20%当前最大HP。",
-      "item.primogemcraft.q_qu_hang_zhoullh": "Epic Enhancement Helping Hand",
       "item.primogemcraft.xingjidaletou.description_4": "§7   清除玩家§c所有经验值！",
       "item.primogemcraft.xingjidaletou.description_3": "§7 - 但也有小概率损坏奇物，并",
       "item.primogemcraft.xingjidaletou.description_2": "§7   添加一个§f1~20级§7的随机附魔",
@@ -41758,29 +40285,19 @@
       "item.primogemcraft.zziyousongshi": "§aVayuda Turquoise",
       "item.primogemcraft.axg": "§b『Shivada Jade』Pickaxe",
       "item.primogemcraft.axf": "§b『Shivada Jade』Axe",
-      "item.primogemcraft.shengjizizaizuan.description_4": "§9 钻石制盔甲",
-      "item.primogemcraft.shengjizizaizuan.description_3": "§9 钻石剑",
-      "item.primogemcraft.shengjizizaizuan.description_2": "§7可应用于：",
       "advancements.b_bao_di_ren.title": "Pity---System---Only---",
-      "item.primogemcraft.shengjizizaizuan.description_1": "§",
-      "item.primogemcraft.shengjizizaizuan.description_0": "§7可在锻造台升级钻石质装备",
       "gui.primogemcraft.gu_ibhmg.tooltip_sscqiang_zhi_tui_chu_jie_mian_hui_sui_ji_xuan_ze_ge_qi_wu": "§c强制退出界面会随机选择一个物品！",
       "item.primogemcraft.qwxgdbmt": "§5§l『奇物』§b虚构的三八面骰",
       "item.primogemcraft.axq": "§b『Shivada Jade』Shovel",
       "advancements.yysgj.descr": "获得任意元素工具",
       "advancements.yzam.title": "宇宙奥秘",
       "block.primogemcraft.dangaoliyue": "§6Share the cake with you",
-      "item.primogemcraft.djzsshjsj.description_2": "§7可应用于：",
       "gui.primogemcraft.bwdyinhang.label_de_shuang_bei_yu_zhou_sui_pian": "得双倍宇宙碎片！",
-      "item.primogemcraft.djzsshjsj.description_1": "§",
       "item.primogemcraft.yuzhousuipian": "Cosmic Fragments",
-      "item.primogemcraft.djzsshjsj.description_0": "§7可直接强化至合金等级",
       "item.primogemcraft.qwlhs": "奇物礼盒",
       "item.primogemcraft.liulangzhezhinang.description_0": "§7存储空间：18",
-      "item.primogemcraft.djzsshjsj.description_4": "§d『元素晶体』§9钻石制盔甲",
       "subtitles.chujinle02": "hahaha",
       "effect.lengquezhongguizhongju": "Implement Error Cool Down",
-      "item.primogemcraft.djzsshjsj.description_3": "§d『元素晶体』§9钻石剑",
       "item.primogemcraft.qwxxgg.description_2": "§e重置一次已消耗的免伤次数",
       "item.primogemcraft.qwxxgg.description_0": "§6与异木果实效果一致，但",
       "item.primogemcraft.qwxxgg.description_1": "§e临终效果期间，每次拾取经验球将",
@@ -41818,15 +40335,10 @@
       "advancements.yysgj.title": "五彩斑斓的嘿",
       "advancements.b_bao_di_ren.descr": "Got the pity in a wish",
       "item.primogemcraft.jingqueyouyadaima": "§5『Curio』§fElegant Code",
-      "item.primogemcraft.axzssj.description_1": "§",
-      "item.primogemcraft.axzssj.description_2": "§7appliable for:",
       "item.primogemcraft.qwjcdm": "§5『奇物』§e集成代码",
-      "item.primogemcraft.axzssj.description_0": "§7upgrade diamond equipments in smithing table",
       "item.primogemcraft.yuanshiyuanpei": "§bPrimogem Catalyst",
       "advancements.jzdz.descr": "获得华丽锻造台",
       "block.primogemcraft.mmolazhilajitong": "Trash Bin Made Of Mora",
-      "item.primogemcraft.axzssj.description_3": "§9 diamond sword",
-      "item.primogemcraft.axzssj.description_4": "§9 diamond armor",
       "item.primogemcraft.tclzhaiquan.description_1": "§7使用§b祈愿武器用良矿§7分解高阶武器得到",
       "item.primogemcraft.tclzhaiquan.description_0": "§7用于合成任意祈愿武器",
       "item.primogemcraft.jdsbcf_1.description_0": "§7降低各项属性",
@@ -41859,11 +40371,9 @@
       "item.primogemcraft.shilianchou": "Ten Interwined Fate",
       "item.primogemcraft.qwypzgs": "§5§l『奇物』§d邪恶的异木果实",
       "block.primogemcraft.mmolazhilajitong.description_0": "§7可以用来存放更多物品",
-      "item.primogemcraft.qhzllh_4": "§6特殊产出 强化助力礼盒",
       "effect.primogemcraft.qwjlbbgsx_2": "俱乐部普通八卦",
       "gui.primogemcraft.cunzheshezhi.tooltip_fang_ru_bei_bao": "放入背包",
       "advancements.beiguotiejiang.title": "§6Northland blacksmith",
-      "item.primogemcraft.qhzllh_2": "Rare Enhancement Helping Hand",
       "item.primogemcraft.qhmbmlys_01": "Smithing Template",
       "advancements.djmszb.descr": "获得无锋剑",
       "item.primogemcraft.qhmbmlys_02": "Smithing Templete",
@@ -41910,14 +40420,9 @@
       "advancements.huhuangjinwu_2.title": "§6The Golden House",
       "item.primogemcraft.xingjidaletou": "§5『Curio』§bInterastral Big Lotto",
       "item.primogemcraft.tiankongsp": "枪械碎片",
-      "item.primogemcraft.szzssj.description_3": "§9 钻石剑",
-      "item.primogemcraft.szzssj.description_4": "§9 钻石制盔甲",
       "item.primogemcraft.qwthhjiii.description_0": "“它似乎除了叫奇物以外......”",
-      "item.primogemcraft.szzssj.description_0": "§7可在锻造台升级钻石质装备",
       "block.primogemcraft.hhzd_0": "Bom..b？",
-      "item.primogemcraft.szzssj.description_1": "§",
       "block.primogemcraft.hhzd_1": "Bomb！",
-      "item.primogemcraft.szzssj.description_2": "§7可应用于：",
       "advancements.xdfsqjd.title": "§4§m烟花§6霄灯来咯~",
       "block.primogemcraft.xijaieyangengdi": "Netherack Farmland",
       "item.primogemcraft.qwsmcd.description_1": "§7§l罐子将额外掉落宇宙碎片",
@@ -41940,7 +40445,6 @@
       "advancements.jdyszb.title": "钻石降级版",
       "block.primogemcraft.disuikuai_1": "Geomarrow crystal",
       "item.primogemcraft.cllk": "特处理良矿",
-      "item.primogemcraft.qhzlh": "Enhancement Helping hands",
       "item.primogemcraft.lajitongzunyan.description_3": "§9抗性提升II（3:00）",
       "entity.primogemcraft.qq_qyuanchulan_01": "Wish blue result",
       "advancements.mjdl.descr": "获得均衡石板3",
@@ -41958,40 +40462,23 @@
       "advancements.qwhc.title": "寰宇502",
       "gui.primogemcraft.sjgu_ifumo_00.tooltip_sscdang_qian_yu_zhou_sui_pian_shu_liang_bu_zu": "§c当前宇宙碎片数量不足！",
       "item.primogemcraft.qwyhjb": "§5§l『奇物』§f虚构大乐透",
-      "item.primogemcraft.ssjzszs": "§b『Diamond Upgrade』§dVajrada Amethyst",
       "gui.primogemcraft.ceshishijianxuanzejiemian.button_shua_xin": "Shuffle",
       "item.primogemcraft.ydfms": "一叠附魔书",
-      "item.primogemcraft.shengjizizaihej.description_0": "§7可在锻造台升级下界合金质装备",
-      "item.primogemcraft.shengjizizaihej.description_1": "§",
-      "item.primogemcraft.shengjizizaihej.description_2": "§7可应用于：",
-      "item.primogemcraft.shengjizizaihej.description_3": "§9 下界合金剑",
-      "item.primogemcraft.shengjizizaihej.description_4": "§9 下界合金制盔甲",
       "item.primogemcraft.xiaodaimola": "小块精致摩拉",
       "item.primogemcraft.qhmbmlys_02.description_5": "§9 元素晶体",
       "item.primogemcraft.qhmbmlys_02.description_4": "§7所需原材料：",
-      "item.primogemcraft.shengjijlzswp.description_4": "§9 钻石制盔甲",
       "item.primogemcraft.weizhiyepian": "§eUnknown Leaf",
-      "advancements.jdkx.descr": "获得强化助力礼盒",
       "item.primogemcraft.qwfldyhdlb": "§5§l『奇物』§b分裂的银河大乐币",
       "block.primogemcraft.yishijiemuban_slab": "monochrome another world wood planks Slab",
-      "item.primogemcraft.sjzshj.description_2": "§7可应用于：",
-      "item.primogemcraft.sjzshj.description_3": "§9 下界合金剑",
-      "item.primogemcraft.sjzshj.description_0": "§7可在锻造台升级下界合金质装备",
       "item.primogemcraft.qwsbmb.description_4": "§6 奇物效果",
       "item.primogemcraft.hqyan": "§5『Curio』§6Sealing Wax of indenture",
-      "item.primogemcraft.sjzshj.description_1": "§",
-      "item.primogemcraft.shengjijlzswp.description_3": "§9 钻石剑",
       "item.primogemcraft.qhmbmlys_02.description_1": "§",
       "item.primogemcraft.qwsbmb.description_2": "§6 但每次触发时§l35%§r§6概率进行",
-      "item.primogemcraft.shengjijlzswp.description_2": "§7可应用于：",
       "item.primogemcraft.qhmbmlys_02.description_0": "§7元素晶体强化",
       "item.primogemcraft.qwsbmb.description_3": "§6 一次§e§l闪耀的偏方三八面骰§r§6的",
       "item.primogemcraft.dayingxiongdejingyan": "大英雄的经验书",
-      "item.primogemcraft.shengjijlzswp.description_1": "§",
-      "item.primogemcraft.sjzshj.description_4": "§9 下界合金制盔甲",
       "item.primogemcraft.qhmbmlys_02.description_3": "§9 原石工具",
       "item.primogemcraft.qwsbmb.description_0": "§5随着时间的推移，获得奇物",
-      "item.primogemcraft.shengjijlzswp.description_0": "§7可在锻造台升级钻石质装备",
       "item.primogemcraft.qhmbmlys_02.description_2": "§7可应用于：",
       "item.primogemcraft.qwsbmb.description_1": "§e§l必定为负面奇物！",
       "item.primogemcraft.qwggzfenlie_b.description_2": "§6手持右键支付35%生命值以减轻",
@@ -42058,7 +40545,6 @@
       "gui.primogemcraft.cunzheshezhi.button_1": "1",
       "item.primogemcraft.luanqibazaodedaima.description_1": "§7击杀30只生物",
       "item.primogemcraft.jingqueyouyadaima.description_1": "§7击杀30只生物",
-      "item.primogemcraft.axzssj": "§b『Smith Templete』§bShivada jade",
       "item.primogemcraft.qwxydsw": "§5『奇物』§f谐乐丢失物",
       "gui.primogemcraft.bwdyinhang.label_yu_dao_lei_si_she_shi_shi": "遇到类似设施时，",
       "advancements.rhsys.descr": "获得奇物融合剂",
@@ -42067,8 +40553,6 @@
       "effect.primogemcraft.zhandouzhuangtai": "Combat effect",
       "item.primogemcraft.ysjfr": "腐肉！",
       "item.primogemcraft.qwcbzg.description_2": "§7允许使用3次§c§l不能连续触发",
-      "item.primogemcraft.mzsj": "Anti Mystic Enhancement Ore",
-      "advancements.jdlyzsj.descr": "制作钻石制元素模板",
       "item.primogemcraft.jlq.description_0": "§6[SHIFT+右键]§d地面时：",
       "item.primogemcraft.qinlaodezhexue.description_0": "§b挖掘时§f有小概率掉落§e摩拉",
       "item.primogemcraft.qwymzj.description_1": "§7等级 力量 I ~ IV 效果",
@@ -42117,12 +40601,10 @@
       "item.primogemcraft.hqfeng.description_0": "§9对于自在松石系列装备：",
       "item.primogemcraft.teshukuijia_01_helmet": "特殊01",
       "item.primogemcraft.zuishengduanpian": "§dVajrada Amethyst Fragment",
-      "item.primogemcraft.shengjizuanshejin": "§d『Netherite Upgrade』§aVayuda Turquoise",
       "itemGroup.tabzhenghuo": "Primogem Craft",
       "advancements.huhuangjinjindu_01.title": "Philosophies of 『Gold』",
       "item.primogemcraft.dijian": "§b笛剑",
       "gui.primogemcraft.guis_jfumo.tooltip_sscgai_wu_pin_bu_man_zu_fu_mo_tiao_jian": "§c该物品不满足附魔条件！",
-      "item.primogemcraft.axhjsj": "§e『Netherite Upgrade』§bShivada Jade",
       "item.primogemcraft.hqfeng.description_5": "§8仅作用于正面效果",
       "item.primogemcraft.hqfeng.description_4": " §7冷却",
       "item.primogemcraft.skjinb": "§5§l『奇物』§b时空金币",
@@ -42149,7 +40631,6 @@
       "gui.primogemcraft.bwdyinhang.label_gong_xiang_ying_ping_zheng_bing_you": "供相应凭证，并有",
       "gamerule.guizewuqishangxian": "§b原石工艺§e武器等级上限",
       "item.primogemcraft.yuanshifu": "§bPrimogem Axe",
-      "item.primogemcraft.sjzshj": "§e『Netherite Upgrade』§dVajrada Amethyst",
       "advancements.qwhc.descr": "获得奇物合成剂",
       "item.primogemcraft.aixubingyukuai": "§bShivada Jade Gemstone",
       "gamerule.guizebuhuomingguangzhi.description": "祈愿出金时触发捕获明光的概率，默认20%",
@@ -42160,11 +40641,9 @@
       "item.primogemcraft.fulinjiao.description_0": "§7右键使用后使副手物品获得",
       "death.attack.chiwuwuli": "%1$s 被持续物理伤害撕裂！",
       "block.primogemcraft.yuansujingshikuai": "§kaha§fElements Crystal Gemstone§kaha",
-      "item.primogemcraft.djzsshjsj": "§d『Netherite Upgrade』§bVarunada Lazurite",
       "item.primogemcraft.qwclgs": "§5§l『奇物』§c磁力果实",
       "item.primogemcraft.xzcfyxwzd.description_0": "§7更华丽的垃圾桶盖罢了！",
       "item.primogemcraft.kkuijiaceshi_chestplate": "Mora Chestplate",
-      "advancements.jdszzqh.descr": "制作合金制模板",
       "item.primogemcraft.xzcfyxwzd.description_2": "§6 • 抗性提升",
       "item.primogemcraft.xzcfyxwzd.description_1": "",
       "block.primogemcraft.xiutiekuai": "Rust Iron Block",
@@ -42205,7 +40684,6 @@
       "item.primogemcraft.yiyinhedaletou": "Cosmic Big Lotto",
       "gui.primogemcraft.taozhuangchakan.taozhuang_1": "0",
       "gui.primogemcraft.taozhuangchakan.taozhuang_0": "0",
-      "item.primogemcraft.djtsj": "『Iron Upgrade』§bShivada Jade",
       "block.primogemcraft.xydx.description_0": "§e只有幸运星才能拥有它",
       "gui.primogemcraft.cunzheshezhi.tooltip_shi_shu_liang_zeng_jia": "使数量增加",
       "block.primogemcraft.shizuoyuanshikuai": "Prototype Primogem Block",
@@ -42274,26 +40752,18 @@
       "item.primogemcraft.jhsb_0.description_0": "§e均衡等级\u003e1",
       "item.primogemcraft.jhsb_0.description_1": "§9右键使用",
       "block.primogemcraft.xiaoguanzi": "Small Jar",
-      "item.primogemcraft.sshengjijlzsshjwp.description_1": "§",
-      "item.primogemcraft.sshengjijlzsshjwp.description_0": "§7可直接强化至合金等级",
       "item.primogemcraft.zssp": "钻石碎片",
       "item.primogemcraft.wuxiandiguidedaima.description_7": "§2持续到增益结束",
       "item.primogemcraft.wuxiandiguidedaima.description_6": "§2击杀目标后概率提升经验值",
-      "advancements.jdybdw.title": "一步到位！",
       "item.primogemcraft.wuxiandiguidedaima.description_5": "§7代码修复后：",
       "item.primogemcraft.szf.description_1": "§7 - 创造一棵树，并将自身送至树顶",
       "item.primogemcraft.wuxiandiguidedaima.description_4": "§2玩家攻击目标时，概率减少自身经验值",
-      "item.primogemcraft.szbfzsshjsj.description_3": "§d『元素晶体』§9钻石剑",
       "item.primogemcraft.wuxiandiguidedaima.description_3": "§7修复期间：",
-      "item.primogemcraft.szbfzsshjsj.description_2": "§7可应用于：",
       "item.primogemcraft.wuxiandiguidedaima.description_2": "§",
-      "item.primogemcraft.szbfzsshjsj.description_1": "§",
       "item.primogemcraft.wuxiandiguidedaima.description_1": "§7击杀30只生物",
-      "item.primogemcraft.szbfzsshjsj.description_0": "§7可直接强化至合金等级",
       "item.primogemcraft.jdsbcf_2.description_0": "§7降低各项速度类属性",
       "item.primogemcraft.szc": "§a『Nagadus Emerald』Hoe",
       "item.primogemcraft.wuxiandiguidedaima.description_0": "§7将这段代码修复成正常的奇物需要",
-      "item.primogemcraft.szbfzsshjsj.description_4": "§d『元素晶体』§9钻石制盔甲",
       "item.primogemcraft.szg": "§a『Nagadus Emerald』Pickaxe",
       "item.primogemcraft.szf": "§a『Nagadus Emerald』Axe",
       "subtitles.sanyueennnn": "ennnn？",
@@ -42302,13 +40772,9 @@
       "gamerule.guizeyuanshishengcheng": "§bPrimogem Craft §ePrimogem ore",
       "item.primogemcraft.xiaoheita_spawn_egg": "Herta Projection Spawn Egg",
       "item.primogemcraft.szq": "§a『Nagadus Emerald』Shovel",
-      "item.primogemcraft.sshengjijlzsshjwp.description_3": "§d『元素晶体』§9钻石剑",
-      "item.primogemcraft.sshengjijlzsshjwp.description_2": "§7可应用于：",
       "entity.minecraft.villager.primogemcraft.cesysxj": "原石学家",
-      "item.primogemcraft.sshengjijlzsshjwp.description_4": "§d『元素晶体』§9钻石制盔甲",
       "gui.primogemcraft.sjgu_ifumo_00.label_xiao_hao_70dang_qian_zui_da_hp": "消耗70%当前最大HP。",
       "item.primogemcraft.qqiyuan_jin_guang_spawn_egg": "Result Legendary Spawn Egg",
-      "advancements.jdhszly.descr": "制作任意铁制元素模板",
       "item.primogemcraft.yiyinhedaletou.description_9": "§9全员透露结果冷却1分钟",
       "item.primogemcraft.yiyinhedaletou.description_8": "§7损坏银河大乐透的数量",
       "item.primogemcraft.yiyinhedaletou.description_7": "§7主手持右键空气查询当前",
@@ -42383,13 +40849,8 @@
       "item.primogemcraft.lajitongzunyan": "the Pride of Trash Bin",
       "gui.primogemcraft.bwdyinhang.label_yu_zhou_sui_pian": "cosmic fragment！",
       "block.primogemcraft.dijingqinjingkuangshi": "§9Varunada Lazurite Ore",
-      "item.primogemcraft.szhjsj.description_0": "§7可在锻造台升级下界合金质装备",
-      "item.primogemcraft.szhjsj.description_1": "§",
       "item.primogemcraft.mmolajian": "§eMora Sword",
       "item.primogemcraft.huangjindezhexue": "philosophies of 『gold』",
-      "item.primogemcraft.szhjsj.description_4": "§9 下界合金制盔甲",
-      "item.primogemcraft.szhjsj.description_2": "§7可应用于：",
-      "item.primogemcraft.szhjsj.description_3": "§9 下界合金剑",
       "advancements.nibaodimeila.descr": "When using Cosmic Big Lotto Obtain a large amount of diamonds（probability\u003c0.6%）",
       "item.primogemcraft.kkuijiaceshi_leggings": "Mora Leggings",
       "block.primogemcraft.ysjtsj_1": "深层元素晶体矿石",
@@ -42400,7 +40861,6 @@
       "item.primogemcraft.tezhidieyingqi": "suprimposer(Custom-Made)",
       "item.primogemcraft.shqwyhdlt.description_0": "§c已损坏！",
       "item.primogemcraft.jinzhimola": "exquisite Mora",
-      "advancements.jdlyzsj.title": "Using and Upgrading",
       "effect.feixing": "Flying",
       "gui.primogemcraft.ceshigui.label_wu_pin_lan": "Inventory",
       "item.primogemcraft.yxaxg.description_1": "§7 - 95%概率转化§f§n通用元素晶体块§7为随机元素晶体块",
@@ -42410,12 +40870,10 @@
       "item.primogemcraft.zuishengkuai": "§dVajrada Amethyst gemstone",
       "gui.primogemcraft.heitayindaoyonggui.label_xiao_hao_1_ge_sui_ji_cuo_wu_dai_ma_zhuang_zhi_xuan_ze_1": "消耗 1 个 随机Error Code Curios装置 选择 1 ",
       "item.primogemcraft.sshenhudezhufu_013": "Hakushinn\u0027s Lullaby",
-      "item.primogemcraft.ryzssj": "§b『Diamond Upgrade』§cAgnidus Agate",
       "block.primogemcraft.caoyuanhehuabuban_2": "Dendro Core planks",
       "item.primogemcraft.taikongmanbuchangpian.desc": "Space Walk HOYO-MiX",
       "item.primogemcraft.huangjindezhexue.description_0": "§2耕作时§f有小概率掉落§e摩拉",
       "advancements.qinlaodezhexuejindu.title": "Philosophies of 『Diligence』",
-      "item.primogemcraft.djzssj": "§b『Diamond Updated』vajrada Lazurite Gemstone",
       "item.primogemcraft.qwxyzq.description_0": "§7在黑塔商店中使用宇宙碎片时",
       "item.primogemcraft.qwxyzq.description_1": "§7减少20%宇宙碎片消耗",
       "item.primogemcraft.ceshiyongwupin": "item for editor",
@@ -42426,31 +40884,17 @@
       "item.primogemcraft.hqbing": "§5『Curio』§b§ksealing wax of §r§bMecry",
       "block.primogemcraft.yhjsk": "nity mental block",
       "item.primogemcraft.qq_qyuanchulan_01_spawn_egg": "Result Rare Spawn Egg",
-      "item.primogemcraft.axzsshjsj": "§d『Netherite Upgrade』§bShivada Jade Gemstone",
       "advancements.cchangchangkan.descr": "Obtain§5Trash",
-      "item.primogemcraft.qhzllh_2.description_1": "§b[潜行+右键]§7使用全部",
-      "advancements.jdybdw.descr": "obtain the Netherite Upgrading element template",
-      "item.primogemcraft.qhzllh_2.description_0": "§e[右键]§7使用一个",
       "item.primogemcraft.lmsj": "黎明神剑",
       "gamerule.guizeshijianxianzhi.description": "每个游戏日至多掉落几次随机事件",
       "block.primogemcraft.jianlaokuangshi.description_0": "§8generate in shallow layers in Overworld",
       "block.primogemcraft.lajsk": "§klsjs§rMetal block",
       "gamerule.guizesuijishijian.description": "概率\u003d\u003c值\u003e* 0.01（%）",
-      "item.primogemcraft.mzsj_2.description_2": "§7可应用于：",
-      "item.primogemcraft.mzsj_2.description_1": "§",
-      "item.primogemcraft.mzsj_2.description_0": "§9抹除元素晶体附着",
-      "item.primogemcraft.shengjijlhjwp.description_0": "§7可在锻造台升级下界合金质装备",
-      "item.primogemcraft.shengjijlhjwp.description_1": "§",
-      "item.primogemcraft.shengjijlhjwp.description_2": "§7可应用于：",
       "advancements.zzenmezhemechoua.title": "How Stinky！",
       "gui.primogemcraft.cunzheshezhi.tooltip_dian_ci_huo_qu_bu_wen_ding_ban_ben": "点此获取不稳定版本",
-      "item.primogemcraft.shengjijlhjwp.description_3": "§9 下界合金剑",
-      "item.primogemcraft.shengjijlhjwp.description_4": "§9 下界合金制盔甲",
       "gui.primogemcraft.cunzheshezhi.button_qing_ling": "reset",
       "effect.primogemcraft.tldhy": "Thalan Toxi-Flame",
       "block.primogemcraft.ziyousongshikuangshi.description_0": "§8平原任意层生成",
-      "item.primogemcraft.mzsj_2.description_4": "§d『元素晶体』§9钻石制盔甲",
-      "item.primogemcraft.mzsj_2.description_3": "§d『元素晶体』§9钻石剑",
       "item.primogemcraft.qwsmcl.description_3": "§6率掉落2~20宇宙碎片",
       "item.primogemcraft.qwsmcl.description_4": "§9触发5次后该奇物将损坏",
       "item.primogemcraft.qwsmcl.description_1": "§7强化",
@@ -42470,13 +40914,10 @@
       "item.primogemcraft.qwjzyj.description_4": "§",
       "item.primogemcraft.qwjzyj.description_5": "§d该效果每秒至多触发一次",
       "item.primogemcraft.zhapiandingzhengshi.description_0": "§7表面留有细纹",
-      "item.primogemcraft.qhzllh_4.description_2": "§b[潜行+右键]§7使用全部",
       "item.primogemcraft.qwjzyj.description_0": "§7每拥有一个已损坏奇物，攻击目标后会对其额外",
       "item.primogemcraft.ftyj": "§2飞天御剑",
       "item.primogemcraft.qwjzyj.description_1": "§7造成一次等同于自身最大生命0.3%的额外伤害",
-      "item.primogemcraft.qhzllh_4.description_0": "§8史诗礼盒20%概率转化",
       "item.primogemcraft.qwjzyj.description_2": "§7至多以这种方式造成额外30%自身最大生命值",
-      "item.primogemcraft.qhzllh_4.description_1": "§e[右键]§7使用一个",
       "item.primogemcraft.qwyznj": "§5§l『奇物』§c§l愚者凝胶",
       "item.primogemcraft.zhapiandingzhengshi.description_1": "§7或许可以放进唱片机....",
       "item.primogemcraft.qwwszj.description_1": "可用次数超级加倍",
@@ -42490,22 +40931,17 @@
       "advancements.zhzhiyexuanshou.title": "“Professional Player”",
       "advancements.bbaozang.title": "Treasures！",
       "gui.primogemcraft.yinhang.label_yu_jian_shi_gei_yu_shuang_bei": "doubles when met",
-      "item.primogemcraft.djhjsj": "§e『Smithing Template』§bVarunada Lazurite",
       "block.primogemcraft.yuanshikuangshi": "Primogem Ore",
       "gui.primogemcraft.heitayindaoyonggui.label_ge_cuo_wu_dai_ma": "个Error Code Curios",
       "gui.primogemcraft.bwdyinhang.label_xia_ci_yu_dao_shi_ke_ti": "withdrawable when met next",
       "item.primogemcraft.maoxianjiazhinang": "§7Adventurer\u0027s Kit Bag",
       "item.primogemcraft.yuanshiqiao": "§bPrimogem Shovel",
-      "item.primogemcraft.ryhjsj": "§e『Smithing Templete』§cAgnidus Agate",
       "item.primogemcraft.yuanshif": "原石粉尘",
       "item.primogemcraft.kongyuezhufu.description_0": "每天领取1~9颗原石",
       "item.primogemcraft.yiyimuguoshi": "§5『Curio』§6Fruit of the Alien Tree",
       "item.primogemcraft.qwyhjb.description_2": "§e提供的奖品质量大大降低",
       "item.primogemcraft.qwyhjb.description_1": "§e损坏概率仅为10%，且不会消耗饱食度",
       "item.primogemcraft.qwyhjb.description_0": "§6与§b§l银河大乐透§r§6效果一致，但",
-      "item.primogemcraft.shengjijltiewp.description_0": "§7可在锻造台升级铁质装备",
-      "item.primogemcraft.shengjijltiewp.description_1": "§",
-      "item.primogemcraft.shengjijltiewp.description_2": "§7可应用于：",
       "item.primogemcraft.ccangruimilinjian_014": "Village Surrounded by Green",
       "gui.primogemcraft.cunzheshezhi.label_empty": "+",
       "item.primogemcraft.qwjzyj": "§5『Curio』§aFamily Ties",
@@ -42516,15 +40952,8 @@
       "advancements.rhsys.title": "缝合艺术",
       "item.primogemcraft.liulangzhedejingyan.description_2": "§c  升级后不保留经验",
       "block.primogemcraft.ceshi_mucaibao_slab": "Dendro Core Slab",
-      "item.primogemcraft.shengjijltiewp.description_3": "§9 铁剑",
       "item.primogemcraft.wufengjian": "Dull Blade",
-      "item.primogemcraft.shengjijltiewp.description_4": "§9 铁质盔甲",
-      "item.primogemcraft.axtsj.description_4": "§9 iron armor",
-      "item.primogemcraft.axtsj.description_1": "§",
       "item.primogemcraft.cchonggaodaodedezanxu.description_0": "§7掠夺者系列生物小概率掉落",
-      "item.primogemcraft.axtsj.description_0": "§7upgrade iron equipments in smithing table",
-      "item.primogemcraft.axtsj.description_3": "§9 iron sword",
-      "item.primogemcraft.axtsj.description_2": "§7appliable for：",
       "block.primogemcraft.mutankuai": "Charcoal Block",
       "item.primogemcraft.fenliejinbi": "§5『Curio』§eGold Coin of Discord",
       "item.primogemcraft.jlbj": "§5『CUrio』§cSociety Ticket",
@@ -42536,7 +40965,6 @@
       "gamerule.guizesuijishijian": "§b原石工艺 随机事件掉落概率",
       "gui.primogemcraft.heitayindaoyonggui.label_xiao_hao_da_liang_yu_zhou_sui_pian_wei_gong_ju_huo_kui_jia_gai_lu_tian": "Deple Amount of Cosmic Fragment为工具或盔甲概率添",
       "item.primogemcraft.mmolachutou": "§eMora Hoe",
-      "item.primogemcraft.szbfzsshjsj": "§d『Smith Templete』§aNagadus Emerald",
       "item.primogemcraft.yuanshichutou": "§bPrimogem Hoe",
       "advancements.jdwxjyjh.descr": "Gain any element sliver or Crystal",
       "block.primogemcraft.caoyuansueci": "§aBlessing Of Dendro",
@@ -42581,27 +41009,12 @@
       "item.primogemcraft.djg.description_0": "§d水下右键空气时：",
       "item.primogemcraft.djg.description_2": "§9 - 急迫II（1:00）",
       "item.primogemcraft.djg.description_1": "§9 - 水下呼吸（1:00）",
-      "item.primogemcraft.mzsj_3.description_0": "§9抹除元素晶体附着",
       "item.primogemcraft.djg.description_3": "§7冷却2分钟",
-      "item.primogemcraft.mzsj_3.description_1": "§",
       "advancements.jdwmypszyd.descr": "§bGain the Primogem billet",
-      "item.primogemcraft.mzsj_3.description_4": "§d『元素晶体』§9下界合金盔甲",
-      "item.primogemcraft.mzsj_3.description_2": "§7可应用于：",
-      "item.primogemcraft.mzsj_3.description_3": "§d『元素晶体』§9下界合金剑",
       "advancements.jushouzhilao.descr": "get clean Trash Can",
       "advancements.qqzp.title": "去其糟粕",
-      "item.primogemcraft.szsjtie.description_0": "§7可在锻造台升级铁质装备",
-      "item.primogemcraft.szsjtie.description_1": "§",
-      "item.primogemcraft.szsjtie.description_2": "§7可应用于：",
-      "item.primogemcraft.szsjtie.description_3": "§9 铁剑",
-      "item.primogemcraft.szsjtie.description_4": "§9 铁质盔甲",
       "item.primogemcraft.zyjsl": "Justice Nugget",
-      "item.primogemcraft.djhjsj.description_0": "§7可在锻造台升级下界合金质装备",
-      "item.primogemcraft.djhjsj.description_1": "§",
       "gui.primogemcraft.cunzheshezhi.tooltip_ssczhong_zhi_she_ding_shu_liang_he_ping_zheng": "§c重置设定数量和凭证",
-      "item.primogemcraft.djhjsj.description_2": "§7可应用于：",
-      "item.primogemcraft.djhjsj.description_3": "§9 下界合金剑",
-      "item.primogemcraft.djhjsj.description_4": "§9 下界合金制盔甲",
       "item.primogemcraft.yuansujingti": "§kaha§fELement Crystal§kaha",
       "item.primogemcraft.qwwxntdmj.description_0": "§7攻击满生命值生物时扣除",
       "item.primogemcraft.qwwxntdmj.description_1": "§7自身50%当前饱食度",
@@ -42648,13 +41061,8 @@
       "subtitles.choukatiaoguoguocheng01": "23333",
       "item.primogemcraft.qwhcj.description_2": "§5为更高级别随机奇物",
       "item.primogemcraft.qwhcj.description_1": "§5可将两个同级别奇物合成",
-      "item.primogemcraft.axzsshjsj.description_2": "§7appliable for：",
       "subtitles.xiaoguanzi": "",
-      "item.primogemcraft.axzsshjsj.description_3": "§d『element crystal』§9diamond sword",
       "block.primogemcraft.cangsangshizhuantaijie": "Vicissitude Brick Stairs",
-      "item.primogemcraft.axzsshjsj.description_0": "§7upgrade to netherite equipments straightly",
-      "item.primogemcraft.axzsshjsj.description_1": "§",
-      "item.primogemcraft.axzsshjsj.description_4": "§d『element crystal』§9diamond armor",
       "item.primogemcraft.qwymzj": "§5『Curio』§6Obliteration Wick Trimmer",
       "item.ceshi.yuanshi": "Primogem",
       "item.primogemcraft.qwrhj.description_2": "§6成为更多功能性同级奇物",
@@ -42668,14 +41076,9 @@
       "item.primogemcraft.qwybtzdypj": "§5『Curio』§dThe Parchment that always eat",
       "effect.primogemcraft.hslggzfuzhipin": "咕钟把戏",
       "advancements.anqqh.descr": "获得任意祈愿武器",
-      "item.primogemcraft.sjzst.description_4": "§9 铁质盔甲",
       "block.primogemcraft.ysx": "§b原石匣",
       "item.primogemcraft.tclwqcjq.description_0": "§7用于将祈愿武器分解为碎片",
-      "item.primogemcraft.sjzst.description_3": "§9 铁剑",
       "item.primogemcraft.shqwfnj.description_0": "§c已损坏！",
-      "item.primogemcraft.sjzst.description_2": "§7可应用于：",
-      "item.primogemcraft.sjzst.description_1": "§",
-      "item.primogemcraft.sjzst.description_0": "§7可在锻造台升级铁质装备",
       "block.primogemcraft.d_12": "monochrome another world wood planks Stairs",
       "block.primogemcraft.d_11": "monochrome another world wood planks",
       "block.primogemcraft.d_14": "monochrome another world wood planks Fence",
@@ -42683,13 +41086,10 @@
       "item.primogemcraft.zzjll": "Vayuda Nugget",
       "block.primogemcraft.d_16": "monochrome another world wood planks Pressure Plate",
       "block.primogemcraft.d_15": "monochrome another world wood planks Fence Gate",
-      "item.primogemcraft.mzsj_3": "§6增强 反致精炼用魔矿",
       "block.primogemcraft.d_17": "monochrome another world wood planks button",
       "subtitles.kaixiang": "Trash Can",
-      "item.primogemcraft.mzsj_2": "§b稀有 反致精炼用魔矿",
       "effect.primogemcraft.jdsbcf_0xg": "绝对失败处方 零",
       "item.primogemcraft.ryjll": "Agnidus Nugget",
-      "item.primogemcraft.shengjizizaitie": "『Iron Upgrade』§aVayuda Turquoise",
       "effect.primogemcraft.gongjitisheng": "Attack Buff",
       "block.primogemcraft.zuishengkuangshi": "§dVajrada Amethyst Ore",
       "gui.primogemcraft.sjgu_ifumo_00.label_xiao_hao_dang_qian_95zui_da_hp": "消耗当前95%最大HP。",
@@ -42702,7 +41102,6 @@
       "item.primogemcraft.qwwxntdmj": "§5『奇物』§f「无效念头」代码机",
       "advancements.qqzp.descr": "获得奇物分解剂",
       "block.primogemcraft.cangsangshizhuan": "Vicissitude Bricks",
-      "item.primogemcraft.szhjsj": "§e『Netherite Upgrade』§aNagadus Emerald",
       "block.primogemcraft.molakuai_01.description_0": "§6你们有带钱吗....",
       "block.primogemcraft.ranyuanmanaokuangshi.description_0": "§8在下届岩位置生成",
       "gui.primogemcraft.zhangquanzhezhinanggui.label_yi_bang_ren_zhi_nang": "Stranger\u0027s Travel Bag",
@@ -42734,7 +41133,6 @@
       "item.primogemcraft.zsf.description_1": "§7手持潜行左键调整效果持续时间",
       "item.primogemcraft.zsf.description_0": "§7攻击目标时为目标施加§d『过去』§7效果",
       "item.primogemcraft.laoshi": "§bOld Stone",
-      "item.primogemcraft.szzssj": "§b『Diamond Upgrade』§aNagadus Emerald",
       "item.primogemcraft.qwlha.description_0": "§6§l获得随机 §b§lA §6§l级奇物",
       "gui.primogemcraft.sjgu_ifumo_00.label_yi_ji_20yu_zhou_sui_pian": "以及20宇宙碎片。",
       "item.primogemcraft.qwymwct": "§5§l『奇物』§e丰饶果骰",
@@ -42782,7 +41180,6 @@
       "dengji_hs_2": "§c提供的物品非祈愿武器！",
       "effect.primogemcraft.jiazuxianzhi": "Family Ties Cooling down",
       "dengji_hs_0": "§c提供的武器属性大于加成范围",
-      "item.primogemcraft.shengjijlzswp": "§b『Diamond Upgrade』§6Prithiva Topaz",
       "block.primogemcraft.mlxz": "摩拉匣",
       "block.primogemcraft.molakuai_01": "Mora Blcok",
       "item.primogemcraft.dayingxiongdejingyan.description_0": "§6store§dEXP§6of",
@@ -42848,7 +41245,6 @@
       "item.primogemcraft.lijs": "§klianai§rMetal",
       "item.primogemcraft.xlly": "§6匣里龙吟",
       "item.primogemcraft.luanqibazaodedaima": "§5『Curio』§fCorrupted Code",
-      "item.primogemcraft.shengjijlhjwp": "§e『Netherite Upgrade』§6Prithiva Topaz",
       "gui.primogemcraft.gu_ibhmg.label_xuan_ze_ge_qi_wu": "§0捕获明光",
       "enchantment.primogemcraft.fumoyuzhezn.desc": "§8攻击目标后对自己造成一次主手+副手附魔等级*2%概率的目标当前血量200%的魔法伤害",
       "advancements.wanwuqiyuan.title": "Everything Original",
@@ -42874,19 +41270,13 @@
       "subtitles.gongzhuxinghua": "[ ]~~[ ]~~~！",
       "block.primogemcraft.caomo_23": "Dendro-Core Wood Fence",
       "advancements.jdwqqcb.title": "雾切之回光§m青春版",
-      "item.primogemcraft.shengjizizaitie.description_3": "§9 铁剑",
-      "item.primogemcraft.shengjizizaitie.description_4": "§9 铁质盔甲",
       "item.primogemcraft.yssp": "§b原石碎片",
       "item.primogemcraft.xiaodeng_spawn_egg": "Xiao Lantern Spawn Egg",
       "entity.primogemcraft.caoyuanheshengwu": "§aDendro Core",
-      "item.primogemcraft.shengjizizaitie.description_0": "§7可在锻造台升级铁质装备",
-      "item.primogemcraft.shengjizizaitie.description_1": "§",
-      "item.primogemcraft.shengjizizaitie.description_2": "§7可应用于：",
       "item.primogemcraft.mmolachan": "§eMora Shovel",
       "gui.primogemcraft.yinhang.button_ju_jue_bing_wei_xie_ta_rang_kai": "拒绝并威胁它让开",
       "item.primogemcraft.qyhx_0wujiacheng": "祈愿核心§c[暂无加成]",
       "item.primogemcraft.qwqxqwrhj.description_0": "§b融合高级奇物使用",
-      "advancements.jdkx.title": "开箱！",
       "item.primogemcraft.qwqxqwrhj.description_1": "§6部分奇普通融合剂无法融合",
       "item.primogemcraft.qwqxqwrhj.description_2": "§6强效融合剂奇物功能更强大",
       "entity.primogemcraft.baiguangguodushengwu": "5-star item...?",
@@ -42948,15 +41338,10 @@
       "item.minecraft.lingering_potion.effect.fengraoqiongjiang": "§elingering Abundance Potion",
       "item.primogemcraft.qwsss": "§5『奇物』§f水上书",
       "item.primogemcraft.meiyouzhushidaima": "§5『Curio』§dMysterious Code",
-      "item.primogemcraft.shengjizuanshejin.description_1": "§",
-      "item.primogemcraft.shengjizuanshejin.description_2": "§7可应用于：",
-      "item.primogemcraft.shengjizuanshejin.description_3": "§d『元素晶体』§9钻石剑",
-      "item.primogemcraft.shengjizuanshejin.description_4": "§d『元素晶体』§9钻石制盔甲",
       "gui.primogemcraft.sjgu_ifumo_01.label_jin_xing_1ci_di_pin_zhi_fu_mo": "进行1次低品质附魔。",
       "item.primogemcraft.youdianqiqiaodedaima.description_0": "§7击杀生物来修复这段代码，使其提供完整增益",
       "item.primogemcraft.youdianqiqiaodedaima.description_1": "§",
       "gui.primogemcraft.sjgu_ifumo_00.label_chi_kai_zhe_li": "离开这里。",
-      "advancements.jdwhhl.descr": "制作任意等级元素去除模板（保留附魔）",
       "block.primogemcraft.jiuchanzhiyuankuai.description_1": "How about the floor？",
       "block.primogemcraft.jiuchanzhiyuankuai.description_0": "I\u0027ve crafted all of them",
       "item.primogemcraft.youdianqiqiaodedaima.description_6": "§5每名玩家至多提供§b100%§5增益层数上限，不含敌友",
@@ -42972,7 +41357,6 @@
       "item.primogemcraft.zizaiqiao.description_2": "§7 - 急迫效果可持续叠加",
       "item.primogemcraft.quxgjibing": "§5『奇物』§f虚构机兵",
       "item.primogemcraft.zizaiqiao.description_0": "§d挖掘方块时：",
-      "item.primogemcraft.shengjizuanshejin.description_0": "§7可直接强化至合金等级",
       "advancements.bhmg.title": "§d捕获明日星光！",
       "item.primogemcraft.suijiwupin": "随机掉落物品",
       "item.primogemcraft.shenshenghuaban.description_1": "§7右键虚拟黑塔以§e回收",
@@ -42981,7 +41365,6 @@
       "item.primogemcraft.hqshui.description_1": " §a+50%§8 §/ §d+0.5",
       "item.primogemcraft.kkuijiaceshi_helmet": "Mora Helmet",
       "item.primogemcraft.weizhiyepian.description_0": "可与§b浓稠的药水§f酿造§e丰饶琼浆",
-      "item.primogemcraft.ssjzszs.description_4": "§9 钻石制盔甲",
       "item.primogemcraft.hqshui.description_0": "§9对于涤净青金系列装备：",
       "item.primogemcraft.hqshui.description_3": " §e-50%",
       "item.primogemcraft.hqshui.description_2": " §7概率§8 §/ §/ §/ §7套装数值",
@@ -42990,18 +41373,9 @@
       "advancements.chengjingle.descr": "Statue of March 7th",
       "item.primogemcraft.shenshenghuaban.description_2": "§8它真好看",
       "item.primogemcraft.hqshui.description_4": " §7冷却",
-      "item.primogemcraft.mzsj.description_2": "§7可应用于：",
-      "item.primogemcraft.mzsj.description_3": "§d『元素晶体』§9铁剑",
       "item.primogemcraft.qwsmcl": "§5『奇物』§d「神秘」磁力",
-      "item.primogemcraft.mzsj.description_4": "§d『元素晶体』§9铁质盔甲",
       "item.primogemcraft.gongzhuxinghua.desc": "§eHOYO-MiX",
-      "item.primogemcraft.ssjzszs.description_1": "§",
-      "item.primogemcraft.ssjzszs.description_0": "§7可在锻造台升级钻石质装备",
       "gui.primogemcraft.heitayindaoyonggui.button_empty": "\u003e\u003e\u003e\u003e",
-      "item.primogemcraft.ssjzszs.description_3": "§9 钻石剑",
-      "item.primogemcraft.mzsj.description_0": "§9抹除元素晶体附着",
-      "item.primogemcraft.ssjzszs.description_2": "§7可应用于：",
-      "item.primogemcraft.mzsj.description_1": "§",
       "item.primogemcraft.qwsmcd": "§5§l『奇物』§e神秘磁袋",
       "item.primogemcraft.zziyousongshiduanpian": "§aVayuda Turquoise Fragment",
       "enchantment.primogemcraft.ceshifumo_01.desc": "§eRepair certain durability before being destroyed",
@@ -43023,7 +41397,6 @@
       "item.primogemcraft.mllphj": "摩拉罗盘 下届合金",
       "item.primogemcraft.shengzhangkuai": "§aNagadus Emerald Chunk",
       "item.primogemcraft.zfg.description_0": "§d挖掘方块时：",
-      "item.primogemcraft.ryzsshjsj": "§d『Smith Templete』§cAgnidus Agate",
       "item.primogemcraft.zfg.description_1": "§7 - 概率在玩家位置生成草原核",
       "item.primogemcraft.ggongzhuxinghua.desc": "§eChasing Starlight With You HOYO-MiX",
       "item.primogemcraft.shengzhangbifeisuixie": "§aNagadus Emerald Sliver",
@@ -43040,12 +41413,9 @@
       "advancements.jdtwtylc.descr": "获得任意元素金属",
       "block.primogemcraft.hualiduanzao": "华丽锻造台",
       "block.primogemcraft.shenbanjianlaohuangyukuangshi.description_0": "§8主世界地形深层生成",
-      "item.primogemcraft.ryhjsj.description_3": "§9 下界合金剑",
       "item.primogemcraft.qwtldhy": "§5『CUrio』§9Thalan Toxi-Flame",
-      "item.primogemcraft.ryhjsj.description_2": "§7可应用于：",
       "item.primogemcraft.ysfc": "Dust of Elements Gemstone",
       "advancements.mmolachujindu.title": "mora Hoe",
-      "item.primogemcraft.ryhjsj.description_4": "§9 下界合金制盔甲",
       "item.primogemcraft.qqiwuzhanlipinshiti_spawn_egg": "Curio Spawn Egg",
       "item.primogemcraft.mingwei_yiqiedekaishi": "§4一切的开始",
       "gui.primogemcraft.ceshifumogui.tooltip_ssesuo_xu_jing_yan_zhi_jiang_bei_yu_zhou_sui_pian_di_xiao": "§e所需经验值将被宇宙碎片抵消",
@@ -43053,22 +41423,15 @@
       "item.primogemcraft.mllp.description_2": "§c当前状态仅可寻找元素晶体矿石！",
       "item.primogemcraft.mllp.description_0": "§7潜行右键对脚下方块进行记录",
       "advancements.sshehuifeirenjindu.title": "Social Dull Boy",
-      "item.primogemcraft.ryhjsj.description_1": "§",
-      "item.primogemcraft.ryhjsj.description_0": "§7可在锻造台升级下界合金质装备",
       "advancements.ttazhenhaokan.title": "§dHow Lovely She is",
       "subtitles.mengdeyewai011": "",
       "subtitles.choukatiaoguo.1": "",
       "item.primogemcraft.djq.description_0": "§6[SHIFT+右键]§d方块时：",
-      "item.primogemcraft.szsjtie": "『Iron Upgrade』§aNagadus Emerald",
       "item.primogemcraft.djq.description_4": "§7 - 25%转化失败",
-      "item.primogemcraft.ryzsshjsj.description_3": "§d『元素晶体』§9钻石剑",
       "item.primogemcraft.qwtcjlbptbg": "§5『奇物』§f天才俱乐部普通八卦",
       "item.primogemcraft.djq.description_3": "§7 - 转化粘土为沙子",
-      "item.primogemcraft.ryzsshjsj.description_2": "§7可应用于：",
       "item.primogemcraft.djq.description_2": "§7 - 转化泥土为粘土",
-      "item.primogemcraft.ryzsshjsj.description_1": "§",
       "item.primogemcraft.djq.description_1": "§7消耗耐久",
-      "item.primogemcraft.ryzsshjsj.description_0": "§7可直接强化至合金等级",
       "subtitles.sanyueexixi": "hehe",
       "gamerule.guizemoyinshenshengchengbeilv.description": "§bNormal：1 §aBanned：0 §cNightmare：100",
       "gui.primogemcraft.sjgu_ifumo_01.label_dui_wu_pin_jin_xing_1ci_di_pin_zhi_fu_mo": "对物品进行1次低品质附魔。",
@@ -43094,11 +41457,9 @@
       "item.primogemcraft.pengkeluodejingshen.description_1": "§d处于战斗状态下：",
       "item.primogemcraft.pengkeluodejingshen.description_0": "§9赋予战斗状态",
       "item.primogemcraft.djg": "§b『Varunada Lazurite』 Pickaxe",
-      "item.primogemcraft.ryzsshjsj.description_4": "§d『元素晶体』§9钻石制盔甲",
       "block.primogemcraft.ceshixiaodengfasheqi.description_0": "§7activated by redstone signal，after powered 10 Times",
       "block.primogemcraft.ceshixiaodengfasheqi.description_1": "§7became drops",
       "advancements.zhongjifeiqiu.title": "Pure Ill-Fated one",
-      "item.primogemcraft.axtsj": "『Iron Upgrade』§bShivada Jade",
       "effect.primogemcraft.ryfxgsx": "燃烧恢复",
       "item.primogemcraft.pengkeluodejingshen.description_7": "§7其中一种",
       "item.primogemcraft.pengkeluodejingshen.description_6": "§7 - 黑暗 III （5s）",
@@ -43109,7 +41470,6 @@
       "item.primogemcraft.wanshinang.description_0": "§7破坏罐子时掉落双倍战利品",
       "effect.primogemcraft.djppxianzhi": "泡泡限制",
       "gui.primogemcraft.sjgu_ifumo_00.label_xiao_hao_95dang_qian_zui_da_hp": "消耗95%当前最大HP，",
-      "item.primogemcraft.shengjizizaihej": "§e『Netherite Upgrade』§aVayuda Turquoise",
       "block.primogemcraft.ceshi_mucaibao_fence_gate": "Dendro-Core Wood Fence Gate",
       "item.primogemcraft.yiyimuguoshi.description_3": "§a不能连续触发",
       "advancements.mmolachanjindu.descr": "Wealthy",
@@ -43130,11 +41490,6 @@
       "item.primogemcraft.yishijiecunzhe.description_1": "§7潜行右键§8星际和平银行可使其§7不会损坏！",
       "gui.primogemcraft.gu_iqiwuxuanze.tooltip_sseque_ren_xuan_ze": "§e确认选择",
       "gui.primogemcraft.guiheitaxinyindao.label_chi_kai_zhe_li": "离开这里。",
-      "item.primogemcraft.rytsj.description_0": "§7可在锻造台升级铁质装备",
-      "item.primogemcraft.rytsj.description_1": "§",
-      "item.primogemcraft.rytsj.description_2": "§7可应用于：",
-      "item.primogemcraft.rytsj.description_3": "§9 铁剑",
-      "item.primogemcraft.rytsj.description_4": "§9 铁质盔甲",
       "gui.primogemcraft.molalajitong.label_wu_pin_lan": "物品栏",
       "item.primogemcraft.qwzjxxmx.description_1": "§6挖掘时根据方块硬度将有不同概率",
       "item.primogemcraft.qwzjxxmx.description_2": "§6掉落宇宙碎片",
@@ -43171,7 +41526,6 @@
       "item.primogemcraft.qwwsg.description_0": "§6与异木果实效果一致，但",
       "item.primogemcraft.qwwsg.description_2": "§e且免伤次数增加到10次",
       "item.primogemcraft.qwwsg.description_1": "§e额外获得一倍的效果时长",
-      "advancements.jdwhhl.title": "我后悔了",
       "gui.primogemcraft.sjgu_ifumo_01.label_xiao_hao_95dang_qian_zui_da_hp": "消耗95%当前最大HP，",
       "item.primogemcraft.xixiangyuzhiyuan.description_2": "§c使用者必须在附近",
       "item.primogemcraft.xixiangyuzhiyuan.description_3": "§510%§7、§61%",
@@ -43216,29 +41570,17 @@
       "item.primogemcraft.q_qyuanchuzi_01_spawn_egg": "Result Epic Spawn Egg",
       "advancements.yqyxw.title": "§6有钱有希望！",
       "item.primogemcraft.qwkzhy": "§5§l『奇物』§a空烛火焰",
-      "item.primogemcraft.sshengjijlzsshjwp": "§d『Netherite Upgrade』§6Prithiva Topaz",
-      "item.primogemcraft.djtsj.description_1": "§",
-      "item.primogemcraft.djtsj.description_2": "§7可应用于：",
-      "item.primogemcraft.djtsj.description_0": "§7可在锻造台升级铁质装备",
       "item.primogemcraft.jdsbcf_1": "§5§l『奇物』§f绝对失败处方",
       "item.primogemcraft.jdsbcf_0": "§5§l『奇物』§f绝对失败处方",
-      "item.primogemcraft.djtsj.description_3": "§9 铁剑",
-      "item.primogemcraft.djtsj.description_4": "§9 铁质盔甲",
       "effect.primogemcraft.jdsbcf_1xg": "绝对失败处方 壹",
       "item.primogemcraft.jdsbcf_2": "§5§l『奇物』§f绝对失败处方",
-      "advancements.jdbfwb.title": "变废为宝！",
       "item.primogemcraft.gzsmz": "咕钟三明治",
       "effect.primogemcraft.smclzf": "神秘磁力[增幅]",
-      "item.primogemcraft.djzssj.description_4": "§9 钻石制盔甲",
       "effect.paopaolengque": "§9Bubble§cCooldown",
       "item.primogemcraft.qwlhcc": "残次的奇物礼盒",
       "advancements.jdzlyp.title": "再来亿§m瓶§r张！",
       "advancements.yiyidantashang.title": "Once the bow is pulled",
-      "item.primogemcraft.djzssj.description_3": "§9 钻石剑",
-      "item.primogemcraft.djzssj.description_2": "§7可应用于：",
       "item.primogemcraft.axf.description_0": "§dright click the air：",
-      "item.primogemcraft.djzssj.description_1": "§",
-      "item.primogemcraft.djzssj.description_0": "§7可在锻造台升级钻石质装备",
       "gui.primogemcraft.ceshifumogui.button_cao_zuo": "Operate",
       "item.primogemcraft.qwkwzj.description_0": "§7可在工作台中修复个别奇物",
       "item.primogemcraft.gongsideguguzhong.description_3": "§7可合成修复后重复使用",
@@ -43288,7 +41630,6 @@
       "block.ceshi.yiyishijieyuanmu": "The Another World Wood",
       "item.primogemcraft.qiwuheisenlinggz": "§5『奇物』§8黑森林咕咕钟",
       "item.primogemcraft.qhmbml.description_0": "§7摩拉材质升级",
-      "item.primogemcraft.qhzlh.description_0": "§e[右键]§7使用一个",
       "item.primogemcraft.qhmbml.description_2": "§7可应用于：",
       "item.primogemcraft.qhmbml.description_1": "§",
       "item.primogemcraft.qhmbml.description_4": "§7所需原材料：",
@@ -43301,8 +41642,6 @@
       "item.primogemcraft.zhongguizhongjudedaima": "§5『Curio』§6Normal Code",
       "block.primogemcraft.llianjiamolakuaiqiang": "Cheap Mora Wall",
       "item.primogemcraft.xinghui": "§eMasterless Starglitter",
-      "item.primogemcraft.qhzlh.description_1": "§b[潜行+右键]§7使用全部",
-      "item.primogemcraft.sjzst": "『Iron Upgrade』§dVajrada Amethyst",
       "item.primogemcraft.zsq.description_4": "§a[SHIFT+左键]调整效果延迟！",
       "subtitles.dashengchujin": "hahaha",
       "item.primogemcraft.zsq.description_1": "§7 - 记录当前坐标",
@@ -43310,7 +41649,6 @@
       "item.primogemcraft.zsq.description_0": "§d手持§6[SHIFT右键]：",
       "item.primogemcraft.zsq.description_3": "§",
       "item.primogemcraft.zsq.description_2": "§d - 『过去』效果结束时回到这里",
-      "advancements.jdbfwb.descr": "获得精锻用魔矿",
       "block.primogemcraft.chuangzaoxiaodengfasheqi": "§5Creative§6Igniter Of Xiao Lantern",
       "item.primogemcraft.sanyuezhufu": "§dBlessing of March",
       "item.primogemcraft.qwjlbhy": "§5§l『奇物』§a俱乐部火焰",
@@ -43338,11 +41676,7 @@
       "item.primogemcraft.taikongmanbuchangpian": "Space Walk",
       "block.primogemcraft.caomulouti_21": "Dendro-Core Wood Stairs",
       "advancements.yhxyx.descr": "通过幸运专票获得5000星琼",
-      "item.primogemcraft.sjzszsshj.description_0": "§7可直接强化至合金等级",
       "item.primogemcraft.guzhonglingjian": "咕钟零件",
-      "item.primogemcraft.sjzszsshj.description_1": "§",
-      "item.primogemcraft.sjzszsshj.description_2": "§7可应用于：",
-      "item.primogemcraft.sjzszsshj.description_3": "§d『元素晶体』§9钻石剑",
       "item.primogemcraft.suiji_1shijian.description_0": "§8右键获得错误代码",
       "item.primogemcraft.disui": "§eGeomarrow",
       "item.primogemcraft.cebuzhunxia": "§5『Curio』§eCasket of Inaccuracy",
@@ -43352,17 +41686,13 @@
       "itemGroup.tabyuanshigongjuxuanxiangka": "Primogem Craft Weapons and Tools",
       "item.primogemcraft.bbuzainianqingdeqincezhuang_012.desc": "The Fading Stories陈致逸,HOYO-MiX",
       "item.primogemcraft.xiantiaoqiang.description_2": "§5当食用后：",
-      "item.primogemcraft.sjzszsshj.description_4": "§d『元素晶体』§9钻石制盔甲",
       "item.primogemcraft.xiantiaoqiang.description_1": "§",
       "item.primogemcraft.xiantiaoqiang.description_0": "§c别把碗吃了！！！",
-      "item.primogemcraft.axhjsj.description_0": "§7upgrade to netherite in smithing tables",
-      "item.primogemcraft.axhjsj.description_1": "§",
       "subtitles.jingyanshu00": "吸取经验",
       "effect.diguixiaoguo": "§aFixed§fCode",
       "item.primogemcraft.xiantiaoqiang.description_3": "§9+20% 最终攻击力（5:00）",
       "effect.primogemcraft.gouyu": "Amulate",
       "item.primogemcraft.qwhdlz": "§5『Curio』§fChaos Trametes",
-      "item.primogemcraft.sjzszsshj": "§d『Diamond Upgrade』§dVajrada Amethyst",
       "item.primogemcraft.ranyuansuixie": "§cVajrada Amethyst Sliver",
       "item.primogemcraft.qwyznj.description_2": "§c§l并使其获得 愚者之怒V 诅咒",
       "item.primogemcraft.qwyznj.description_1": "§l将给予:锋利、保护、效率 其中一种",
@@ -43383,9 +41713,6 @@
       "item.primogemcraft.ljtg_01.description_0": "§7真的不是一个普通的",
       "effect.primogemcraft.zhengchangdaima": "§aFixed§fCode",
       "item.primogemcraft.rranyuanmanao": "§cAgnidus Agate",
-      "item.primogemcraft.axhjsj.description_2": "§7appliable for：",
-      "item.primogemcraft.axhjsj.description_3": "§9 netherite sword",
-      "item.primogemcraft.axhjsj.description_4": "§9 netherite tools",
       "item.primogemcraft.wufengjian.description_0": "有能力改变一个世界的人才能拥有它",
       "block.primogemcraft.yuanshikuangshi.description_0": "§8再氪两单嘛",
       "item.primogemcraft.zizaifu.description_2": "§7 - 游泳时获得海豚的恩惠",
@@ -43449,7 +41776,6 @@
       "block.primogemcraft.hhyinbaoqi": "引爆器",
       "block.primogemcraft.zuishengkuangshi.description_0": "§8在河流群戏浅层深处生成",
       "item.primogemcraft.kaifaqiangzhi_01": "§4需知",
-      "advancements.jdhszly.title": "回收利用",
       "gui.primogemcraft.cunzheshezhi.tooltip_shi_shu_liang_jian_shao": "使数量减少",
       "block.primogemcraft.jingzhimolakuai.description_0": "§7或许能用来做§e屋顶的中心！",
       "block.primogemcraft.chuangzaoxiaodengfasheqi.description_0": "§7红石驱动",
@@ -43516,7 +41842,6 @@
       "item.primogemcraft.qwkwzw.description_0": "§a§l可以使用合成来修复一个奇物",
       "item.primogemcraft.cchonggaodaodedezanxu": "§f崇高道德的赞许",
       "item.primogemcraft.qwwshy.description_1": "§7§l罐子将额外掉落10倍战利品",
-      "item.primogemcraft.rytsj": "『铁质升级』§c燃愿玛瑙",
       "item.primogemcraft.qwwshy.description_0": "§7破坏罐子时：",
       "gui.primogemcraft.cunzheshezhi.tooltip_qu_chu_shi_you_gu_ding_shu_liang_zhuan_bian_wei_0240": "取出时由固定数量转变为0~240%",
       "item.primogemcraft.qwjlbxyq": "§5§l『奇物』§a俱乐部信仰凭证",
@@ -43533,7 +41858,6 @@
       "item.primogemcraft.ydggz.description_1": "§7每3分钟扣除自身5%当前经验值",
       "item.primogemcraft.ydggz.description_4": "§6该物品，完全修复时解除负面效果",
       "item.primogemcraft.ydggz.description_3": "§6手持该物品右键消耗咕钟零件修复",
-      "advancements.jdszzqh.title": "升级再强化",
       "item.primogemcraft.qwkwzw.description_3": " 命值",
       "effect.primogemcraft.jqyydm": "集成代码",
       "item.primogemcraft.qwkwzw.description_4": "§9寄生伤害概率 -20%",
@@ -43545,11 +41869,9 @@
       "advancements.ffanrongjindu_1.title": "§6『繁荣』的哲学",
       "item.primogemcraft.qwqskxjxt.description_0": "§7食用食物后减少50%饱食度收益",
       "item.primogemcraft.qwlhb": "奇物礼盒",
-      "item.primogemcraft.q_qu_hang_zhoullh.description_1": "§b[潜行+右键]§7使用全部",
       "item.primogemcraft.ydggz.description_0": "§9拾取后触发：",
       "item.primogemcraft.qwqskxjxt.description_1": "§7同时减少80%饱和度收益",
       "item.primogemcraft.qwlha": "奇物礼盒",
-      "item.primogemcraft.q_qu_hang_zhoullh.description_0": "§e[右键]§7使用一个",
       "item.primogemcraft.qwqskxjxt.description_2": "§8放置类食物不受影响",
       "item.primogemcraft.feiqiupingzheng": "§e§kaha§8§r非酋凭证§e§kaha",
       "item.minecraft.tipped_arrow.effect.fengraoqiongjiang": "§e丰饶琼浆 箭矢",
@@ -43596,7 +41918,6 @@
       "item.primogemcraft.xzcfyxwzd": "§6象征财富与希望之盾",
       "death.attack.s_hchixushanghai.item": "%1$s 被 %2$s 使用 %3$s触发反伤死了",
       "item.primogemcraft.yuzhousuipian.description_0": "§7在这个世界貌似是以实体形式存在......",
-      "item.primogemcraft.shengjizizaizuan": "§b『钻石升级』§a自在松石",
       "advancements.bhmg.descr": "祈愿首次触发捕获明光",
       "item.primogemcraft.tezhidieyingqi.description_0": "§7感恩戴德吧！我都替你考虑好了！",
       "item.primogemcraft.tezhidieyingqi.description_1": "§",
@@ -43652,11 +41973,6 @@
       "item.primogemcraft.zsq": "§d『最胜紫晶』锹",
       "item.primogemcraft.qwlbtdgcl.description_4": "§7有宇宙碎片并清除自身§5并产出少量材料",
       "gui.primogemcraft.gu_ihualiduanzaotai.tooltip_ssbsslke_fang_ru_die_ying_qi": "§b§l可放入叠影器",
-      "item.primogemcraft.ryzssj.description_0": "§7可在锻造台升级钻石质装备",
-      "item.primogemcraft.ryzssj.description_1": "§",
-      "item.primogemcraft.ryzssj.description_2": "§7可应用于：",
-      "item.primogemcraft.ryzssj.description_3": "§9 钻石剑",
-      "item.primogemcraft.ryzssj.description_4": "§9 钻石制盔甲",
       "item.primogemcraft.jinzhimola.description_0": "§7精湛的铸造工艺....",
       "block.primogemcraft.caomu_26": "草原核化木 按钮",
       "item.primogemcraft.yishijiemugun": "异世界木 棍",
@@ -43740,7 +42056,6 @@
       "effect.primogemcraft.jdsbcf_2xg": "绝对失败处方 贰",
       "item.primogemcraft.xckf.description_0": "§7别在家里喝",
       "block.primogemcraft.ceshi_mucaibao_pressure_plate": "草原核化木 压力板",
-      "item.primogemcraft.shengjijltiewp": "『铁质升级』§6坚牢黄玉",
       "block.primogemcraft.shenbanjianlaohuangyukuangshi": "深层坚牢黄玉矿石",
       "gui.primogemcraft.yinhang.button_qing_ni_gun_kai": "请你滚开",
       "item.primogemcraft.jiangliliulangzhejingyan": "流浪者的经验",
@@ -43779,7 +42094,6 @@
       "item.primogemcraft.mmola_01.description_1": "§7但绝对不是这里",
       "gui.primogemcraft.cunzheshezhi.tooltip_cong_xia_fang_an_niu_shu_ru": "从下方按钮输入",
       "gui.primogemcraft.sjgu_ifumo_00.label_xiao_hao_20dang_qian_zui_da_hp": "消耗20%当前最大HP。",
-      "item.primogemcraft.q_qu_hang_zhoullh": "史诗 强化助力礼盒",
       "item.primogemcraft.xingjidaletou.description_4": "§7   清除玩家§c所有经验值！",
       "item.primogemcraft.xingjidaletou.description_3": "§7 - 但也有小概率损坏奇物，并",
       "item.primogemcraft.xingjidaletou.description_2": "§7   添加一个§f1~20级§7的随机附魔",
@@ -43796,29 +42110,19 @@
       "item.primogemcraft.zziyousongshi": "§a自在松石",
       "item.primogemcraft.axg": "§b『哀叙冰玉』镐",
       "item.primogemcraft.axf": "§b『哀叙冰玉』斧",
-      "item.primogemcraft.shengjizizaizuan.description_4": "§9 钻石制盔甲",
-      "item.primogemcraft.shengjizizaizuan.description_3": "§9 钻石剑",
-      "item.primogemcraft.shengjizizaizuan.description_2": "§7可应用于：",
       "advancements.b_bao_di_ren.title": "保---底---人---",
-      "item.primogemcraft.shengjizizaizuan.description_1": "§",
-      "item.primogemcraft.shengjizizaizuan.description_0": "§7可在锻造台升级钻石质装备",
       "gui.primogemcraft.gu_ibhmg.tooltip_sscqiang_zhi_tui_chu_jie_mian_hui_sui_ji_xuan_ze_ge_qi_wu": "§c强制退出界面会随机选择一个物品！",
       "item.primogemcraft.qwxgdbmt": "§5§l『奇物』§b虚构的三八面骰",
       "item.primogemcraft.axq": "§b『哀叙冰玉』锹",
       "advancements.yysgj.descr": "获得任意元素工具",
       "advancements.yzam.title": "宇宙奥秘",
       "block.primogemcraft.dangaoliyue": "§6赠糕于你",
-      "item.primogemcraft.djzsshjsj.description_2": "§7可应用于：",
       "gui.primogemcraft.bwdyinhang.label_de_shuang_bei_yu_zhou_sui_pian": "得双倍宇宙碎片！",
-      "item.primogemcraft.djzsshjsj.description_1": "§",
       "item.primogemcraft.yuzhousuipian": "宇宙碎片",
-      "item.primogemcraft.djzsshjsj.description_0": "§7可直接强化至合金等级",
       "item.primogemcraft.qwlhs": "奇物礼盒",
       "item.primogemcraft.liulangzhezhinang.description_0": "§7存储空间：18",
-      "item.primogemcraft.djzsshjsj.description_4": "§d『元素晶体』§9钻石制盔甲",
       "subtitles.chujinle02": "hahaha",
       "effect.lengquezhongguizhongju": "错误代码冷却",
-      "item.primogemcraft.djzsshjsj.description_3": "§d『元素晶体』§9钻石剑",
       "item.primogemcraft.qwxxgg.description_2": "§e重置一次已消耗的免伤次数",
       "item.primogemcraft.qwxxgg.description_0": "§6与异木果实效果一致，但",
       "item.primogemcraft.qwxxgg.description_1": "§e临终效果期间，每次拾取经验球将",
@@ -43857,15 +42161,10 @@
       "advancements.yysgj.title": "五彩斑斓的嘿",
       "item.primogemcraft.jingqueyouyadaima": "§5『奇物』§f精确优雅的代码",
       "advancements.b_bao_di_ren.descr": "在祈愿中获得保底",
-      "item.primogemcraft.axzssj.description_1": "§",
-      "item.primogemcraft.axzssj.description_2": "§7可应用于：",
       "item.primogemcraft.qwjcdm": "§5『奇物』§e集成代码",
-      "item.primogemcraft.axzssj.description_0": "§7可在锻造台升级钻石质装备",
       "item.primogemcraft.yuanshiyuanpei": "§b原石原胚",
       "advancements.jzdz.descr": "获得华丽锻造台",
       "block.primogemcraft.mmolazhilajitong": "摩拉制垃圾桶",
-      "item.primogemcraft.axzssj.description_3": "§9 钻石剑",
-      "item.primogemcraft.axzssj.description_4": "§9 钻石制盔甲",
       "item.primogemcraft.tclzhaiquan.description_1": "§7使用§b祈愿武器用良矿§7分解高阶武器得到",
       "item.primogemcraft.tclzhaiquan.description_0": "§7用于合成任意祈愿武器",
       "item.primogemcraft.jdsbcf_1.description_0": "§7降低各项属性",
@@ -43898,11 +42197,9 @@
       "item.primogemcraft.shilianchou": "十枚纠缠之缘",
       "item.primogemcraft.qwypzgs": "§5§l『奇物』§d邪恶的异木果实",
       "block.primogemcraft.mmolazhilajitong.description_0": "§7可以用来存放更多物品",
-      "item.primogemcraft.qhzllh_4": "§6特殊产出 强化助力礼盒",
       "effect.primogemcraft.qwjlbbgsx_2": "俱乐部普通八卦",
       "gui.primogemcraft.cunzheshezhi.tooltip_fang_ru_bei_bao": "放入背包",
       "advancements.beiguotiejiang.title": "§6北国铁匠",
-      "item.primogemcraft.qhzllh_2": "珍稀 强化助力礼盒",
       "item.primogemcraft.qhmbmlys_01": "锻造模板",
       "advancements.djmszb.descr": "获得无锋剑",
       "item.primogemcraft.qhmbmlys_02": "锻造模板",
@@ -43949,14 +42246,9 @@
       "advancements.huhuangjinwu_2.title": "§6黄金屋",
       "item.primogemcraft.xingjidaletou": "§5『奇物』§b星际大乐透",
       "item.primogemcraft.tiankongsp": "枪械碎片",
-      "item.primogemcraft.szzssj.description_3": "§9 钻石剑",
-      "item.primogemcraft.szzssj.description_4": "§9 钻石制盔甲",
       "item.primogemcraft.qwthhjiii.description_0": "“它似乎除了叫奇物以外......”",
-      "item.primogemcraft.szzssj.description_0": "§7可在锻造台升级钻石质装备",
       "block.primogemcraft.hhzd_0": "炸..弹？",
-      "item.primogemcraft.szzssj.description_1": "§",
       "block.primogemcraft.hhzd_1": "炸弹！",
-      "item.primogemcraft.szzssj.description_2": "§7可应用于：",
       "advancements.xdfsqjd.title": "§4§m烟花§6霄灯来咯~",
       "block.primogemcraft.xijaieyangengdi": "下界岩耕地",
       "item.primogemcraft.qwsmcd.description_1": "§7§l罐子将额外掉落宇宙碎片",
@@ -43979,7 +42271,6 @@
       "advancements.jdyszb.title": "钻石降级版",
       "block.primogemcraft.disuikuai_1": "地髓水晶块",
       "item.primogemcraft.cllk": "特处理良矿",
-      "item.primogemcraft.qhzlh": "强化助力礼盒",
       "item.primogemcraft.lajitongzunyan.description_3": "§9抗性提升II（3:00）",
       "entity.primogemcraft.qq_qyuanchulan_01": "祈愿出蓝",
       "advancements.mjdl.descr": "获得均衡石板3",
@@ -43997,40 +42288,23 @@
       "advancements.qwhc.title": "寰宇502",
       "gui.primogemcraft.sjgu_ifumo_00.tooltip_sscdang_qian_yu_zhou_sui_pian_shu_liang_bu_zu": "§c当前宇宙碎片数量不足！",
       "item.primogemcraft.qwyhjb": "§5§l『奇物』§f虚构大乐透",
-      "item.primogemcraft.ssjzszs": "§b『钻石升级』§d最胜紫晶",
       "gui.primogemcraft.ceshishijianxuanzejiemian.button_shua_xin": "刷新",
       "item.primogemcraft.ydfms": "一叠附魔书",
-      "item.primogemcraft.shengjizizaihej.description_0": "§7可在锻造台升级下界合金质装备",
-      "item.primogemcraft.shengjizizaihej.description_1": "§",
-      "item.primogemcraft.shengjizizaihej.description_2": "§7可应用于：",
-      "item.primogemcraft.shengjizizaihej.description_3": "§9 下界合金剑",
-      "item.primogemcraft.shengjizizaihej.description_4": "§9 下界合金制盔甲",
       "item.primogemcraft.xiaodaimola": "小块精致摩拉",
       "item.primogemcraft.qhmbmlys_02.description_5": "§9 元素晶体",
       "item.primogemcraft.qhmbmlys_02.description_4": "§7所需原材料：",
-      "item.primogemcraft.shengjijlzswp.description_4": "§9 钻石制盔甲",
       "item.primogemcraft.weizhiyepian": "§e未知叶片",
-      "advancements.jdkx.descr": "获得强化助力礼盒",
       "item.primogemcraft.qwfldyhdlb": "§5§l『奇物』§b分裂的银河大乐币",
       "block.primogemcraft.yishijiemuban_slab": "单色异世界木木板 台阶",
-      "item.primogemcraft.sjzshj.description_2": "§7可应用于：",
-      "item.primogemcraft.sjzshj.description_3": "§9 下界合金剑",
-      "item.primogemcraft.sjzshj.description_0": "§7可在锻造台升级下界合金质装备",
       "item.primogemcraft.qwsbmb.description_4": "§6 奇物效果",
       "item.primogemcraft.hqyan": "§5『奇物』§6契约火漆",
-      "item.primogemcraft.sjzshj.description_1": "§",
-      "item.primogemcraft.shengjijlzswp.description_3": "§9 钻石剑",
       "item.primogemcraft.qhmbmlys_02.description_1": "§",
       "item.primogemcraft.qwsbmb.description_2": "§6 但每次触发时§l35%§r§6概率进行",
-      "item.primogemcraft.shengjijlzswp.description_2": "§7可应用于：",
       "item.primogemcraft.qhmbmlys_02.description_0": "§7元素晶体强化",
       "item.primogemcraft.qwsbmb.description_3": "§6 一次§e§l闪耀的偏方三八面骰§r§6的",
       "item.primogemcraft.dayingxiongdejingyan": "大英雄的经验书",
-      "item.primogemcraft.shengjijlzswp.description_1": "§",
-      "item.primogemcraft.sjzshj.description_4": "§9 下界合金制盔甲",
       "item.primogemcraft.qhmbmlys_02.description_3": "§9 原石工具",
       "item.primogemcraft.qwsbmb.description_0": "§5随着时间的推移，获得奇物",
-      "item.primogemcraft.shengjijlzswp.description_0": "§7可在锻造台升级钻石质装备",
       "item.primogemcraft.qhmbmlys_02.description_2": "§7可应用于：",
       "item.primogemcraft.qwsbmb.description_1": "§e§l必定为负面奇物！",
       "item.primogemcraft.qwggzfenlie_b.description_2": "§6手持右键支付35%生命值以减轻",
@@ -44097,7 +42371,6 @@
       "gui.primogemcraft.cunzheshezhi.button_1": "1",
       "item.primogemcraft.luanqibazaodedaima.description_1": "§7击杀30只生物",
       "item.primogemcraft.jingqueyouyadaima.description_1": "§7击杀30只生物",
-      "item.primogemcraft.axzssj": "§b『钻石升级』§b哀叙冰玉",
       "item.primogemcraft.qwxydsw": "§5『奇物』§f谐乐丢失物",
       "gui.primogemcraft.bwdyinhang.label_yu_dao_lei_si_she_shi_shi": "遇到类似设施时，",
       "advancements.rhsys.descr": "获得奇物融合剂",
@@ -44106,8 +42379,6 @@
       "effect.primogemcraft.zhandouzhuangtai": "战斗状态",
       "item.primogemcraft.ysjfr": "腐肉！",
       "item.primogemcraft.qwcbzg.description_2": "§7允许使用3次§c§l不能连续触发",
-      "item.primogemcraft.mzsj": "反致精炼用魔矿",
-      "advancements.jdlyzsj.descr": "制作钻石制元素模板",
       "item.primogemcraft.jlq.description_0": "§6[SHIFT+右键]§d地面时：",
       "item.primogemcraft.qinlaodezhexue.description_0": "§b挖掘时§f有小概率掉落§e摩拉",
       "item.primogemcraft.qwymzj.description_1": "§7等级 力量 I ~ IV 效果",
@@ -44156,12 +42427,10 @@
       "item.primogemcraft.hqfeng.description_0": "§9对于自在松石系列装备：",
       "item.primogemcraft.teshukuijia_01_helmet": "特殊01",
       "item.primogemcraft.zuishengduanpian": "§d最胜紫晶 断片",
-      "item.primogemcraft.shengjizuanshejin": "§d『钻石合金升级』§a自在松石",
       "itemGroup.tabzhenghuo": "原石工艺",
       "advancements.huhuangjinjindu_01.title": "§6『黄金』的哲学",
       "item.primogemcraft.dijian": "§b笛剑",
       "gui.primogemcraft.guis_jfumo.tooltip_sscgai_wu_pin_bu_man_zu_fu_mo_tiao_jian": "§c该物品不满足附魔条件！",
-      "item.primogemcraft.axhjsj": "§e『下界合金升级』§b哀叙冰玉",
       "item.primogemcraft.hqfeng.description_5": "§8仅作用于正面效果",
       "item.primogemcraft.hqfeng.description_4": " §7冷却",
       "item.primogemcraft.skjinb": "§5§l『奇物』§b时空金币",
@@ -44188,7 +42457,6 @@
       "gui.primogemcraft.bwdyinhang.label_gong_xiang_ying_ping_zheng_bing_you": "供相应凭证，并有",
       "gamerule.guizewuqishangxian": "§b原石工艺§e武器等级上限",
       "item.primogemcraft.yuanshifu": "§b原石 斧",
-      "item.primogemcraft.sjzshj": "§e『下界合金升级』§d最胜紫晶",
       "advancements.qwhc.descr": "获得奇物合成剂",
       "item.primogemcraft.aixubingyukuai": "§b哀叙冰玉 块",
       "gamerule.guizebuhuomingguangzhi.description": "祈愿出金时触发捕获明光的概率，默认20%",
@@ -44199,11 +42467,9 @@
       "item.primogemcraft.fulinjiao.description_0": "§7右键使用后使副手物品获得",
       "death.attack.chiwuwuli": "%1$s 被持续物理伤害撕裂！",
       "block.primogemcraft.yuansujingshikuai": "§d§kaha§f元素晶体 块§d§kaha",
-      "item.primogemcraft.djzsshjsj": "§d『钻石合金升级』§b涤净青金",
       "item.primogemcraft.qwclgs": "§5§l『奇物』§c磁力果实",
       "item.primogemcraft.xzcfyxwzd.description_0": "§7更华丽的垃圾桶盖罢了！",
       "item.primogemcraft.kkuijiaceshi_chestplate": "§e摩拉 胸甲",
-      "advancements.jdszzqh.descr": "制作合金制模板",
       "item.primogemcraft.xzcfyxwzd.description_2": "§6 • 抗性提升",
       "item.primogemcraft.xzcfyxwzd.description_1": "",
       "block.primogemcraft.xiutiekuai": "锈铁块",
@@ -44244,7 +42510,6 @@
       "item.primogemcraft.yiyinhedaletou": "§5『奇物』§b银河大乐透",
       "gui.primogemcraft.taozhuangchakan.taozhuang_1": "0",
       "gui.primogemcraft.taozhuangchakan.taozhuang_0": "0",
-      "item.primogemcraft.djtsj": "『铁质升级』§b涤净青金",
       "block.primogemcraft.xydx.description_0": "§e只有幸运星才能拥有它",
       "gui.primogemcraft.cunzheshezhi.tooltip_shi_shu_liang_zeng_jia": "使数量增加",
       "block.primogemcraft.shizuoyuanshikuai": "§e原§d石§b块",
@@ -44313,26 +42578,18 @@
       "item.primogemcraft.jhsb_0.description_0": "§e均衡等级\u003e1",
       "item.primogemcraft.jhsb_0.description_1": "§9右键使用",
       "block.primogemcraft.xiaoguanzi": "小罐子",
-      "item.primogemcraft.sshengjijlzsshjwp.description_1": "§",
-      "item.primogemcraft.sshengjijlzsshjwp.description_0": "§7可直接强化至合金等级",
       "item.primogemcraft.zssp": "钻石碎片",
       "item.primogemcraft.wuxiandiguidedaima.description_7": "§2持续到增益结束",
       "item.primogemcraft.wuxiandiguidedaima.description_6": "§2击杀目标后概率提升经验值",
-      "advancements.jdybdw.title": "一步到位！",
       "item.primogemcraft.wuxiandiguidedaima.description_5": "§7代码修复后：",
       "item.primogemcraft.szf.description_1": "§7 - 创造一棵树，并将自身送至树顶",
       "item.primogemcraft.wuxiandiguidedaima.description_4": "§2玩家攻击目标时，概率减少自身经验值",
-      "item.primogemcraft.szbfzsshjsj.description_3": "§d『元素晶体』§9钻石剑",
       "item.primogemcraft.wuxiandiguidedaima.description_3": "§7修复期间：",
-      "item.primogemcraft.szbfzsshjsj.description_2": "§7可应用于：",
       "item.primogemcraft.wuxiandiguidedaima.description_2": "§",
-      "item.primogemcraft.szbfzsshjsj.description_1": "§",
       "item.primogemcraft.wuxiandiguidedaima.description_1": "§7击杀30只生物",
-      "item.primogemcraft.szbfzsshjsj.description_0": "§7可直接强化至合金等级",
       "item.primogemcraft.jdsbcf_2.description_0": "§7降低各项速度类属性",
       "item.primogemcraft.szc": "§a『生长碧翡』锄",
       "item.primogemcraft.wuxiandiguidedaima.description_0": "§7将这段代码修复成正常的奇物需要",
-      "item.primogemcraft.szbfzsshjsj.description_4": "§d『元素晶体』§9钻石制盔甲",
       "item.primogemcraft.szg": "§a『生长碧翡』镐",
       "item.primogemcraft.szf": "§a『生长碧翡』斧",
       "subtitles.sanyueennnn": "ennnn？",
@@ -44341,13 +42598,9 @@
       "gamerule.guizeyuanshishengcheng": "§b原石工艺 §e是否生成原石矿石",
       "item.primogemcraft.xiaoheita_spawn_egg": "§5生成黑塔异世界分塔",
       "item.primogemcraft.szq": "§a『生长碧翡』锹",
-      "item.primogemcraft.sshengjijlzsshjwp.description_3": "§d『元素晶体』§9钻石剑",
-      "item.primogemcraft.sshengjijlzsshjwp.description_2": "§7可应用于：",
       "entity.minecraft.villager.primogemcraft.cesysxj": "原石学家",
-      "item.primogemcraft.sshengjijlzsshjwp.description_4": "§d『元素晶体』§9钻石制盔甲",
       "gui.primogemcraft.sjgu_ifumo_00.label_xiao_hao_70dang_qian_zui_da_hp": "消耗70%当前最大HP。",
       "item.primogemcraft.qqiyuan_jin_guang_spawn_egg": "生成祈愿金光",
-      "advancements.jdhszly.descr": "制作任意铁制元素模板",
       "item.primogemcraft.yiyinhedaletou.description_9": "§9全员透露结果冷却1分钟",
       "item.primogemcraft.yiyinhedaletou.description_8": "§7损坏银河大乐透的数量",
       "item.primogemcraft.yiyinhedaletou.description_7": "§7主手持右键空气查询当前",
@@ -44422,13 +42675,8 @@
       "advancements.jdshijian_0.title": "星附魔方式",
       "gui.primogemcraft.bwdyinhang.label_yu_zhou_sui_pian": "宇宙碎片！",
       "block.primogemcraft.dijingqinjingkuangshi": "§9涤净青金 矿石",
-      "item.primogemcraft.szhjsj.description_0": "§7可在锻造台升级下界合金质装备",
-      "item.primogemcraft.szhjsj.description_1": "§",
       "item.primogemcraft.mmolajian": "§e摩拉 剑",
       "item.primogemcraft.huangjindezhexue": "§6『黄金』的哲学",
-      "item.primogemcraft.szhjsj.description_4": "§9 下界合金制盔甲",
-      "item.primogemcraft.szhjsj.description_2": "§7可应用于：",
-      "item.primogemcraft.szhjsj.description_3": "§9 下界合金剑",
       "advancements.nibaodimeila.descr": "使用银河大乐透时获得若干钻石（\u003c0.6%）",
       "item.primogemcraft.kkuijiaceshi_leggings": "§e摩拉 护腿",
       "block.primogemcraft.ysjtsj_1": "深层元素晶体矿石",
@@ -44439,7 +42687,6 @@
       "item.primogemcraft.tezhidieyingqi": "特制叠影器",
       "item.primogemcraft.shqwyhdlt.description_0": "§c已损坏！",
       "item.primogemcraft.jinzhimola": "精致摩拉",
-      "advancements.jdlyzsj.title": "利用再升级",
       "effect.feixing": "飞行",
       "gui.primogemcraft.ceshigui.label_wu_pin_lan": "物品栏",
       "item.primogemcraft.yxaxg.description_1": "§7 - 95%概率转化§f§n通用元素晶体块§7为随机元素晶体块",
@@ -44449,12 +42696,10 @@
       "item.primogemcraft.zuishengkuai": "§d最胜紫晶 块",
       "gui.primogemcraft.heitayindaoyonggui.label_xiao_hao_1_ge_sui_ji_cuo_wu_dai_ma_zhuang_zhi_xuan_ze_1": "消耗 1 个 随机错误代码装置 选择 1 ",
       "item.primogemcraft.sshenhudezhufu_013": "神狐的祝福",
-      "item.primogemcraft.ryzssj": "§b『钻石升级』§c燃愿玛瑙",
       "block.primogemcraft.caoyuanhehuabuban_2": "草原核化木板",
       "item.primogemcraft.taikongmanbuchangpian.desc": "HOYO-MiX",
       "item.primogemcraft.huangjindezhexue.description_0": "§2耕作时§f有小概率掉落§e摩拉",
       "advancements.qinlaodezhexuejindu.title": "§6『勤劳』的哲学",
-      "item.primogemcraft.djzssj": "§b『钻石升级』涤净青金",
       "item.primogemcraft.qwxyzq.description_0": "§7在黑塔商店中使用宇宙碎片时",
       "item.primogemcraft.qwxyzq.description_1": "§7减少20%宇宙碎片消耗",
       "item.primogemcraft.ceshiyongwupin": "开发者物品",
@@ -44465,31 +42710,17 @@
       "item.primogemcraft.hqbing": "§5『奇物』§b§k怜爱§r§b火漆",
       "block.primogemcraft.yhjsk": "永恒金属块",
       "item.primogemcraft.qq_qyuanchulan_01_spawn_egg": "生成祈愿蓝光",
-      "item.primogemcraft.axzsshjsj": "§d『钻石合金升级』§b哀叙冰玉",
       "advancements.cchangchangkan.descr": "获得§5垃圾",
-      "item.primogemcraft.qhzllh_2.description_1": "§b[潜行+右键]§7使用全部",
-      "advancements.jdybdw.descr": "获得钻石合金制元素模板",
-      "item.primogemcraft.qhzllh_2.description_0": "§e[右键]§7使用一个",
       "item.primogemcraft.lmsj": "黎明神剑",
       "gamerule.guizeshijianxianzhi.description": "每个游戏日至多掉落几次随机事件",
       "block.primogemcraft.jianlaokuangshi.description_0": "§8主世界地形浅层生成",
       "block.primogemcraft.lajsk": "§klsjs§r金属块",
       "gamerule.guizesuijishijian.description": "概率\u003d\u003c值\u003e* 0.01（%）",
-      "item.primogemcraft.mzsj_2.description_2": "§7可应用于：",
-      "item.primogemcraft.mzsj_2.description_1": "§",
-      "item.primogemcraft.mzsj_2.description_0": "§9抹除元素晶体附着",
-      "item.primogemcraft.shengjijlhjwp.description_0": "§7可在锻造台升级下界合金质装备",
-      "item.primogemcraft.shengjijlhjwp.description_1": "§",
-      "item.primogemcraft.shengjijlhjwp.description_2": "§7可应用于：",
       "advancements.zzenmezhemechoua.title": "怎么这么臭啊！",
       "gui.primogemcraft.cunzheshezhi.tooltip_dian_ci_huo_qu_bu_wen_ding_ban_ben": "点此获取不稳定版本",
-      "item.primogemcraft.shengjijlhjwp.description_3": "§9 下界合金剑",
-      "item.primogemcraft.shengjijlhjwp.description_4": "§9 下界合金制盔甲",
       "gui.primogemcraft.cunzheshezhi.button_qing_ling": "重置",
       "effect.primogemcraft.tldhy": "塔拉毒火焰",
       "block.primogemcraft.ziyousongshikuangshi.description_0": "§8平原任意层生成",
-      "item.primogemcraft.mzsj_2.description_4": "§d『元素晶体』§9钻石制盔甲",
-      "item.primogemcraft.mzsj_2.description_3": "§d『元素晶体』§9钻石剑",
       "item.primogemcraft.qwsmcl.description_3": "§6率掉落2~20宇宙碎片",
       "item.primogemcraft.qwsmcl.description_4": "§9触发5次后该奇物将损坏",
       "item.primogemcraft.qwsmcl.description_1": "§7强化",
@@ -44509,13 +42740,10 @@
       "item.primogemcraft.qwjzyj.description_4": "§",
       "item.primogemcraft.qwjzyj.description_5": "§d该效果每秒至多触发一次",
       "item.primogemcraft.zhapiandingzhengshi.description_0": "§7表面留有细纹",
-      "item.primogemcraft.qhzllh_4.description_2": "§b[潜行+右键]§7使用全部",
       "item.primogemcraft.qwjzyj.description_0": "§7每拥有一个已损坏奇物，攻击目标后会对其额外",
       "item.primogemcraft.ftyj": "§2飞天御剑",
       "item.primogemcraft.qwjzyj.description_1": "§7造成一次等同于自身最大生命0.3%的额外伤害",
-      "item.primogemcraft.qhzllh_4.description_0": "§8史诗礼盒20%概率转化",
       "item.primogemcraft.qwjzyj.description_2": "§7至多以这种方式造成额外30%自身最大生命值",
-      "item.primogemcraft.qhzllh_4.description_1": "§e[右键]§7使用一个",
       "item.primogemcraft.qwyznj": "§5§l『奇物』§c§l愚者凝胶",
       "item.primogemcraft.zhapiandingzhengshi.description_1": "§7或许可以放进唱片机....",
       "item.primogemcraft.qwwszj.description_1": "可用次数超级加倍",
@@ -44529,11 +42757,9 @@
       "advancements.zhzhiyexuanshou.title": "“职业选手”",
       "advancements.bbaozang.title": "宝藏！",
       "gui.primogemcraft.yinhang.label_yu_jian_shi_gei_yu_shuang_bei": "遇见时给予双倍",
-      "item.primogemcraft.djhjsj": "§e『下界合金升级』§b涤净青金",
       "block.primogemcraft.yuanshikuangshi": "原石矿石",
       "gui.primogemcraft.heitayindaoyonggui.label_ge_cuo_wu_dai_ma": "个错误代码",
       "gui.primogemcraft.bwdyinhang.label_xia_ci_yu_dao_shi_ke_ti": "下次遇到时，可提",
-      "item.primogemcraft.ryhjsj": "§e『下界合金升级』§c燃愿玛瑙",
       "item.primogemcraft.yuanshiqiao": "§b原石 锹",
       "item.primogemcraft.maoxianjiazhinang": "§7冒险家之囊",
       "item.primogemcraft.yuanshif": "原石粉尘",
@@ -44542,9 +42768,6 @@
       "item.primogemcraft.qwyhjb.description_2": "§e提供的奖品质量大大降低",
       "item.primogemcraft.qwyhjb.description_1": "§e损坏概率仅为10%，且不会消耗饱食度",
       "item.primogemcraft.qwyhjb.description_0": "§6与§b§l银河大乐透§r§6效果一致，但",
-      "item.primogemcraft.shengjijltiewp.description_0": "§7可在锻造台升级铁质装备",
-      "item.primogemcraft.shengjijltiewp.description_1": "§",
-      "item.primogemcraft.shengjijltiewp.description_2": "§7可应用于：",
       "item.primogemcraft.ccangruimilinjian_014": "葳蕤林野间",
       "gui.primogemcraft.cunzheshezhi.label_empty": "+",
       "item.primogemcraft.qwjzyj": "§5『奇物』§a家族缘结",
@@ -44555,15 +42778,8 @@
       "advancements.rhsys.title": "缝合艺术",
       "item.primogemcraft.liulangzhedejingyan.description_2": "§c  升级后不保留经验",
       "block.primogemcraft.ceshi_mucaibao_slab": "草原核化木 台阶",
-      "item.primogemcraft.shengjijltiewp.description_3": "§9 铁剑",
       "item.primogemcraft.wufengjian": "无锋剑",
-      "item.primogemcraft.shengjijltiewp.description_4": "§9 铁质盔甲",
-      "item.primogemcraft.axtsj.description_4": "§9 铁质盔甲",
-      "item.primogemcraft.axtsj.description_1": "§",
       "item.primogemcraft.cchonggaodaodedezanxu.description_0": "§7掠夺者系列生物小概率掉落",
-      "item.primogemcraft.axtsj.description_0": "§7可在锻造台升级铁质装备",
-      "item.primogemcraft.axtsj.description_3": "§9 铁剑",
-      "item.primogemcraft.axtsj.description_2": "§7可应用于：",
       "block.primogemcraft.mutankuai": "木炭块",
       "item.primogemcraft.fenliejinbi": "§5『奇物』§e分裂金币",
       "item.primogemcraft.jlbj": "§5『奇物』§c俱乐部券",
@@ -44575,7 +42791,6 @@
       "gamerule.guizesuijishijian": "§b原石工艺 随机事件掉落概率",
       "gui.primogemcraft.heitayindaoyonggui.label_xiao_hao_da_liang_yu_zhou_sui_pian_wei_gong_ju_huo_kui_jia_gai_lu_tian": "消耗大量宇宙碎片为工具或盔甲概率添",
       "item.primogemcraft.mmolachutou": "§e摩拉 锄",
-      "item.primogemcraft.szbfzsshjsj": "§d『钻石合金升级』§a生长碧翡",
       "item.primogemcraft.yuanshichutou": "§b原石 锄",
       "advancements.jdwxjyjh.descr": "获得任意元素碎屑或晶体",
       "block.primogemcraft.caoyuansueci": "§a草元素恩赐",
@@ -44620,27 +42835,12 @@
       "item.primogemcraft.djg.description_0": "§d水下右键空气时：",
       "item.primogemcraft.djg.description_2": "§9 - 急迫II（1:00）",
       "item.primogemcraft.djg.description_1": "§9 - 水下呼吸（1:00）",
-      "item.primogemcraft.mzsj_3.description_0": "§9抹除元素晶体附着",
       "item.primogemcraft.djg.description_3": "§7冷却2分钟",
-      "item.primogemcraft.mzsj_3.description_1": "§",
       "advancements.jdwmypszyd.descr": "§b获得原石原胚",
-      "item.primogemcraft.mzsj_3.description_4": "§d『元素晶体』§9下界合金盔甲",
-      "item.primogemcraft.mzsj_3.description_2": "§7可应用于：",
-      "item.primogemcraft.mzsj_3.description_3": "§d『元素晶体』§9下界合金剑",
       "advancements.jushouzhilao.descr": "获得干净的垃圾桶",
       "advancements.qqzp.title": "去其糟粕",
-      "item.primogemcraft.szsjtie.description_0": "§7可在锻造台升级铁质装备",
-      "item.primogemcraft.szsjtie.description_1": "§",
-      "item.primogemcraft.szsjtie.description_2": "§7可应用于：",
-      "item.primogemcraft.szsjtie.description_3": "§9 铁剑",
-      "item.primogemcraft.szsjtie.description_4": "§9 铁质盔甲",
       "item.primogemcraft.zyjsl": "正义金属粒",
-      "item.primogemcraft.djhjsj.description_0": "§7可在锻造台升级下界合金质装备",
-      "item.primogemcraft.djhjsj.description_1": "§",
       "gui.primogemcraft.cunzheshezhi.tooltip_ssczhong_zhi_she_ding_shu_liang_he_ping_zheng": "§c重置设定数量和凭证",
-      "item.primogemcraft.djhjsj.description_2": "§7可应用于：",
-      "item.primogemcraft.djhjsj.description_3": "§9 下界合金剑",
-      "item.primogemcraft.djhjsj.description_4": "§9 下界合金制盔甲",
       "item.primogemcraft.yuansujingti": "§d§kaha§f元素晶体§d§kaha",
       "item.primogemcraft.qwwxntdmj.description_0": "§7攻击满生命值生物时扣除",
       "item.primogemcraft.qwwxntdmj.description_1": "§7自身50%当前饱食度",
@@ -44687,13 +42887,8 @@
       "subtitles.choukatiaoguoguocheng01": "23333",
       "item.primogemcraft.qwhcj.description_2": "§5为更高级别随机奇物",
       "item.primogemcraft.qwhcj.description_1": "§5可将两个同级别奇物合成",
-      "item.primogemcraft.axzsshjsj.description_2": "§7可应用于：",
       "subtitles.xiaoguanzi": "",
-      "item.primogemcraft.axzsshjsj.description_3": "§d『元素晶体』§9钻石剑",
       "block.primogemcraft.cangsangshizhuantaijie": "沧桑石砖 台阶",
-      "item.primogemcraft.axzsshjsj.description_0": "§7可直接强化至合金等级",
-      "item.primogemcraft.axzsshjsj.description_1": "§",
-      "item.primogemcraft.axzsshjsj.description_4": "§d『元素晶体』§9钻石制盔甲",
       "item.ceshi.yuanshi": "原石",
       "item.primogemcraft.qwymzj": "§5『奇物』§6湮灭烛剪",
       "item.primogemcraft.qwrhj.description_2": "§6成为更多功能性同级奇物",
@@ -44707,14 +42902,9 @@
       "item.primogemcraft.qwybtzdypj": "§5『奇物』§d永不停嘴的羊皮卷",
       "effect.primogemcraft.hslggzfuzhipin": "咕钟把戏",
       "advancements.anqqh.descr": "获得任意祈愿武器",
-      "item.primogemcraft.sjzst.description_4": "§9 铁质盔甲",
       "block.primogemcraft.ysx": "§b原石匣",
       "item.primogemcraft.tclwqcjq.description_0": "§7用于将祈愿武器分解为碎片",
-      "item.primogemcraft.sjzst.description_3": "§9 铁剑",
       "item.primogemcraft.shqwfnj.description_0": "§c已损坏！",
-      "item.primogemcraft.sjzst.description_2": "§7可应用于：",
-      "item.primogemcraft.sjzst.description_1": "§",
-      "item.primogemcraft.sjzst.description_0": "§7可在锻造台升级铁质装备",
       "block.primogemcraft.d_12": "单色异世界木木板 楼梯",
       "block.primogemcraft.d_11": "单色异世界木木板",
       "block.primogemcraft.d_14": "单色异世界木木板 栅栏",
@@ -44722,13 +42912,10 @@
       "block.primogemcraft.d_16": "单色异世界木木板 压力板",
       "item.primogemcraft.zzjll": "自在金属粒",
       "block.primogemcraft.d_15": "单色异世界木木板 栅栏门",
-      "item.primogemcraft.mzsj_3": "§6增强 反致精炼用魔矿",
       "block.primogemcraft.d_17": "单色异世界木木板 按钮",
       "subtitles.kaixiang": "垃圾桶",
-      "item.primogemcraft.mzsj_2": "§b稀有 反致精炼用魔矿",
       "effect.primogemcraft.jdsbcf_0xg": "绝对失败处方 零",
       "item.primogemcraft.ryjll": "燃愿金属粒",
-      "item.primogemcraft.shengjizizaitie": "『铁质升级』§a自在松石",
       "effect.primogemcraft.gongjitisheng": "攻击项增益",
       "block.primogemcraft.zuishengkuangshi": "§d最胜紫晶 矿石",
       "gui.primogemcraft.sjgu_ifumo_00.label_xiao_hao_dang_qian_95zui_da_hp": "消耗当前95%最大HP。",
@@ -44741,7 +42928,6 @@
       "item.primogemcraft.qwwxntdmj": "§5『奇物』§f「无效念头」代码机",
       "advancements.qqzp.descr": "获得奇物分解剂",
       "block.primogemcraft.cangsangshizhuan": "沧桑石砖",
-      "item.primogemcraft.szhjsj": "§e『下界合金升级』§a生长碧翡",
       "block.primogemcraft.molakuai_01.description_0": "§6你们有带钱吗....",
       "block.primogemcraft.ranyuanmanaokuangshi.description_0": "§8在下届岩位置生成",
       "gui.primogemcraft.zhangquanzhezhinanggui.label_yi_bang_ren_zhi_nang": "异邦人之囊",
@@ -44773,7 +42959,6 @@
       "item.primogemcraft.zsf.description_1": "§7手持潜行左键调整效果持续时间",
       "item.primogemcraft.zsf.description_0": "§7攻击目标时为目标施加§d『过去』§7效果",
       "item.primogemcraft.laoshi": "§b老石",
-      "item.primogemcraft.szzssj": "§b『钻石升级』§a生长碧翡",
       "item.primogemcraft.qwlha.description_0": "§6§l获得随机 §b§lA §6§l级奇物",
       "gui.primogemcraft.sjgu_ifumo_00.label_yi_ji_20yu_zhou_sui_pian": "以及20宇宙碎片。",
       "item.primogemcraft.qwymwct": "§5§l『奇物』§e丰饶果骰",
@@ -44819,7 +43004,6 @@
       "dengji_hs_2": "§c提供的物品非祈愿武器！",
       "effect.primogemcraft.jiazuxianzhi": "家族缘结冷却",
       "dengji_hs_0": "§c提供的武器属性大于加成范围",
-      "item.primogemcraft.shengjijlzswp": "§b『钻石升级』§6坚牢黄玉",
       "block.primogemcraft.mlxz": "摩拉匣",
       "block.primogemcraft.molakuai_01": "§e摩拉块",
       "item.primogemcraft.dayingxiongdejingyan.description_0": "§6可以储存§d30§6经验等级",
@@ -44884,7 +43068,6 @@
       "item.primogemcraft.lijs": "§klianai§r金属",
       "item.primogemcraft.xlly": "§6匣里龙吟",
       "item.primogemcraft.luanqibazaodedaima": "§5『奇物』§f乱七八糟的代码",
-      "item.primogemcraft.shengjijlhjwp": "§e『下界合金升级』§6坚牢黄玉",
       "gui.primogemcraft.gu_ibhmg.label_xuan_ze_ge_qi_wu": "§0捕获明光",
       "enchantment.primogemcraft.fumoyuzhezn.desc": "§8攻击目标后有主手+副手附魔等级*2%概率对自己造成一次等同于目标当前生命值200%的魔法伤害",
       "advancements.wanwuqiyuan.title": "万物起“原”",
@@ -44910,19 +43093,13 @@
       "subtitles.gongzhuxinghua": "[ ]~~[ ]~~~！",
       "block.primogemcraft.caomo_23": "草原核化木 栅栏",
       "advancements.jdwqqcb.title": "雾切之回光§m青春版",
-      "item.primogemcraft.shengjizizaitie.description_3": "§9 铁剑",
-      "item.primogemcraft.shengjizizaitie.description_4": "§9 铁质盔甲",
       "item.primogemcraft.yssp": "§b原石碎片",
       "item.primogemcraft.xiaodeng_spawn_egg": "§6生成霄灯",
       "entity.primogemcraft.caoyuanheshengwu": "§a草原核",
-      "item.primogemcraft.shengjizizaitie.description_0": "§7可在锻造台升级铁质装备",
-      "item.primogemcraft.shengjizizaitie.description_1": "§",
-      "item.primogemcraft.shengjizizaitie.description_2": "§7可应用于：",
       "item.primogemcraft.mmolachan": "§e摩拉 铲",
       "gui.primogemcraft.yinhang.button_ju_jue_bing_wei_xie_ta_rang_kai": "拒绝并威胁它让开",
       "item.primogemcraft.qyhx_0wujiacheng": "祈愿核心§c[暂无加成]",
       "item.primogemcraft.qwqxqwrhj.description_0": "§b融合高级奇物使用",
-      "advancements.jdkx.title": "开箱！",
       "item.primogemcraft.qwqxqwrhj.description_1": "§6部分奇普通融合剂无法融合",
       "item.primogemcraft.qwqxqwrhj.description_2": "§6强效融合剂奇物功能更强大",
       "entity.primogemcraft.baiguangguodushengwu": "金...？",
@@ -44984,15 +43161,10 @@
       "item.minecraft.lingering_potion.effect.fengraoqiongjiang": "§e滞留型丰饶琼浆",
       "item.primogemcraft.qwsss": "§5『奇物』§f水上书",
       "item.primogemcraft.meiyouzhushidaima": "§5『奇物』§d没有注释的代码",
-      "item.primogemcraft.shengjizuanshejin.description_1": "§",
-      "item.primogemcraft.shengjizuanshejin.description_2": "§7可应用于：",
-      "item.primogemcraft.shengjizuanshejin.description_3": "§d『元素晶体』§9钻石剑",
-      "item.primogemcraft.shengjizuanshejin.description_4": "§d『元素晶体』§9钻石制盔甲",
       "gui.primogemcraft.sjgu_ifumo_01.label_jin_xing_1ci_di_pin_zhi_fu_mo": "进行1次低品质附魔。",
       "item.primogemcraft.youdianqiqiaodedaima.description_0": "§7击杀生物来修复这段代码，使其提供完整增益",
       "item.primogemcraft.youdianqiqiaodedaima.description_1": "§",
       "gui.primogemcraft.sjgu_ifumo_00.label_chi_kai_zhe_li": "离开这里。",
-      "advancements.jdwhhl.descr": "制作任意等级元素去除模板（保留附魔）",
       "block.primogemcraft.jiuchanzhiyuankuai.description_1": "用来当地板怎么样...？",
       "block.primogemcraft.jiuchanzhiyuankuai.description_0": "我全做了....",
       "item.primogemcraft.youdianqiqiaodedaima.description_6": "§5每名玩家至多提供§b100%§5增益层数上限，不含敌友",
@@ -45008,7 +43180,6 @@
       "item.primogemcraft.zizaiqiao.description_2": "§7 - 急迫效果可持续叠加",
       "item.primogemcraft.quxgjibing": "§5『奇物』§f虚构机兵",
       "item.primogemcraft.zizaiqiao.description_0": "§d挖掘方块时：",
-      "item.primogemcraft.shengjizuanshejin.description_0": "§7可直接强化至合金等级",
       "advancements.bhmg.title": "§d捕获明日星光！",
       "item.primogemcraft.suijiwupin": "随机掉落物品",
       "item.primogemcraft.shenshenghuaban.description_1": "§7右键虚拟黑塔以§e回收",
@@ -45017,7 +43188,6 @@
       "item.primogemcraft.hqshui.description_1": " §a+50%§8 §/ §d+0.5",
       "item.primogemcraft.kkuijiaceshi_helmet": "§e摩拉 头盔",
       "item.primogemcraft.weizhiyepian.description_0": "可与§b浓稠的药水§f酿造§e丰饶琼浆",
-      "item.primogemcraft.ssjzszs.description_4": "§9 钻石制盔甲",
       "item.primogemcraft.hqshui.description_0": "§9对于涤净青金系列装备：",
       "item.primogemcraft.hqshui.description_3": " §e-50%",
       "item.primogemcraft.hqshui.description_2": " §7概率§8 §/ §/ §/ §7套装数值",
@@ -45026,18 +43196,9 @@
       "advancements.chengjingle.descr": "获得小三月......的雕像",
       "item.primogemcraft.shenshenghuaban.description_2": "§8它真好看",
       "item.primogemcraft.hqshui.description_4": " §7冷却",
-      "item.primogemcraft.mzsj.description_2": "§7可应用于：",
-      "item.primogemcraft.mzsj.description_3": "§d『元素晶体』§9铁剑",
       "item.primogemcraft.qwsmcl": "§5『奇物』§d「神秘」磁力",
-      "item.primogemcraft.mzsj.description_4": "§d『元素晶体』§9铁质盔甲",
       "item.primogemcraft.gongzhuxinghua.desc": "§eHOYO-MiX",
-      "item.primogemcraft.ssjzszs.description_1": "§",
-      "item.primogemcraft.ssjzszs.description_0": "§7可在锻造台升级钻石质装备",
       "gui.primogemcraft.heitayindaoyonggui.button_empty": "\u003e\u003e\u003e\u003e",
-      "item.primogemcraft.ssjzszs.description_3": "§9 钻石剑",
-      "item.primogemcraft.mzsj.description_0": "§9抹除元素晶体附着",
-      "item.primogemcraft.ssjzszs.description_2": "§7可应用于：",
-      "item.primogemcraft.mzsj.description_1": "§",
       "item.primogemcraft.qwsmcd": "§5§l『奇物』§e神秘磁袋",
       "item.primogemcraft.zziyousongshiduanpian": "§a自在松石 断片",
       "enchantment.primogemcraft.ceshifumo_01.desc": "§6物品损坏或即将损坏时，恢复其附魔等级*20%耐久度，恢复后降级",
@@ -45059,7 +43220,6 @@
       "item.primogemcraft.mllphj": "摩拉罗盘 下届合金",
       "item.primogemcraft.shengzhangkuai": "§a生长碧翡 块",
       "item.primogemcraft.zfg.description_0": "§d挖掘方块时：",
-      "item.primogemcraft.ryzsshjsj": "§d『钻石合金升级』§c燃愿玛瑙",
       "item.primogemcraft.zfg.description_1": "§7 - 概率在玩家位置生成草原核",
       "item.primogemcraft.shengzhangbifeisuixie": "§a生长碧翡 碎屑",
       "gui.primogemcraft.gu_iqiwuxuanze.tooltip_sscqiang_zhi_tui_chu_jie_mian_hui_sui_ji_xuan_ze_ge_qi_wu": "§c强制退出界面会随机选择一个奇物！",
@@ -45075,12 +43235,9 @@
       "advancements.jdtwtylc.descr": "获得任意元素金属",
       "block.primogemcraft.hualiduanzao": "华丽锻造台",
       "block.primogemcraft.shenbanjianlaohuangyukuangshi.description_0": "§8主世界地形深层生成",
-      "item.primogemcraft.ryhjsj.description_3": "§9 下界合金剑",
       "item.primogemcraft.qwtldhy": "§5『奇物』§9塔拉毒火焰",
-      "item.primogemcraft.ryhjsj.description_2": "§7可应用于：",
       "item.primogemcraft.ysfc": "元素晶石粉尘",
       "advancements.mmolachujindu.title": "摩拉锄",
-      "item.primogemcraft.ryhjsj.description_4": "§9 下界合金制盔甲",
       "item.primogemcraft.qqiwuzhanlipinshiti_spawn_egg": "奇物战利品实体 Spawn Egg",
       "item.primogemcraft.mingwei_yiqiedekaishi": "§4一切的开始",
       "gui.primogemcraft.ceshifumogui.tooltip_ssesuo_xu_jing_yan_zhi_jiang_bei_yu_zhou_sui_pian_di_xiao": "§e所需经验值将被宇宙碎片抵消",
@@ -45088,22 +43245,15 @@
       "item.primogemcraft.mllp.description_2": "§c当前状态仅可寻找元素晶体矿石！",
       "item.primogemcraft.mllp.description_0": "§7潜行右键对脚下方块进行记录",
       "advancements.sshehuifeirenjindu.title": "社会废人",
-      "item.primogemcraft.ryhjsj.description_1": "§",
-      "item.primogemcraft.ryhjsj.description_0": "§7可在锻造台升级下界合金质装备",
       "advancements.ttazhenhaokan.title": "§d她真好看",
       "subtitles.mengdeyewai011": "",
       "subtitles.choukatiaoguo.1": "",
       "item.primogemcraft.djq.description_0": "§6[SHIFT+右键]§d方块时：",
-      "item.primogemcraft.szsjtie": "『铁质升级』§a生长碧翡",
       "item.primogemcraft.djq.description_4": "§7 - 25%转化失败",
-      "item.primogemcraft.ryzsshjsj.description_3": "§d『元素晶体』§9钻石剑",
       "item.primogemcraft.qwtcjlbptbg": "§5『奇物』§f天才俱乐部普通八卦",
       "item.primogemcraft.djq.description_3": "§7 - 转化粘土为沙子",
-      "item.primogemcraft.ryzsshjsj.description_2": "§7可应用于：",
       "item.primogemcraft.djq.description_2": "§7 - 转化泥土为粘土",
-      "item.primogemcraft.ryzsshjsj.description_1": "§",
       "item.primogemcraft.djq.description_1": "§7消耗耐久",
-      "item.primogemcraft.ryzsshjsj.description_0": "§7可直接强化至合金等级",
       "subtitles.sanyueexixi": "欸嘻嘻",
       "gamerule.guizemoyinshenshengchengbeilv.description": "§b正常：1 §a禁止：0 §c噩梦：100",
       "gui.primogemcraft.sjgu_ifumo_01.label_dui_wu_pin_jin_xing_1ci_di_pin_zhi_fu_mo": "对物品进行1次低品质附魔。",
@@ -45129,11 +43279,9 @@
       "item.primogemcraft.pengkeluodejingshen.description_1": "§d处于战斗状态下：",
       "item.primogemcraft.pengkeluodejingshen.description_0": "§9赋予战斗状态",
       "item.primogemcraft.djg": "§b『涤净青金』 镐",
-      "item.primogemcraft.ryzsshjsj.description_4": "§d『元素晶体』§9钻石制盔甲",
       "block.primogemcraft.ceshixiaodengfasheqi.description_0": "§7红石驱动，触发十次后",
       "block.primogemcraft.ceshixiaodengfasheqi.description_1": "§7变为掉落物",
       "advancements.zhongjifeiqiu.title": "终极非酋",
-      "item.primogemcraft.axtsj": "『铁质升级』§b哀叙冰玉",
       "effect.primogemcraft.ryfxgsx": "燃烧恢复",
       "item.primogemcraft.pengkeluodejingshen.description_7": "§7其中一种",
       "item.primogemcraft.pengkeluodejingshen.description_6": "§7 - 黑暗 III （5s）",
@@ -45144,7 +43292,6 @@
       "item.primogemcraft.wanshinang.description_0": "§7破坏罐子时掉落双倍战利品",
       "effect.primogemcraft.djppxianzhi": "泡泡限制",
       "gui.primogemcraft.sjgu_ifumo_00.label_xiao_hao_95dang_qian_zui_da_hp": "消耗95%当前最大HP，",
-      "item.primogemcraft.shengjizizaihej": "§e『下界合金升级』§a自在松石",
       "block.primogemcraft.ceshi_mucaibao_fence_gate": "草原核化木 栅栏门",
       "item.primogemcraft.yiyimuguoshi.description_3": "§a不能连续触发",
       "advancements.mmolachanjindu.descr": "富裕",
@@ -45165,11 +43312,6 @@
       "item.primogemcraft.yishijiecunzhe.description_1": "§7潜行右键§8星际和平银行可使其§7不会损坏！",
       "gui.primogemcraft.gu_iqiwuxuanze.tooltip_sseque_ren_xuan_ze": "§e确认选择",
       "gui.primogemcraft.guiheitaxinyindao.label_chi_kai_zhe_li": "离开这里。",
-      "item.primogemcraft.rytsj.description_0": "§7可在锻造台升级铁质装备",
-      "item.primogemcraft.rytsj.description_1": "§",
-      "item.primogemcraft.rytsj.description_2": "§7可应用于：",
-      "item.primogemcraft.rytsj.description_3": "§9 铁剑",
-      "item.primogemcraft.rytsj.description_4": "§9 铁质盔甲",
       "gui.primogemcraft.molalajitong.label_wu_pin_lan": "物品栏",
       "item.primogemcraft.qwzjxxmx.description_1": "§6挖掘时根据方块硬度将有不同概率",
       "item.primogemcraft.qwzjxxmx.description_2": "§6掉落宇宙碎片",
@@ -45206,7 +43348,6 @@
       "item.primogemcraft.qwwsg.description_0": "§6与异木果实效果一致，但",
       "item.primogemcraft.qwwsg.description_2": "§e且免伤次数增加到10次",
       "item.primogemcraft.qwwsg.description_1": "§e额外获得一倍的效果时长",
-      "advancements.jdwhhl.title": "我后悔了",
       "gui.primogemcraft.sjgu_ifumo_01.label_xiao_hao_95dang_qian_zui_da_hp": "消耗95%当前最大HP，",
       "item.primogemcraft.xixiangyuzhiyuan.description_2": "§c使用者必须在附近",
       "item.primogemcraft.xixiangyuzhiyuan.description_3": "§510%§7、§61%",
@@ -45251,29 +43392,17 @@
       "item.primogemcraft.q_qyuanchuzi_01_spawn_egg": "生成祈愿紫光",
       "advancements.yqyxw.title": "§6有钱有希望！",
       "item.primogemcraft.qwkzhy": "§5§l『奇物』§a空烛火焰",
-      "item.primogemcraft.sshengjijlzsshjwp": "§d『钻石合金升级』§6坚牢黄玉",
-      "item.primogemcraft.djtsj.description_1": "§",
-      "item.primogemcraft.djtsj.description_2": "§7可应用于：",
-      "item.primogemcraft.djtsj.description_0": "§7可在锻造台升级铁质装备",
       "item.primogemcraft.jdsbcf_1": "§5§l『奇物』§f绝对失败处方",
       "item.primogemcraft.jdsbcf_0": "§5§l『奇物』§f绝对失败处方",
-      "item.primogemcraft.djtsj.description_3": "§9 铁剑",
-      "item.primogemcraft.djtsj.description_4": "§9 铁质盔甲",
       "effect.primogemcraft.jdsbcf_1xg": "绝对失败处方 壹",
       "item.primogemcraft.jdsbcf_2": "§5§l『奇物』§f绝对失败处方",
-      "advancements.jdbfwb.title": "变废为宝！",
       "item.primogemcraft.gzsmz": "咕钟三明治",
       "effect.primogemcraft.smclzf": "神秘磁力[增幅]",
-      "item.primogemcraft.djzssj.description_4": "§9 钻石制盔甲",
       "effect.paopaolengque": "§9泡泡§c冷却",
       "item.primogemcraft.qwlhcc": "残次的奇物礼盒",
       "advancements.jdzlyp.title": "再来亿§m瓶§r张！",
       "advancements.yiyidantashang.title": "一旦踏上了这条路",
-      "item.primogemcraft.djzssj.description_3": "§9 钻石剑",
-      "item.primogemcraft.djzssj.description_2": "§7可应用于：",
       "item.primogemcraft.axf.description_0": "§d右键空气时：",
-      "item.primogemcraft.djzssj.description_1": "§",
-      "item.primogemcraft.djzssj.description_0": "§7可在锻造台升级钻石质装备",
       "gui.primogemcraft.ceshifumogui.button_cao_zuo": "操作",
       "item.primogemcraft.qwkwzj.description_0": "§7可在工作台中修复个别奇物",
       "item.primogemcraft.gongsideguguzhong.description_3": "§7可合成修复后重复使用",
@@ -45323,7 +43452,6 @@
       "block.ceshi.yiyishijieyuanmu": "异世界原木",
       "item.primogemcraft.qiwuheisenlinggz": "§5『奇物』§8黑森林咕咕钟",
       "item.primogemcraft.qhmbml.description_0": "§7摩拉材质升级",
-      "item.primogemcraft.qhzlh.description_0": "§e[右键]§7使用一个",
       "item.primogemcraft.qhmbml.description_2": "§7可应用于：",
       "item.primogemcraft.qhmbml.description_1": "§",
       "item.primogemcraft.qhmbml.description_4": "§7所需原材料：",
@@ -45336,8 +43464,6 @@
       "item.primogemcraft.zhongguizhongjudedaima": "§5『奇物』§6中规中矩的代码",
       "block.primogemcraft.llianjiamolakuaiqiang": "廉价摩拉块 围墙",
       "item.primogemcraft.xinghui": "§e无主的星辉",
-      "item.primogemcraft.qhzlh.description_1": "§b[潜行+右键]§7使用全部",
-      "item.primogemcraft.sjzst": "『铁质升级』§d最胜紫晶",
       "item.primogemcraft.zsq.description_4": "§a[SHIFT+左键]调整效果延迟！",
       "subtitles.dashengchujin": "hahaha",
       "item.primogemcraft.zsq.description_1": "§7 - 记录当前坐标",
@@ -45345,7 +43471,6 @@
       "item.primogemcraft.zsq.description_0": "§d手持§6[SHIFT右键]：",
       "item.primogemcraft.zsq.description_3": "§",
       "item.primogemcraft.zsq.description_2": "§d - 『过去』效果结束时回到这里",
-      "advancements.jdbfwb.descr": "获得精锻用魔矿",
       "block.primogemcraft.chuangzaoxiaodengfasheqi": "§6霄灯发射器§5创造模式",
       "item.primogemcraft.sanyuezhufu": "§d三月祝福",
       "item.primogemcraft.qwjlbhy": "§5§l『奇物』§a俱乐部火焰",
@@ -45373,11 +43498,7 @@
       "item.primogemcraft.taikongmanbuchangpian": "太空漫步",
       "block.primogemcraft.caomulouti_21": "草原核化木 楼梯",
       "advancements.yhxyx.descr": "通过幸运专票获得5000星琼",
-      "item.primogemcraft.sjzszsshj.description_0": "§7可直接强化至合金等级",
       "item.primogemcraft.guzhonglingjian": "咕钟零件",
-      "item.primogemcraft.sjzszsshj.description_1": "§",
-      "item.primogemcraft.sjzszsshj.description_2": "§7可应用于：",
-      "item.primogemcraft.sjzszsshj.description_3": "§d『元素晶体』§9钻石剑",
       "item.primogemcraft.suiji_1shijian.description_0": "§8右键获得错误代码",
       "item.primogemcraft.disui": "§e地髓",
       "item.primogemcraft.cebuzhunxia": "§5『奇物』§e测不准匣",
@@ -45387,17 +43508,13 @@
       "itemGroup.tabyuanshigongjuxuanxiangka": "原石工艺 装备",
       "item.primogemcraft.bbuzainianqingdeqincezhuang_012.desc": "陈致逸,HOYO-MiX",
       "item.primogemcraft.xiantiaoqiang.description_2": "§5当食用后：",
-      "item.primogemcraft.sjzszsshj.description_4": "§d『元素晶体』§9钻石制盔甲",
       "item.primogemcraft.xiantiaoqiang.description_1": "§",
       "item.primogemcraft.xiantiaoqiang.description_0": "§c别把碗吃了！！！",
-      "item.primogemcraft.axhjsj.description_0": "§7可在锻造台升级下界合金质装备",
-      "item.primogemcraft.axhjsj.description_1": "§",
       "subtitles.jingyanshu00": "吸取经验",
       "effect.diguixiaoguo": "§a已修复§f代码",
       "item.primogemcraft.xiantiaoqiang.description_3": "§9+20% 最终攻击力（5:00）",
       "effect.primogemcraft.gouyu": "勾玉",
       "item.primogemcraft.qwhdlz": "§5『奇物』§f混沌灵芝",
-      "item.primogemcraft.sjzszsshj": "§d『钻石合金升级』§d最胜紫晶",
       "item.primogemcraft.ranyuansuixie": "§c燃愿玛瑙 碎屑",
       "item.primogemcraft.qwyznj.description_2": "§c§l并使其获得 愚者之怒V 诅咒",
       "item.primogemcraft.qwyznj.description_1": "§l将给予:锋利、保护、效率 其中一种",
@@ -45418,9 +43535,6 @@
       "item.primogemcraft.ljtg_01.description_0": "§7真的不是一个普通的",
       "effect.primogemcraft.zhengchangdaima": "§a已修复§f代码",
       "item.primogemcraft.rranyuanmanao": "§c燃愿玛瑙",
-      "item.primogemcraft.axhjsj.description_2": "§7可应用于：",
-      "item.primogemcraft.axhjsj.description_3": "§9 下界合金剑",
-      "item.primogemcraft.axhjsj.description_4": "§9 下界合金制盔甲",
       "item.primogemcraft.wufengjian.description_0": "有能力改变一个世界的人才能拥有它",
       "block.primogemcraft.yuanshikuangshi.description_0": "§8再氪两单嘛",
       "item.primogemcraft.zizaifu.description_2": "§7 - 游泳时获得海豚的恩惠",

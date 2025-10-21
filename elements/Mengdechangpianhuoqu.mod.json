@@ -226,24 +226,6 @@
           },
           {
             "price1": {
-              "value": "CUSTOM:QQuHangZhoullh"
-            },
-            "countPrice1": 1,
-            "price2": {
-              "value": "CUSTOM:QQuHangZhoullh"
-            },
-            "countPrice2": 1,
-            "offer": {
-              "value": "CUSTOM:Qhzllh4"
-            },
-            "countOffer": 1,
-            "level": 5,
-            "maxTrades": 1,
-            "xp": 5,
-            "priceMultiplier": 0.0
-          },
-          {
-            "price1": {
               "value": "CUSTOM:Moladui02"
             },
             "countPrice1": 1,

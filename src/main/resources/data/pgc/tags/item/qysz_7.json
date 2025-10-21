@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "minecraft:diamond_shovel",
-    "primogemcraft:q_qu_hang_zhoullh",
     "primogemcraft:qinlaodezhexue",
     "minecraft:lapis_lazuli",
     "primogemcraft:huangjindezhexue",
@@ -30,7 +29,6 @@
       "id": "#pgc:dzmb_3",
       "required": false
     },
-    "primogemcraft:mzsj_3",
     "minecraft:diamond_chestplate",
     "primogemcraft:wmoladai",
     "primogemcraft:jianlaokuaiwupin",

@@ -210,34 +210,6 @@
           {
             "type": "item",
             "item": {
-              "value": "CUSTOM:Qhzllh2"
-            },
-            "weight": 4,
-            "minCount": 2,
-            "maxCount": 4,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
-              "value": "CUSTOM:QQuHangZhoullh"
-            },
-            "weight": 4,
-            "minCount": 1,
-            "maxCount": 2,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
               "value": "CUSTOM:Molakuai01"
             },
             "weight": 4,
@@ -311,8 +283,8 @@
               "value": "CUSTOM:Qhmbmlys01"
             },
             "weight": 4,
-            "minCount": 2,
-            "maxCount": 3,
+            "minCount": 1,
+            "maxCount": 1,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
@@ -326,7 +298,7 @@
             },
             "weight": 4,
             "minCount": 2,
-            "maxCount": 3,
+            "maxCount": 2,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
@@ -366,7 +338,7 @@
             "item": {
               "value": "CUSTOM:Ysrqsp"
             },
-            "weight": 6,
+            "weight": 4,
             "minCount": 1,
             "maxCount": 1,
             "minEnchantmentLevel": 0,
@@ -396,7 +368,7 @@
             },
             "weight": 1,
             "minCount": 1,
-            "maxCount": 6,
+            "maxCount": 4,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
@@ -410,7 +382,7 @@
             },
             "weight": 1,
             "minCount": 1,
-            "maxCount": 6,
+            "maxCount": 4,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
@@ -424,7 +396,7 @@
             },
             "weight": 1,
             "minCount": 1,
-            "maxCount": 6,
+            "maxCount": 4,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
@@ -438,7 +410,7 @@
             },
             "weight": 1,
             "minCount": 1,
-            "maxCount": 6,
+            "maxCount": 4,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
@@ -452,7 +424,7 @@
             },
             "weight": 1,
             "minCount": 1,
-            "maxCount": 6,
+            "maxCount": 4,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
@@ -466,7 +438,7 @@
             },
             "weight": 1,
             "minCount": 1,
-            "maxCount": 6,
+            "maxCount": 4,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
@@ -480,7 +452,7 @@
             },
             "weight": 1,
             "minCount": 1,
-            "maxCount": 6,
+            "maxCount": 4,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
