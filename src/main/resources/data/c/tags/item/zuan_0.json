@@ -1,11 +1,4 @@
 {
   "replace": false,
-  "values": [
-    "primogemcraft:ruzst_helmet",
-    "primogemcraft:zszst_helmet",
-    "primogemcraft:szzskj_helmet",
-    "primogemcraft:djzst_helmet",
-    "primogemcraft:jlkjzs_helmet",
-    "primogemcraft:axzst_helmet"
-  ]
+  "values": []
 }

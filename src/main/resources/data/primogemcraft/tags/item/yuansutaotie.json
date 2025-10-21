@@ -1,29 +1,4 @@
 {
   "replace": false,
-  "values": [
-    "primogemcraft:axtt_helmet",
-    "primogemcraft:rytt_chestplate",
-    "primogemcraft:rytt_leggings",
-    "primogemcraft:axtt_chestplate",
-    "primogemcraft:zstkj_leggings",
-    "primogemcraft:axtt_leggings",
-    "primogemcraft:zstkj_boots",
-    "primogemcraft:zstkj_helmet",
-    "primogemcraft:szkjtie_boots",
-    "primogemcraft:rytt_helmet",
-    "primogemcraft:kjjlt_chestplate",
-    "primogemcraft:djtt_boots",
-    "primogemcraft:kjjlt_helmet",
-    "primogemcraft:kjjlt_leggings",
-    "primogemcraft:szkjtie_leggings",
-    "primogemcraft:rytt_boots",
-    "primogemcraft:szkjtie_helmet",
-    "primogemcraft:djtt_helmet",
-    "primogemcraft:djtt_chestplate",
-    "primogemcraft:djtt_leggings",
-    "primogemcraft:zstkj_chestplate",
-    "primogemcraft:szkjtie_chestplate",
-    "primogemcraft:axtt_boots",
-    "primogemcraft:kjjlt_boots"
-  ]
+  "values": []
 }
