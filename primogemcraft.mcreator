@@ -37362,6 +37362,19 @@
           "src/main/java/net/mcreator/ceshi/procedures/YsjiansxlProcedure.java"
         ]
       }
+    },
+    {
+      "name": "GUIhldztzujianml",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "gu_ihldztzujianml",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/GUIhldztzujianmlProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
