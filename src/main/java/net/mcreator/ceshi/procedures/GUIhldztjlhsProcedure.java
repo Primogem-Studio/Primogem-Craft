@@ -30,7 +30,9 @@ public class GUIhldztjlhsProcedure {
 					JLnbt(itemstack, 1, true);
 					on1 = on1 + 1;
 				} else if (i1.getItem() == itemstack.getItem() && i1.is(ItemTags.create(ResourceLocation.parse("pgc:wuqi")))) {
-					if (GUIhldztzujianmlProcedure.execute(i1) == -1 && GUIhldztzujianmlProcedure.execute(itemstack) > 0) {
+					var il_a = GUIhldztzujianmlProcedure.execute(i1);
+					var il_b = GUIhldztzujianmlProcedure.execute(itemstack);
+					if (il_a == -1 && il_b > 0 || il_b == -1 && il_a > 0) {
 						return false;
 					}
 					double a = NBTzhi(i1, "jing_lian_zhen");
