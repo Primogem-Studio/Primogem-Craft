@@ -24,7 +24,7 @@ public class DjppMobEffect extends MobEffect {
 
 	@Override
 	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-		DjppguochengProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		DjppguochengProcedure.execute(entity.level(), entity);
 		return super.applyEffectTick(entity, amplifier);
 	}
 }

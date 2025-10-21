@@ -12269,20 +12269,7 @@
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/Zsjsx2Procedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
@@ -12630,24 +12617,7 @@
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/ZsfsxProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
@@ -13538,18 +13508,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -32278,10 +32236,6 @@
           {
             "name": "zhi",
             "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -37231,6 +37185,83 @@
       "metadata": {
         "files": [
           "src/main/resources/data/primogemcraft/recipe/ysjianf.json"
+        ]
+      }
+    },
+    {
+      "name": "Ysjiansx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ysjiansx",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/YsjiansxProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Ysjianzhihs",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ysjianzhihs",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "item",
+            "type": "itemstack"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "zeng",
+            "type": "logic"
+          },
+          {
+            "name": "zhi",
+            "type": "number"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/YsjianzhihsProcedure.java"
         ]
       }
     }

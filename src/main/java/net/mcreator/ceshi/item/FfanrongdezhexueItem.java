@@ -17,7 +17,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.ceshi.procedures.FfanrongzhexuemoladiaoluoProcedure;
+import net.mcreator.ceshi.procedures.YsjiansxProcedure;
 import net.mcreator.ceshi.procedures.FazxmsProcedure;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 
@@ -63,7 +63,7 @@ public class FfanrongdezhexueItem extends SwordItem {
 	@Override
 	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
-		FfanrongzhexuemoladiaoluoProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), sourceentity, itemstack);
+		YsjiansxProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity, sourceentity, itemstack);
 		return retval;
 	}
 

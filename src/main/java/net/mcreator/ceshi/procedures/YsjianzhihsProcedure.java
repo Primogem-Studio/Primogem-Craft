@@ -4,14 +4,18 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 
-public class HuoqiHSProcedure {
-	public static double execute(Entity entity, ItemStack item, boolean zeng, double zhi) {
+import net.mcreator.ceshi.PrimogemcraftMod;
+
+public class YsjianzhihsProcedure {
+	public static double execute(Entity entity, ItemStack item, ItemStack itemstack, boolean zeng, double zhi) {
 		if (entity == null)
 			return 0;
 		double a = 0;
-		if (hasEntityInInventory(entity, item)) {
-			a = (zeng ? zhi * 2 : zhi * 0.5) + 0;
-		}
+		double jing = 0;
+		jing = HSjinglianupProcedure.execute(entity, itemstack);
+		a = hasEntityInInventory(entity, item) ? zhi * (zeng ? 2 : 0.5) : zhi;
+		a = zeng ? a + jing * (a / 4) : a - jing * (a / 4);
+		PrimogemcraftMod.LOGGER.info(a);
 		return a;
 	}
 
