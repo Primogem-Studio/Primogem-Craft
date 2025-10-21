@@ -37221,6 +37221,18 @@
           "src/main/java/net/mcreator/ceshi/procedures/Qhmb1msProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Ysjianf",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ysjianf",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/ysjianf.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
