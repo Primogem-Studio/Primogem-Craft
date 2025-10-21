@@ -37336,6 +37336,19 @@
           "src/main/resources/data/primogemcraft/recipe/ysjianb.json"
         ]
       }
+    },
+    {
+      "name": "Ysjiansxl",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ysjiansxl",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/YsjiansxlProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

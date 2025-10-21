@@ -32,7 +32,6 @@ public class YsjiansxProcedure {
 		double Lq = 0;
 		double Gl = 0;
 		if (!world.isClientSide()) {
-			if (itemstack.get(CustomComponents.YSZUJIAN_JIAN=3)
 			switch (itemstack.get(CustomComponents.YSZUJIAN_JIAN)) {
 				case 1 -> {
 					if (Math.random() < YsjianzhihsProcedure.execute(sourceentity, new ItemStack(PrimogemcraftModItems.HQFENG.get()), itemstack, true, 0.2)) {
