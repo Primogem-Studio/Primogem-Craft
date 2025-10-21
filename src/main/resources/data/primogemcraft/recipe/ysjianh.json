@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "primogemcraft:qhmbml"
+  },
+  "base": {
+    "item": "primogemcraft:ffanrongdezhexue"
+  },
+  "addition": {
+    "item": "primogemcraft:ryjs"
+  },
+  "result": {
+    "id": "primogemcraft:ffanrongdezhexue",
+    "components": {
+      "primogemcraft:yszujian_jian": 6
+    }
+  }
+}

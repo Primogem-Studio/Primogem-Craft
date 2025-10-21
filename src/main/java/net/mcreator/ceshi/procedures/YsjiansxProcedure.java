@@ -32,6 +32,7 @@ public class YsjiansxProcedure {
 		double Lq = 0;
 		double Gl = 0;
 		if (!world.isClientSide()) {
+			if (itemstack.get(CustomComponents.YSZUJIAN_JIAN=3)
 			switch (itemstack.get(CustomComponents.YSZUJIAN_JIAN)) {
 				case 1 -> {
 					if (Math.random() < YsjianzhihsProcedure.execute(sourceentity, new ItemStack(PrimogemcraftModItems.HQFENG.get()), itemstack, true, 0.2)) {
@@ -79,23 +80,23 @@ public class YsjiansxProcedure {
 				case 5 -> {
 					if (Math.random() < YsjianzhihsProcedure.execute(sourceentity, new ItemStack(PrimogemcraftModItems.HQSHUI.get()), itemstack, true, 0.1)) {
 						if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.DJPP, (int) YsjianzhihsProcedure.execute(sourceentity, new ItemStack(PrimogemcraftModItems.HQSHUI.get()), itemstack, true, 100),
-									(int) YsjianzhihsProcedure.execute(sourceentity, new ItemStack(PrimogemcraftModItems.HQSHUI.get()), itemstack, true, 0.26)));
+							_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.DJPP, (int) YsjianzhihsProcedure.execute(sourceentity, new ItemStack(PrimogemcraftModItems.HQSHUI.get()), itemstack, true, 200),
+									(int) YsjianzhihsProcedure.execute(sourceentity, new ItemStack(PrimogemcraftModItems.HQSHUI.get()), itemstack, true, 1)));
 					}
 				}
 				case 6 -> {
 					if (Math.random() < YsjianzhihsProcedure.execute(sourceentity, new ItemStack(PrimogemcraftModItems.HQHUO.get()), itemstack, true, 0.1)) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.ZHUOSHAO, (int) YsjianzhihsProcedure.execute(sourceentity, new ItemStack(PrimogemcraftModItems.HQHUO.get()), itemstack, true, 100),
-									(int) YsjianzhihsProcedure.execute(sourceentity, new ItemStack(PrimogemcraftModItems.HQHUO.get()), itemstack, true, 0.26)));
+							_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.ZHUOSHAO, (int) YsjianzhihsProcedure.execute(sourceentity, new ItemStack(PrimogemcraftModItems.HQHUO.get()), itemstack, true, 400),
+									(int) YsjianzhihsProcedure.execute(sourceentity, new ItemStack(PrimogemcraftModItems.HQHUO.get()), itemstack, true, 1)));
 					}
 				}
 				case 7 -> {
 					if (!(entity instanceof LivingEntity _livEnt16 && _livEnt16.hasEffect(MobEffects.MOVEMENT_SLOWDOWN))
 							&& Math.random() <= YsjianzhihsProcedure.execute(sourceentity, new ItemStack(PrimogemcraftModItems.HQBING.get()), itemstack, true, 0.2)) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, (int) YsjianzhihsProcedure.execute(sourceentity, new ItemStack(PrimogemcraftModItems.HQBING.get()), itemstack, true, 100),
-									(int) YsjianzhihsProcedure.execute(sourceentity, new ItemStack(PrimogemcraftModItems.HQBING.get()), itemstack, true, 0.48)));
+							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, (int) YsjianzhihsProcedure.execute(sourceentity, new ItemStack(PrimogemcraftModItems.HQBING.get()), itemstack, true, 200),
+									(int) YsjianzhihsProcedure.execute(sourceentity, new ItemStack(PrimogemcraftModItems.HQBING.get()), itemstack, true, 1)));
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
 								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.glass.hit")), SoundSource.PLAYERS, (float) 0.5, 1);

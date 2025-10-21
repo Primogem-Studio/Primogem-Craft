@@ -37264,6 +37264,78 @@
           "src/main/java/net/mcreator/ceshi/procedures/YsjianzhihsProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Ysjiany",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ysjiany",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/ysjiany.json"
+        ]
+      }
+    },
+    {
+      "name": "Ysjianl",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ysjianl",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/ysjianl.json"
+        ]
+      }
+    },
+    {
+      "name": "Ysjianc",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ysjianc",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/ysjianc.json"
+        ]
+      }
+    },
+    {
+      "name": "Ysjians",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ysjians",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/ysjians.json"
+        ]
+      }
+    },
+    {
+      "name": "Ysjianh",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ysjianh",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/ysjianh.json"
+        ]
+      }
+    },
+    {
+      "name": "Ysjianb",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ysjianb",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/ysjianb.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
