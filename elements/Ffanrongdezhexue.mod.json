@@ -39,6 +39,9 @@
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "Ysjiansxl"
+    },
     "onEntityHitWith": {
       "name": "Ysjiansx"
     }

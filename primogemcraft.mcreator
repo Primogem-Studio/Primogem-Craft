@@ -37344,7 +37344,20 @@
       "locked_code": false,
       "registry_name": "ysjiansxl",
       "metadata": {
-        "dependencies": [],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/YsjiansxlProcedure.java"
         ]
