@@ -1,33 +1,12 @@
 {
   "replace": false,
   "values": [
-    "primogemcraft:jljtie",
-    "primogemcraft:szhjj",
     "primogemcraft:mmolajian",
-    "primogemcraft:zizaitiejian",
-    "primogemcraft:szzsj",
-    "primogemcraft:jljzs",
-    "primogemcraft:zizaizuanshijian",
     "primogemcraft:yuanshijian",
-    "primogemcraft:djtj",
-    "primogemcraft:zizaihejinjian",
-    "primogemcraft:axhjj",
     {
       "id": "#pgc:wuqi",
       "required": false
     },
-    "primogemcraft:zszsj",
-    "primogemcraft:rytj",
-    "primogemcraft:ryzsj",
-    "primogemcraft:axzsj",
-    "primogemcraft:axtj",
-    "primogemcraft:zstj",
-    "primogemcraft:djhjj",
-    "primogemcraft:ffanrongdezhexue",
-    "primogemcraft:ddjzsj",
-    "primogemcraft:zshjj",
-    "primogemcraft:ryhjj",
-    "primogemcraft:sztj",
-    "primogemcraft:jjljxjhj"
+    "primogemcraft:ffanrongdezhexue"
   ]
 }

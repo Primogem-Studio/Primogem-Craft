@@ -4,7 +4,7 @@
   "pattern": [
     " a ",
     "aba",
-    " c "
+    "cdc"
   ],
   "key": {
     "a": {
@@ -14,7 +14,10 @@
       "item": "primogemcraft:zhjsl"
     },
     "c": {
-      "item": "primogemcraft:jljtie"
+      "item": "primogemcraft:jljsl"
+    },
+    "d": {
+      "item": "primogemcraft:yuanshijian"
     }
   },
   "result": {

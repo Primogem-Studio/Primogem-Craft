@@ -88,7 +88,7 @@ public class SmclstsxProcedure {
 						}
 						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 							if (entity instanceof LivingEntity _entity) {
-								ItemStack _setstack = (Math.random() < 0.5 ? new ItemStack(PrimogemcraftModItems.ZSF.get()) : new ItemStack(PrimogemcraftModItems.AXTJ.get())).copy();
+								ItemStack _setstack = (Math.random() < 0.5 ? new ItemStack(PrimogemcraftModItems.ZSF.get()) : new ItemStack(PrimogemcraftModItems.YUANSHIJIAN.get())).copy();
 								_setstack.setCount(1);
 								_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 								if (_entity instanceof Player _player)
@@ -106,7 +106,7 @@ public class SmclstsxProcedure {
 								_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.SMCLZF, 80, 0, false, false));
 							if ((e1 instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 								if (e1 instanceof LivingEntity _entity) {
-									ItemStack _setstack = (Math.random() < 0.5 ? new ItemStack(PrimogemcraftModItems.ZSF.get()) : new ItemStack(PrimogemcraftModItems.AXTJ.get())).copy();
+									ItemStack _setstack = (Math.random() < 0.5 ? new ItemStack(PrimogemcraftModItems.ZSF.get()) : new ItemStack(PrimogemcraftModItems.YUANSHIJIAN.get())).copy();
 									_setstack.setCount(1);
 									_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 									if (_entity instanceof Player _player)
