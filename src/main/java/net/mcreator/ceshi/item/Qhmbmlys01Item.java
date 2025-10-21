@@ -6,7 +6,11 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.ceshi.procedures.Qhmb2msProcedure;
 
 import java.util.List;
 
@@ -19,11 +23,12 @@ public class Qhmbmlys01Item extends Item {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.primogemcraft.qhmbmlys_01.description_0"));
-		list.add(Component.translatable("item.primogemcraft.qhmbmlys_01.description_1"));
-		list.add(Component.translatable("item.primogemcraft.qhmbmlys_01.description_2"));
-		list.add(Component.translatable("item.primogemcraft.qhmbmlys_01.description_3"));
-		list.add(Component.translatable("item.primogemcraft.qhmbmlys_01.description_4"));
-		list.add(Component.translatable("item.primogemcraft.qhmbmlys_01.description_5"));
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+		String hoverText = Qhmb2msProcedure.execute();
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 }

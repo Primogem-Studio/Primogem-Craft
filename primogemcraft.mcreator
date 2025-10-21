@@ -39197,6 +39197,96 @@
           "src/main/java/net/mcreator/ceshi/procedures/BnxxusxProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Dzmbmshs",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dzmbmshs",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "ms",
+            "type": "string"
+          },
+          {
+            "name": "wen_0",
+            "type": "string"
+          },
+          {
+            "name": "wen_1",
+            "type": "string"
+          },
+          {
+            "name": "wen_2",
+            "type": "string"
+          },
+          {
+            "name": "wen_3",
+            "type": "string"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/DzmbmshsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Qhmb2ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "qhmb_2ms",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Qhmb2msProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Dzmbmsysqhhs",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dzmbmsysqhhs",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/DzmbmsysqhhsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Dzmbmsysqhhs0",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dzmbmsysqhhs_0",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x2",
+            "type": "string"
+          },
+          {
+            "name": "x4",
+            "type": "string"
+          },
+          {
+            "name": "ys",
+            "type": "string"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Dzmbmsysqhhs0Procedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

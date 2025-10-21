@@ -1,0 +1,8 @@
+{
+  "_fv": 79,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"return_string\"><value name=\"return\"><block type=\"procedure_retval_string\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"5\"></mutation><field name=\"procedure\">Dzmbmshs</field><field name=\"name0\">ms</field><field name=\"name1\">wen_0</field><field name=\"name2\">wen_1</field><field name=\"name3\">wen_2</field><field name=\"name4\">wen_3</field><value name=\"arg0\"><block type=\"procedure_retval_string\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"2\"></mutation><field name=\"procedure\">Diaoyongshift0</field><field name=\"name0\">shift</field><field name=\"name1\">shift0</field><value name=\"arg0\"><block type=\"procedure_retval_string\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"0\"></mutation><field name=\"procedure\">Dzmbmsysqhhs</field></block></value><value name=\"arg1\"><block type=\"text\"><field name=\"TEXT\">§d套装效果</field></block></value></block></value><value name=\"arg1\"><block type=\"text\"><field name=\"TEXT\">元素装备升级IV</field></block></value><value name=\"arg2\"><block type=\"text\"><field name=\"TEXT\">盔甲或武器</field></block></value><value name=\"arg3\"><block type=\"text\"><field name=\"TEXT\">元素金属锭</field></block></value><value name=\"arg4\"><block type=\"text\"><field name=\"TEXT\">x2.0</field></block></value></block></value></block></next></block></xml>",
+    "skipDependencyNullCheck": false
+  }
+}
