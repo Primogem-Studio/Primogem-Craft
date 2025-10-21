@@ -389,10 +389,6 @@ public class PrimogemcraftModTabs {
 				tabData.accept(PrimogemcraftModItems.AXZSSJ.get());
 				tabData.accept(PrimogemcraftModItems.AXHJSJ.get());
 				tabData.accept(PrimogemcraftModItems.AXZSSHJSJ.get());
-				tabData.accept(PrimogemcraftModItems.ZIZIZAIHEJINTAO_HELMET.get());
-				tabData.accept(PrimogemcraftModItems.ZIZIZAIHEJINTAO_CHESTPLATE.get());
-				tabData.accept(PrimogemcraftModItems.ZIZIZAIHEJINTAO_LEGGINGS.get());
-				tabData.accept(PrimogemcraftModItems.ZIZIZAIHEJINTAO_BOOTS.get());
 				tabData.accept(PrimogemcraftModItems.JLKJHJ_HELMET.get());
 				tabData.accept(PrimogemcraftModItems.JLKJHJ_CHESTPLATE.get());
 				tabData.accept(PrimogemcraftModItems.JLKJHJ_LEGGINGS.get());
@@ -417,10 +413,6 @@ public class PrimogemcraftModTabs {
 				tabData.accept(PrimogemcraftModItems.AXHJT_CHESTPLATE.get());
 				tabData.accept(PrimogemcraftModItems.AXHJT_LEGGINGS.get());
 				tabData.accept(PrimogemcraftModItems.AXHJT_BOOTS.get());
-				tabData.accept(PrimogemcraftModItems.ZIZAIZUANTAO_HELMET.get());
-				tabData.accept(PrimogemcraftModItems.ZIZAIZUANTAO_CHESTPLATE.get());
-				tabData.accept(PrimogemcraftModItems.ZIZAIZUANTAO_LEGGINGS.get());
-				tabData.accept(PrimogemcraftModItems.ZIZAIZUANTAO_BOOTS.get());
 				tabData.accept(PrimogemcraftModItems.JLKJZS_HELMET.get());
 				tabData.accept(PrimogemcraftModItems.JLKJZS_CHESTPLATE.get());
 				tabData.accept(PrimogemcraftModItems.JLKJZS_LEGGINGS.get());
@@ -445,10 +437,6 @@ public class PrimogemcraftModTabs {
 				tabData.accept(PrimogemcraftModItems.AXZST_CHESTPLATE.get());
 				tabData.accept(PrimogemcraftModItems.AXZST_LEGGINGS.get());
 				tabData.accept(PrimogemcraftModItems.AXZST_BOOTS.get());
-				tabData.accept(PrimogemcraftModItems.ZIZAITIEJIA_HELMET.get());
-				tabData.accept(PrimogemcraftModItems.ZIZAITIEJIA_CHESTPLATE.get());
-				tabData.accept(PrimogemcraftModItems.ZIZAITIEJIA_LEGGINGS.get());
-				tabData.accept(PrimogemcraftModItems.ZIZAITIEJIA_BOOTS.get());
 				tabData.accept(PrimogemcraftModItems.KJJLT_HELMET.get());
 				tabData.accept(PrimogemcraftModItems.KJJLT_CHESTPLATE.get());
 				tabData.accept(PrimogemcraftModItems.KJJLT_LEGGINGS.get());
