@@ -39287,6 +39287,34 @@
           "src/main/java/net/mcreator/ceshi/procedures/Dzmbmsysqhhs0Procedure.java"
         ]
       }
+    },
+    {
+      "name": "Qhmb0ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "qhmb_0ms",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Qhmb0msProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Qhmb1ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "qhmb_1ms",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Qhmb1msProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

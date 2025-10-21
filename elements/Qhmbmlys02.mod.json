@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "qhmb_mlyz02",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "锻造模板",
@@ -36,7 +37,8 @@
         "§9 原石工具",
         "§7所需原材料：",
         "§9 元素晶体"
-      ]
+      ],
+      "name": "Qhmb1ms"
     },
     "glowCondition": {
       "fixedValue": false
@@ -60,6 +62,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []
