@@ -25,7 +25,9 @@ public class Zuoshao_sxProcedure {
 		}
 		if (net.hackermdch.pgc.Timer.isDone(entity, "zhuo_shao")) {
 			a = entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.ZHUOSHAO) ? _livEnt.getEffect(PrimogemcraftModMobEffects.ZHUOSHAO).getAmplifier() : 0;
+			entity.invulnerableTime = 0;
 			entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.LAVA)), (float) Math.max(a * 1, (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * (a + 1) * 0.01));
+			entity.invulnerableTime = 5;
 			net.hackermdch.pgc.Timer.set(entity, "zhuo_shao", 40);
 		}
 	}
