@@ -58,6 +58,11 @@ public class TrimTooltip {
                 if (Screen.hasShiftDown()) {
                     tooltip.add(Component.literal("2x 提供永久抗火效果").withColor(0xFEA76C));
                     tooltip.add(Component.literal("4x 对攻击你的目标施加熔岩伤害和燃烧").withColor(0xFEA76C));
+                    tooltip.add(Component.literal("按住Ctrl查看详细").withColor(0xFECCFF));
+                    if (Screen.hasControlDown()) {
+                        tooltip.add(Component.literal("灼烧反击").withColor(0xFEA76C));
+                        tooltip.add(Component.literal("被攻击时对攻击者造成熔岩伤害，伤害为自身生命值的10%*等级，但，效果等级越高冷却越久（每级+2秒）").withColor(0x7F7F7F));
+                    }
                 }
             }
             case "primogemcraft:ys_bing" -> {
