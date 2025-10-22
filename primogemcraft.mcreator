@@ -35383,6 +35383,20 @@
           "src/main/resources/data/primogemcraft/advancement/jdyshj_0.json"
         ]
       }
+    },
+    {
+      "name": "Yshqms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yshqms",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/YshqmsProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

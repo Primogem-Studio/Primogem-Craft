@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "qy_hq",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "§5『奇物』§6契约火漆",
@@ -36,7 +37,8 @@
         " §e-50%",
         " §7冷却",
         "§8仅作用于正面效果"
-      ]
+      ],
+      "name": "Yshqms"
     },
     "glowCondition": {
       "fixedValue": false
@@ -60,6 +62,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []

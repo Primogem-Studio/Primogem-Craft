@@ -1,0 +1,8 @@
+{
+  "_fv": 79,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"return_string\"><value name=\"return\"><block type=\"text_join\"><mutation items=\"15\"></mutation><value name=\"ADD0\"><block type=\"text\"><field name=\"TEXT\">§d存在物品栏时：</field></block></value><value name=\"ADD1\"><block type=\"text_new_line\"></block></value><value name=\"ADD2\"><block type=\"text\"><field name=\"TEXT\">§7对于对应元素的装备和武器：</field></block></value><value name=\"ADD3\"><block type=\"text_new_line\"></block></value><value name=\"ADD4\"><block type=\"text\"><field name=\"TEXT\"></field></block></value><value name=\"ADD5\"><block type=\"text_new_line\"></block></value><value name=\"ADD6\"><block type=\"text\"><field name=\"TEXT\">§a正面效果提升100%</field></block></value><value name=\"ADD7\"><block type=\"text_new_line\"></block></value><value name=\"ADD8\"><block type=\"text\"><field name=\"TEXT\">§a负面效果减少50%</field></block></value><value name=\"ADD9\"><block type=\"text_new_line\"></block></value><value name=\"ADD10\"><block type=\"text\"><field name=\"TEXT\">§a对应元素套装值提升25%</field></block></value><value name=\"ADD11\"><block type=\"text_new_line\"></block></value><value name=\"ADD12\"><block type=\"text\"><field name=\"TEXT\">§7对于对应元素工具：</field></block></value><value name=\"ADD13\"><block type=\"text_new_line\"></block></value><value name=\"ADD14\"><block type=\"text\"><field name=\"TEXT\">§a+100%概率，-50%冷却</field></block></value></block></value></block></next></block></xml>",
+    "skipDependencyNullCheck": false
+  }
+}

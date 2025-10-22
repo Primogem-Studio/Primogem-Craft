@@ -1,0 +1,9 @@
+package net.mcreator.ceshi.procedures;
+
+public class YshqmsProcedure {
+	public static String execute() {
+		return "\u00A7d\u5B58\u5728\u7269\u54C1\u680F\u65F6\uFF1A" + "\n" + "\u00A77\u5BF9\u4E8E\u5BF9\u5E94\u5143\u7D20\u7684\u88C5\u5907\u548C\u6B66\u5668\uFF1A" + "\n" + "" + "\n" + "\u00A7a\u6B63\u9762\u6548\u679C\u63D0\u5347100%" + "\n"
+				+ "\u00A7a\u8D1F\u9762\u6548\u679C\u51CF\u5C1150%" + "\n" + "\u00A7a\u5BF9\u5E94\u5143\u7D20\u5957\u88C5\u503C\u63D0\u534725%" + "\n" + "\u00A77\u5BF9\u4E8E\u5BF9\u5E94\u5143\u7D20\u5DE5\u5177\uFF1A" + "\n"
+				+ "\u00A7a+100%\u6982\u7387\uFF0C-50%\u51B7\u5374";
+	}
+}
