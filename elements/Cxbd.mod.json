@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "§b持续冰冻",
-    "icon": "bhmg",
+    "icon": "cxbd_sg",
     "color": {
       "value": -10027009,
       "falpha": 0.0
