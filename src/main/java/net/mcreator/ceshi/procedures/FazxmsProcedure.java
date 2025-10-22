@@ -19,7 +19,8 @@ public class FazxmsProcedure {
 			case 4 -> s1 = MSHSwuqi00Procedure.execute(entity, itemstack, "\u00A76\u00A7l\u00A7n\u666E\u901A\u653B\u51FB\u00A7a\u8349" + "\n" + "\u00A7e\u653B\u51FB\u76EE\u6807\u4F7F\u76EE\u6807\u4E2D\u6BD2");
 			case 5 -> s1 = MSHSwuqi00Procedure.execute(entity, itemstack,
 					"\u00A76\u00A7l\u00A7n\u666E\u901A\u653B\u51FB\u00A79\u6C34" + "\n" + "\u00A7e\u653B\u51FB\u76EE\u6807\u540E\u83B7\u5F97\u6CBB\u7597\uFF0C\u6548\u679C\u7ED3\u675F\u540E\u9020\u6210\u4F24\u5BB3");
-			case 6 -> s1 = MSHSwuqi00Procedure.execute(entity, itemstack, "\u00A76\u00A7l\u00A7n\u666E\u901A\u653B\u51FB\u00A7c\u706B" + "\n" + "\u00A7e\u653B\u51FB\u76EE\u6807\u4F7F\u76EE\u6807\u6301\u7EED\u7279\u6B8A\u71C3\u70E7");
+			case 6 -> s1 = MSHSwuqi00Procedure.execute(entity, itemstack, "\u00A76\u00A7l\u00A7n\u666E\u901A\u653B\u51FB\u00A7c\u706B" + "\n" + "\u00A7e\u653B\u51FB\u76EE\u6807\u6982\u7387\u4F7F\u76EE\u6807\u707C\u70E7" + "\n"
+					+ "\u00A7e\u707C\u70E7\uFF1A\u6BCF2\u79D2\u9020\u6210\u4E00\u6B21\u7B49\u7EA7*1%\u7194\u5CA9\u4F24\u5BB3\uFF0C\u4E0D\u8DB3\u65F6\u9020\u62101\u70B9");
 			case 7 -> s1 = MSHSwuqi00Procedure.execute(entity, itemstack, "\u00A76\u00A7l\u00A7n\u666E\u901A\u653B\u51FB\u00A7b\u51B0" + "\n" + "\u00A7e\u653B\u51FB\u76EE\u6807\u4F7F\u76EE\u6807\u7F13\u6162");
 			default -> s1 = ZhexuemshsProcedure.execute(entity, itemstack, "\u00A7e\u6218\u6597");
 		}

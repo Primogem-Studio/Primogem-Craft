@@ -15,7 +15,7 @@ public class Zuoshao_sxProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		entity.getPersistentData().putDouble("zhuoshao", (entity.getPersistentData().getDouble("zhuoshao") + 1));
+		double a = 0;
 		{
 			Entity _ent = entity;
 			if (!_ent.level().isClientSide() && _ent.getServer() != null) {
@@ -23,10 +23,10 @@ public class Zuoshao_sxProcedure {
 						_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "particle minecraft:lava ~ ~1 ~");
 			}
 		}
-		if (entity.getPersistentData().getDouble("zhuoshao") >= 40) {
-			entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.LAVA)), (float) Math.ceil((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)
-					* ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.ZHUOSHAO) ? _livEnt.getEffect(PrimogemcraftModMobEffects.ZHUOSHAO).getAmplifier() : 0) + 1) * 0.2));
-			entity.getPersistentData().putDouble("zhuoshao", 0);
+		if (net.hackermdch.pgc.Timer.isDone(entity, "zhuo_shao")) {
+			a = entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.ZHUOSHAO) ? _livEnt.getEffect(PrimogemcraftModMobEffects.ZHUOSHAO).getAmplifier() : 0;
+			entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.LAVA)), (float) Math.max(a * 1, (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * (a + 1) * 0.01));
+			net.hackermdch.pgc.Timer.set(entity, "zhuo_shao", 40);
 		}
 	}
 }
