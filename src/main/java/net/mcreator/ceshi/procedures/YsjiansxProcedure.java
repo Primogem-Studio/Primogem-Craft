@@ -32,7 +32,7 @@ public class YsjiansxProcedure {
 		double Lq = 0;
 		double Gl = 0;
 		if (!world.isClientSide()) {
-			switch (itemstack.get(CustomComponents.YSZUJIAN_JIAN)) {
+			switch (itemstack.getOrDefault(CustomComponents.YSZUJIAN_JIAN, 0)) {
 				case 1 -> {
 					if (Math.random() < YsjianzhihsProcedure.execute(sourceentity, new ItemStack(PrimogemcraftModItems.HQFENG.get()), itemstack, true, 0.2)) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -105,7 +105,7 @@ public class YsjiansxProcedure {
 						}
 					}
 				}
-				case null, default -> MoladlhsProcedure.execute(world, x, y, z, sourceentity, itemstack);
+				default -> MoladlhsProcedure.execute(world, x, y, z, sourceentity, itemstack);
 			}
 		}
 	}

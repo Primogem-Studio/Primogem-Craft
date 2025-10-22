@@ -18,9 +18,7 @@ public class YsjiansxlProcedure {
 			return;
 		ItemStack i1 = ItemStack.EMPTY;
 		if (!world.isClientSide()) {
-			var it = itemstack.get(CustomComponents.YSZUJIAN_JIAN);
-			if (it == null)
-				return;
+			int it = itemstack.getOrDefault(CustomComponents.YSZUJIAN_JIAN, 0);
 			if (it == 3 && entity.isShiftKeyDown()) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.GOUYU, 200, (int) YsjianzhihsProcedure.execute(entity, new ItemStack(PrimogemcraftModItems.HQLEI.get()), itemstack, true, 1)));
