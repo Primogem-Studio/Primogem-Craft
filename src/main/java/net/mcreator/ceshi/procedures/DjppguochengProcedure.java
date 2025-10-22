@@ -1,5 +1,7 @@
 package net.mcreator.ceshi.procedures;
 
+import net.neoforged.fml.ModList;
+
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -16,8 +18,9 @@ public class DjppguochengProcedure {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.DJPPXIANZHI, 40, 0, false, false));
 				if (entity instanceof LivingEntity _entity)
-					_entity.setHealth((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)
-							+ (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.DJPP) ? _livEnt.getEffect(PrimogemcraftModMobEffects.DJPP).getAmplifier() : 0));
+					_entity.setHealth((float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)
+							+ (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PrimogemcraftModMobEffects.DJPP) ? _livEnt.getEffect(PrimogemcraftModMobEffects.DJPP).getAmplifier() : 0)
+							+ 1 * (ModList.get().isLoaded("genshincraft") ? 20 : 1)));
 			}
 		}
 	}

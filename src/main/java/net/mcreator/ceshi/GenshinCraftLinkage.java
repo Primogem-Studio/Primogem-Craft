@@ -29,6 +29,7 @@ public class GenshinCraftLinkage {
         EffectRender.registerRenderEffect(PrimogemcraftModMobEffects.HEISENLINGGZ, 255);
         EffectRender.registerRenderEffect(PrimogemcraftModMobEffects.YYDGGZXG, 255);
         EffectRender.registerRenderEffect(PrimogemcraftModMobEffects.CXBD, 255);
+        EffectRender.registerRenderEffect(PrimogemcraftModMobEffects.ZHUOSHAO, 255);
     }
 
     public static void items() {
