@@ -1,17 +1,20 @@
 package net.mcreator.ceshi.procedures;
 
+import com.google.common.base.Predicates;
 import it.unimi.dsi.fastutil.ints.Int2BooleanMap;
 import it.unimi.dsi.fastutil.ints.Int2BooleanOpenHashMap;
 import it.unimi.dsi.fastutil.ints.Int2DoubleMap;
 import it.unimi.dsi.fastutil.ints.Int2DoubleOpenHashMap;
 import net.hackermdch.pgc.CustomComponents;
-import net.mcreator.ceshi.PrimogemcraftMod;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 import net.mcreator.ceshi.init.PrimogemcraftModMobEffects;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.CustomData;
+import net.neoforged.fml.ModList;
+import top.theillusivec4.curios.api.CuriosApi;
+import top.theillusivec4.curios.api.SlotResult;
 
 import java.util.List;
 
@@ -22,6 +25,8 @@ public class YsqhsxProcedure {
         var flag = false;
         process(player.getInventory().items, map);
         process(player.getInventory().offhand, map);
+        if (ModList.get().isLoaded("curios"))
+            CuriosApi.getCuriosInventory(player).ifPresent(inv -> process(inv.findCurios(Predicates.alwaysTrue()).stream().map(SlotResult::stack).toList(), map));
         for (var item : items) process(item, result);
         for (var entry : result.int2DoubleEntrySet()) {
             var zhi = entry.getDoubleValue();
