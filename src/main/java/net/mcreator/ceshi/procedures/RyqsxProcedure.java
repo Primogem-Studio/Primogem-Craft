@@ -24,6 +24,7 @@ public class RyqsxProcedure {
 		if (entity == null)
 			return;
 		ItemStack a = ItemStack.EMPTY;
+		ItemStack i1 = ItemStack.EMPTY;
 		if (!world.isClientSide()) {
 			if (entity.isShiftKeyDown()) {
 				if (!((world instanceof Level _lvlSmeltResult
@@ -37,7 +38,7 @@ public class RyqsxProcedure {
 							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.BLOCKS, 1, 1, false);
 						}
 					}
-					if (Math.random() < (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQHUO.get())) ? 0.75 : 0.5)) {
+					if (Math.random() < YsjianzhihsProcedure.execute(entity, new ItemStack(PrimogemcraftModItems.HQHUO.get()), itemstack, true, 0.2)) {
 						a = (world instanceof Level _lvlSmeltResult
 								? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()))), _lvlSmeltResult)
 										.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
@@ -55,15 +56,9 @@ public class RyqsxProcedure {
 						});
 					}
 					if (entity instanceof Player _player)
-						_player.getCooldowns().addCooldown(itemstack.getItem(), (int) (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQHUO.get())) ? 5 : 10));
+						_player.getCooldowns().addCooldown(itemstack.getItem(), (int) YsjianzhihsProcedure.execute(entity, new ItemStack(PrimogemcraftModItems.HQHUO.get()), itemstack, false, 100));
 				}
 			}
 		}
-	}
-
-	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
-		if (entity instanceof Player player)
-			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
-		return false;
 	}
 }

@@ -8,6 +8,7 @@
     "texture": "axdf",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§b『哀叙冰玉』斧",
     "specialInformation": {
       "fixedValue": [
@@ -18,7 +19,8 @@
         "§7 - 冷却10秒",
         "§",
         "§d使用摩拉可添加队友"
-      ]
+      ],
+      "name": "Axby_f_ms"
     },
     "creativeTabs": [
       {
@@ -30,6 +32,9 @@
     "enchantability": 20,
     "damageVsEntity": 8.0,
     "usageCount": 1561,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Yuanshi"

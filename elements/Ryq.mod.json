@@ -8,13 +8,15 @@
     "texture": "ryq",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§c『燃愿玛瑙』锹",
     "specialInformation": {
       "fixedValue": [
         "§d消耗耐久潜行右键方块时：",
         "§7 - 对可熔炼方块进行熔炼，并获得1~4倍产出",
         "§c - 将有50%概率无任何产出！"
-      ]
+      ],
+      "name": "Rymn_c_ms"
     },
     "creativeTabs": [
       {

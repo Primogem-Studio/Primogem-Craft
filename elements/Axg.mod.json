@@ -8,13 +8,15 @@
     "texture": "axg",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§b『哀叙冰玉』镐",
     "specialInformation": {
       "fixedValue": [
         "§d挖掘任意元素晶体块时：",
         "§7 - 10%概率将其转化为§f§n通用元素晶体块",
         "§c - 但转化时也有10%概率转化失败"
-      ]
+      ],
+      "name": "Axby_g_ms"
     },
     "creativeTabs": [
       {
@@ -26,6 +28,9 @@
     "enchantability": 15,
     "damageVsEntity": 4.0,
     "usageCount": 1561,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Aixubingyusuixie"

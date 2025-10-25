@@ -8,11 +8,13 @@
     "texture": "ryc",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§c『燃愿玛瑙』锄",
     "specialInformation": {
       "fixedValue": [
         "§7§o『尝试耕作下界岩』"
-      ]
+      ],
+      "name": "Rymn_ct_ms"
     },
     "creativeTabs": [
       {
@@ -24,6 +26,9 @@
     "enchantability": 10,
     "damageVsEntity": 4.0,
     "usageCount": 1561,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Yuanshi"

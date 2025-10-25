@@ -8,12 +8,14 @@
     "texture": "ryg",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§c『燃愿玛瑙』 镐",
     "specialInformation": {
       "fixedValue": [
         "§d挖掘石英矿石时：",
         "§7 - 5%概率掉落一个元素晶石粉尘"
-      ]
+      ],
+      "name": "Rymn_g_ms"
     },
     "creativeTabs": [
       {
@@ -25,6 +27,9 @@
     "enchantability": 15,
     "damageVsEntity": 4.0,
     "usageCount": 1561,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Yuanshi"

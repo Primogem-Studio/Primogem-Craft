@@ -13064,6 +13064,10 @@
             "type": "entity"
           },
           {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -13422,6 +13426,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
           },
           {
             "name": "x",
@@ -35863,6 +35871,190 @@
         "return_type": "string",
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/Djqj_ct_msProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Rymn_g_ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rymn_g_ms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Rymn_g_msProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Rymn_f_ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rymn_f_ms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Rymn_f_msProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Rymn_c_ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rymn_c_ms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Rymn_c_msProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Rymn_ct_ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rymn_ct_ms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Rymn_ct_msProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Axby_g_ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "axby_g_ms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Axby_g_msProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Axby_f_ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "axby_f_ms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Axby_f_msProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Axby_c_ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "axby_c_ms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Axby_c_msProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Axby_ct_ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "axby_ct_ms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Axby_ct_msProcedure.java"
         ]
       }
     }

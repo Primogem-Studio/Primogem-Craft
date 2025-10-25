@@ -13,12 +13,15 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.Minecraft;
 
+import net.mcreator.ceshi.procedures.Rymn_f_msProcedure;
 import net.mcreator.ceshi.procedures.RyfsxProcedure;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 
@@ -72,10 +75,12 @@ public class RyfItem extends AxeItem {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.primogemcraft.ryf.description_0"));
-		list.add(Component.translatable("item.primogemcraft.ryf.description_1"));
-		list.add(Component.translatable("item.primogemcraft.ryf.description_2"));
-		list.add(Component.translatable("item.primogemcraft.ryf.description_3"));
-		list.add(Component.translatable("item.primogemcraft.ryf.description_4"));
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+		String hoverText = Rymn_f_msProcedure.execute(entity, itemstack);
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 }

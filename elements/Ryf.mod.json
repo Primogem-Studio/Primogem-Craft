@@ -8,6 +8,7 @@
     "texture": "ryf",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§c『燃愿玛瑙』斧",
     "specialInformation": {
       "fixedValue": [
@@ -16,7 +17,8 @@
         "§7  效果期间，每受到燃烧伤害恢复2点生命值",
         "§7  受到熔岩伤害恢复最大生命值15%生命值",
         "§7 - 处于防火状态时，立刻提供生命恢复"
-      ]
+      ],
+      "name": "Rymn_f_ms"
     },
     "creativeTabs": [
       {

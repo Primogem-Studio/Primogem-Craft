@@ -22,17 +22,21 @@ public class RyfsxProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
+		double a = 0;
+		double b = 0;
 		if (!world.isClientSide() && entity.isShiftKeyDown()) {
+			a = YsjianzhihsProcedure.execute(entity, new ItemStack(PrimogemcraftModItems.HQHUO.get()), itemstack, true, 100);
+			b = YsjianzhihsProcedure.execute(entity, new ItemStack(PrimogemcraftModItems.HQHUO.get()), itemstack, false, 400);
 			if (entity instanceof LivingEntity _livEnt2 && _livEnt2.hasEffect(MobEffects.FIRE_RESISTANCE)) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 2));
+					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, (int) (a * 2), 2));
 				if (entity instanceof Player _player)
-					_player.getCooldowns().addCooldown(itemstack.getItem(), (int) (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQHUO.get())) ? 200 : 400));
+					_player.getCooldowns().addCooldown(itemstack.getItem(), (int) b);
 			} else {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.RYFXGSX, 100, 0, false, false));
+					_entity.addEffect(new MobEffectInstance(PrimogemcraftModMobEffects.RYFXGSX, (int) a, 0, false, false));
 				if (entity instanceof Player _player)
-					_player.getCooldowns().addCooldown(itemstack.getItem(), (int) (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQHUO.get())) ? 150 : 300));
+					_player.getCooldowns().addCooldown(itemstack.getItem(), (int) b);
 			}
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
@@ -47,11 +51,5 @@ public class RyfsxProcedure {
 				});
 			}
 		}
-	}
-
-	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
-		if (entity instanceof Player player)
-			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
-		return false;
 	}
 }

@@ -8,12 +8,14 @@
     "texture": "axq",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§b『哀叙冰玉』锹",
     "specialInformation": {
       "fixedValue": [
         "§d右键冰块时：",
         "§7 - 使其转化为蓝冰"
-      ]
+      ],
+      "name": "Axby_c_ms"
     },
     "creativeTabs": [
       {
@@ -25,6 +27,9 @@
     "enchantability": 12,
     "damageVsEntity": 4.0,
     "usageCount": 1561,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Yuanshi"

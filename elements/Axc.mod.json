@@ -8,12 +8,14 @@
     "texture": "axc",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§b『哀叙冰玉』锄",
     "specialInformation": {
       "fixedValue": [
         "§6[SHIFT+右键]§d方块时：",
         "§7 - 改变其顶部的积雪状态"
-      ]
+      ],
+      "name": "Axby_ct_ms"
     },
     "creativeTabs": [
       {
@@ -25,6 +27,9 @@
     "enchantability": 10,
     "damageVsEntity": 4.0,
     "usageCount": 1561,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Yuanshi"
