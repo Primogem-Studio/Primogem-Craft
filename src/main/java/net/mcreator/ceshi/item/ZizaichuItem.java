@@ -17,7 +17,9 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.Minecraft;
 
+import net.mcreator.ceshi.procedures.Zzss_ct_msProcedure;
 import net.mcreator.ceshi.procedures.ZizaichushuxingProcedure;
 import net.mcreator.ceshi.procedures.Zizaichushuxing02Procedure;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
@@ -65,8 +67,13 @@ public class ZizaichuItem extends HoeItem {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.primogemcraft.zizaichu.description_0"));
-		list.add(Component.translatable("item.primogemcraft.zizaichu.description_1"));
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+		String hoverText = Zzss_ct_msProcedure.execute(entity, itemstack);
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 
 	@Override

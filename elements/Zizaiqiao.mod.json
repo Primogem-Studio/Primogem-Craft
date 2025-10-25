@@ -8,13 +8,15 @@
     "texture": "zizai_qiao",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§a『自在松石』锹",
     "specialInformation": {
       "fixedValue": [
         "§d挖掘方块时：",
         "§7 - 获得急迫效果",
         "§7 - 急迫效果可持续叠加"
-      ]
+      ],
+      "name": "Zzss_c_ms"
     },
     "creativeTabs": [
       {
@@ -26,6 +28,9 @@
     "enchantability": 14,
     "damageVsEntity": 6.0,
     "usageCount": 1561,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Ziziyousongshisuixie"

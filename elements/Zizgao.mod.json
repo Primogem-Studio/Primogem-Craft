@@ -8,12 +8,14 @@
     "texture": "zzg",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§a『自在松石』镐",
     "specialInformation": {
       "fixedValue": [
         "§6[SHIFT+右键]",
         "§7 - 消耗耐久并飞向高空！"
-      ]
+      ],
+      "name": "Zzss_g_ms"
     },
     "creativeTabs": [
       {
@@ -25,6 +27,9 @@
     "enchantability": 15,
     "damageVsEntity": 6.0,
     "usageCount": 1561,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Ziziyousongshisuixie"

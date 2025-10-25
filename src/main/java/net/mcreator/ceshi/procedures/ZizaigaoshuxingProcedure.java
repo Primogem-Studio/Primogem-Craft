@@ -23,13 +23,15 @@ public class ZizaigaoshuxingProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
+		ItemStack i1 = ItemStack.EMPTY;
 		if (entity.isShiftKeyDown()) {
+			i1 = new ItemStack(PrimogemcraftModItems.HQFENG.get());
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 5, 127, false, false));
+				_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, (int) YsjianzhihsProcedure.execute(entity, i1, itemstack, true, 2), 127, false, false));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 300, 2, false, false));
+				_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, (int) YsjianzhihsProcedure.execute(entity, i1, itemstack, true, 100), 2, false, false));
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), (int) (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQFENG.get())) ? 400 : 800));
+				_player.getCooldowns().addCooldown(itemstack.getItem(), (int) YsjianzhihsProcedure.execute(entity, i1, itemstack, false, 400));
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.trident.riptide_2")), SoundSource.PLAYERS, (float) 0.3, (float) Mth.nextDouble(RandomSource.create(), 1.2, 5));
@@ -45,11 +47,5 @@ public class ZizaigaoshuxingProcedure {
 				});
 			}
 		}
-	}
-
-	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
-		if (entity instanceof Player player)
-			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
-		return false;
 	}
 }

@@ -8,12 +8,14 @@
     "texture": "zizai_chu",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§a『自在松石』锄",
     "specialInformation": {
       "fixedValue": [
         "§d攻击目标时：",
         "§7 - 狠狠地击退目标！"
-      ]
+      ],
+      "name": "Zzss_ct_ms"
     },
     "creativeTabs": [
       {

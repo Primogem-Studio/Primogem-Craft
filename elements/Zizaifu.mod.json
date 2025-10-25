@@ -8,13 +8,15 @@
     "texture": "zizaifu",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§a『自在松石』斧",
     "specialInformation": {
       "fixedValue": [
         "§d手持工具时：",
         "§7 - 步行时获得急速",
         "§7 - 游泳时获得海豚的恩惠"
-      ]
+      ],
+      "name": "Zzjs_f_ms"
     },
     "creativeTabs": [
       {
@@ -26,6 +28,9 @@
     "enchantability": 15,
     "damageVsEntity": 8.5,
     "usageCount": 1561,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Ziziyousongshisuixie"
