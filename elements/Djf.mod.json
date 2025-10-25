@@ -8,13 +8,15 @@
     "texture": "djf",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§b『涤净青金』 斧",
     "specialInformation": {
       "fixedValue": [
         "§d攻击目标时:",
         "§7 - 使其浮空",
         "§7 - 持续4秒"
-      ]
+      ],
+      "name": "Djqj_f_ms"
     },
     "creativeTabs": [
       {
@@ -26,6 +28,9 @@
     "enchantability": 15,
     "damageVsEntity": 9.0,
     "usageCount": 1561,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Yuanshi"

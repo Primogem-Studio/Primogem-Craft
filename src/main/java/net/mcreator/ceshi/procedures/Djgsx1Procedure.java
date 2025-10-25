@@ -19,7 +19,11 @@ public class Djgsx1Procedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
+		double a = 0;
+		ItemStack i1 = ItemStack.EMPTY;
 		if (entity.isInWater()) {
+			i1 = new ItemStack(PrimogemcraftModItems.HQSHUI.get());
+			a = YsjianzhihsProcedure.execute(entity, i1, itemstack, true, 600);
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.bubble_column.whirlpool_inside")), SoundSource.NEUTRAL, 1, 1);
@@ -28,17 +32,11 @@ public class Djgsx1Procedure {
 				}
 			}
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 1200, 1));
+				_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, (int) a, (int) YsjianzhihsProcedure.execute(entity, i1, itemstack, true, 1)));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 1200, 0));
+				_entity.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, (int) a, 0));
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), (int) (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQSHUI.get())) ? 1200 : 2400));
+				_player.getCooldowns().addCooldown(itemstack.getItem(), (int) YsjianzhihsProcedure.execute(entity, i1, itemstack, false, 2400));
 		}
-	}
-
-	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
-		if (entity instanceof Player player)
-			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
-		return false;
 	}
 }

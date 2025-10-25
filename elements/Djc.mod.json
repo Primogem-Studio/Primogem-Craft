@@ -8,11 +8,13 @@
     "texture": "djc",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§b『涤净青金』 锄",
     "specialInformation": {
       "fixedValue": [
         "§7§o『既是武器，也是工具』"
-      ]
+      ],
+      "name": "Djqj_ct_ms"
     },
     "creativeTabs": [
       {
@@ -24,6 +26,9 @@
     "enchantability": 15,
     "damageVsEntity": 10.0,
     "usageCount": 1561,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Yuanshi"

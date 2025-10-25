@@ -8,6 +8,7 @@
     "texture": "djq",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§b『涤净青金』 锹",
     "specialInformation": {
       "fixedValue": [
@@ -16,7 +17,8 @@
         "§7 - 转化泥土为粘土",
         "§7 - 转化粘土为沙子",
         "§7 - 25%转化失败"
-      ]
+      ],
+      "name": "Djqj_c_ms"
     },
     "creativeTabs": [
       {
@@ -28,6 +30,9 @@
     "enchantability": 15,
     "damageVsEntity": 6.0,
     "usageCount": 1561,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Yuanshi"

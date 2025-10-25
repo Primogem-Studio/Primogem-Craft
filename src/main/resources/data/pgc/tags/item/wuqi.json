@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "primogemcraft:djc",
     {
       "id": "#pgc:wuqi/changbing",
       "required": false

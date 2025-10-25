@@ -12689,6 +12689,14 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
           }
         ]
       }
@@ -35742,6 +35750,121 @@
           "src/main/java/net/mcreator/ceshi/procedures/Szbf_c_msProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Szbf_ct_ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "szbf_ct_ms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Szbf_ct_msProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Djqj_g_ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "djqj_g_ms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Djqj_g_msProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Djqj_f_ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "djqj_f_ms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Djqj_f_msProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Djqj_c_ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "djqj_c_ms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Djqj_c_msProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Djqj_ct_ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "djqj_ct_ms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Djqj_ct_msProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -36624,7 +36747,8 @@
       "CUSTOM:Mmolajian",
       "CUSTOM:Ffanrongdezhexue",
       "TAG:pgc:wuqi/gongju",
-      "TAG:pgc:wuqi/shuangshou"
+      "TAG:pgc:wuqi/shuangshou",
+      "CUSTOM:Djc"
     ],
     "ITEMS:pgc:prayer_core_x10": [
       "CUSTOM:Qyhxshilian"
@@ -36795,27 +36919,6 @@
       "CUSTOM:Ffanrongdezhexue",
       "CUSTOM:Mmolajian",
       "CUSTOM:Yuanshijian",
-      "CUSTOM:Zizaitiejian",
-      "CUSTOM:Zizaizuanshijian",
-      "CUSTOM:Zizaihejinjian",
-      "CUSTOM:Jljtie",
-      "CUSTOM:Jljzs",
-      "CUSTOM:Jjljxjhj",
-      "CUSTOM:Zstj",
-      "CUSTOM:Zszsj",
-      "CUSTOM:Zshjj",
-      "CUSTOM:Sztj",
-      "CUSTOM:Szzsj",
-      "CUSTOM:Szhjj",
-      "CUSTOM:Djtj",
-      "CUSTOM:Ddjzsj",
-      "CUSTOM:Djhjj",
-      "CUSTOM:Rytj",
-      "CUSTOM:Ryzsj",
-      "CUSTOM:Ryhjj",
-      "CUSTOM:Axtj",
-      "CUSTOM:Axzsj",
-      "CUSTOM:Axhjj",
       "TAG:pgc:wuqi"
     ],
     "ITEMS:c:curio/code": [
@@ -38064,7 +38167,6 @@
       "CUSTOM:Djg",
       "CUSTOM:Djf",
       "CUSTOM:Djq",
-      "CUSTOM:Djc",
       "CUSTOM:Ryg",
       "CUSTOM:Ryf",
       "CUSTOM:Ryq",

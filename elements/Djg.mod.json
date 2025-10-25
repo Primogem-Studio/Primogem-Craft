@@ -8,6 +8,7 @@
     "texture": "djg",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§b『涤净青金』 镐",
     "specialInformation": {
       "fixedValue": [
@@ -15,7 +16,8 @@
         "§9 - 水下呼吸（1:00）",
         "§9 - 急迫II（1:00）",
         "§7冷却2分钟"
-      ]
+      ],
+      "name": "Djqj_g_ms"
     },
     "creativeTabs": [
       {
@@ -27,6 +29,9 @@
     "enchantability": 15,
     "damageVsEntity": 5.0,
     "usageCount": 1561,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Dijingsuixie"

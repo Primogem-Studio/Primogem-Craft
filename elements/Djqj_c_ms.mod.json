@@ -1,0 +1,8 @@
+{
+  "_fv": 79,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"return_string\"><value name=\"return\"><block type=\"procedure_retval_string\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"1\"></mutation><field name=\"procedure\">MSHSwuqi00</field><field name=\"name0\">miaoshu</field><value name=\"arg0\"><block type=\"text_join\"><mutation items=\"9\"></mutation><value name=\"ADD0\"><block type=\"text\"><field name=\"TEXT\">§6§l§n潜行右键方块</field></block></value><value name=\"ADD1\"><block type=\"text_new_line\"></block></value><value name=\"ADD2\"><block type=\"text\"><field name=\"TEXT\">§e转化泥土为粘土</field></block></value><value name=\"ADD3\"><block type=\"text_new_line\"></block></value><value name=\"ADD4\"><block type=\"text\"><field name=\"TEXT\">§e转化粘土为沙子</field></block></value><value name=\"ADD5\"><block type=\"text_new_line\"></block></value><value name=\"ADD6\"><block type=\"text\"><field name=\"TEXT\">§e概率转化失败并摧毁方块</field></block></value><value name=\"ADD7\"><block type=\"text_new_line\"></block></value><value name=\"ADD8\"><block type=\"text\"><field name=\"TEXT\">§c不受精炼等级和火漆影响</field></block></value></block></value></block></value></block></next></block></xml>",
+    "skipDependencyNullCheck": false
+  }
+}
