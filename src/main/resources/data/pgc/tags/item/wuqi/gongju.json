@@ -3,6 +3,10 @@
   "values": [
     "primogemcraft:qinlaodezhexue",
     "primogemcraft:mmolachutou",
+    {
+      "id": "#pgc:wuqi/gongju/yuansu",
+      "required": false
+    },
     "primogemcraft:huangjindezhexue",
     "primogemcraft:mmolagao",
     "primogemcraft:mmolafu",

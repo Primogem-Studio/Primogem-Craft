@@ -37647,7 +37647,8 @@
       "CUSTOM:Mmolagao",
       "CUSTOM:Mmolafu",
       "CUSTOM:Mmolachan",
-      "CUSTOM:Molachutou"
+      "CUSTOM:Molachutou",
+      "TAG:pgc:wuqi/gongju/yuansu"
     ],
     "ITEMS:minecraft:enchantable/weapon": [
       "Items.HePuYuan"
@@ -37685,6 +37686,38 @@
       "CUSTOM:Zyjs",
       "CUSTOM:Ryjs",
       "CUSTOM:Lijs"
+    ],
+    "ITEMS:pgc:wuqi/gongju/yuansu": [
+      "CUSTOM:Zizgao",
+      "CUSTOM:Zizaifu",
+      "CUSTOM:Zizaiqiao",
+      "CUSTOM:Zizaichu",
+      "CUSTOM:Jlg",
+      "CUSTOM:Jlf",
+      "CUSTOM:Jlq",
+      "CUSTOM:Jlc",
+      "CUSTOM:Zsg",
+      "CUSTOM:Zsq",
+      "CUSTOM:Zsf",
+      "CUSTOM:Zsc",
+      "CUSTOM:Szg",
+      "CUSTOM:Szf",
+      "CUSTOM:Szq",
+      "CUSTOM:Szc",
+      "CUSTOM:Djg",
+      "CUSTOM:Djf",
+      "CUSTOM:Djq",
+      "CUSTOM:Djc",
+      "CUSTOM:Ryg",
+      "CUSTOM:Ryf",
+      "CUSTOM:Ryq",
+      "CUSTOM:Ryc",
+      "CUSTOM:Axg",
+      "CUSTOM:Yxaxg",
+      "CUSTOM:Axf",
+      "CUSTOM:Axq",
+      "CUSTOM:Axc",
+      "CUSTOM:Zfg"
     ]
   },
   "tab_element_order": {
