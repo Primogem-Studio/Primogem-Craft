@@ -8,6 +8,7 @@
     "texture": "jlg",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§6『坚牢黄玉』镐",
     "specialInformation": {
       "fixedValue": [
@@ -15,7 +16,8 @@
         "§7 - 消耗耐久后50%转化石头为金矿石",
         "§7 - 有低概率转化方块为合金块！",
         "§7 - 冷却时间20秒"
-      ]
+      ],
+      "name": "Jlhy_g_ms"
     },
     "creativeTabs": [
       {

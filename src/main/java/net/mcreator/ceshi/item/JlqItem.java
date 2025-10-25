@@ -12,11 +12,14 @@ import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.DiggerItem;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.Minecraft;
 
+import net.mcreator.ceshi.procedures.Jlhy_c_msProcedure;
 import net.mcreator.ceshi.procedures.JjlcjlqsxProcedure;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 
@@ -63,10 +66,13 @@ public class JlqItem extends ShovelItem {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.primogemcraft.jlq.description_0"));
-		list.add(Component.translatable("item.primogemcraft.jlq.description_1"));
-		list.add(Component.translatable("item.primogemcraft.jlq.description_2"));
-		list.add(Component.translatable("item.primogemcraft.jlq.description_3"));
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+		String hoverText = Jlhy_c_msProcedure.execute(entity, itemstack);
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 
 	@Override

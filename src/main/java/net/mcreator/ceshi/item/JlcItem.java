@@ -12,10 +12,13 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.Minecraft;
 
+import net.mcreator.ceshi.procedures.Jlhy_ct_msProcedure;
 import net.mcreator.ceshi.procedures.JlcsxProcedure;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 
@@ -69,7 +72,12 @@ public class JlcItem extends HoeItem {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.primogemcraft.jlc.description_0"));
-		list.add(Component.translatable("item.primogemcraft.jlc.description_1"));
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+		String hoverText = Jlhy_ct_msProcedure.execute(entity, itemstack);
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 }

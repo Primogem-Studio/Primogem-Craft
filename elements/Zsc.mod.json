@@ -8,13 +8,15 @@
     "texture": "zsc",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§d『最胜紫晶』锄",
     "specialInformation": {
       "fixedValue": [
         "§d手持右键时：",
         "§c - 消耗大量耐久",
         "§7 - 随机改变天气"
-      ]
+      ],
+      "name": "Zszz_ct_ms"
     },
     "creativeTabs": [
       {
@@ -26,6 +28,9 @@
     "enchantability": 10,
     "damageVsEntity": 4.0,
     "usageCount": 1561,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Yuanshi"

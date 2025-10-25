@@ -8,13 +8,15 @@
     "texture": "zsg",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§d『最胜紫晶』镐",
     "specialInformation": {
       "fixedValue": [
         "§d右键煤炭矿石时：",
         "§7 - 消耗耐久降下闪电后概率改变其分子结构",
         "§7 - 转化失败后冷却1分钟"
-      ]
+      ],
+      "name": "Zszj_g_ms"
     },
     "creativeTabs": [
       {
@@ -26,6 +28,9 @@
     "enchantability": 10,
     "damageVsEntity": 5.5,
     "usageCount": 1561,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Yuanshi"

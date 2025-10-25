@@ -20,6 +20,8 @@ public class Zsc_sxProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
+		double a = 0;
+		ItemStack i1 = ItemStack.EMPTY;
 		if (Math.random() < 0.4) {
 			{
 				Entity _ent = entity;
@@ -56,16 +58,12 @@ public class Zsc_sxProcedure {
 		}
 		DiaoyonghuishouProcedure.execute(entity, itemstack);
 		if (world instanceof ServerLevel _level) {
-			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(100, _level, null, _stkprov -> {
-			});
+			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak((int) YsjianzhihsProcedure.execute(entity, new ItemStack(PrimogemcraftModItems.HQYAN.get()), itemstack, false, 100), _level, null,
+					_stkprov -> {
+					});
 		}
 		if (entity instanceof Player _player)
-			_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), (int) (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQLEI.get())) ? 600 : 1200));
-	}
-
-	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
-		if (entity instanceof Player player)
-			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
-		return false;
+			_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(),
+					(int) YsjianzhihsProcedure.execute(entity, new ItemStack(PrimogemcraftModItems.HQLEI.get()), itemstack, false, 1200));
 	}
 }

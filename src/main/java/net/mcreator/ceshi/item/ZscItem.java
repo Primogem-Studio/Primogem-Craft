@@ -13,12 +13,15 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.Minecraft;
 
+import net.mcreator.ceshi.procedures.Zszz_ct_msProcedure;
 import net.mcreator.ceshi.procedures.Zsc_sxProcedure;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 
@@ -72,8 +75,12 @@ public class ZscItem extends HoeItem {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.primogemcraft.zsc.description_0"));
-		list.add(Component.translatable("item.primogemcraft.zsc.description_1"));
-		list.add(Component.translatable("item.primogemcraft.zsc.description_2"));
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+		String hoverText = Zszz_ct_msProcedure.execute(entity, itemstack);
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 }

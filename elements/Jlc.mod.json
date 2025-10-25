@@ -8,12 +8,14 @@
     "texture": "jlc",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§6『坚牢黄玉』锄",
     "specialInformation": {
       "fixedValue": [
         "§d攻击目标时：",
         "§7 - 消耗耐久概率产出坚牢黄玉（0.1%）"
-      ]
+      ],
+      "name": "Jlhy_ct_ms"
     },
     "creativeTabs": [
       {

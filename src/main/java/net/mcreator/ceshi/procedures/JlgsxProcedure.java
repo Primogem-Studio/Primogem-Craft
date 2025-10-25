@@ -23,17 +23,21 @@ public class JlgsxProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
+		double a = 0;
+		ItemStack i1 = ItemStack.EMPTY;
 		if (!world.isClientSide()) {
 			if (entity.isShiftKeyDown()) {
+				i1 = new ItemStack(PrimogemcraftModItems.HQYAN.get());
+				a = YsjianzhihsProcedure.execute(entity, i1, itemstack, true, 0.6);
 				if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("c:stones"))) || (world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("c:cobblestones")))
 						|| (world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("minecraft:ancient_city_replaceable")))) {
 					if (world instanceof ServerLevel _level) {
-						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak((int) Mth.nextDouble(RandomSource.create(), 1, 5), _level, null, _stkprov -> {
+						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak((int) Mth.nextDouble(RandomSource.create(), 1, 10 * a), _level, null, _stkprov -> {
 						});
 					}
 					if (entity instanceof Player _player)
-						_player.getCooldowns().addCooldown(itemstack.getItem(), (int) (hasEntityInInventory(entity, new ItemStack(PrimogemcraftModItems.HQYAN.get())) ? 200 : 400));
-					if (Math.random() < 0.6) {
+						_player.getCooldowns().addCooldown(itemstack.getItem(), (int) YsjianzhihsProcedure.execute(entity, i1, itemstack, false, 1200));
+					if (Math.random() < a) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
 								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.trident.thunder")), SoundSource.BLOCKS, (float) 0.5, 2);
@@ -41,7 +45,7 @@ public class JlgsxProcedure {
 								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.trident.thunder")), SoundSource.BLOCKS, (float) 0.5, 2, false);
 							}
 						}
-						if (Math.random() < 0.03) {
+						if (Math.random() < a / 20) {
 							world.setBlock(BlockPos.containing(x, y, z), PrimogemcraftModBlocks.LIANJIAXIAJIEHEJINKUAI.get().defaultBlockState(), 3);
 						} else {
 							if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.POLISHED_DEEPSLATE
@@ -63,11 +67,5 @@ public class JlgsxProcedure {
 				}
 			}
 		}
-	}
-
-	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
-		if (entity instanceof Player player)
-			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
-		return false;
 	}
 }

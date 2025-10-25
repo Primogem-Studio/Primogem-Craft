@@ -8,13 +8,15 @@
     "texture": "jlf",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§6『坚牢黄玉』斧",
     "specialInformation": {
       "fixedValue": [
         "§d破坏木制方块时：",
         "§7 - 概率获得金锭（10%）",
         "§7 - 小概率获得精致摩拉（1%）"
-      ]
+      ],
+      "name": "Jlhy_f_ms"
     },
     "creativeTabs": [
       {
@@ -26,6 +28,9 @@
     "enchantability": 15,
     "damageVsEntity": 12.0,
     "usageCount": 1890,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Jianransuixie"

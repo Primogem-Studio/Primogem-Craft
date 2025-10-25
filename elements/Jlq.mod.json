@@ -8,6 +8,7 @@
     "texture": "jlq",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§6『坚牢黄玉』锹",
     "specialInformation": {
       "fixedValue": [
@@ -15,7 +16,8 @@
         "§7 - 消耗耐久产生爆炸！",
         "§7 - 单次冷却8~16秒",
         "§c - 不要在家里使用"
-      ]
+      ],
+      "name": "Jlhy_c_ms"
     },
     "creativeTabs": [
       {
@@ -27,6 +29,9 @@
     "enchantability": 14,
     "damageVsEntity": 6.0,
     "usageCount": 1890,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Yuanshi"

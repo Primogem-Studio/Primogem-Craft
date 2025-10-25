@@ -8,12 +8,14 @@
     "texture": "zsf",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§d『最胜紫晶』斧",
     "specialInformation": {
       "fixedValue": [
         "§7攻击目标时为目标施加§d『过去』§7效果",
         "§7手持潜行左键调整效果持续时间"
-      ]
+      ],
+      "name": "Zszz_f_ms"
     },
     "creativeTabs": [
       {
