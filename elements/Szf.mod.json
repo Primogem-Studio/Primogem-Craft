@@ -8,12 +8,14 @@
     "texture": "szf",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§a『生长碧翡』斧",
     "specialInformation": {
       "fixedValue": [
         "§6[SHIFT+右键]§d空气时：",
         "§7 - 创造一棵树，并将自身送至树顶"
-      ]
+      ],
+      "name": "Szbf_f_ms"
     },
     "creativeTabs": [
       {
@@ -25,6 +27,9 @@
     "enchantability": 10,
     "damageVsEntity": 7.0,
     "usageCount": 1561,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Yuanshi"

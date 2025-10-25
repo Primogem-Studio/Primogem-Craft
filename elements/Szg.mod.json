@@ -8,12 +8,14 @@
     "texture": "szg",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§a『生长碧翡』镐",
     "specialInformation": {
       "fixedValue": [
         "§d处于水中时：",
         "§7 - 挖掘方块有概率掉落物品草原核"
-      ]
+      ],
+      "name": "Szbf_g_ms"
     },
     "creativeTabs": [
       {
@@ -25,6 +27,9 @@
     "enchantability": 10,
     "damageVsEntity": 6.0,
     "usageCount": 1561,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Yuanshi"

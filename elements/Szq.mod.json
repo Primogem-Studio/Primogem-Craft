@@ -8,13 +8,15 @@
     "texture": "szq",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§a『生长碧翡』锹",
     "specialInformation": {
       "fixedValue": [
         "§d在主手时：",
         "§7 - 破坏泥土时有概率产出战利品",
         "§7 - [§6SHIFT+右键]§7改变泥土状态"
-      ]
+      ],
+      "name": "Szbf_c_ms"
     },
     "creativeTabs": [
       {

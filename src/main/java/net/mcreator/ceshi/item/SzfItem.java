@@ -13,13 +13,16 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.Minecraft;
 
 import net.mcreator.ceshi.procedures.SzfsxProcedure;
+import net.mcreator.ceshi.procedures.Szbf_f_msProcedure;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 
 import java.util.List;
@@ -72,7 +75,12 @@ public class SzfItem extends AxeItem {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.primogemcraft.szf.description_0"));
-		list.add(Component.translatable("item.primogemcraft.szf.description_1"));
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+		String hoverText = Szbf_f_msProcedure.execute(entity, itemstack);
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 }

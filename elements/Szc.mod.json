@@ -8,12 +8,14 @@
     "texture": "szc",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§a『生长碧翡』锄",
     "specialInformation": {
       "fixedValue": [
         "§7右键对脚下使用骨粉",
         "§7潜行右键对方块使用"
-      ]
+      ],
+      "name": "Szbf_ct_ms"
     },
     "creativeTabs": [
       {

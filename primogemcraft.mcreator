@@ -12153,6 +12153,10 @@
             "type": "entity"
           },
           {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -35667,6 +35671,75 @@
         "return_type": "string",
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/Zszz_ct_msProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Szbf_g_ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "szbf_g_ms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Szbf_g_msProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Szbf_f_ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "szbf_f_ms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Szbf_f_msProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Szbf_c_ms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "szbf_c_ms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Szbf_c_msProcedure.java"
         ]
       }
     }
