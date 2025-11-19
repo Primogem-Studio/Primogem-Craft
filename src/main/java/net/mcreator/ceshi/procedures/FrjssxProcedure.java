@@ -27,9 +27,9 @@ public class FrjssxProcedure {
 					CustomData.update(DataComponents.CUSTOM_DATA, a, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = a.copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack6 = a.copy();
+					_setstack6.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack6);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}

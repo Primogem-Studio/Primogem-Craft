@@ -8,6 +8,7 @@
     "guiTexture": "",
     "customProperties": {},
     "states": [],
+    "animations": [],
     "name": "§5§l『奇物』§b时空三角",
     "rarity": "COMMON",
     "creativeTabs": [
@@ -25,6 +26,7 @@
     },
     "destroyAnyBlock": false,
     "immuneToFire": false,
+    "isPiglinCurrency": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,

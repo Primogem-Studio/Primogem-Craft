@@ -18,7 +18,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.ceshi.procedures.SuijiqiwuguishuxingProcedure;
 import net.mcreator.ceshi.PrimogemcraftMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record SuijiqiwuButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<SuijiqiwuButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PrimogemcraftMod.MODID, "suijiqiwu_buttons"));

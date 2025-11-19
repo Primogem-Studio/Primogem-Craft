@@ -18,7 +18,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.ceshi.procedures.SscsProcedure;
 import net.mcreator.ceshi.PrimogemcraftMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record CeshishijianxuanzejiemianSlotMessage(int slotID, int x, int y, int z, int changeType, int meta) implements CustomPacketPayload {
 
 	public static final Type<CeshishijianxuanzejiemianSlotMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PrimogemcraftMod.MODID, "ceshishijianxuanzejiemian_slots"));

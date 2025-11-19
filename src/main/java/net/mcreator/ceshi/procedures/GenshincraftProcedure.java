@@ -10,7 +10,7 @@ import net.mcreator.ceshi.network.PrimogemcraftModVariables;
 
 import javax.annotation.Nullable;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class GenshincraftProcedure {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {

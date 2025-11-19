@@ -43,9 +43,9 @@ public class YzzmsxProcedure {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal("\u00A75\u300E\u5947\u7269\u300F\u00A7c\u611A\u8005\u4E4B\u9762\u00A77\u5DF2\u6D88\u8017\uFF01\u00A7b\u6C38\u4E0D\u6B3A\u9A97\uFF01"), false);
 					if (entity instanceof LivingEntity _entity) {
-						ItemStack _setstack = new ItemStack(Items.BOOK).copy();
-						_setstack.setCount(1);
-						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+						ItemStack _setstack14 = new ItemStack(Items.BOOK).copy();
+						_setstack14.setCount(1);
+						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack14);
 						if (_entity instanceof Player _player)
 							_player.getInventory().setChanged();
 					}

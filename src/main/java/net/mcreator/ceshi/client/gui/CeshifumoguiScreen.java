@@ -20,7 +20,7 @@ public class CeshifumoguiScreen extends AbstractContainerScreen<CeshifumoguiMenu
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_heitasuijifumo;
+	private ImageButton imagebutton_heitasuijifumo;
 
 	public CeshifumoguiScreen(CeshifumoguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -83,7 +83,7 @@ public class CeshifumoguiScreen extends AbstractContainerScreen<CeshifumoguiMenu
 				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/heitasuijifumo.png"), ResourceLocation.parse("primogemcraft:textures/screens/heitasuijifumo.png")), e -> {
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

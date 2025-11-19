@@ -2,8 +2,8 @@
   "parent": "block/template_glass_pane_side_alt",
   "textures": {
     "particle": "primogemcraft:block/jianshijingban",
-    "edge": "primogemcraft:block/jianshijingban",
-    "pane": "primogemcraft:block/jianshijingban"
+    "pane": "primogemcraft:block/jianshijingban",
+    "edge": "primogemcraft:block/jianshijingban"
   },
   "render_type": "translucent"
 }

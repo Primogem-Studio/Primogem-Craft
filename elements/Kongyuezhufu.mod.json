@@ -7,6 +7,7 @@
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
+    "animations": [],
     "name": "空月祝福",
     "rarity": "UNCOMMON",
     "creativeTabs": [
@@ -24,6 +25,7 @@
     },
     "destroyAnyBlock": false,
     "immuneToFire": true,
+    "isPiglinCurrency": false,
     "stayInGridWhenCrafting": true,
     "damageOnCrafting": true,
     "enableMeleeDamage": false,

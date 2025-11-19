@@ -49,9 +49,9 @@ public class GUIqwxz03Procedure {
 		if (!world.isClientSide()) {
 			tag1 = "c:curio/" + _tag;
 			if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = TagItemProcedure.execute(tag1).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(0).set(_setstack);
+				ItemStack _setstack2 = TagItemProcedure.execute(tag1).copy();
+				_setstack2.setCount(1);
+				_menu.getSlots().get(0).set(_setstack2);
 				_player.containerMenu.broadcastChanges();
 			}
 			i1 = TagItemProcedure.execute(tag1);
@@ -61,9 +61,9 @@ public class GUIqwxz03Procedure {
 				i1 = TagItemProcedure.execute(tag1);
 				if (!(i1.getItem() == item0.getItem())) {
 					if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-						ItemStack _setstack = i1.copy();
-						_setstack.setCount(1);
-						_menu.getSlots().get(1).set(_setstack);
+						ItemStack _setstack8 = i1.copy();
+						_setstack8.setCount(1);
+						_menu.getSlots().get(1).set(_setstack8);
 						_player.containerMenu.broadcastChanges();
 					}
 					break;
@@ -75,9 +75,9 @@ public class GUIqwxz03Procedure {
 				i1 = TagItemProcedure.execute(tag1);
 				if (!(i1.getItem() == item1.getItem()) && !(i1.getItem() == item0.getItem())) {
 					if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-						ItemStack _setstack = i1.copy();
-						_setstack.setCount(1);
-						_menu.getSlots().get(2).set(_setstack);
+						ItemStack _setstack16 = i1.copy();
+						_setstack16.setCount(1);
+						_menu.getSlots().get(2).set(_setstack16);
 						_player.containerMenu.broadcastChanges();
 					}
 					break;

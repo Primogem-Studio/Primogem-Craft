@@ -19,7 +19,7 @@ import net.mcreator.ceshi.procedures.GUIhldztan1Procedure;
 import net.mcreator.ceshi.procedures.GUIhldztan0Procedure;
 import net.mcreator.ceshi.PrimogemcraftMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record GUIhualiduanzaotaiButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<GUIhualiduanzaotaiButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PrimogemcraftMod.MODID, "gu_ihualiduanzaotai_buttons"));

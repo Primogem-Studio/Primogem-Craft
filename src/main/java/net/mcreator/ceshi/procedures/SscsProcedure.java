@@ -19,13 +19,7 @@ public class SscsProcedure {
 					|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu4 ? _menu4.getSlots().get(2).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 				if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
 					_menu.getSlots().get(0).remove(1);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
 					_menu.getSlots().get(1).remove(1);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
 					_menu.getSlots().get(2).remove(1);
 					_player.containerMenu.broadcastChanges();
 				}

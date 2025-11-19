@@ -26,9 +26,9 @@ public class GUIbhmgsx0Procedure {
 						for (ItemStack itemstackiterator : world.getServer().reloadableRegistries().getLootTable(ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.parse("primogemcraft:qqyjin")))
 								.getRandomItems(new LootParams.Builder((ServerLevel) world).create(LootContextParamSets.EMPTY))) {
 							if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-								ItemStack _setstack = itemstackiterator.copy();
-								_setstack.setCount(1);
-								_menu.getSlots().get((int) a).set(_setstack);
+								ItemStack _setstack2 = itemstackiterator.copy();
+								_setstack2.setCount(1);
+								_menu.getSlots().get((int) a).set(_setstack2);
 								_player.containerMenu.broadcastChanges();
 							}
 						}

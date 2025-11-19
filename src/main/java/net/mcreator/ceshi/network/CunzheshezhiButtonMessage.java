@@ -15,17 +15,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.ceshi.procedures.GUIsxr1Procedure;
-import net.mcreator.ceshi.procedures.GUIsxr10Procedure;
-import net.mcreator.ceshi.procedures.GUIsxr100Procedure;
-import net.mcreator.ceshi.procedures.GUIsxp1Procedure;
-import net.mcreator.ceshi.procedures.GUIsxp10Procedure;
-import net.mcreator.ceshi.procedures.GUIsxp100Procedure;
-import net.mcreator.ceshi.procedures.CunzheshuxingProcedure;
-import net.mcreator.ceshi.procedures.CunzheguibwdProcedure;
+import net.mcreator.ceshi.procedures.*;
 import net.mcreator.ceshi.PrimogemcraftMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record CunzheshezhiButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<CunzheshezhiButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PrimogemcraftMod.MODID, "cunzheshezhi_buttons"));

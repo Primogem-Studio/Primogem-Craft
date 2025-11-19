@@ -204,6 +204,7 @@
         ]
       }
     ],
+    "animations": [],
     "name": "钻石碎片",
     "rarity": "RARE",
     "creativeTabs": [
@@ -221,6 +222,7 @@
     },
     "destroyAnyBlock": false,
     "immuneToFire": false,
+    "isPiglinCurrency": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,

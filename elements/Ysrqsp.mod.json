@@ -60,6 +60,7 @@
         ]
       }
     ],
+    "animations": [],
     "name": "元素熔珠碎片",
     "rarity": "EPIC",
     "creativeTabs": [
@@ -77,6 +78,7 @@
     },
     "destroyAnyBlock": false,
     "immuneToFire": true,
+    "isPiglinCurrency": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,

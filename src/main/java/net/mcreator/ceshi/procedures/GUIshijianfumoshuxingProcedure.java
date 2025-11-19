@@ -50,9 +50,9 @@ public class GUIshijianfumoshuxingProcedure {
 				}
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(0).set(_setstack);
+				ItemStack _setstack11 = new ItemStack(Blocks.AIR).copy();
+				_setstack11.setCount(1);
+				_menu.getSlots().get(0).set(_setstack11);
 				_player.containerMenu.broadcastChanges();
 			}
 			entity.getPersistentData().putBoolean("pgc_shijian_fumo_pinzhi", false);

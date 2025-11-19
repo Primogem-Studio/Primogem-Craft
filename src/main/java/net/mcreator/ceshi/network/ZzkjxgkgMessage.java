@@ -17,7 +17,7 @@ import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.mcreator.ceshi.procedures.FtkxsxProcedure;
 import net.mcreator.ceshi.PrimogemcraftMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record ZzkjxgkgMessage(int eventType, int pressedms) implements CustomPacketPayload {
 	public static final Type<ZzkjxgkgMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PrimogemcraftMod.MODID, "key_zzkjxgkg"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, ZzkjxgkgMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, ZzkjxgkgMessage message) -> {

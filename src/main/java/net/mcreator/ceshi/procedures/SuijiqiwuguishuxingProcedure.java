@@ -47,9 +47,9 @@ public class SuijiqiwuguishuxingProcedure {
 					for (ItemStack itemstackiterator : world.getServer().reloadableRegistries().getLootTable(ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.parse("primogemcraft:entities/heitaqiwu_01")))
 							.getRandomItems(new LootParams.Builder((ServerLevel) world).create(LootContextParamSets.EMPTY))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-							ItemStack _setstack = itemstackiterator.copy();
-							_setstack.setCount(1);
-							_menu.getSlots().get((int) a).set(_setstack);
+							ItemStack _setstack14 = itemstackiterator.copy();
+							_setstack14.setCount(1);
+							_menu.getSlots().get((int) a).set(_setstack14);
 							_player.containerMenu.broadcastChanges();
 						}
 					}
@@ -84,9 +84,9 @@ public class SuijiqiwuguishuxingProcedure {
 					for (ItemStack itemstackiterator : world.getServer().reloadableRegistries().getLootTable(ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.parse("primogemcraft:entities/heitaqiwu_02")))
 							.getRandomItems(new LootParams.Builder((ServerLevel) world).create(LootContextParamSets.EMPTY))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-							ItemStack _setstack = itemstackiterator.copy();
-							_setstack.setCount(1);
-							_menu.getSlots().get((int) b).set(_setstack);
+							ItemStack _setstack30 = itemstackiterator.copy();
+							_setstack30.setCount(1);
+							_menu.getSlots().get((int) b).set(_setstack30);
 							_player.containerMenu.broadcastChanges();
 						}
 					}
@@ -104,9 +104,9 @@ public class SuijiqiwuguishuxingProcedure {
 					for (ItemStack itemstackiterator : world.getServer().reloadableRegistries().getLootTable(ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.parse("primogemcraft:entities/heitaqiwu_03")))
 							.getRandomItems(new LootParams.Builder((ServerLevel) world).create(LootContextParamSets.EMPTY))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-							ItemStack _setstack = itemstackiterator.copy();
-							_setstack.setCount(1);
-							_menu.getSlots().get((int) c).set(_setstack);
+							ItemStack _setstack37 = itemstackiterator.copy();
+							_setstack37.setCount(1);
+							_menu.getSlots().get((int) c).set(_setstack37);
 							_player.containerMenu.broadcastChanges();
 						}
 					}

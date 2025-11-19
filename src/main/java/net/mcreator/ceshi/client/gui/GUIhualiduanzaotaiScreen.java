@@ -23,8 +23,8 @@ public class GUIhualiduanzaotaiScreen extends AbstractContainerScreen<GUIhualidu
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_guifu_lan;
-	ImageButton imagebutton_guifu_huang;
+	private ImageButton imagebutton_guifu_lan;
+	private ImageButton imagebutton_guifu_huang;
 
 	public GUIhualiduanzaotaiScreen(GUIhualiduanzaotaiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -96,7 +96,7 @@ public class GUIhualiduanzaotaiScreen extends AbstractContainerScreen<GUIhualidu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -111,7 +111,7 @@ public class GUIhualiduanzaotaiScreen extends AbstractContainerScreen<GUIhualidu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

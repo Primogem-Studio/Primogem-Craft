@@ -7,6 +7,7 @@
     "customModelName": "cao_yuan_he_fang_kuai_:default",
     "customProperties": {},
     "states": [],
+    "animations": [],
     "name": "§a草原核",
     "rarity": "UNCOMMON",
     "creativeTabs": [
@@ -24,6 +25,7 @@
     },
     "destroyAnyBlock": false,
     "immuneToFire": false,
+    "isPiglinCurrency": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,

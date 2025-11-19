@@ -48,13 +48,7 @@ public class GUIbwdyinhang01Procedure {
 			b.set(DataComponents.CUSTOM_NAME, Component.literal("\u00A7e\u00A7kbw\u00A7e\u5B58\u53D6\u51ED...\u8BC1\uFF1F\u00A7kwd"));
 			if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
 				_menu.getSlots().get(0).set(ItemStack.EMPTY);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
 				_menu.getSlots().get(1).set(ItemStack.EMPTY);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
 				_menu.getSlots().get(2).set(ItemStack.EMPTY);
 				_player.containerMenu.broadcastChanges();
 			}

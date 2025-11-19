@@ -9,7 +9,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.GameRules;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class PrimogemcraftModGameRules {
 	public static GameRules.Key<GameRules.IntegerValue> GUIZEMOYINSHENSHENGCHENGBEILV;
 	public static GameRules.Key<GameRules.IntegerValue> GUIZEMOYINSHENSHENGMINGZHI;

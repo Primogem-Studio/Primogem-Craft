@@ -16,7 +16,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.ceshi.PrimogemcraftMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class PrimogemcraftModAttributes {
 	public static final DeferredRegister<Attribute> REGISTRY = DeferredRegister.create(BuiltInRegistries.ATTRIBUTE, PrimogemcraftMod.MODID);
 	public static final DeferredHolder<Attribute, Attribute> LQSJP = REGISTRY.register("lqsjp", () -> new RangedAttribute("attribute.primogemcraft.lqsjp", -20, -10240, 10240).setSyncable(true));

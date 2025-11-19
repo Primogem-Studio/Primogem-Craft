@@ -16,7 +16,7 @@ public class Jhsbsx0Procedure {
 				{
 					PrimogemcraftModVariables.PlayerVariables _vars = entity.getData(PrimogemcraftModVariables.PLAYER_VARIABLES);
 					_vars.jun_heng = zhi * 1000;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 				return true;
 			} else {

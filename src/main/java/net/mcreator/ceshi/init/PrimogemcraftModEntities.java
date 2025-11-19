@@ -15,18 +15,10 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.registries.Registries;
 
-import net.mcreator.ceshi.entity.XiaoheitaEntity;
-import net.mcreator.ceshi.entity.XiaodengEntity;
-import net.mcreator.ceshi.entity.SWfengraojiangshiEntity;
-import net.mcreator.ceshi.entity.QqiyuanJinGuangEntity;
-import net.mcreator.ceshi.entity.QqiwuzhanlipinshitiEntity;
-import net.mcreator.ceshi.entity.QQyuanchuzi01Entity;
-import net.mcreator.ceshi.entity.QQQyuanchulan01Entity;
-import net.mcreator.ceshi.entity.CaoyuanheshengwuEntity;
-import net.mcreator.ceshi.entity.BaiguangguodushengwuEntity;
+import net.mcreator.ceshi.entity.*;
 import net.mcreator.ceshi.PrimogemcraftMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class PrimogemcraftModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, PrimogemcraftMod.MODID);
 	public static final DeferredHolder<EntityType<?>, EntityType<QqiyuanJinGuangEntity>> QQIYUAN_JIN_GUANG = register("qqiyuan_jin_guang",

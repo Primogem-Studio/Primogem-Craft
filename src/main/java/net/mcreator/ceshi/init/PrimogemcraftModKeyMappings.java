@@ -17,7 +17,7 @@ import net.minecraft.client.KeyMapping;
 
 import net.mcreator.ceshi.network.ZzkjxgkgMessage;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
+@EventBusSubscriber(Dist.CLIENT)
 public class PrimogemcraftModKeyMappings {
 	public static final KeyMapping ZZKJXGKG = new KeyMapping("key.primogemcraft.zzkjxgkg", GLFW.GLFW_KEY_UNKNOWN, "key.categories.gameplay") {
 		private boolean isDownOld = false;
@@ -38,7 +38,7 @@ public class PrimogemcraftModKeyMappings {
 		event.register(ZZKJXGKG);
 	}
 
-	@EventBusSubscriber({Dist.CLIENT})
+	@EventBusSubscriber(Dist.CLIENT)
 	public static class KeyEventListener {
 		@SubscribeEvent
 		public static void onClientTick(ClientTickEvent.Post event) {

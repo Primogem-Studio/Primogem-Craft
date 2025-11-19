@@ -8,6 +8,7 @@
     "guiTexture": "",
     "customProperties": {},
     "states": [],
+    "animations": [],
     "name": "§5『奇物』§f纯美之袍",
     "rarity": "COMMON",
     "creativeTabs": [
@@ -25,6 +26,7 @@
     },
     "destroyAnyBlock": false,
     "immuneToFire": true,
+    "isPiglinCurrency": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,

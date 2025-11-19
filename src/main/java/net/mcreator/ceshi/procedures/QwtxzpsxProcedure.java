@@ -15,9 +15,9 @@ public class QwtxzpsxProcedure {
 		ItemStack stack = ItemStack.EMPTY;
 		if (!world.isClientSide()) {
 			stack = itemstack;
-			if (EwaishhsProcedure.execute(entity, "txzp")) {
+			if (EwaishhsProcedure.execute(entity, "jzyj")) {
 				h = entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1;
-				EwaishhsProcedure.sl((h * 0.024) * ((double) EwaishhsProcedure.obd(entity) /8), "jzyj", itemstack);
+				EwaishhsProcedure.sl(Math.min(h * 0.3, h * 0.003 * EwaishhsProcedure.obd(entity)), "jzyj", itemstack);
 			}
 		}
 	}

@@ -7,6 +7,7 @@ import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerContainerEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -176,7 +177,6 @@ public class CeshishijianxuanzejiemianMenu extends AbstractContainerMenu impleme
 				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 2 + 8 + sj * 18, 17 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
 			this.addSlot(new Slot(inv, si, 2 + 8 + si * 18, 17 + 142));
-		GUItishiProcedure.execute(entity);
 	}
 
 	@Override
@@ -343,6 +343,18 @@ public class CeshishijianxuanzejiemianMenu extends AbstractContainerMenu impleme
 	public static void onPlayerTick(PlayerTickEvent.Post event) {
 		Player entity = event.getEntity();
 		if (entity.containerMenu instanceof CeshishijianxuanzejiemianMenu menu) {
+			Level world = menu.world;
+			double x = menu.x;
+			double y = menu.y;
+			double z = menu.z;
+			GUItishiProcedure.execute(entity);
+		}
+	}
+
+	@SubscribeEvent
+	public static void onContainerOpen(PlayerContainerEvent.Open event) {
+		Player entity = event.getEntity();
+		if (event.getContainer() instanceof CeshishijianxuanzejiemianMenu menu) {
 			Level world = menu.world;
 			double x = menu.x;
 			double y = menu.y;

@@ -25,7 +25,7 @@ public class ShijianxianzhishuaxinProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world) {
 		if (!world.isClientSide()) {
 			PrimogemcraftModVariables.MapVariables.get(world).shijian_xianzhi = 0;
-			PrimogemcraftModVariables.MapVariables.get(world).syncData(world);
+			PrimogemcraftModVariables.MapVariables.get(world).markSyncDirty();
 		}
 	}
 }

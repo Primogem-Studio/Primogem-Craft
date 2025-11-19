@@ -16,27 +16,10 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.core.registries.BuiltInRegistries;
 
-import net.mcreator.ceshi.block.entity.XjhpyhfhBlockEntity;
-import net.mcreator.ceshi.block.entity.ShenmiwanouBlockEntity;
-import net.mcreator.ceshi.block.entity.QxzhqBlockEntity;
-import net.mcreator.ceshi.block.entity.Moladui02BlockEntity;
-import net.mcreator.ceshi.block.entity.MmolazhilajitongBlockEntity;
-import net.mcreator.ceshi.block.entity.Mlxdml03BlockEntity;
-import net.mcreator.ceshi.block.entity.Mlxdml02BlockEntity;
-import net.mcreator.ceshi.block.entity.Mlxdml01BlockEntity;
-import net.mcreator.ceshi.block.entity.LajitongBlockEntity;
-import net.mcreator.ceshi.block.entity.HualiduanzaoBlockEntity;
-import net.mcreator.ceshi.block.entity.HhzdbooBlockEntity;
-import net.mcreator.ceshi.block.entity.Hhzd1BlockEntity;
-import net.mcreator.ceshi.block.entity.Hhzd0BlockEntity;
-import net.mcreator.ceshi.block.entity.GanjinglajitongxiangziBlockEntity;
-import net.mcreator.ceshi.block.entity.DangaoliyueBlockEntity;
-import net.mcreator.ceshi.block.entity.ChuangzaoxiaodengfasheqiBlockEntity;
-import net.mcreator.ceshi.block.entity.CeshixiaodengfasheqiBlockEntity;
-import net.mcreator.ceshi.block.entity.BwdxjhpyhfhBlockEntity;
+import net.mcreator.ceshi.block.entity.*;
 import net.mcreator.ceshi.PrimogemcraftMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class PrimogemcraftModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, PrimogemcraftMod.MODID);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<Moladui02BlockEntity>> MOLADUI_02 = register("moladui_02", PrimogemcraftModBlocks.MOLADUI_02, Moladui02BlockEntity::new);

@@ -22,7 +22,7 @@ public class CeshishijianxuanzejiemianScreen extends AbstractContainerScreen<Ces
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_shua_xin;
+	private Button button_shua_xin;
 
 	public CeshishijianxuanzejiemianScreen(CeshishijianxuanzejiemianMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

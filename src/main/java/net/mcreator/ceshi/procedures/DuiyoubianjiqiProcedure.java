@@ -11,6 +11,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 
@@ -35,14 +36,16 @@ public class DuiyoubianjiqiProcedure {
 		if (sourceentity.isShiftKeyDown() && (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("c:kebianjiduiyou")))) {
 			if (entity.getPersistentData().getBoolean((sourceentity.getDisplayName().getString() + "ceshi_duiyou"))) {
 				entity.getPersistentData().putBoolean((sourceentity.getDisplayName().getString() + "ceshi_duiyou"), false);
-				if (!world.isClientSide() && world.getServer() != null)
-					world.getServer().getPlayerList()
+				if (world instanceof ServerLevel _level) {
+					_level.getServer().getPlayerList()
 							.broadcastSystemMessage(Component.literal((("\u73A9\u5BB6<" + sourceentity.getDisplayName().getString() + ">") + "\u5BF9" + entity.getDisplayName().getString() + "\u00A7c\u53D6\u6D88\u4E86\u961F\u53CB")), false);
+				}
 			} else {
 				entity.getPersistentData().putBoolean((sourceentity.getDisplayName().getString() + "ceshi_duiyou"), true);
-				if (!world.isClientSide() && world.getServer() != null)
-					world.getServer().getPlayerList()
+				if (world instanceof ServerLevel _level) {
+					_level.getServer().getPlayerList()
 							.broadcastSystemMessage(Component.literal((("\u73A9\u5BB6<" + sourceentity.getDisplayName().getString() + ">") + "\u5BF9" + entity.getDisplayName().getString() + "\u00A7a\u6DFB\u52A0\u4E86\u961F\u53CB")), false);
+				}
 			}
 		}
 	}

@@ -60,7 +60,7 @@ public class SuijishijiandiaoluoProcedure {
 					_level.addFreshEntity(entityToSpawn);
 				}
 				PrimogemcraftModVariables.MapVariables.get(world).shijian_xianzhi = PrimogemcraftModVariables.MapVariables.get(world).shijian_xianzhi + 1;
-				PrimogemcraftModVariables.MapVariables.get(world).syncData(world);
+				PrimogemcraftModVariables.MapVariables.get(world).markSyncDirty();
 			}
 		}
 	}

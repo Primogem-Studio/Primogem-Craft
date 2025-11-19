@@ -34,9 +34,9 @@ public class GUIxuanzeqiwusxProcedure {
 						for (ItemStack itemstackiterator : world.getServer().reloadableRegistries().getLootTable(ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.parse("primogemcraft:entities/heitaqiwu_01")))
 								.getRandomItems(new LootParams.Builder((ServerLevel) world).create(LootContextParamSets.EMPTY))) {
 							if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-								ItemStack _setstack = itemstackiterator.copy();
-								_setstack.setCount(1);
-								_menu.getSlots().get((int) a).set(_setstack);
+								ItemStack _setstack10 = itemstackiterator.copy();
+								_setstack10.setCount(1);
+								_menu.getSlots().get((int) a).set(_setstack10);
 								_player.containerMenu.broadcastChanges();
 							}
 						}
@@ -73,9 +73,9 @@ public class GUIxuanzeqiwusxProcedure {
 						for (ItemStack itemstackiterator : world.getServer().reloadableRegistries().getLootTable(ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.parse("primogemcraft:entities/heitaqiwu_02")))
 								.getRandomItems(new LootParams.Builder((ServerLevel) world).create(LootContextParamSets.EMPTY))) {
 							if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-								ItemStack _setstack = itemstackiterator.copy();
-								_setstack.setCount(1);
-								_menu.getSlots().get((int) b).set(_setstack);
+								ItemStack _setstack26 = itemstackiterator.copy();
+								_setstack26.setCount(1);
+								_menu.getSlots().get((int) b).set(_setstack26);
 								_player.containerMenu.broadcastChanges();
 							}
 						}
@@ -93,9 +93,9 @@ public class GUIxuanzeqiwusxProcedure {
 						for (ItemStack itemstackiterator : world.getServer().reloadableRegistries().getLootTable(ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.parse("primogemcraft:entities/heitaqiwu_03")))
 								.getRandomItems(new LootParams.Builder((ServerLevel) world).create(LootContextParamSets.EMPTY))) {
 							if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-								ItemStack _setstack = itemstackiterator.copy();
-								_setstack.setCount(1);
-								_menu.getSlots().get((int) c).set(_setstack);
+								ItemStack _setstack33 = itemstackiterator.copy();
+								_setstack33.setCount(1);
+								_menu.getSlots().get((int) c).set(_setstack33);
 								_player.containerMenu.broadcastChanges();
 							}
 						}
@@ -104,16 +104,16 @@ public class GUIxuanzeqiwusxProcedure {
 					a = Mth.nextInt(RandomSource.create(), 0, 2);
 					if (Math.random() < 0.5) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-							ItemStack _setstack = new ItemStack(PrimogemcraftModItems.JINGQUEYOUYADAIMA.get()).copy();
-							_setstack.setCount(1);
-							_menu.getSlots().get((int) a).set(_setstack);
+							ItemStack _setstack37 = new ItemStack(PrimogemcraftModItems.JINGQUEYOUYADAIMA.get()).copy();
+							_setstack37.setCount(1);
+							_menu.getSlots().get((int) a).set(_setstack37);
 							_player.containerMenu.broadcastChanges();
 						}
 					} else {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-							ItemStack _setstack = new ItemStack(PrimogemcraftModItems.LUANQIBAZAODEDAIMA.get()).copy();
-							_setstack.setCount(1);
-							_menu.getSlots().get((int) a).set(_setstack);
+							ItemStack _setstack38 = new ItemStack(PrimogemcraftModItems.LUANQIBAZAODEDAIMA.get()).copy();
+							_setstack38.setCount(1);
+							_menu.getSlots().get((int) a).set(_setstack38);
 							_player.containerMenu.broadcastChanges();
 						}
 					}
@@ -146,16 +146,16 @@ public class GUIxuanzeqiwusxProcedure {
 					}
 					if (Math.random() < 0.5) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-							ItemStack _setstack = new ItemStack(PrimogemcraftModItems.YOUDIANQIQIAODEDAIMA.get()).copy();
-							_setstack.setCount(1);
-							_menu.getSlots().get((int) b).set(_setstack);
+							ItemStack _setstack52 = new ItemStack(PrimogemcraftModItems.YOUDIANQIQIAODEDAIMA.get()).copy();
+							_setstack52.setCount(1);
+							_menu.getSlots().get((int) b).set(_setstack52);
 							_player.containerMenu.broadcastChanges();
 						}
 					} else {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-							ItemStack _setstack = new ItemStack(PrimogemcraftModItems.WUXIANDIGUIDEDAIMA.get()).copy();
-							_setstack.setCount(1);
-							_menu.getSlots().get((int) b).set(_setstack);
+							ItemStack _setstack53 = new ItemStack(PrimogemcraftModItems.WUXIANDIGUIDEDAIMA.get()).copy();
+							_setstack53.setCount(1);
+							_menu.getSlots().get((int) b).set(_setstack53);
 							_player.containerMenu.broadcastChanges();
 						}
 					}
@@ -170,16 +170,16 @@ public class GUIxuanzeqiwusxProcedure {
 					}
 					if (Math.random() < 0.5) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-							ItemStack _setstack = new ItemStack(PrimogemcraftModItems.MEIYOUZHUSHIDAIMA.get()).copy();
-							_setstack.setCount(1);
-							_menu.getSlots().get((int) c).set(_setstack);
+							ItemStack _setstack58 = new ItemStack(PrimogemcraftModItems.MEIYOUZHUSHIDAIMA.get()).copy();
+							_setstack58.setCount(1);
+							_menu.getSlots().get((int) c).set(_setstack58);
 							_player.containerMenu.broadcastChanges();
 						}
 					} else {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-							ItemStack _setstack = new ItemStack(PrimogemcraftModItems.ZHONGGUIZHONGJUDEDAIMA.get()).copy();
-							_setstack.setCount(1);
-							_menu.getSlots().get((int) c).set(_setstack);
+							ItemStack _setstack59 = new ItemStack(PrimogemcraftModItems.ZHONGGUIZHONGJUDEDAIMA.get()).copy();
+							_setstack59.setCount(1);
+							_menu.getSlots().get((int) c).set(_setstack59);
 							_player.containerMenu.broadcastChanges();
 						}
 					}

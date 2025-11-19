@@ -9,15 +9,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.core.registries.Registries;
 
-import net.mcreator.ceshi.world.features.Zhzhongguanzi01FeatureFeature;
-import net.mcreator.ceshi.world.features.YuanshikuangshiFeatureFeature;
-import net.mcreator.ceshi.world.features.Xxiaoguanzi02FeatureFeature;
-import net.mcreator.ceshi.world.features.Xxiaoguanzi01FeatureFeature;
-import net.mcreator.ceshi.world.features.ShenbanyanyuanshikuangshiFeatureFeature;
-import net.mcreator.ceshi.world.features.Molayiji2Feature;
-import net.mcreator.ceshi.world.features.Molayiji01FeatureFeature;
-import net.mcreator.ceshi.world.features.Disuikuai1FeatureFeature;
-import net.mcreator.ceshi.world.features.Ddaguanzi01FeatureFeature;
+import net.mcreator.ceshi.world.features.*;
 import net.mcreator.ceshi.PrimogemcraftMod;
 
 public class PrimogemcraftModFeatures {

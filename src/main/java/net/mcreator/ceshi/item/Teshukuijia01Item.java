@@ -18,7 +18,7 @@ import net.minecraft.Util;
 import java.util.List;
 import java.util.EnumMap;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public abstract class Teshukuijia01Item extends ArmorItem {
 	public static Holder<ArmorMaterial> ARMOR_MATERIAL = null;
 

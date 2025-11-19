@@ -76,6 +76,7 @@
         ]
       }
     ],
+    "animations": [],
     "name": "一叠银河大乐透",
     "rarity": "RARE",
     "creativeTabs": [
@@ -93,6 +94,7 @@
     },
     "destroyAnyBlock": false,
     "immuneToFire": false,
+    "isPiglinCurrency": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,

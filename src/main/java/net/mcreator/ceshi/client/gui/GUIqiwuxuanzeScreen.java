@@ -23,9 +23,9 @@ public class GUIqiwuxuanzeScreen extends AbstractContainerScreen<GUIqiwuxuanzeMe
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_xuanze0;
-	ImageButton imagebutton_xuanze01;
-	ImageButton imagebutton_xuanze02;
+	private ImageButton imagebutton_xuanze0;
+	private ImageButton imagebutton_xuanze01;
+	private ImageButton imagebutton_xuanze02;
 
 	public GUIqiwuxuanzeScreen(GUIqiwuxuanzeMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -106,7 +106,7 @@ public class GUIqiwuxuanzeScreen extends AbstractContainerScreen<GUIqiwuxuanzeMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -121,7 +121,7 @@ public class GUIqiwuxuanzeScreen extends AbstractContainerScreen<GUIqiwuxuanzeMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -136,7 +136,7 @@ public class GUIqiwuxuanzeScreen extends AbstractContainerScreen<GUIqiwuxuanzeMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

@@ -17,7 +17,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.mcreator.ceshi.init.PrimogemcraftModMobEffects;
 import net.mcreator.ceshi.PrimogemcraftMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class ChicunbMobEffect extends MobEffect {
 	public ChicunbMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);

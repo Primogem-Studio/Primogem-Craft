@@ -21,7 +21,7 @@ import net.mcreator.ceshi.procedures.GUIqwxzanniusx0Procedure;
 import net.mcreator.ceshi.procedures.GUIbhmgfqProcedure;
 import net.mcreator.ceshi.PrimogemcraftMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record GUIbhmgButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<GUIbhmgButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PrimogemcraftMod.MODID, "gu_ibhmg_buttons"));

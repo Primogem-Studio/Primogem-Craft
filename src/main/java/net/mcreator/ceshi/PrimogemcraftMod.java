@@ -20,19 +20,7 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.ceshi.world.features.StructureFeature;
 import net.mcreator.ceshi.network.PrimogemcraftModVariables;
-import net.mcreator.ceshi.init.PrimogemcraftModVillagerProfessions;
-import net.mcreator.ceshi.init.PrimogemcraftModTabs;
-import net.mcreator.ceshi.init.PrimogemcraftModSounds;
-import net.mcreator.ceshi.init.PrimogemcraftModPotions;
-import net.mcreator.ceshi.init.PrimogemcraftModParticleTypes;
-import net.mcreator.ceshi.init.PrimogemcraftModMobEffects;
-import net.mcreator.ceshi.init.PrimogemcraftModMenus;
-import net.mcreator.ceshi.init.PrimogemcraftModItems;
-import net.mcreator.ceshi.init.PrimogemcraftModFeatures;
-import net.mcreator.ceshi.init.PrimogemcraftModEntities;
-import net.mcreator.ceshi.init.PrimogemcraftModBlocks;
-import net.mcreator.ceshi.init.PrimogemcraftModBlockEntities;
-import net.mcreator.ceshi.init.PrimogemcraftModAttributes;
+import net.mcreator.ceshi.init.*;
 
 import net.hackermdch.pgc.CustomRegister;
 

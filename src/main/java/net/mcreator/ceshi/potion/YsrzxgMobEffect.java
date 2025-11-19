@@ -15,7 +15,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.mcreator.ceshi.procedures.YsrzxgcsxProcedure;
 import net.mcreator.ceshi.init.PrimogemcraftModMobEffects;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class YsrzxgMobEffect extends MobEffect {
 	public YsrzxgMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);

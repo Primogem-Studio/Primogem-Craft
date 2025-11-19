@@ -140,6 +140,7 @@
         ]
       }
     ],
+    "animations": [],
     "name": "§b原石碎片",
     "rarity": "COMMON",
     "creativeTabs": [
@@ -157,6 +158,7 @@
     },
     "destroyAnyBlock": false,
     "immuneToFire": false,
+    "isPiglinCurrency": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,

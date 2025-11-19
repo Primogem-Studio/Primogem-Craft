@@ -13,7 +13,7 @@ import net.mcreator.ceshi.client.model.Modelheitaxiaoren_Converted_Converted;
 import net.mcreator.ceshi.client.model.Modelcx_cyhsrmx;
 import net.mcreator.ceshi.client.model.Modelceshixiaodeng_Converted;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
+@EventBusSubscriber(Dist.CLIENT)
 public class PrimogemcraftModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {

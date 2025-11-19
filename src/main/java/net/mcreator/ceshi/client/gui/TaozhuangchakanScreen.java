@@ -24,14 +24,14 @@ public class TaozhuangchakanScreen extends AbstractContainerScreen<Taozhuangchak
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	EditBox taozhuang_0;
-	EditBox taozhuang_1;
-	EditBox taozhuang_2;
-	EditBox taozhuang_3;
-	EditBox taozhuang_4;
-	EditBox taozhuang_5;
-	EditBox taozhuang_6;
-	Button button_shua_xin;
+	private EditBox taozhuang_0;
+	private EditBox taozhuang_1;
+	private EditBox taozhuang_2;
+	private EditBox taozhuang_3;
+	private EditBox taozhuang_4;
+	private EditBox taozhuang_5;
+	private EditBox taozhuang_6;
+	private Button button_shua_xin;
 
 	public TaozhuangchakanScreen(TaozhuangchakanMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

@@ -13,7 +13,7 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.ceshi.init.PrimogemcraftModMobEffects;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class JiazuxianzhiMobEffect extends MobEffect {
 	public JiazuxianzhiMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -6684775);

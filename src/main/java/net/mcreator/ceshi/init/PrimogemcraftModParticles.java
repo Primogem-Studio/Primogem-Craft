@@ -10,7 +10,7 @@ import net.neoforged.api.distmarker.Dist;
 
 import net.mcreator.ceshi.client.particle.MoyinParticle;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(Dist.CLIENT)
 public class PrimogemcraftModParticles {
 	@SubscribeEvent
 	public static void registerParticles(RegisterParticleProvidersEvent event) {

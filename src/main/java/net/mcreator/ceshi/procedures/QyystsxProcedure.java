@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 @EventBusSubscriber
 public class QyystsxProcedure {
 	@SubscribeEvent
-	public static void onEntityAttacked(LivingDamageEvent.Post event) {
+	public static void onEntityAttacked(LivingDamageEvent.Pre event) {
 		if (event.getEntity() != null) {
 			execute(event, event.getEntity());
 		}

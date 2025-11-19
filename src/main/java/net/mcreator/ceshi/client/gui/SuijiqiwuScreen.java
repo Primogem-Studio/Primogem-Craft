@@ -22,7 +22,7 @@ public class SuijiqiwuScreen extends AbstractContainerScreen<SuijiqiwuMenu> impl
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_shua_xin;
+	private Button button_shua_xin;
 
 	public SuijiqiwuScreen(SuijiqiwuMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

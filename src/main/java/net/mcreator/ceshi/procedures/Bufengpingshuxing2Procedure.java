@@ -27,9 +27,9 @@ public class Bufengpingshuxing2Procedure {
 				}
 			}
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = new ItemStack(PrimogemcraftModItems.BUFENGPING.get()).copy();
-				_setstack.setCount(1);
-				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				ItemStack _setstack5 = new ItemStack(PrimogemcraftModItems.BUFENGPING.get()).copy();
+				_setstack5.setCount(1);
+				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack5);
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
 			}

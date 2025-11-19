@@ -58,9 +58,10 @@ public class HuiguiProcedure {
 			if (event instanceof ICancellableEvent _cancellable) {
 				_cancellable.setCanceled(true);
 			}
-			if (!world.isClientSide() && world.getServer() != null)
-				world.getServer().getPlayerList()
+			if (world instanceof ServerLevel _level) {
+				_level.getServer().getPlayerList()
 						.broadcastSystemMessage(Component.literal(("\u00A77\u73A9\u5BB6\u00A7f" + "<" + entity.getDisplayName().getString() + ">" + "\u00A77\u88AB\u00A7d\u68A6\u6A31\u00A77\u633D\u6551\u4E86\u4E00\u6B21\u751F\u547D\uFF01")), false);
+			}
 		}
 	}
 

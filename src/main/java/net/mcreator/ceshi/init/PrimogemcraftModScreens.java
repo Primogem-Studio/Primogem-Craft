@@ -8,32 +8,9 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
-import net.mcreator.ceshi.client.gui.ZhangquanzhezhinangguiScreen;
-import net.mcreator.ceshi.client.gui.YinhangScreen;
-import net.mcreator.ceshi.client.gui.YibangrenzhinangguiScreen;
-import net.mcreator.ceshi.client.gui.TaozhuangchakanScreen;
-import net.mcreator.ceshi.client.gui.SuijiqiwuScreen;
-import net.mcreator.ceshi.client.gui.SJGUIfumo01Screen;
-import net.mcreator.ceshi.client.gui.SJGUIfumo00Screen;
-import net.mcreator.ceshi.client.gui.MolalajitongScreen;
-import net.mcreator.ceshi.client.gui.MaoxianjiazhinangguiScreen;
-import net.mcreator.ceshi.client.gui.LiulangzhezhinangguiScreen;
-import net.mcreator.ceshi.client.gui.HeitayindaoyongguiScreen;
-import net.mcreator.ceshi.client.gui.GuiheitaxinyindaoScreen;
-import net.mcreator.ceshi.client.gui.GanjinglajitongScreen;
-import net.mcreator.ceshi.client.gui.GUIqiwuxuanzeScreen;
-import net.mcreator.ceshi.client.gui.GUImoladuiScreen;
-import net.mcreator.ceshi.client.gui.GUIhyzhqScreen;
-import net.mcreator.ceshi.client.gui.GUIhualiduanzaotaiScreen;
-import net.mcreator.ceshi.client.gui.GUIbhmgScreen;
-import net.mcreator.ceshi.client.gui.GUISJfumoScreen;
-import net.mcreator.ceshi.client.gui.CunzheshezhiScreen;
-import net.mcreator.ceshi.client.gui.CeshishijianxuanzejiemianScreen;
-import net.mcreator.ceshi.client.gui.CeshiguiScreen;
-import net.mcreator.ceshi.client.gui.CeshifumoguiScreen;
-import net.mcreator.ceshi.client.gui.BwdyinhangScreen;
+import net.mcreator.ceshi.client.gui.*;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(Dist.CLIENT)
 public class PrimogemcraftModScreens {
 	@SubscribeEvent
 	public static void clientLoad(RegisterMenuScreensEvent event) {

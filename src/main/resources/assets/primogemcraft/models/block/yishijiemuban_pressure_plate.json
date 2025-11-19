@@ -1,8 +1,8 @@
 {
   "parent": "block/pressure_plate_up",
   "textures": {
-    "particle": "primogemcraft:block/yimuding",
-    "texture": "primogemcraft:block/yimuding"
+    "texture": "primogemcraft:block/yimuding",
+    "particle": "primogemcraft:block/yimuding"
   },
   "render_type": "solid"
 }

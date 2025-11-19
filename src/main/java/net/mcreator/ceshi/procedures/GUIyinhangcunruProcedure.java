@@ -42,17 +42,8 @@ public class GUIyinhangcunruProcedure {
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
 				_menu.getSlots().get(0).set(ItemStack.EMPTY);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
 				_menu.getSlots().get(1).set(ItemStack.EMPTY);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
 				_menu.getSlots().get(2).set(ItemStack.EMPTY);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
 				_menu.getSlots().get(3).set(ItemStack.EMPTY);
 				_player.containerMenu.broadcastChanges();
 			}

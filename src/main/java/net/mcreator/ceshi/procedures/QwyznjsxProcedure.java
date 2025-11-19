@@ -64,9 +64,9 @@ public class QwyznjsxProcedure {
 				}
 				a.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("primogemcraft:fumoyuzhezn"))), 5);
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = a.copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
+					ItemStack _setstack24 = a.copy();
+					_setstack24.setCount(1);
+					_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack24);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}

@@ -19,7 +19,7 @@ import net.mcreator.ceshi.procedures.Hpy_xg_sxProcedure;
 import net.mcreator.ceshi.init.PrimogemcraftModMobEffects;
 import net.mcreator.ceshi.PrimogemcraftMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class HpyxgMobEffect extends MobEffect {
 	public HpyxgMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);

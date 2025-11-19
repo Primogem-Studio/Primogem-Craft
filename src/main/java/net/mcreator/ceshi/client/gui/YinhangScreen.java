@@ -23,8 +23,8 @@ public class YinhangScreen extends AbstractContainerScreen<YinhangMenu> implemen
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_dui;
-	ImageButton imagebutton_cuo;
+	private ImageButton imagebutton_dui;
+	private ImageButton imagebutton_cuo;
 
 	public YinhangScreen(YinhangMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -99,7 +99,7 @@ public class YinhangScreen extends AbstractContainerScreen<YinhangMenu> implemen
 			}
 		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -113,7 +113,7 @@ public class YinhangScreen extends AbstractContainerScreen<YinhangMenu> implemen
 			}
 		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

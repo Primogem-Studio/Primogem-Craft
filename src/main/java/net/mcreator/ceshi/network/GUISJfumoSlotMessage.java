@@ -18,7 +18,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.ceshi.procedures.GUIshijianfumoshuxingProcedure;
 import net.mcreator.ceshi.PrimogemcraftMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record GUISJfumoSlotMessage(int slotID, int x, int y, int z, int changeType, int meta) implements CustomPacketPayload {
 
 	public static final Type<GUISJfumoSlotMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PrimogemcraftMod.MODID, "guis_jfumo_slots"));

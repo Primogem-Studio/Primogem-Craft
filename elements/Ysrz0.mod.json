@@ -125,6 +125,7 @@
         ]
       }
     ],
+    "animations": [],
     "name": "元素熔珠",
     "rarity": "COMMON",
     "creativeTabs": [
@@ -142,6 +143,7 @@
     },
     "destroyAnyBlock": false,
     "immuneToFire": true,
+    "isPiglinCurrency": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,

@@ -31,7 +31,7 @@ public class JhsbsxProcedure {
 				{
 					PrimogemcraftModVariables.PlayerVariables _vars = entity.getData(PrimogemcraftModVariables.PLAYER_VARIABLES);
 					_vars.jun_heng = 0;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal("\u00A7a\u00A7l\u4F60\u662F\u521B\u9020\u6A21\u5F0F\uFF0C\u5DF2\u6F5C\u884C\u53F3\u952E\u5C06\u5747\u8861\u7B49\u7EA7\u8BBE\u7F6E\u4E3A 0"), false);

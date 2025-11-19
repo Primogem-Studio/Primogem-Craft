@@ -78,9 +78,9 @@ public class FenlieggzsxProcedure {
 					}
 				}
 				if (e1 instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PrimogemcraftModItems.QWGGZFENLIE_B.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
+					ItemStack _setstack12 = new ItemStack(PrimogemcraftModItems.QWGGZFENLIE_B.get()).copy();
+					_setstack12.setCount(1);
+					_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack12);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -114,9 +114,9 @@ public class FenlieggzsxProcedure {
 							}
 						}
 						if (e1 instanceof LivingEntity _entity) {
-							ItemStack _setstack = new ItemStack(Items.GOLDEN_SWORD).copy();
-							_setstack.setCount(1);
-							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+							ItemStack _setstack18 = new ItemStack(Items.GOLDEN_SWORD).copy();
+							_setstack18.setCount(1);
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack18);
 							if (_entity instanceof Player _player)
 								_player.getInventory().setChanged();
 						}
@@ -150,9 +150,9 @@ public class FenlieggzsxProcedure {
 							}
 						}
 						if (e1 instanceof LivingEntity _entity) {
-							ItemStack _setstack = new ItemStack(Items.IRON_SWORD).copy();
-							_setstack.setCount(1);
-							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+							ItemStack _setstack23 = new ItemStack(Items.IRON_SWORD).copy();
+							_setstack23.setCount(1);
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack23);
 							if (_entity instanceof Player _player)
 								_player.getInventory().setChanged();
 						}
@@ -186,9 +186,9 @@ public class FenlieggzsxProcedure {
 							}
 						}
 						if (e1 instanceof LivingEntity _entity) {
-							ItemStack _setstack = new ItemStack(Items.DIAMOND_SWORD).copy();
-							_setstack.setCount(1);
-							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+							ItemStack _setstack28 = new ItemStack(Items.DIAMOND_SWORD).copy();
+							_setstack28.setCount(1);
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack28);
 							if (_entity instanceof Player _player)
 								_player.getInventory().setChanged();
 						}

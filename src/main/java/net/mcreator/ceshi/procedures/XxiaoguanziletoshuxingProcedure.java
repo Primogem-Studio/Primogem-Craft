@@ -78,8 +78,9 @@ public class XxiaoguanziletoshuxingProcedure {
 					}
 				} else {
 					entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), 1000);
-					if (!world.isClientSide() && world.getServer() != null)
-						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal((entity.getDisplayName().getString() + "\u00A7c\u8F93\u5F97\u4E00\u584C\u7CCA\u6D82\uFF0C\u670B\u53CB")), false);
+					if (world instanceof ServerLevel _level) {
+						_level.getServer().getPlayerList().broadcastSystemMessage(Component.literal((entity.getDisplayName().getString() + "\u00A7c\u8F93\u5F97\u4E00\u584C\u7CCA\u6D82\uFF0C\u670B\u53CB")), false);
+					}
 				}
 			}
 		}

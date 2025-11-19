@@ -23,9 +23,9 @@ public class SJGUIfumo00Screen extends AbstractContainerScreen<SJGUIfumo00Menu> 
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_heita_xuanzeanniu;
-	ImageButton imagebutton_heita_xuanzeanniu1;
-	ImageButton imagebutton_heita_xuanzeanniu2;
+	private ImageButton imagebutton_heita_xuanzeanniu;
+	private ImageButton imagebutton_heita_xuanzeanniu1;
+	private ImageButton imagebutton_heita_xuanzeanniu2;
 
 	public SJGUIfumo00Screen(SJGUIfumo00Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -94,7 +94,7 @@ public class SJGUIfumo00Screen extends AbstractContainerScreen<SJGUIfumo00Menu> 
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -109,7 +109,7 @@ public class SJGUIfumo00Screen extends AbstractContainerScreen<SJGUIfumo00Menu> 
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -124,7 +124,7 @@ public class SJGUIfumo00Screen extends AbstractContainerScreen<SJGUIfumo00Menu> 
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

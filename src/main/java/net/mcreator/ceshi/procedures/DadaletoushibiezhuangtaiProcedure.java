@@ -108,7 +108,7 @@ public class DadaletoushibiezhuangtaiProcedure {
 					{
 						PrimogemcraftModVariables.PlayerVariables _vars = entity.getData(PrimogemcraftModVariables.PLAYER_VARIABLES);
 						_vars.daletou_jishu = entity.getData(PrimogemcraftModVariables.PLAYER_VARIABLES).daletou_jishu + 1;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity.getData(PrimogemcraftModVariables.PLAYER_VARIABLES).daletou_jishu >= 100) {
 						if (!(entity instanceof ServerPlayer _plr18 && _plr18.level() instanceof ServerLevel

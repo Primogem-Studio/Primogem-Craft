@@ -36,9 +36,9 @@ public class Bufengpingsx01Procedure {
 			entity.setDeltaMovement(new Vec3(0, 1.35, 0));
 			if (!(getEntityGameType(entity) == GameType.CREATIVE)) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PrimogemcraftModItems.YSJBFPK.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack8 = new ItemStack(PrimogemcraftModItems.YSJBFPK.get()).copy();
+					_setstack8.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack8);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}

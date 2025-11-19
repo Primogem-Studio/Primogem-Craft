@@ -36,7 +36,7 @@ public class Wyzp_sx_1Procedure {
 					{
 						PrimogemcraftModVariables.PlayerVariables _vars = entity.getData(PrimogemcraftModVariables.PLAYER_VARIABLES);
 						_vars.xyzp_shou_ci = true;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 				} else {
 					if (Math.random() < 0.0001) {

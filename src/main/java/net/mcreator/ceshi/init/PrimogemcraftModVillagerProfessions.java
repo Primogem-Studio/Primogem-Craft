@@ -29,7 +29,7 @@ import java.util.HashMap;
 
 import com.google.common.collect.ImmutableSet;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class PrimogemcraftModVillagerProfessions {
 	private static final Map<String, ProfessionPoiType> POI_TYPES = new HashMap<>();
 	public static final DeferredRegister<VillagerProfession> PROFESSIONS = DeferredRegister.create(Registries.VILLAGER_PROFESSION, PrimogemcraftMod.MODID);

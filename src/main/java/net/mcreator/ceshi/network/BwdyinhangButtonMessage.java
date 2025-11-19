@@ -19,7 +19,7 @@ import net.mcreator.ceshi.procedures.GUIyinhanggunkaiProcedure;
 import net.mcreator.ceshi.procedures.GUIbwdyinhang01Procedure;
 import net.mcreator.ceshi.PrimogemcraftMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record BwdyinhangButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<BwdyinhangButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PrimogemcraftMod.MODID, "bwdyinhang_buttons"));

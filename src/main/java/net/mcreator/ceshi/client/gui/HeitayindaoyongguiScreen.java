@@ -23,9 +23,9 @@ public class HeitayindaoyongguiScreen extends AbstractContainerScreen<Heitayinda
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_heitaanniu;
-	ImageButton imagebutton_heitaanniu1;
-	ImageButton imagebutton_heitaanniu2;
+	private ImageButton imagebutton_heitaanniu;
+	private ImageButton imagebutton_heitaanniu1;
+	private ImageButton imagebutton_heitaanniu2;
 
 	public HeitayindaoyongguiScreen(HeitayindaoyongguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -92,7 +92,7 @@ public class HeitayindaoyongguiScreen extends AbstractContainerScreen<Heitayinda
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -107,7 +107,7 @@ public class HeitayindaoyongguiScreen extends AbstractContainerScreen<Heitayinda
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -122,7 +122,7 @@ public class HeitayindaoyongguiScreen extends AbstractContainerScreen<Heitayinda
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

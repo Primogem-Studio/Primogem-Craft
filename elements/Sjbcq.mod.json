@@ -76,6 +76,7 @@
         ]
       }
     ],
+    "animations": [],
     "name": "附魔事件补偿券",
     "rarity": "EPIC",
     "creativeTabs": [
@@ -93,6 +94,7 @@
     },
     "destroyAnyBlock": false,
     "immuneToFire": true,
+    "isPiglinCurrency": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,

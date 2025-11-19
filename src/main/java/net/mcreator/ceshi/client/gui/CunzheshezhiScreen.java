@@ -26,15 +26,15 @@ public class CunzheshezhiScreen extends AbstractContainerScreen<CunzheshezhiMenu
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	EditBox cunzhe_shuliang;
-	Button button_10;
-	Button button_100;
-	Button button_1000;
-	Button button_11;
-	Button button_101;
-	Button button_1001;
-	ImageButton imagebutton_dui;
-	ImageButton imagebutton_cuo;
+	private EditBox cunzhe_shuliang;
+	private Button button_10;
+	private Button button_100;
+	private Button button_1000;
+	private Button button_11;
+	private Button button_101;
+	private Button button_1001;
+	private ImageButton imagebutton_dui;
+	private ImageButton imagebutton_cuo;
 
 	public CunzheshezhiScreen(CunzheshezhiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -187,7 +187,7 @@ public class CunzheshezhiScreen extends AbstractContainerScreen<CunzheshezhiMenu
 			}
 		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -201,7 +201,7 @@ public class CunzheshezhiScreen extends AbstractContainerScreen<CunzheshezhiMenu
 			}
 		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

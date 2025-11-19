@@ -13,7 +13,7 @@ import net.minecraft.world.effect.MobEffect;
 import net.mcreator.ceshi.procedures.Rykj_xg_sx_xzProcedure;
 import net.mcreator.ceshi.init.PrimogemcraftModMobEffects;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class RykjxgMobEffect extends MobEffect {
 	public RykjxgMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);

@@ -17,7 +17,7 @@ import net.minecraft.core.registries.Registries;
 
 import net.mcreator.ceshi.PrimogemcraftMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class PrimogemcraftModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PrimogemcraftMod.MODID);
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> PRIMOGEMCRAFT = REGISTRY.register("primogemcraft",

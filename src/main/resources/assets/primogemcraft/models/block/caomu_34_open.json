@@ -1,8 +1,8 @@
 {
   "parent": "block/template_fence_gate_open",
   "textures": {
-    "particle": "primogemcraft:block/yuanhe_muban_3",
-    "texture": "primogemcraft:block/yuanhe_muban_3"
+    "texture": "primogemcraft:block/yuanhe_muban_3",
+    "particle": "primogemcraft:block/yuanhe_muban_3"
   },
   "render_type": "solid"
 }

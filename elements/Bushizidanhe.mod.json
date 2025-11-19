@@ -7,6 +7,7 @@
     "customModelName": "Tool",
     "customProperties": {},
     "states": [],
+    "animations": [],
     "name": "§4名为一切的开始",
     "rarity": "EPIC",
     "creativeTabs": [
@@ -24,6 +25,7 @@
     },
     "destroyAnyBlock": false,
     "immuneToFire": true,
+    "isPiglinCurrency": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,

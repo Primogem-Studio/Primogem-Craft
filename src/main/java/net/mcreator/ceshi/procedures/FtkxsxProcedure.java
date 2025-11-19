@@ -18,7 +18,7 @@ public class FtkxsxProcedure {
 			o1 = true;
 		}
 		if (entity instanceof Player _player && !_player.level().isClientSide())
-			_player.displayClientMessage(Component.literal(("\u00A77\u81EA\u5728\u677E\u77F3\u5957\u7F13\u964D\u6548\u679C " + s1)), false);
+			_player.displayClientMessage(Component.literal(("\u00A77\u81EA\u5728\u677E\u77F3\u5957\u7F13\u964D\u6548\u679C  " + s1)), false);
 		entity.getPersistentData().putBoolean("zzss_kj_hjxz", o1);
 	}
 }

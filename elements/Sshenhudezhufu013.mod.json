@@ -7,6 +7,7 @@
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
+    "animations": [],
     "name": "神狐的祝福",
     "rarity": "RARE",
     "creativeTabs": [
@@ -21,6 +22,7 @@
     "damageCount": 0,
     "destroyAnyBlock": false,
     "immuneToFire": false,
+    "isPiglinCurrency": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,

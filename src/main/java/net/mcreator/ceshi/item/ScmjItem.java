@@ -26,7 +26,7 @@ import net.mcreator.ceshi.init.PrimogemcraftModItems;
 import java.util.List;
 import java.util.EnumMap;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public abstract class ScmjItem extends ArmorItem {
 	public static Holder<ArmorMaterial> ARMOR_MATERIAL = null;
 

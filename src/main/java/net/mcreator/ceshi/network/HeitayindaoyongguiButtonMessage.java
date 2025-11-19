@@ -20,7 +20,7 @@ import net.mcreator.ceshi.procedures.Htyd02Procedure;
 import net.mcreator.ceshi.procedures.Htyd01Procedure;
 import net.mcreator.ceshi.PrimogemcraftMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record HeitayindaoyongguiButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<HeitayindaoyongguiButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PrimogemcraftMod.MODID, "heitayindaoyonggui_buttons"));
