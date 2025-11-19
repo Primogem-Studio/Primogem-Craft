@@ -65,7 +65,7 @@ public class XfcqItem extends SwordItem {
 	@Override
 	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
-		Xfcq_sxProcedure.execute(entity.level(), entity, itemstack);
+		Xfcq_sxProcedure.execute(entity.level(), sourceentity, itemstack);
 		return retval;
 	}
 
