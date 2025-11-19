@@ -1,15 +1,20 @@
 {
-  "type": "minecraft:smithing_transform",
-  "template": {
-    "item": "minecraft:gold_nugget"
-  },
-  "base": {
-    "item": "primogemcraft:mmola_01"
-  },
-  "addition": {
-    "item": "primogemcraft:mmola_01"
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aab",
+    "aa "
+  ],
+  "key": {
+    "a": {
+      "item": "primogemcraft:mmola_01"
+    },
+    "b": {
+      "item": "primogemcraft:yssp"
+    }
   },
   "result": {
-    "id": "primogemcraft:jinzhimola"
+    "id": "primogemcraft:jinzhimola",
+    "count": 1
   }
 }

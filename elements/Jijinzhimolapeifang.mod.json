@@ -2,7 +2,7 @@
   "_fv": 79,
   "_type": "recipe",
   "definition": {
-    "recipeType": "Smithing",
+    "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [],
@@ -11,16 +11,36 @@
     "cookingTime": 200,
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
-    "smithingInputStack": {
-      "value": "CUSTOM:Mmola01"
-    },
-    "smithingInputAdditionStack": {
-      "value": "CUSTOM:Mmola01"
-    },
-    "smithingInputTemplateStack": {
-      "value": "Items.GOLD_NUGGET"
-    },
-    "smithingReturnStack": {
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Mmola01"
+      },
+      {
+        "value": "CUSTOM:Mmola01"
+      },
+      {
+        "value": "CUSTOM:Yssp"
+      },
+      {
+        "value": "CUSTOM:Mmola01"
+      },
+      {
+        "value": "CUSTOM:Mmola01"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
       "value": "CUSTOM:Jinzhimola"
     },
     "name": "jijinzhimolapeifang",

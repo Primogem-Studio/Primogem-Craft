@@ -2,7 +2,7 @@
   "_fv": 79,
   "_type": "recipe",
   "definition": {
-    "recipeType": "Smithing",
+    "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [],
@@ -11,16 +11,36 @@
     "cookingTime": 200,
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
-    "smithingInputStack": {
-      "value": "Items.GOLDEN_APPLE#0"
-    },
-    "smithingInputAdditionStack": {
-      "value": "CUSTOM:Yuanshi"
-    },
-    "smithingInputTemplateStack": {
-      "value": "Items.DYE#4"
-    },
-    "smithingReturnStack": {
+    "recipeSlots": [
+      {
+        "value": "Items.DYE#4"
+      },
+      {
+        "value": "CUSTOM:Yuanshi"
+      },
+      {
+        "value": "Items.DYE#4"
+      },
+      {
+        "value": "CUSTOM:Yuanshi"
+      },
+      {
+        "value": "Items.DYE#4"
+      },
+      {
+        "value": "CUSTOM:Yuanshi"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Yuanshi"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
       "value": "CUSTOM:Chuangshijiejing"
     },
     "name": "chuangshijiejinghecheng",

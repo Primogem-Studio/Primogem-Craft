@@ -1,15 +1,21 @@
 {
-  "type": "minecraft:smithing_transform",
-  "template": {
-    "item": "minecraft:lapis_lazuli"
-  },
-  "base": {
-    "item": "minecraft:golden_apple"
-  },
-  "addition": {
-    "item": "primogemcraft:yuanshi"
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bab",
+    " b "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "b": {
+      "item": "primogemcraft:yuanshi"
+    }
   },
   "result": {
-    "id": "primogemcraft:chuangshijiejing"
+    "id": "primogemcraft:chuangshijiejing",
+    "count": 1
   }
 }
