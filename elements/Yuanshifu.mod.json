@@ -8,6 +8,7 @@
     "texture": "ysf",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§b原石 斧",
     "specialInformation": {
       "fixedValue": []
@@ -20,7 +21,7 @@
     "efficiency": 8.5,
     "attackSpeed": 1.0,
     "enchantability": 15,
-    "damageVsEntity": 10.0,
+    "damageVsEntity": 9.0,
     "usageCount": 320,
     "glowCondition": {
       "fixedValue": false

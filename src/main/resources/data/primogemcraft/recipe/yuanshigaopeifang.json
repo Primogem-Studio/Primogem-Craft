@@ -1,15 +1,21 @@
 {
-  "type": "minecraft:smithing_transform",
-  "template": {
-    "item": "primogemcraft:yuanshiyuanpei"
-  },
-  "base": {
-    "item": "minecraft:wooden_pickaxe"
-  },
-  "addition": {
-    "item": "primogemcraft:yuanshi"
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    " b ",
+    " b "
+  ],
+  "key": {
+    "a": {
+      "item": "primogemcraft:yuanshi"
+    },
+    "b": {
+      "item": "minecraft:stick"
+    }
   },
   "result": {
-    "id": "primogemcraft:yuanshigao"
+    "id": "primogemcraft:yuanshigao",
+    "count": 1
   }
 }

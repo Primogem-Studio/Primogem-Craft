@@ -46,6 +46,6 @@ public class YuanshifuItem extends AxeItem {
 	};
 
 	public YuanshifuItem() {
-		super(TOOL_TIER, new Item.Properties().attributes(DiggerItem.createAttributes(TOOL_TIER, 9f, -3f)).fireResistant());
+		super(TOOL_TIER, new Item.Properties().attributes(DiggerItem.createAttributes(TOOL_TIER, 8f, -3f)).fireResistant());
 	}
 }

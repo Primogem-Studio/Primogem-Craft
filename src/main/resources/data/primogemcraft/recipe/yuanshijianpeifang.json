@@ -1,15 +1,21 @@
 {
-  "type": "minecraft:smithing_transform",
-  "template": {
-    "item": "primogemcraft:yuanshiyuanpei"
-  },
-  "base": {
-    "item": "minecraft:wooden_sword"
-  },
-  "addition": {
-    "item": "primogemcraft:yuanshi"
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "a",
+    "b"
+  ],
+  "key": {
+    "a": {
+      "item": "primogemcraft:yuanshi"
+    },
+    "b": {
+      "item": "minecraft:stick"
+    }
   },
   "result": {
-    "id": "primogemcraft:yuanshijian"
+    "id": "primogemcraft:yuanshijian",
+    "count": 1
   }
 }
