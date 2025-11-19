@@ -1,14 +1,10 @@
 {
-  "id": "subtempplugin1756372191512",
-  "supportedversions": [
-    202500299999,
-    2025002
-  ],
+  "id": "pgcitems",
   "weight": 0,
   "info": {
-    "name": "SubTempPlugin1756372191512",
+    "name": "Pgc Items",
     "version": "1.0",
-    "description": "Child plugin 1756372191512",
-    "author": "cdc12345,You"
+    "description": "Pgc Items",
+    "author": "PepperMR"
   }
 }
