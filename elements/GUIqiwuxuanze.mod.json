@@ -168,7 +168,7 @@
         "data": {
           "name": "tooltip_sscqiang_zhi_tui_chu_jie_mian_hui_sui_ji_xuan_ze_ge_qi_wu",
           "text": {
-            "fixedValue": "§c强制退出界面会随机选择一个奇物！"
+            "fixedValue": "§c强制退出界面会随机选择一个！"
           },
           "width": 48,
           "height": 8,
@@ -182,7 +182,7 @@
         "data": {
           "name": "label_xuan_ze_ge_qi_wu",
           "text": {
-            "fixedValue": "选择一个奇物"
+            "fixedValue": "选择一个"
           },
           "color": {
             "value": -1,
