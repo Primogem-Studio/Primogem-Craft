@@ -28,7 +28,7 @@ public class Qwsczzsx1Procedure {
 				}
 					break;
 			}
-			GUIqwxz03Procedure.execute(world, x, y, z, entity, "normal/" + s1);
+			GUIqwxz03Procedure.execute(world, x, y, z, entity, true, "c:curio/normal/" + s1);
 			itemstack.shrink(1);
 		}
 	}

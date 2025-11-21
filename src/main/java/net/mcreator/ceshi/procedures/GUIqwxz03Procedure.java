@@ -14,12 +14,11 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.ceshi.world.inventory.GUIqiwuxuanzeMenu;
-import net.mcreator.ceshi.init.PrimogemcraftModMenus;
 
 import io.netty.buffer.Unpooled;
 
 public class GUIqwxz03Procedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, String _tag) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, boolean qd, String _tag) {
 		if (entity == null || _tag == null)
 			return;
 		String tag1 = "";
@@ -47,39 +46,24 @@ public class GUIqwxz03Procedure {
 			}, _bpos);
 		}
 		if (!world.isClientSide()) {
-			tag1 = "c:curio/" + _tag;
-			if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-				ItemStack _setstack2 = TagItemProcedure.execute(tag1).copy();
-				_setstack2.setCount(1);
-				_menu.getSlots().get(0).set(_setstack2);
-				_player.containerMenu.broadcastChanges();
-			}
-			i1 = TagItemProcedure.execute(tag1);
-			item0 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu3 ? _menu3.getSlots().get(0).getItem() : ItemStack.EMPTY);
-			item1 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu4 ? _menu4.getSlots().get(1).getItem() : ItemStack.EMPTY);
+			i1 = GUIxuanitemProcedure.execute(world, qd, _tag);
+			GUIitemProcedure.execute(entity, i1, 0);
+			i1 = GUIxuanitemProcedure.execute(world, qd, _tag);
+			item0 = GUIitemstackProcedure.execute(entity, 0);
+			item1 = GUIitemstackProcedure.execute(entity, 1);
 			while (i1.getItem() == item0.getItem() || item1.getItem() == Blocks.AIR.asItem()) {
-				i1 = TagItemProcedure.execute(tag1);
+				i1 = GUIxuanitemProcedure.execute(world, qd, _tag);
 				if (!(i1.getItem() == item0.getItem())) {
-					if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-						ItemStack _setstack8 = i1.copy();
-						_setstack8.setCount(1);
-						_menu.getSlots().get(1).set(_setstack8);
-						_player.containerMenu.broadcastChanges();
-					}
+					GUIitemProcedure.execute(entity, i1, 1);
 					break;
 				}
 			}
-			item1 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu9 ? _menu9.getSlots().get(1).getItem() : ItemStack.EMPTY);
-			item2 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu10 ? _menu10.getSlots().get(2).getItem() : ItemStack.EMPTY);
+			item1 = GUIitemstackProcedure.execute(entity, 1);
+			item2 = GUIitemstackProcedure.execute(entity, 2);
 			while (i1.getItem() == item1.getItem() || i1.getItem() == item0.getItem() || item2.getItem() == Blocks.AIR.asItem()) {
-				i1 = TagItemProcedure.execute(tag1);
+				i1 = GUIxuanitemProcedure.execute(world, qd, _tag);
 				if (!(i1.getItem() == item1.getItem()) && !(i1.getItem() == item0.getItem())) {
-					if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-						ItemStack _setstack16 = i1.copy();
-						_setstack16.setCount(1);
-						_menu.getSlots().get(2).set(_setstack16);
-						_player.containerMenu.broadcastChanges();
-					}
+					GUIitemProcedure.execute(entity, i1, 2);
 					break;
 				}
 			}

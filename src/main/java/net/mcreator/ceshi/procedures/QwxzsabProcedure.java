@@ -16,7 +16,7 @@ public class QwxzsabProcedure {
 			} else {
 				s1 = "b";
 			}
-			GUIqwxz03Procedure.execute(world, x, y, z, entity, "normal/" + s1);
+			GUIqwxz03Procedure.execute(world, x, y, z, entity, true, "c:curio/normal/" + s1);
 		}
 	}
 }

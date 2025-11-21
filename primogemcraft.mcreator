@@ -32935,6 +32935,10 @@
             "type": "entity"
           },
           {
+            "name": "qd",
+            "type": "logic"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -36078,6 +36082,105 @@
         ],
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/GUI012itemzhiProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "LoottItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "loott_item",
+      "metadata": {
+        "return_type": "itemstack",
+        "dependencies": [
+          {
+            "name": "_tag",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/LoottItemProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GUIxuanitem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gu_ixuanitem",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "qd",
+            "type": "logic"
+          },
+          {
+            "name": "_tag",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "itemstack",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/GUIxuanitemProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GUIitem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gu_iitem",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "zhi",
+            "type": "number"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/GUIitemProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GUIitemstack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gu_iitemstack",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "zhi",
+            "type": "number"
+          }
+        ],
+        "return_type": "itemstack",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/GUIitemstackProcedure.java"
         ]
       }
     }
