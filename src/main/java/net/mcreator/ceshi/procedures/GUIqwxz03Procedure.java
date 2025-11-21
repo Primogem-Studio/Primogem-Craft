@@ -26,6 +26,7 @@ public class GUIqwxz03Procedure {
 		ItemStack item0 = ItemStack.EMPTY;
 		ItemStack item2 = ItemStack.EMPTY;
 		ItemStack item1 = ItemStack.EMPTY;
+		double b = 0;
 		if (entity instanceof ServerPlayer _ent) {
 			BlockPos _bpos = BlockPos.containing(x, y, z);
 			_ent.openMenu(new MenuProvider() {
@@ -53,7 +54,9 @@ public class GUIqwxz03Procedure {
 			item1 = GUIitemstackProcedure.execute(entity, 1);
 			while (i1.getItem() == item0.getItem() || item1.getItem() == Blocks.AIR.asItem()) {
 				i1 = GUIxuanitemProcedure.execute(world, qd, _tag);
-				if (!(i1.getItem() == item0.getItem())) {
+				b = b + 1;
+				if (b > 10 || !(i1.getItem() == item0.getItem())) {
+					b = 0;
 					GUIitemProcedure.execute(entity, i1, 1);
 					break;
 				}
@@ -62,7 +65,8 @@ public class GUIqwxz03Procedure {
 			item2 = GUIitemstackProcedure.execute(entity, 2);
 			while (i1.getItem() == item1.getItem() || i1.getItem() == item0.getItem() || item2.getItem() == Blocks.AIR.asItem()) {
 				i1 = GUIxuanitemProcedure.execute(world, qd, _tag);
-				if (!(i1.getItem() == item1.getItem()) && !(i1.getItem() == item0.getItem())) {
+				b = b + 1;
+				if (b > 10 || !(i1.getItem() == item1.getItem()) && !(i1.getItem() == item0.getItem())) {
 					GUIitemProcedure.execute(entity, i1, 2);
 					break;
 				}

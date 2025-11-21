@@ -1,0 +1,27 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:Qiyu"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 20.0,
+    "cookingTime": 400,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "CUSTOM:Qiyu"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:Qysp"
+    },
+    "name": "qysppf",
+    "namespace": "mod"
+  }
+}

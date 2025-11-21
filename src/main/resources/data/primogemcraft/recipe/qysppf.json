@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "experience": 20,
+  "cookingtime": 400,
+  "ingredient": {
+    "item": "primogemcraft:qiyu"
+  },
+  "result": {
+    "id": "primogemcraft:qysp"
+  }
+}

@@ -7186,6 +7186,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -36183,6 +36199,82 @@
           "src/main/java/net/mcreator/ceshi/procedures/GUIitemstackProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Yssxqyfk",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yssxqyfk",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/loot_table/yssx_qyks.json"
+        ]
+      }
+    },
+    {
+      "name": "Qyfksx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "qyfksx",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/QyfksxProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Qysp",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "qysp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ceshi/item/QyspItem.java",
+          "src/main/resources/assets/primogemcraft/models/item/qysp.json"
+        ]
+      }
+    },
+    {
+      "name": "Qysppf",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "qysppf",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/qysppf.json",
+          "src/main/resources/data/primogemcraft/advancement/recipes/qysppf.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -38741,7 +38833,8 @@
       "Xiaoheita",
       "Xiaodeng",
       "Qwmhs",
-      "Qwtxzp"
+      "Qwtxzp",
+      "Qysp"
     ],
     "CUSTOM:Yuanshigongjuxuanxiangka": [
       "Jiuchanzhiyuangao",
@@ -40813,7 +40906,9 @@
       "advancements.jdyshj_3.title": "元素装备IV",
       "advancements.jdyshj_3.descr": "至强升级！",
       "advancements.jdyshj_0.descr": "试试用元素金属给装备升级！",
-      "advancements.jdyshj_0.title": "元素装备？"
+      "advancements.jdyshj_0.title": "元素装备？",
+      "item.primogemcraft.qysp.description_0": "§9右键领取特殊奖励！",
+      "item.primogemcraft.qysp": "§d奇遇"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -42649,7 +42744,9 @@
       "advancements.jdyshj_3.title": "元素装备IV",
       "advancements.jdyshj_3.descr": "至强升级！",
       "advancements.jdyshj_0.descr": "试试用元素金属给装备升级！",
-      "advancements.jdyshj_0.title": "元素装备？"
+      "advancements.jdyshj_0.title": "元素装备？",
+      "item.primogemcraft.qysp.description_0": "§9右键领取特殊奖励！",
+      "item.primogemcraft.qysp": "§d奇遇"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -44479,7 +44576,9 @@
       "advancements.jdyshj_3.title": "元素装备IV",
       "advancements.jdyshj_3.descr": "至强升级！",
       "advancements.jdyshj_0.descr": "试试用元素金属给装备升级！",
-      "advancements.jdyshj_0.title": "元素装备？"
+      "advancements.jdyshj_0.title": "元素装备？",
+      "item.primogemcraft.qysp.description_0": "§9右键领取特殊奖励！",
+      "item.primogemcraft.qysp": "§d奇遇"
     }
   },
   "metadata": {
