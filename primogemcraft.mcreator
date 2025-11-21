@@ -36058,6 +36058,28 @@
           "src/main/java/net/mcreator/ceshi/procedures/Axby_ct_msProcedure.java"
         ]
       }
+    },
+    {
+      "name": "GUI012itemzhi",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gui_012itemzhi",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "zhi",
+            "type": "number"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/GUI012itemzhiProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

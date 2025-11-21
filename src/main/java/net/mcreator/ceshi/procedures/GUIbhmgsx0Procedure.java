@@ -18,6 +18,7 @@ public class GUIbhmgsx0Procedure {
 		if (entity == null)
 			return;
 		double a = 0;
+		ItemStack i = ItemStack.EMPTY;
 		if (!world.isClientSide()) {
 			if (GUIbhmgsxhs1Procedure.execute(entity)) {
 				a = 0;
@@ -25,10 +26,11 @@ public class GUIbhmgsx0Procedure {
 					if (!world.isClientSide() && world.getServer() != null) {
 						for (ItemStack itemstackiterator : world.getServer().reloadableRegistries().getLootTable(ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.parse("primogemcraft:qqyjin")))
 								.getRandomItems(new LootParams.Builder((ServerLevel) world).create(LootContextParamSets.EMPTY))) {
+							i = itemstackiterator;
 							if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
-								ItemStack _setstack2 = itemstackiterator.copy();
-								_setstack2.setCount(1);
-								_menu.getSlots().get((int) a).set(_setstack2);
+								ItemStack _setstack3 = i.copy();
+								_setstack3.setCount(i.getCount());
+								_menu.getSlots().get((int) a).set(_setstack3);
 								_player.containerMenu.broadcastChanges();
 							}
 						}
