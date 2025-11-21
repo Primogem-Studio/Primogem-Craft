@@ -19,7 +19,7 @@ public class GUI012itemzhiProcedure {
 			_setstack.setCount(i.getCount());
 			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 		}
-		for (int index0 = 0; index0 < 2; index0++) {
+		for (int index0 = 0; index0 < 3; index0++) {
 			if (entity instanceof Player _player && _player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu) {
 				_menu.getSlots().get((int) index0).set(ItemStack.EMPTY);
 				_player.containerMenu.broadcastChanges();
