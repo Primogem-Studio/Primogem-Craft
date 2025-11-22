@@ -80,7 +80,7 @@ public class YstzsxOProcedure {
             addEffect(player, MobEffects.FIRE_RESISTANCE, 80, 0, true, false);
         }
         if (f >= 4) {
-            addEffect(player, PrimogemcraftModMobEffects.RYKJXG, 1200, (int) Math.round(f - 1), false, false);
+            addEffect(player, PrimogemcraftModMobEffects.RYKJXG, 60, (int) Math.round(f - 1), false, false);
         }
         var effect = player.getEffect(PrimogemcraftModMobEffects.RYKJXG);
         if (effect != null && effect.getAmplifier() != Math.round(f - 1)) {

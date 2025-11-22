@@ -26,7 +26,7 @@ public class RykjxgMobEffect extends MobEffect {
 
 	@Override
 	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-		Rykj_xg_sx_xzProcedure.execute(entity);
+		Rykj_xg_sx_xzProcedure.execute();
 		return super.applyEffectTick(entity, amplifier);
 	}
 

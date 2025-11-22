@@ -21066,12 +21066,7 @@
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/Rykj_xg_sx_xzProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       }
     },
     {

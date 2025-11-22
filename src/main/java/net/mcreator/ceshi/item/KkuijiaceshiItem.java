@@ -29,7 +29,7 @@ public abstract class KkuijiaceshiItem extends ArmorItem {
 	public static void registerArmorMaterial(RegisterEvent event) {
 		event.register(Registries.ARMOR_MATERIAL, registerHelper -> {
 			ArmorMaterial armorMaterial = new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
-				map.put(ArmorItem.Type.BOOTS, 3);
+				map.put(ArmorItem.Type.BOOTS, 5);
 				map.put(ArmorItem.Type.LEGGINGS, 8);
 				map.put(ArmorItem.Type.CHESTPLATE, 10);
 				map.put(ArmorItem.Type.HELMET, 5);
