@@ -7182,7 +7182,12 @@
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/Ceshi_3Procedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       }
     },
     {
@@ -36247,7 +36252,7 @@
       "name": "Event_item_sxR",
       "type": "procedure",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "event_item_sx_r",
       "metadata": {
         "dependencies": [
@@ -36278,6 +36283,25 @@
         ],
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/Event_item_sxRProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Eventitemmssxr",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "eventitemmssxr",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/EventitemmssxrProcedure.java"
         ]
       }
     }
