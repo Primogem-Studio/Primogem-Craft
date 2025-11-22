@@ -7,6 +7,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
@@ -16,6 +17,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.AdvancementHolder;
 
@@ -39,6 +41,7 @@ public class SJwpsxProcedure {
 			return;
 		ItemStack a = ItemStack.EMPTY;
 		Entity e = null;
+		double aa = 0;
 		if (!world.isClientSide()) {
 			a = (itemstack.copy());
 			if (a.getItem() == BuiltInRegistries.ITEM.get(ResourceLocation.parse("primogemcraft:sh_jwupin"))) {
@@ -47,10 +50,11 @@ public class SJwpsxProcedure {
 				if (!(entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(PrimogemcraftModMobEffects.SHIJIANBUCHUFA))) {
 					if (entity.isShiftKeyDown()) {
 						e = entity;
-						EventGroupProcedure.execute(world, entity, (int) ZuidaexecuteProcedure.execute());
+						aa = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("event_zu_i");
+						EventGroupProcedure.execute(world, entity, (int) aa);
 						itemstack.shrink(1);
-					} else if (!(entity instanceof ServerPlayer _plr9 && _plr9.level() instanceof ServerLevel
-							&& _plr9.getAdvancements().getOrStartProgress(_plr9.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:jdshijian_0"))).isDone())) {
+					} else if (!(entity instanceof ServerPlayer _plr11 && _plr11.level() instanceof ServerLevel
+							&& _plr11.getAdvancements().getOrStartProgress(_plr11.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:jdshijian_0"))).isDone())) {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal("\u00A75\u6F5C\u884C\u4EE5\u62FE\u53D6\u4E8B\u4EF6\uFF01"), false);
 						if (entity instanceof ServerPlayer _player) {

@@ -39,7 +39,7 @@ public class SuijishijiandiaoluoProcedure {
 		if (entity == null)
 			return;
 		ItemStack a = ItemStack.EMPTY;
-		if (!(world.isClientSide() && entity instanceof Player)) {
+		if (!world.isClientSide() && !(entity instanceof Player)) {
 			if (Math.random() < ((world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZESUIJISHIJIAN)) * 0.01) / 100
 					&& PrimogemcraftModVariables.MapVariables.get(world).shijian_xianzhi < (world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZESHIJIANXIANZHI))) {
 				a = new ItemStack(PrimogemcraftModItems.SH_JWUPIN.get());

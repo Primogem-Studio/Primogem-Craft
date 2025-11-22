@@ -17,6 +17,7 @@ public class EventGroupProcedure {
         boolean o1 = switch ((int) zu) {
             //使用"事件“定义“事件组”和“事件组名称”
             case 1 -> zu(entity, 1, 2, 3, "§d附魔§6选择事件");
+            case 2 -> zu(entity, 4, 5, 6, "§d附魔§6选择事件");
             default -> false;
         };
     }
@@ -25,7 +26,6 @@ public class EventGroupProcedure {
 
         int a = 0;
         for (int index0 = 0; index0 < 3; index0++) {
-            System.out.println(index0);
             ItemStack i = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu0 ? _menu0.getSlots().get(index0).getItem() : ItemStack.EMPTY);
             a = switch (index0) {
                 case 0 -> zU0;
