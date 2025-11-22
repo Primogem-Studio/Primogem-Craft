@@ -20817,122 +20817,6 @@
       }
     },
     {
-      "name": "SJGUIfumo01",
-      "type": "gui",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sjgu_ifumo_01",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/network/SJGUIfumo01ButtonMessage.java",
-          "src/main/java/net/mcreator/ceshi/client/gui/SJGUIfumo01Screen.java",
-          "src/main/java/net/mcreator/ceshi/world/inventory/SJGUIfumo01Menu.java"
-        ]
-      }
-    },
-    {
-      "name": "Sjguifumo01sx0",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sjguifumo_01sx_0",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/procedures/Sjguifumo01sx0Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Sjguifumo01sx1",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sjguifumo_01sx_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/procedures/Sjguifumo01sx1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Sjguifumo01sx2",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sjguifumo_01sx_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/procedures/Sjguifumo01sx2Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "GUIfumofanhuishuzi0",
       "type": "procedure",
       "compiles": true,
@@ -39189,10 +39073,8 @@
       "block.primogemcraft.jingzhimolakuai.description_0": "§7或许能用来做§e屋顶的中心！",
       "gui.primogemcraft.cunzheshezhi.tooltip_shi_shu_liang_jian_shao": "使数量减少",
       "block.primogemcraft.chuangzaoxiaodengfasheqi.description_0": "§7红石驱动",
-      "gui.primogemcraft.sjgu_ifumo_01.label_jin_xing_1ci_zhong_te_ji_pin_zhi_fu_mo": "进行1次中~特级品质附魔。",
       "block.primogemcraft.chuangzaoxiaodengfasheqi.description_1": "§d不会损耗寿命",
       "advancements.fuduji.descr": "有回家的感觉了？",
-      "gui.primogemcraft.sjgu_ifumo_01.label_xiao_hao_10yu_zhou_sui_pian": "消耗10宇宙碎片。",
       "item.primogemcraft.jianglimaoxianjiajingyan": "冒险家的经验",
       "gamerule.guizeyuanshishengcheng.description": "§c世界是否生成原石矿石",
       "item.primogemcraft.qiwuchongwang.description_10": "§8有寄生效果的玩家赋予§9寄生",
@@ -39432,7 +39314,6 @@
       "gui.primogemcraft.gu_ibhmg.tooltip_sscsslbu_huo_ming_guang_jin_ke_xuan_ze_ge_wu_pin_zuo_wei_zi_xuan_dui_xiang": "§c§l捕获明光仅可选择一个物品作为自选对象！",
       "advancements.molahuoqujindu_01.descr": "那这是什么？",
       "item.primogemcraft.xiantiaoqiang": "§6仙跳墙",
-      "gui.primogemcraft.sjgu_ifumo_01.label_xiao_hao_20yu_zhou_sui_pian": "消耗20宇宙碎片。",
       "advancements.fuduji.title": "复读姬",
       "block.primogemcraft.xjhpyhfh": "星际和平银行--异世界分行",
       "item.primogemcraft.qiwuchongwang": "§5『奇物』§4虫网",
@@ -39820,7 +39701,6 @@
       "item.primogemcraft.jlq.description_2": "§7 - 单次冷却8~16秒",
       "advancements.mmolajianjindu.descr": "善战",
       "biome.ceshi.yeshijiesenlin": "The Another World Forest4",
-      "gui.primogemcraft.sjgu_ifumo_01.label_jin_xing_1ci_di_gao_pin_zhi_fu_mo": "进行1次低~高品质附魔。",
       "item.primogemcraft.yhdltyidie.description_0": "§7包含几张崭新出厂的银河大乐透",
       "item.primogemcraft.xiangdanganlao": "§5『奇物』§e香涎干酪",
       "death.attack.chiwuwuli.player": "%1$s 无法摆脱%2$s赠与的物理撕裂，惨死",
@@ -40162,7 +40042,6 @@
       "gui.primogemcraft.ganjinglajitong.label_wu_pin_lan": "物品栏",
       "item.primogemcraft.qwwszj.description_0": "§a§l与空无烛剪效果一致，但",
       "advancements.ttazhenhaokan.descr": "获得神秘花瓣",
-      "gui.primogemcraft.sjgu_ifumo_01.label_xiao_hao_40yu_zhou_sui_pian": "消耗40宇宙碎片。",
       "effect.primogemcraft.djqjkjxgxianzhi": "涤净盔甲效果限制",
       "item.primogemcraft.mmolagao": "§e摩拉 镐",
       "gui.primogemcraft.gu_ihualiduanzaotai.tooltip_proc_gu_ihldztmiaoshu": "§d§l强化",
@@ -40576,7 +40455,6 @@
       "item.minecraft.lingering_potion.effect.fengraoqiongjiang": "§e滞留型丰饶琼浆",
       "item.primogemcraft.qwsss": "§5『奇物』§f水上书",
       "item.primogemcraft.meiyouzhushidaima": "§5『奇物』§d没有注释的代码",
-      "gui.primogemcraft.sjgu_ifumo_01.label_jin_xing_1ci_di_pin_zhi_fu_mo": "进行1次低品质附魔。",
       "item.primogemcraft.youdianqiqiaodedaima.description_0": "§7击杀生物来修复这段代码，使其提供完整增益",
       "item.primogemcraft.youdianqiqiaodedaima.description_1": "§",
       "gui.primogemcraft.sjgu_ifumo_00.label_chi_kai_zhe_li": "离开这里。",
@@ -41029,9 +40907,7 @@
       "block.primogemcraft.jingzhimolakuai.description_0": "§7maybe be used as§ethe center of the roof！",
       "block.primogemcraft.chuangzaoxiaodengfasheqi.description_0": "§7activated by redstone signal",
       "block.primogemcraft.chuangzaoxiaodengfasheqi.description_1": "§dunbreakable",
-      "gui.primogemcraft.sjgu_ifumo_01.label_jin_xing_1ci_zhong_te_ji_pin_zhi_fu_mo": "进行1次中~特级品质附魔。",
       "advancements.fuduji.descr": "A home from home？",
-      "gui.primogemcraft.sjgu_ifumo_01.label_xiao_hao_10yu_zhou_sui_pian": "消耗10宇宙碎片。",
       "item.primogemcraft.jianglimaoxianjiajingyan": "Adventurer\u0027s Experience",
       "gamerule.guizeyuanshishengcheng.description": "§cPrimogem Ore Intergrate",
       "item.primogemcraft.qiwuchongwang.description_10": "§8有寄生效果的玩家赋予§9寄生",
@@ -41271,7 +41147,6 @@
       "gui.primogemcraft.gu_ibhmg.tooltip_sscsslbu_huo_ming_guang_jin_ke_xuan_ze_ge_wu_pin_zuo_wei_zi_xuan_dui_xiang": "§c§l捕获明光仅可选择一个物品作为自选对象！",
       "advancements.molahuoqujindu_01.descr": "What was that？",
       "item.primogemcraft.xiantiaoqiang": "§6Adeptus\u0027 Temptation",
-      "gui.primogemcraft.sjgu_ifumo_01.label_xiao_hao_20yu_zhou_sui_pian": "消耗20宇宙碎片。",
       "advancements.fuduji.title": "The Echoer",
       "block.primogemcraft.xjhpyhfh": "IPC in Minecraft",
       "item.primogemcraft.qiwuchongwang": "§5『Curio』§4Insect Web",
@@ -41659,7 +41534,6 @@
       "item.primogemcraft.jlq.description_2": "§7 - 单次冷却8~16秒",
       "advancements.mmolajianjindu.descr": "valiant",
       "biome.ceshi.yeshijiesenlin": "The Another World Forest4",
-      "gui.primogemcraft.sjgu_ifumo_01.label_jin_xing_1ci_di_gao_pin_zhi_fu_mo": "进行1次低~高品质附魔。",
       "item.primogemcraft.yhdltyidie.description_0": "§7包含几张崭新出厂的银河大乐透",
       "item.primogemcraft.xiangdanganlao": "§5『Curio』§eAmbergirs Cheese",
       "death.attack.chiwuwuli.player": "%1$s 无法摆脱%2$s赠与的物理撕裂，惨死",
@@ -42001,7 +41875,6 @@
       "gui.primogemcraft.ganjinglajitong.label_wu_pin_lan": "Inventory",
       "item.primogemcraft.qwwszj.description_0": "§a§l与空无烛剪效果一致，但",
       "advancements.ttazhenhaokan.descr": "Gain the Mysterious petal",
-      "gui.primogemcraft.sjgu_ifumo_01.label_xiao_hao_40yu_zhou_sui_pian": "消耗40宇宙碎片。",
       "effect.primogemcraft.djqjkjxgxianzhi": "effect of varunada armors restricted",
       "item.primogemcraft.mmolagao": "§eMora Pickaxe",
       "gui.primogemcraft.gu_ihualiduanzaotai.tooltip_proc_gu_ihldztmiaoshu": "§d§l强化",
@@ -42415,7 +42288,6 @@
       "item.minecraft.lingering_potion.effect.fengraoqiongjiang": "§elingering Abundance Potion",
       "item.primogemcraft.qwsss": "§5『奇物』§f水上书",
       "item.primogemcraft.meiyouzhushidaima": "§5『Curio』§dMysterious Code",
-      "gui.primogemcraft.sjgu_ifumo_01.label_jin_xing_1ci_di_pin_zhi_fu_mo": "进行1次低品质附魔。",
       "item.primogemcraft.youdianqiqiaodedaima.description_0": "§7击杀生物来修复这段代码，使其提供完整增益",
       "item.primogemcraft.youdianqiqiaodedaima.description_1": "§",
       "gui.primogemcraft.sjgu_ifumo_00.label_chi_kai_zhe_li": "离开这里。",
@@ -42867,10 +42739,8 @@
       "gui.primogemcraft.cunzheshezhi.tooltip_shi_shu_liang_jian_shao": "使数量减少",
       "block.primogemcraft.jingzhimolakuai.description_0": "§7或许能用来做§e屋顶的中心！",
       "block.primogemcraft.chuangzaoxiaodengfasheqi.description_0": "§7红石驱动",
-      "gui.primogemcraft.sjgu_ifumo_01.label_jin_xing_1ci_zhong_te_ji_pin_zhi_fu_mo": "进行1次中~特级品质附魔。",
       "block.primogemcraft.chuangzaoxiaodengfasheqi.description_1": "§d不会损耗寿命",
       "advancements.fuduji.descr": "§d有回家的感觉了？",
-      "gui.primogemcraft.sjgu_ifumo_01.label_xiao_hao_10yu_zhou_sui_pian": "消耗10宇宙碎片。",
       "item.primogemcraft.jianglimaoxianjiajingyan": "冒险家的经验",
       "gamerule.guizeyuanshishengcheng.description": "§c世界是否生成原石矿石",
       "item.primogemcraft.qiwuchongwang.description_10": "§8有寄生效果的玩家赋予§9寄生",
@@ -43108,7 +42978,6 @@
       "gui.primogemcraft.gu_ibhmg.tooltip_sscsslbu_huo_ming_guang_jin_ke_xuan_ze_ge_wu_pin_zuo_wei_zi_xuan_dui_xiang": "§c§l捕获明光仅可选择一个物品作为自选对象！",
       "advancements.molahuoqujindu_01.descr": "那这是什么？",
       "item.primogemcraft.xiantiaoqiang": "§6仙跳墙",
-      "gui.primogemcraft.sjgu_ifumo_01.label_xiao_hao_20yu_zhou_sui_pian": "消耗20宇宙碎片。",
       "advancements.fuduji.title": "复读姬",
       "block.primogemcraft.xjhpyhfh": "星际和平银行--异世界分行",
       "item.primogemcraft.qiwuchongwang": "§5『奇物』§4虫网",
@@ -43496,7 +43365,6 @@
       "item.primogemcraft.jlq.description_2": "§7 - 单次冷却8~16秒",
       "advancements.mmolajianjindu.descr": "善战",
       "biome.ceshi.yeshijiesenlin": "异世界森林4",
-      "gui.primogemcraft.sjgu_ifumo_01.label_jin_xing_1ci_di_gao_pin_zhi_fu_mo": "进行1次低~高品质附魔。",
       "item.primogemcraft.yhdltyidie.description_0": "§7包含几张崭新出厂的银河大乐透",
       "item.primogemcraft.xiangdanganlao": "§5『奇物』§e香涎干酪",
       "death.attack.chiwuwuli.player": "%1$s 无法摆脱%2$s赠与的物理撕裂，惨死",
@@ -43838,7 +43706,6 @@
       "gui.primogemcraft.ganjinglajitong.label_wu_pin_lan": "物品栏",
       "item.primogemcraft.qwwszj.description_0": "§a§l与空无烛剪效果一致，但",
       "advancements.ttazhenhaokan.descr": "获得神秘花瓣",
-      "gui.primogemcraft.sjgu_ifumo_01.label_xiao_hao_40yu_zhou_sui_pian": "消耗40宇宙碎片。",
       "effect.primogemcraft.djqjkjxgxianzhi": "涤净盔甲效果限制",
       "item.primogemcraft.mmolagao": "§e摩拉 镐",
       "gui.primogemcraft.gu_ihualiduanzaotai.tooltip_proc_gu_ihldztmiaoshu": "§d§l强化",
@@ -44249,7 +44116,6 @@
       "item.minecraft.lingering_potion.effect.fengraoqiongjiang": "§e滞留型丰饶琼浆",
       "item.primogemcraft.qwsss": "§5『奇物』§f水上书",
       "item.primogemcraft.meiyouzhushidaima": "§5『奇物』§d没有注释的代码",
-      "gui.primogemcraft.sjgu_ifumo_01.label_jin_xing_1ci_di_pin_zhi_fu_mo": "进行1次低品质附魔。",
       "item.primogemcraft.youdianqiqiaodedaima.description_0": "§7击杀生物来修复这段代码，使其提供完整增益",
       "item.primogemcraft.youdianqiqiaodedaima.description_1": "§",
       "gui.primogemcraft.sjgu_ifumo_00.label_chi_kai_zhe_li": "离开这里。",

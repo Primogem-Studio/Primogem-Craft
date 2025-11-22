@@ -34,7 +34,6 @@ public class PrimogemcraftModScreens {
 		event.register(PrimogemcraftModMenus.GUIHEITAXINYINDAO.get(), GuiheitaxinyindaoScreen::new);
 		event.register(PrimogemcraftModMenus.GUIS_JFUMO.get(), GUISJfumoScreen::new);
 		event.register(PrimogemcraftModMenus.SJGU_IFUMO_00.get(), SJGUIfumo00Screen::new);
-		event.register(PrimogemcraftModMenus.SJGU_IFUMO_01.get(), SJGUIfumo01Screen::new);
 		event.register(PrimogemcraftModMenus.GU_IHUALIDUANZAOTAI.get(), GUIhualiduanzaotaiScreen::new);
 		event.register(PrimogemcraftModMenus.GU_IBHMG.get(), GUIbhmgScreen::new);
 		event.register(PrimogemcraftModMenus.GU_IHYZHQ.get(), GUIhyzhqScreen::new);
