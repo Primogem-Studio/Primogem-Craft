@@ -47,7 +47,7 @@ public class SJwpsxProcedure {
 				if (!(entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(PrimogemcraftModMobEffects.SHIJIANBUCHUFA))) {
 					if (entity.isShiftKeyDown()) {
 						e = entity;
-						EventGroupProcedure.execute(world, entity, 1);
+						EventGroupProcedure.execute(world, entity, (int) ZuidaexecuteProcedure.execute());
 						itemstack.shrink(1);
 					} else if (!(entity instanceof ServerPlayer _plr9 && _plr9.level() instanceof ServerLevel
 							&& _plr9.getAdvancements().getOrStartProgress(_plr9.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:jdshijian_0"))).isDone())) {

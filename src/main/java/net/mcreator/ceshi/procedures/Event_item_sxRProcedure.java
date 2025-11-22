@@ -35,6 +35,7 @@ public class Event_item_sxRProcedure {
 		en = entity;
 		ie = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("event_");
 		boolean o1 = switch ((int) ie) {
+			//使用效果定义“事件”
 			case 1 -> shijian_123(entity, 1, yzsp, 10);
 			case 2 -> shijian_123(entity, suijiint(world, 1, 3), yzsp, 20);
 			case 3 -> shijian_123(entity, suijiint(world, 2, 4), yzsp, 40);

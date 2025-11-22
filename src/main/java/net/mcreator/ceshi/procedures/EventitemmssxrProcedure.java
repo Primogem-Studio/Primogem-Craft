@@ -5,6 +5,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.CustomData;
 
 public class EventitemmssxrProcedure {
+    //定义“事件“中的描述
     public static String execute(ItemStack itemstack) {
         double a = 0;
         String s1 = "";

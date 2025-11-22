@@ -36359,6 +36359,20 @@
           "src/main/java/net/mcreator/ceshi/procedures/Event_item_R0Procedure.java"
         ]
       }
+    },
+    {
+      "name": "Zuidaexecute",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zuidaexecute",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/ZuidaexecuteProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
