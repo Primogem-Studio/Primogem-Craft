@@ -45,7 +45,7 @@ public class SuijishijiandiaoluoProcedure {
 				a = new ItemStack(PrimogemcraftModItems.SH_JWUPIN.get());
 				{
 					final String _tagName = "event_zu_i";
-					final double _tagValue = (Mth.nextInt(RandomSource.create(), 1, (int) ZuidaexecuteProcedure.execute()));
+					final double _tagValue = (Mth.nextInt(RandomSource.create(), 1, (int) EventGroupProcedure.event_limit()));
 					CustomData.update(DataComponents.CUSTOM_DATA, a, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 				if (world instanceof ServerLevel _level) {

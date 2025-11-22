@@ -10,10 +10,14 @@ import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.LevelAccessor;
 
 public class EventGroupProcedure {
+    public static int event_limit() {
+        //定义 “事件组上限”
+        return 2;
+    }
+
     public static void execute(LevelAccessor world, Entity entity, int zu) {
-        if (entity == null)
-            return;
-        GUIqwxz03Procedure.execute(world,entity.getX(), entity.getY(), entity.getZ(), entity, false, "primogemcraft:event");
+        if (entity == null) return;
+        GUIqwxz03Procedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, false, "primogemcraft:event");
         boolean o1 = switch ((int) zu) {
             //使用"事件“定义“事件组”和“事件组名称”
             case 1 -> zu(entity, 1, 2, 3, "§d附魔§6选择事件");
@@ -33,15 +37,12 @@ public class EventGroupProcedure {
                 case 2 -> zU2;
                 default -> 0;
             };
-            i.set(DataComponents.CUSTOM_NAME,
-                    Component.literal(name));
+            i.set(DataComponents.CUSTOM_NAME, Component.literal(name));
             {
                 int finalA = a;
-                CustomData.update(DataComponents.CUSTOM_DATA,
-                        i, tag -> tag.putDouble("event_", finalA));
+                CustomData.update(DataComponents.CUSTOM_DATA, i, tag -> tag.putDouble("event_", finalA));
             }
         }
         return true;
-
     }
 }
