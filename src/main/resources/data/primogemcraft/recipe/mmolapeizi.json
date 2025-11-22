@@ -4,25 +4,22 @@
   "pattern": [
     "aba",
     "cdc",
-    "efe"
+    "aea"
   ],
   "key": {
     "a": {
-      "item": "primogemcraft:jljsl"
+      "item": "primogemcraft:wmoladai"
     },
     "b": {
-      "tag": "minecraft:sand"
+      "item": "primogemcraft:ranyuanduanpian"
     },
     "c": {
       "item": "primogemcraft:xiaodaimola"
     },
     "d": {
-      "item": "primogemcraft:ranyuanduanpian"
+      "item": "primogemcraft:jlzs"
     },
     "e": {
-      "item": "primogemcraft:wmoladai"
-    },
-    "f": {
       "item": "primogemcraft:molakuai_01"
     }
   },

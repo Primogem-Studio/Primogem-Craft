@@ -16,7 +16,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Holder;
 import net.minecraft.Util;
 
-import net.mcreator.ceshi.init.PrimogemcraftModBlocks;
+import net.mcreator.ceshi.init.PrimogemcraftModItems;
 
 import java.util.List;
 import java.util.EnumMap;
@@ -30,11 +30,11 @@ public abstract class KkuijiaceshiItem extends ArmorItem {
 		event.register(Registries.ARMOR_MATERIAL, registerHelper -> {
 			ArmorMaterial armorMaterial = new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
 				map.put(ArmorItem.Type.BOOTS, 3);
-				map.put(ArmorItem.Type.LEGGINGS, 6);
+				map.put(ArmorItem.Type.LEGGINGS, 8);
 				map.put(ArmorItem.Type.CHESTPLATE, 10);
-				map.put(ArmorItem.Type.HELMET, 4);
+				map.put(ArmorItem.Type.HELMET, 5);
 				map.put(ArmorItem.Type.BODY, 10);
-			}), 20, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(new ItemStack(PrimogemcraftModBlocks.MOLADUI_02.get())), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("primogemcraft:kuijiaceshi01"))),
+			}), 20, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(new ItemStack(PrimogemcraftModItems.JINZHIMOLA.get())), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("primogemcraft:kuijiaceshi01"))),
 					4f, 0.2f);
 			registerHelper.register(ResourceLocation.parse("primogemcraft:kkuijiaceshi"), armorMaterial);
 			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
@@ -47,25 +47,25 @@ public abstract class KkuijiaceshiItem extends ArmorItem {
 
 	public static class Helmet extends KkuijiaceshiItem {
 		public Helmet() {
-			super(ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(25)));
+			super(ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(64)));
 		}
 	}
 
 	public static class Chestplate extends KkuijiaceshiItem {
 		public Chestplate() {
-			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(25)));
+			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(64)));
 		}
 	}
 
 	public static class Leggings extends KkuijiaceshiItem {
 		public Leggings() {
-			super(ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(25)));
+			super(ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(64)));
 		}
 	}
 
 	public static class Boots extends KkuijiaceshiItem {
 		public Boots() {
-			super(ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(25)));
+			super(ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(64)));
 		}
 	}
 }

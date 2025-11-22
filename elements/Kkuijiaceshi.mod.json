@@ -60,10 +60,34 @@
     "bodyImmuneToFire": false,
     "leggingsImmuneToFire": false,
     "bootsImmuneToFire": false,
-    "maxDamage": 25,
-    "damageValueHelmet": 4,
+    "helmetGlowCondition": {
+      "fixedValue": false
+    },
+    "bodyGlowCondition": {
+      "fixedValue": false
+    },
+    "leggingsGlowCondition": {
+      "fixedValue": false
+    },
+    "bootsGlowCondition": {
+      "fixedValue": false
+    },
+    "helmetPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bodyPiglinNeutral": {
+      "fixedValue": false
+    },
+    "leggingsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bootsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "maxDamage": 64,
+    "damageValueHelmet": 5,
     "damageValueBody": 10,
-    "damageValueLeggings": 6,
+    "damageValueLeggings": 8,
     "damageValueBoots": 3,
     "enchantability": 20,
     "toughness": 4.0,
@@ -73,7 +97,7 @@
     },
     "repairItems": [
       {
-        "value": "CUSTOM:Moladui02"
+        "value": "CUSTOM:Jinzhimola"
       }
     ]
   }
