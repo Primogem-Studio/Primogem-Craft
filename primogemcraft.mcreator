@@ -7182,28 +7182,7 @@
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/Ceshi_3Procedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
@@ -20707,28 +20686,8 @@
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/Sjguifumo00sx2Procedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": [],
+        "return_type": "number"
       }
     },
     {
@@ -36270,6 +36229,57 @@
           "src/main/resources/data/primogemcraft/advancement/recipes/qysppf.json"
         ]
       }
+    },
+    {
+      "name": "Eventitem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eventitem",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/primogemcraft/models/item/eventitem.json",
+          "src/main/java/net/mcreator/ceshi/item/EventitemItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Event_item_sxR",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "event_item_sx_r",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Event_item_sxRProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -37417,6 +37427,7 @@
       "CUSTOM:Axzst.boots"
     ],
     "ITEMS:minecraft:piglin_loved": [
+      "~CUSTOM:Eventitem",
       "CUSTOM:Jinzhimola",
       "CUSTOM:Molakuai01",
       "CUSTOM:Jingzhimolakuai",
@@ -40903,7 +40914,8 @@
       "advancements.jdyshj_0.descr": "试试用元素金属给装备升级！",
       "advancements.jdyshj_0.title": "元素装备？",
       "item.primogemcraft.qysp.description_0": "§9右键领取特殊奖励！",
-      "item.primogemcraft.qysp": "§d奇遇"
+      "item.primogemcraft.qysp": "§d奇遇",
+      "item.primogemcraft.eventitem": "Event_item"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -42741,7 +42753,8 @@
       "advancements.jdyshj_0.descr": "试试用元素金属给装备升级！",
       "advancements.jdyshj_0.title": "元素装备？",
       "item.primogemcraft.qysp.description_0": "§9右键领取特殊奖励！",
-      "item.primogemcraft.qysp": "§d奇遇"
+      "item.primogemcraft.qysp": "§d奇遇",
+      "item.primogemcraft.eventitem": "Event_item"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -44573,7 +44586,8 @@
       "advancements.jdyshj_0.descr": "试试用元素金属给装备升级！",
       "advancements.jdyshj_0.title": "元素装备？",
       "item.primogemcraft.qysp.description_0": "§9右键领取特殊奖励！",
-      "item.primogemcraft.qysp": "§d奇遇"
+      "item.primogemcraft.qysp": "§d奇遇",
+      "item.primogemcraft.eventitem": "Event_item"
     }
   },
   "metadata": {

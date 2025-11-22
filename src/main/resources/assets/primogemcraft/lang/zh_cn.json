@@ -1828,5 +1828,6 @@
   "advancements.jdyshj_0.descr": "试试用元素金属给装备升级！",
   "advancements.jdyshj_0.title": "元素装备？",
   "item.primogemcraft.qysp.description_0": "§9右键领取特殊奖励！",
-  "item.primogemcraft.qysp": "§d奇遇"
+  "item.primogemcraft.qysp": "§d奇遇",
+  "item.primogemcraft.eventitem": "Event_item"
 }
