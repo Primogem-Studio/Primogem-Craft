@@ -15,7 +15,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.ceshi.procedures.EventitemmssxrProcedure;
-import net.mcreator.ceshi.procedures.Event_item_sxRProcedure;
+import net.mcreator.ceshi.procedures.Event_item_R0Procedure;
 
 import java.util.List;
 
@@ -45,7 +45,7 @@ public class EventitemItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		Event_item_sxRProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
+		Event_item_R0Procedure.execute(world, entity, ar.getObject());
 		return ar;
 	}
 }

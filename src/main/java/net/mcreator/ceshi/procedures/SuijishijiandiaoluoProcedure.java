@@ -11,6 +11,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.component.DataComponents;
 
@@ -41,18 +43,10 @@ public class SuijishijiandiaoluoProcedure {
 			if (Math.random() < ((world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZESUIJISHIJIAN)) * 0.01) / 100
 					&& PrimogemcraftModVariables.MapVariables.get(world).shijian_xianzhi < (world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZESHIJIANXIANZHI))) {
 				a = new ItemStack(PrimogemcraftModItems.SH_JWUPIN.get());
-				if (Math.random() < 0.5) {
-					{
-						final String _tagName = "PGC_fumo_shijian_00";
-						final boolean _tagValue = true;
-						CustomData.update(DataComponents.CUSTOM_DATA, a, tag -> tag.putBoolean(_tagName, _tagValue));
-					}
-				} else {
-					{
-						final String _tagName = "PGC_fumo_shijian_01";
-						final boolean _tagValue = true;
-						CustomData.update(DataComponents.CUSTOM_DATA, a, tag -> tag.putBoolean(_tagName, _tagValue));
-					}
+				{
+					final String _tagName = "event_zu_i";
+					final double _tagValue = (Mth.nextInt(RandomSource.create(), 1, 1));
+					CustomData.update(DataComponents.CUSTOM_DATA, a, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, a);

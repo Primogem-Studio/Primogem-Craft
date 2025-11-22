@@ -37,7 +37,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 99,
     "onRightClickedInAir": {
-      "name": "Event_item_sxR"
+      "name": "Event_item_R0"
     },
     "enableRanged": false,
     "shootConstantly": false,

@@ -7182,12 +7182,7 @@
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/Ceshi_3Procedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
@@ -20579,18 +20574,6 @@
           {
             "name": "itemstack",
             "type": "itemstack"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -36302,6 +36285,78 @@
         "return_type": "string",
         "files": [
           "src/main/java/net/mcreator/ceshi/procedures/EventitemmssxrProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Event",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "event",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/loot_table/event.json"
+        ]
+      }
+    },
+    {
+      "name": "EventGroup",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "event_group",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/EventGroupProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Event_item_R0",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "event_item_r_0",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Event_item_R0Procedure.java"
         ]
       }
     }

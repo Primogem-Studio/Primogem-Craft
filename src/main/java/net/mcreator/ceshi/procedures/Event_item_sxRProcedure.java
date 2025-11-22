@@ -26,7 +26,7 @@ import net.mcreator.ceshi.PrimogemcraftMod;
 import io.netty.buffer.Unpooled;
 
 public class Event_item_sxRProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
+	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		double ie = 0;
@@ -35,21 +35,21 @@ public class Event_item_sxRProcedure {
 		en = entity;
 		ie = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("event_");
 		boolean o1 = switch ((int) ie) {
-			case 1 -> shijian_123(entity, x, y, z, 1, yzsp, 10);
-			case 2 -> shijian_123(entity, x, y, z, suijiint(world, 1, 3), yzsp, 20);
-			case 3 -> shijian_123(entity, x, y, z, suijiint(world, 2, 4), yzsp, 40);
+			case 1 -> shijian_123(entity, 1, yzsp, 10);
+			case 2 -> shijian_123(entity, suijiint(world, 1, 3), yzsp, 20);
+			case 3 -> shijian_123(entity, suijiint(world, 2, 4), yzsp, 40);
 			default -> false;
 		};
 		if (o1)
 			itemstack.shrink(1);
 	}
 
-	public static void fumo(Entity entity, double x, double y, double z, int zhi) {
+	public static void fumo(Entity entity, int zhi) {
 		// 接收对应等级附魔并为实体打开附魔GUI，最大4
 		entity.getPersistentData().putDouble("pgc_shijian_fumo_pinzhi", zhi);
 		PrimogemcraftMod.queueServerWork(1, () -> {
 			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = BlockPos.containing(x, y, z);
+				BlockPos _bpos = BlockPos.containing(entity.getX(), entity.getY(), entity.getZ());
 				_ent.openMenu(new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
@@ -91,10 +91,10 @@ public class Event_item_sxRProcedure {
 		return false;
 	}
 
-	public static boolean shijian_123(Entity entity, double x, double y, double z, int zhi, ItemStack item, int itzhi) {
+	public static boolean shijian_123(Entity entity, int zhi, ItemStack item, int itzhi) {
 		//移除 entity 的 itzhi个 item 后打开 zhi 级别的附魔界面
 		if (item_zhi_1_1(item, itzhi, entity)) {
-			fumo(entity, x, y, z, zhi);
+			fumo(entity, zhi);
 			return true;
 		}
 		if (entity instanceof Player _player && !_player.level().isClientSide())
