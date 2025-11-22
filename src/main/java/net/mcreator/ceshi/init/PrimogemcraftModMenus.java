@@ -42,7 +42,6 @@ public class PrimogemcraftModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<GUIqiwuxuanzeMenu>> GU_IQIWUXUANZE = REGISTRY.register("gu_iqiwuxuanze", () -> IMenuTypeExtension.create(GUIqiwuxuanzeMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<GuiheitaxinyindaoMenu>> GUIHEITAXINYINDAO = REGISTRY.register("guiheitaxinyindao", () -> IMenuTypeExtension.create(GuiheitaxinyindaoMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<GUISJfumoMenu>> GUIS_JFUMO = REGISTRY.register("guis_jfumo", () -> IMenuTypeExtension.create(GUISJfumoMenu::new));
-	public static final DeferredHolder<MenuType<?>, MenuType<SJGUIfumo00Menu>> SJGU_IFUMO_00 = REGISTRY.register("sjgu_ifumo_00", () -> IMenuTypeExtension.create(SJGUIfumo00Menu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<GUIhualiduanzaotaiMenu>> GU_IHUALIDUANZAOTAI = REGISTRY.register("gu_ihualiduanzaotai", () -> IMenuTypeExtension.create(GUIhualiduanzaotaiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<GUIbhmgMenu>> GU_IBHMG = REGISTRY.register("gu_ibhmg", () -> IMenuTypeExtension.create(GUIbhmgMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<GUIhyzhqMenu>> GU_IHYZHQ = REGISTRY.register("gu_ihyzhq", () -> IMenuTypeExtension.create(GUIhyzhqMenu::new));
