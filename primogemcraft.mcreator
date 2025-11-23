@@ -35962,7 +35962,7 @@
     {
       "name": "Event_item_sxR",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "event_item_sx_r",
       "metadata": {
@@ -36031,7 +36031,7 @@
     {
       "name": "EventGroup",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "event_group",
       "metadata": {
