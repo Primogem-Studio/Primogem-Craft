@@ -26,7 +26,7 @@ public class HyxBlock extends Block {
 	@Override
 	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
 		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
-		HyxsxProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
+		HyxsxProcedure.execute(world, entity);
 		return retval;
 	}
 }

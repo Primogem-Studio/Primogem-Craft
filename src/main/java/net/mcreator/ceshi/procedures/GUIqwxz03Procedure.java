@@ -18,7 +18,7 @@ import net.mcreator.ceshi.world.inventory.GUIqiwuxuanzeMenu;
 import io.netty.buffer.Unpooled;
 
 public class GUIqwxz03Procedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, boolean qd, String _tag) {
+	public static void execute(LevelAccessor world, Entity entity, boolean qd, String _tag) {
 		if (entity == null || _tag == null)
 			return;
 		String tag1 = "";
@@ -28,7 +28,7 @@ public class GUIqwxz03Procedure {
 		ItemStack item1 = ItemStack.EMPTY;
 		double b = 0;
 		if (entity instanceof ServerPlayer _ent) {
-			BlockPos _bpos = BlockPos.containing(x, y, z);
+			BlockPos _bpos = BlockPos.containing(entity.getX(), entity.getY(), entity.getZ());
 			_ent.openMenu(new MenuProvider() {
 				@Override
 				public Component getDisplayName() {

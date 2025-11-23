@@ -9,12 +9,12 @@ import net.minecraft.client.multiplayer.PlayerInfo;
 import net.minecraft.client.Minecraft;
 
 public class HyxsxProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		if (!world.isClientSide()) {
 			if (!(getEntityGameType(entity) == GameType.CREATIVE)) {
-				QwxzsabProcedure.execute(world, x, y, z, entity);
+				QwxzsabProcedure.execute(world, entity);
 			}
 		}
 	}

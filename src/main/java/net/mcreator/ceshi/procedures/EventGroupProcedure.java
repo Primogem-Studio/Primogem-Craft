@@ -17,7 +17,7 @@ public class EventGroupProcedure {
 
     public static void execute(LevelAccessor world, Entity entity, int zu) {
         if (entity == null) return;
-        GUIqwxz03Procedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, false, "primogemcraft:event");
+        GUIqwxz03Procedure.execute(world, entity, false, "primogemcraft:event");
         boolean o1 = switch ((int) zu) {
             //使用"事件“定义“事件组”和“事件组名称”
             case 1 -> zu(entity, 1, 2, 3, "§d附魔§6选择事件");

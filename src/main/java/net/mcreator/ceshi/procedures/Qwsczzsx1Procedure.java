@@ -7,7 +7,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.core.component.DataComponents;
 
 public class Qwsczzsx1Procedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
+	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		String s1 = "";
@@ -28,7 +28,7 @@ public class Qwsczzsx1Procedure {
 				}
 					break;
 			}
-			GUIqwxz03Procedure.execute(world, x, y, z, entity, true, "c:curio/normal/" + s1);
+			GUIqwxz03Procedure.execute(world, entity, true, "c:curio/normal/" + s1);
 			itemstack.shrink(1);
 		}
 	}

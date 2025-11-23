@@ -4,7 +4,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 
 public class QwxzsabProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		String s1 = "";
@@ -16,7 +16,7 @@ public class QwxzsabProcedure {
 			} else {
 				s1 = "b";
 			}
-			GUIqwxz03Procedure.execute(world, x, y, z, entity, true, "c:curio/normal/" + s1);
+			GUIqwxz03Procedure.execute(world, entity, true, "c:curio/normal/" + s1);
 		}
 	}
 }

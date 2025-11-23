@@ -133,8 +133,8 @@ public class Event_item_sxRProcedure {
         return false;
     }
 
-    public static boolean item_zhi() {
-        GUIqwxz03Procedure.execute(world, x, y, z, entity, false, "primogemcraft:entities/qqiyuan_jin_guang");
+    public static boolean item_zhi(LevelAccessor world,Entity entity,boolean qd,String tag_) {
+        GUIqwxz03Procedure.execute(world, entity, qd, tag_);
         return true;
     }
 }
