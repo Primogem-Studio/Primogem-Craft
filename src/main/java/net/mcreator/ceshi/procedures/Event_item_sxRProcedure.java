@@ -42,12 +42,12 @@ public class Event_item_sxRProcedure {
             case 4 -> Hp_jian(entity, world, 0.2) ? fumo(entity, 1) : no(entity);
             case 5 -> Hp_jian(entity, world, 0.7) ? fumo(entity, 2) : no(entity);
             case 6 -> Hp_jian(entity, world, 0.95) && item_zhi_1_1(yzsp, 20, entity) ? fumo(entity, 3) : no(entity);
-            case 7 -> item_zhi(world,entity,false,"c:curio/normal/b");
-            case 8 -> item_zhi(world,entity,false,"c:curio/normal/a");
-            case 9 -> item_zhi(world,entity,false,"c:curio/normal/s");
-            case 10 -> item_zhi(world,entity,false,"c:curio/normal/fusion/b");
-            case 11 -> item_zhi(world,entity,false,"c:curio/normal/fusion/a");
-            case 12 -> item_zhi(world,entity,false,"c:curio/normal/fusion/s");
+            case 7 -> item_zhi(world,entity,true,"c:curio/normal/b");
+            case 8 -> item_zhi(world,entity,true,"c:curio/normal/a");
+            case 9 -> item_zhi(world,entity,true,"c:curio/normal/s");
+            case 10 -> item_zhi(world,entity,true,"c:curio/normal/fusion/b");
+            case 11 -> item_zhi(world,entity,true,"c:curio/normal/fusion/a");
+            case 12 -> item_zhi(world,entity,true,"c:curio/normal/fusion/s");
             case 13 -> fumo(entity,1);
             case 14 -> fumo(entity,2);
             case 15 -> fumo(entity,3);

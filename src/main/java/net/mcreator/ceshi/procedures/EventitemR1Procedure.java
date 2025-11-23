@@ -13,16 +13,18 @@ public class EventitemR1Procedure {
 		Entity e = null;
 		boolean o = false;
 		ItemStack i = ItemStack.EMPTY;
-		if (!itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("LIji")) {
-			e = entity;
-			i = itemstack;
-			{
-				final String _tagName = "LIji";
-				final boolean _tagValue = true;
-				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putBoolean(_tagName, _tagValue));
+		if (!world.isClientSide()) {
+			if (!itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("LIji")) {
+				e = entity;
+				i = itemstack;
+				{
+					final String _tagName = "LIji";
+					final boolean _tagValue = true;
+					CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putBoolean(_tagName, _tagValue));
+				}
+				Event_item_sxRProcedure.execute(world, e, i);
+				o = world.isClientSide();
 			}
-			Event_item_sxRProcedure.execute(world, e, i);
-			o = world.isClientSide();
 		}
 	}
 }

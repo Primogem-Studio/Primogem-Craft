@@ -26,7 +26,7 @@ public class EventGroupProcedure {
             case 4 -> zu(entity, 7, 13, 0, "§a奖励");
             case 5 -> zu(entity, 2, 5, 0, "§c抉择");
             case 6 -> zu(entity, 3, 6, 0, "§c抉择");
-            case 7 -> zu(entity, 12, 16, 0, "§a奖励");
+            case 7 -> zu(entity, 11, 14, 0, "§a奖励");
             default -> false;
         };
     }
