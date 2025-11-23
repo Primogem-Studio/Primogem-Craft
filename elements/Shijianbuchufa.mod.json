@@ -3,10 +3,13 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "事件不触发",
-    "icon": "djqjkjxgxianzhi.png",
+    "icon": "djqjkjxgxianzhi",
     "color": {
       "value": -1,
       "falpha": 0.0
+    },
+    "onAddedSound": {
+      "value": ""
     },
     "isInstant": false,
     "mobEffectCategory": "NEUTRAL",

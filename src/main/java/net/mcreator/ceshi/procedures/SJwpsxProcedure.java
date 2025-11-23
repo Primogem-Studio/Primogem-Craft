@@ -45,16 +45,21 @@ public class SJwpsxProcedure {
 		if (!world.isClientSide()) {
 			a = (itemstack.copy());
 			if (a.getItem() == BuiltInRegistries.ITEM.get(ResourceLocation.parse("primogemcraft:sh_jwupin"))) {
+				if (net.hackermdch.pgc.Timer.isDone(entity, "shijian")) {
+					net.hackermdch.pgc.Timer.set(entity, "shijian", 60);
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal("\u00A7c\u6F5C\u884C\u6765\u62FE\u53D6\u4E8B\u4EF6\uFF01\uFF01"), false);
+				}
 				if (event instanceof ItemEntityPickupEvent.Pre _event)
 					_event.setCanPickup(TriState.FALSE);
-				if (!(entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(PrimogemcraftModMobEffects.SHIJIANBUCHUFA))) {
+				if (!(entity instanceof LivingEntity _livEnt6 && _livEnt6.hasEffect(PrimogemcraftModMobEffects.SHIJIANBUCHUFA))) {
 					if (entity.isShiftKeyDown()) {
 						e = entity;
 						aa = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("event_zu_i");
 						EventGroupProcedure.execute(world, entity, (int) aa);
 						itemstack.shrink(1);
-					} else if (!(entity instanceof ServerPlayer _plr11 && _plr11.level() instanceof ServerLevel
-							&& _plr11.getAdvancements().getOrStartProgress(_plr11.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:jdshijian_0"))).isDone())) {
+					} else if (!(entity instanceof ServerPlayer _plr12 && _plr12.level() instanceof ServerLevel
+							&& _plr12.getAdvancements().getOrStartProgress(_plr12.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:jdshijian_0"))).isDone())) {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal("\u00A75\u6F5C\u884C\u4EE5\u62FE\u53D6\u4E8B\u4EF6\uFF01"), false);
 						if (entity instanceof ServerPlayer _player) {
