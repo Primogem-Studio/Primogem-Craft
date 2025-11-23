@@ -12,7 +12,7 @@ import net.minecraft.world.level.LevelAccessor;
 public class EventGroupProcedure {
     public static int event_limit() {
         //定义 “事件组上限”
-        return 2;
+        return 7;
     }
 
     public static void execute(LevelAccessor world, Entity entity, int zu) {
@@ -20,8 +20,13 @@ public class EventGroupProcedure {
         GUIqwxz03Procedure.execute(world, entity, false, "primogemcraft:event");
         boolean o1 = switch ((int) zu) {
             //使用"事件“定义“事件组”和“事件组名称”
-            case 1 -> zu(entity, 1, 2, 3, "§d附魔§6选择事件");
-            case 2 -> zu(entity, 4, 5, 6, "§d附魔§6选择事件");
+            case 1 -> zu(entity, 1, 2, 3, "§d附魔");
+            case 2 -> zu(entity, 4, 5, 6, "§d附魔");
+            case 3 -> zu(entity, 1, 4, 0, "§c抉择");
+            case 4 -> zu(entity, 7, 13, 0, "§a奖励");
+            case 5 -> zu(entity, 2, 5, 0, "§c抉择");
+            case 6 -> zu(entity, 3, 6, 0, "§c抉择");
+            case 7 -> zu(entity, 12, 16, 0, "§a奖励");
             default -> false;
         };
     }
