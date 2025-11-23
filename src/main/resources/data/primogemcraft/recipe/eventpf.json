@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "primogemcraft:eventitem"
+    }
+  },
+  "result": {
+    "id": "primogemcraft:sh_jwupin",
+    "count": 1
+  }
+}

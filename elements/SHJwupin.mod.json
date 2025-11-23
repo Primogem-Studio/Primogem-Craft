@@ -5,6 +5,7 @@
     "renderType": 1,
     "texture": "shijiansucai",
     "customModelName": "shijian_moxing:default",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "animations": [],
@@ -38,6 +39,9 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onCrafted": {
+      "name": "Shijian_it_sx"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
@@ -55,6 +59,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []

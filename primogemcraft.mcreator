@@ -36113,6 +36113,36 @@
           "src/main/java/net/mcreator/ceshi/procedures/EventitemR1Procedure.java"
         ]
       }
+    },
+    {
+      "name": "Eventpf",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eventpf",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/eventpf.json"
+        ]
+      }
+    },
+    {
+      "name": "Shijian_it_sx",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shijian_it_sx",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/Shijian_it_sxProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
