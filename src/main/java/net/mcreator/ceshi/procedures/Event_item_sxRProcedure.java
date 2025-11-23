@@ -132,4 +132,9 @@ public class Event_item_sxRProcedure {
             _player.displayClientMessage(Component.literal("\u00A7c\u6761\u4EF6\u4E0D\u8DB3\uFF01"), false);
         return false;
     }
+
+    public static boolean item_zhi() {
+        GUIqwxz03Procedure.execute(world, x, y, z, entity, false, "primogemcraft:entities/qqiyuan_jin_guang");
+        return true;
+    }
 }

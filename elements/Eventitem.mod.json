@@ -39,6 +39,9 @@
     "onRightClickedInAir": {
       "name": "Event_item_R0"
     },
+    "onItemInInventoryTick": {
+      "name": "EventitemR1"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

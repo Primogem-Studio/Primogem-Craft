@@ -15,6 +15,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.ceshi.procedures.EventitemmssxrProcedure;
+import net.mcreator.ceshi.procedures.EventitemR1Procedure;
 import net.mcreator.ceshi.procedures.Event_item_R0Procedure;
 
 import java.util.List;
@@ -47,5 +48,11 @@ public class EventitemItem extends Item {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
 		Event_item_R0Procedure.execute(world, entity, ar.getObject());
 		return ar;
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		EventitemR1Procedure.execute(world, entity, itemstack);
 	}
 }

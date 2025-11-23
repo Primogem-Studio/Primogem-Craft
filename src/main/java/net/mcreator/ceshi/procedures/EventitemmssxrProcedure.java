@@ -10,7 +10,7 @@ public class EventitemmssxrProcedure {
         double a = 0;
         String s1 = "";
         a = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("event_");
-        String sR1 = "§d右键使用" + "\n";
+        String sR1 = "§c§l立即触发§a//§d§l右键触发" + "\n"+"\n";
         s1 = switch ((int) a) {
             case 1 -> sR1 + yuzhou_fumo_1(10, "§7低级");
             case 2 -> sR1 + yuzhou_fumo_1(20, "§7低级§e~§b中级");

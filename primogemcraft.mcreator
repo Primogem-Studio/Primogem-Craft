@@ -36147,6 +36147,32 @@
           "src/main/java/net/mcreator/ceshi/procedures/Event_item_R0Procedure.java"
         ]
       }
+    },
+    {
+      "name": "EventitemR1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eventitem_r_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/EventitemR1Procedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
