@@ -12,7 +12,7 @@ import net.minecraft.world.level.LevelAccessor;
 public class EventGroupProcedure {
     public static int event_limit() {
         //定义 “事件组上限”
-        return 7;
+        return 10;
     }
 
     public static void execute(LevelAccessor world, Entity entity, int zu) {
