@@ -9,10 +9,17 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.LevelAccessor;
 
+import static net.mcreator.ceshi.procedures.Event_item_sxRProcedure.suijiint;
+
 public class EventGroupProcedure {
     public static int event_limit() {
         //定义 “事件组上限”
-        return 10;
+        return 11;
+    }
+
+    public static int event_X_limit() {
+        // “事件"上限
+        return 19;
     }
 
     public static void execute(LevelAccessor world, Entity entity, int zu) {
@@ -30,6 +37,8 @@ public class EventGroupProcedure {
             case 8 -> zu(entity, 18, 18, 18, "§c咕咕钟");
             case 9 -> zu(entity, 17, 17, 17, "§c惩罚");
             case 10 -> zu(entity, 19, 19, 19, "§c太失败了");
+            case 11 ->
+                    zu(entity, suijiint(world, 1, event_X_limit()), suijiint(world, 1, event_X_limit()), suijiint(world, 1, event_X_limit()), "§c§khaha");
             default -> false;
         };
     }
