@@ -34,8 +34,8 @@ public class GUIqiwuxuanzeScreen extends AbstractContainerScreen<GUIqiwuxuanzeMe
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 176;
-		this.imageHeight = 166;
+		this.imageWidth = 216;
+		this.imageHeight = 206;
 	}
 
 	@Override
@@ -50,19 +50,19 @@ public class GUIqiwuxuanzeScreen extends AbstractContainerScreen<GUIqiwuxuanzeMe
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
-		if (mouseX > leftPos + 32 && mouseX < leftPos + 48 && mouseY > topPos + 52 && mouseY < topPos + 68) {
+		if (mouseX > leftPos + 46 && mouseX < leftPos + 62 && mouseY > topPos + 96 && mouseY < topPos + 112) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.gu_iqiwuxuanze.tooltip_sseque_ren_xuan_ze"), mouseX, mouseY);
 			customTooltipShown = true;
 		}
-		if (mouseX > leftPos + 79 && mouseX < leftPos + 95 && mouseY > topPos + 53 && mouseY < topPos + 69) {
+		if (mouseX > leftPos + 99 && mouseX < leftPos + 115 && mouseY > topPos + 96 && mouseY < topPos + 112) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.gu_iqiwuxuanze.tooltip_sseque_ren_xuan_ze1"), mouseX, mouseY);
 			customTooltipShown = true;
 		}
-		if (mouseX > leftPos + 124 && mouseX < leftPos + 140 && mouseY > topPos + 53 && mouseY < topPos + 69) {
+		if (mouseX > leftPos + 153 && mouseX < leftPos + 169 && mouseY > topPos + 96 && mouseY < topPos + 112) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.gu_iqiwuxuanze.tooltip_sseque_ren_xuan_ze2"), mouseX, mouseY);
 			customTooltipShown = true;
 		}
-		if (mouseX > leftPos + 5 && mouseX < leftPos + 53 && mouseY > topPos + 6 && mouseY < topPos + 14) {
+		if (mouseX > leftPos + 6 && mouseX < leftPos + 54 && mouseY > topPos + 6 && mouseY < topPos + 14) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.primogemcraft.gu_iqiwuxuanze.tooltip_sscqiang_zhi_tui_chu_jie_mian_hui_sui_ji_xuan_ze_ge_qi_wu"), mouseX, mouseY);
 			customTooltipShown = true;
 		}
@@ -96,7 +96,7 @@ public class GUIqiwuxuanzeScreen extends AbstractContainerScreen<GUIqiwuxuanzeMe
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_xuanze0 = new ImageButton(this.leftPos + 35, this.topPos + 53, 16, 16, new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/xuanze0.png"), ResourceLocation.parse("primogemcraft:textures/screens/xuanze1.png")),
+		imagebutton_xuanze0 = new ImageButton(this.leftPos + 46, this.topPos + 96, 16, 16, new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/xuanze0.png"), ResourceLocation.parse("primogemcraft:textures/screens/xuanze1.png")),
 				e -> {
 					int x = GUIqiwuxuanzeScreen.this.x;
 					int y = GUIqiwuxuanzeScreen.this.y;
@@ -111,7 +111,7 @@ public class GUIqiwuxuanzeScreen extends AbstractContainerScreen<GUIqiwuxuanzeMe
 			}
 		};
 		this.addRenderableWidget(imagebutton_xuanze0);
-		imagebutton_xuanze01 = new ImageButton(this.leftPos + 79, this.topPos + 53, 16, 16, new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/xuanze0.png"), ResourceLocation.parse("primogemcraft:textures/screens/xuanze1.png")),
+		imagebutton_xuanze01 = new ImageButton(this.leftPos + 99, this.topPos + 96, 16, 16, new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/xuanze0.png"), ResourceLocation.parse("primogemcraft:textures/screens/xuanze1.png")),
 				e -> {
 					int x = GUIqiwuxuanzeScreen.this.x;
 					int y = GUIqiwuxuanzeScreen.this.y;
@@ -126,7 +126,7 @@ public class GUIqiwuxuanzeScreen extends AbstractContainerScreen<GUIqiwuxuanzeMe
 			}
 		};
 		this.addRenderableWidget(imagebutton_xuanze01);
-		imagebutton_xuanze02 = new ImageButton(this.leftPos + 124, this.topPos + 53, 16, 16,
+		imagebutton_xuanze02 = new ImageButton(this.leftPos + 153, this.topPos + 96, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("primogemcraft:textures/screens/xuanze0.png"), ResourceLocation.parse("primogemcraft:textures/screens/xuanze1.png")), e -> {
 					int x = GUIqiwuxuanzeScreen.this.x;
 					int y = GUIqiwuxuanzeScreen.this.y;

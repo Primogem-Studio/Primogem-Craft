@@ -3,10 +3,10 @@
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 176,
-    "height": 166,
+    "width": 216,
+    "height": 206,
     "inventoryOffsetX": 0,
-    "inventoryOffsetY": 0,
+    "inventoryOffsetY": 19,
     "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
@@ -28,8 +28,8 @@
             "fixedValue": true
           },
           "dropItemsWhenNotBound": false,
-          "x": 160,
-          "y": 57,
+          "x": 151,
+          "y": 61,
           "locked": false
         }
       },
@@ -52,7 +52,7 @@
           },
           "dropItemsWhenNotBound": false,
           "x": 204,
-          "y": 57,
+          "y": 61,
           "locked": false
         }
       },
@@ -74,8 +74,8 @@
             "fixedValue": true
           },
           "dropItemsWhenNotBound": false,
-          "x": 249,
-          "y": 57,
+          "x": 258,
+          "y": 61,
           "locked": false
         }
       },
@@ -88,8 +88,8 @@
           "onClick": {
             "name": "GUIqwxzanniusx0"
           },
-          "x": 161,
-          "y": 90,
+          "x": 152,
+          "y": 113,
           "locked": false
         }
       },
@@ -103,7 +103,7 @@
             "name": "GUIqwxzanniusx1"
           },
           "x": 205,
-          "y": 90,
+          "y": 113,
           "locked": false
         }
       },
@@ -116,8 +116,8 @@
           "onClick": {
             "name": "GUIqwxzanniusx2"
           },
-          "x": 250,
-          "y": 90,
+          "x": 259,
+          "y": 113,
           "locked": false
         }
       },
@@ -130,8 +130,8 @@
           },
           "width": 16,
           "height": 16,
-          "x": 158,
-          "y": 89,
+          "x": 152,
+          "y": 113,
           "locked": false
         }
       },
@@ -145,7 +145,7 @@
           "width": 16,
           "height": 16,
           "x": 205,
-          "y": 90,
+          "y": 113,
           "locked": false
         }
       },
@@ -158,8 +158,8 @@
           },
           "width": 16,
           "height": 16,
-          "x": 250,
-          "y": 90,
+          "x": 259,
+          "y": 113,
           "locked": false
         }
       },
@@ -172,8 +172,8 @@
           },
           "width": 48,
           "height": 8,
-          "x": 131,
-          "y": 43,
+          "x": 112,
+          "y": 23,
           "locked": false
         }
       },
@@ -188,8 +188,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 131,
-          "y": 42,
+          "x": 111,
+          "y": 22,
           "locked": false
         }
       }
