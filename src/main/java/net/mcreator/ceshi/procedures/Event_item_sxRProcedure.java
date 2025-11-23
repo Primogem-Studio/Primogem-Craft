@@ -52,6 +52,9 @@ public class Event_item_sxRProcedure {
             case 14 -> fumo(entity,2);
             case 15 -> fumo(entity,3);
             case 16 -> fumo(entity,4);
+            case 17 -> item_zhi(world,entity,true,"c:curio/negative");
+            case 18 -> item_zhi(world,entity,true,"c:curio/clock");
+            case 19 -> item_zhi(world,entity,true,"c:curio/negative/cf");
             default -> false;
         };
         if (o1)

@@ -28,6 +28,9 @@ public class EventitemmssxrProcedure {
             case 14 -> Fumo("§b中级");
             case 15 -> Fumo("§6高级");
             case 16 -> Fumo("§c特级");
+            case 17 -> QiWu("§c负面", "");
+            case 18 -> QiWu("§c咕咕钟", "");
+            case 19 -> QiWu("§c绝对失败处方", "");
             default -> "什么事件都没有...";
         };
         return sR1 + s1;

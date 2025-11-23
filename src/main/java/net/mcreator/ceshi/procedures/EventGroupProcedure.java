@@ -27,6 +27,9 @@ public class EventGroupProcedure {
             case 5 -> zu(entity, 2, 5, 0, "§c抉择");
             case 6 -> zu(entity, 3, 6, 0, "§c抉择");
             case 7 -> zu(entity, 11, 14, 0, "§a奖励");
+            case 8 -> zu(entity, 18, 18, 18, "§c咕咕钟");
+            case 9 -> zu(entity, 17, 17, 17, "§c惩罚");
+            case 10 -> zu(entity, 19, 19, 19, "§c太失败了");
             default -> false;
         };
     }

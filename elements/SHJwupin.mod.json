@@ -42,6 +42,9 @@
     "onCrafted": {
       "name": "Shijian_it_sx"
     },
+    "onItemInInventoryTick": {
+      "name": "Shijian_it_sx"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

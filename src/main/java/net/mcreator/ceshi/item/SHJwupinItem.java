@@ -5,6 +5,7 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 
 import net.mcreator.ceshi.procedures.Shijian_it_sxProcedure;
 
@@ -16,6 +17,12 @@ public class SHJwupinItem extends Item {
 	@Override
 	public void onCraftedBy(ItemStack itemstack, Level world, Player entity) {
 		super.onCraftedBy(itemstack, world, entity);
+		Shijian_it_sxProcedure.execute(itemstack);
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
 		Shijian_it_sxProcedure.execute(itemstack);
 	}
 }
