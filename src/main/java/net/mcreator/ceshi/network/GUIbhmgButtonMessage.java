@@ -52,15 +52,15 @@ public record GUIbhmgButtonMessage(int buttonID, int x, int y, int z) implements
 			return;
 		if (buttonID == 0) {
 
-			GUIqwxzanniusx0Procedure.execute(entity);
+			GUIqwxzanniusx0Procedure.execute(world, entity);
 		}
 		if (buttonID == 1) {
 
-			GUIqwxzanniusx1Procedure.execute(entity);
+			GUIqwxzanniusx1Procedure.execute(world, entity);
 		}
 		if (buttonID == 2) {
 
-			GUIqwxzanniusx2Procedure.execute(entity);
+			GUIqwxzanniusx2Procedure.execute(world, entity);
 		}
 		if (buttonID == 3) {
 
