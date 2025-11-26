@@ -4,35 +4,50 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.CustomData;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.Supplier;
+
 public class EventitemmssxrProcedure {
-    //定义“事件“中的描述
+    private static final Map<Integer, Supplier<String>> DESCRIPTION_HANDLERS = new HashMap<>();
+
+    static {
+        // 注册所有事件描述
+        registerDescription(1, () -> yuzhou_fumo_1(10, "§7低级"));
+        registerDescription(2, () -> yuzhou_fumo_1(20, "§7低级§e~§b中级"));
+        registerDescription(3, () -> yuzhou_fumo_1(40, "§d中级§e~§c特级"));
+        registerDescription(4, () -> yuzhou_fumo_2("20%", "§7低级"));
+        registerDescription(5, () -> yuzhou_fumo_2("70%", "§b中级"));
+        registerDescription(6, () -> yuzhou_fumo_2("95%", "§6高级") + "\n" + "§e消耗§b20§e宇宙碎片");
+        registerDescription(7, () -> QiWu("§7低级", ""));
+        registerDescription(8, () -> QiWu("§b中级", ""));
+        registerDescription(9, () -> QiWu("§6高级", ""));
+        registerDescription(10, () -> QiWu("§7低级", "§d融合"));
+        registerDescription(11, () -> QiWu("§b中级", "§d融合"));
+        registerDescription(12, () -> QiWu("§6高级", "§d融合"));
+        registerDescription(13, () -> Fumo("§7低级"));
+        registerDescription(14, () -> Fumo("§b中级"));
+        registerDescription(15, () -> Fumo("§6高级"));
+        registerDescription(16, () -> Fumo("§c特级"));
+        registerDescription(17, () -> QiWu("§c负面", ""));
+        registerDescription(18, () -> QiWu("§c咕咕钟", ""));
+        registerDescription(19, () -> QiWu("§c绝对失败处方", ""));
+    }
+
+    public static void registerDescription(int eventId, Supplier<String> descriptionProvider) {
+        DESCRIPTION_HANDLERS.put(eventId, descriptionProvider);
+    }
+
+    //定义"事件"中的描述
     public static String execute(ItemStack itemstack) {
         double a = 0;
         String s1 = "";
         a = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("event_");
-        String sR1 = "§c§l立即触发§a//§d§l右键触发" + "\n" +"§8 #"+ new java.text.DecimalFormat("##.##").format(a) +"\n";
-        s1 = switch ((int) a) {
-            case 1 -> yuzhou_fumo_1(10, "§7低级");
-            case 2 -> yuzhou_fumo_1(20, "§7低级§e~§b中级");
-            case 3 -> yuzhou_fumo_1(40, "§d中级§e~§c特级");
-            case 4 -> yuzhou_fumo_2("20%", "§7低级");
-            case 5 -> yuzhou_fumo_2("70%", "§b中级");
-            case 6 -> yuzhou_fumo_2("95%", "§6高级") + "\n" + "§e消耗§b20§e宇宙碎片";
-            case 7 -> QiWu("§7低级", "");
-            case 8 -> QiWu("§b中级", "");
-            case 9 -> QiWu("§6高级", "");
-            case 10 -> QiWu("§7低级", "§d融合");
-            case 11 -> QiWu("§b中级", "§d融合");
-            case 12 -> QiWu("§6高级", "§d融合");
-            case 13 -> Fumo("§7低级");
-            case 14 -> Fumo("§b中级");
-            case 15 -> Fumo("§6高级");
-            case 16 -> Fumo("§c特级");
-            case 17 -> QiWu("§c负面", "");
-            case 18 -> QiWu("§c咕咕钟", "");
-            case 19 -> QiWu("§c绝对失败处方", "");
-            default -> "什么事件都没有...";
-        };
+        String sR1 = "§c§l立即触发§a//§d§l右键触发" + "\n" + "§8 #" + new java.text.DecimalFormat("##.##").format(a) + "\n";
+
+        Supplier<String> descriptionProvider = DESCRIPTION_HANDLERS.get((int) a);
+        s1 = descriptionProvider != null ? descriptionProvider.get() : "什么事件都没有...";
+
         return sR1 + s1;
     }
 

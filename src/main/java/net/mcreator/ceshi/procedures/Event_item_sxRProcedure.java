@@ -25,38 +25,48 @@ import net.minecraft.world.level.LevelAccessor;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.BiFunction;
+
 public class Event_item_sxRProcedure {
+    private static final Map<Integer, BiFunction<LevelAccessor, Entity, Boolean>> EVENT_HANDLERS = new HashMap<>();
+
+    static {
+        // 注册所有事件处理器
+        registerEvent(1, (world, entity) -> shijian_123(entity, 1, new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 10));
+        registerEvent(2, (world, entity) -> shijian_123(entity, suijiint(world, 1, 3), new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 20));
+        registerEvent(3, (world, entity) -> shijian_123(entity, suijiint(world, 2, 4), new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 40));
+        registerEvent(4, (world, entity) -> Hp_jian(entity, world, 0.2) ? fumo(entity, 1) : no(entity));
+        registerEvent(5, (world, entity) -> Hp_jian(entity, world, 0.7) ? fumo(entity, 2) : no(entity));
+        registerEvent(6, (world, entity) -> Hp_jian(entity, world, 0.95) && item_zhi_1_1(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 20, entity) ? fumo(entity, 3) : no(entity));
+        registerEvent(7, (world, entity) -> item_zhi(world, entity, true, "c:curio/normal/b"));
+        registerEvent(8, (world, entity) -> item_zhi(world, entity, true, "c:curio/normal/a"));
+        registerEvent(9, (world, entity) -> item_zhi(world, entity, true, "c:curio/normal/s"));
+        registerEvent(10, (world, entity) -> item_zhi(world, entity, true, "c:curio/normal/fusion/b"));
+        registerEvent(11, (world, entity) -> item_zhi(world, entity, true, "c:curio/normal/fusion/a"));
+        registerEvent(12, (world, entity) -> item_zhi(world, entity, true, "c:curio/normal/fusion/s"));
+        registerEvent(13, (world, entity) -> fumo(entity, 1));
+        registerEvent(14, (world, entity) -> fumo(entity, 2));
+        registerEvent(15, (world, entity) -> fumo(entity, 3));
+        registerEvent(16, (world, entity) -> fumo(entity, 4));
+        registerEvent(17, (world, entity) -> item_zhi(world, entity, true, "c:curio/negative"));
+        registerEvent(18, (world, entity) -> item_zhi(world, entity, true, "c:curio/clock"));
+        registerEvent(19, (world, entity) -> item_zhi(world, entity, true, "c:curio/negative/cf"));
+    }
+
+    public static void registerEvent(int eventId, BiFunction<LevelAccessor, Entity, Boolean> handler) {
+        EVENT_HANDLERS.put(eventId, handler);
+    }
+
     public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
         if (entity == null)
             return;
-        double ie = 0;
-        Entity en = null;
-        ItemStack yzsp = new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get());
-        en = entity;
-        ie = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("event_");
-        boolean o1 = switch ((int) ie) {
-            //使用效果定义“事件”
-            case 1 -> shijian_123(entity, 1, yzsp, 10);
-            case 2 -> shijian_123(entity, suijiint(world, 1, 3), yzsp, 20);
-            case 3 -> shijian_123(entity, suijiint(world, 2, 4), yzsp, 40);
-            case 4 -> Hp_jian(entity, world, 0.2) ? fumo(entity, 1) : no(entity);
-            case 5 -> Hp_jian(entity, world, 0.7) ? fumo(entity, 2) : no(entity);
-            case 6 -> Hp_jian(entity, world, 0.95) && item_zhi_1_1(yzsp, 20, entity) ? fumo(entity, 3) : no(entity);
-            case 7 -> item_zhi(world,entity,true,"c:curio/normal/b");
-            case 8 -> item_zhi(world,entity,true,"c:curio/normal/a");
-            case 9 -> item_zhi(world,entity,true,"c:curio/normal/s");
-            case 10 -> item_zhi(world,entity,true,"c:curio/normal/fusion/b");
-            case 11 -> item_zhi(world,entity,true,"c:curio/normal/fusion/a");
-            case 12 -> item_zhi(world,entity,true,"c:curio/normal/fusion/s");
-            case 13 -> fumo(entity,1);
-            case 14 -> fumo(entity,2);
-            case 15 -> fumo(entity,3);
-            case 16 -> fumo(entity,4);
-            case 17 -> item_zhi(world,entity,true,"c:curio/negative");
-            case 18 -> item_zhi(world,entity,true,"c:curio/clock");
-            case 19 -> item_zhi(world,entity,true,"c:curio/negative/cf");
-            default -> false;
-        };
+        double ie = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("event_");
+
+        BiFunction<LevelAccessor, Entity, Boolean> handler = EVENT_HANDLERS.get((int) ie);
+        boolean o1 = handler != null ? handler.apply(world, entity) : false;
+
         if (o1)
             itemstack.shrink(1);
     }
@@ -146,7 +156,7 @@ public class Event_item_sxRProcedure {
         return false;
     }
 
-    public static boolean item_zhi(LevelAccessor world,Entity entity,boolean qd,String tag_) {
+    public static boolean item_zhi(LevelAccessor world, Entity entity, boolean qd, String tag_) {
         GUIqwxz03Procedure.execute(world, entity, qd, tag_);
         return true;
     }
