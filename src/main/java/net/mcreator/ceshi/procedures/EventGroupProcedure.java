@@ -37,6 +37,7 @@ public class EventGroupProcedure {
             int event3 = getRandomRegisteredEventId(world);
             return zu(entity, event1, event2, event3, "§c§khaha");
         });
+        registerGroup(12, (entity, world) -> zu(entity, 20, 20, 17, "§c战斗"));
     }
 
     public static void registerGroup(int groupId, BiFunction<Entity, LevelAccessor, Boolean> handler) {

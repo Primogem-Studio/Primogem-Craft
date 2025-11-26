@@ -2,12 +2,14 @@ package net.mcreator.ceshi.procedures;
 
 import io.netty.buffer.Unpooled;
 import net.mcreator.ceshi.PrimogemcraftMod;
+import net.mcreator.ceshi.init.PrimogemcraftModEntities;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 import net.mcreator.ceshi.world.inventory.GUISJfumoMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
@@ -16,6 +18,7 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -33,7 +36,6 @@ public class Event_item_sxRProcedure {
     private static final Map<Integer, BiFunction<LevelAccessor, Entity, Boolean>> EVENT_HANDLERS = new HashMap<>();
 
     static {
-        // 注册所有事件处理器
         registerEvent(1, (world, entity) -> shijian_123(entity, 1, new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 10));
         registerEvent(2, (world, entity) -> shijian_123(entity, suijiint(world, 1, 3), new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 20));
         registerEvent(3, (world, entity) -> shijian_123(entity, suijiint(world, 2, 4), new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 40));
@@ -53,6 +55,7 @@ public class Event_item_sxRProcedure {
         registerEvent(17, (world, entity) -> item_zhi(world, entity, true, "c:curio/negative"));
         registerEvent(18, (world, entity) -> item_zhi(world, entity, true, "c:curio/clock"));
         registerEvent(19, (world, entity) -> item_zhi(world, entity, true, "c:curio/negative/cf"));
+        registerEvent(20, (world, entity) -> entity_loot(world, entity, world instanceof ServerLevel _level3 ? PrimogemcraftModEntities.S_WFENGRAOJIANGSHI.get().spawn(_level3, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), MobSpawnType.MOB_SUMMONED) : null, "primogemcraft:fengraozlpevent", false));
     }
 
     public static void registerEvent(int eventId, BiFunction<LevelAccessor, Entity, Boolean> handler) {
@@ -93,8 +96,10 @@ public class Event_item_sxRProcedure {
         return EVENT_HANDLERS.containsKey(eventId);
     }
 
+    /**
+     * 接收对应等级附魔并为实体打开附魔GUI，最大4
+     */
     public static boolean fumo(Entity entity, int zhi) {
-        // 接收对应等级附魔并为实体打开附魔GUI，最大4
         entity.getPersistentData().putDouble("pgc_shijian_fumo_pinzhi", zhi);
         PrimogemcraftMod.queueServerWork(1, () -> {
             if (entity instanceof ServerPlayer _ent) {
@@ -120,8 +125,10 @@ public class Event_item_sxRProcedure {
         return true;
     }
 
+    /**
+     * 移除特定数量的item
+     */
     public static boolean item_zhi_1_1(ItemStack item, int zhi, Entity entity) {
-        //移除特定数量的item
         ItemStack i = item;
         int z = 0;
         if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerIter) {
@@ -141,8 +148,10 @@ public class Event_item_sxRProcedure {
         return false;
     }
 
+    /**
+     * 移除 entity 的 itzhi个 item 后打开 zhi 级别的附魔界面
+     */
     public static boolean shijian_123(Entity entity, int zhi, ItemStack item, int itzhi) {
-        //移除 entity 的 itzhi个 item 后打开 zhi 级别的附魔界面
         if (item_zhi_1_1(item, itzhi, entity)) {
             fumo(entity, zhi);
             return true;
@@ -151,16 +160,20 @@ public class Event_item_sxRProcedure {
         return false;
     }
 
+    /**
+     * 服务器随机整数
+     */
     public static int suijiint(LevelAccessor world, int zhi, int zhi0) {
-        //服务器随机整数
         int a = 0;
         if (!world.isClientSide())
             a = Mth.nextInt(RandomSource.create(), zhi, zhi0);
         return a;
     }
 
+    /**
+     * 造成百分比的 zhi 伤害
+     */
     public static boolean Hp_jian(Entity entity, LevelAccessor world, double zhi) {
-        //造成百分比的 zhi 伤害
         if (entity != null && entity instanceof LivingEntity _livEnt) {
             var mhp = _livEnt.getMaxHealth();//最大生命值
             if (_livEnt.getHealth() >= mhp * zhi) {
@@ -171,15 +184,33 @@ public class Event_item_sxRProcedure {
         return false;
     }
 
+    /**
+     * 播放条件不足
+     */
     public static boolean no(Entity entity) {
-        //播放条件不足
         if (entity instanceof Player _player && !_player.level().isClientSide())
             _player.displayClientMessage(Component.literal("\u00A7c\u6761\u4EF6\u4E0D\u8DB3\uFF01"), false);
         return false;
     }
 
+    /**
+     * 立即生成物品三选一界面，qd : true == tag false == loot
+     */
     public static boolean item_zhi(LevelAccessor world, Entity entity, boolean qd, String tag_) {
         GUIqwxz03Procedure.execute(world, entity, qd, tag_);
         return true;
+    }
+
+    /**
+     * 将生成的实体赋予可选择额外战利品，使用参考20号事件
+     */
+    public static boolean entity_loot(LevelAccessor world, Entity player, Entity e, String loot, boolean _tag) {
+        if (e == null || player == null) return false;
+        if (!world.isClientSide()) {
+            e.getPersistentData().putString("Event_Entity_Loot", loot);
+            e.getPersistentData().putBoolean("Event_Entity_Loot_tag", _tag);
+            return true;
+        }
+        return false;
     }
 }
