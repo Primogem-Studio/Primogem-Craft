@@ -36159,6 +36159,40 @@
           "src/main/java/net/mcreator/ceshi/procedures/Shijian_it_sxProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Eventi",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eventi",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "zhi",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/EventiProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

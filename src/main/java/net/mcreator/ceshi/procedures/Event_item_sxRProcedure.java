@@ -71,6 +71,28 @@ public class Event_item_sxRProcedure {
             itemstack.shrink(1);
     }
 
+    /**
+     * 获取已注册的事件数量（自适应上限）
+     */
+    public static int getRegisteredEventCount() {
+        if (EVENT_HANDLERS.isEmpty()) return 0;
+        return EVENT_HANDLERS.keySet().stream().max(Integer::compareTo).orElse(0);
+    }
+
+    /**
+     * 获取所有已注册的事件ID列表
+     */
+    public static java.util.List<Integer> getRegisteredEventIds() {
+        return new java.util.ArrayList<>(EVENT_HANDLERS.keySet());
+    }
+
+    /**
+     * 检查指定事件ID是否已注册
+     */
+    public static boolean isEventRegistered(int eventId) {
+        return EVENT_HANDLERS.containsKey(eventId);
+    }
+
     public static boolean fumo(Entity entity, int zhi) {
         // 接收对应等级附魔并为实体打开附魔GUI，最大4
         entity.getPersistentData().putDouble("pgc_shijian_fumo_pinzhi", zhi);
