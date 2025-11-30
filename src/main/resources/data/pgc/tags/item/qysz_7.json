@@ -3,7 +3,6 @@
   "values": [
     "minecraft:diamond_shovel",
     "primogemcraft:qinlaodezhexue",
-    "minecraft:lapis_lazuli",
     "primogemcraft:huangjindezhexue",
     "minecraft:emerald",
     "primogemcraft:mmolajian",
@@ -23,7 +22,6 @@
     "primogemcraft:mmolagao",
     "minecraft:diamond_sword",
     "minecraft:diamond_boots",
-    "primogemcraft:jinzhimola",
     "minecraft:diamond_pickaxe",
     {
       "id": "#pgc:dzmb_3",

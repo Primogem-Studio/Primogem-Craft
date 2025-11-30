@@ -37062,7 +37062,6 @@
       "TAG:pgc:dzmb_4",
       "TAG:c:yshjj",
       "TAG:primogemcraft:yuansutaoxiajiehejin",
-      "CUSTOM:Qhzllh4",
       "CUSTOM:Yuansujingshikuai",
       "CUSTOM:Kongyuezhufu",
       "CUSTOM:Jianglidayinxiongjingyan",
@@ -37719,7 +37718,6 @@
       "CUSTOM:Mmolafu",
       "CUSTOM:Mmolachan",
       "CUSTOM:Mmolajian",
-      "CUSTOM:Jinzhimola",
       "CUSTOM:Wmoladai",
       "CUSTOM:Zziyousongshikuai",
       "CUSTOM:Zuishengkuai",
@@ -37729,7 +37727,6 @@
       "CUSTOM:Aixubingyukuai",
       "CUSTOM:Suiji1shijian",
       "CUSTOM:Jianlaokuaiwupin",
-      "Items.DYE#4",
       "Items.DIAMOND",
       "Items.EMERALD",
       "Items.ECHO_SHARD",
@@ -37749,8 +37746,6 @@
       "TAG:c:yszsj",
       "TAG:primogemcraft:yuansutaozuanshi",
       "CUSTOM:Jianshijingban",
-      "CUSTOM:QQuHangZhoullh",
-      "CUSTOM:Mzsj3",
       "CUSTOM:Yuansujingti",
       "CUSTOM:Sanyuezhufu",
       "CUSTOM:Jianglimaoxianjiajingyan",
@@ -37818,8 +37813,6 @@
       "TAG:pgc:dzmb_2",
       "TAG:pgc:dzmb_0",
       "CUSTOM:Shiwutsslm",
-      "CUSTOM:Qhzllh2",
-      "CUSTOM:Mzsj2",
       "CUSTOM:Jiangliliulangzhejingyan",
       "CUSTOM:Xzcfyxwzd",
       "CUSTOM:Xinghui",
@@ -37834,7 +37827,8 @@
       "Items.EMERALD",
       "CUSTOM:Myzj",
       "CUSTOM:Xingqiong",
-      "Items.AMETHYST_SHARD"
+      "Items.AMETHYST_SHARD",
+      "CUSTOM:Jinzhimola"
     ],
     "ITEMS:pgc:qysz_3": [
       "CUSTOM:Yuanshi",
@@ -37888,8 +37882,6 @@
       "CUSTOM:Jlza",
       "TAG:pgc:dzmb_1",
       "TAG:primogemcraft:yuansutaotie",
-      "CUSTOM:Mzsj",
-      "CUSTOM:Qhzlh",
       "CUSTOM:Ljtg02",
       "CUSTOM:Xingchen",
       "CUSTOM:Mmola01",
@@ -37908,7 +37900,8 @@
       "Items.GOLDEN_CHESTPLATE",
       "Items.GOLDEN_LEGGINGS",
       "Items.GOLDEN_BOOTS",
-      "CUSTOM:Liulangzhezhinang"
+      "CUSTOM:Liulangzhezhinang",
+      "Items.DYE#4"
     ],
     "ITEMS:pgc:qi_wu_xiu_fu": [
       "CUSTOM:Qwkwzj",
