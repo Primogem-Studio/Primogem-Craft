@@ -17,20 +17,21 @@ public class SuijishijiandiaoluoProcedure {
 	@SubscribeEvent
 	public static void onEntityDeath(LivingDeathEvent event) {
 		if (event.getEntity() != null) {
-			execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
+			execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(), event.getSource().getEntity());
 		}
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		execute(null, world, x, y, z, entity);
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
+		execute(null, world, x, y, z, entity, sourceentity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
+		if (entity == null || sourceentity == null)
 			return;
 		ItemStack a = ItemStack.EMPTY;
+		Entity e = null;
 		if (!(entity instanceof Player)) {
-			EventiProcedure.execute(world, x, y, z, EventGroupProcedure.getRandomGroupId(world));
+			EventiProcedure.execute(world, x, y, z, sourceentity, EventGroupProcedure.getRandomGroupId(world));
 		}
 	}
 }
