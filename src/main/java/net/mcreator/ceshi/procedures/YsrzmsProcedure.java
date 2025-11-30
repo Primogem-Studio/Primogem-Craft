@@ -12,20 +12,14 @@ public class YsrzmsProcedure {
 		String s1 = "";
 		String s2 = "";
 		String s3 = "";
+		Entity e = null;
 		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("qidong")) {
-			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("feng")) {
-				if (entity.getPersistentData().getBoolean("zzss_kj_hjxz")) {
-					s1 = "\u00A7c\u7981\u7528";
-				} else {
-					s1 = "\u00A7a\u542F\u7528";
-				}
-				s2 = "\u00A75\u98CE\u5143\u7D20\u62A4\u7532\u7981\u7528\u540E\u4FDD\u7559\u8DF3\u8DC3\u63D0\u5347\u6548\u679C" + "\n" + "\u00A77\u836F\u6C34\u72B6\u6001\uFF1A" + s1 + "\n"
-						+ "\u00A77\u59CB\u7EC8\u7981\u7528\u836F\u6C34\u72B6\u6001\uFF1A" + (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("feng_teshu") ? "\u00A7a\u5F00\u542F" : "\u00A7c\u5173\u95ED")
-						+ "\n" + "\u00A78\u53F3\u952E\u8C03\u6574\u662F\u5426\u59CB\u7EC8\u7981\u7528";
-			} else {
-				s2 = "";
+			e = entity;
+			int ys = itemstack.get(net.hackermdch.pgc.CustomComponents.ELEMENT_TYPE);
+			if (ys == 1) {
+				s2 = FtkxsxProcedure.ysrz_ms((int) entity.getPersistentData().getDouble("zzss_kj_hjxz"));
 			}
-			s3 = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("ms") + "\n" + s2 + "\n" + Diaoyongshift0Procedure.execute(
+			s3 = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("ms") + "\n" + ("\u00A77\u5F53\u524D\u72B6\u6001\uFF1A" + s2) + "\n" + Diaoyongshift0Procedure.execute(
 					"\u00A76\u5143\u7D20\u7194\u73E0\u6548\u679C\u4E0E\u5143\u7D20\u62A4\u7532\u6548\u679C\u7C7B\u4F3C\uFF0C\u4F46\u90E8\u5206\u76D4\u7532\u4E0E\u7194\u73E0\u62E5\u6709\u533A\u522B\u3002\u5927\u90E8\u5206\u6548\u679C\u4E0D\u53EF\u53E0\u52A0\u3002\u67E5\u770B\u8BE6\u7EC6\u63CF\u8FF0\u8BF7\u67E5\u770B\u672C\u6A21\u7EC4\u7684\u201C\u953B\u9020\u6A21\u677F\u201D\u63CF\u8FF0",
 					"\u5176\u4ED6\u4FE1\u606F");
 		} else {

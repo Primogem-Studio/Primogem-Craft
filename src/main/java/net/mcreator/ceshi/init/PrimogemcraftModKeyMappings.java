@@ -19,7 +19,7 @@ import net.mcreator.ceshi.network.ZzkjxgkgMessage;
 
 @EventBusSubscriber(Dist.CLIENT)
 public class PrimogemcraftModKeyMappings {
-	public static final KeyMapping ZZKJXGKG = new KeyMapping("key.primogemcraft.zzkjxgkg", GLFW.GLFW_KEY_UNKNOWN, "key.categories.gameplay") {
+	public static final KeyMapping ZZKJXGKG = new KeyMapping("key.primogemcraft.zzkjxgkg", GLFW.GLFW_KEY_ESCAPE, "key.categories.gameplay") {
 		private boolean isDownOld = false;
 
 		@Override

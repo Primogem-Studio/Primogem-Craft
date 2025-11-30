@@ -2,7 +2,7 @@
   "_fv": 79,
   "_type": "keybind",
   "definition": {
-    "triggerKey": "NONE",
+    "triggerKey": "ESCAPE",
     "keyBindingName": "§b原石工艺 缓降开关",
     "keyBindingCategoryKey": "gameplay",
     "onKeyPressed": {

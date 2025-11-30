@@ -15,10 +15,11 @@ import net.minecraft.world.item.ItemStack;
 
 public class YstzsxOProcedure {
     public static void feng(Player player, double zhi) {
-        var flag = player.getPersistentData().getBoolean("zzss_kj_hjxz");
+        var flag = player.getPersistentData().getDouble("zzss_kj_hjxz");
         var b = hasEntityInInventory(player, PrimogemcraftModItems.HQFENG.toStack()) ? zhi + zhi * 0.25 : zhi;
-        if (b >= 2 && !flag) addEffect(player, MobEffects.SLOW_FALLING, 100, (int) (b * 0.5 - 1), true, false);
-        if (b >= 4) addEffect(player, MobEffects.JUMP, 100, (int) (b + 2), true, false);
+        if (b >= 2 && flag != 1 && flag != 3) addEffect(player, MobEffects.SLOW_FALLING, 100, (int) (b * 0.5 - 1), true, false);
+        if (b >= 4 && flag != 2 && flag != 3) addEffect(player, MobEffects.JUMP, 100, (int) (b + 2), true, false);
+        if (b >= 8) addEffect(player, PrimogemcraftModMobEffects.FEIXING, 60, 1, false, false);
     }
 
     public static void yan(Player player, double zhi) {
