@@ -20,8 +20,8 @@ public class EventiProcedure {
 		Entity e = null;
 		if (!world.isClientSide()) {
 			e = entity;
-			if (net.hackermdch.pgc.Timer.isDone(entity, "Event") && PrimogemcraftModVariables.MapVariables.get(world).shijian_xianzhi > 0) {
-				net.hackermdch.pgc.Timer.set(entity, "Event", 6000);
+			if (net.hackermdch.pgc.Timer.isDone(entity, "Event_it") && PrimogemcraftModVariables.MapVariables.get(world).shijian_xianzhi > 0) {
+				net.hackermdch.pgc.Timer.set(entity, "Event_it", 6000);
 				PrimogemcraftModVariables.MapVariables.get(world).shijian_xianzhi = PrimogemcraftModVariables.MapVariables.get(world).shijian_xianzhi - 1;
 				PrimogemcraftModVariables.MapVariables.get(world).markSyncDirty();
 			}
