@@ -75,6 +75,17 @@ public class SJwpsxProcedure {
 					}
 				}
 			}
+			if (a.getItem() == BuiltInRegistries.ITEM.get(ResourceLocation.parse("primogemcraft:eventitem"))) {
+				if (event instanceof ItemEntityPickupEvent.Pre _event)
+					_event.setCanPickup(TriState.FALSE);
+				aa = a.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("event_");
+				if (aa > 0) {
+					Event_item_sxRProcedure.execute(world, entity, a);
+					itemstack.shrink(1);
+				}
+				if (event instanceof ItemEntityPickupEvent.Pre _event)
+					_event.setCanPickup(TriState.TRUE);
+			}
 		}
 	}
 }
