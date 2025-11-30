@@ -45,7 +45,7 @@ public class SJwpsxProcedure {
 			s1 = BuiltInRegistries.ITEM.getKey(a.getItem()).toString();
 			switch (s1) {
 				case "primogemcraft:sh_jwupin" -> {
-					Shijian_it_sxProcedure.execute(itemstack);
+					Shijian_it_sxProcedure.execute(world, itemstack);
 					if (net.hackermdch.pgc.Timer.isDone(entity, "shijian")) {
 						net.hackermdch.pgc.Timer.set(entity, "shijian", 60);
 						if (entity instanceof Player _player && !_player.level().isClientSide())
@@ -56,8 +56,8 @@ public class SJwpsxProcedure {
 					if (entity.isShiftKeyDown()) {
 						e = entity;
 						aa = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("event_zu_i");
-						EventGroupProcedure.execute(world, entity, (int) aa);
 						itemstack.shrink(1);
+						EventGroupProcedure.execute(world, entity, (int) aa);
 					} else if (!(entity instanceof ServerPlayer _plr10 && _plr10.level() instanceof ServerLevel
 							&& _plr10.getAdvancements().getOrStartProgress(_plr10.server.getAdvancements().get(ResourceLocation.parse("primogemcraft:jdshijian_0"))).isDone())) {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
