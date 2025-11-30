@@ -3,7 +3,7 @@
   "_type": "keybind",
   "definition": {
     "triggerKey": "NONE",
-    "keyBindingName": "§b原石工艺 缓降开关",
+    "keyBindingName": "§b原石工艺 风属性配置",
     "keyBindingCategoryKey": "gameplay",
     "onKeyPressed": {
       "name": "Ftkxsx"

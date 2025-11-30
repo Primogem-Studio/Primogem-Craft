@@ -32915,6 +32915,10 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "return_type": "string",
@@ -39275,7 +39279,7 @@
       "item.primogemcraft.qwkwzt": "§5§l『奇物』§2空无烛骰",
       "item.primogemcraft.qwhdlz.description_2": "§",
       "item.primogemcraft.qwkwgl.description_3": "§e食用后恢复30%生命值",
-      "key.primogemcraft.zzkjxgkg": "§b原石工艺 缓降开关",
+      "key.primogemcraft.zzkjxgkg": "§b原石工艺 风属性配置",
       "item.primogemcraft.xiangdanganlao.description_1": "§7拾取经验球时恢复少量生命值",
       "item.primogemcraft.qwlbtdgcl.description_3": "§7触发后，如若持有宇宙碎片总数›64个则移除所",
       "item.primogemcraft.xiangdanganlao.description_0": "§7存在物品栏时：",
@@ -42925,7 +42929,7 @@
       "item.primogemcraft.qwkwzt": "§5§l『奇物』§2空无烛骰",
       "item.primogemcraft.qwhdlz.description_2": "§",
       "item.primogemcraft.qwkwgl.description_3": "§e食用后恢复30%生命值",
-      "key.primogemcraft.zzkjxgkg": "§b原石工艺 缓降开关",
+      "key.primogemcraft.zzkjxgkg": "§b原石工艺 风属性配置",
       "item.primogemcraft.xiangdanganlao.description_1": "§7拾取经验球时恢复少量生命值",
       "item.primogemcraft.qwlbtdgcl.description_3": "§7触发后，如若持有宇宙碎片总数›64个则移除所",
       "item.primogemcraft.xiangdanganlao.description_0": "§7存在物品栏时：",

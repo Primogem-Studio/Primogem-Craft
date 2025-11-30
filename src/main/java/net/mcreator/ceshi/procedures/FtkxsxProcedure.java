@@ -24,7 +24,7 @@ public class FtkxsxProcedure {
 			case 2 -> "§c禁用 §b跳跃提升";
 			case 3 -> "§c仅飞行 §9如果满足";
 			case 4 -> "§a全部启用";
-			default -> "§7暂未设定！";
+			default -> "§f暂未设定";
 		};
 	}
 }

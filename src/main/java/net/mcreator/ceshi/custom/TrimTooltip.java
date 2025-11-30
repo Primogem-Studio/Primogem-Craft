@@ -18,6 +18,12 @@ public class TrimTooltip {
                 if (Screen.hasShiftDown()) {
                     tooltip.add(Component.literal("2x 获得永久羽坠效果").withColor(0x73F9CC));
                     tooltip.add(Component.literal("4x 获得永久跳跃提升效果").withColor(0x73F9CC));
+                    tooltip.add(Component.literal("8x 获得永久飞行效果").withColor(0x73F9CC));
+                    tooltip.add(Component.literal("按住Ctrl查看详细").withColor(0xFECCFF));
+                    if (Screen.hasControlDown()) {
+                        tooltip.add(Component.literal("配置相关").withColor(0x73F9CC));
+                        tooltip.add(Component.literal("药水效果可通过 原石工艺 风属性效果 按键配置").withColor(0x7F7F7F));
+                    }
                 }
             }
             case "primogemcraft:ys_yan" -> {
