@@ -36209,7 +36209,7 @@
       "name": "Eventi",
       "type": "procedure",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "eventi",
       "metadata": {
         "dependencies": [
@@ -36366,6 +36366,12 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "Event_entity",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
