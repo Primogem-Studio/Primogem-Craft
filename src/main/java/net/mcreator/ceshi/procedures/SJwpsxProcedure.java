@@ -45,6 +45,7 @@ public class SJwpsxProcedure {
 			s1 = BuiltInRegistries.ITEM.getKey(a.getItem()).toString();
 			switch (s1) {
 				case "primogemcraft:sh_jwupin" -> {
+					Shijian_it_sxProcedure.execute(itemstack);
 					if (net.hackermdch.pgc.Timer.isDone(entity, "shijian")) {
 						net.hackermdch.pgc.Timer.set(entity, "shijian", 60);
 						if (entity instanceof Player _player && !_player.level().isClientSide())
