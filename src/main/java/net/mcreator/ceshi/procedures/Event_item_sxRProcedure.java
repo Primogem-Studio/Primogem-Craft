@@ -1,6 +1,7 @@
 package net.mcreator.ceshi.procedures;
 
 import io.netty.buffer.Unpooled;
+import net.hackermdch.pgc.Timer;
 import net.mcreator.ceshi.PrimogemcraftMod;
 import net.mcreator.ceshi.init.PrimogemcraftModEntities;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
@@ -62,9 +63,9 @@ public class Event_item_sxRProcedure {
         EVENT_HANDLERS.put(eventId, handler);
     }
 
-    public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
+    public static boolean execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
         if (entity == null)
-            return;
+            return false;
         double ie = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("event_");
 
         BiFunction<LevelAccessor, Entity, Boolean> handler = EVENT_HANDLERS.get((int) ie);
@@ -72,6 +73,7 @@ public class Event_item_sxRProcedure {
 
         if (o1)
             itemstack.shrink(1);
+        return o1;
     }
 
     /**
@@ -188,9 +190,11 @@ public class Event_item_sxRProcedure {
      * 播放条件不足
      */
     public static boolean no(Entity entity) {
-        if (entity instanceof Player _player && !_player.level().isClientSide())
-            _player.displayClientMessage(Component.literal("\u00A7c\u6761\u4EF6\u4E0D\u8DB3\uFF01"), false);
-        return false;
+        if (Timer.isDone(entity, "Event_Tri")) {
+            Timer.set(entity,"Event_Tri",100);
+            if (entity instanceof Player _player && !_player.level().isClientSide())
+                _player.displayClientMessage(Component.literal("\u00A7c\u6761\u4EF6\u4E0D\u8DB3\uFF01"), false);}
+            return false;
     }
 
     /**
