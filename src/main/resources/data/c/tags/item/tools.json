@@ -2,6 +2,10 @@
   "replace": false,
   "values": [
     {
+      "id": "#c:tools/shield",
+      "required": false
+    },
+    {
       "id": "#c:tools/melee_weapon",
       "required": false
     }

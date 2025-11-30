@@ -36984,7 +36984,8 @@
       "CUSTOM:Lijs"
     ],
     "ITEMS:c:tools": [
-      "TAG:c:tools/melee_weapon"
+      "TAG:c:tools/melee_weapon",
+      "TAG:c:tools/shield"
     ],
     "ITEMS:genshincraft:anemo_infusion": [
       "CUSTOM:Zizaitiejian",
@@ -38390,7 +38391,10 @@
       "~CUSTOM:Xiangdanganlao",
       "~CUSTOM:Yiyinhedaletou",
       "~CUSTOM:Bushizidanhe",
-      "Items.HePuYuan"
+      "Items.HePuYuan",
+      "CUSTOM:Ljtg01",
+      "CUSTOM:Ljtg02",
+      "CUSTOM:Xzcfyxwzd"
     ],
     "BLOCKS:minecraft:slabs": [
       "~CUSTOM:Cangsangshizhuantaijie",
@@ -38579,6 +38583,11 @@
       "~CUSTOM:Caomu36",
       "~CUSTOM:Caomu26",
       "~CUSTOM:Ceshi_mucaibaoButton"
+    ],
+    "ITEMS:c:tools/shield": [
+      "CUSTOM:Ljtg01",
+      "CUSTOM:Ljtg02",
+      "CUSTOM:Xzcfyxwzd"
     ]
   },
   "tab_element_order": {
