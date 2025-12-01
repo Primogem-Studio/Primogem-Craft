@@ -7176,7 +7176,7 @@
       "name": "Ceshi_3",
       "type": "procedure",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "ceshi_3",
       "metadata": {
         "files": [
