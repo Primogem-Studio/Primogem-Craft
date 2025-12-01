@@ -12,36 +12,44 @@ import net.minecraft.world.level.LevelAccessor;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiFunction;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 import static net.mcreator.ceshi.procedures.Event_item_sxRProcedure.suijiint;
 
 public class EventGroupProcedure {
-    private static final Map<Integer, BiFunction<Entity, LevelAccessor, Boolean>> GROUP_HANDLERS = new HashMap<>();
+    // 成员变量驱动的事件组处理器
+    private static final Map<Integer, Function<GroupContext, Boolean>> GROUP_HANDLERS = new HashMap<>();
 
-    static {
-        // 注册所有事件组处理器
-        registerGroup(1, (entity, world) -> zu(entity, 1, 2, 3, "§d附魔"));
-        registerGroup(2, (entity, world) -> zu(entity, 4, 5, 6, "§d附魔"));
-        registerGroup(3, (entity, world) -> zu(entity, 1, 4, 0, "§c抉择"));
-        registerGroup(4, (entity, world) -> zu(entity, 7, 13, 0, "§a奖励"));
-        registerGroup(5, (entity, world) -> zu(entity, 2, 5, 0, "§c抉择"));
-        registerGroup(6, (entity, world) -> zu(entity, 3, 6, 0, "§c抉择"));
-        registerGroup(7, (entity, world) -> zu(entity, 11, 14, 0, "§a奖励"));
-        registerGroup(8, (entity, world) -> zu(entity, 18, 18, 18, "§c咕咕钟"));
-        registerGroup(9, (entity, world) -> zu(entity, 17, 17, 17, "§c惩罚"));
-        registerGroup(10, (entity, world) -> zu(entity, 19, 19, 19, "§c太失败了"));
-        registerGroup(11, (entity, world) -> {
-            // 自适应随机事件组 - 从所有已注册事件中随机选择
-            int event1 = getRandomRegisteredEventId(world);
-            int event2 = getRandomRegisteredEventId(world);
-            int event3 = getRandomRegisteredEventId(world);
-            return zu(entity, event1, event2, event3, "§c§khaha");
-        });
-        registerGroup(12, (entity, world) -> zu(entity, 20, 20, 17, "§c战斗"));
+    // 兼容原有API的注册方法（BiFunction -> Function）
+    private static void registerGroupInternal(int groupId, Function<GroupContext, Boolean> handler) {
+        GROUP_HANDLERS.put(groupId, handler);
     }
 
+    // 公共API注册方法（保持兼容）
     public static void registerGroup(int groupId, BiFunction<Entity, LevelAccessor, Boolean> handler) {
-        GROUP_HANDLERS.put(groupId, handler);
+        GROUP_HANDLERS.put(groupId, ctx -> handler.apply(ctx.getEntity(), ctx.getWorld()));
+    }
+
+    static {
+        // 使用GroupContext注册事件组（无需传递entity和world）
+        registerGroupInternal(1, ctx -> ctx.zu(1, 2, 3, "§d附魔"));
+        registerGroupInternal(2, ctx -> ctx.zu(4, 5, 6, "§d附魔"));
+        registerGroupInternal(3, ctx -> ctx.zu(1, 4, 0, "§c抉择"));
+        registerGroupInternal(4, ctx -> ctx.zu(7, 13, 0, "§a奖励"));
+        registerGroupInternal(5, ctx -> ctx.zu(2, 5, 0, "§c抉择"));
+        registerGroupInternal(6, ctx -> ctx.zu(3, 6, 0, "§c抉择"));
+        registerGroupInternal(7, ctx -> ctx.zu(11, 14, 0, "§a奖励"));
+        registerGroupInternal(8, ctx -> ctx.zu(18, 18, 18, "§c咕咕钟"));
+        registerGroupInternal(9, ctx -> ctx.zu(17, 17, 17, "§c惩罚"));
+        registerGroupInternal(10, ctx -> ctx.zu(19, 19, 19, "§c太失败了"));
+        registerGroupInternal(11, ctx -> {
+            int event1 = ctx.getRandomRegisteredEventId();
+            int event2 = ctx.getRandomRegisteredEventId();
+            int event3 = ctx.getRandomRegisteredEventId();
+            return ctx.zu(event1, event2, event3, "§c§khaha");
+        });
+        registerGroupInternal(12, ctx -> ctx.zu(20, 20, 17, "§c战斗"));
     }
 
     /**
@@ -107,31 +115,17 @@ public class EventGroupProcedure {
 
     public static void execute(LevelAccessor world, Entity entity, int zu) {
         if (entity == null) return;
+
+        // 打开GUI
         GUIqwxz03Procedure.execute(world, entity, false, "primogemcraft:event");
 
-        BiFunction<Entity, LevelAccessor, Boolean> handler = GROUP_HANDLERS.get(zu);
-        if (handler != null) {
-            handler.apply(entity, world);
-        }
-    }
+        // 创建GroupContext并执行
+        GroupContext context = new GroupContext(entity, world);
+        Function<GroupContext, Boolean> handler = GROUP_HANDLERS.get(zu);
 
-    public static boolean zu(Entity entity, int zU0, int zU1, int zU2, String name) {
-        int a = 0;
-        for (int index0 = 0; index0 < 3; index0++) {
-            ItemStack i = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor _menu0 ? _menu0.getSlots().get(index0).getItem() : ItemStack.EMPTY);
-            a = switch (index0) {
-                case 0 -> zU0;
-                case 1 -> zU1;
-                case 2 -> zU2;
-                default -> 0;
-            };
-            i.set(DataComponents.CUSTOM_NAME, Component.literal(name));
-            {
-                int finalA = a;
-                CustomData.update(DataComponents.CUSTOM_DATA, i, tag -> tag.putDouble("event_", finalA));
-            }
+        if (handler != null) {
+            handler.apply(context);
         }
-        return true;
     }
 
     /**
@@ -139,5 +133,167 @@ public class EventGroupProcedure {
      */
     public static java.util.List<Integer> getRegisteredGroupIds() {
         return new java.util.ArrayList<>(GROUP_HANDLERS.keySet());
+    }
+
+    /**
+     * 事件组上下文类 - 封装事件组相关的数据和操作
+     */
+    public static class GroupContext {
+        private final Entity entity;
+        private final LevelAccessor world;
+        private final Player player;
+
+        public GroupContext(Entity entity, LevelAccessor world) {
+            this.entity = entity;
+            this.world = world;
+            this.player = entity instanceof Player ? (Player) entity : null;
+        }
+
+        // Getter方法
+        public Entity getEntity() { return entity; }
+        public Player getPlayer() { return player; }
+        public LevelAccessor getWorld() { return world; }
+
+        /**
+         * 核心方法：设置事件组的三选一选项
+         */
+        public boolean zu(int zU0, int zU1, int zU2, String name) {
+            for (int index0 = 0; index0 < 3; index0++) {
+                ItemStack i = getSlotItem(index0);
+                int eventId = switch (index0) {
+                    case 0 -> zU0;
+                    case 1 -> zU1;
+                    case 2 -> zU2;
+                    default -> 0;
+                };
+
+                // 设置物品名称
+                i.set(DataComponents.CUSTOM_NAME, Component.literal(name));
+
+                // 设置事件ID
+                int finalEventId = eventId;
+                CustomData.update(DataComponents.CUSTOM_DATA, i, tag ->
+                        tag.putDouble("event_", finalEventId)
+                );
+            }
+            return true;
+        }
+
+        /**
+         * 获取玩家当前GUI中的物品
+         */
+        private ItemStack getSlotItem(int slotIndex) {
+            if (player != null && player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor menuAccessor) {
+                var slots = menuAccessor.getSlots();
+                if (slotIndex >= 0 && slotIndex < slots.size()) {
+                    return slots.get(slotIndex).getItem();
+                }
+            }
+            return ItemStack.EMPTY;
+        }
+
+        /**
+         * 从所有已注册事件中随机选择一个事件ID（使用成员变量world）
+         */
+        public int getRandomRegisteredEventId() {
+            int eventCount = Event_item_sxRProcedure.getRegisteredEventCount();
+            if (eventCount <= 0) return 0;
+
+            java.util.List<Integer> registeredEvents = Event_item_sxRProcedure.getRegisteredEventIds();
+            if (registeredEvents.isEmpty()) return 0;
+
+            int randomIndex = suijiint(world, 0, registeredEvents.size() - 1);
+            return registeredEvents.get(randomIndex);
+        }
+
+        /**
+         * 判断玩家是否在创造模式
+         */
+        public boolean isPlayerCreative() {
+            return player != null && player.isCreative();
+        }
+
+        /**
+         * 链式设置方法
+         */
+        public GroupConfiguration configure() {
+            return new GroupConfiguration(this);
+        }
+
+        /**
+         * 快速设置方法
+         */
+        public boolean quickSet(String name, int... eventIds) {
+            if (eventIds.length == 0) return false;
+
+            int zU0 = eventIds.length > 0 ? eventIds[0] : 0;
+            int zU1 = eventIds.length > 1 ? eventIds[1] : 0;
+            int zU2 = eventIds.length > 2 ? eventIds[2] : 0;
+
+            return zu(zU0, zU1, zU2, name);
+        }
+    }
+
+    /**
+     * 组配置类 - 提供链式配置API
+     */
+    public static class GroupConfiguration {
+        private final GroupContext context;
+        private int slot0 = 0;
+        private int slot1 = 0;
+        private int slot2 = 0;
+        private String name = "§f事件";
+
+        public GroupConfiguration(GroupContext context) {
+            this.context = context;
+        }
+
+        public GroupConfiguration slot0(int eventId) {
+            this.slot0 = eventId;
+            return this;
+        }
+
+        public GroupConfiguration slot1(int eventId) {
+            this.slot1 = eventId;
+            return this;
+        }
+
+        public GroupConfiguration slot2(int eventId) {
+            this.slot2 = eventId;
+            return this;
+        }
+
+        public GroupConfiguration name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public boolean apply() {
+            return context.zu(slot0, slot1, slot2, name);
+        }
+    }
+
+    /**
+     * 便捷方法 - 创建简单的三选一事件组
+     */
+    public static boolean createSimpleGroup(Entity entity, LevelAccessor world,
+                                            int event1, int event2, int event3,
+                                            String groupName) {
+        if (entity == null) return false;
+
+        GroupContext context = new GroupContext(entity, world);
+        return context.zu(event1, event2, event3, groupName);
+    }
+
+    /**
+     * 批量注册事件组
+     */
+    public static void registerGroups(Map<Integer, Consumer<GroupContext>> groups) {
+        groups.forEach((groupId, consumer) -> {
+            registerGroupInternal(groupId, ctx -> {
+                consumer.accept(ctx);
+                return true; // 假设消费成功
+            });
+        });
     }
 }
