@@ -50,12 +50,12 @@ public class Event_item_sxRProcedure {
 
     static {
         // 使用EventContext注册事件
-        registerEventInternal(1, ctx -> ctx.shijian_123(1, new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 10));
-        registerEventInternal(2, ctx -> ctx.shijian_123(ctx.suijiint(1, 3), new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 20));
-        registerEventInternal(3, ctx -> ctx.shijian_123(ctx.suijiint(2, 4), new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 40));
+        registerEventInternal(1, ctx -> ctx.comItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 10) ? ctx.fumo(1) : ctx.no());
+        registerEventInternal(2, ctx -> ctx.comItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 20) ? ctx.fumo(ctx.random(1, 2)) : ctx.no());
+        registerEventInternal(3, ctx -> ctx.comItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 40) ? ctx.fumo(ctx.random(2, 4)) : ctx.no());
         registerEventInternal(4, ctx -> ctx.Hp_jian(0.2) ? ctx.fumo(1) : ctx.no());
         registerEventInternal(5, ctx -> ctx.Hp_jian(0.7) ? ctx.fumo(2) : ctx.no());
-        registerEventInternal(6, ctx -> ctx.Hp_jian(0.95) && ctx.item_zhi_1_1(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 20) ? ctx.fumo(3) : ctx.no());
+        registerEventInternal(6, ctx -> ctx.Hp_jian(0.95) && ctx.comItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 20) ? ctx.fumo(3) : ctx.no());
         registerEventInternal(7, ctx -> ctx.item_zhi(true, "c:curio/normal/b"));
         registerEventInternal(8, ctx -> ctx.item_zhi(true, "c:curio/normal/a"));
         registerEventInternal(9, ctx -> ctx.item_zhi(true, "c:curio/normal/s"));
@@ -118,11 +118,11 @@ public class Event_item_sxRProcedure {
         }
 
         // 获取器
-        public int getId() { return id; }
-        public Entity getEntity() { return entity; }
-        public Player getPlayer() { return player; }
-        public LevelAccessor getWorld() { return world; }
-        public ItemStack getItemStack() { return itemstack; }
+        public int getId() {return id;}
+        public Entity getEntity() {return entity;}
+        public Player getPlayer() {return player;}
+        public LevelAccessor getWorld() {return world;}
+        public ItemStack getItemStack() {return itemstack;}
 
         /**
          * 接收对应等级附魔并为实体打开附魔GUI，最大4
@@ -156,7 +156,7 @@ public class Event_item_sxRProcedure {
         /**
          * 移除特定数量的item
          */
-        public boolean item_zhi_1_1(ItemStack item, int zhi) {
+        public boolean comItem(ItemStack item, int zhi) {
             int total = 0;
             if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable itemHandler) {
                 for (int slot = 0; slot < itemHandler.getSlots(); slot++) {
@@ -180,21 +180,9 @@ public class Event_item_sxRProcedure {
         }
 
         /**
-         * 移除 itzhi个 item 后打开 zhi 级别的附魔界面
-         */
-        public boolean shijian_123(int zhi, ItemStack item, int itzhi) {
-            if (item_zhi_1_1(item, itzhi)) {
-                fumo(zhi);
-                return true;
-            }
-            no();
-            return false;
-        }
-
-        /**
          * 服务器随机整数
          */
-        public int suijiint(int min, int max) {
+        public int random(int min, int max) {
             if (!world.isClientSide()) {
                 return Mth.nextInt(random, min, max);
             }
