@@ -118,11 +118,25 @@ public class Event_item_sxRProcedure {
         }
 
         // 获取器
-        public int getId() {return id;}
-        public Entity getEntity() {return entity;}
-        public Player getPlayer() {return player;}
-        public LevelAccessor getWorld() {return world;}
-        public ItemStack getItemStack() {return itemstack;}
+        public int getId() {
+            return id;
+        }
+
+        public Entity getEntity() {
+            return entity;
+        }
+
+        public Player getPlayer() {
+            return player;
+        }
+
+        public LevelAccessor getWorld() {
+            return world;
+        }
+
+        public ItemStack getItemStack() {
+            return itemstack;
+        }
 
         /**
          * 接收对应等级附魔并为实体打开附魔GUI，最大4
