@@ -3,7 +3,6 @@ package net.mcreator.ceshi.procedures;
 import io.netty.buffer.Unpooled;
 import net.hackermdch.pgc.Timer;
 import net.mcreator.ceshi.PrimogemcraftMod;
-import net.mcreator.ceshi.init.PrimogemcraftModEntities;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 import net.mcreator.ceshi.world.inventory.GUISJfumoMenu;
 import net.minecraft.core.BlockPos;
@@ -21,6 +20,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -34,6 +34,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiFunction;
 import java.util.function.Function;
+
+import static net.mcreator.ceshi.init.PrimogemcraftModEntities.S_WFENGRAOJIANGSHI;
 
 public class Event_item_sxRProcedure {
     // 事件注册器 - 使用Function接收EventContext
@@ -70,7 +72,14 @@ public class Event_item_sxRProcedure {
         registerEventInternal(17, ctx -> ctx.giveTagLootItem(true, "c:curio/negative"));
         registerEventInternal(18, ctx -> ctx.giveTagLootItem(true, "c:curio/clock"));
         registerEventInternal(19, ctx -> ctx.giveTagLootItem(true, "c:curio/negative/cf"));
-        registerEventInternal(20, ctx -> ctx.entityLoottab(ctx.entityType(PrimogemcraftModEntities.S_WFENGRAOJIANGSHI.get()), "primogemcraft:fengraozlpevent", false));
+        registerEventInternal(20, ctx -> ctx.entityLoottab(ctx.entityType(S_WFENGRAOJIANGSHI.get()), "primogemcraft:fengraozlpevent", false));
+        registerEventInternal(21, ctx -> ctx.spawnEntitiesInRange(S_WFENGRAOJIANGSHI.get(), 2, 5, null, false, entity -> {
+            ctx.applyEntityModifier(entity, livingEntity -> {
+                livingEntity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(2);
+                livingEntity.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(1);
+            });
+        }));
+        registerEventInternal(22, ctx -> ctx.spawnEntitiesInRange(net.minecraft.world.entity.EntityType.ZOMBIE, 5, 5));
     }
 
     public static boolean execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
@@ -241,6 +250,83 @@ public class Event_item_sxRProcedure {
                 return spawnedEntity;
             }
             return null;
+        }
+
+        /**
+         * 在指定范围内生成多个实体
+         *
+         * @param entityType     实体类型
+         * @param count          生成数量
+         * @param radius         生成半径
+         * @param lootTable      战利品表（可选，传 null 则不设置）
+         * @param useTag         是否使用标签（仅在 lootTable 不为 null 时有效）
+         * @param entityModifier 实体修饰器（可选，可对每个生成的实体进行额外操作）
+         * @return 是否至少成功生成一个实体
+         */
+        public boolean spawnEntitiesInRange(EntityType<?> entityType, int count, double radius,
+                                            String lootTable, boolean useTag,
+                                            java.util.function.Consumer<Entity> entityModifier) {
+            if (world.isClientSide() || player == null || count <= 0 || radius < 0) return false;
+            if (!(world instanceof ServerLevel serverLevel)) return false;
+
+            boolean success = false;
+
+            for (int i = 0; i < count; i++) {
+                // 计算随机位置
+                double angle = 2 * Math.PI * random.nextDouble();
+                double distance = radius * random.nextDouble();
+
+                double x = player.getX() + distance * Math.cos(angle);
+                double y = player.getY() + random.nextDouble() * 2; // 稍微随机高度
+                double z = player.getZ() + distance * Math.sin(angle);
+
+                BlockPos spawnPos = BlockPos.containing(x, y, z);
+
+                try {
+                    // 生成实体
+                    Entity spawnedEntity = entityType.spawn(serverLevel, spawnPos, MobSpawnType.MOB_SUMMONED);
+
+                    if (spawnedEntity != null) {
+                        // 设置战利品表（如果提供）
+                        if (lootTable != null) {
+                            entityLoottab(spawnedEntity, lootTable, useTag);
+                        }
+
+                        // 应用额外的修饰器
+                        if (entityModifier != null) {
+                            entityModifier.accept(spawnedEntity);
+                        }
+
+                        success = true;
+                    }
+                } catch (Exception e) {
+                    // 生成失败，继续尝试下一个
+                }
+            }
+
+            return success;
+        }
+
+        /**
+         * 应用实体修饰符 - 专门处理 LivingEntity 类型的修饰
+         *
+         * @param entity   要修饰的实体
+         * @param modifier 对 LivingEntity 进行修饰的操作
+         * @return 是否成功应用修饰
+         */
+        public boolean applyEntityModifier(Entity entity, java.util.function.Consumer<LivingEntity> modifier) {
+            if (entity instanceof LivingEntity living) {
+                modifier.accept(living);
+                return true;
+            }
+            return false;
+        }
+
+        /**
+         * 简化版：生成多个实体，不设置战利品和修饰器
+         */
+        public boolean spawnEntitiesInRange(EntityType<?> entityType, int count, double radius) {
+            return spawnEntitiesInRange(entityType, count, radius, null, false, null);
         }
     }
 

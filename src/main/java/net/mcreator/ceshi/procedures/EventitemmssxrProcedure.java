@@ -32,7 +32,9 @@ public class EventitemmssxrProcedure {
         registerDescription(17, () -> QiWu("§c负面", ""));
         registerDescription(18, () -> QiWu("§c咕咕钟", ""));
         registerDescription(19, () -> QiWu("§c绝对失败处方", ""));
-        registerDescription(20, () -> "§c与一只§e丰饶孽物§c进行战斗"+"\n"+"§c胜利后可选择一个它的战利品"+"\n"+"§d珍贵战利品的概率将提高");
+        registerDescription(20, () -> "§c与一只§e丰饶孽物§c进行战斗" + "\n" + "§c胜利后可选择一个它的战利品" + "\n" + "§d珍贵战利品的概率将提高");
+        registerDescription(21, () -> "§e与2只§b弱小§e的丰饶孽物搏斗");
+        registerDescription(22, () -> "§e与5只§7普通§e的§7僵尸§e搏斗");
     }
 
     public static void registerDescription(int eventId, Supplier<String> descriptionProvider) {

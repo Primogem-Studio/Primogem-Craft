@@ -50,6 +50,7 @@ public class EventGroupProcedure {
             return ctx.zu(event1, event2, event3, "§c§khaha");
         });
         registerGroupInternal(12, ctx -> ctx.zu(20, 20, 17, "§c战斗"));
+        registerGroupInternal(13, ctx -> ctx.zu(21, 22, 17, "§c战斗"));
     }
 
     /**
