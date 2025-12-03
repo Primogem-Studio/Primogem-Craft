@@ -25,10 +25,12 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.LevelAccessor;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -80,6 +82,9 @@ public class Event_item_sxRProcedure {
             });
         }));
         registerEventInternal(22, ctx -> ctx.spawnEntitiesInRange(net.minecraft.world.entity.EntityType.ZOMBIE, 5, 5));
+        registerEventInternal(23, ctx -> ctx.giveItem(new ItemStack(Items.SHIELD).copy(),1)?ctx.prompt("§6<垃圾桶>§f 不，盾牌才是你的掉落物。",false):ctx.no());
+        registerEventInternal(24, ctx -> ctx.giveItem(new ItemStack(PrimogemcraftModItems.QWYZZM.get()),1)?ctx.prompt("§6<垃圾桶> §c哈哈，你其实掉落了一个愚者面具！",false):ctx.no());
+        registerEventInternal(25, ctx -> ctx.giveItem(new ItemStack(PrimogemcraftModItems.LJTG_01.get()),1)?ctx.prompt("§6<垃圾桶> §e我看你长得像摩拉盾牌。",false):ctx.no());
     }
 
     public static boolean execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
@@ -218,10 +223,29 @@ public class Event_item_sxRProcedure {
         }
 
         /**
+         * 发送消息
+         */
+        public boolean prompt(String message, boolean bottom) {
+            if (!player.level().isClientSide())
+                player.displayClientMessage(Component.literal(message), bottom);
+            return true;
+        }
+
+        /**
          * 立即生成物品三选一界面
          */
         public boolean giveTagLootItem(boolean qd, String tag_) {
             GUIqwxz03Procedure.execute(world, player, qd, tag_);
+            return true;
+        }
+
+        /**
+         * 给物品
+         */
+        public boolean giveItem(ItemStack itemStack, int value) {
+            ItemStack _setstack = itemStack;
+            _setstack.setCount(value);
+            ItemHandlerHelper.giveItemToPlayer(player, _setstack);
             return true;
         }
 
