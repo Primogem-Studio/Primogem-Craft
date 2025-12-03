@@ -9,6 +9,6 @@ public class Zzss_g_msProcedure {
 			return "";
 		double a = 0;
 		a = HSjinglianupProcedure.execute(entity, itemstack);
-		return MSHSwuqi00Procedure.execute(entity, itemstack, "\u00A76\u00A7l\u00A7n\u53F3\u952E" + "\n" + "\u00A7e\u4F7F\u81EA\u8EAB\u98DE\u5411\u9AD8\u7A7A" + "\n" + "\u00A7e\u53D7\u7CBE\u70BC\u7B49\u7EA7\u5F71\u54CD");
+		return MSHSwuqi00Procedure.execute(entity, itemstack, "\u00A76\u00A7l\u00A7n\u6F5C\u884C\u53F3\u952E" + "\n" + "\u00A7e\u4F7F\u81EA\u8EAB\u98DE\u5411\u9AD8\u7A7A" + "\n" + "\u00A7e\u53D7\u7CBE\u70BC\u7B49\u7EA7\u5F71\u54CD");
 	}
 }
