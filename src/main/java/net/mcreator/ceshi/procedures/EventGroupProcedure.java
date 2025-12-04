@@ -32,7 +32,6 @@ public class EventGroupProcedure {
     }
 
     static {
-        // 使用GroupContext注册事件组（无需传递entity和world）
         registerGroupInternal(1, ctx -> ctx.zu(1, 2, 3, "§d附魔"));
         registerGroupInternal(2, ctx -> ctx.zu(4, 5, 6, "§d附魔"));
         registerGroupInternal(3, ctx -> ctx.zu(1, 4, 0, "§c抉择"));
@@ -52,6 +51,7 @@ public class EventGroupProcedure {
         registerGroupInternal(12, ctx -> ctx.zu(20, 20, 17, "§c战斗"));
         registerGroupInternal(13, ctx -> ctx.zu(21, 22, 17, "§c战斗"));
         registerGroupInternal(14, ctx -> ctx.zu(23, 24, 25, "§e你从垃圾桶获得了物品"));
+        registerGroupInternal(15, ctx -> ctx.zu(26, 0, 26, "§e测试"));
     }
 
     /**
@@ -278,12 +278,12 @@ public class EventGroupProcedure {
     /**
      * 便捷方法 - 创建简单的三选一事件组
      */
-    public static boolean createSimpleGroup(Entity entity, LevelAccessor world,
+    public static boolean createSimpleGroup(Player player, LevelAccessor world,
                                             int event1, int event2, int event3,
                                             String groupName) {
-        if (entity == null) return false;
+        if (player == null) return false;
 
-        GroupContext context = new GroupContext(entity, world);
+        GroupContext context = new GroupContext(player, world);
         return context.zu(event1, event2, event3, groupName);
     }
 

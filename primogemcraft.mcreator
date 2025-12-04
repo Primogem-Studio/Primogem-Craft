@@ -36272,6 +36272,19 @@
           "src/main/resources/data/primogemcraft/loot_table/fengraozlpevent.json"
         ]
       }
+    },
+    {
+      "name": "GuiItem03",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "gui_item_03",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/GuiItem03Procedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

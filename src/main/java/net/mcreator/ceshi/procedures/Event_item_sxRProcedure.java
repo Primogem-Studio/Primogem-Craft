@@ -54,7 +54,6 @@ public class Event_item_sxRProcedure {
     }
 
     static {
-        // 使用EventContext注册事件
         registerEventInternal(1, ctx -> ctx.costItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 10) ? ctx.openEnchGui(1) : ctx.no());
         registerEventInternal(2, ctx -> ctx.costItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 20) ? ctx.openEnchGui(ctx.random(1, 2)) : ctx.no());
         registerEventInternal(3, ctx -> ctx.costItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 40) ? ctx.openEnchGui(ctx.random(2, 4)) : ctx.no());
@@ -82,9 +81,10 @@ public class Event_item_sxRProcedure {
             });
         }));
         registerEventInternal(22, ctx -> ctx.spawnEntitiesInRange(net.minecraft.world.entity.EntityType.ZOMBIE, 5, 5));
-        registerEventInternal(23, ctx -> ctx.giveItem(new ItemStack(Items.SHIELD).copy(),1)?ctx.prompt("§6<垃圾桶>§f 不，盾牌才是你的掉落物。",false):ctx.no());
+        registerEventInternal(23, ctx -> ctx.giveItem(new ItemStack(Items.SHIELD).copy(),1)?ctx.prompt("§6<垃圾桶> §f不，盾牌才是你的掉落物。",false):ctx.no());
         registerEventInternal(24, ctx -> ctx.giveItem(new ItemStack(PrimogemcraftModItems.QWYZZM.get()),1)?ctx.prompt("§6<垃圾桶> §c哈哈，你其实掉落了一个愚者面具！",false):ctx.no());
         registerEventInternal(25, ctx -> ctx.giveItem(new ItemStack(PrimogemcraftModItems.LJTG_01.get()),1)?ctx.prompt("§6<垃圾桶> §e我看你长得像摩拉盾牌。",false):ctx.no());
+        registerEventInternal(26, ctx -> ctx.createSimpleGroup(26,22,0,""));
     }
 
     public static boolean execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
@@ -107,7 +107,6 @@ public class Event_item_sxRProcedure {
         return result;
     }
 
-    // 事件上下文类 - 封装所有事件相关的数据和操作
     public static class EventContext {
         private final int id;
         private final LevelAccessor world;
@@ -121,7 +120,6 @@ public class Event_item_sxRProcedure {
             this.random = RandomSource.create();
         }
 
-        // 获取器
         public int getId() {
             return id;
         }
@@ -274,6 +272,14 @@ public class Event_item_sxRProcedure {
                 return spawnedEntity;
             }
             return null;
+        }
+
+        /**
+         * 嵌套事件
+         */
+        public boolean createSimpleGroup(int event1, int event2, int event3, String neme) {
+            GUIqwxz03Procedure.execute(world, player, false, "primogemcraft:event");
+            return EventGroupProcedure.createSimpleGroup(player, world, event1, event2, event3, neme);
         }
 
         /**

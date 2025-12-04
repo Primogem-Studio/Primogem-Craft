@@ -17,6 +17,6 @@ public class Ceshi_3Procedure {
 		stack = itemstack;
 		e = entity;
 		o1 = world.isClientSide();
-		EventGroupProcedure.execute(world, entity, (int) 14);
+		EventGroupProcedure.execute(world, entity, (int) 15);
 	}
 }
