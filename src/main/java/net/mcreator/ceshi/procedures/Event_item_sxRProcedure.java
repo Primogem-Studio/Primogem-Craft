@@ -85,12 +85,7 @@ public class Event_item_sxRProcedure {
         registerEventInternal(24, ctx -> ctx.giveItem(new ItemStack(PrimogemcraftModItems.QWYZZM.get()), 1) ? ctx.prompt("§6<垃圾桶> §c哈哈，你其实掉落了一个愚者面具！", false) : ctx.no());
         registerEventInternal(25, ctx -> ctx.giveItem(new ItemStack(PrimogemcraftModItems.LJTG_01.get()), 1) ? ctx.prompt("§6<垃圾桶> §e我看你长得像摩拉盾牌。", false) : ctx.no());
         registerEventInternal(26, ctx -> ctx.spawnEntitiesInRange(net.minecraft.world.entity.EntityType.ZOMBIE, 2, 5, null, false, entity -> {
-            ctx.applyEntityModifier(entity, livingEntity -> {
-                ctx.killAll(livingEntity);
-                ctx.impKillAll(2, _true -> {
-                    ctx.openEnchGui(4);
-                });
-            });
+            ctx.applyEntityModifier(entity, livingEntity -> {ctx.invokeKillAll(livingEntity, 2, _true -> {ctx.openEnchGui(1);});});
         }));
     }
 
@@ -364,7 +359,12 @@ public class Event_item_sxRProcedure {
         public void killAll(Entity entity) {
             entity.getPersistentData().putDouble("EventKillAll_", id);
             player.getPersistentData().putDouble(eka, 1);
-            Timer.set(player,eka,3600);
+            Timer.set(player, eka, 3600);
+        }
+
+        public void invokeKillAll(Entity entity, int value, java.util.function.Consumer<Player> _true) {
+            killAll(entity);
+            impKillAll(2, _true);
         }
 
         public boolean impKillAll(int value, java.util.function.Consumer<Player> _true) {
