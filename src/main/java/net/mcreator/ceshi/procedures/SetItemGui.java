@@ -16,12 +16,12 @@ import net.minecraft.world.entity.Entity;
 
 import java.util.Map;
 
-public class GuiItem03Procedure {
+public class SetItemGui{
     private final Player player;
     private final ItemStack[] items;
     private final int[] counts;
 
-    private GuiItem03Procedure(Player player, ItemStack[] items, int[] counts) {
+    private SetItemGui(Player player, ItemStack[] items, int[] counts) {
         this.player = player;
         this.items = items;
         this.counts = counts;
@@ -63,24 +63,24 @@ public class GuiItem03Procedure {
     /**
      * 使用单个物品和三个数量创建
      */
-    public static GuiItem03Procedure withSingleItem(Entity entity, ItemStack item, int count1, int count2, int count3) {
+    public static SetItemGui withSingleItem(Entity entity, ItemStack item, int count1, int count2, int count3) {
         Player player = (Player) entity;
         ItemStack[] items = new ItemStack[]{item, item.copy(), item.copy()};
         int[] counts = new int[]{count1, count2, count3};
-        return new GuiItem03Procedure(player, items, counts);
+        return new SetItemGui(player, items, counts);
     }
 
     /**
      * 使用三个物品和对应的数量创建
      */
-    public static GuiItem03Procedure withThreeItems(Entity entity,
+    public static SetItemGui withThreeItems(Entity entity,
                                                     ItemStack item1, int count1,
                                                     ItemStack item2, int count2,
                                                     ItemStack item3, int count3) {
         Player player = (Player) entity;
         ItemStack[] items = new ItemStack[]{item1, item2, item3};
         int[] counts = new int[]{count1, count2, count3};
-        return new GuiItem03Procedure(player, items, counts);
+        return new SetItemGui(player, items, counts);
     }
 
     /**

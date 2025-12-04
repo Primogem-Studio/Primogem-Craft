@@ -20,7 +20,10 @@ public class Ceshi_3Procedure {
 		e = (Player) entity;
 		o1 = world.isClientSide();
 
-		GuiItem03Procedure.quickOpen(entity, world, new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()),1,2,3);
+		SetItemGui.quickOpen(entity, world,
+				new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()),1,
+				new ItemStack(PrimogemcraftModItems.AIXUBINGYU.get()),2,
+				new ItemStack(PrimogemcraftModItems.AXC.get()),3);
 //		EventGroupProcedure.execute(world, entity, (int) 15);
 	}
 }
