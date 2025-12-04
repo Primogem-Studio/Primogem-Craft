@@ -362,12 +362,14 @@ public class Event_item_sxRProcedure {
         public void killAll(Entity entity) {
             entity.getPersistentData().putDouble("EventKillAll_", id);
             player.getPersistentData().putDouble("EventKillAll_" + id, 1);
+            Timer.set(player,"EventKillAll_" + id,3600);
         }
 
         public boolean impKillAll(int value, java.util.function.Consumer<Player> _true) {
-            var n = (int) player.getPersistentData().getDouble("EventKillAll_" + id);
+            String eve = "EventKillAll_" + id;
+            var n = (int) player.getPersistentData().getDouble(eve);
             var a = n < value + 1 && n != 0;
-
+            if (Timer.isDone(player, eve)) return false;
             if (a) {
                 PrimogemcraftMod.queueServerWork(20, () -> {
                     impKillAll(value, _true);
@@ -375,7 +377,7 @@ public class Event_item_sxRProcedure {
                 return false;
             }
             if (_true != null) _true.accept(player);
-            player.getPersistentData().putDouble("EventKillAll_" + id, 0);
+            player.getPersistentData().putDouble(eve, 0);
             return true;
         }
 
