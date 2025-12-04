@@ -87,4 +87,10 @@ tasks.register('overwriteJava', Copy) {
     into 'src/main/java'
 }
 
+java {
+    withSourcesJar()
+}
+
+sourcesJar.dependsOn(overwriteJava)
+
 apply from: 'mcreator.gradle'
