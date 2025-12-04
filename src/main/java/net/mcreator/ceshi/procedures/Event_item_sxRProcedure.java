@@ -359,12 +359,25 @@ public class Event_item_sxRProcedure {
             return spawnEntitiesInRange(entityType, count, radius, null, false, null);
         }
 
+        /**
+         * 三物品三值
+         */
         public void setGuiItem(ItemStack item1, ItemStack item2, ItemStack item3, int count1, int count2, int count3) {
             SetItemGui.quickOpen(player, world, item1, count2, item3, count2, item2, count3);
         }
 
+        /**
+         * 单物品三值
+         */
         public void setGuiItem(ItemStack item1, int count1, int count2, int count3) {
             SetItemGui.quickOpen(player, world, item1, count2, count2, count3);
+        }
+
+        /**
+         * 单数量Tag或LotTab选择
+         */
+        public void setGuiItem(String tagloot, boolean tag) {
+            GUIqwxz03Procedure.execute(world, player, tag, tagloot);
         }
     }
 
