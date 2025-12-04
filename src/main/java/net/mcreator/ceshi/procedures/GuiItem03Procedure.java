@@ -18,67 +18,113 @@ import java.util.Map;
 
 public class GuiItem03Procedure {
     private final Player player;
-    private final ItemStack item1;
-    private final ItemStack item2;
-    private final ItemStack item3;
-    private final int i1;
-    private final int i2;
-    private final int i3;
+    private final ItemStack[] items;
+    private final int[] counts;
 
-    public GuiItem03Procedure(Entity entity, ItemStack item1, int i1, ItemStack item2, int i2, ItemStack item3, int i3) {
-        this.player = (Player) entity;
-        this.item1 = item1;
-        this.item2 = item2;
-        this.item3 = item3;
-        this.i1 = i1;
-        this.i2 = i2;
-        this.i3 = i3;
+    private GuiItem03Procedure(Player player, ItemStack[] items, int[] counts) {
+        this.player = player;
+        this.items = items;
+        this.counts = counts;
     }
 
-    public void setGuiItem() {
+    /**
+     * 设置GUI物品
+     */
+    public void setGuiItems() {
+        if (items[0] == null) return;
+        if (items[1] == null) items[1] = items[0];
+        if (items[2] == null) items[2] = items[0];
 
-        ItemStack item01 = item1;
-        ItemStack item02 = item2;
-        ItemStack item03 = item3;
-
-        Map<Integer, Integer> intitemmap = Map.of(0, i1, 1, i2, 2, i3);
-
-        if (item2 == null || item3 == null) {
-            if (item1 == null) return;
-            else item02 = item1;
-            item03 = item1;
-        }
-        Map<Integer, ItemStack> itemmap = Map.of(0, item01, 1, item02, 2, item3);
-
-        for (int f = 0; f < 3; f++) {
-            itemmap.get(f).setCount(intitemmap.get(f));
-            GUIitemProcedure.execute(player, itemmap.get(f), f);
+        for (int i = 0; i < 3; i++) {
+            ItemStack itemCopy = items[i].copy();
+            itemCopy.setCount(counts[i]);
+            GUIitemProcedure.execute(player, itemCopy, i);
         }
     }
 
+    /**
+     * 打开GUI界面
+     */
     public void openUI(LevelAccessor world) {
-        if (player instanceof ServerPlayer _ent) {
-            BlockPos _bpos = BlockPos.containing((player).getX(), player.getY(), player.getZ());
-            _ent.openMenu(new MenuProvider() {
-                @Override
-                public Component getDisplayName() {
-                    return Component.literal("GUIqiwuxuanze");
-                }
-
-                @Override
-                public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-                    return false;
-                }
-
-                @Override
-                public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-                    return new GUIqiwuxuanzeMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-                }
-            }, _bpos);
+        if (player instanceof ServerPlayer serverPlayer) {
+            BlockPos pos = BlockPos.containing(player.getX(), player.getY(), player.getZ());
+            serverPlayer.openMenu(new SimpleMenuProvider("GUIqiwuxuanze", pos), pos);
         }
     }
 
-    public static void giveItemGui(Entity entity, LevelAccessor world, ItemStack item1, int i1, int i2, int i3) {
-        new GuiItem03Procedure(entity, item1, i1, null, i2, null, i3);
+    /**
+     * 设置物品并打开GUI（一步完成）
+     */
+    public void setAndOpen(LevelAccessor world) {
+        setGuiItems();
+        openUI(world);
+    }
+
+    /**
+     * 使用单个物品和三个数量创建
+     */
+    public static GuiItem03Procedure withSingleItem(Entity entity, ItemStack item, int count1, int count2, int count3) {
+        Player player = (Player) entity;
+        ItemStack[] items = new ItemStack[]{item, item.copy(), item.copy()};
+        int[] counts = new int[]{count1, count2, count3};
+        return new GuiItem03Procedure(player, items, counts);
+    }
+
+    /**
+     * 使用三个物品和对应的数量创建
+     */
+    public static GuiItem03Procedure withThreeItems(Entity entity,
+                                                    ItemStack item1, int count1,
+                                                    ItemStack item2, int count2,
+                                                    ItemStack item3, int count3) {
+        Player player = (Player) entity;
+        ItemStack[] items = new ItemStack[]{item1, item2, item3};
+        int[] counts = new int[]{count1, count2, count3};
+        return new GuiItem03Procedure(player, items, counts);
+    }
+
+    /**
+     * 快速设置并打开GUI（单个物品）
+     */
+    public static void quickOpen(Entity entity, LevelAccessor world, ItemStack item, int count1, int count2, int count3) {
+        withSingleItem(entity, item, count1, count2, count3).setAndOpen(world);
+    }
+
+    /**
+     * 快速设置并打开GUI（三个物品）
+     */
+    public static void quickOpen(Entity entity, LevelAccessor world,
+                                 ItemStack item1, int count1,
+                                 ItemStack item2, int count2,
+                                 ItemStack item3, int count3) {
+        withThreeItems(entity, item1, count1, item2, count2, item3, count3).setAndOpen(world);
+    }
+
+    /**
+     * MenuProvider实现
+     */
+    private static class SimpleMenuProvider implements MenuProvider {
+        private final String title;
+        private final BlockPos pos;
+
+        public SimpleMenuProvider(String title, BlockPos pos) {
+            this.title = title;
+            this.pos = pos;
+        }
+
+        @Override
+        public Component getDisplayName() {
+            return Component.literal(title);
+        }
+
+        @Override
+        public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+            return false;
+        }
+
+        @Override
+        public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+            return new GUIqiwuxuanzeMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(pos));
+        }
     }
 }
