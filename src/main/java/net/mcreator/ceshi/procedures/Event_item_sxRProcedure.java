@@ -88,7 +88,7 @@ public class Event_item_sxRProcedure {
             ctx.applyEntityModifier(entity, livingEntity -> {
                 ctx.killAll(livingEntity);
                 ctx.impKillAll(2, _true -> {
-                    ctx.no();
+                    ctx.openEnchGui(4);
                 });
             });
         }));
@@ -119,12 +119,14 @@ public class Event_item_sxRProcedure {
         private final LevelAccessor world;
         private final Player player;
         private final RandomSource random;
+        private final String eka;
 
         public EventContext(int id, Player player, LevelAccessor world) {
             this.id = id;
             this.world = world;
             this.player = player;
             this.random = RandomSource.create();
+            this.eka = "EventKillAll_" + id;
         }
 
         public int getId() {
@@ -361,15 +363,14 @@ public class Event_item_sxRProcedure {
 
         public void killAll(Entity entity) {
             entity.getPersistentData().putDouble("EventKillAll_", id);
-            player.getPersistentData().putDouble("EventKillAll_" + id, 1);
-            Timer.set(player,"EventKillAll_" + id,3600);
+            player.getPersistentData().putDouble(eka, 1);
+            Timer.set(player,eka,3600);
         }
 
         public boolean impKillAll(int value, java.util.function.Consumer<Player> _true) {
-            String eve = "EventKillAll_" + id;
-            var n = (int) player.getPersistentData().getDouble(eve);
+            var n = (int) player.getPersistentData().getDouble(eka);
             var a = n < value + 1 && n != 0;
-            if (Timer.isDone(player, eve)) return false;
+            if (Timer.isDone(player, eka)) return false;
             if (a) {
                 PrimogemcraftMod.queueServerWork(20, () -> {
                     impKillAll(value, _true);
@@ -377,7 +378,7 @@ public class Event_item_sxRProcedure {
                 return false;
             }
             if (_true != null) _true.accept(player);
-            player.getPersistentData().putDouble(eve, 0);
+            player.getPersistentData().putDouble(eka, 0);
             return true;
         }
 
