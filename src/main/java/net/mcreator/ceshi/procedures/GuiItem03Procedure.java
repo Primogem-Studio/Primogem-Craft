@@ -12,7 +12,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.LevelAccessor;
-import org.w3c.dom.Entity;
+import net.minecraft.world.entity.Entity;
 
 import java.util.Map;
 
@@ -56,8 +56,8 @@ public class GuiItem03Procedure {
      * 设置物品并打开GUI（一步完成）
      */
     public void setAndOpen(LevelAccessor world) {
-        setGuiItems();
         openUI(world);
+        setGuiItems();
     }
 
     /**
