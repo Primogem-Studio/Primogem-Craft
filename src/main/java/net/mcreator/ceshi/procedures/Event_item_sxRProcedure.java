@@ -81,10 +81,17 @@ public class Event_item_sxRProcedure {
             });
         }));
         registerEventInternal(22, ctx -> ctx.spawnEntitiesInRange(net.minecraft.world.entity.EntityType.ZOMBIE, 5, 5));
-        registerEventInternal(23, ctx -> ctx.giveItem(new ItemStack(Items.SHIELD).copy(),1)?ctx.prompt("§6<垃圾桶> §f不，盾牌才是你的掉落物。",false):ctx.no());
-        registerEventInternal(24, ctx -> ctx.giveItem(new ItemStack(PrimogemcraftModItems.QWYZZM.get()),1)?ctx.prompt("§6<垃圾桶> §c哈哈，你其实掉落了一个愚者面具！",false):ctx.no());
-        registerEventInternal(25, ctx -> ctx.giveItem(new ItemStack(PrimogemcraftModItems.LJTG_01.get()),1)?ctx.prompt("§6<垃圾桶> §e我看你长得像摩拉盾牌。",false):ctx.no());
-        registerEventInternal(26, ctx -> ctx.createSimpleGroup(26,22,0,""));
+        registerEventInternal(23, ctx -> ctx.giveItem(new ItemStack(Items.SHIELD).copy(), 1) ? ctx.prompt("§6<垃圾桶> §f不，盾牌才是你的掉落物。", false) : ctx.no());
+        registerEventInternal(24, ctx -> ctx.giveItem(new ItemStack(PrimogemcraftModItems.QWYZZM.get()), 1) ? ctx.prompt("§6<垃圾桶> §c哈哈，你其实掉落了一个愚者面具！", false) : ctx.no());
+        registerEventInternal(25, ctx -> ctx.giveItem(new ItemStack(PrimogemcraftModItems.LJTG_01.get()), 1) ? ctx.prompt("§6<垃圾桶> §e我看你长得像摩拉盾牌。", false) : ctx.no());
+        registerEventInternal(26, ctx -> ctx.spawnEntitiesInRange(net.minecraft.world.entity.EntityType.ZOMBIE, 2, 5, null, false, entity -> {
+            ctx.applyEntityModifier(entity, livingEntity -> {
+                ctx.killAll(livingEntity);
+                ctx.impKillAll(2, _true -> {
+                    ctx.no();
+                });
+            });
+        }));
     }
 
     public static boolean execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
@@ -350,6 +357,26 @@ public class Event_item_sxRProcedure {
                 return true;
             }
             return false;
+        }
+
+        public void killAll(Entity entity) {
+            entity.getPersistentData().putDouble("EventKillAll_", id);
+            player.getPersistentData().putDouble("EventKillAll_" + id, 1);
+        }
+
+        public boolean impKillAll(int value, java.util.function.Consumer<Player> _true) {
+            var n = (int) player.getPersistentData().getDouble("EventKillAll_" + id);
+            var a = n < value + 1 && n != 0;
+
+            if (a) {
+                PrimogemcraftMod.queueServerWork(20, () -> {
+                    impKillAll(value, _true);
+                });
+                return false;
+            }
+            if (_true != null) _true.accept(player);
+            player.getPersistentData().putDouble("EventKillAll_" + id, 0);
+            return true;
         }
 
         /**

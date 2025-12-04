@@ -1,5 +1,7 @@
 package net.mcreator.ceshi.procedures;
 
+import org.checkerframework.checker.units.qual.s;
+
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -29,12 +31,15 @@ public class EventEntityLootProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		Entity e = null;
-		if (!(entity.getPersistentData().getString("Event_Entity_Loot")).equals("")) {
-			PrimogemcraftMod.queueServerWork(1, () -> {
-				if (!entity.isAlive()) {
+		String s = "";
+		double n = 0;
+		PrimogemcraftMod.queueServerWork(1, () -> {
+			if (!entity.isAlive()) {
+				if (!(entity.getPersistentData().getString("Event_Entity_Loot")).equals("")) {
 					GUIqwxz03Procedure.execute(world, sourceentity, entity.getPersistentData().getBoolean("Event_Entity_Loot_tag"), entity.getPersistentData().getString("Event_Entity_Loot"));
 				}
-			});
-		}
+				EventEntitytagProcedure.execute(entity, sourceentity);
+			}
+		});
 	}
 }

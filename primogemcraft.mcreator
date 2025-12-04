@@ -36285,6 +36285,28 @@
           "src/main/java/net/mcreator/ceshi/procedures/GuiItem03Procedure.java"
         ]
       }
+    },
+    {
+      "name": "EventEntitytag",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "event_entitytag",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/EventEntitytagProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

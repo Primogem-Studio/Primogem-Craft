@@ -1,7 +1,5 @@
 package net.mcreator.ceshi.procedures;
 
-import net.mcreator.ceshi.init.PrimogemcraftModItems;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
@@ -17,13 +15,8 @@ public class Ceshi_3Procedure {
 		boolean o1 = false;
 		boolean w = false;
 		stack = itemstack;
-		e = (Player) entity;
+		e = entity;
 		o1 = world.isClientSide();
-
-		SetItemGui.quickOpen(entity, world,
-				new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()),1,
-				new ItemStack(PrimogemcraftModItems.AIXUBINGYU.get()),2,
-				new ItemStack(PrimogemcraftModItems.AXC.get()),3);
-//		EventGroupProcedure.execute(world, entity, (int) 15);
+		EventGroupProcedure.execute(world, entity, (int) 15);
 	}
 }
