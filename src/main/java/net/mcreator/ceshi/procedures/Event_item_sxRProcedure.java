@@ -84,8 +84,12 @@ public class Event_item_sxRProcedure {
         registerEventInternal(23, ctx -> ctx.giveItem(new ItemStack(Items.SHIELD).copy(), 1) ? ctx.prompt("§6<垃圾桶> §f不，盾牌才是你的掉落物。", false) : ctx.no());
         registerEventInternal(24, ctx -> ctx.giveItem(new ItemStack(PrimogemcraftModItems.QWYZZM.get()), 1) ? ctx.prompt("§6<垃圾桶> §c哈哈，你其实掉落了一个愚者面具！", false) : ctx.no());
         registerEventInternal(25, ctx -> ctx.giveItem(new ItemStack(PrimogemcraftModItems.LJTG_01.get()), 1) ? ctx.prompt("§6<垃圾桶> §e我看你长得像摩拉盾牌。", false) : ctx.no());
-        registerEventInternal(26, ctx -> ctx.spawnEntitiesInRange(net.minecraft.world.entity.EntityType.ZOMBIE, 2, 5, null, false, entity -> {
-            ctx.applyEntityModifier(entity, livingEntity -> {ctx.invokeKillAll(livingEntity, 2, _true -> {ctx.openEnchGui(1);});});
+        registerEventInternal(26, ctx -> ctx.spawnEntitiesInRange(net.minecraft.world.entity.EntityType.ZOMBIE, 6, 5, null, false, entity -> {
+            ctx.applyEntityModifier(entity, livingEntity -> {
+                ctx.invokeKillAll(livingEntity, 5, _true -> {
+                    ctx.createSimpleGroup(7, 14, EventGroupProcedure.getRandomRegisteredEventId(ctx.world), "§a奖励§e和§c随机");
+                });
+            });
         }));
     }
 
@@ -355,29 +359,46 @@ public class Event_item_sxRProcedure {
             }
             return false;
         }
-
+        /**
+         * 时限判定
+         */
         public void killAll(Entity entity) {
             entity.getPersistentData().putDouble("EventKillAll_", id);
             player.getPersistentData().putDouble(eka, 1);
             Timer.set(player, eka, 3600);
         }
-
+        /**
+         * 挑战实现
+         */
         public void invokeKillAll(Entity entity, int value, java.util.function.Consumer<Player> _true) {
             killAll(entity);
-            impKillAll(2, _true);
+            impKillAll(value, _true);
         }
 
+        /**
+         * 时限挑战和实现
+         */
         public boolean impKillAll(int value, java.util.function.Consumer<Player> _true) {
             var n = (int) player.getPersistentData().getDouble(eka);
             var a = n < value + 1 && n != 0;
-            if (Timer.isDone(player, eka)) return false;
+            if (Timer.isDone(player, eka)) {
+                if (Timer.isDone(player, eka + "0")) {
+                    prompt("§c挑战时间结束", false);
+                    Timer.set(player, eka + "0", 20);
+                }
+                player.getPersistentData().putDouble(eka, 0);
+                return false;
+            }
             if (a) {
                 PrimogemcraftMod.queueServerWork(20, () -> {
                     impKillAll(value, _true);
                 });
                 return false;
             }
-            if (_true != null) _true.accept(player);
+            if (_true != null&&Timer.isDone(player,"impKillAll")){
+                Timer.set(player,"impKillAll",20);
+                _true.accept(player);
+            }
             player.getPersistentData().putDouble(eka, 0);
             return true;
         }

@@ -36,14 +36,10 @@ public class SwfengraojiangshiscProcedure {
 			if (entity instanceof Zombie) {
 				if (Math.random() < (world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZEMOYINSHENSHENGCHENGBEILV)) * 0.01) {
 					PrimogemcraftMod.queueServerWork(1, () -> {
+						(world instanceof ServerLevel _level4 ? PrimogemcraftModEntities.S_WFENGRAOJIANGSHI.get().spawn(_level4, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED) : null).getPersistentData().putDouble("EventKillAll_",
+								(entity.getPersistentData().getDouble("EventKillAll_")));
 						if (!entity.level().isClientSide())
 							entity.discard();
-						if (world instanceof ServerLevel _level) {
-							Entity entityToSpawn = PrimogemcraftModEntities.S_WFENGRAOJIANGSHI.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-							if (entityToSpawn != null) {
-								entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
-							}
-						}
 					});
 				}
 			}

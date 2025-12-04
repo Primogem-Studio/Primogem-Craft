@@ -38,6 +38,7 @@ public class EventitemmssxrProcedure {
         registerDescription(23, () -> "§e我掉落的是这个§7垃圾桶盖");
         registerDescription(24, () -> "§e我掉落的是这个§b铁制圆形盾牌！");
         registerDescription(25, () -> "§e我掉落的是这个§6华丽的摩拉制盾牌");
+        registerDescription(26, () -> "§c与5只僵尸战斗"+"\n"+"§a全部战胜后可选择两个固定奖励"+"\n"+"§c或一个随机事件");
 
     }
 

@@ -48,10 +48,9 @@ public class EventGroupProcedure {
             int event3 = ctx.getRandomRegisteredEventId();
             return ctx.zu(event1, event2, event3, "§c§khaha");
         });
-        registerGroupInternal(12, ctx -> ctx.zu(20, 20, 17, "§c战斗"));
+        registerGroupInternal(12, ctx -> ctx.zu(20, 26, 17, "§c战斗"));
         registerGroupInternal(13, ctx -> ctx.zu(21, 22, 17, "§c战斗"));
         registerGroupInternal(14, ctx -> ctx.zu(23, 24, 25, "§e你从垃圾桶获得了物品"));
-        registerGroupInternal(15, ctx -> ctx.zu(26, 0, 26, "§e测试"));
     }
 
     /**
