@@ -153,7 +153,7 @@ public class Event_item_sxRProcedure {
             player.getPersistentData().putDouble("pgc_shijian_fumo_pinzhi", zhi);
             PrimogemcraftMod.queueServerWork(1, () -> {
                 if (player instanceof ServerPlayer serverPlayer) {
-                    BlockPos pos = BlockPos.containing(player.getX(), player.getY(), player.getZ());
+                    BlockPos pos = BlockPos.containing(x, y, z);
                     serverPlayer.openMenu(new MenuProvider() {
                         @Override
                         public Component getDisplayName() {
@@ -282,7 +282,7 @@ public class Event_item_sxRProcedure {
             if (world.isClientSide() || player == null) return null;
 
             if (world instanceof ServerLevel serverLevel) {
-                Entity spawnedEntity = entityType.spawn(serverLevel, BlockPos.containing(player.getX(), player.getY(), player.getZ()), MobSpawnType.MOB_SUMMONED);
+                Entity spawnedEntity = entityType.spawn(serverLevel, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
                 return spawnedEntity;
             }
             return null;
@@ -320,11 +320,11 @@ public class Event_item_sxRProcedure {
                 double angle = 2 * Math.PI * random.nextDouble();
                 double distance = radius * random.nextDouble();
 
-                double x = player.getX() + distance * Math.cos(angle);
-                double y = player.getY() + random.nextDouble() * 2; // 稍微随机高度
-                double z = player.getZ() + distance * Math.sin(angle);
-
-                BlockPos spawnPos = BlockPos.containing(x, y, z);
+                BlockPos spawnPos = BlockPos.containing(
+                        x + distance * Math.cos(angle),
+                        y + random.nextDouble() * 2,
+                        z + distance * Math.sin(angle)
+                );
 
                 try {
                     // 生成实体
