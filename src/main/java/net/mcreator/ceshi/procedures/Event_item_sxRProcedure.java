@@ -119,6 +119,9 @@ public class Event_item_sxRProcedure {
         private final Player player;
         private final RandomSource random;
         private final String eka;
+        private final double x;
+        private final double y;
+        private final double z;
 
         public EventContext(int id, Player player, LevelAccessor world) {
             this.id = id;
@@ -126,6 +129,9 @@ public class Event_item_sxRProcedure {
             this.player = player;
             this.random = RandomSource.create();
             this.eka = "EventKillAll_" + id;
+            this.x = player.getX();
+            this.y = player.getY();
+            this.z = player.getZ();
         }
 
         public int getId() {
