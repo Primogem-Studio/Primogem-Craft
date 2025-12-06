@@ -1,5 +1,6 @@
 package net.mcreator.ceshi.procedures;
 
+import net.mcreator.ceshi.init.PrimogemcraftModItems;
 import net.mcreator.ceshi.init.PrimogemcraftModMenus;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
@@ -8,6 +9,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.LevelAccessor;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -52,8 +54,8 @@ public class EventGroupProcedure {
         registerGroupInternal(13, ctx -> ctx.zu(21, 22, 17, "§c战斗"));
         registerGroupInternal(14, ctx -> ctx.zu(23, 24, 25, "§e你从垃圾桶获得了物品"));
         registerGroupInternal(15, ctx -> ctx.zu(27, 27, 27, "§c遭遇"));
-        registerGroupInternal(15, ctx -> ctx.zu(28, 28, 28, "§c遭遇"));
-        registerGroupInternal(15, ctx -> ctx.zu(29, 29, 29, "§c可循环战斗"));
+        registerGroupInternal(16, ctx -> ctx.zu(28, 28, 28, "§c遭遇"));
+        registerGroupInternal(17, ctx -> ctx.zu(29, 29, 29, "§c可循环战斗"));
     }
 
     /**
@@ -236,6 +238,13 @@ public class EventGroupProcedure {
 
             return zu(zU0, zU1, zU2, name);
         }
+    }
+
+    public static void setEventItem(int value, Player player,boolean b) {
+        ItemStack i = new ItemStack(PrimogemcraftModItems.EVENTITEM.get());
+        CustomData.update(DataComponents.CUSTOM_DATA, i, tag -> tag.putDouble("event_", value));
+        CustomData.update(DataComponents.CUSTOM_DATA, i, tag -> tag.putBoolean("LIji", b));
+        ItemHandlerHelper.giveItemToPlayer(player, i);
     }
 
     /**
