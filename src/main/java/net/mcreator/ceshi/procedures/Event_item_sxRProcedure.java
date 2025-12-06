@@ -120,9 +120,9 @@ public class Event_item_sxRProcedure {
         private final Player player;
         private final RandomSource random;
         private final String eka;
-        private final double x;
-        private final double y;
-        private final double z;
+        public final double x;
+        public final double y;
+        public final double z;
         public final double compare;
 
         public EventContext(int id, Player player, LevelAccessor world) {
