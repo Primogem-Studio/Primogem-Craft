@@ -77,33 +77,21 @@ public class Event_item_sxRProcedure {
         registerEventInternal(18, ctx -> ctx.giveTagLootItem(true, "c:curio/clock"));
         registerEventInternal(19, ctx -> ctx.giveTagLootItem(true, "c:curio/negative/cf"));
         registerEventInternal(20, ctx -> ctx.entityLoottab(ctx.entityType(S_WFENGRAOJIANGSHI.get()), "primogemcraft:fengraozlpevent", false));
-        registerEventInternal(21, ctx -> ctx.spawnEntitiesInRange(S_WFENGRAOJIANGSHI.get(), 2, 5, null, false, entity -> {
-            ctx.applyEntityModifier(entity, livingEntity -> {
-                livingEntity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(2);
-                livingEntity.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(1);
-            });
-        }));
+        registerEventInternal(21, ctx -> ctx.TimelimitedCombat(S_WFENGRAOJIANGSHI.get(), 2, 2, entity -> {
+            entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(2);
+            entity.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(1);
+            }, null));
         registerEventInternal(22, ctx -> ctx.spawnEntitiesInRange(net.minecraft.world.entity.EntityType.ZOMBIE, 5, 5));
         registerEventInternal(23, ctx -> ctx.giveItem(new ItemStack(Items.SHIELD).copy(), 1) ? ctx.prompt("§6<垃圾桶> §f不，盾牌才是你的掉落物。", false) : ctx.no());
         registerEventInternal(24, ctx -> ctx.giveItem(new ItemStack(PrimogemcraftModItems.QWYZZM.get()), 1) ? ctx.prompt("§6<垃圾桶> §c哈哈，你其实掉落了一个愚者面具！", false) : ctx.no());
         registerEventInternal(25, ctx -> ctx.giveItem(new ItemStack(PrimogemcraftModItems.LJTG_01.get()), 1) ? ctx.prompt("§6<垃圾桶> §e我看你长得像摩拉盾牌。", false) : ctx.no());
-        registerEventInternal(26, ctx -> ctx.spawnEntitiesInRange(EntityType.ZOMBIE, 6, 5, null, false, entity -> {
-            ctx.applyEntityModifier(entity, livingEntity -> {
-                ctx.invokeKillAll(livingEntity, 5, _true -> {
-                    ctx.createSimpleGroup(7, 14, EventGroupProcedure.getRandomRegisteredEventId(ctx.world), "§a奖励§e和§c随机");
-                });
-            });
-        }));
-        registerEventInternal(27, ctx -> ctx.TimelimitedCombat(EntityType.ZOMBIE,5,5,7,10,ctx.getRandomEvemtID(),"§a奖励§e和§c随机"));
-        registerEventInternal(28, ctx -> ctx.TimelimitedCombat(EntityType.ZOMBIE, 5, 3, entity -> {
-            ctx.setEffect(PrimogemcraftModMobEffects.QWYMGS, entity, 3600, 3);
-        }, _true_ -> {
-            ctx.giveItem(new ItemStack(PrimogemcraftModItems.QWYZZM.get()), 1);
-        }));
-        registerEventInternal(29, ctx -> ctx.TimelimitedCombat(EntityType.ZOMBIE, 5, 3,1,1,1,"adad", entity -> {
-            entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(2);
+        registerEventInternal(26, ctx -> ctx.TimelimitedCombat(EntityType.ZOMBIE,6,5,7,14,ctx.getRandomEvemtID(),"§a奖励§e和§c随机"));
+        registerEventInternal(27, ctx -> ctx.TimelimitedCombat(EntityType.CREEPER,2,0,null,null));
+        registerEventInternal(28, ctx -> ctx.TimelimitedCombat(EntityType.RAVAGER, 1, 0, entity -> {
+            entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(20);
             entity.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(1);
         }, null));
+        registerEventInternal(29, ctx -> ctx.TimelimitedCombat(EntityType.ZOMBIE, 5, 3, ctx.getrandom(0.5) ? 29 : ctx.getRandomEvemtID(), ctx.getRandomEvemtID(), 13, "§c战斗§e或§a随机"));
     }
 
     public static boolean execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
@@ -135,12 +123,14 @@ public class Event_item_sxRProcedure {
         private final double x;
         private final double y;
         private final double z;
+        public final double compare;
 
         public EventContext(int id, Player player, LevelAccessor world) {
             this.id = id;
             this.world = world;
             this.player = player;
             this.random = RandomSource.create();
+            this.compare = Math.random();
             this.eka = "EventKillAll_" + id;
             this.x = player.getX();
             this.y = player.getY();
@@ -157,6 +147,10 @@ public class Event_item_sxRProcedure {
 
         public LevelAccessor getWorld() {
             return world;
+        }
+
+        public boolean getrandom(double value) {
+            return !world.isClientSide() && compare < value;
         }
 
         /**
@@ -294,12 +288,20 @@ public class Event_item_sxRProcedure {
 
         /**
          * 封装预制限时挑战
+         *
+         * @param count      生成数量
+         * @param scope      最小达成值
+         * @param event1     完成后打开临时事件组（省略了2/3和名称注释）
+         * @param modifier   生成的实体->自定义实体实现
+         * @param _true_     玩家完成挑战后->自定义实现
+         * @return 成功执行
          */
         public boolean TimelimitedCombat(EntityType<?> entityType, int count, int scope, int event1, int event2, int event3, String name, Consumer<LivingEntity> modifier, Consumer<Player> _true_) {
             return spawnEntitiesInRange(entityType, count, 10, null, false, entity -> {
                 applyEntityModifier(entity, livingEntity -> {
                     if (modifier != null) applyEntityModifier(entity, modifier);
                     invokeKillAll(livingEntity, Math.min(count, scope), _true_ != null ? _true_ : _true -> {
+                        if (name == "")return;
                         createSimpleGroup(event1, event2, event3, name);
                     });
                 });

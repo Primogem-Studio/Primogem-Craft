@@ -8,15 +8,17 @@ public class Ceshi_3Procedure {
 	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		double ceshi_01 = 0;
-		double a = 0;
 		ItemStack stack = ItemStack.EMPTY;
 		Entity e = null;
 		boolean o1 = false;
 		boolean w = false;
+		double ceshi_01 = 0;
+		double a = 0;
+		double n = 0;
 		stack = itemstack;
 		e = entity;
 		o1 = world.isClientSide();
+		n = Math.random();
 		EventGroupProcedure.execute(world, entity, (int) 15);
 	}
 }

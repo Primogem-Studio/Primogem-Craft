@@ -39,7 +39,9 @@ public class EventitemmssxrProcedure {
         registerDescription(24, () -> "§e我掉落的是这个§b铁制圆形盾牌！");
         registerDescription(25, () -> "§e我掉落的是这个§6华丽的摩拉制盾牌");
         registerDescription(26, () -> "§c与5只僵尸战斗"+"\n"+"§a全部战胜后可选择两个固定奖励"+"\n"+"§c或一个随机事件");
-
+        registerDescription(27, () -> "§a与两只苦力怕战斗");
+        registerDescription(28, () -> "§c与§6掠夺兽§c战斗！");
+        registerDescription(29, () -> "§e与5只僵尸战斗"+"\n"+"§e胜过3只后选择继续战斗或获得随机奖励");
     }
 
     public static void registerDescription(int eventId, Supplier<String> descriptionProvider) {
