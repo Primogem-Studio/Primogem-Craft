@@ -4,8 +4,10 @@ import io.netty.buffer.Unpooled;
 import net.hackermdch.pgc.Timer;
 import net.mcreator.ceshi.PrimogemcraftMod;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
+import net.mcreator.ceshi.init.PrimogemcraftModMobEffects;
 import net.mcreator.ceshi.world.inventory.GUISJfumoMenu;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
@@ -16,10 +18,10 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -372,6 +374,9 @@ public class Event_item_sxRProcedure {
             entity.getPersistentData().putDouble("EventKillAll_", id);
             player.getPersistentData().putDouble(eka, 1);
             Timer.set(player, eka, 3600);
+            setEffect(MobEffects.GLOWING, entity,3600,0);
+            setEffect(MobEffects.FIRE_RESISTANCE, entity,3600,0);
+            setTarget(entity);
         }
         /**
          * 挑战实现
@@ -416,6 +421,23 @@ public class Event_item_sxRProcedure {
             return spawnEntitiesInRange(entityType, count, radius, null, false, null);
         }
 
+        /**
+         * 仅设置状态效果
+         */
+        public boolean setEffect(Holder<MobEffect> eff, Entity entity, int tick, int lv) {
+            if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide()) {
+                _entity.addEffect((new MobEffectInstance(eff, tick, lv, false, false)));
+                return true;
+            }
+            return false;
+        }
+        /**
+         * 设置仇恨至玩家
+         */
+        public void setTarget (Entity entity){
+            if (entity instanceof Mob _entity && player instanceof LivingEntity _ent)
+                _entity.setTarget(_ent);
+        }
         /**
          * 三物品三值
          */
