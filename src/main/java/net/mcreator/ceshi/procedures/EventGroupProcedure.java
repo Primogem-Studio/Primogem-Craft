@@ -173,14 +173,13 @@ public class EventGroupProcedure {
                     default -> 0;
                 };
 
-                // 设置物品名称
-                i.set(DataComponents.CUSTOM_NAME, Component.literal(name));
-
-                // 设置事件ID
                 int finalEventId = eventId;
                 CustomData.update(DataComponents.CUSTOM_DATA, i, tag ->
                         tag.putDouble("event_", finalEventId)
                 );
+                i.set(DataComponents.CUSTOM_NAME, Component.literal(
+                        finalEventId<1?"§7离开这里":
+                        name));
             }
             return true;
         }

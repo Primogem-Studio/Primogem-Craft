@@ -56,9 +56,9 @@ public class EventitemmssxrProcedure {
         String sR1 = "§c§l立即触发§a//§d§l右键触发" + "\n" + "§8 #" + new java.text.DecimalFormat("##.##").format(a) + "\n";
 
         Supplier<String> descriptionProvider = DESCRIPTION_HANDLERS.get((int) a);
-        s1 = descriptionProvider != null ? descriptionProvider.get() : "什么事件都没有...";
+        s1 = descriptionProvider != null ? descriptionProvider.get() : "§7什么事件都没有...";
 
-        return sR1 + s1;
+        return (a < 1 ? "§c #0"+"\n" : sR1) + s1;
     }
 
     public static String yuzhou_fumo(String s) {
