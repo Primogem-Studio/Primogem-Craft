@@ -4,7 +4,6 @@ import io.netty.buffer.Unpooled;
 import net.hackermdch.pgc.Timer;
 import net.mcreator.ceshi.PrimogemcraftMod;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
-import net.mcreator.ceshi.init.PrimogemcraftModMobEffects;
 import net.mcreator.ceshi.world.inventory.GUISJfumoMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
@@ -120,10 +119,10 @@ public class Event_item_sxRProcedure {
         private final Player player;
         private final RandomSource random;
         private final String eka;
-        public final double x;
-        public final double y;
-        public final double z;
-        public final double compare;
+        private final double x;
+        private final double y;
+        private final double z;
+        private final double compare;
 
         public EventContext(int id, Player player, LevelAccessor world) {
             this.id = id;
@@ -151,6 +150,18 @@ public class Event_item_sxRProcedure {
 
         public boolean getrandom(double value) {
             return !world.isClientSide() && compare < value;
+        }
+
+        public double X() {
+            return x;
+        }
+
+        public double Y() {
+            return y;
+        }
+
+        public double Z() {
+            return z;
         }
 
         /**
