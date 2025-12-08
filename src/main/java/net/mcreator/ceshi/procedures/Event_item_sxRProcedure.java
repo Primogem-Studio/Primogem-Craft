@@ -90,7 +90,7 @@ public class Event_item_sxRProcedure {
             entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(20);
             entity.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(1);
         }, null));
-        registerEventInternal(29, ctx -> ctx.TimelimitedCombat(EntityType.ZOMBIE, 5, 3, ctx.getrandom(0.5) ? 29 : ctx.getRandomEvemtID(), ctx.getRandomEvemtID(), 13, "§c战斗§e或§a随机"));
+        registerEventInternal(29, ctx -> ctx.TimelimitedCombat(EntityType.ZOMBIE, 5, 3, ctx.getRandom(0.5) ? 29 : ctx.getRandomEvemtID(), ctx.getRandomEvemtID(), 13, "§c战斗§e或§a随机"));
     }
 
     public static boolean execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
@@ -148,27 +148,27 @@ public class Event_item_sxRProcedure {
             return world;
         }
 
-        public boolean getrandom(double value) {
+        public boolean getRandom(double value) {
             return !world.isClientSide() && compare < value;
         }
 
-        public double X() {
+        public double x() {
             return x;
         }
 
-        public double Y() {
+        public double y() {
             return y;
         }
 
-        public double Z() {
+        public double z() {
             return z;
         }
 
         /**
          * 接收对应等级附魔并为实体打开附魔GUI，最大4
          */
-        public boolean openEnchGui(int zhi) {
-            player.getPersistentData().putDouble("pgc_shijian_fumo_pinzhi", zhi);
+        public boolean openEnchGui(int value) {
+            player.getPersistentData().putDouble("pgc_shijian_fumo_pinzhi", value);
             PrimogemcraftMod.queueServerWork(1, () -> {
                 if (player instanceof ServerPlayer serverPlayer) {
                     BlockPos pos = BlockPos.containing(x, y, z);
@@ -245,9 +245,7 @@ public class Event_item_sxRProcedure {
         public boolean no() {
             if (Timer.isDone(player, "Event_Tri")) {
                 Timer.set(player, "Event_Tri", 100);
-                if (player != null && !player.level().isClientSide()) {
-                    player.displayClientMessage(Component.literal("\u00A7c\u6761\u4EF6\u4E0D\u8DB3\uFF01"), false);
-                }
+                prompt("§c§l条件不足", false);
             }
             return false;
         }
