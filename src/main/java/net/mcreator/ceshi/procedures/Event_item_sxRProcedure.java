@@ -33,6 +33,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.items.ItemHandlerHelper;
+import net.per.event.EventEntityScopeSpawn;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -77,20 +78,14 @@ public class Event_item_sxRProcedure {
         registerEventInternal(18, ctx -> ctx.giveTagLootItem(true, "c:curio/clock"));
         registerEventInternal(19, ctx -> ctx.giveTagLootItem(true, "c:curio/negative/cf"));
         registerEventInternal(20, ctx -> ctx.entityLoottab(ctx.entityType(S_WFENGRAOJIANGSHI.get()), "primogemcraft:fengraozlpevent", false));
-        registerEventInternal(21, ctx -> ctx.TimelimitedCombat(S_WFENGRAOJIANGSHI.get(), 2, 2, entity -> {
-            entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(2);
-            entity.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(1);
-            }, null));
+        registerEventInternal(21, ctx -> ctx.TimelimitedCombat(S_WFENGRAOJIANGSHI.get(), 2, 0, entity -> {entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(2);entity.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(1);}, null));
         registerEventInternal(22, ctx -> ctx.spawnEntitiesInRange(net.minecraft.world.entity.EntityType.ZOMBIE, 5, 5));
         registerEventInternal(23, ctx -> ctx.giveItem(new ItemStack(Items.SHIELD).copy(), 1) ? ctx.prompt("§6<垃圾桶> §f不，盾牌才是你的掉落物。", false) : ctx.no());
         registerEventInternal(24, ctx -> ctx.giveItem(new ItemStack(PrimogemcraftModItems.QWYZZM.get()), 1) ? ctx.prompt("§6<垃圾桶> §c哈哈，你其实掉落了一个愚者面具！", false) : ctx.no());
         registerEventInternal(25, ctx -> ctx.giveItem(new ItemStack(PrimogemcraftModItems.LJTG_01.get()), 1) ? ctx.prompt("§6<垃圾桶> §e我看你长得像摩拉盾牌。", false) : ctx.no());
         registerEventInternal(26, ctx -> ctx.TimelimitedCombat(EntityType.ZOMBIE,6,5,7,14,ctx.getRandomEvemtID(),"§a奖励§e和§c随机"));
         registerEventInternal(27, ctx -> ctx.TimelimitedCombat(EntityType.CREEPER,2,0,null,null));
-        registerEventInternal(28, ctx -> ctx.TimelimitedCombat(EntityType.RAVAGER, 1, 0, entity -> {
-            entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(20);
-            entity.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(1);
-        }, null));
+        registerEventInternal(28, ctx -> ctx.TimelimitedCombat(EntityType.RAVAGER, 1, 0, entity -> {entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(20);entity.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(1);}, null));
         registerEventInternal(29, ctx -> ctx.TimelimitedCombat(EntityType.ZOMBIE, 5, 3, ctx.getRandom(0.5) ? 29 : ctx.getRandomEvemtID(), ctx.getRandomEvemtID(), 13, "§c战斗§e或§a随机"));
     }
 
@@ -307,7 +302,7 @@ public class Event_item_sxRProcedure {
          * @return 成功执行
          */
         public boolean TimelimitedCombat(EntityType<?> entityType, int count, int scope, int event1, int event2, int event3, String name, Consumer<LivingEntity> modifier, Consumer<Player> _true_) {
-            return spawnEntitiesInRange(entityType, count, 10, null, false, entity -> {
+            return spawnEntitiesInRange(entityType, count, 10, entity -> {
                 applyEntityModifier(entity, livingEntity -> {
                     if (modifier != null) applyEntityModifier(entity, modifier);
                     invokeKillAll(livingEntity, Math.min(count, scope), _true_ != null ? _true_ : _true -> {
@@ -352,123 +347,31 @@ public class Event_item_sxRProcedure {
             GUIqwxz03Procedure.execute(world, player, false, "primogemcraft:event");
             return EventGroupProcedure.createSimpleGroup(player, world, event1, event2, event3, neme);
         }
-
+        /**
+         * 简单成多个实体
+         */
+        public boolean spawnEntitiesInRange(EntityType<?> entityType, int count, double radius) {
+            return spawnEntitiesInRange(entityType, count, radius, null);
+        }
+        /**
+         * 多个实体，包含可选tag或战利品表
+         */
+        public boolean spawnEntitiesInRange(EntityType<?> entityType, int count, String lootTable, boolean useTag) {
+            return spawnEntitiesInRange(entityType, count, 5, entity -> {
+                entityLoottab(entity, lootTable, useTag);
+            });
+        }
         /**
          * 在指定范围内生成多个实体
          *
          * @param entityType     实体类型
          * @param count          生成数量
          * @param radius         生成半径
-         * @param lootTable      战利品表（可选，传 null 则不设置）
-         * @param useTag         是否使用标签（仅在 lootTable 不为 null 时有效）
          * @param entityModifier 实体修饰器（可选，可对每个生成的实体进行额外操作）
          * @return 是否至少成功生成一个实体
          */
-        public boolean spawnEntitiesInRange(EntityType<?> entityType, int count, double radius,
-                                            String lootTable, boolean useTag,
-                                            Consumer<Entity> entityModifier) {
-            if (world.isClientSide() || player == null || count <= 0 || radius < 0) return false;
-            if (!(world instanceof ServerLevel serverLevel)) return false;
-
-            boolean success = false;
-            BlockPos playerPos = BlockPos.containing(x, y, z);
-
-            for (int i = 0; i < count; i++) {
-                // 尝试寻找合适的生成位置
-                BlockPos spawnPos = findSafeSpawnPosition(serverLevel, playerPos, radius);
-
-                // 如果找不到合适位置，使用玩家位置
-                if (spawnPos == null) {
-                    spawnPos = playerPos;
-                }
-
-                try {
-                    // 生成实体
-                    Entity spawnedEntity = entityType.spawn(serverLevel, spawnPos, MobSpawnType.MOB_SUMMONED);
-
-                    if (spawnedEntity != null) {
-                        // 设置战利品表（如果提供）
-                        if (lootTable != null) {
-                            entityLoottab(spawnedEntity, lootTable, useTag);
-                        }
-
-                        // 应用额外的修饰器
-                        if (entityModifier != null) {
-                            entityModifier.accept(spawnedEntity);
-                        }
-
-                        success = true;
-                    }
-                } catch (Exception e) {
-                    // 生成失败，继续尝试下一个
-                }
-            }
-
-            return success;
-        }
-
-        /**
-         * 寻找安全的生成位置
-         * 尝试多个随机位置，找到合适的位置生成
-         */
-        private BlockPos findSafeSpawnPosition(ServerLevel world, BlockPos center, double radius) {
-            for (int attempt = 0; attempt < 20; attempt++) {
-                double angle = 2 * Math.PI * random.nextDouble();
-                double distance = radius * random.nextDouble();
-
-                int xPos = (int) Math.floor(center.getX() + distance * Math.cos(angle));
-                int zPos = (int) Math.floor(center.getZ() + distance * Math.sin(angle));
-
-                for (int yOffset = 0; yOffset <= 16; yOffset++) {
-                    int yUp = Math.min(center.getY() + yOffset, world.getMaxBuildHeight() - 2);
-                    if (isSuitableSpawnLocation(world, xPos, yUp, zPos)) {
-                        return new BlockPos(xPos, yUp, zPos);
-                    }
-
-                    if (yOffset > 0) {
-                        int yDown = Math.max(center.getY() - yOffset, world.getMinBuildHeight() + 1);
-                        if (isSuitableSpawnLocation(world, xPos, yDown, zPos)) {
-                            return new BlockPos(xPos, yDown, zPos);
-                        }
-                    }
-                }
-            }
-
-            for (int attempt = 0; attempt < 10; attempt++) {
-                double angle = 2 * Math.PI * random.nextDouble();
-                double distance = radius * random.nextDouble();
-
-                int xPos = (int) Math.floor(center.getX() + distance * Math.cos(angle));
-                int zPos = (int) Math.floor(center.getZ() + distance * Math.sin(angle));
-
-                for (int y = world.getMaxBuildHeight() - 1; y >= world.getMinBuildHeight(); y--) {
-                    if (!world.getBlockState(new BlockPos(xPos, y, zPos)).isAir() &&
-                            world.getBlockState(new BlockPos(xPos, y + 1, zPos)).isAir()) {
-                        return new BlockPos(xPos, y + 1, zPos);
-                    }
-                }
-            }
-
-            return null;
-        }
-
-        /**
-         * 检查位置是否适合生成生物
-         */
-        private boolean isSuitableSpawnLocation(ServerLevel world, int x, int y, int z) {
-            BlockPos pos = new BlockPos(x, y, z);
-            BlockPos belowPos = pos.below();
-            BlockPos abovePos = pos.above();
-
-            boolean currentAir = world.getBlockState(pos).isAir();
-            boolean aboveAir = world.getBlockState(abovePos).isAir();
-
-            if (!currentAir || !aboveAir) {
-                return false;
-            }
-
-            BlockState belowState = world.getBlockState(belowPos);
-            return belowState.isSolid() || belowState.isCollisionShapeFullBlock(world, belowPos);
+        public boolean spawnEntitiesInRange(EntityType<?> entityType, int count, double radius, Consumer<Entity> entityModifier) {
+            return new EventEntityScopeSpawn(world, player).spawnEntitiesInRange(entityType, count, radius, entityModifier);
         }
 
         /**
@@ -530,13 +433,6 @@ public class Event_item_sxRProcedure {
             }
             player.getPersistentData().putDouble(eka, 0);
             return true;
-        }
-
-        /**
-         * 简化版：生成多个实体，不设置战利品和修饰器
-         */
-        public boolean spawnEntitiesInRange(EntityType<?> entityType, int count, double radius) {
-            return spawnEntitiesInRange(entityType, count, radius, null, false, null);
         }
 
         /**

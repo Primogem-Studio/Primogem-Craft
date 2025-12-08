@@ -69,8 +69,11 @@ public class EventRegistry {
     public static void registerDescription(int eventId, Supplier<String> descriptionProvider) {
         EventitemmssxrProcedure.registerDescription(eventId, descriptionProvider);
     }
+
     /**
      * 直接产卵事件组
+     *
+     * @param value 事件组ID
      */
     public static void spawnEventGroup(LevelAccessor world, Entity entity, int value) {
         EventiProcedure.execute(world, 0, -128, 0, entity, value, true);
@@ -83,7 +86,12 @@ public class EventRegistry {
     public static void spawnEventGroup(LevelAccessor world, double x, double y, double z, Entity entity, int value) {
         EventiProcedure.execute(world, x, y, z, entity, value, true);
     }
-
+    /**
+     * 直接产卵事件组
+     *
+     * @param count 记录并受限？
+     * @param value 事件组ID
+     */
     public static void spawnEventGroup(LevelAccessor world, double x, double y, double z, Entity entity, int value, boolean count) {
         EventiProcedure.execute(world, x, y, z, entity, value, count);
     }

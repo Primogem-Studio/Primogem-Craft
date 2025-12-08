@@ -19,7 +19,7 @@ public class EventiProcedure {
     public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, double zhi,boolean count) {
         if (entity == null)
             return;
-        if ((x + y + z) == -128 && entity.getY() != -128) {
+        if (y == -128 && entity.getY() != -128) {
             x = entity.getX();
             y = entity.getY();
             z = entity.getZ();
