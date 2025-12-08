@@ -13,8 +13,12 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 /**
- * 新版事件系统API（基于EventContext模式）
- * 完全抛弃老式BiFunction用法，使用新的EventContext驱动
+ * \\\\\\\\\以 防 真 有 人 看 ! !/////////
+ * @本API大部分由AI完成，不一定所有功能有效！！
+ * @关于ID注册规范（可选但最好遵循）：
+ * @事件ID： modID前 4 个字母的字母顺序：@例：primogem... -> 1618913 开始避免冲突
+ * @事件组ID： modID前 3 个字母的字母顺序：@例：primogem... -> 16189 开始避免冲突（不会与事件ID冲突，即使重合）
+ * @事件描述ID： 与事件ID一致
  */
 public class EventRegistry {
 
