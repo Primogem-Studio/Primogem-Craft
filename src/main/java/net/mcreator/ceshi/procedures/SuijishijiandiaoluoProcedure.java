@@ -1,5 +1,6 @@
 package net.mcreator.ceshi.procedures;
 
+import net.mcreator.ceshi.api.EventRegistry;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -28,10 +29,9 @@ public class SuijishijiandiaoluoProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		ItemStack a = ItemStack.EMPTY;
 		Entity e = null;
 		if (!(entity instanceof Player)) {
-			EventiProcedure.execute(world, x, y, z, sourceentity, EventGroupProcedure.getRandomGroupId(world));
+			EventRegistry.spawnEventGroup(world,x,y,z,sourceentity,EventGroupProcedure.getRandomGroupId(world));
 		}
 	}
 }

@@ -2,7 +2,9 @@ package net.mcreator.ceshi.api;
 
 import net.mcreator.ceshi.procedures.EventGroupProcedure;
 import net.mcreator.ceshi.procedures.Event_item_sxRProcedure;
+import net.mcreator.ceshi.procedures.EventiProcedure;
 import net.mcreator.ceshi.procedures.EventitemmssxrProcedure;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.LevelAccessor;
 
@@ -67,6 +69,31 @@ public class EventRegistry {
     public static void registerDescription(int eventId, Supplier<String> descriptionProvider) {
         EventitemmssxrProcedure.registerDescription(eventId, descriptionProvider);
     }
+    /**
+     * 直接产卵事件组
+     */
+    public static void spawnEventGroup(LevelAccessor world, Entity entity, int value) {
+        EventiProcedure.execute(world, 0, -128, 0, entity, value, true);
+    }
+
+    public static void spawnEventGroup(LevelAccessor world, Entity entity, int value, boolean count) {
+        EventiProcedure.execute(world, 0, -128, 0, entity, value, count);
+    }
+
+    public static void spawnEventGroup(LevelAccessor world, double x, double y, double z, Entity entity, int value) {
+        EventiProcedure.execute(world, x, y, z, entity, value, true);
+    }
+
+    public static void spawnEventGroup(LevelAccessor world, double x, double y, double z, Entity entity, int value, boolean count) {
+        EventiProcedure.execute(world, x, y, z, entity, value, count);
+    }
+    /**
+     * 直接产卵事件
+     */
+    public static void spawnEvent(LevelAccessor world, Player player, int value) {
+        EventGroupProcedure.execute(world, player, value);
+    }
+
 
     /**
      * 获取所有已注册的事件ID

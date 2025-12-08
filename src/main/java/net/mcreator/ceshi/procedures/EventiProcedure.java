@@ -12,20 +12,24 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.LevelAccessor;
 
+import java.util.Collections;
+import java.util.List;
+
 public class EventiProcedure {
-    public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, double zhi) {
+    public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, double zhi,boolean count) {
         if (entity == null)
             return;
+        if ((x + y + z) == -128 && entity.getY() != -128) {
+            x = entity.getX();
+            y = entity.getY();
+            z = entity.getZ();
+        }
         if (!world.isClientSide()) {
-            if (Timer.isDone(entity, "event_cd") && updateEventQuota(world, entity)) {
+            if (Timer.isDone(entity, "event_cd") && count ? updateEventQuota(world, entity) : count) {
                 Timer.set(entity, "event_cd", 20);
                 ItemStack a = ItemStack.EMPTY;
                 a = new ItemStack(PrimogemcraftModItems.SH_JWUPIN.get());
-                {
-                    final String _tagName = "event_zu_i";
-                    final double _tagValue = zhi;
-                    CustomData.update(DataComponents.CUSTOM_DATA, a, tag -> tag.putDouble(_tagName, _tagValue));
-                }
+                CustomData.update(DataComponents.CUSTOM_DATA, a, tag -> tag.putDouble("event_zu_i", zhi));
                 if (world instanceof ServerLevel _level) {
                     ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, a);
                     entityToSpawn.setPickUpDelay(40);
