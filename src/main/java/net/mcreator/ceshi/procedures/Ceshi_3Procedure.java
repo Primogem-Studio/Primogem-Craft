@@ -19,6 +19,6 @@ public class Ceshi_3Procedure {
 		e = entity;
 		o1 = world.isClientSide();
 		n = Math.random();
-		EventGroupProcedure.execute(world, entity, (int) 15);
+		EventGroupProcedure.execute(world, entity, (int) 18);
 	}
 }
