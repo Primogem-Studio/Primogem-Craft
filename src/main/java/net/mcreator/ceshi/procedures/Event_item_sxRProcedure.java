@@ -186,12 +186,15 @@ public class Event_item_sxRProcedure {
         }
 
         public boolean updateEventQuotaWorld(int value,boolean rule) {
+            if (world == null || world.getServer() == null) {
+                return false;
+            }
             var _iw = PrimogemcraftModVariables.MapVariables.get(world);
             int w = world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZESHIJIANXIANZHI);
             String s = value < 0 ? "§c" : "§a";
-            if (rule){
+            if (rule) {
                 addOrDeductGameRule(PrimogemcraftModGameRules.GUIZEMOYINSHENSHENGMINGZHI,value);
-                world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("§l§6<<" + player.getDisplayName().getString()+">>" + s + "让公共世界事件变得" + (value < 0 ? "稀少了！" : "更多了！")), false);
+                world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("§l§6<<" + player.getDisplayName().getString()+">>" + s + "让世界中事件变得" + (value < 0 ? "稀少了！" : "更多了！")), false);
                 return true;
             }
             if (_iw.shijian_xianzhi + -value > w) {
@@ -218,6 +221,7 @@ public class Event_item_sxRProcedure {
          * 设置数字世界规则
          */
         public boolean setGameRule(GameRules.Key<GameRules.IntegerValue> ruleKey, int newValue) {
+            if (newValue>10000)return false;
             world.getLevelData().getGameRules().getRule(ruleKey).set(newValue, world.getServer());
             return true;
         }

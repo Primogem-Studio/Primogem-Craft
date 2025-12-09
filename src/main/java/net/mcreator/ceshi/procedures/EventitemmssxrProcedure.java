@@ -50,8 +50,8 @@ public class EventitemmssxrProcedure {
         registerDescription(35, () -> "§c世界事件存储-1！"+shijian());
         registerDescription(36, () -> "§a玩家事件存储+1！"+shijian());
         registerDescription(37, () -> "§c玩家事件存储-1！"+shijian());
-        registerDescription(38, () -> "§6§l公共世界事件上限+1！");
-        registerDescription(39, () -> "§c§l公共世界事件上限-1！");
+        registerDescription(38, () -> "§6§l世界事件上限+1！");
+        registerDescription(39, () -> "§c§l世界事件上限-1！");
     }
 
     public static void registerDescription(int eventId, Supplier<String> descriptionProvider) {
