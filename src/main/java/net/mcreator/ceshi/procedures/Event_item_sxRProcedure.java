@@ -31,6 +31,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.component.CustomData;
+import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.capabilities.Capabilities;
@@ -97,10 +98,12 @@ public class Event_item_sxRProcedure {
         registerEventInternal(31, ctx -> ctx.setGuiItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), ctx.random(5, 20), ctx.random(5, 20), ctx.random(5, 20)));
         registerEventInternal(32, ctx -> ctx.setGuiItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), ctx.random(10, 40), ctx.random(10, 40), ctx.random(10, 40)));
         registerEventInternal(33, ctx -> ctx.setGuiItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), ctx.random(15, 64), ctx.random(15, 64), ctx.random(15, 64)));
-        registerEventInternal(34, ctx -> ctx.updateEventQuotaWorld(1));
-        registerEventInternal(35, ctx -> ctx.updateEventQuotaWorld(-1));
+        registerEventInternal(34, ctx -> ctx.updateEventQuotaWorld(1,false));
+        registerEventInternal(35, ctx -> ctx.updateEventQuotaWorld(-1,false));
         registerEventInternal(36, ctx -> ctx.updateEventQuotaPlayer(1));
         registerEventInternal(37, ctx -> ctx.updateEventQuotaPlayer(-1));
+        registerEventInternal(38, ctx -> ctx.updateEventQuotaWorld(1,true));
+        registerEventInternal(39, ctx -> ctx.updateEventQuotaWorld(-1,true));
     }
 
     public static boolean execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
@@ -182,19 +185,40 @@ public class Event_item_sxRProcedure {
             return true;
         }
 
-        public boolean updateEventQuotaWorld(int value) {
+        public boolean updateEventQuotaWorld(int value,boolean rule) {
             var _iw = PrimogemcraftModVariables.MapVariables.get(world);
             int w = world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZESHIJIANXIANZHI);
+            String s = value < 0 ? "§c" : "§a";
+            if (rule){
+                addOrDeductGameRule(PrimogemcraftModGameRules.GUIZEMOYINSHENSHENGMINGZHI,value);
+                world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("§l§6<<" + player.getDisplayName().getString()+">>" + s + "让公共世界事件变得" + (value < 0 ? "稀少了！" : "更多了！")), false);
+                return true;
+            }
             if (_iw.shijian_xianzhi + -value > w) {
                 updateEventQuotaPlayer(value);
                 prompt("§9由于世界事件存储已达上限，将转移至玩家存储", false);
             } else {
                 _iw.shijian_xianzhi += -value;
             }
-            String s = value < 0 ? "§c" : "§a";
             prompt(s + "当前世界可触发事件数：" + new DecimalFormat("##.##").format(w - _iw.shijian_xianzhi), false);
             _iw.markSyncDirty();
 
+            return true;
+        }
+
+        /**
+         * 添加或减少数字世界规则
+         */
+        public boolean addOrDeductGameRule(GameRules.Key<GameRules.IntegerValue> ruleKey, int newValue) {
+            setGameRule(ruleKey, world.getLevelData().getGameRules().getInt(ruleKey) + newValue);
+            return true;
+        }
+
+        /**
+         * 设置数字世界规则
+         */
+        public boolean setGameRule(GameRules.Key<GameRules.IntegerValue> ruleKey, int newValue) {
+            world.getLevelData().getGameRules().getRule(ruleKey).set(newValue, world.getServer());
             return true;
         }
 
