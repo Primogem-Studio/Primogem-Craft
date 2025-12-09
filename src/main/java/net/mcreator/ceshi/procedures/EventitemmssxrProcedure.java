@@ -42,6 +42,10 @@ public class EventitemmssxrProcedure {
         registerDescription(27, () -> "§a与两只苦力怕战斗");
         registerDescription(28, () -> "§c与§6掠夺兽§c战斗！");
         registerDescription(29, () -> "§e与5只僵尸战斗"+"\n"+"§e胜过3只后选择继续战斗或获得随机奖励");
+        registerDescription(30, () -> yzsp());
+        registerDescription(31, () -> yzsp());
+        registerDescription(32, () -> yzsp());
+        registerDescription(33, () -> yzsp());
     }
 
     public static void registerDescription(int eventId, Supplier<String> descriptionProvider) {
@@ -61,6 +65,9 @@ public class EventitemmssxrProcedure {
         return (a < 1 ? "§c #0"+"\n" : sR1) + s1;
     }
 
+    public static String yzsp(){
+        return "§e随机获得宇宙碎片";
+    }
     public static String yuzhou_fumo(String s) {
         return "§e换取" + s + "§e附魔" + "\n";
     }

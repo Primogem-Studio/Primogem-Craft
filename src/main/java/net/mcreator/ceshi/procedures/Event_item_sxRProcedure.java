@@ -87,6 +87,10 @@ public class Event_item_sxRProcedure {
         registerEventInternal(27, ctx -> ctx.TimelimitedCombat(EntityType.CREEPER,2,0,null,null));
         registerEventInternal(28, ctx -> ctx.TimelimitedCombat(EntityType.RAVAGER, 1, 0, entity -> {entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(20);entity.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(1);}, null));
         registerEventInternal(29, ctx -> ctx.TimelimitedCombat(EntityType.ZOMBIE, 5, 3, ctx.getRandom(0.5) ? 29 : ctx.getRandomEvemtID(), ctx.getRandomEvemtID(), 13, "§c战斗§e或§a随机"));
+        registerEventInternal(30, ctx -> ctx.setGuiItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), ctx.random(1, 10), ctx.random(1, 10), ctx.random(1, 10)));
+        registerEventInternal(31, ctx -> ctx.setGuiItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), ctx.random(5, 20), ctx.random(5, 20), ctx.random(5, 20)));
+        registerEventInternal(32, ctx -> ctx.setGuiItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), ctx.random(10, 40), ctx.random(10, 40), ctx.random(10, 40)));
+        registerEventInternal(33, ctx -> ctx.setGuiItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), ctx.random(15, 64), ctx.random(15, 64), ctx.random(15, 64)));
     }
 
     public static boolean execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
@@ -455,22 +459,25 @@ public class Event_item_sxRProcedure {
         /**
          * 三物品三值
          */
-        public void setGuiItem(ItemStack item1, ItemStack item2, ItemStack item3, int count1, int count2, int count3) {
+        public boolean setGuiItem(ItemStack item1, ItemStack item2, ItemStack item3, int count1, int count2, int count3) {
             SetItemGui.quickOpen(player, world, item1, count2, item3, count2, item2, count3);
+            return true;
         }
 
         /**
          * 单物品三值
          */
-        public void setGuiItem(ItemStack item1, int count1, int count2, int count3) {
+        public boolean setGuiItem(ItemStack item1, int count1, int count2, int count3) {
             SetItemGui.quickOpen(player, world, item1, count2, count2, count3);
+            return true;
         }
 
         /**
          * 单数量Tag或LotTab选择
          */
-        public void setGuiItem(String tagloot, boolean tag) {
+        public boolean setGuiItem(String tagloot, boolean tag) {
             GUIqwxz03Procedure.execute(world, player, tag, tagloot);
+            return true;
         }
     }
 
