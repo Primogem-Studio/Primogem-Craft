@@ -176,7 +176,9 @@ public class Event_item_sxRProcedure {
         public double z() {
             return z;
         }
-
+        /**
+         * 玩家事件修改
+         */
         public boolean updateEventQuotaPlayer(int value) {
             PrimogemcraftModVariables.PlayerVariables _ie = player.getData(PrimogemcraftModVariables.PLAYER_VARIABLES);
             _ie.Event_entity = _ie.Event_entity += value;
@@ -184,17 +186,18 @@ public class Event_item_sxRProcedure {
             _ie.markSyncDirty();
             return true;
         }
-
-        public boolean updateEventQuotaWorld(int value,boolean rule) {
+        /**
+         * 世界事件修改
+         */
+        public boolean updateEventQuotaWorld(int value, boolean rule) {
             if (world == null || world.getServer() == null) {
                 return false;
             }
             var _iw = PrimogemcraftModVariables.MapVariables.get(world);
             int w = world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZESHIJIANXIANZHI);
             String s = value < 0 ? "§c" : "§a";
-            if (rule) {
-                addOrDeductGameRule(PrimogemcraftModGameRules.GUIZEMOYINSHENSHENGMINGZHI,value);
-                world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("§l§6<<" + player.getDisplayName().getString()+">>" + s + "让世界中事件变得" + (value < 0 ? "稀少了！" : "更多了！")), false);
+            if (rule && addOrDeductGameRule(PrimogemcraftModGameRules.GUIZEMOYINSHENSHENGMINGZHI, value)) {
+                world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("§l§6<<" + player.getDisplayName().getString() + ">>" + s + "让世界中事件变得" + (value < 0 ? "稀少了！" : "更多了！")), false);
                 return true;
             }
             if (_iw.shijian_xianzhi + -value > w) {
@@ -213,8 +216,7 @@ public class Event_item_sxRProcedure {
          * 添加或减少数字世界规则
          */
         public boolean addOrDeductGameRule(GameRules.Key<GameRules.IntegerValue> ruleKey, int newValue) {
-            setGameRule(ruleKey, world.getLevelData().getGameRules().getInt(ruleKey) + newValue);
-            return true;
+            return setGameRule(ruleKey, world.getLevelData().getGameRules().getInt(ruleKey) + newValue);
         }
 
         /**
