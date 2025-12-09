@@ -97,8 +97,8 @@ public class Event_item_sxRProcedure {
         registerEventInternal(31, ctx -> ctx.setGuiItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), ctx.random(5, 20), ctx.random(5, 20), ctx.random(5, 20)));
         registerEventInternal(32, ctx -> ctx.setGuiItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), ctx.random(10, 40), ctx.random(10, 40), ctx.random(10, 40)));
         registerEventInternal(33, ctx -> ctx.setGuiItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), ctx.random(15, 64), ctx.random(15, 64), ctx.random(15, 64)));
-        registerEventInternal(34, ctx -> ctx.updateEventQuotaWorld(-1));
-        registerEventInternal(35, ctx -> ctx.updateEventQuotaWorld(1));
+        registerEventInternal(34, ctx -> ctx.updateEventQuotaWorld(1));
+        registerEventInternal(35, ctx -> ctx.updateEventQuotaWorld(-1));
         registerEventInternal(36, ctx -> ctx.updateEventQuotaPlayer(1));
         registerEventInternal(37, ctx -> ctx.updateEventQuotaPlayer(-1));
     }
@@ -185,14 +185,14 @@ public class Event_item_sxRProcedure {
         public boolean updateEventQuotaWorld(int value) {
             var _iw = PrimogemcraftModVariables.MapVariables.get(world);
             int w = world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZESHIJIANXIANZHI);
-            if (_iw.shijian_xianzhi + value > w) {
-                updateEventQuotaPlayer(-value);
+            if (_iw.shijian_xianzhi + -value > w) {
+                updateEventQuotaPlayer(value);
                 prompt("§9由于世界事件存储已达上限，将转移至玩家存储", false);
             } else {
-                _iw.shijian_xianzhi += value;
+                _iw.shijian_xianzhi += -value;
             }
-            String s = value > 0 ? "§c" : "§a";
-            prompt(s + "当前世界可触发事件数："+ new DecimalFormat("##.##").format(w-_iw.shijian_xianzhi), false);
+            String s = value < 0 ? "§c" : "§a";
+            prompt(s + "当前世界可触发事件数：" + new DecimalFormat("##.##").format(w - _iw.shijian_xianzhi), false);
             _iw.markSyncDirty();
 
             return true;
