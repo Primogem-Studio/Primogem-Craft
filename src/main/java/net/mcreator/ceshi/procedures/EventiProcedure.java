@@ -51,16 +51,14 @@ public class EventiProcedure {
         if (Timer.isDone(entity, "Event_it")) {
             add = true;
             if (_ie.Event_entity <= 0) _ie.Event_entity++;
-            else if (_iw.shijian_xianzhi > 0) {
-                _iw.shijian_xianzhi--;
+            else if (_iw.shijian_xianzhi > 0) {_iw.shijian_xianzhi--;
+                if (_iw.shijian_xianzhi > gz) for (double fo = _iw.shijian_xianzhi; fo > gz; fo--) _iw.shijian_xianzhi --;
             } else add = false;
         }
         if (Math.random() < ((world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZESUIJISHIJIAN)) * 0.01) / 100) {
-            if (_iw.shijian_xianzhi < gz) {
-                _iw.shijian_xianzhi++;
+            if (_iw.shijian_xianzhi < gz) {_iw.shijian_xianzhi++;
                 con = true;
-            } else if (_ie.Event_entity > 0) {
-                _ie.Event_entity--;
+            } else if (_ie.Event_entity > 0) {_ie.Event_entity--;
                 con = true;
             }
         }

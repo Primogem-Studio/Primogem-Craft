@@ -3,7 +3,10 @@ package net.mcreator.ceshi.procedures;
 import io.netty.buffer.Unpooled;
 import net.hackermdch.pgc.Timer;
 import net.mcreator.ceshi.PrimogemcraftMod;
+import net.mcreator.ceshi.init.PrimogemcraftModGameRules;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
+import net.mcreator.ceshi.item.YuzhousuipianItem;
+import net.mcreator.ceshi.network.PrimogemcraftModVariables;
 import net.mcreator.ceshi.world.inventory.GUISJfumoMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
@@ -31,10 +34,12 @@ import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.event.entity.living.LivingSwapItemsEvent;
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 import net.per.event.EventEntityScopeSpawn;
 
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiFunction;
@@ -42,6 +47,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 
 import static net.mcreator.ceshi.init.PrimogemcraftModEntities.S_WFENGRAOJIANGSHI;
+import static net.mcreator.ceshi.init.PrimogemcraftModItems.YUZHOUSUIPIAN;
 
 public class Event_item_sxRProcedure {
     // 事件注册器 - 使用Function接收EventContext
@@ -58,12 +64,12 @@ public class Event_item_sxRProcedure {
     }
 
     static {
-        registerEventInternal(1, ctx -> ctx.costItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 10) ? ctx.openEnchGui(1) : ctx.no());
-        registerEventInternal(2, ctx -> ctx.costItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 20) ? ctx.openEnchGui(ctx.random(1, 2)) : ctx.no());
-        registerEventInternal(3, ctx -> ctx.costItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 40) ? ctx.openEnchGui(ctx.random(2, 4)) : ctx.no());
+        registerEventInternal(1, ctx -> ctx.costItem(new ItemStack(YUZHOUSUIPIAN.get()), 10) ? ctx.openEnchGui(1) : ctx.no());
+        registerEventInternal(2, ctx -> ctx.costItem(new ItemStack(YUZHOUSUIPIAN.get()), 20) ? ctx.openEnchGui(ctx.random(1, 2)) : ctx.no());
+        registerEventInternal(3, ctx -> ctx.costItem(new ItemStack(YUZHOUSUIPIAN.get()), 40) ? ctx.openEnchGui(ctx.random(2, 4)) : ctx.no());
         registerEventInternal(4, ctx -> ctx.costHpPercent(0.2) ? ctx.openEnchGui(1) : ctx.no());
         registerEventInternal(5, ctx -> ctx.costHpPercent(0.7) ? ctx.openEnchGui(2) : ctx.no());
-        registerEventInternal(6, ctx -> ctx.costHpPercent(0.95) && ctx.costItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), 20) ? ctx.openEnchGui(3) : ctx.no());
+        registerEventInternal(6, ctx -> ctx.costHpPercent(0.95) && ctx.costItem(new ItemStack(YUZHOUSUIPIAN.get()), 20) ? ctx.openEnchGui(3) : ctx.no());
         registerEventInternal(7, ctx -> ctx.giveTagLootItem(true, "c:curio/normal/b"));
         registerEventInternal(8, ctx -> ctx.giveTagLootItem(true, "c:curio/normal/a"));
         registerEventInternal(9, ctx -> ctx.giveTagLootItem(true, "c:curio/normal/s"));
@@ -91,6 +97,10 @@ public class Event_item_sxRProcedure {
         registerEventInternal(31, ctx -> ctx.setGuiItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), ctx.random(5, 20), ctx.random(5, 20), ctx.random(5, 20)));
         registerEventInternal(32, ctx -> ctx.setGuiItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), ctx.random(10, 40), ctx.random(10, 40), ctx.random(10, 40)));
         registerEventInternal(33, ctx -> ctx.setGuiItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), ctx.random(15, 64), ctx.random(15, 64), ctx.random(15, 64)));
+        registerEventInternal(34, ctx -> ctx.updateEventQuotaWorld(-1));
+        registerEventInternal(35, ctx -> ctx.updateEventQuotaWorld(1));
+        registerEventInternal(36, ctx -> ctx.updateEventQuotaPlayer(1));
+        registerEventInternal(37, ctx -> ctx.updateEventQuotaPlayer(-1));
     }
 
     public static boolean execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
@@ -162,6 +172,30 @@ public class Event_item_sxRProcedure {
 
         public double z() {
             return z;
+        }
+
+        public boolean updateEventQuotaPlayer(int value) {
+            PrimogemcraftModVariables.PlayerVariables _ie = player.getData(PrimogemcraftModVariables.PLAYER_VARIABLES);
+            _ie.Event_entity = _ie.Event_entity += value;
+            prompt((value < 0 ? "§c" : "§a") + "当前玩家存储的可触发事件数量：" + new DecimalFormat("##.##").format(_ie.Event_entity), false);
+            _ie.markSyncDirty();
+            return true;
+        }
+
+        public boolean updateEventQuotaWorld(int value) {
+            var _iw = PrimogemcraftModVariables.MapVariables.get(world);
+            int w = world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZESHIJIANXIANZHI);
+            if (_iw.shijian_xianzhi + value > w) {
+                updateEventQuotaPlayer(-value);
+                prompt("§9由于世界事件存储已达上限，将转移至玩家存储", false);
+            } else {
+                _iw.shijian_xianzhi += value;
+            }
+            String s = value > 0 ? "§c" : "§a";
+            prompt(s + "当前世界可触发事件数："+ new DecimalFormat("##.##").format(w-_iw.shijian_xianzhi), false);
+            _iw.markSyncDirty();
+
+            return true;
         }
 
         /**

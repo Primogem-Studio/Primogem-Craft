@@ -46,6 +46,10 @@ public class EventitemmssxrProcedure {
         registerDescription(31, () -> yzsp());
         registerDescription(32, () -> yzsp());
         registerDescription(33, () -> yzsp());
+        registerDescription(34, () -> "§a世界事件存储+1！"+shijian());
+        registerDescription(35, () -> "§c世界事件存储-1！"+shijian());
+        registerDescription(36, () -> "§a玩家事件存储+1！"+shijian());
+        registerDescription(37, () -> "§c玩家事件存储-1！"+shijian());
     }
 
     public static void registerDescription(int eventId, Supplier<String> descriptionProvider) {
@@ -64,9 +68,11 @@ public class EventitemmssxrProcedure {
 
         return (a < 1 ? "§c #0"+"\n" : sR1) + s1;
     }
-
     public static String yzsp(){
         return "§e随机获得宇宙碎片";
+    }
+    public static String shijian(){
+        return "\n"+"§7事件会随时间恢复";
     }
     public static String yuzhou_fumo(String s) {
         return "§e换取" + s + "§e附魔" + "\n";
