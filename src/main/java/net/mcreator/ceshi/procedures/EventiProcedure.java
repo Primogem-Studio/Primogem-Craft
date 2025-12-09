@@ -45,13 +45,14 @@ public class EventiProcedure {
         var gz = world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZESHIJIANXIANZHI);
         boolean add = false;
         boolean con = false;
-
+        if (_iw.shijian_xianzhi > gz) for (double fo = _iw.shijian_xianzhi; fo > gz; fo--) {
+            _iw.shijian_xianzhi = fo;
+            _iw.markSyncDirty();};
         if (Timer.isDone(entity, "Event_it")) {
             add = true;
             if (_ie.Event_entity <= 0) _ie.Event_entity++;
             else if (_iw.shijian_xianzhi > 0) {
                 _iw.shijian_xianzhi--;
-                if (_iw.shijian_xianzhi > gz) _iw.shijian_xianzhi = 0;
             } else add = false;
         }
         if (Math.random() < ((world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZESUIJISHIJIAN)) * 0.01) / 100) {
@@ -63,8 +64,7 @@ public class EventiProcedure {
                 con = true;
             }
         }
-
-        if (add) Timer.set(entity, "Event_it", 6000);
+        if (add) Timer.set(entity, "Event_it", 200);
         _ie.markSyncDirty();
         _iw.markSyncDirty();
         return con;
