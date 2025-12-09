@@ -23,9 +23,7 @@ public class EventiProcedure {
         }
         if (!world.isClientSide()) {
             if (Timer.isDone(entity, "event_cd")) {
-                boolean ct = count ? updateEventQuota(world, entity) : true;
-                if (!ct)return;
-                System.out.println(count);
+                if (!(!count || updateEventQuota(world, entity))) return;
                 Timer.set(entity, "event_cd", 20);
                 ItemStack a = ItemStack.EMPTY;
                 a = new ItemStack(PrimogemcraftModItems.SH_JWUPIN.get());
@@ -45,12 +43,10 @@ public class EventiProcedure {
         var gz = world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZESHIJIANXIANZHI);
         boolean add = false;
         boolean con = false;
-        System.out.println(gz+"GZ");
         if (_iw.shijian_xianzhi > gz) for (double fo = _iw.shijian_xianzhi; fo > gz; fo--) {
             _iw.shijian_xianzhi = fo;
             _iw.markSyncDirty();
         }
-        ;
         if (Timer.isDone(entity, "Event_it")) {
             add = true;
             if (_ie.Event_entity <= 0) _ie.Event_entity++;
@@ -59,20 +55,17 @@ public class EventiProcedure {
             } else add = false;
         }
         if (Math.random() < ((world.getLevelData().getGameRules().getInt(PrimogemcraftModGameRules.GUIZESUIJISHIJIAN)) * 0.01) / 100) {
-            if (_iw.shijian_xianzhi < gz) {_iw.shijian_xianzhi++;
+            if (_iw.shijian_xianzhi < gz) {
+                _iw.shijian_xianzhi++;
                 con = true;
-            }
-            else
-            if (_ie.Event_entity > 0) {
+            } else if (_ie.Event_entity > 0) {
                 _ie.Event_entity--;
                 con = true;
             }
         }
-        if (add) Timer.set(entity, "Event_it", 200);
+        if (add) Timer.set(entity, "Event_it", 6000);
         _ie.markSyncDirty();
         _iw.markSyncDirty();
-        System.out.println(_ie.Event_entity + "Eneity");
-        System.out.println(_iw.shijian_xianzhi + "world");
         return con;
     }
 }
