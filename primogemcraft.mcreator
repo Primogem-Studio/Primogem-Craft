@@ -36307,6 +36307,24 @@
           "src/main/java/net/mcreator/ceshi/procedures/EventEntitytagProcedure.java"
         ]
       }
+    },
+    {
+      "name": "CaptureWishProgress",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "capture_wish_progress",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/CaptureWishProgressProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
