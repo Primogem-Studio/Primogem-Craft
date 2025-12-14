@@ -1,8 +1,6 @@
 package net.per.wish;
 
 import net.mcreator.ceshi.PrimogemcraftMod;
-import net.mcreator.ceshi.entity.QQQyuanchulan01Entity;
-import net.mcreator.ceshi.entity.QQyuanchuzi01Entity;
 import net.mcreator.ceshi.entity.QqiyuanJinGuangEntity;
 import net.mcreator.ceshi.init.PrimogemcraftModGameRules;
 import net.mcreator.ceshi.network.PrimogemcraftModVariables;
@@ -40,12 +38,12 @@ public class SpawnWishiEntity {
     private final Entity wishentity;
     private final CompoundTag enbt;
 
-    public SpawnWishiEntity(LevelAccessor world, Player player, int entityVale, double wishVale) {
+    public SpawnWishiEntity(LevelAccessor world, Player player, int entityVale, double wishVale, double x, double y, double z) {
         this.world = world;
         this.player = player;
-        this.x = player.getX();
-        this.y = player.getY();
-        this.z = player.getZ();
+        this.x = x;
+        this.y = y;
+        this.z = z;
         this.entityVale = entityVale;
         this.wishVale = wishVale / entityVale;
 
@@ -71,13 +69,13 @@ public class SpawnWishiEntity {
     }
 
     private Entity getWishEntity() {
-        if (wishConclusion(wishRate(0.1, 0.3), _vars.jin_baodi, 49, false, _true -> {
+        if (wishConclusion(wishRate(0.1, 0.3, 10), _vars.jin_baodi, 49, false, _true -> {
             _vars.wj_ck_jin++;
             _vars.jin_baodi = 0;
             _vars.zi_baodi++;
             captureWish();
         })) return entityType(QQIYUAN_JIN_GUANG.get());
-        else if (wishConclusion(wishRate(0.1, 0.2), _vars.zi_baodi, 9, false, _true -> {
+        else if (wishConclusion(wishRate(1, 2, 5), _vars.zi_baodi, 9, false, _true -> {
             _vars.wj_ck_zi++;
             _vars.zi_baodi = 0;
             _vars.jin_baodi++;
@@ -92,8 +90,8 @@ public class SpawnWishiEntity {
         }
     }
 
-    private double wishRate(double value1, double value2) {
-        return pnbt.getBoolean("xiangyu") ? value1 : value2 + (wishVale > 0 ? (wishVale) * 0.01 : 0);
+    private double wishRate(double value1, double value2, double value3) {
+        return (pnbt.getBoolean("xiangyu") ? value1 : value2 + (wishVale > 0 ? (wishVale / value3) * 0.1 : 0))/10;
     }
 
     private boolean wishConclusion(boolean logic, Consumer<Player> _true_) {
@@ -103,11 +101,12 @@ public class SpawnWishiEntity {
 
     private boolean wishConclusion(double value, double _var, double varsvalue, boolean logic, Consumer<Player> _true_) {
         if (!world.isClientSide())
-            if (_true_ != null && Math.random() < value || (_var >= varsvalue || logic)) {
-                _true_.accept(player);
-                _vars.markSyncDirty();
-                return true;
-            }
+            System.out.println(value);
+        if (_true_ != null && Math.random() < value || (_var >= varsvalue || logic)) {
+            _true_.accept(player);
+            _vars.markSyncDirty();
+            return true;
+        }
         return false;
     }
 
@@ -132,6 +131,36 @@ public class SpawnWishiEntity {
                 enbt.putBoolean("lizi", true);
                 CaptureWishProgressProcedure.execute(player);
             });
+        }
+    }
+
+    public static void Spawn(LevelAccessor world, Player player, int entityVale, double wishVale) {
+        double R_radius = 0;
+        double D_delta_theta = 0;
+        double T_theta = 0;
+        double N_number = 0;
+        N_number = entityVale == 10 ? entityVale - 2 : entityVale;
+        R_radius = 3;
+        D_delta_theta = (2 * Math.PI) / N_number;
+        double x = player.getX();
+        double y = player.getY();
+        double z = player.getZ();
+        switch (entityVale) {
+            case 1 -> new SpawnWishiEntity(world, player, entityVale, wishVale, x, y + 10, z);
+            case 10 -> {
+                for (int index0 = 0; index0 < (int) N_number; index0++) {
+                    T_theta = index0 * D_delta_theta;
+                    new SpawnWishiEntity(world, player, 8, wishVale * 0.8, x + R_radius * Math.sin(T_theta), y + 6, z + R_radius * Math.cos(T_theta));
+                }
+                new SpawnWishiEntity(world, player, 1, wishVale / 10, x, y + 6, z);
+                new SpawnWishiEntity(world, player, 1, wishVale / 10, x, y + 7, z);
+            }
+            default -> {
+                for (int index0 = 0; index0 < (int) N_number; index0++) {
+                    T_theta = index0 * D_delta_theta;
+                    new SpawnWishiEntity(world, player, entityVale, wishVale, x + R_radius * Math.sin(T_theta), y + 6, z + R_radius * Math.cos(T_theta));
+                }
+            }
         }
     }
 }
