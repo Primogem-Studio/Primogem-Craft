@@ -83,22 +83,22 @@ public class TtiaoguozhizhangshuxingProcedure {
 											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("primogemcraft:dashengchulan01")), SoundSource.PLAYERS, (float) 0.2, (float) 0.9, false);
 										}
 									}
-									if (entityiterator instanceof QqiyuanJinGuangEntity && entityiterator.getPersistentData().getBoolean("chouka_jiance_2")) {
+									if (entityiterator instanceof QqiyuanJinGuangEntity && entityiterator.getPersistentData().getBoolean("chouka_jiance")) {
 										if (world instanceof ServerLevel _level)
 											_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4,
 													"", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "loot spawn ~ ~ ~ loot primogemcraft:qqyjin");
 									}
-									if (entityiterator instanceof QQyuanchuzi01Entity && entityiterator.getPersistentData().getBoolean("chouka_jiance_1")) {
+									if (entityiterator instanceof QQyuanchuzi01Entity && entityiterator.getPersistentData().getBoolean("chouka_jiance")) {
 										if (world instanceof ServerLevel _level)
 											_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4,
 													"", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "loot spawn ~ ~ ~ loot primogemcraft:q_qqyzi");
 									}
-									if (entityiterator instanceof QQQyuanchulan01Entity && entityiterator.getPersistentData().getBoolean("chouka_jiance_0")) {
+									if (entityiterator instanceof QQQyuanchulan01Entity && entityiterator.getPersistentData().getBoolean("chouka_jiance")) {
 										if (world instanceof ServerLevel _level)
 											_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4,
 													"", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "loot spawn ~ ~ ~ loot primogemcraft:qq_qqylan");
 									}
-									if (!(entityiterator.getPersistentData().getBoolean("chouka_jiance_2") || entityiterator.getPersistentData().getBoolean("chouka_jiance_1") || entityiterator.getPersistentData().getBoolean("chouka_jiance_0"))) {
+									if (!(entityiterator.getPersistentData().getBoolean("chouka_jiance") || entityiterator.getPersistentData().getBoolean("chouka_jiance") || entityiterator.getPersistentData().getBoolean("chouka_jiance"))) {
 										if (world instanceof ServerLevel _level) {
 											ItemEntity entityToSpawn = new ItemEntity(_level, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), new ItemStack(PrimogemcraftModItems.YSJFR.get()));
 											entityToSpawn.setPickUpDelay(10);
