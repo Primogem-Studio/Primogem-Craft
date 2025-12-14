@@ -21,6 +21,6 @@ public class Ceshi_3Procedure {
 		e = entity;
 		o1 = world.isClientSide();
 		n = Math.random();
-		new SpawnWishiEntity(world,(Player) e,1,300);
+		new SpawnWishiEntity(world,(Player) e,10,30);
 	}
 }

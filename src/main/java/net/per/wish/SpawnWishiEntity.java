@@ -56,16 +56,6 @@ public class SpawnWishiEntity {
         this.enbt = wishentity != null ? wishentity.getPersistentData() : new CompoundTag();
     }
 
-    public void execute() {
-        if (!world.isClientSide()) {
-            if (wishentity instanceof QQQyuanchulan01Entity) return;
-            if (wishentity instanceof QQyuanchuzi01Entity) return;
-            if (wishentity instanceof QqiyuanJinGuangEntity) {
-                captureWish();
-                return;
-            }
-        }
-    }
 
     public Entity entityType(EntityType<?> entityType) {
         if (world.isClientSide() || player == null) return null;
@@ -81,26 +71,29 @@ public class SpawnWishiEntity {
     }
 
     private Entity getWishEntity() {
-        if (wishConclusion(wishRate(0.1, 0.3, 10), _vars.jin_baodi, 49, false, _true -> {
-            _vars.jin_baodi = 0;
+        if (wishConclusion(wishRate(0.1, 0.3), _vars.jin_baodi, 49, false, _true -> {
             _vars.wj_ck_jin++;
+            _vars.jin_baodi = 0;
             _vars.zi_baodi++;
+            captureWish();
         })) return entityType(QQIYUAN_JIN_GUANG.get());
-        else if (wishConclusion(wishRate(0.1, 0.3, 10), _vars.zi_baodi, 9, false, _true -> {
+        else if (wishConclusion(wishRate(0.1, 0.2), _vars.zi_baodi, 9, false, _true -> {
             _vars.wj_ck_zi++;
             _vars.zi_baodi = 0;
+            _vars.jin_baodi++;
         })) return entityType(Q_QYUANCHUZI_01.get());
         else {
             wishConclusion(true, _true -> {
                 _vars.wj_ck_lan++;
                 _vars.zi_baodi++;
+                _vars.jin_baodi++;
             });
             return entityType(QQ_QYUANCHULAN_01.get());
         }
     }
 
-    private double wishRate(double value1, double value2, double value3) {
-        return pnbt.getBoolean("xiangyu") ? value1 : value2 + (entityVale > 0 ? (wishVale / value3) * 0.01 : 0);
+    private double wishRate(double value1, double value2) {
+        return pnbt.getBoolean("xiangyu") ? value1 : value2 + (wishVale > 0 ? (wishVale) * 0.01 : 0);
     }
 
     private boolean wishConclusion(boolean logic, Consumer<Player> _true_) {
@@ -110,7 +103,7 @@ public class SpawnWishiEntity {
 
     private boolean wishConclusion(double value, double _var, double varsvalue, boolean logic, Consumer<Player> _true_) {
         if (!world.isClientSide())
-            if (_true_ != null && Math.random() < value && (_var >= varsvalue || logic)) {
+            if (_true_ != null && Math.random() < value || (_var >= varsvalue || logic)) {
                 _true_.accept(player);
                 _vars.markSyncDirty();
                 return true;
