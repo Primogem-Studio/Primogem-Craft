@@ -31,14 +31,14 @@ public class SpawnWishiEntity {
     private final double z;
     private final int entityVale;
     private final double wishVale;
+    private final boolean fallback;
 
-    private final CompoundTag pnbt;
     private final PrimogemcraftModVariables.PlayerVariables _vars;
 
     private final Entity wishentity;
     private final CompoundTag enbt;
 
-    public SpawnWishiEntity(LevelAccessor world, Player player, int entityVale, double wishVale, double x, double y, double z) {
+    public SpawnWishiEntity(LevelAccessor world, Player player, int entityVale, double wishVale, double x, double y, double z, boolean fallback) {
         this.world = world;
         this.player = player;
         this.x = x;
@@ -46,8 +46,8 @@ public class SpawnWishiEntity {
         this.z = z;
         this.entityVale = entityVale;
         this.wishVale = wishVale / entityVale;
+        this.fallback = fallback;
 
-        this.pnbt = player.getPersistentData();
         this._vars = player.getData(PrimogemcraftModVariables.PLAYER_VARIABLES);
 
         this.wishentity = getWishEntity();
@@ -69,29 +69,20 @@ public class SpawnWishiEntity {
     }
 
     private Entity getWishEntity() {
-        if (wishConclusion(wishRate(0.1, 0.3, 10), _vars.jin_baodi, 49, false, _true -> {
-            _vars.wj_ck_jin++;
-            _vars.jin_baodi = 0;
-            _vars.zi_baodi++;
+        if (wishConclusion(wishRate(0.3, 10), _vars.jin_baodi, 49, false, _true -> {
+            _vars.wj_ck_jin++;_vars.jin_baodi = 0;_vars.zi_baodi++;
             captureWish();
         })) return entityType(QQIYUAN_JIN_GUANG.get());
-        else if (wishConclusion(wishRate(1, 2, 5), _vars.zi_baodi, 9, false, _true -> {
-            _vars.wj_ck_zi++;
-            _vars.zi_baodi = 0;
-            _vars.jin_baodi++;
+        else if (wishConclusion(wishRate(2, 5), _vars.zi_baodi, 9, false, _true -> {
+            _vars.wj_ck_zi++;_vars.zi_baodi = 0;if (fallback) _vars.jin_baodi++;
         })) return entityType(Q_QYUANCHUZI_01.get());
-        else {
-            wishConclusion(true, _true -> {
-                _vars.wj_ck_lan++;
-                _vars.zi_baodi++;
-                _vars.jin_baodi++;
-            });
+        else {wishConclusion(true, _true -> {_vars.wj_ck_lan++;_vars.zi_baodi++;if (fallback) _vars.jin_baodi++;});
             return entityType(QQ_QYUANCHULAN_01.get());
         }
     }
 
-    private double wishRate(double value1, double value2, double value3) {
-        return (pnbt.getBoolean("xiangyu") ? value1 : value2 + (wishVale > 0 ? (wishVale / value3) * 0.1 : 0))/10;
+    private double wishRate(double value2, double value3) {
+        return (value2 + (wishVale > 0 ? (wishVale / value3) * 0.1 : 0)) / 10;
     }
 
     private boolean wishConclusion(boolean logic, Consumer<Player> _true_) {
@@ -108,12 +99,6 @@ public class SpawnWishiEntity {
             return true;
         }
         return false;
-    }
-
-    private void setXiangyuNbt() {
-        if (!enbt.getBoolean("xiangyu")) {
-            _vars.jin_baodi++;
-        }
     }
 
     private void captureWish() {
@@ -135,6 +120,16 @@ public class SpawnWishiEntity {
     }
 
     public static void Spawn(LevelAccessor world, Player player, int entityVale, double wishVale) {
+        Spawn(world, player, entityVale, wishVale, true);
+    }
+
+    public static void SpawnTiming(LevelAccessor world, Player player, int entityVale, double wishVale, int timing) {
+        PrimogemcraftMod.queueServerWork(timing, () -> {
+            Spawn(world, player, entityVale, wishVale, true);
+        });
+    }
+
+    public static void Spawn(LevelAccessor world, Player player, int entityVale, double wishVale, boolean fallback) {
         double R_radius = 0;
         double D_delta_theta = 0;
         double T_theta = 0;
@@ -146,19 +141,19 @@ public class SpawnWishiEntity {
         double y = player.getY();
         double z = player.getZ();
         switch (entityVale) {
-            case 1 -> new SpawnWishiEntity(world, player, entityVale, wishVale, x, y + 10, z);
+            case 1 -> new SpawnWishiEntity(world, player, entityVale, wishVale, x, y + 10, z, fallback);
             case 10 -> {
                 for (int index0 = 0; index0 < (int) N_number; index0++) {
                     T_theta = index0 * D_delta_theta;
-                    new SpawnWishiEntity(world, player, 8, wishVale * 0.8, x + R_radius * Math.sin(T_theta), y + 6, z + R_radius * Math.cos(T_theta));
+                    new SpawnWishiEntity(world, player, 8, wishVale * 0.8, x + R_radius * Math.sin(T_theta), y + 6, z + R_radius * Math.cos(T_theta), fallback);
                 }
-                new SpawnWishiEntity(world, player, 1, wishVale / 10, x, y + 6, z);
-                new SpawnWishiEntity(world, player, 1, wishVale / 10, x, y + 7, z);
+                new SpawnWishiEntity(world, player, 1, wishVale / 10, x, y + 6, z, fallback);
+                new SpawnWishiEntity(world, player, 1, wishVale / 10, x, y + 7, z, fallback);
             }
             default -> {
                 for (int index0 = 0; index0 < (int) N_number; index0++) {
                     T_theta = index0 * D_delta_theta;
-                    new SpawnWishiEntity(world, player, entityVale, wishVale, x + R_radius * Math.sin(T_theta), y + 6, z + R_radius * Math.cos(T_theta));
+                    new SpawnWishiEntity(world, player, entityVale, wishVale, x + R_radius * Math.sin(T_theta), y + 6, z + R_radius * Math.cos(T_theta), fallback);
                 }
             }
         }
