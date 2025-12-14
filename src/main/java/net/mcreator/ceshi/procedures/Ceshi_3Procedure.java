@@ -21,6 +21,6 @@ public class Ceshi_3Procedure {
 		e = entity;
 		o1 = world.isClientSide();
 		n = Math.random();
-		SpawnWishiEntity.Spawn(world,(Player) e,10,2100);
+		SpawnWishiEntity.SpawnTiming(world,(Player) entity,10,a,40);
 	}
 }
