@@ -1,8 +1,10 @@
 package net.mcreator.ceshi.procedures;
 
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
+import net.per.wish.SpawnWishiEntity;
 
 public class Ceshi_3Procedure {
 	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
@@ -19,6 +21,6 @@ public class Ceshi_3Procedure {
 		e = entity;
 		o1 = world.isClientSide();
 		n = Math.random();
-		EventGroupProcedure.execute(world, entity, (int) 18);
+		new SpawnWishiEntity(world,(Player) e,1,300);
 	}
 }

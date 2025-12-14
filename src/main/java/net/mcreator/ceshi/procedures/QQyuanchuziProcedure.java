@@ -43,7 +43,7 @@ public class QQyuanchuziProcedure {
 					entity.discard();
 			} else {
 				if ((entity.getPersistentData().getString("qiyuan_guishu")).equals(sourceentity.getDisplayName().getString())) {
-					if (entity.getPersistentData().getBoolean("chouka_jiance_1")) {
+					if (entity.getPersistentData().getBoolean("chouka_jiance")) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
 								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("primogemcraft:dashengchuzi01")), SoundSource.BLOCKS, 4, 1);
@@ -65,7 +65,7 @@ public class QQyuanchuziProcedure {
 							_level.addFreshEntity(entityToSpawn);
 						}
 					}
-				} else if (!entity.getPersistentData().getBoolean("chouka_jiance_1")) {
+				} else if (!entity.getPersistentData().getBoolean("chouka_jiance")) {
 					if (!entity.level().isClientSide())
 						entity.discard();
 					if (world instanceof ServerLevel _level) {

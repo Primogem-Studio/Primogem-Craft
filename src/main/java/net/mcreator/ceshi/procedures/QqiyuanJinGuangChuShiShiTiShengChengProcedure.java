@@ -58,7 +58,7 @@ public class QqiyuanJinGuangChuShiShiTiShengChengProcedure {
 					entity.discard();
 			} else {
 				if ((entity.getPersistentData().getString("qiyuan_guishu")).equals(sourceentity.getDisplayName().getString())) {
-					if (entity.getPersistentData().getBoolean("chouka_jiance_2")) {
+					if (entity.getPersistentData().getBoolean("chouka_jiance")) {
 						if (o1) {
 							if (sourceentity instanceof ServerPlayer _ent) {
 								BlockPos _bpos = BlockPos.containing(x, y, z);
@@ -93,7 +93,7 @@ public class QqiyuanJinGuangChuShiShiTiShengChengProcedure {
 							_level.addFreshEntity(entityToSpawn);
 						}
 					}
-				} else if (!entity.getPersistentData().getBoolean("chouka_jiance_2")) {
+				} else if (!entity.getPersistentData().getBoolean("chouka_jiance")) {
 					if (!entity.level().isClientSide())
 						entity.discard();
 					if (world instanceof ServerLevel _level) {

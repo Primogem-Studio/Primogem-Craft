@@ -34,7 +34,7 @@ public class QQQyuanchulantiaoshiProcedure {
 			o2 = true;
 			s1 = entity.getPersistentData().getString("qiyuan_guishu");
 			if ((s1).equals(sourceentity.getDisplayName().getString())) {
-				o1 = entity.getPersistentData().getBoolean("chouka_jiance_0");
+				o1 = entity.getPersistentData().getBoolean("chouka_jiance");
 			} else if (!(s1).equals("")) {
 				if (sourceentity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal(("\u00A7c\u8FD9\u4E2A\u7948\u613F\u7ED3\u679C\u4E0D\u5C5E\u4E8E\u4F60\uFF0C\u5B83\u5F52\u5C5E\u00A7f<" + entity.getPersistentData().getString("qiyuan_guishu") + ">\u00A7c\uFF01")),
