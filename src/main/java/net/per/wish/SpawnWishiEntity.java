@@ -1,27 +1,28 @@
 package net.per.wish;
 
 import net.mcreator.ceshi.PrimogemcraftMod;
+import net.mcreator.ceshi.entity.QQyuanchuzi01Entity;
 import net.mcreator.ceshi.entity.QqiyuanJinGuangEntity;
 import net.mcreator.ceshi.init.PrimogemcraftModGameRules;
+import net.mcreator.ceshi.init.PrimogemcraftModItems;
 import net.mcreator.ceshi.network.PrimogemcraftModVariables;
 import net.mcreator.ceshi.procedures.CaptureWishProgressProcedure;
-import net.mcreator.ceshi.procedures.Scmjsx0Procedure;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 
 import java.util.function.Consumer;
 
 import static net.mcreator.ceshi.init.PrimogemcraftModEntities.*;
+import static net.minecraft.util.datafix.fixes.ItemIdFix.getItem;
 
 public class SpawnWishiEntity {
     private final LevelAccessor world;
@@ -32,13 +33,14 @@ public class SpawnWishiEntity {
     private final int entityVale;
     private final double wishVale;
     private final boolean fallback;
+    private final boolean easteregg;
 
     private final PrimogemcraftModVariables.PlayerVariables _vars;
 
     private final Entity wishentity;
     private final CompoundTag enbt;
 
-    public SpawnWishiEntity(LevelAccessor world, Player player, int entityVale, double wishVale, double x, double y, double z, boolean fallback) {
+    public SpawnWishiEntity(LevelAccessor world, Player player, int entityVale, double wishVale, double x, double y, double z, boolean fallback,boolean easteregg) {
         this.world = world;
         this.player = player;
         this.x = x;
@@ -47,7 +49,8 @@ public class SpawnWishiEntity {
         this.entityVale = entityVale;
         this.wishVale = wishVale / entityVale;
         this.fallback = fallback;
-
+        this.easteregg = easteregg;
+        
         this._vars = player.getData(PrimogemcraftModVariables.PLAYER_VARIABLES);
 
         this.wishentity = getWishEntity();
@@ -62,7 +65,7 @@ public class SpawnWishiEntity {
             Entity spawnedEntity = entityType.spawn(serverLevel, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
             spawnedEntity.getPersistentData().putString("qiyuan_guishu", (player.getDisplayName().getString()));
             spawnedEntity.getPersistentData().putBoolean("chouka_jiance", true);
-            Scmjsx0Procedure.execute(player, spawnedEntity);
+            setColorGlassesEffect(spawnedEntity);
             return spawnedEntity;
         }
         return null;
@@ -91,6 +94,7 @@ public class SpawnWishiEntity {
     }
 
     private boolean wishConclusion(double value, double _var, double varsvalue, boolean logic, Consumer<Player> _true_) {
+        if (world.isClientSide())return false;
         if (_true_ != null && Math.random() < value || (_var >= varsvalue || logic)) {
             _true_.accept(player);
             _vars.markSyncDirty();
@@ -117,9 +121,18 @@ public class SpawnWishiEntity {
         }
     }
 
+    private void setColorGlassesEffect(Entity entity) {
+        switch (entity) {
+            case QqiyuanJinGuangEntity g -> g.getEntityData().set(QqiyuanJinGuangEntity.DATA_scmj, easteregg);
+            case QQyuanchuzi01Entity c -> c.getEntityData().set(QQyuanchuzi01Entity.DATA_scmj, easteregg);
+            default -> {}
+        }
+    }
+
     public static class Spawn {
         private final LevelAccessor world;
         private final Player player;
+        private final boolean easteregg;
         private final int entityVale;
         private final double wishVale;
         private final boolean fallback;
@@ -127,8 +140,9 @@ public class SpawnWishiEntity {
         public Spawn(LevelAccessor world, Entity player, int entityVale, double wishVale, boolean fallback) {
             this.world = world;
             this.player = (Player) player;
+            this.easteregg = (player instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == PrimogemcraftModItems.SCMJ_HELMET.get();
             this.entityVale = entityVale;
-            this.wishVale = wishVale;
+            this.wishVale = easteregg ? wishVale + (wishVale * 0.05) : wishVale;
             this.fallback = fallback;
         }
 
@@ -139,11 +153,11 @@ public class SpawnWishiEntity {
         }
 
         private void SpawnNew(int entityVale, double wishVale, double x, double y, double z, boolean fallback) {
-            new SpawnWishiEntity(world, player, entityVale, wishVale, x, y, z, fallback);
+            new SpawnWishiEntity(world, player, entityVale, wishVale, x, y, z, fallback,easteregg);
         }
 
         private void SpawnNew(double x, double y, double z, boolean fallback) {
-            new SpawnWishiEntity(world, player, entityVale, wishVale, x, y, z, fallback);
+            new SpawnWishiEntity(world, player, entityVale, wishVale, x, y, z, fallback,easteregg);
         }
 
         public void Spawn() {

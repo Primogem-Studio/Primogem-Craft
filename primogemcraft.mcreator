@@ -32533,28 +32533,6 @@
       }
     },
     {
-      "name": "Scmjsx0",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "scmjsx_0",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ceshi/procedures/Scmjsx0Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "e1",
-            "type": "entity"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "Scyjpf",
       "type": "recipe",
       "compiles": true,
