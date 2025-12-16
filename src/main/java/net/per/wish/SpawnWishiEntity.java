@@ -91,8 +91,6 @@ public class SpawnWishiEntity {
     }
 
     private boolean wishConclusion(double value, double _var, double varsvalue, boolean logic, Consumer<Player> _true_) {
-        if (!world.isClientSide())
-            System.out.println(value);
         if (_true_ != null && Math.random() < value || (_var >= varsvalue || logic)) {
             _true_.accept(player);
             _vars.markSyncDirty();
@@ -203,7 +201,7 @@ public class SpawnWishiEntity {
                                 double offsetRadius = currentRadius * (1 + randomOffset - 0.05);
 
                                 SpawnNew(x + offsetRadius * Math.sin(T_theta),
-                                        y + 6 + (entityVale * 0.2),
+                                        y + 6 + (Math.min((entityVale * 0.2), 58)),
                                         z + offsetRadius * Math.cos(T_theta),
                                         fallback);
                             }
