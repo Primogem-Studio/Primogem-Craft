@@ -153,26 +153,69 @@ public class SpawnWishiEntity {
             double D_delta_theta = 0;
             double T_theta = 0;
             double N_number = 0;
-            N_number = entityVale == 10 ? entityVale - 2 : entityVale;
-            R_radius = 3;
-            D_delta_theta = (2 * Math.PI) / N_number;
             double x = player.getX();
             double y = player.getY();
             double z = player.getZ();
+
+            R_radius = Math.max(3, 3 + (entityVale - 10) * 0.1);
+
             switch (entityVale) {
                 case 1 -> SpawnNew(x, y + 10, z, fallback);
                 case 10 -> {
+                    double case10Radius = 5;
+                    N_number = entityVale - 2;
+                    D_delta_theta = (2 * Math.PI) / N_number;
                     for (int index0 = 0; index0 < (int) N_number; index0++) {
                         T_theta = index0 * D_delta_theta;
-                        SpawnNew(8, wishVale * 0.8, x + R_radius * Math.sin(T_theta), y + 6, z + R_radius * Math.cos(T_theta), fallback);
+                        SpawnNew(8, wishVale * 0.8, x + case10Radius * Math.sin(T_theta), y + 6, z + case10Radius * Math.cos(T_theta), fallback);
                     }
                     SpawnNew(1, wishVale / 10, x, y + 6, z, fallback);
                     SpawnNew(1, wishVale / 10, x, y + 7, z, fallback);
                 }
                 default -> {
-                    for (int index0 = 0; index0 < (int) N_number; index0++) {
-                        T_theta = index0 * D_delta_theta;
-                        SpawnNew(x + R_radius * Math.sin(T_theta), y + 6, z + R_radius * Math.cos(T_theta), fallback);
+                    if (entityVale > 10) {
+                        // 实心圆生成逻辑
+                        int totalPoints = entityVale;
+                        int layers = (int) Math.max(3, Math.sqrt(totalPoints / Math.PI));
+
+                        // 计算每层的点数
+                        int pointsInOuterCircle = (int) (totalPoints * 0.4);
+                        int pointsPerLayer = Math.max(3, pointsInOuterCircle / layers);
+
+                        for (int layer = 0; layer < layers; layer++) {
+                            // 当前层半径（从内到外）
+                            double currentRadius = R_radius * (layer + 1) / layers;
+
+                            // 当前层点数，内层点数少，外层点数多
+                            int pointsInCurrentLayer;
+                            if (layer == layers - 1) { // 最外层
+                                pointsInCurrentLayer = Math.max(3, totalPoints - (layers - 1) * pointsPerLayer);
+                            } else {
+                                pointsInCurrentLayer = pointsPerLayer + layer; // 每层递增一些点数
+                            }
+
+                            // 生成当前层的点
+                            D_delta_theta = (2 * Math.PI) / pointsInCurrentLayer;
+                            for (int index0 = 0; index0 < pointsInCurrentLayer; index0++) {
+                                T_theta = index0 * D_delta_theta;
+                                // 添加一些随机偏移使分布更自然
+                                double randomOffset = 0.1 * Math.random();
+                                double offsetRadius = currentRadius * (1 + randomOffset - 0.05);
+
+                                SpawnNew(x + offsetRadius * Math.sin(T_theta),
+                                        y + 6,
+                                        z + offsetRadius * Math.cos(T_theta),
+                                        fallback);
+                            }
+                        }
+                    } else {
+                        N_number = entityVale;
+                        R_radius = 3;
+                        D_delta_theta = (2 * Math.PI) / N_number;
+                        for (int index0 = 0; index0 < (int) N_number; index0++) {
+                            T_theta = index0 * D_delta_theta;
+                            SpawnNew(x + R_radius * Math.sin(T_theta), y + 6, z + R_radius * Math.cos(T_theta), fallback);
+                        }
                     }
                 }
             }
