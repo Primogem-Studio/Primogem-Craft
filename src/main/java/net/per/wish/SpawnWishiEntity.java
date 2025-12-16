@@ -203,7 +203,7 @@ public class SpawnWishiEntity {
                                 double offsetRadius = currentRadius * (1 + randomOffset - 0.05);
 
                                 SpawnNew(x + offsetRadius * Math.sin(T_theta),
-                                        y + 6,
+                                        y + 6 + (entityVale * 0.2),
                                         z + offsetRadius * Math.cos(T_theta),
                                         fallback);
                             }
