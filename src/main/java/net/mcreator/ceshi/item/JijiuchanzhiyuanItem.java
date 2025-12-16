@@ -64,7 +64,7 @@ public class JijiuchanzhiyuanItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		JijiuchanzhiyuanWanJiaWanChengShiYongWuPinShiProcedure.execute(world, x, y, z, entity, itemstack);
+		JijiuchanzhiyuanWanJiaWanChengShiYongWuPinShiProcedure.execute(world, entity, itemstack);
 		return retval;
 	}
 

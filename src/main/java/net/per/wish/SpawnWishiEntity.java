@@ -219,6 +219,9 @@ public class SpawnWishiEntity {
                     }
                 }
             }
+            if (!world.isClientSide()) {
+                world.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("primogemcraft:choukaqianxi01")), SoundSource.BLOCKS, 4, 1);
+            }
         }
     }
 }

@@ -57,7 +57,7 @@ public class XixiangyuzhiyuanItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		XixiangyuzhiyuanchoukaProcedure.execute(world, x, y, z, entity, itemstack);
+		XixiangyuzhiyuanchoukaProcedure.execute(world, entity, itemstack);
 		return retval;
 	}
 
