@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "xin_xingguizhuanpiao",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "animations": [],
@@ -33,7 +34,8 @@
     "specialInformation": {
       "fixedValue": [
         "§7右键使用",
-        "§7100%§e出金！"
+        "§7100%§e出金！",
+        "§7潜行使用全部！"
       ]
     },
     "glowCondition": {
@@ -64,6 +66,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []

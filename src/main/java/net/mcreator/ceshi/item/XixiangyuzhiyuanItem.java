@@ -42,6 +42,7 @@ public class XixiangyuzhiyuanItem extends Item {
 		super.appendHoverText(itemstack, context, list, flag);
 		list.add(Component.translatable("item.primogemcraft.xixiangyuzhiyuan.description_0"));
 		list.add(Component.translatable("item.primogemcraft.xixiangyuzhiyuan.description_1"));
+		list.add(Component.translatable("item.primogemcraft.xixiangyuzhiyuan.description_2"));
 	}
 
 	@Override

@@ -30,6 +30,7 @@ public class Jinguangbaodi01Item extends Item {
 		super.appendHoverText(itemstack, context, list, flag);
 		list.add(Component.translatable("item.primogemcraft.jinguangbaodi_01.description_0"));
 		list.add(Component.translatable("item.primogemcraft.jinguangbaodi_01.description_1"));
+		list.add(Component.translatable("item.primogemcraft.jinguangbaodi_01.description_2"));
 	}
 
 	@Override

@@ -1819,5 +1819,7 @@
   "advancements.jdyshj_0.title": "元素装备？",
   "item.primogemcraft.qysp.description_0": "§9右键领取特殊奖励！",
   "item.primogemcraft.qysp": "§d奇遇",
-  "item.primogemcraft.eventitem": "Event_item"
+  "item.primogemcraft.eventitem": "Event_item",
+  "item.primogemcraft.jinguangbaodi_01.description_2": "§7潜行使用全部！",
+  "item.primogemcraft.xixiangyuzhiyuan.description_2": "§d潜行使用全部！"
 }
