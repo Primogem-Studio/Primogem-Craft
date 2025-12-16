@@ -119,41 +119,61 @@ public class SpawnWishiEntity {
         }
     }
 
-    public static void Spawn(LevelAccessor world, Player player, int entityVale, double wishVale) {
-        Spawn(world, player, entityVale, wishVale, true);
-    }
+    public static class Spawn {
+        private final LevelAccessor world;
+        private final Player player;
+        private final int entityVale;
+        private final double wishVale;
+        private final boolean fallback;
 
-    public static void SpawnTiming(LevelAccessor world, Player player, int entityVale, double wishVale, int timing) {
-        PrimogemcraftMod.queueServerWork(timing, () -> {
-            Spawn(world, player, entityVale, wishVale, true);
-        });
-    }
+        public Spawn(LevelAccessor world, Player player, int entityVale, double wishVale, boolean fallback) {
+            this.world = world;
+            this.player = player;
+            this.entityVale = entityVale;
+            this.wishVale = wishVale;
+            this.fallback = fallback;
+        }
 
-    public static void Spawn(LevelAccessor world, Player player, int entityVale, double wishVale, boolean fallback) {
-        double R_radius = 0;
-        double D_delta_theta = 0;
-        double T_theta = 0;
-        double N_number = 0;
-        N_number = entityVale == 10 ? entityVale - 2 : entityVale;
-        R_radius = 3;
-        D_delta_theta = (2 * Math.PI) / N_number;
-        double x = player.getX();
-        double y = player.getY();
-        double z = player.getZ();
-        switch (entityVale) {
-            case 1 -> new SpawnWishiEntity(world, player, entityVale, wishVale, x, y + 10, z, fallback);
-            case 10 -> {
-                for (int index0 = 0; index0 < (int) N_number; index0++) {
-                    T_theta = index0 * D_delta_theta;
-                    new SpawnWishiEntity(world, player, 8, wishVale * 0.8, x + R_radius * Math.sin(T_theta), y + 6, z + R_radius * Math.cos(T_theta), fallback);
+        public void SpawnTiming(int timing) {
+            PrimogemcraftMod.queueServerWork(timing, () -> {
+                Spawn();
+            });
+        }
+
+        private void SpawnNew(int entityVale, double wishVale, double x, double y, double z, boolean fallback) {
+            new SpawnWishiEntity(world, player, entityVale, wishVale, x, y, z, fallback);
+        }
+
+        private void SpawnNew(double x, double y, double z, boolean fallback) {
+            new SpawnWishiEntity(world, player, entityVale, wishVale, x, y, z, fallback);
+        }
+
+        public void Spawn() {
+            double R_radius = 0;
+            double D_delta_theta = 0;
+            double T_theta = 0;
+            double N_number = 0;
+            N_number = entityVale == 10 ? entityVale - 2 : entityVale;
+            R_radius = 3;
+            D_delta_theta = (2 * Math.PI) / N_number;
+            double x = player.getX();
+            double y = player.getY();
+            double z = player.getZ();
+            switch (entityVale) {
+                case 1 -> SpawnNew(x, y + 10, z, fallback);
+                case 10 -> {
+                    for (int index0 = 0; index0 < (int) N_number; index0++) {
+                        T_theta = index0 * D_delta_theta;
+                        SpawnNew(8, wishVale * 0.8, x + R_radius * Math.sin(T_theta), y + 6, z + R_radius * Math.cos(T_theta), fallback);
+                    }
+                    SpawnNew(1, wishVale / 10, x, y + 6, z, fallback);
+                    SpawnNew(1, wishVale / 10, x, y + 7, z, fallback);
                 }
-                new SpawnWishiEntity(world, player, 1, wishVale / 10, x, y + 6, z, fallback);
-                new SpawnWishiEntity(world, player, 1, wishVale / 10, x, y + 7, z, fallback);
-            }
-            default -> {
-                for (int index0 = 0; index0 < (int) N_number; index0++) {
-                    T_theta = index0 * D_delta_theta;
-                    new SpawnWishiEntity(world, player, entityVale, wishVale, x + R_radius * Math.sin(T_theta), y + 6, z + R_radius * Math.cos(T_theta), fallback);
+                default -> {
+                    for (int index0 = 0; index0 < (int) N_number; index0++) {
+                        T_theta = index0 * D_delta_theta;
+                        SpawnNew(x + R_radius * Math.sin(T_theta), y + 6, z + R_radius * Math.cos(T_theta), fallback);
+                    }
                 }
             }
         }
