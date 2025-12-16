@@ -22,7 +22,5 @@ public class Ceshi_3Procedure {
 		o1 = world.isClientSide();
 		n = Math.random();
 		new SpawnWishiEntity.Spawn(world,(Player) entity,1,10000,false).Spawn();
-
-//		SpawnWishiEntity.Spawn(world,(Player) entity,1,10000,false);
 	}
 }

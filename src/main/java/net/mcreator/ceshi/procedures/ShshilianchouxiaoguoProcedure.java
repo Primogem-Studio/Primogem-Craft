@@ -6,7 +6,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
@@ -40,7 +39,7 @@ public class ShshilianchouxiaoguoProcedure {
 				}
 			}
 			a = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Prayers_strengthen");
-			SpawnWishiEntity.SpawnTiming(world, (Player) entity, 10, a, 40);
+			new SpawnWishiEntity.Spawn(world, entity, 10, a, true).SpawnTiming(40);
 			itemstack.shrink(1);
 		}
 	}

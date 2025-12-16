@@ -55,7 +55,7 @@ public class SpawnWishiEntity {
     }
 
 
-    public Entity entityType(EntityType<?> entityType) {
+    private Entity entityType(EntityType<?> entityType) {
         if (world.isClientSide() || player == null) return null;
 
         if (world instanceof ServerLevel serverLevel) {
@@ -126,9 +126,9 @@ public class SpawnWishiEntity {
         private final double wishVale;
         private final boolean fallback;
 
-        public Spawn(LevelAccessor world, Player player, int entityVale, double wishVale, boolean fallback) {
+        public Spawn(LevelAccessor world, Entity player, int entityVale, double wishVale, boolean fallback) {
             this.world = world;
-            this.player = player;
+            this.player = (Player) player;
             this.entityVale = entityVale;
             this.wishVale = wishVale;
             this.fallback = fallback;

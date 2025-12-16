@@ -17,7 +17,7 @@ public class Bbaodichufa01Procedure {
 		if (entity == null)
 			return;
 		if (!(entity instanceof Player _plrCldCheck1 && _plrCldCheck1.getCooldowns().isOnCooldown(itemstack.getItem()))) {
-			SpawnWishiEntity.Spawn(world, (Player) entity, 1, 10000, false);
+			new SpawnWishiEntity.Spawn(world, entity, 1, 10000, false).Spawn();
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("primogemcraft:choukaqianxi01")), SoundSource.BLOCKS, 4, 1);
