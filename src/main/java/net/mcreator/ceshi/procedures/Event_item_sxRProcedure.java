@@ -130,7 +130,6 @@ public class Event_item_sxRProcedure {
         private final int id;
         private final LevelAccessor world;
         private final Player player;
-        private final RandomSource random;
         private final String eka;
         private final double x;
         private final double y;
@@ -141,7 +140,6 @@ public class Event_item_sxRProcedure {
             this.id = id;
             this.world = world;
             this.player = player;
-            this.random = RandomSource.create();
             this.compare = Math.random();
             this.eka = "EventKillAll_" + id;
             this.x = player.getX();
@@ -283,10 +281,7 @@ public class Event_item_sxRProcedure {
          * 服务器随机整数
          */
         public int random(int min, int max) {
-            if (!world.isClientSide()) {
-                return Mth.nextInt(random, min, max);
-            }
-            return 0;
+            return !world.isClientSide() ? Mth.nextInt(RandomSource.create(), min, max) : 0;
         }
 
         /**
@@ -524,7 +519,7 @@ public class Event_item_sxRProcedure {
          * 三物品三值
          */
         public boolean setGuiItem(ItemStack item1, ItemStack item2, ItemStack item3, int count1, int count2, int count3) {
-            SetItemGui.quickOpen(player, world, item1, count2, item3, count2, item2, count3);
+            SetItemGui.quickOpen(player, world, item1, count1, item2, count2, item3, count3);
             return true;
         }
 
@@ -532,7 +527,7 @@ public class Event_item_sxRProcedure {
          * 单物品三值
          */
         public boolean setGuiItem(ItemStack item1, int count1, int count2, int count3) {
-            SetItemGui.quickOpen(player, world, item1, count2, count2, count3);
+            SetItemGui.quickOpen(player, world, item1, count1, count2, count3);
             return true;
         }
 
