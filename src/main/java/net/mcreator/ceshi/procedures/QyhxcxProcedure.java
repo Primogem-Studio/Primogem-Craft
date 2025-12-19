@@ -11,12 +11,13 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 
 public class QyhxcxProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		double a = 0;
 		ItemStack i = ItemStack.EMPTY;
 		if (!world.isClientSide()) {
+			i = itemstack;
 			i = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
 			if (!(i.getItem() == Blocks.AIR.asItem())) {
 				if (entity instanceof Player _player && !_player.level().isClientSide())
