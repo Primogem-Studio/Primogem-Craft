@@ -50,7 +50,7 @@ public class QyhxshilianItem extends Item {
 	@Override
 	public boolean onEntitySwing(ItemStack itemstack, LivingEntity entity, InteractionHand hand) {
 		boolean retval = super.onEntitySwing(itemstack, entity, hand);
-		QyhxcxProcedure.execute(entity.level(), entity, itemstack);
+		QyhxcxProcedure.execute(entity.level(), entity);
 		return retval;
 	}
 }
