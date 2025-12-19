@@ -24,7 +24,7 @@ import java.util.List;
 
 public class QyhxItem extends Item {
 	public QyhxItem() {
-		super(new Item.Properties().rarity(Rarity.UNCOMMON));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON));
 	}
 
 	@Override
@@ -50,7 +50,7 @@ public class QyhxItem extends Item {
 	@Override
 	public boolean onEntitySwing(ItemStack itemstack, LivingEntity entity, InteractionHand hand) {
 		boolean retval = super.onEntitySwing(itemstack, entity, hand);
-		QyhxcxProcedure.execute(entity.level(), entity);
+		QyhxcxProcedure.execute(entity.level(), entity, itemstack);
 		return retval;
 	}
 }
