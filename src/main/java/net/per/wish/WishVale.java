@@ -39,10 +39,6 @@ public class WishVale {
         int currentWishValue = stack.getOrDefault(wishvale, 0);
         int newWishValue = currentWishValue + wishValueIncrement;
         stack.set(wishvale, newWishValue);
-
-        CustomData.update(DataComponents.CUSTOM_DATA, stack, tag ->
-                tag.putInt("Prayers_strengthen", newWishValue) // 保持为 Int
-        );
         return true;
     }
 
