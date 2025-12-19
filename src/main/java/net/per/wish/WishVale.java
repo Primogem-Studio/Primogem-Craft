@@ -3,6 +3,7 @@ package net.per.wish;
 import net.hackermdch.pgc.CustomAPI;
 import net.hackermdch.pgc.CustomBar;
 import net.hackermdch.pgc.CustomComponents;
+import net.mcreator.ceshi.init.PrimogemcraftModItems;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
@@ -57,6 +58,7 @@ public class WishVale {
 
     static {
         DIRECT_ITEM_VALUES.put(Blocks.COMMAND_BLOCK.asItem(), 1000);
+        DIRECT_ITEM_VALUES.put(PrimogemcraftModItems.JINGUANGBAODI_01.get(), 999);
 
         registerTagValue("pgc:qysz_10", 10);
         registerTagValue("pgc:qysz_7", 7);
