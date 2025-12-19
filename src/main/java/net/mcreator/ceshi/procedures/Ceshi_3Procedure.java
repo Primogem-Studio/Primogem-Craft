@@ -1,10 +1,13 @@
 package net.mcreator.ceshi.procedures;
 
+import net.hackermdch.pgc.CustomAPI;
+import net.hackermdch.pgc.CustomComponents;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
 import net.per.wish.SpawnWishiEntity;
+import net.per.wish.WishVale;
 
 public class Ceshi_3Procedure {
 	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {

@@ -4,11 +4,13 @@ import net.hackermdch.pgc.CustomAPI;
 import net.hackermdch.pgc.CustomBar;
 import net.hackermdch.pgc.CustomComponents;
 import net.minecraft.core.component.DataComponentType;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.block.Blocks;
 
 import java.util.HashMap;
@@ -26,12 +28,21 @@ public class WishVale {
         this.wishvale = CustomComponents.WISH_VALE;
     }
 
-    public boolean set(ItemStack item,int itemCount) {
-        if (item == null) return false;
+    public boolean set(ItemStack item, int itemCount) {
+        if (item == null || item.getItem() == Blocks.AIR.asItem() || bar.numerator >= bar.denominator) return false;
         boolean a = (bar.numerator + itemCount) > bar.denominator;
-        item.shrink(a ? bar.denominator - bar.numerator : itemCount);
-        bar.numerator = a ? bar.denominator : +itemCount;
-        stack.set(wishvale, stack.get(wishvale) + getItemWishVale(item));
+        int actualConsume = a ? bar.denominator - bar.numerator : itemCount;
+        int singleSacrificeValue = getItemWishVale(item);
+        int wishValueIncrement = (singleSacrificeValue * actualConsume) / stack.getCount();
+        item.shrink(actualConsume);
+        bar.numerator = a ? bar.denominator : bar.numerator + itemCount;
+        int currentWishValue = stack.getOrDefault(wishvale, 0);
+        int newWishValue = currentWishValue + wishValueIncrement;
+        stack.set(wishvale, newWishValue);
+
+        CustomData.update(DataComponents.CUSTOM_DATA, stack, tag ->
+                tag.putInt("Prayers_strengthen", newWishValue) // 保持为 Int
+        );
         return true;
     }
 
@@ -72,7 +83,7 @@ public class WishVale {
         TAG_VALUES.put(tag, value);
     }
 
-    public int getItemWishVale(ItemStack item) {
+    public static int getItemWishVale(ItemStack item) {
         if (item.isEmpty()) return 1;
 
         Item itemType = item.getItem();

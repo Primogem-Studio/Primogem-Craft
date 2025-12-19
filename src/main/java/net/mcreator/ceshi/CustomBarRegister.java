@@ -18,6 +18,8 @@ public class CustomBarRegister {
         builder.add(lookup("primogemcraft:maoxianjiadejingyan"), bar(13, 0x6A75EA), bar(0, 1395, true));
         builder.add(lookup("primogemcraft:liulangzhedejingyan"), bar(13, 0x6A75EA), bar(0, 1089, true));
         builder.add(lookup("primogemcraft:kongyuezhufu"), bar(13, 0xFEA01B), bar(30, 30, false));
+        builder.add(lookup("primogemcraft:qyhx"), bar(13, 0xFECCFF), bar(0, 30, true));
+        builder.add(lookup("primogemcraft:qyhxshilian"), bar(13, 0xFECCFF), bar(0, 300, true));
     }
 
     private static Item lookup(String id) {

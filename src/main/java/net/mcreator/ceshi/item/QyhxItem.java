@@ -24,7 +24,7 @@ import java.util.List;
 
 public class QyhxItem extends Item {
 	public QyhxItem() {
-		super(new Item.Properties().durability(31).rarity(Rarity.UNCOMMON));
+		super(new Item.Properties().stacksTo(2).rarity(Rarity.UNCOMMON));
 	}
 
 	@Override
@@ -43,14 +43,14 @@ public class QyhxItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		Qyhxsx0Procedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
+		Qyhxsx0Procedure.execute(world, entity, ar.getObject());
 		return ar;
 	}
 
 	@Override
 	public boolean onEntitySwing(ItemStack itemstack, LivingEntity entity, InteractionHand hand) {
 		boolean retval = super.onEntitySwing(itemstack, entity, hand);
-		QyhxcxProcedure.execute(entity.level(), entity, itemstack);
+		QyhxcxProcedure.execute(entity.level(), entity);
 		return retval;
 	}
 }

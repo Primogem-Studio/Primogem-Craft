@@ -22216,18 +22216,6 @@
             "type": "itemstack"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -38358,8 +38346,6 @@
       "~CUSTOM:Qwflb",
       "~CUSTOM:Qwypzgs",
       "~CUSTOM:Qwcbzg",
-      "~CUSTOM:Qyhxshilian",
-      "~CUSTOM:Qyhx",
       "~CUSTOM:Mllphj",
       "~CUSTOM:Mllpzs",
       "~CUSTOM:Mllpwz",

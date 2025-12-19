@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "qiyuanhexin_dancou",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "animations": [],
@@ -15,11 +16,11 @@
         "value": "CUSTOM:Zhenghuo"
       }
     ],
-    "stackSize": 1,
+    "stackSize": 2,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
-    "damageCount": 31,
+    "damageCount": 0,
     "recipeRemainder": {
       "value": ""
     },
@@ -62,6 +63,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []
