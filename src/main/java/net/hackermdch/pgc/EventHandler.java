@@ -28,7 +28,7 @@ import java.util.function.BiConsumer;
 
 import static net.mcreator.ceshi.PrimogemcraftMod.MODID;
 
-@EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = MODID)
 public class EventHandler {
     @SubscribeEvent
     private static void onRegisterItemDecorations(RegisterItemDecorationsEvent event) {
@@ -74,11 +74,8 @@ public class EventHandler {
         }
     }
 
-    @EventBusSubscriber(modid = MODID)
-    private static class Game {
-        @SubscribeEvent
-        private static void on(PlayerHeartTypeEvent event) {
-            if (event.getEntity().hasEffect(PrimogemcraftModMobEffects.CXBD)) event.setType(Gui.HeartType.FROZEN);
-        }
+    @SubscribeEvent
+    private static void on(PlayerHeartTypeEvent event) {
+        if (event.getEntity().hasEffect(PrimogemcraftModMobEffects.CXBD)) event.setType(Gui.HeartType.FROZEN);
     }
 }
