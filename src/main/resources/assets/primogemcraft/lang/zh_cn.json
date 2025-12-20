@@ -1815,5 +1815,7 @@
   "item.primogemcraft.qysp": "§d奇遇",
   "item.primogemcraft.eventitem": "Event_item",
   "item.primogemcraft.jinguangbaodi_01.description_2": "§7潜行使用全部！",
-  "item.primogemcraft.xixiangyuzhiyuan.description_2": "§d潜行使用全部！"
+  "item.primogemcraft.xixiangyuzhiyuan.description_2": "§d潜行使用全部！",
+  "enchantment.primogemcraft.hunt": "§e巡猎",
+  "enchantment.primogemcraft.hunt.desc": "§7移除目标的丰饶效果，冷却25秒，每级较少5秒冷却，等级大于等于5时将效果为我所用，冷却300秒，效果时长不超过300秒"
 }

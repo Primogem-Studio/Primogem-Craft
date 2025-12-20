@@ -6824,6 +6824,10 @@
             "type": "entity"
           },
           {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -33085,6 +33089,10 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "files": [
@@ -36243,6 +36251,18 @@
           "src/main/java/net/mcreator/ceshi/procedures/CaptureWishProgressProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Hunt",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hunt",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/enchantment/hunt.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -38064,6 +38084,7 @@
       "CUSTOM:D11"
     ],
     "ENCHANTMENTS:minecraft:non_treasure": [
+      "~CUSTOM:Hunt",
       "~CUSTOM:Fmyuzhousuipian",
       "~CUSTOM:Ceshifumo01"
     ],
@@ -38074,6 +38095,7 @@
       "CUSTOM:Shxjdlt"
     ],
     "ENCHANTMENTS:minecraft:tradeable": [
+      "~CUSTOM:Hunt",
       "~CUSTOM:Fmyuzhousuipian",
       "~CUSTOM:Ceshifumo01"
     ],
@@ -38446,6 +38468,7 @@
       "CUSTOM:Axhjt.body"
     ],
     "ENCHANTMENTS:minecraft:on_random_loot": [
+      "~CUSTOM:Hunt",
       "~CUSTOM:Fmyuzhousuipian",
       "~CUSTOM:Ceshifumo01"
     ],
@@ -40870,7 +40893,9 @@
       "item.primogemcraft.qysp": "§d奇遇",
       "item.primogemcraft.eventitem": "Event_item",
       "item.primogemcraft.jinguangbaodi_01.description_2": "§7潜行使用全部！",
-      "item.primogemcraft.xixiangyuzhiyuan.description_2": "§d潜行使用全部！"
+      "item.primogemcraft.xixiangyuzhiyuan.description_2": "§d潜行使用全部！",
+      "enchantment.primogemcraft.hunt": "§ehunt",
+      "enchantment.primogemcraft.hunt.desc": "§7移除目标的丰饶效果，冷却25秒，每级较少5秒冷却，等级大于等于5时将效果为我所用，冷却300秒，效果时长不超过300秒"
     },
     "en_ae": {
       "item.primogemcraft.yuanshigao": "§bPrimogem Pickaxe",
@@ -42695,7 +42720,9 @@
       "item.primogemcraft.qysp": "§d奇遇",
       "item.primogemcraft.eventitem": "Event_item",
       "item.primogemcraft.jinguangbaodi_01.description_2": "§7潜行使用全部！",
-      "item.primogemcraft.xixiangyuzhiyuan.description_2": "§d潜行使用全部！"
+      "item.primogemcraft.xixiangyuzhiyuan.description_2": "§d潜行使用全部！",
+      "enchantment.primogemcraft.hunt": "§e巡猎",
+      "enchantment.primogemcraft.hunt.desc": "§7移除目标的丰饶效果，冷却25秒，每级较少5秒冷却，等级大于等于5时将效果为我所用，冷却300秒，效果时长不超过300秒"
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
@@ -44514,7 +44541,9 @@
       "item.primogemcraft.qysp": "§d奇遇",
       "item.primogemcraft.eventitem": "Event_item",
       "item.primogemcraft.jinguangbaodi_01.description_2": "§7潜行使用全部！",
-      "item.primogemcraft.xixiangyuzhiyuan.description_2": "§d潜行使用全部！"
+      "item.primogemcraft.xixiangyuzhiyuan.description_2": "§d潜行使用全部！",
+      "enchantment.primogemcraft.hunt": "§e巡猎",
+      "enchantment.primogemcraft.hunt.desc": "§7移除目标的丰饶效果，冷却25秒，每级较少5秒冷却，等级大于等于5时将效果为我所用，冷却300秒，效果时长不超过300秒"
     }
   },
   "metadata": {
