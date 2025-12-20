@@ -4,6 +4,7 @@ import net.hackermdch.pgc.Timer;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 import net.mcreator.ceshi.init.PrimogemcraftModMobEffects;
 import net.mcreator.ceshi.procedures.HSjinglianupProcedure;
+import net.mcreator.ceshi.procedures.SpawnParticletProcedure;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -41,7 +42,7 @@ public class HuntEffect {
             if (!Timer.isDone(sourceentity, "hunt")) return false;
             int level = getEnchantmentLevel();
             if (level <= 0) return false;
-            Timer.set(sourceentity, "hunt", level / 500);
+            Timer.set(sourceentity, "hunt", 500 - (level * 100));
             if (level >= 5 && Timer.isDone(sourceentity, "huntr")) {
                 Timer.set(sourceentity, "huntr", 6000);
                 addEffectToSource();
@@ -74,6 +75,7 @@ public class HuntEffect {
             }
             int duration = targetEffect != null ? Math.min(targetEffect.getDuration(),6000) : 0;
             int amplifier = targetEffect != null ? targetEffect.getAmplifier() : 0;
+            SpawnParticletProcedure.execute(world, sourceentity);
             livingSource.addEffect(new MobEffectInstance(fengrao, duration, Math.max(0, amplifier - 1), true, true));
         }
     }

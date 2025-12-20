@@ -19,7 +19,7 @@ public class HeiyinqmsProcedure {
 		String s = "";
 		a = HSjinglianupProcedure.execute(entity, itemstack);
 		en = itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("primogemcraft:hunt"))));
-		hunt = a + en;
+		hunt = 1 + a + en;
 		s = en > 0 ? "\u00A7d" : "\u00A7b";
 		return MSHSwuqi00Procedure.execute(entity, itemstack, "\u00A76\u00A7l\u00A7n\u666E\u901A\u653B\u51FB" + "\n" + "\u00A7e\u5BF9\u4EA1\u7075\u751F\u7269\u65BD\u52A0\u7981\u9522\uFF0C\u6301\u7EED\u00A7b"
 				+ new java.text.DecimalFormat("##.##\u79D2").format(2 + 0.5 * a) + "\u00A7e\u51B7\u53744\u79D2" + "\n" + "\u00A76\u00A7l\u00A7n\u88AB\u52A8" + "\n" + "\u00A7e\u653B\u51FB\u4EA1\u7075\u751F\u7269\u540E\uFF0C\u83B7\u5F97\u00A7b"

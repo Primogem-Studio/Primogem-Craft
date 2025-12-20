@@ -36263,6 +36263,28 @@
           "src/main/resources/data/primogemcraft/enchantment/hunt.json"
         ]
       }
+    },
+    {
+      "name": "SpawnParticlet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_particlet",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/ceshi/procedures/SpawnParticletProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
