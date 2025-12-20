@@ -5,7 +5,7 @@
     "name": "§e巡猎",
     "supportedSlots": "mainhand",
     "weight": 3,
-    "anvilCost": 8,
+    "anvilCost": 5,
     "maxLevel": 5,
     "damageModifier": 0,
     "incompatibleEnchantments": [
@@ -15,7 +15,7 @@
     ],
     "supportedItems": [
       {
-        "value": "TAG:minecraft:enchantable/durability"
+        "value": "TAG:c:tools"
       }
     ],
     "isTreasureEnchantment": false,
