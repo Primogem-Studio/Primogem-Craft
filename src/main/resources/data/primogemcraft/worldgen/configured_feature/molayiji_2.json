@@ -6,7 +6,8 @@
     "random_mirror": true,
     "ignored_blocks": [
       "minecraft:structure_block",
-      "minecraft:stone"
+      "minecraft:stone",
+      "minecraft:tnt"
     ]
   }
 }
