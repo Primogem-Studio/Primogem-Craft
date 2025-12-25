@@ -52,8 +52,10 @@ public class HSsbmtsxProcedure {
 				e = entity;
 				o1 = jin_rong_he;
 				var cep = new CurioEffectPGC();
-				out = new CurioEffectPGC.Processor(world, entity).curioDice(items -> {
-					return jin_rong_he ? cep.isInAnyCurioDiceTag(items) : cep.isInAnyCurioDiceTag(items, true) && items.getItem() != item.getItem();
+				out = new CurioEffectPGC.Processor(world, entity).curioDice(true, items -> {
+					return jin_rong_he
+							? cep.isInAnyCurioDiceTag(items, "c:curio", "c:curio/normal/fusion/s", "c:curio/normal/fusion/a", "c:curio/normal/fusion/b")
+							: cep.isInAnyCurioDiceTag(items, "c:curio", "c:curio/bad") && items.getItem() != item.getItem();
 				});
 			} else {
 				if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerIter) {

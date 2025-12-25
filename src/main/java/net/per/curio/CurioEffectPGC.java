@@ -20,14 +20,14 @@ public class CurioEffectPGC {
             this.player = (Player) entity;
         }
 
-        public double curioDice(ItemPredicate condition) {
+        public double curioDice(boolean remove, ItemPredicate condition) {
             double out = 0;
             var set = new HashSet<Item>();
             player.getInventory().items.forEach(itemstack -> {
                 if (set.contains(itemstack.getItem())) return;
                 if (condition.test(itemstack)) {
                     set.add(itemstack.getItem());
-                    itemstack.shrink(1);
+                    if (remove) itemstack.shrink(1);
                 }
             });
             out = set.size();
@@ -40,13 +40,6 @@ public class CurioEffectPGC {
         }
     }
 
-    public boolean isInAnyCurioDiceTag(ItemStack curio) {
-        return isInAnyCurioDiceTag(curio, "c:curio", "c:curio/bad");
-    }
-
-    public boolean isInAnyCurioDiceTag(ItemStack fusioncurio, boolean fusion) {
-        return isInAnyCurioDiceTag(fusioncurio, "c:curio", "c:curio/normal/fusion/s", "c:curio/normal/fusion/a", "c:curio/normal/fusion/b");
-    }
 
     public boolean isInAnyCurioDiceTag(ItemStack itemstack, String... tagNames) {
         for (String tagName : tagNames) {
