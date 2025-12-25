@@ -1,5 +1,7 @@
 package net.mcreator.ceshi.procedures;
 
+import net.per.curio.CurioEffectPGC;
+
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.capabilities.Capabilities;
 
@@ -8,7 +10,6 @@ import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.Entity;
@@ -21,8 +22,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
-import java.util.HashSet;
-
 public class HSsbmtsxProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack item, ItemStack mu_biao, ItemStack shuchu_2, boolean jin_rong_he, boolean qw_0, boolean tong_zhi, boolean zhan_li_pin, double beilv,
 			double beilv_0, double lengque, String zhiling) {
@@ -33,6 +32,7 @@ public class HSsbmtsxProcedure {
 		double out = 0;
 		double b = 0;
 		double c = 0;
+		boolean o1 = false;
 		if (!world.isClientSide()) {
 			if (tong_zhi) {
 				if (entity instanceof Player _player && !_player.level().isClientSide())
@@ -50,41 +50,11 @@ public class HSsbmtsxProcedure {
 			e = entity;
 			if (qw_0) {
 				e = entity;
-				if (jin_rong_he) {
-					{
-						var set = new HashSet<Item>();
-						if (e instanceof Player player) {
-							player.getInventory().items.forEach(itemstack -> {
-								if (itemstack.getItem() == item.getItem())
-									return;
-								if (set.contains(itemstack.getItem()))
-									return;
-								if (Sbmtsxhs1Procedure.execute(itemstack)) {
-									set.add(itemstack.getItem());
-									itemstack.shrink(1);
-								}
-							});
-						}
-						out = set.size();
-					}
-				} else {
-					{
-						var set = new HashSet<Item>();
-						if (e instanceof Player player) {
-							player.getInventory().items.forEach(itemstack -> {
-								if (itemstack.getItem() == item.getItem())
-									return;
-								if (set.contains(itemstack.getItem()))
-									return;
-								if (Sbmtsxhs0Procedure.execute(itemstack)) {
-									set.add(itemstack.getItem());
-									itemstack.shrink(1);
-								}
-							});
-						}
-						out = set.size();
-					}
-				}
+				o1 = jin_rong_he;
+				var cep = new CurioEffectPGC();
+				out = new CurioEffectPGC.Processor(world, entity).curioDice(items -> {
+					return jin_rong_he ? cep.isInAnyCurioDiceTag(items) : cep.isInAnyCurioDiceTag(items, true) && items.getItem() != item.getItem();
+				});
 			} else {
 				if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerIter) {
 					for (int _idx = 0; _idx < _modHandlerIter.getSlots(); _idx++) {
