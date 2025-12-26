@@ -2,6 +2,7 @@ package net.mcreator.ceshi.procedures;
 
 import net.hackermdch.pgc.CustomAPI;
 import net.hackermdch.pgc.CustomComponents;
+import net.mcreator.ceshi.api.EventRegistry;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -24,6 +25,7 @@ public class Ceshi_3Procedure {
 		e = entity;
 		o1 = world.isClientSide();
 		n = Math.random();
+		EventGroupProcedure.execute(world, entity, 25);
 //		new SpawnWishiEntity.Spawn(world,(Player) entity,1000,10000,false).Spawn();
 	}
 }

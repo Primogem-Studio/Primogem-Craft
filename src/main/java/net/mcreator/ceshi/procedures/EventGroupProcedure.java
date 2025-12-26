@@ -63,6 +63,7 @@ public class EventGroupProcedure {
         registerGroupInternal(22, ctx -> ctx.zu(35, 39, 17, "§c抉择"));
         registerGroupInternal(23, ctx -> ctx.zu(19, 36, 38, "§c抉择"));
         registerGroupInternal(24, ctx -> ctx.zu(32, 32, 32, "§e宇宙碎片！"));
+        registerGroupInternal(25, ctx -> ctx.zu(40, 41, 42, "§a我要点餐"));
     }
 
     /**

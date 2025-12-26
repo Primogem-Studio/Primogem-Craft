@@ -11,6 +11,7 @@ import net.mcreator.ceshi.world.inventory.GUISJfumoMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -31,8 +32,10 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.component.CustomData;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.event.entity.living.LivingSwapItemsEvent;
@@ -104,6 +107,9 @@ public class Event_item_sxRProcedure {
         registerEventInternal(37, ctx -> ctx.updateEventQuotaPlayer(-1));
         registerEventInternal(38, ctx -> ctx.updateEventQuotaWorld(1,true));
         registerEventInternal(39, ctx -> ctx.updateEventQuotaWorld(-1,true));
+        registerEventInternal(40, ctx -> ctx.giveItem(new ItemStack(Items.REDSTONE),8,item->{item.set(DataComponents.CUSTOM_NAME, Component.literal("雷石东"));}));
+        registerEventInternal(41, ctx -> ctx.giveItem(new ItemStack(Blocks.CHEST), 1, item -> {item.enchant(ctx.getWorld().registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH), 1);}));
+        registerEventInternal(42, ctx -> ctx.TimelimitedCombat(EntityType.SILVERFISH, 1, 1, 40, 41, 0, "§e抢劫！"));
     }
 
     public static boolean execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
@@ -329,11 +335,17 @@ public class Event_item_sxRProcedure {
         /**
          * 给物品
          */
-        public boolean giveItem(ItemStack itemStack, int value) {
-            ItemStack _setstack = itemStack;
+        public boolean giveItem(ItemStack baseItem, int value, Consumer<ItemStack> itemModifier) {
+            ItemStack _setstack = baseItem.copy();
+            if (itemModifier != null) {
+                itemModifier.accept(_setstack);
+            }
             _setstack.setCount(value);
             ItemHandlerHelper.giveItemToPlayer(player, _setstack);
             return true;
+        }
+        public boolean giveItem(ItemStack baseItem, int value) {
+            return giveItem(baseItem,value,null);
         }
 
         public int getRandomEvemtID(){
