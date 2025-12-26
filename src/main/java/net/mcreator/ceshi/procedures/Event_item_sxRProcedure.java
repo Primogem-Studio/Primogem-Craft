@@ -3,6 +3,7 @@ package net.mcreator.ceshi.procedures;
 import io.netty.buffer.Unpooled;
 import net.hackermdch.pgc.Timer;
 import net.mcreator.ceshi.PrimogemcraftMod;
+import net.mcreator.ceshi.api.EventRegistry;
 import net.mcreator.ceshi.init.PrimogemcraftModGameRules;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 import net.mcreator.ceshi.item.YuzhousuipianItem;
@@ -110,6 +111,7 @@ public class Event_item_sxRProcedure {
         registerEventInternal(40, ctx -> ctx.giveItem(new ItemStack(Items.REDSTONE),8,item->{item.set(DataComponents.CUSTOM_NAME, Component.literal("雷石东"));}));
         registerEventInternal(41, ctx -> ctx.giveItem(new ItemStack(Blocks.CHEST), 1, item -> {item.enchant(ctx.getWorld().registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH), 1);}));
         registerEventInternal(42, ctx -> ctx.TimelimitedCombat(EntityType.SILVERFISH, 1, 1, 40, 41, 0, "§e抢劫！"));
+        registerEventInternal(43, ctx -> ctx.eventMultiple(10));
     }
 
     public static boolean execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
@@ -121,7 +123,6 @@ public class Event_item_sxRProcedure {
         Function<EventContext, Boolean> handler = EVENT_HANDLERS.get(eventId);
         if (handler == null) return false;
 
-        // 创建事件上下文并执行
         EventContext context = new EventContext(eventId, (Player) entity, world);
         boolean result = handler.apply(context);
 
@@ -179,6 +180,19 @@ public class Event_item_sxRProcedure {
 
         public double z() {
             return z;
+        }
+
+        public boolean eventMultiple(int value) {
+            if (Timer.isDone(player, "maxUes")) {
+                Timer.set(player, "maxUes", 20);
+                for (int i = 0; i < value; i++) {
+                    EventGroupProcedure.execute(world, player, EventRegistry.getWeightedRandomGroupId(world));
+                }
+                PrimogemcraftMod.queueServerWork(5, () -> {
+                    player.closeContainer();
+                });
+            } else return false;
+            return true;
         }
         /**
          * 玩家事件修改

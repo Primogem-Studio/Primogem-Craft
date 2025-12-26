@@ -55,6 +55,7 @@ public class EventitemmssxrProcedure {
         registerDescription(40, () -> "§e解刨8个雷石东");
         registerDescription(41, () -> "§e胸部丝绸触感");
         registerDescription(42, () -> "§c发射银鱼！");
+        registerDescription(43, () -> "§c§l连续触发10个随机事件！"+"\n"+"§6你无法掌控，部分事件可能被覆盖！");
     }
 
     public static void registerDescription(int eventId, Supplier<String> descriptionProvider) {
