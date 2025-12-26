@@ -25,7 +25,7 @@ public class Ceshi_3Procedure {
 		e = entity;
 		o1 = world.isClientSide();
 		n = Math.random();
-		EventGroupProcedure.execute(world, entity, 25);
+		EventGroupProcedure.execute(world, entity, EventGroupProcedure.getWeightedRandomGroupId(world));
 //		new SpawnWishiEntity.Spawn(world,(Player) entity,1000,10000,false).Spawn();
 	}
 }

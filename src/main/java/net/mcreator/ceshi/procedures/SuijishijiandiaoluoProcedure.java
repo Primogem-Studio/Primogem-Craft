@@ -31,7 +31,7 @@ public class SuijishijiandiaoluoProcedure {
 			return;
 		Entity e = null;
 		if (!(entity instanceof Player)) {
-			EventRegistry.spawnEventGroup(world,x,y,z,sourceentity,EventGroupProcedure.getRandomGroupId(world));
+			EventRegistry.spawnEventGroup(world,x,y,z,sourceentity,EventGroupProcedure.getWeightedRandomGroupId(world));
 		}
 	}
 }

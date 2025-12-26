@@ -20,19 +20,28 @@ import java.util.function.Function;
 import static net.mcreator.ceshi.procedures.Event_item_sxRProcedure.suijiint;
 
 public class EventGroupProcedure {
-    // 成员变量驱动的事件组处理器
-    private static final Map<Integer, Function<GroupContext, Boolean>> GROUP_HANDLERS = new HashMap<>();
+    private static class WeightedGroupHandler {
+        final Function<GroupContext, Boolean> handler;
+        final int weight;
 
-    // 兼容原有API的注册方法（BiFunction -> Function）
+        WeightedGroupHandler(Function<GroupContext, Boolean> handler, int weight) {
+            this.handler = handler;
+            this.weight = weight;
+        }
+    }
+
+    private static final Map<Integer, WeightedGroupHandler> GROUP_HANDLERS = new HashMap<>();
+
     private static void registerGroupInternal(int groupId, Function<GroupContext, Boolean> handler) {
-        GROUP_HANDLERS.put(groupId, handler);
+        registerGroupInternal(groupId, handler, 1);
     }
 
-    // 公共API注册方法（保持兼容）
-    public static void registerGroup(int groupId, BiFunction<Entity, LevelAccessor, Boolean> handler) {
-        GROUP_HANDLERS.put(groupId, ctx -> handler.apply(ctx.getEntity(), ctx.getWorld()));
+    private static void registerGroupInternal(int groupId, Function<GroupContext, Boolean> handler, int weight) {
+        if (weight <= 0) {
+            throw new IllegalArgumentException("权重必须大于0");
+        }
+        GROUP_HANDLERS.put(groupId, new WeightedGroupHandler(handler, weight));
     }
-
     static {
         registerGroupInternal(1, ctx -> ctx.zu(1, 2, 3, "§d附魔"));
         registerGroupInternal(2, ctx -> ctx.zu(4, 5, 6, "§d附魔"));
@@ -49,7 +58,7 @@ public class EventGroupProcedure {
             int event2 = ctx.getRandomRegisteredEventId();
             int event3 = ctx.getRandomRegisteredEventId();
             return ctx.zu(event1, event2, event3, "§c§khaha");
-        });
+        },5);
         registerGroupInternal(12, ctx -> ctx.zu(20, 26, 17, "§c战斗"));
         registerGroupInternal(13, ctx -> ctx.zu(21, 22, 17, "§c战斗"));
         registerGroupInternal(14, ctx -> ctx.zu(23, 24, 25, "§e你从垃圾桶获得了物品"));
@@ -65,9 +74,17 @@ public class EventGroupProcedure {
         registerGroupInternal(24, ctx -> ctx.zu(32, 32, 32, "§e宇宙碎片！"));
         registerGroupInternal(25, ctx -> ctx.zu(40, 41, 42, "§a我要点餐"));
     }
-
+    public static void registerGroup(int groupId, BiFunction<Entity, LevelAccessor, Boolean> handler) {
+        GROUP_HANDLERS.put(groupId, new WeightedGroupHandler(ctx -> handler.apply(ctx.getEntity(), ctx.getWorld()), 1));
+    }
+    public static void registerGroup(int groupId, BiFunction<Entity, LevelAccessor, Boolean> handler, int weight) {
+        if (weight <= 0) {
+            throw new IllegalArgumentException("权重必须大于0");
+        }
+        GROUP_HANDLERS.put(groupId, new WeightedGroupHandler(ctx -> handler.apply(ctx.getEntity(), ctx.getWorld()), weight));
+    }
     /**
-     * 获取已注册的事件组数量上限（自适应）
+     * 获取已注册的事件组数量上限
      */
     public static int event_limit() {
         if (GROUP_HANDLERS.isEmpty()) return 0;
@@ -75,10 +92,9 @@ public class EventGroupProcedure {
     }
 
     /**
-     * 获取已注册的事件数量上限（自适应）
+     * 获取已注册的事件数量上限
      */
     public static int event_X_limit() {
-        // 从事件执行类获取已注册的事件数量
         return Event_item_sxRProcedure.getRegisteredEventCount();
     }
 
@@ -89,11 +105,9 @@ public class EventGroupProcedure {
         int eventCount = event_X_limit();
         if (eventCount <= 0) return 0;
 
-        // 获取所有已注册的事件ID
         java.util.List<Integer> registeredEvents = Event_item_sxRProcedure.getRegisteredEventIds();
         if (registeredEvents.isEmpty()) return 0;
 
-        // 从已注册事件中随机选择
         int randomIndex = suijiint(world, 0, registeredEvents.size() - 1);
         return registeredEvents.get(randomIndex);
     }
@@ -116,7 +130,6 @@ public class EventGroupProcedure {
         java.util.List<Integer> groupIds = getRegisteredGroupIds();
         if (groupIds.isEmpty()) return 0;
 
-        // 过滤指定范围内的组ID
         java.util.List<Integer> filteredGroups = groupIds.stream()
                 .filter(id -> id >= minGroupId && id <= maxGroupId)
                 .collect(java.util.stream.Collectors.toList());
@@ -127,30 +140,64 @@ public class EventGroupProcedure {
         return filteredGroups.get(randomIndex);
     }
 
+    /**
+     * 根据权重随机选择事件组ID
+     */
+    public static int getWeightedRandomGroupId(LevelAccessor world) {
+        if (GROUP_HANDLERS.isEmpty()) return 0;
+
+        // 计算总权重
+        int totalWeight = GROUP_HANDLERS.values().stream()
+                .mapToInt(handler -> handler.weight)
+                .sum();
+
+        if (totalWeight <= 0) return 0;
+
+        // 生成随机权重值
+        int randomWeight = suijiint(world, 1, totalWeight);
+
+        // 根据权重选择组
+        int currentWeight = 0;
+        for (Map.Entry<Integer, WeightedGroupHandler> entry : GROUP_HANDLERS.entrySet()) {
+            currentWeight += entry.getValue().weight;
+            if (randomWeight <= currentWeight) {
+                return entry.getKey();
+            }
+        }
+
+        return 0;
+    }
+
+    /**
+     * 获取事件组的权重
+     */
+    public static int getGroupWeight(int groupId) {
+        WeightedGroupHandler handler = GROUP_HANDLERS.get(groupId);
+        return handler != null ? handler.weight : 0;
+    }
+
     public static void execute(LevelAccessor world, Entity entity, int zu) {
         if (entity == null) return;
 
-        // 打开GUI
         GUIqwxz03Procedure.execute(world, entity, false, "primogemcraft:event");
 
-        // 创建GroupContext并执行
         GroupContext context = new GroupContext(entity, world);
-        Function<GroupContext, Boolean> handler = GROUP_HANDLERS.get(zu);
+        WeightedGroupHandler weightedHandler = GROUP_HANDLERS.get(zu);
 
-        if (handler != null) {
-            handler.apply(context);
+        if (weightedHandler != null && weightedHandler.handler != null) {
+            weightedHandler.handler.apply(context);
         }
     }
 
     /**
-     * 获取已注册的事件组ID列表（用于调试或其他用途）
+     * 获取已注册的事件组ID列表
      */
     public static java.util.List<Integer> getRegisteredGroupIds() {
         return new java.util.ArrayList<>(GROUP_HANDLERS.keySet());
     }
 
     /**
-     * 事件组上下文类 - 封装事件组相关的数据和操作
+     * 事件组上下文类
      */
     public static class GroupContext {
         private final Entity entity;
@@ -163,14 +210,10 @@ public class EventGroupProcedure {
             this.player = entity instanceof Player ? (Player) entity : null;
         }
 
-        // Getter方法
         public Entity getEntity() { return entity; }
         public Player getPlayer() { return player; }
         public LevelAccessor getWorld() { return world; }
 
-        /**
-         * 核心方法：设置事件组的三选一选项
-         */
         public boolean zu(int zU0, int zU1, int zU2, String name) {
             for (int index0 = 0; index0 < 3; index0++) {
                 ItemStack i = getSlotItem(index0);
@@ -186,15 +229,11 @@ public class EventGroupProcedure {
                         tag.putDouble("event_", finalEventId)
                 );
                 i.set(DataComponents.CUSTOM_NAME, Component.literal(
-                        finalEventId<1?"§7离开这里":
-                        name));
+                        finalEventId<1?"§7离开这里": name));
             }
             return true;
         }
 
-        /**
-         * 获取玩家当前GUI中的物品
-         */
         private ItemStack getSlotItem(int slotIndex) {
             if (player != null && player.containerMenu instanceof PrimogemcraftModMenus.MenuAccessor menuAccessor) {
                 var slots = menuAccessor.getSlots();
@@ -205,9 +244,6 @@ public class EventGroupProcedure {
             return ItemStack.EMPTY;
         }
 
-        /**
-         * 从所有已注册事件中随机选择一个事件ID（使用成员变量world）
-         */
         public int getRandomRegisteredEventId() {
             int eventCount = Event_item_sxRProcedure.getRegisteredEventCount();
             if (eventCount <= 0) return 0;
@@ -219,23 +255,14 @@ public class EventGroupProcedure {
             return registeredEvents.get(randomIndex);
         }
 
-        /**
-         * 判断玩家是否在创造模式
-         */
         public boolean isPlayerCreative() {
             return player != null && player.isCreative();
         }
 
-        /**
-         * 链式设置方法
-         */
         public GroupConfiguration configure() {
             return new GroupConfiguration(this);
         }
 
-        /**
-         * 快速设置方法
-         */
         public boolean quickSet(String name, int... eventIds) {
             if (eventIds.length == 0) return false;
 
@@ -255,7 +282,7 @@ public class EventGroupProcedure {
     }
 
     /**
-     * 组配置类 - 提供链式配置API
+     * 组配置类
      */
     public static class GroupConfiguration {
         private final GroupContext context;
@@ -293,9 +320,6 @@ public class EventGroupProcedure {
         }
     }
 
-    /**
-     * 便捷方法 - 创建简单的三选一事件组
-     */
     public static boolean createSimpleGroup(Player player, LevelAccessor world,
                                             int event1, int event2, int event3,
                                             String groupName) {
@@ -305,14 +329,11 @@ public class EventGroupProcedure {
         return context.zu(event1, event2, event3, groupName);
     }
 
-    /**
-     * 批量注册事件组
-     */
     public static void registerGroups(Map<Integer, Consumer<GroupContext>> groups) {
         groups.forEach((groupId, consumer) -> {
             registerGroupInternal(groupId, ctx -> {
                 consumer.accept(ctx);
-                return true; // 假设消费成功
+                return true;
             });
         });
     }

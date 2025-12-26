@@ -11,7 +11,7 @@ public class Shijian_it_sxProcedure {
 			if (!itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("event_zu_i")) {
 				{
 					final String _tagName = "event_zu_i";
-					final double _tagValue = EventGroupProcedure.getRandomGroupId(world);
+					final double _tagValue = EventGroupProcedure.getWeightedRandomGroupId(world);;
 					CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 			}

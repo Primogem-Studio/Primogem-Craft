@@ -12,34 +12,23 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-/**
- * \\\\\\\\\以 防 真 有 人 看 ! !/////////
- * @本API大部分由AI完成，不一定所有功能有效！！
- * @关于ID注册规范（可选但最好遵循）：
- * @事件ID： modID前 4 个字母的字母顺序：@例：primogem... -> 1618913 开始避免冲突
- * @事件组ID： modID前 3 个字母的字母顺序：@例：primogem... -> 16189 开始避免冲突（不会与事件ID冲突，即使重合）
- * @事件描述ID： 与事件ID一致
- */
 public class EventRegistry {
-
-    // ========== 事件注册 ==========
+    /**
+     * \\\\\\\\\以 防 真 有 人 看 ! !/////////
+     * @本API大部分由AI完成，不一定所有功能有效！！
+     * @关于ID注册规范（可选但最好遵循）：
+     * @事件ID： modID前 4 个字母的字母顺序：@例：primogem... -> 1618913 开始避免冲突
+     * @事件组ID： modID前 3 个字母的字母顺序：@例：primogem... -> 16189 开始避免冲突（不会与事件ID冲突，即使重合）
+     * @事件描述ID： 与事件ID一致
+     */
 
     /**
-     * 注册新事件（使用EventContext）
-     *
-     * @param eventId 事件ID
-     * @param handler 事件处理器（接收EventContext）
+     * 注册新事件
      */
     public static void registerEvent(int eventId, Function<Event_item_sxRProcedure.EventContext, Boolean> handler) {
         registerEventInternal(eventId, handler);
     }
 
-    /**
-     * 注册新事件（兼容快捷方式）
-     *
-     * @param eventId 事件ID
-     * @param handler 接收 Player 和 LevelAccessor 的处理器（内部转换为 EventContext）
-     */
     public static void registerEventLegacy(int eventId, Function<Player, Function<LevelAccessor, Boolean>> handler) {
         registerEventInternal(eventId, ctx -> handler.apply(ctx.getPlayer()).apply(ctx.getWorld()));
     }
@@ -55,10 +44,7 @@ public class EventRegistry {
     }
 
     /**
-     * 注册新事件组
-     *
-     * @param groupId 事件组ID
-     * @param handler 事件组处理器
+     * 注册新事件组（默认权重为1）
      */
     public static void registerGroup(int groupId, Function<EventGroupProcedure.GroupContext, Boolean> handler) {
         EventGroupProcedure.registerGroup(groupId, (entity, world) -> {
@@ -68,8 +54,15 @@ public class EventRegistry {
     }
 
     /**
-     * 注册事件描述
+     * 注册新事件组（带权重参数）
      */
+    public static void registerGroup(int groupId, Function<EventGroupProcedure.GroupContext, Boolean> handler, int weight) {
+        EventGroupProcedure.registerGroup(groupId, (entity, world) -> {
+            var context = new EventGroupProcedure.GroupContext(entity, world);
+            return handler.apply(context);
+        }, weight);
+    }
+
     public static void registerDescription(int eventId, Supplier<String> descriptionProvider) {
         EventitemmssxrProcedure.registerDescription(eventId, descriptionProvider);
     }
@@ -77,8 +70,10 @@ public class EventRegistry {
     /**
      * 直接产卵事件组
      *
+     * @param count 记录并受限？
      * @param value 事件组ID
      */
+
     public static void spawnEventGroup(LevelAccessor world, Entity entity, int value) {
         EventiProcedure.execute(world, 0, -128, 0, entity, value, true);
     }
@@ -90,107 +85,77 @@ public class EventRegistry {
     public static void spawnEventGroup(LevelAccessor world, double x, double y, double z, Entity entity, int value) {
         EventiProcedure.execute(world, x, y, z, entity, value, true);
     }
-    /**
-     * 直接产卵事件组
-     *
-     * @param count 记录并受限？
-     * @param value 事件组ID
-     */
+
     public static void spawnEventGroup(LevelAccessor world, double x, double y, double z, Entity entity, int value, boolean count) {
         EventiProcedure.execute(world, x, y, z, entity, value, count);
     }
+
     /**
      * 直接产卵事件
      */
+
     public static void spawnEvent(LevelAccessor world, Player player, int value) {
         EventGroupProcedure.execute(world, player, value);
     }
 
-
-    /**
-     * 获取所有已注册的事件ID
-     */
     public static List<Integer> getAllEventIds() {
         return Event_item_sxRProcedure.getRegisteredEventIds();
     }
 
-    /**
-     * 获取所有已注册的事件组ID
-     */
     public static List<Integer> getAllGroupIds() {
         return EventGroupProcedure.getRegisteredGroupIds();
     }
 
-    /**
-     * 检查事件是否已注册
-     */
     public static boolean isEventRegistered(int eventId) {
         return Event_item_sxRProcedure.isEventRegistered(eventId);
     }
 
-    /**
-     * 检查事件组是否已注册
-     */
     public static boolean isGroupRegistered(int groupId) {
         return EventGroupProcedure.getRegisteredGroupIds().contains(groupId);
     }
 
-    /**
-     * 获取事件数量上限
-     */
     public static int getEventLimit() {
         return EventGroupProcedure.event_X_limit();
     }
 
-    /**
-     * 获取事件组数量上限
-     */
     public static int getGroupLimit() {
         return EventGroupProcedure.event_limit();
     }
 
-    /**
-     * 获取已注册事件数量
-     */
     public static int getEventCount() {
         return getAllEventIds().size();
     }
 
-    /**
-     * 获取已注册事件组数量
-     */
     public static int getGroupCount() {
         return getAllGroupIds().size();
     }
 
     /**
-     * 打印所有已注册事件
+     * 获取事件组的权重
      */
-    public static void printAllEvents() {
-        System.out.println("=== 已注册事件列表 ===");
-        System.out.println("事件总数: " + getEventCount());
-        List<Integer> eventIds = getAllEventIds();
-        if (eventIds.isEmpty()) {
-            System.out.println("(无注册事件)");
-        } else {
-            eventIds.forEach(id -> System.out.println("事件ID: " + id));
-        }
-        System.out.println("=====================");
+    public static int getGroupWeight(int groupId) {
+        return EventGroupProcedure.getGroupWeight(groupId);
     }
 
     /**
-     * 打印所有已注册事件组
+     * 根据权重随机选择事件组ID
      */
-    public static void printAllGroups() {
-        System.out.println("=== 已注册事件组列表 ===");
-        System.out.println("事件组总数: " + getGroupCount());
-        List<Integer> groupIds = getAllGroupIds();
-        if (groupIds.isEmpty()) {
-            System.out.println("(无注册事件组)");
-        } else {
-            groupIds.forEach(id -> System.out.println("事件组ID: " + id));
-        }
-        System.out.println("=======================");
+    public static int getWeightedRandomGroupId(LevelAccessor world) {
+        return EventGroupProcedure.getWeightedRandomGroupId(world);
+    }
+
+    /**
+     * 获取随机事件组ID
+     */
+    public static int getRandomGroupId(LevelAccessor world) {
+        return EventGroupProcedure.getRandomGroupId(world);
+    }
+
+    /**
+     * 获取指定范围内的随机事件组ID
+     */
+    public static int getRandomGroupId(LevelAccessor world, int minGroupId, int maxGroupId) {
+        return EventGroupProcedure.getRandomGroupId(world, minGroupId, maxGroupId);
     }
 
     /**
@@ -202,18 +167,6 @@ public class EventRegistry {
         return eventIds.get((int) (Math.random() * eventIds.size()));
     }
 
-    /**
-     * 随机返回一个已注册的事件组ID
-     */
-    public static int getRandomGroupId() {
-        List<Integer> groupIds = getAllGroupIds();
-        if (groupIds.isEmpty()) return 0;
-        return groupIds.get((int) (Math.random() * groupIds.size()));
-    }
-
-    /**
-     * 创建EventContext实例
-     */
     public static Event_item_sxRProcedure.EventContext createContext(int eventId, Player player, LevelAccessor world) {
         return new Event_item_sxRProcedure.EventContext(eventId, player, world);
     }
@@ -224,6 +177,11 @@ public class EventRegistry {
     public static class GroupRegistrar {
         public GroupRegistrar register(int groupId, Function<EventGroupProcedure.GroupContext, Boolean> handler) {
             EventRegistry.registerGroup(groupId, handler);
+            return this;
+        }
+
+        public GroupRegistrar register(int groupId, Function<EventGroupProcedure.GroupContext, Boolean> handler, int weight) {
+            EventRegistry.registerGroup(groupId, handler, weight);
             return this;
         }
     }
