@@ -12,7 +12,6 @@ public class EventitemmssxrProcedure {
     private static final Map<Integer, Supplier<String>> DESCRIPTION_HANDLERS = new HashMap<>();
 
     static {
-        // 注册所有事件描述
         registerDescription(1, () -> yuzhou_fumo_1(10, "§7低级"));
         registerDescription(2, () -> yuzhou_fumo_1(20, "§7低级§e~§b中级"));
         registerDescription(3, () -> yuzhou_fumo_1(40, "§d中级§e~§c特级"));
@@ -62,24 +61,24 @@ public class EventitemmssxrProcedure {
         DESCRIPTION_HANDLERS.put(eventId, descriptionProvider);
     }
 
-    //定义"事件"中的描述
     public static String execute(ItemStack itemstack) {
-        double a = 0;
-        String s1 = "";
-        a = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("event_");
-        String sR1 = "§c§l立即触发§a//§d§l右键触发" + "\n" + "§8 #" + new java.text.DecimalFormat("##.##").format(a) + "\n";
-
+        var n = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag();
+        boolean rs = n.getBoolean("LIji");
+        double a = n.getDouble("event_");
+        String sR1 = (rs ? "§8" : "§c") + "§l立即触发§a//" + (rs ? "§d" : "§8") + "§l右键触发" + "\n" + "§r§9 #" + new java.text.DecimalFormat("##.##").format(a) + "\n";
         Supplier<String> descriptionProvider = DESCRIPTION_HANDLERS.get((int) a);
-        s1 = descriptionProvider != null ? descriptionProvider.get() : "§7什么事件都没有...";
+        String s1 = descriptionProvider != null ? descriptionProvider.get() : "§7什么事件都没有...";
 
-        return (a < 1 ? "§c #0"+"\n" : sR1) + s1;
+        return (a < 1 ? "§c #0" + "\n" : sR1) + s1;
     }
     public static String yzsp(){
         return "§e随机获得宇宙碎片";
     }
+
     public static String shijian(){
         return "\n"+"§7事件会随时间恢复";
     }
+
     public static String yuzhou_fumo(String s) {
         return "§e换取" + s + "§e附魔" + "\n";
     }
