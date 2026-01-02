@@ -32,8 +32,7 @@ public class Ceshi_3Procedure {
 
 		ss.lottery(0.5,
 				() -> {
-					ss.getPlayer();
-					EventGroupProcedure.execute(ss.getWorld(), entity, 9999);
+					ss.spawnTable("primogemcraft:entities/qqiwuzhanlipinshiti");
 				});
 
 //		EventGroupProcedure.execute(world, entity, 26);
