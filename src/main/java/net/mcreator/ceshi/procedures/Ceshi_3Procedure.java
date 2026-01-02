@@ -7,8 +7,11 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
+import net.per.curio.CurioEffectPGC;
 import net.per.wish.SpawnWishiEntity;
 import net.per.wish.WishVale;
+
+import javax.annotation.processing.Processor;
 
 public class Ceshi_3Procedure {
 	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
@@ -25,7 +28,15 @@ public class Ceshi_3Procedure {
 		e = entity;
 		o1 = world.isClientSide();
 		n = Math.random();
-		EventGroupProcedure.execute(world, entity, 26);
+		var ss = new CurioEffectPGC.Processor(world, entity,itemstack);
+
+		ss.lottery(0.5,
+				() -> {
+					ss.getPlayer();
+					EventGroupProcedure.execute(ss.getWorld(), entity, 9999);
+				});
+
+//		EventGroupProcedure.execute(world, entity, 26);
 //		EventGroupProcedure.execute(world, entity, EventGroupProcedure.getWeightedRandomGroupId(world));
 //		new SpawnWishiEntity.Spawn(world,(Player) entity,1000,10000,false).Spawn();
 	}

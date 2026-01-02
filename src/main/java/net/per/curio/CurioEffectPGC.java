@@ -21,15 +21,23 @@ public class CurioEffectPGC {
     public static class Processor {
         private final LevelAccessor world;
         private final Player player;
+        private final ItemStack curio;
 
-        public Processor(LevelAccessor world, Entity entity) {
+        public Processor(LevelAccessor world, Entity entity,ItemStack curio) {
             this.world = world;
             this.player = (Player) entity;
+            this.curio = curio;
         }
 
         public boolean getRandomResult(double value) {
             return !world.isClientSide() ? Math.random() < value : false;
         }
+
+        public LevelAccessor getWorld() {return world;}
+
+        public Player getPlayer() {return player;}
+
+        public ItemStack getCurio(){return curio;}
 
         public double curioDice(boolean remove, ItemPredicate condition) {
             double out = 0;
@@ -49,13 +57,30 @@ public class CurioEffectPGC {
         public interface ItemPredicate {
             boolean test(ItemStack itemstack);
         }
-        
+
+        //乐透
+        public boolean lottery(double odds, Runnable ok) {
+            return lottery(odds, ok, null);
+        }
+
+        public boolean lottery(double odds, Runnable ok, Runnable err) {
+            if (!getRandomResult(0.3)) return false;
+            boolean result = getRandomResult(odds);
+            if (result) {ok.run();} else {
+                err.run();
+                announceCurioBroken();
+            }
+            return result;
+        }
         /**
          * 工具
         */
-        public void announceCurioBroken(ItemStack item){
-            announce(item.getDisplayName().getString()+"§c已损坏！");
+        public void announceCurioBroken() {
+            if (curio.isDamageableItem() && curio.getDamageValue() > curio.getMaxDamage() - 1)
+                curio.hurtAndBreak(1, player, null);
+            announce(curio.getDisplayName().getString() + "§c已损坏！");
             playAudio();
+            curio.shrink(1);
         }
 
         public void announce(String s){
