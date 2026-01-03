@@ -2,6 +2,7 @@ package net.per.tool;
 
 import io.netty.buffer.Unpooled;
 import net.mcreator.ceshi.PrimogemcraftMod;
+import net.mcreator.ceshi.procedures.EventGroupProcedure;
 import net.mcreator.ceshi.procedures.GUIqwxz03Procedure;
 import net.mcreator.ceshi.procedures.SetItemGui;
 import net.mcreator.ceshi.world.inventory.GUISJfumoMenu;
@@ -13,6 +14,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.MenuProvider;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -22,6 +25,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.items.ItemHandlerHelper;
+import net.per.event.EventEntityScopeSpawn;
 
 import java.util.function.Consumer;
 
@@ -40,7 +44,21 @@ public class ToolPGC {
             this.y = player.getY();
             this.z = player.getZ();
         }
-
+        /**
+         * 发送消息
+         */
+        public boolean prompt(String message, boolean bottom) {
+            if (!player.level().isClientSide())
+                player.displayClientMessage(Component.literal(message), bottom);
+            return true;
+        }
+        /**
+         * 嵌套事件
+         */
+        public boolean createSimpleGroup(int event1, int event2, int event3, String neme) {
+            GUIqwxz03Procedure.execute(world, player, false, "primogemcraft:event");
+            return EventGroupProcedure.createSimpleGroup(player, world, event1, event2, event3, neme);
+        }
         //移除指定数量的item
         public boolean costItem(ItemStack item, int value) {
             int total = 0;

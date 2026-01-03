@@ -1,35 +1,22 @@
 package net.mcreator.ceshi.procedures;
 
-import io.netty.buffer.Unpooled;
 import net.hackermdch.pgc.Timer;
 import net.mcreator.ceshi.PrimogemcraftMod;
-import net.mcreator.ceshi.api.EventRegistry;
 import net.mcreator.ceshi.init.PrimogemcraftModGameRules;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
-import net.mcreator.ceshi.item.YuzhousuipianItem;
 import net.mcreator.ceshi.network.PrimogemcraftModVariables;
-import net.mcreator.ceshi.world.inventory.GUISJfumoMenu;
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.MenuProvider;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.component.CustomData;
@@ -37,16 +24,12 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.neoforge.event.entity.living.LivingSwapItemsEvent;
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.items.ItemHandlerHelper;
 import net.per.event.EventEntityScopeSpawn;
 import net.per.tool.ToolPGC;
-
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
@@ -89,9 +72,9 @@ public class Event_item_sxRProcedure {
         registerEventInternal(17, ctx -> ctx.giveTagLootItem(true, "c:curio/negative"));
         registerEventInternal(18, ctx -> ctx.giveTagLootItem(true, "c:curio/clock"));
         registerEventInternal(19, ctx -> ctx.giveTagLootItem(true, "c:curio/negative/cf"));
-        registerEventInternal(20, ctx -> ctx.entityLoottab(ctx.entityType(S_WFENGRAOJIANGSHI.get()), "primogemcraft:fengraozlpevent", false));
+        registerEventInternal(20, ctx -> ctx.ees.entityLoottab(ctx.ees.entityType(S_WFENGRAOJIANGSHI.get()), "primogemcraft:fengraozlpevent", false));
         registerEventInternal(21, ctx -> ctx.TimelimitedCombat(S_WFENGRAOJIANGSHI.get(), 2, 0, entity -> {entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(2);entity.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(1);}, null));
-        registerEventInternal(22, ctx -> ctx.spawnEntitiesInRange(net.minecraft.world.entity.EntityType.ZOMBIE, 5, 5));
+        registerEventInternal(22, ctx -> ctx.ees.spawnEntitiesInRange(EntityType.ZOMBIE, 5, 5));
         registerEventInternal(23, ctx -> ctx.giveItem(new ItemStack(Items.SHIELD).copy(), 1) ? ctx.prompt("§6<垃圾桶> §f不，盾牌才是你的掉落物。", false) : ctx.no());
         registerEventInternal(24, ctx -> ctx.giveItem(new ItemStack(PrimogemcraftModItems.QWYZZM.get()), 1) ? ctx.prompt("§6<垃圾桶> §c哈哈，你其实掉落了一个愚者面具！", false) : ctx.no());
         registerEventInternal(25, ctx -> ctx.giveItem(new ItemStack(PrimogemcraftModItems.LJTG_01.get()), 1) ? ctx.prompt("§6<垃圾桶> §e我看你长得像摩拉盾牌。", false) : ctx.no());
@@ -99,10 +82,10 @@ public class Event_item_sxRProcedure {
         registerEventInternal(27, ctx -> ctx.TimelimitedCombat(EntityType.CREEPER,2,0,null,null));
         registerEventInternal(28, ctx -> ctx.TimelimitedCombat(EntityType.RAVAGER, 1, 0, entity -> {entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(20);entity.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(1);}, null));
         registerEventInternal(29, ctx -> ctx.TimelimitedCombat(EntityType.ZOMBIE, 5, 3, ctx.getRandom(0.5) ? 29 : ctx.getRandomEvemtID(), ctx.getRandomEvemtID(), 13, "§c战斗§e或§a随机"));
-        registerEventInternal(30, ctx -> ctx.setGuiItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), ctx.random(1, 10), ctx.random(1, 10), ctx.random(1, 10)));
-        registerEventInternal(31, ctx -> ctx.setGuiItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), ctx.random(5, 20), ctx.random(5, 20), ctx.random(5, 20)));
-        registerEventInternal(32, ctx -> ctx.setGuiItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), ctx.random(10, 40), ctx.random(10, 40), ctx.random(10, 40)));
-        registerEventInternal(33, ctx -> ctx.setGuiItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()), ctx.random(15, 64), ctx.random(15, 64), ctx.random(15, 64)));
+        registerEventInternal(30, ctx -> ctx.setGuiItem(new ItemStack(YUZHOUSUIPIAN.get()), ctx.random(1, 10), ctx.random(1, 10), ctx.random(1, 10)));
+        registerEventInternal(31, ctx -> ctx.setGuiItem(new ItemStack(YUZHOUSUIPIAN.get()), ctx.random(5, 20), ctx.random(5, 20), ctx.random(5, 20)));
+        registerEventInternal(32, ctx -> ctx.setGuiItem(new ItemStack(YUZHOUSUIPIAN.get()), ctx.random(10, 40), ctx.random(10, 40), ctx.random(10, 40)));
+        registerEventInternal(33, ctx -> ctx.setGuiItem(new ItemStack(YUZHOUSUIPIAN.get()), ctx.random(15, 64), ctx.random(15, 64), ctx.random(15, 64)));
         registerEventInternal(34, ctx -> ctx.updateEventQuotaWorld(1,false));
         registerEventInternal(35, ctx -> ctx.updateEventQuotaWorld(-1,false));
         registerEventInternal(36, ctx -> ctx.updateEventQuotaPlayer(1));
@@ -126,7 +109,6 @@ public class Event_item_sxRProcedure {
 
         EventContext context = new EventContext(eventId, (Player) entity, world);
         boolean result = handler.apply(context);
-
         if (result) {
             itemstack.shrink(1);
         }
@@ -138,23 +120,23 @@ public class Event_item_sxRProcedure {
         private final int id;
         private final LevelAccessor world;
         private final Player player;
-        private final String eka;
         private final double x;
         private final double y;
         private final double z;
         private final double compare;
         private final ToolPGC.set set;
+        private final EventEntityScopeSpawn ees;
 
         public EventContext(int id, Player player, LevelAccessor world) {
             this.id = id;
             this.world = world;
             this.player = player;
             this.compare = Math.random();
-            this.eka = "EventKillAll_" + id;
             this.x = player.getX();
             this.y = player.getY();
             this.z = player.getZ();
             this.set = new ToolPGC.set(player,world);
+            this.ees = new EventEntityScopeSpawn(world, player);
         }
 
         public int getId() {
@@ -186,14 +168,13 @@ public class Event_item_sxRProcedure {
         }
 
         public boolean eventMultiple(int value) {
+            if (world.isClientSide())return false;
             if (Timer.isDone(player, "maxUes")) {
                 Timer.set(player, "maxUes", 20);
                 for (int i = 0; i < value; i++) {
-                    EventGroupProcedure.execute(world, player, EventRegistry.getWeightedRandomGroupId(world));
+                    EventGroupProcedure.execute(world, player, EventGroupProcedure.getWeightedRandomGroupId(world));
                 }
-                PrimogemcraftMod.queueServerWork(5, () -> {
-                    player.closeContainer();
-                });
+                PrimogemcraftMod.queueServerWork(5, player::closeContainer);
             } else return false;
             return true;
         }
@@ -202,7 +183,7 @@ public class Event_item_sxRProcedure {
          */
         public boolean updateEventQuotaPlayer(int value) {
             PrimogemcraftModVariables.PlayerVariables _ie = player.getData(PrimogemcraftModVariables.PLAYER_VARIABLES);
-            _ie.Event_entity = _ie.Event_entity += value;
+            _ie.Event_entity += value;
             prompt((value < 0 ? "§c" : "§a") + "当前玩家存储的可触发事件数量：" + new DecimalFormat("##.##").format(_ie.Event_entity), false);
             _ie.markSyncDirty();
             return true;
@@ -291,18 +272,9 @@ public class Event_item_sxRProcedure {
         public boolean no() {
             if (Timer.isDone(player, "Event_Tri")) {
                 Timer.set(player, "Event_Tri", 100);
-                prompt("§c§l条件不足", false);
+                set.prompt("§c§l条件不足", false);
             }
             return false;
-        }
-
-        /**
-         * 发送消息
-         */
-        public boolean prompt(String message, boolean bottom) {
-            if (!player.level().isClientSide())
-                player.displayClientMessage(Component.literal(message), bottom);
-            return true;
         }
 
         /**
@@ -352,76 +324,7 @@ public class Event_item_sxRProcedure {
          * @return 成功执行
          */
         public boolean TimelimitedCombat(EntityType<?> entityType, int count, int scope, int event1, int event2, int event3, String name, Consumer<LivingEntity> modifier, Consumer<Player> _true_) {
-            return spawnEntitiesInRange(entityType, count, 10, entity -> {
-                applyEntityModifier(entity, livingEntity -> {
-                    if (modifier != null) applyEntityModifier(entity, modifier);
-                    invokeKillAll(livingEntity, Math.min(count, scope), _true_ != null ? _true_ : _true -> {
-                        if (name == "")return;
-                        createSimpleGroup(event1, event2, event3, name);
-                    });
-                });
-            });
-        }
-
-        /**
-         * 将生成的实体赋予可选择额外战利品
-         */
-        public boolean entityLoottab(Entity spawnedEntity, String lootTable, boolean useTag) {
-            if (spawnedEntity == null || player == null) return false;
-
-            if (!world.isClientSide()) {
-                spawnedEntity.getPersistentData().putString("Event_Entity_Loot", lootTable);
-                spawnedEntity.getPersistentData().putBoolean("Event_Entity_Loot_tag", useTag);
-                return true;
-            }
-            return false;
-        }
-
-        /**
-         * 返回生成可定义实体
-         */
-        public Entity entityType(EntityType<?> entityType) {
-            if (world.isClientSide() || player == null) return null;
-
-            if (world instanceof ServerLevel serverLevel) {
-                Entity spawnedEntity = entityType.spawn(serverLevel, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-                return spawnedEntity;
-            }
-            return null;
-        }
-
-        /**
-         * 嵌套事件
-         */
-        public boolean createSimpleGroup(int event1, int event2, int event3, String neme) {
-            GUIqwxz03Procedure.execute(world, player, false, "primogemcraft:event");
-            return EventGroupProcedure.createSimpleGroup(player, world, event1, event2, event3, neme);
-        }
-        /**
-         * 简单成多个实体
-         */
-        public boolean spawnEntitiesInRange(EntityType<?> entityType, int count, double radius) {
-            return spawnEntitiesInRange(entityType, count, radius, null);
-        }
-        /**
-         * 多个实体，包含可选tag或战利品表
-         */
-        public boolean spawnEntitiesInRange(EntityType<?> entityType, int count, String lootTable, boolean useTag) {
-            return spawnEntitiesInRange(entityType, count, 5, entity -> {
-                entityLoottab(entity, lootTable, useTag);
-            });
-        }
-        /**
-         * 在指定范围内生成多个实体
-         *
-         * @param entityType     实体类型
-         * @param count          生成数量
-         * @param radius         生成半径
-         * @param entityModifier 实体修饰器（可选，可对每个生成的实体进行额外操作）
-         * @return 是否至少成功生成一个实体
-         */
-        public boolean spawnEntitiesInRange(EntityType<?> entityType, int count, double radius, Consumer<Entity> entityModifier) {
-            return new EventEntityScopeSpawn(world, player).spawnEntitiesInRange(entityType, count, radius, entityModifier);
+            return ees.new TimedChallenge("EventKillAll_" + id, id).TimelimitedCombat(entityType, count, scope, event1, event2, event3, name, modifier, _true_);
         }
 
         /**
@@ -432,75 +335,14 @@ public class Event_item_sxRProcedure {
          * @return 是否成功应用修饰
          */
         public boolean applyEntityModifier(Entity entity, Consumer<LivingEntity> modifier) {
-            if (entity instanceof LivingEntity living) {
-                modifier.accept(living);
-                return true;
-            }
-            return false;
-        }
-        /**
-         * 时限判定
-         */
-        public void killAll(Entity entity) {
-            entity.getPersistentData().putDouble("EventKillAll_", id);
-            player.getPersistentData().putDouble(eka, 1);
-            Timer.set(player, eka, 3600);
-            setEffect(MobEffects.GLOWING, entity,3600,0);
-            setEffect(MobEffects.FIRE_RESISTANCE, entity,3600,0);
-            setTarget(entity);
-        }
-        /**
-         * 挑战实现
-         */
-        public void invokeKillAll(Entity entity, int value, java.util.function.Consumer<Player> _true) {
-            killAll(entity);
-            impKillAll(value, _true);
-        }
-
-        /**
-         * 时限挑战和实现
-         */
-        public boolean impKillAll(int value, java.util.function.Consumer<Player> _true) {
-            var n = (int) player.getPersistentData().getDouble(eka);
-            var a = n < value + 1 && n != 0;
-            if (Timer.isDone(player, eka)) {
-                if (Timer.isDone(player, eka + "0")) {
-                    prompt("§c挑战时间结束", false);
-                    Timer.set(player, eka + "0", 20);
-                }
-                player.getPersistentData().putDouble(eka, 0);
-                return false;
-            }
-            if (a) {
-                PrimogemcraftMod.queueServerWork(20, () -> {
-                    impKillAll(value, _true);
-                });
-                return false;
-            }
-            if (_true != null&&Timer.isDone(player,"impKillAll")){
-                Timer.set(player,"impKillAll",20);
-                _true.accept(player);
-            }
-            player.getPersistentData().putDouble(eka, 0);
-            return true;
+            return ees.applyEntityModifier(entity,modifier);
         }
 
         /**
          * 仅设置状态效果
          */
         public boolean setEffect(Holder<MobEffect> eff, Entity entity, int tick, int lv) {
-            if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide()) {
-                _entity.addEffect((new MobEffectInstance(eff, tick, lv, false, false)));
-                return true;
-            }
-            return false;
-        }
-        /**
-         * 设置仇恨至玩家
-         */
-        public void setTarget (Entity entity){
-            if (entity instanceof Mob _entity && player instanceof LivingEntity _ent)
-                _entity.setTarget(_ent);
+            return ees.setEffect(eff,entity,tick,lv);
         }
         /**
          * 三物品三值
@@ -523,6 +365,12 @@ public class Event_item_sxRProcedure {
             set.setGuiItem(tagloot, tag);
             return true;
         }
+        /**
+         * 发送消息
+         */
+        public boolean prompt(String s,boolean bottom){
+            return set.prompt(s,bottom);
+        }
     }
 
     /**
@@ -532,8 +380,8 @@ public class Event_item_sxRProcedure {
         return EVENT_HANDLERS.isEmpty() ? 0 : EVENT_HANDLERS.keySet().stream().max(Integer::compareTo).orElse(0);
     }
 
-    public static java.util.List<Integer> getRegisteredEventIds() {
-        return new java.util.ArrayList<>(EVENT_HANDLERS.keySet());
+    public static List<Integer> getRegisteredEventIds() {
+        return new ArrayList<>(EVENT_HANDLERS.keySet());
     }
 
     public static boolean isEventRegistered(int eventId) {
