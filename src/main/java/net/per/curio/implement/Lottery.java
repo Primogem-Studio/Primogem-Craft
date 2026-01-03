@@ -99,6 +99,7 @@ public class Lottery {
                                 QwhydltsxProcedure.execute(cp.getWorld(),cp.getPlayer().getX(),cp.getPlayer().getY(),cp.getPlayer().getZ(),cp.getPlayer());
                             }
                     ));
+            
         }
         return effectMap;
     }
