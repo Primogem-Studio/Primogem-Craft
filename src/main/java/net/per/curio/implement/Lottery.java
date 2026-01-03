@@ -1,5 +1,6 @@
 package net.per.curio.implement;
 
+import net.hackermdch.pgc.Timer;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 import net.mcreator.ceshi.procedures.QwhydltsxProcedure;
 import net.mcreator.ceshi.procedures.XjdltsxProcedure;
@@ -29,7 +30,8 @@ public class Lottery {
         Player player = event.getPlayer();
         if (player == null) return;
         ItemStack curioItem = player instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY;
-        if (curioItem.isEmpty()) return;
+        if (curioItem.isEmpty() || !Timer.isDone(player, "lottery")) return;
+        Timer.set(player, "lottery", 5);
         if (!curioItem.is(ItemTags.create(ResourceLocation.parse("c:curio")))) return;
         CurioEffectPGC.Processor processor = new CurioEffectPGC.Processor(event.getLevel(), player, curioItem);
         effect(processor);
@@ -71,14 +73,14 @@ public class Lottery {
                                     cp.announce("§a获得宇宙碎片！");
                             },
                             () -> {
-                                cp.giveItem(new ItemStack((BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(ResourceLocation.parse("c:curio/negative"))).getRandomElement(RandomSource.create()).orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value())),1);
+                                cp.spawnTable("c:curio/negative",true);
                                 cp.announce("§c获得负面奇物！");
                             }
                     ));
             effectMap.put(PrimogemcraftModItems.QWYHJB.get(), cp ->
-                    cp.lottery(0.9,
+                    cp.lottery(0.8,
                             () -> {
-                                cp.giveItem(new ItemStack((BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(ResourceLocation.parse("c:curio/normal/b"))).getRandomElement(RandomSource.create()).orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value())),1);
+                                cp.spawnTable("c:curio/normal/b",true);
                                 cp.announce("§a获得奇物！");
                             },
                             () -> {

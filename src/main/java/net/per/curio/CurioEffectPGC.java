@@ -1,8 +1,10 @@
 package net.per.curio;
 
+import net.hackermdch.pgc.Timer;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 import net.mcreator.ceshi.network.PrimogemcraftModVariables;
 import net.mcreator.ceshi.procedures.DadaletoushibiezhuangtaiProcedure;
+import net.mcreator.ceshi.procedures.GUIqwxz03Procedure;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.core.BlockPos;
@@ -78,7 +80,7 @@ public class CurioEffectPGC {
         //乐透
         public boolean lottery(double odds, Runnable ok, Runnable err) {
             if (!getRandomResult(getLotteryLuck() ? 0.8 : 0.3)) return false;
-            boolean result = getRandomResult((getLotteryLuck() ? odds + (odds * 0.2) : odds));
+            boolean result = getRandomResult((getLotteryLuck() ? Math.min(odds + (odds * 0.2),0.8) : odds));
             if (result) {
                 ok.run();
                 playAudio("entity.firework_rocket.launch");
@@ -121,20 +123,12 @@ public class CurioEffectPGC {
             }
         }
 
-        public boolean spawnTable(String lootTableId, Integer times) {
-            if (world.isClientSide() || !(world instanceof ServerLevel _level)) return false;
-            int generateTimes = (times != null && times > 0) ? times : 1;
-            Vec3 pos = player.position();
-            CommandSourceStack source = new CommandSourceStack(CommandSource.NULL, pos, Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput();
-            for (int i = 0; i < generateTimes; i++) {
-                String command = String.format("loot spawn %.2f %.2f %.2f loot %s", pos.x, pos.y, pos.z, lootTableId);
-                _level.getServer().getCommands().performPrefixedCommand(source, command);
-            }
-            return true;
+        public void spawnTable(String lootTableId, boolean qd) {
+            GUIqwxz03Procedure.execute(world, player, qd, lootTableId);
         }
 
-        public boolean spawnTable(String lootTableId) {
-            return spawnTable(lootTableId, null);
+        public void spawnTable(String lootTableId) {
+             spawnTable(lootTableId, false);
         }
         public void setplayerFood(double value){
             player.getFoodData().setFoodLevel((int) ((player.getFoodData().getFoodLevel()) - (player.getFoodData().getFoodLevel() * value)));

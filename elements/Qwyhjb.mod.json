@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "qw_yhjb",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "animations": [],
@@ -33,7 +34,7 @@
     "specialInformation": {
       "fixedValue": [
         "§6与§b§l银河大乐透§r§6效果一致，但",
-        "§e损坏概率仅为10%，且不会消耗饱食度",
+        "§e损坏概率仅为20%，且不会消耗饱食度",
         "§e提供的奖品质量大大降低"
       ]
     },
@@ -59,6 +60,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []
