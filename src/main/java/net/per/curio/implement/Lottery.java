@@ -91,7 +91,7 @@ public class Lottery {
                                 int a = cp.getRandomInt(1,5);
                                 cp.giveItem(cp.getRandomResult(0.7) ? new ItemStack(PrimogemcraftModItems.JLLIANG.get()) : new ItemStack(PrimogemcraftModItems.JLMO.get()),a);
                                 cp.announce("§a获得强化材料！");
-                            }
+                            },()->{}
                     ));
             effectMap.put(PrimogemcraftModItems.QWHYDLT.get(), cp ->
                     cp.lottery(0,()->{},
