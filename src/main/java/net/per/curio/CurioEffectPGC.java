@@ -91,7 +91,7 @@ public class CurioEffectPGC {
             boolean result = getRandomResult((getLotteryLuck() ? Math.min(odds + (odds * 0.2),0.8) : odds));
             if (result) {
                 ok.run();
-                playAudio("entity.firework_rocket.launch");
+                set.playAudio("entity.firework_rocket.launch");
                 if (getRandomResult(0.01)) set.giveItem(new ItemStack(PrimogemcraftModItems.FEIQIUPINGZHENG.get()),1);
             } else {
                 err.run();
@@ -114,7 +114,7 @@ public class CurioEffectPGC {
             if (curio.isDamageableItem() && curio.getDamageValue() > curio.getMaxDamage() - 1)
                 curio.hurtAndBreak(1, player, null);
             announce(curio.getDisplayName().getString() + "§c已损坏！");
-            playAudio("primogemcraft:qiwusunhuai066");
+            set.playAudio("primogemcraft:qiwusunhuai066");
             curio.shrink(1);
         }
 
@@ -123,13 +123,6 @@ public class CurioEffectPGC {
                 player.displayClientMessage(Component.literal(s), false);
         }
 
-        private void playAudio(String s) {
-            if (world instanceof Level _level) {
-                if (!_level.isClientSide()) {
-                    _level.playSound(null, BlockPos.containing(player.getX(), player.getY(), player.getZ()), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse(s)), SoundSource.PLAYERS, 1, 1);
-                }
-            }
-        }
         public void setplayerFood(double value){
             player.getFoodData().setFoodLevel((int) ((player.getFoodData().getFoodLevel()) - (player.getFoodData().getFoodLevel() * value)));
         }

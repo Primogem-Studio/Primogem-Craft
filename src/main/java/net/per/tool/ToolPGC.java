@@ -6,14 +6,18 @@ import net.mcreator.ceshi.procedures.GUIqwxz03Procedure;
 import net.mcreator.ceshi.procedures.SetItemGui;
 import net.mcreator.ceshi.world.inventory.GUISJfumoMenu;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
@@ -126,6 +130,14 @@ public class ToolPGC {
         public boolean setGuiItem(String tagloot, boolean tag) {
             GUIqwxz03Procedure.execute(world, player, tag, tagloot);
             return true;
+        }
+        //音频
+        public void playAudio(String s) {
+            if (world instanceof Level _level) {
+                if (!_level.isClientSide()) {
+                    _level.playSound(null, BlockPos.containing(player.getX(), player.getY(), player.getZ()), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse(s)), SoundSource.PLAYERS, 1, 1);
+                }
+            }
         }
     }
 }
