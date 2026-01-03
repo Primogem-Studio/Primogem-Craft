@@ -26,6 +26,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.items.ItemHandlerHelper;
+import net.per.tool.ToolPGC;
 
 import java.util.HashSet;
 import java.util.function.Supplier;
@@ -35,13 +36,17 @@ public class CurioEffectPGC {
         private final LevelAccessor world;
         private final Player player;
         private final ItemStack curio;
+        private final ToolPGC.set set;
 
         public Processor(LevelAccessor world, Entity entity,ItemStack curio) {
             this.world = world;
             this.player = (Player) entity;
             this.curio = curio;
+            this.set = new ToolPGC.set(player,world);
         }
-
+        public ToolPGC.set getTool(){
+            return set;
+        }
         public boolean getRandomResult(double value) {
             return !world.isClientSide() ? Math.random() < value : false;
         }
@@ -84,11 +89,11 @@ public class CurioEffectPGC {
             if (result) {
                 ok.run();
                 playAudio("entity.firework_rocket.launch");
-                if (getRandomResult(0.01)) giveItem(new ItemStack(PrimogemcraftModItems.FEIQIUPINGZHENG.get()), 1);
+                if (getRandomResult(0.01)) set.giveItem(new ItemStack(PrimogemcraftModItems.FEIQIUPINGZHENG.get()),1);
             } else {
                 err.run();
                 announceCurioBroken();
-                giveItem(new ItemStack(PrimogemcraftModItems.SHQWYHDLT.get()),1);
+                set.giveItem(new ItemStack(PrimogemcraftModItems.SHQWYHDLT.get()),1);
                 PrimogemcraftModVariables.PlayerVariables _vars = player.getData(PrimogemcraftModVariables.PLAYER_VARIABLES);
                 _vars.daletou_jishu++;
                 if (_vars.daletou_jishu>=100) DadaletoushibiezhuangtaiProcedure.execute(player);
@@ -122,20 +127,8 @@ public class CurioEffectPGC {
                 }
             }
         }
-
-        public void spawnTable(String lootTableId, boolean qd) {
-            GUIqwxz03Procedure.execute(world, player, qd, lootTableId);
-        }
-
-        public void spawnTable(String lootTableId) {
-             spawnTable(lootTableId, false);
-        }
         public void setplayerFood(double value){
             player.getFoodData().setFoodLevel((int) ((player.getFoodData().getFoodLevel()) - (player.getFoodData().getFoodLevel() * value)));
-        }
-        public void giveItem(ItemStack itemStack,int value){
-            itemStack.setCount(value);
-            ItemHandlerHelper.giveItemToPlayer(player, itemStack);
         }
     }
 

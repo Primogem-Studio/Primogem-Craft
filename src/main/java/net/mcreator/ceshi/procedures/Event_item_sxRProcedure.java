@@ -43,6 +43,7 @@ import net.neoforged.neoforge.event.entity.living.LivingSwapItemsEvent;
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 import net.per.event.EventEntityScopeSpawn;
+import net.per.tool.ToolPGC;
 
 import java.text.DecimalFormat;
 import java.util.HashMap;
@@ -142,6 +143,7 @@ public class Event_item_sxRProcedure {
         private final double y;
         private final double z;
         private final double compare;
+        private final ToolPGC.set set;
 
         public EventContext(int id, Player player, LevelAccessor world) {
             this.id = id;
@@ -152,6 +154,7 @@ public class Event_item_sxRProcedure {
             this.x = player.getX();
             this.y = player.getY();
             this.z = player.getZ();
+            this.set = new ToolPGC.set(player,world);
         }
 
         public int getId() {
@@ -250,28 +253,7 @@ public class Event_item_sxRProcedure {
          * 接收对应等级附魔并为实体打开附魔GUI，最大4
          */
         public boolean openEnchGui(int value) {
-            player.getPersistentData().putDouble("pgc_shijian_fumo_pinzhi", value);
-            PrimogemcraftMod.queueServerWork(1, () -> {
-                if (player instanceof ServerPlayer serverPlayer) {
-                    BlockPos pos = BlockPos.containing(x, y, z);
-                    serverPlayer.openMenu(new MenuProvider() {
-                        @Override
-                        public Component getDisplayName() {
-                            return Component.literal("GUISJfumo");
-                        }
-
-                        @Override
-                        public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-                            return false;
-                        }
-
-                        @Override
-                        public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-                            return new GUISJfumoMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(pos));
-                        }
-                    }, pos);
-                }
-            });
+            set.openEnchGui(value);
             return true;
         }
 
@@ -279,22 +261,7 @@ public class Event_item_sxRProcedure {
          * 移除特定数量的item
          */
         public boolean costItem(ItemStack item, int value) {
-            int total = 0;
-            if (player.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable itemHandler) {
-                for (int slot = 0; slot < itemHandler.getSlots(); slot++) {
-                    ItemStack slotStack = itemHandler.getStackInSlot(slot).copy();
-                    if (slotStack.getItem() == item.getItem()) {
-                        total += slotStack.getCount();
-                    }
-                }
-            }
-
-            if (total >= value && player != null) {
-                ItemStack toRemove = new ItemStack(item.getItem());
-                player.getInventory().clearOrCountMatchingItems(p -> toRemove.getItem() == p.getItem(), value, player.inventoryMenu.getCraftSlots());
-                return true;
-            }
-            return false;
+            return set.costItem(item,value);
         }
 
         /**
@@ -350,16 +317,10 @@ public class Event_item_sxRProcedure {
          * 给物品
          */
         public boolean giveItem(ItemStack baseItem, int value, Consumer<ItemStack> itemModifier) {
-            ItemStack _setstack = baseItem.copy();
-            if (itemModifier != null) {
-                itemModifier.accept(_setstack);
-            }
-            _setstack.setCount(value);
-            ItemHandlerHelper.giveItemToPlayer(player, _setstack);
-            return true;
+            return set.giveItem(baseItem,value,itemModifier);
         }
         public boolean giveItem(ItemStack baseItem, int value) {
-            return giveItem(baseItem,value,null);
+            return set.giveItem(baseItem,value,null);
         }
 
         public int getRandomEvemtID(){
@@ -545,23 +506,21 @@ public class Event_item_sxRProcedure {
          * 三物品三值
          */
         public boolean setGuiItem(ItemStack item1, ItemStack item2, ItemStack item3, int count1, int count2, int count3) {
-            SetItemGui.quickOpen(player, world, item1, count1, item2, count2, item3, count3);
-            return true;
+            return set.setGuiItem(item1, item3, item2, count2, count1, count3);
         }
 
         /**
          * 单物品三值
          */
         public boolean setGuiItem(ItemStack item1, int count1, int count2, int count3) {
-            SetItemGui.quickOpen(player, world, item1, count1, count2, count3);
-            return true;
+            return set.setGuiItem(item1, count1, count2, count3);
         }
 
         /**
          * 单数量Tag或LotTab选择
          */
         public boolean setGuiItem(String tagloot, boolean tag) {
-            GUIqwxz03Procedure.execute(world, player, tag, tagloot);
+            set.setGuiItem(tagloot, tag);
             return true;
         }
     }

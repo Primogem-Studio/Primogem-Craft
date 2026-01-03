@@ -45,7 +45,7 @@ public class Lottery {
             effectMap.put(PrimogemcraftModItems.YIYINHEDALETOU.get(), cp ->
                     cp.lottery(0.4,
                             () -> {
-                                cp.spawnTable("primogemcraft:entities/qqiwuzhanlipinshiti");
+                                cp.getTool().giveTagLootItem("primogemcraft:entities/qqiwuzhanlipinshiti");
                                 cp.announce("§a获得随机奇物");
                             },
                             () -> {
@@ -63,24 +63,23 @@ public class Lottery {
                                 int xp = cp.getPlayer().experienceLevel;
                                 cp.announce(("§9并且，移除了§a" + new java.text.DecimalFormat("##.##").format(xp) + "§9级经验等级！"));
                                 cp.getPlayer().giveExperienceLevels(-(xp));
-
                             }
                     ));
             effectMap.put(PrimogemcraftModItems.QWLZDLT.get(), cp ->
                     cp.lottery(0.2,
                             () -> {
-                                cp.giveItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()),40);
-                                    cp.announce("§a获得宇宙碎片！");
+                                cp.getTool().giveItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()),40);
+                                cp.announce("§a获得宇宙碎片！");
                             },
                             () -> {
-                                cp.spawnTable("c:curio/negative",true);
+                                cp.getTool().giveTagLootItem(true, "c:curio/negative");
                                 cp.announce("§c获得负面奇物！");
                             }
                     ));
             effectMap.put(PrimogemcraftModItems.QWYHJB.get(), cp ->
                     cp.lottery(0.8,
                             () -> {
-                                cp.spawnTable("c:curio/normal/b",true);
+                                cp.getTool().giveTagLootItem(true,"c:curio/normal/b");
                                 cp.announce("§a获得奇物！");
                             },
                             () -> {
@@ -91,7 +90,7 @@ public class Lottery {
                     cp.lottery(0.2,
                             () -> {
                                 int a = cp.getRandomInt(1,5);
-                                cp.giveItem(cp.getRandomResult(0.7) ? new ItemStack(PrimogemcraftModItems.JLLIANG.get()) : new ItemStack(PrimogemcraftModItems.JLMO.get()),a);
+                                cp.getTool().giveItem(cp.getRandomResult(0.7) ? new ItemStack(PrimogemcraftModItems.JLLIANG.get()) : new ItemStack(PrimogemcraftModItems.JLMO.get()),a);
                                 cp.announce("§a获得强化材料！");
                             },()->{}
                     ));
