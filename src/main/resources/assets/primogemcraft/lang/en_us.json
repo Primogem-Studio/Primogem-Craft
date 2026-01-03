@@ -1823,5 +1823,8 @@
   "item.primogemcraft.yiyinhedaletou.description_3": "§a - 大概率触发§c§m惊喜",
   "item.primogemcraft.yiyinhedaletou.description_1": "§2破坏方块：",
   "item.primogemcraft.yiyinhedaletou.description_0": "§a副手持有时：",
-  "item.primogemcraft.feiqiupingzheng.description_3": "§9成功率最大80%"
+  "item.primogemcraft.feiqiupingzheng.description_3": "§9成功率最大80%",
+  "item.primogemcraft.diamondlottery.description_0": "§7与银河大乐透触发类似",
+  "item.primogemcraft.diamondlottery.description_1": "§7但成功时将获得钻石",
+  "item.primogemcraft.diamondlottery": "§5§l『奇物』§b钻石大乐透"
 }

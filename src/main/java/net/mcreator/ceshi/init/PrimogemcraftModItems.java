@@ -528,6 +528,7 @@ public class PrimogemcraftModItems {
 	public static final DeferredItem<Item> QWTXZP;
 	public static final DeferredItem<Item> QYSP;
 	public static final DeferredItem<Item> EVENTITEM;
+	public static final DeferredItem<Item> DIAMONDLOTTERY;
 	static {
 		MINGWEI_YIQIEDEKAISHI = REGISTRY.register("mingwei_yiqiedekaishi", BushizidanheItem::new);
 		YUANSHIKUANGSHI = block(PrimogemcraftModBlocks.YUANSHIKUANGSHI);
@@ -1019,6 +1020,7 @@ public class PrimogemcraftModItems {
 		QWTXZP = REGISTRY.register("qwtxzp", QwtxzpItem::new);
 		QYSP = REGISTRY.register("qysp", QyspItem::new);
 		EVENTITEM = REGISTRY.register("eventitem", EventitemItem::new);
+		DIAMONDLOTTERY = REGISTRY.register("diamondlottery", DiamondlotteryItem::new);
 	}
 	// Start of user code block custom items
 	public static final DeferredItem<Item> HPY = REGISTRY.register("hpy", Hpy::new);

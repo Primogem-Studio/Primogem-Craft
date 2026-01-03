@@ -2,6 +2,7 @@ package net.per.curio.implement;
 
 import net.hackermdch.pgc.Timer;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
+import net.mcreator.ceshi.procedures.DiamondlotteryjdProcedure;
 import net.mcreator.ceshi.procedures.QwhydltsxProcedure;
 import net.mcreator.ceshi.procedures.XjdltsxProcedure;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -98,6 +99,18 @@ public class Lottery {
                     cp.lottery(0,()->{},
                             () -> {
                                 QwhydltsxProcedure.execute(cp.getWorld(),cp.getPlayer().getX(),cp.getPlayer().getY(),cp.getPlayer().getZ(),cp.getPlayer());
+                            }
+                    ));
+            effectMap.put(PrimogemcraftModItems.DIAMONDLOTTERY.get(), cp ->
+                    cp.lottery(0.5,
+                            () -> {
+                                int a = cp.getRandomInt(1,10);
+                                if (cp.getRandomResult(0.006)){DiamondlotteryjdProcedure.execute(cp.getPlayer());a=648;}
+                                cp.getTool().giveItem(new ItemStack(Items.DIAMOND),a);
+                                cp.announce("§a获得钻石！");
+                            },()->{
+                                cp.getPlayer().setHealth((float) 1);
+                                cp.setplayerFood(0.98);
                             }
                     ));
         }

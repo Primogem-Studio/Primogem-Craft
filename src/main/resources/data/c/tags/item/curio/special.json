@@ -2,6 +2,10 @@
   "replace": false,
   "values": [
     {
+      "id": "#c:curio/special/average",
+      "required": false
+    },
+    {
       "id": "#c:curio/special/code",
       "required": false
     }

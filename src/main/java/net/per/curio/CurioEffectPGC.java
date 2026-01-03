@@ -47,9 +47,12 @@ public class CurioEffectPGC {
         public ToolPGC.set getTool(){
             return set;
         }
+
         public boolean getRandomResult(double value) {
-            return !world.isClientSide() ? Math.random() < value : false;
+            if (world.isClientSide())return false;
+            return Math.random() < value;
         }
+
         public int getRandomInt(int value,int max) {
             return !world.isClientSide() ? Mth.nextInt(RandomSource.create(), value, max) : 0;
         }
