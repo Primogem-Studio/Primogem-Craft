@@ -76,7 +76,6 @@ public class CurioEffectPGC {
          *奇物
          */
         //乐透
-
         public boolean lottery(double odds, Runnable ok, Runnable err) {
             if (!getRandomResult(getLotteryLuck() ? 0.8 : 0.3)) return false;
             boolean result = getRandomResult((getLotteryLuck() ? odds + (odds * 0.2) : odds));
