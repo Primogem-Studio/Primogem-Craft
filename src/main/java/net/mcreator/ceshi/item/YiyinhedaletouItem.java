@@ -36,7 +36,6 @@ public class YiyinhedaletouItem extends Item {
 		list.add(Component.translatable("item.primogemcraft.yiyinhedaletou.description_6"));
 		list.add(Component.translatable("item.primogemcraft.yiyinhedaletou.description_7"));
 		list.add(Component.translatable("item.primogemcraft.yiyinhedaletou.description_8"));
-		list.add(Component.translatable("item.primogemcraft.yiyinhedaletou.description_9"));
 	}
 
 	@Override
@@ -48,7 +47,7 @@ public class YiyinhedaletouItem extends Item {
 
 	@Override
 	public boolean onDroppedByPlayer(ItemStack itemstack, Player entity) {
-		DadaletoushibiezhuangtaiProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		DadaletoushibiezhuangtaiProcedure.execute(entity);
 		return true;
 	}
 }

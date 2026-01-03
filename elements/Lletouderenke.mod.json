@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "大乐透的认可",
-    "achievementDescription": "损坏100张银河大乐透§7-触发概率提升并且更换奖池！",
+    "achievementDescription": "损坏100张乐透类奇物",
     "achievementIcon": {
       "value": "CUSTOM:Yiyinhedaletou"
     },
@@ -19,6 +19,6 @@
     "parent": {
       "value": "CUSTOM:Zhongjifeiqiu"
     },
-    "triggerxml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"advancement_trigger\" x=\"40\" y=\"80\"><next><block type=\"custom_trigger\" x=\"16\" y=\"77\"/></next></block></xml>"
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"advancement_trigger\" deletable=\"false\" x=\"40\" y=\"80\"><next><block type=\"custom_trigger\"></block></next></block></xml>"
   }
 }

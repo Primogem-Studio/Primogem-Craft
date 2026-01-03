@@ -1,5 +1,8 @@
 package net.per.curio;
 
+import net.mcreator.ceshi.init.PrimogemcraftModItems;
+import net.mcreator.ceshi.network.PrimogemcraftModVariables;
+import net.mcreator.ceshi.procedures.DadaletoushibiezhuangtaiProcedure;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.core.BlockPos;
@@ -9,6 +12,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -18,6 +23,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import java.util.HashSet;
 import java.util.function.Supplier;
@@ -36,6 +42,9 @@ public class CurioEffectPGC {
 
         public boolean getRandomResult(double value) {
             return !world.isClientSide() ? Math.random() < value : false;
+        }
+        public int getRandomInt(int value,int max) {
+            return !world.isClientSide() ? Mth.nextInt(RandomSource.create(), value, max) : 0;
         }
 
         public LevelAccessor getWorld() {return world;}
@@ -63,19 +72,34 @@ public class CurioEffectPGC {
             boolean test(ItemStack itemstack);
         }
 
+        /**
+         *奇物
+         */
         //乐透
         public boolean lottery(double odds, Runnable ok) {
             return lottery(odds, ok, ()->{});
         }
 
         public boolean lottery(double odds, Runnable ok, Runnable err) {
-            if (!getRandomResult(0.3)) return false;
-            boolean result = getRandomResult(odds);
-            if (result) {ok.run();} else {
+            if (!getRandomResult(getLotteryLuck() ? 0.8 : 0.3)) return false;
+            boolean result = getRandomResult((getLotteryLuck() ? odds + (odds * 0.2) : odds));
+            if (result) {
+                ok.run();
+                playAudio("entity.firework_rocket.launch");
+                if (getRandomResult(0.01)) giveItem(new ItemStack(PrimogemcraftModItems.FEIQIUPINGZHENG.get()), 1);
+            } else {
                 err.run();
                 announceCurioBroken();
+                giveItem(new ItemStack(PrimogemcraftModItems.SHQWYHDLT.get()),1);
+                PrimogemcraftModVariables.PlayerVariables _vars = player.getData(PrimogemcraftModVariables.PLAYER_VARIABLES);
+                _vars.daletou_jishu++;
+                if (_vars.daletou_jishu>=100) DadaletoushibiezhuangtaiProcedure.execute(player);
+                _vars.markSyncDirty();
             }
             return result;
+        }
+        public boolean getLotteryLuck(){
+            return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, new ItemStack(PrimogemcraftModItems.FEIQIUPINGZHENG.get())));
         }
         /**
          * 工具
@@ -115,6 +139,13 @@ public class CurioEffectPGC {
 
         public boolean spawnTable(String lootTableId) {
             return spawnTable(lootTableId, null);
+        }
+        public void setplayerFood(double value){
+            player.getFoodData().setFoodLevel((int) ((player.getFoodData().getFoodLevel()) - (player.getFoodData().getFoodLevel() * value)));
+        }
+        public void giveItem(ItemStack itemStack,int value){
+            itemStack.setCount(value);
+            ItemHandlerHelper.giveItemToPlayer(player, itemStack);
         }
     }
 

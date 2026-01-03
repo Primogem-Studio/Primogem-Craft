@@ -28,13 +28,6 @@ public class Ceshi_3Procedure {
 		e = entity;
 		o1 = world.isClientSide();
 		n = Math.random();
-		var ss = new CurioEffectPGC.Processor(world, entity,itemstack);
-
-		ss.lottery(0.5,
-				() -> {
-					ss.spawnTable("primogemcraft:entities/qqiwuzhanlipinshiti");
-				});
-
 //		EventGroupProcedure.execute(world, entity, 26);
 //		EventGroupProcedure.execute(world, entity, EventGroupProcedure.getWeightedRandomGroupId(world));
 //		new SpawnWishiEntity.Spawn(world,(Player) entity,1000,10000,false).Spawn();

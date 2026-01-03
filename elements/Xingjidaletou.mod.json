@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "xing_ji_da_le_tou__1",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "animations": [],
@@ -32,18 +33,24 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§d手持破坏方块时：",
-        "§7 - 小概率为副手可附魔物品",
+        "§d副手持破坏方块时：",
+        "§7 - 小概率为主手可附魔物品",
         "§7   添加一个§f1~20级§7的随机附魔",
         "§7 - 但也有小概率损坏奇物，并",
         "§7   清除玩家§c所有经验值！"
       ]
+    },
+    "glowCondition": {
+      "fixedValue": false
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
+    "projectile": {
+      "value": "Arrow"
+    },
     "projectileDisableAmmoCheck": false,
     "isFood": false,
     "nutritionalValue": 4,
@@ -55,6 +62,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []

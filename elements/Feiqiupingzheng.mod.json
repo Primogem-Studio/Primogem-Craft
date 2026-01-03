@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "feiqiupingzheng",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "animations": [],
@@ -32,16 +33,22 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§d使用银河大乐透时：",
-        "§7-提高优质奖励的出现概率",
-        "§7-减少损坏时的惩罚"
+        "§d使用任意乐透时：",
+        "§7-提升触发概率",
+        "§7-成功率+20%"
       ]
+    },
+    "glowCondition": {
+      "fixedValue": false
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
+    "projectile": {
+      "value": "Arrow"
+    },
     "projectileDisableAmmoCheck": false,
     "isFood": false,
     "nutritionalValue": 4,
@@ -53,6 +60,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []

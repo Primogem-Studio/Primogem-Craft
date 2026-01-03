@@ -5,10 +5,11 @@
     "renderType": 0,
     "texture": "xin_yhdlt",
     "customModelName": "Tool",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "animations": [],
-    "name": "Yiyinhedaletou",
+    "name": "§5『奇物』§b银河大乐透",
     "rarity": "RARE",
     "creativeTabs": [
       {
@@ -34,7 +35,6 @@
       "fixedValue": [
         "§a副手持有时：",
         "§2破坏方块：",
-        "§a - 小概率获得钻石",
         "§a - 小概率获得§5奇物",
         "§a - 大概率触发§c§m惊喜",
         "§a并§c摧毁§a物品",
@@ -43,6 +43,9 @@
         "§7损坏银河大乐透的数量",
         "§9全员透露结果冷却1分钟"
       ]
+    },
+    "glowCondition": {
+      "fixedValue": false
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
@@ -55,6 +58,9 @@
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
+    "projectile": {
+      "value": "Arrow"
+    },
     "projectileDisableAmmoCheck": false,
     "isFood": false,
     "nutritionalValue": 4,
@@ -66,6 +72,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []

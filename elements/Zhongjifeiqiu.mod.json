@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "终极非酋",
-    "achievementDescription": "成功绕过所有大乐透项目",
+    "achievementDescription": "极致的非酋其实是欧皇！",
     "achievementIcon": {
       "value": "CUSTOM:Feiqiupingzheng"
     },
@@ -19,6 +19,6 @@
     "parent": {
       "value": "CUSTOM:DDuTuDeKaiShi"
     },
-    "triggerxml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"advancement_trigger\" x=\"40\" y=\"80\"><next><block type=\"item_in_inventory\" x=\"16\" y=\"99\"><value name=\"amount_l\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"amount_h\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:Feiqiupingzheng</field></block></value></block></next></block></xml>"
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"advancement_trigger\" deletable=\"false\" x=\"40\" y=\"80\"><next><block type=\"item_in_inventory\"><value name=\"amount_l\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"amount_h\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:Feiqiupingzheng</field></block></value></block></next></block></xml>"
   }
 }
