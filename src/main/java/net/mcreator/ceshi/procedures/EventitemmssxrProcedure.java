@@ -56,6 +56,11 @@ public class EventitemmssxrProcedure {
         registerDescription(42, () -> "§c发射银鱼！");
         registerDescription(43, () -> "§c§l连续触发10个随机事件！"+"\n"+"§6你无法掌控，部分事件可能被覆盖！");
         registerDescription(44, () -> "§e选择一个错误代码！");
+        registerDescription(45, () -> lotteryX("§7我认了"));
+        registerDescription(46, () -> lotteryX("§5仅为5分钟，损失50%生命值"+"\n"+"条件不足则无效"));
+        registerDescription(47, () -> "§e交付宇宙碎片，破财免灾");
+        registerDescription(48, () -> "§c消耗20宇宙碎片"+"\n"+"§e5分钟无法使用乐透");
+        registerDescription(49, () -> "§c消耗40宇宙碎片"+"\n"+"§a破财免灾");
     }
 
     public static void registerDescription(int eventId, Supplier<String> descriptionProvider) {
@@ -98,5 +103,8 @@ public class EventitemmssxrProcedure {
 
     public static String Fumo(String fm) {
         return "§e获得一个" + fm + "§e级别附魔";
+    }
+    public static String lotteryX(String s) {
+        return "§c遭遇勒索！"+"\n"+"§c一小时无法使用任何乐透！" + "\n" + s;
     }
 }

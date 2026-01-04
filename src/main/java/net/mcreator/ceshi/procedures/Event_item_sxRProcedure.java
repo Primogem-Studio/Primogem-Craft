@@ -97,6 +97,11 @@ public class Event_item_sxRProcedure {
         registerEventInternal(42, ctx -> ctx.TimelimitedCombat(EntityType.SILVERFISH, 1, 1, 40, 41, 0, "§e抢劫！"));
         registerEventInternal(43, ctx -> ctx.eventMultiple(10));
         registerEventInternal(44, ctx -> ctx.set.giveTagLootItem(true,"c:curio/code"));
+        registerEventInternal(45, ctx -> {Timer.set(ctx.player, "lotteryX",72000);ctx.prompt("§c一小时内无法使用乐透奇物！",false);return true;});
+        registerEventInternal(46, ctx -> {boolean ok = ctx.costHpPercent(0.5); Timer.set(ctx.player, "lotteryX", ok ? 6000 : 72000);ctx.prompt((ok?"§e5分钟":"§c一小时")+"内无法使用乐透奇物！",false);return true;});
+        registerEventInternal(47, ctx -> {Timer.set(ctx.player, "lotteryX",72000);ctx.set.createSimpleGroup(48,49,0,"§e交付勒索");ctx.prompt("§c一小时内无法使用乐透奇物！",false); return true;});
+        registerEventInternal(48, ctx -> {boolean ok = ctx.costItem(new ItemStack(YUZHOUSUIPIAN.get()), 20);if (ok) Timer.set(ctx.player, "lotteryX", 6000 );ctx.prompt(ok?"§e5分钟内无法使用乐透奇物！":"§c条件不足",false); ;return ok;});
+        registerEventInternal(49, ctx -> {boolean ok = ctx.costItem(new ItemStack(YUZHOUSUIPIAN.get()), 40);if (ok) Timer.set(ctx.player, "lotteryX", 0 );ctx.prompt(ok?"§a遭遇解除，你可以使用乐透类奇物了！":"§c条件不足",false);return ok;});
     }
 
     public static boolean execute(LevelAccessor world, Entity entity, ItemStack itemstack) {

@@ -5,6 +5,7 @@ import net.mcreator.ceshi.init.PrimogemcraftModItems;
 import net.mcreator.ceshi.network.PrimogemcraftModVariables;
 import net.mcreator.ceshi.procedures.*;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.util.RandomSource;
@@ -35,6 +36,7 @@ public class Lottery {
         Timer.set(player, "lottery", 5);
         if (!curioItem.is(ItemTags.create(ResourceLocation.parse("c:curio")))) return;
         CurioEffectPGC.Processor processor = new CurioEffectPGC.Processor(event.getLevel(), player, curioItem);
+        if (!Timer.isDone(player, "lotteryX")) {player.displayClientMessage(Component.literal("§c您被勒索期间无法使用乐透类奇物！"), false);return;}
         effect(processor);
     }
 
