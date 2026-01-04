@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab",
+    "c "
+  ],
+  "key": {
+    "a": {
+      "item": "primogemcraft:qwrhj"
+    },
+    "b": {
+      "item": "primogemcraft:yiyinhedaletou"
+    },
+    "c": {
+      "item": "primogemcraft:qwlzdlt"
+    }
+  },
+  "result": {
+    "id": "primogemcraft:mysterylottery",
+    "count": 1
+  }
+}

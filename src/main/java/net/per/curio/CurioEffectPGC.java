@@ -87,16 +87,17 @@ public class CurioEffectPGC {
          */
         //乐透
         public boolean lottery(double odds, Runnable ok, Runnable err) {
+            if (world.isClientSide())return false;
             if (!getRandomResult(getLotteryLuck() ? 0.8 : 0.3)) return false;
             boolean result = getRandomResult((getLotteryLuck() ? Math.min(odds + (odds * 0.2),0.8) : odds));
             if (result) {
                 ok.run();
                 set.playAudio("entity.firework_rocket.launch");
-                if (getRandomResult(0.01)) set.giveItem(new ItemStack(PrimogemcraftModItems.FEIQIUPINGZHENG.get()),1);
             } else {
                 err.run();
                 announceCurioBroken();
                 set.giveItem(new ItemStack(PrimogemcraftModItems.SHQWYHDLT.get()),1);
+                if (getRandomResult(0.01)) set.giveItem(new ItemStack(PrimogemcraftModItems.FEIQIUPINGZHENG.get()),1);
                 PrimogemcraftModVariables.PlayerVariables _vars = player.getData(PrimogemcraftModVariables.PLAYER_VARIABLES);
                 _vars.daletou_jishu++;
                 if (_vars.daletou_jishu>=100) DadaletoushibiezhuangtaiProcedure.execute(player);

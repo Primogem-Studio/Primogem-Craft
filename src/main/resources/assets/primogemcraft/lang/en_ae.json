@@ -170,7 +170,7 @@
   "block.primogemcraft.caomu_33": "Dendro-Core Wood Fence",
   "subtitles.choukatiaoguo": "2333",
   "block.primogemcraft.caomu_32": "Dendro-Core Wood Slab",
-  "item.primogemcraft.feiqiupingzheng.description_0": "§d使用银河大乐透时：",
+  "item.primogemcraft.feiqiupingzheng.description_0": "§d使用任意乐透时：",
   "block.primogemcraft.caomu_31": "Dendro-Core Stairs",
   "block.primogemcraft.caoyuanhekuai": "§aDendro Core block",
   "effect.primogemcraft.chunmeipaoxianzhixiaoguo": "Robe of the Beauty Cooling Down",
@@ -1594,7 +1594,7 @@
   "item.primogemcraft.qwlzdlt.description_1": "§7但也有小概率损坏并获得40宇宙碎片",
   "item.primogemcraft.zsc": "§d『Vajrada Amethyst』Hoe",
   "item.primogemcraft.bufengping.description_0": "§7right click to use",
-  "item.primogemcraft.qwlzdlt.description_0": "§7破坏方块时，小概率获得一个负面奇物",
+  "item.primogemcraft.qwlzdlt.description_0": "§7持副手破坏方块时，小概率获得一个负面奇物",
   "item.primogemcraft.zsf": "§d『Vajrada Amethyst』Axe",
   "item.primogemcraft.zsg": "§d『Vajrada Amethyst』Pickaxe",
   "item.primogemcraft.bufengping.description_1": "§7shift and right click the wind bottle to gain",
@@ -1826,5 +1826,9 @@
   "item.primogemcraft.feiqiupingzheng.description_3": "§9成功率最大80%",
   "item.primogemcraft.diamondlottery.description_0": "§7与银河大乐透触发类似",
   "item.primogemcraft.diamondlottery.description_1": "§7但成功时将获得钻石",
-  "item.primogemcraft.diamondlottery": "§5§l『奇物』§b钻石大乐透"
+  "item.primogemcraft.diamondlottery": "§5§l『奇物』§b钻石大乐透",
+  "item.primogemcraft.feiqiupingzheng.description_4": "§8乐透损坏极小概率获得",
+  "item.primogemcraft.mysterylottery.description_1": "§7但也有概率损坏并清空玩家的事件上限",
+  "item.primogemcraft.mysterylottery.description_0": "§7副手持破坏方块，将有概率获得随机事件",
+  "item.primogemcraft.mysterylottery": "§5§l『奇物』§d奥秘大乐透"
 }

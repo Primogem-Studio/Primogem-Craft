@@ -29,5 +29,6 @@ public class FeiqiupingzhengItem extends Item {
 		list.add(Component.translatable("item.primogemcraft.feiqiupingzheng.description_1"));
 		list.add(Component.translatable("item.primogemcraft.feiqiupingzheng.description_2"));
 		list.add(Component.translatable("item.primogemcraft.feiqiupingzheng.description_3"));
+		list.add(Component.translatable("item.primogemcraft.feiqiupingzheng.description_4"));
 	}
 }

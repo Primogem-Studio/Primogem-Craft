@@ -2,9 +2,8 @@ package net.per.curio.implement;
 
 import net.hackermdch.pgc.Timer;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
-import net.mcreator.ceshi.procedures.DiamondlotteryjdProcedure;
-import net.mcreator.ceshi.procedures.QwhydltsxProcedure;
-import net.mcreator.ceshi.procedures.XjdltsxProcedure;
+import net.mcreator.ceshi.network.PrimogemcraftModVariables;
+import net.mcreator.ceshi.procedures.*;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
@@ -19,6 +18,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.per.curio.CurioEffectPGC;
 
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Consumer;
@@ -67,7 +67,7 @@ public class Lottery {
                             }
                     ));
             effectMap.put(PrimogemcraftModItems.QWLZDLT.get(), cp ->
-                    cp.lottery(0.5,
+                    cp.lottery(0.7,
                             () -> {
                                 cp.getTool().giveTagLootItem(true, "c:curio/negative");
                                 cp.announce("§c获得负面奇物！");
@@ -111,6 +111,15 @@ public class Lottery {
                             },()->{
                                 cp.getPlayer().setHealth((float) 1);
                                 cp.setplayerFood(0.98);
+                            }
+                    ));
+            effectMap.put(PrimogemcraftModItems.MYSTERYLOTTERY.get(), cp ->
+                    cp.lottery(0.5,
+                            () -> {
+                                EventGroupProcedure.execute(cp.getWorld(), cp.getPlayer(), EventGroupProcedure.getWeightedRandomGroupId(cp.getWorld()));
+                            },()->{
+                                Event_item_sxRProcedure.EventContext context = new Event_item_sxRProcedure.EventContext(0, cp.getPlayer() , cp.getWorld());
+                                context.updateEventQuotaPlayer((int) -cp.getPlayer().getData(PrimogemcraftModVariables.PLAYER_VARIABLES).Event_entity);
                             }
                     ));
         }

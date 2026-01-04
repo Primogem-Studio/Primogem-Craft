@@ -3,13 +3,13 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "liang_zi_da_le_tou_",
+    "texture": "amdlt",
     "customModelName": "Normal",
     "guiTexture": "",
     "customProperties": {},
     "states": [],
     "animations": [],
-    "name": "§5『奇物』§d量子大乐透",
+    "name": "§5§l『奇物』§d奥秘大乐透",
     "rarity": "COMMON",
     "creativeTabs": [
       {
@@ -33,15 +33,15 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§7持副手破坏方块时，小概率获得一个负面奇物",
-        "§7但也有小概率损坏并获得40宇宙碎片"
+        "§7副手持破坏方块，将有概率获得随机事件",
+        "§7但也有概率损坏并清空玩家的事件上限"
       ]
     },
     "glowCondition": {
       "fixedValue": false
     },
     "inventorySize": 9,
-    "inventoryStackSize": 64,
+    "inventoryStackSize": 99,
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
