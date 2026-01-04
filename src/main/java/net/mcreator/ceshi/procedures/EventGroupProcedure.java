@@ -74,6 +74,7 @@ public class EventGroupProcedure {
         registerGroupInternal(24, ctx -> ctx.zu(32, 32, 32, "§e宇宙碎片！"));
         registerGroupInternal(25, ctx -> ctx.zu(40, 41, 42, "§a我要点餐"));
         registerGroupInternal(26, ctx -> ctx.zu(43, 31, 8, "§5惊心动魄！"));
+        registerGroupInternal(27, ctx -> ctx.zu(44, 30, 0, "错误代码"));
     }
     public static void registerGroup(int groupId, BiFunction<Entity, LevelAccessor, Boolean> handler) {
         GROUP_HANDLERS.put(groupId, new WeightedGroupHandler(ctx -> handler.apply(ctx.getEntity(), ctx.getWorld()), 1));

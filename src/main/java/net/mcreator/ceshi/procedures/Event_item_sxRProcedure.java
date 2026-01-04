@@ -96,6 +96,7 @@ public class Event_item_sxRProcedure {
         registerEventInternal(41, ctx -> ctx.giveItem(new ItemStack(Blocks.CHEST), 1, item -> {item.enchant(ctx.getWorld().registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH), 1);}));
         registerEventInternal(42, ctx -> ctx.TimelimitedCombat(EntityType.SILVERFISH, 1, 1, 40, 41, 0, "§e抢劫！"));
         registerEventInternal(43, ctx -> ctx.eventMultiple(10));
+        registerEventInternal(44, ctx -> ctx.set.giveTagLootItem(true,"c:curio/code"));
     }
 
     public static boolean execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
