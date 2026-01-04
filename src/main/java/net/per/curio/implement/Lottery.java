@@ -67,14 +67,14 @@ public class Lottery {
                             }
                     ));
             effectMap.put(PrimogemcraftModItems.QWLZDLT.get(), cp ->
-                    cp.lottery(0.2,
-                            () -> {
-                                cp.getTool().giveItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()),40);
-                                cp.announce("§a获得宇宙碎片！");
-                            },
+                    cp.lottery(0.5,
                             () -> {
                                 cp.getTool().giveTagLootItem(true, "c:curio/negative");
                                 cp.announce("§c获得负面奇物！");
+                            },
+                            () -> {
+                                cp.getTool().giveItem(new ItemStack(PrimogemcraftModItems.YUZHOUSUIPIAN.get()),40);
+                                cp.announce("§a获得宇宙碎片！");
                             }
                     ));
             effectMap.put(PrimogemcraftModItems.QWYHJB.get(), cp ->
