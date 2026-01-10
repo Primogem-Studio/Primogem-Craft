@@ -20284,7 +20284,7 @@
       "name": "SHJwupin",
       "type": "item",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "sh_jwupin",
       "metadata": {
         "files": [

@@ -2,9 +2,9 @@
   "_fv": 79,
   "_type": "item",
   "definition": {
-    "renderType": 1,
+    "renderType": 0,
     "texture": "shijiansucai",
-    "customModelName": "shijian_moxing:default",
+    "customModelName": "Normal",
     "guiTexture": "",
     "customProperties": {},
     "states": [],
