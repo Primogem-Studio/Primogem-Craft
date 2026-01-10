@@ -19,7 +19,7 @@ import java.util.List;
 
 public class MllphjItem extends Item {
 	public MllphjItem() {
-		super(new Item.Properties().durability(1792).fireResistant().rarity(Rarity.UNCOMMON));
+		super(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.UNCOMMON));
 	}
 
 	@Override
@@ -34,7 +34,7 @@ public class MllphjItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		MllpwzsxProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
+		MllpwzsxProcedure.execute(world, entity, ar.getObject());
 		return ar;
 	}
 }

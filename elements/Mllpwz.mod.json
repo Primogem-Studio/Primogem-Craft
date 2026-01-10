@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "mllp_wz",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "animations": [],
@@ -19,7 +20,7 @@
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
-    "damageCount": 2048,
+    "damageCount": 0,
     "recipeRemainder": {
       "value": ""
     },
@@ -33,7 +34,7 @@
     "specialInformation": {
       "fixedValue": [
         "§7潜行右键对脚下方块进行记录",
-        "§7右键寻找§d5*y*5§7范围内的记录方块",
+        "§7右键寻找§d9*y*9§7范围内的记录方块",
         "§d可以探测所有方块！"
       ]
     },
@@ -62,6 +63,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []
