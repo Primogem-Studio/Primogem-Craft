@@ -14,7 +14,7 @@ import java.util.List;
 
 import static net.mcreator.ceshi.PrimogemcraftMod.MODID;
 
-@EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = MODID)
 public record Information(String code, String name, List<String> items, List<Component> lines) {
     @SubscribeEvent
     private static void onRegisterClientReloadListeners(RegisterClientReloadListenersEvent event) {

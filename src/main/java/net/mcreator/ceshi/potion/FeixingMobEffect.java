@@ -18,30 +18,30 @@ import net.neoforged.neoforge.common.NeoForgeMod;
 
 import static net.mcreator.ceshi.PrimogemcraftMod.MODID;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class FeixingMobEffect extends MobEffect {
-	public FeixingMobEffect() {
-		super(MobEffectCategory.NEUTRAL, -1);
-		addAttributeModifier(NeoForgeMod.CREATIVE_FLIGHT, ResourceLocation.fromNamespaceAndPath(MODID, "fly"), 1, AttributeModifier.Operation.ADD_VALUE);
-	}
+    public FeixingMobEffect() {
+        super(MobEffectCategory.NEUTRAL, -1);
+        addAttributeModifier(NeoForgeMod.CREATIVE_FLIGHT, ResourceLocation.fromNamespaceAndPath(MODID, "fly"), 1, AttributeModifier.Operation.ADD_VALUE);
+    }
 
-	@SubscribeEvent
-	public static void registerMobEffectExtensions(RegisterClientExtensionsEvent event) {
-		event.registerMobEffect(new IClientMobEffectExtensions() {
-			@Override
-			public boolean isVisibleInInventory(MobEffectInstance effect) {
-				return false;
-			}
+    @SubscribeEvent
+    public static void registerMobEffectExtensions(RegisterClientExtensionsEvent event) {
+        event.registerMobEffect(new IClientMobEffectExtensions() {
+            @Override
+            public boolean isVisibleInInventory(MobEffectInstance effect) {
+                return false;
+            }
 
-			@Override
-			public boolean renderInventoryText(MobEffectInstance instance, EffectRenderingInventoryScreen<?> screen, GuiGraphics guiGraphics, int x, int y, int blitOffset) {
-				return false;
-			}
+            @Override
+            public boolean renderInventoryText(MobEffectInstance instance, EffectRenderingInventoryScreen<?> screen, GuiGraphics guiGraphics, int x, int y, int blitOffset) {
+                return false;
+            }
 
-			@Override
-			public boolean isVisibleInGui(MobEffectInstance effect) {
-				return false;
-			}
-		}, PrimogemcraftModMobEffects.FEIXING.get());
-	}
+            @Override
+            public boolean isVisibleInGui(MobEffectInstance effect) {
+                return false;
+            }
+        }, PrimogemcraftModMobEffects.FEIXING.get());
+    }
 }

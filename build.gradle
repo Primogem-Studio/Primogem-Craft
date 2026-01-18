@@ -36,8 +36,14 @@ neoForge {
             sourceSet sourceSets.main
         }
     }
+
     accessTransformers {
         from "src/main/resources/pgc.at"
+    }
+
+    parchment {
+        mappingsVersion = "2024.11.17"
+        minecraftVersion = "1.21.1"
     }
 }
 
