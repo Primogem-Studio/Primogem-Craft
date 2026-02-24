@@ -100,10 +100,4 @@ public class CompasspProcedure {
                     blockAction.accept(pos);
                 });
     }
-
-    public static Consumer<BlockPos> createExplosionAction(Level level, float power, boolean destroyBlocks) {
-        return pos -> {
-            level.explode(null, pos.getX(), pos.getY(), pos.getZ(), power, Level.ExplosionInteraction.TNT);
-        };
-    }
 }

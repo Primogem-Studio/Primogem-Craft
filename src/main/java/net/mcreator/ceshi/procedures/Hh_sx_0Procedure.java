@@ -60,7 +60,7 @@ public class Hh_sx_0Procedure {
 					if (!((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.AIR)) {
 						if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "hh_baozha")) {
 							if (world instanceof Level _level && !_level.isClientSide()) {
-								CompasspProcedure.operateOnSpacedBlocks(new BlockPos((int) x, (int) y, (int) z), 3, 16, _level, CompasspProcedure.createExplosionAction(_level, 100, true));
+								CompasspProcedure.operateOnSpacedBlocks(new BlockPos((int) x, (int) y, (int) z), 3, 16, _level, pos -> _level.explode(null, pos.getX(), pos.getY(), pos.getZ(), 100, Level.ExplosionInteraction.TNT));
 							}
 						} else {
 							if (world instanceof Level _level) {
