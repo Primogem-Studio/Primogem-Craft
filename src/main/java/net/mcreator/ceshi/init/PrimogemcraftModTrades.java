@@ -17,7 +17,7 @@ import net.minecraft.world.item.ItemStack;
 public class PrimogemcraftModTrades {
 	@SubscribeEvent
 	public static void registerWanderingTrades(WandererTradesEvent event) {
-		event.getGenericTrades().add(new BasicItemListing(new ItemStack(Blocks.DIRT), new ItemStack(PrimogemcraftModBlocks.SHENMIWANOU.get()), 10, 5, 0.05f));
+		event.getGenericTrades().add(new BasicItemListing(new ItemStack(Blocks.TNT, 9), new ItemStack(PrimogemcraftModBlocks.SHENMIWANOU.get()), 10, 5, 0.05f));
 	}
 
 	@SubscribeEvent

@@ -9,10 +9,14 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.CustomData;
+import net.minecraft.world.level.Explosion;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.Objects;
+import java.util.function.Consumer;
+import java.util.stream.IntStream;
 
 public class CompasspProcedure {
     public static void execute(LevelAccessor world, Player player, ItemStack itemstack, String tag, int radius) {
@@ -62,5 +66,44 @@ public class CompasspProcedure {
         }
 
         player.displayClientMessage(Component.literal(("§d已将§f" + (new ItemStack(BuiltInRegistries.BLOCK.get(ResourceLocation.parse(((itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("fnagkuai"))).toLowerCase(java.util.Locale.ENGLISH))))).getDisplayName().getString() + "§d设置为寻找目标")), true);
+    }
+
+    public static void operateOnSpacedBlocks(
+            BlockPos center,
+            int n,
+            int spacing,
+            Level level,
+            Consumer<BlockPos> blockAction
+    ) {
+        if (level.isClientSide()||n <= 0 || n % 2 == 0) {
+            return;
+        }
+
+        int half = n / 2;
+        int step = spacing + 1;
+
+        IntStream.rangeClosed(-half, half)
+                .boxed()
+                .flatMap(xOffset -> IntStream.rangeClosed(-half, half)
+                        .boxed()
+                        .flatMap(yOffset -> IntStream.rangeClosed(-half, half)
+                                .mapToObj(zOffset -> {
+                                    return center.offset(
+                                            xOffset * step,
+                                            yOffset * step,
+                                            zOffset * step
+                                    );
+                                })
+                        )
+                )
+                .forEach(pos -> {
+                    blockAction.accept(pos);
+                });
+    }
+
+    public static Consumer<BlockPos> createExplosionAction(Level level, float power, boolean destroyBlocks) {
+        return pos -> {
+            level.explode(null, pos.getX(), pos.getY(), pos.getZ(), power, Level.ExplosionInteraction.TNT);
+        };
     }
 }

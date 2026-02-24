@@ -59,8 +59,9 @@ public class Hh_sx_0Procedure {
 				PrimogemcraftMod.queueServerWork(40, () -> {
 					if (!((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.AIR)) {
 						if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "hh_baozha")) {
-							if (world instanceof Level _level && !_level.isClientSide())
-								_level.explode(null, x, y, z, 42, Level.ExplosionInteraction.TNT);
+							if (world instanceof Level _level && !_level.isClientSide()) {
+								CompasspProcedure.operateOnSpacedBlocks(new BlockPos((int) x, (int) y, (int) z), 3, 16, _level, CompasspProcedure.createExplosionAction(_level, 100, true));
+							}
 						} else {
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {

@@ -10,9 +10,9 @@
         "entries": [
           {
             "price1": {
-              "value": "Blocks.DIRT#0"
+              "value": "Blocks.TNT"
             },
-            "countPrice1": 1,
+            "countPrice1": 9,
             "price2": {
               "value": ""
             },
