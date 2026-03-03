@@ -107,20 +107,6 @@
           "y": 46,
           "locked": false
         }
-      },
-      {
-        "type": "sprite",
-        "data": {
-          "sprite": "qunxingzhuanhuanqi_sx.png",
-          "spritesCount": 11,
-          "spriteIndex": {
-            "fixedValue": 0.0,
-            "name": "GUIqxzhqsx0"
-          },
-          "x": 133,
-          "y": 46,
-          "locked": false
-        }
       }
     ],
     "gridSettings": {

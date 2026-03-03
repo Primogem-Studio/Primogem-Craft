@@ -33,7 +33,7 @@ public class GUIhyzhqMenu extends AbstractContainerMenu implements Primogemcraft
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
 		public Object put(String key, Object value) {
-			if (!this.containsKey(key) && this.size() >= 7)
+			if (!this.containsKey(key) && this.size() >= 6)
 				return null;
 			return super.put(key, value);
 		}
@@ -184,56 +184,58 @@ public class GUIhyzhqMenu extends AbstractContainerMenu implements Primogemcraft
 		return itemstack;
 	}
 
-	@Override
-	protected boolean moveItemStackTo(ItemStack p_38904_, int p_38905_, int p_38906_, boolean p_38907_) {
+	@Override /**
+				* Merges provided ItemStack with the first available one in the container/player inventor between minIndex (included) and maxIndex (excluded). Args : stack, minIndex, maxIndex, negativDirection. [!] the Container implementation do not check if the item is valid for the slot
+				*/
+	protected boolean moveItemStackTo(ItemStack stack, int startIndex, int endIndex, boolean reverseDirection) {
 		boolean flag = false;
-		int i = p_38905_;
-		if (p_38907_) {
-			i = p_38906_ - 1;
+		int i = startIndex;
+		if (reverseDirection) {
+			i = endIndex - 1;
 		}
-		if (p_38904_.isStackable()) {
-			while (!p_38904_.isEmpty() && (p_38907_ ? i >= p_38905_ : i < p_38906_)) {
+		if (stack.isStackable()) {
+			while (!stack.isEmpty() && (reverseDirection ? i >= startIndex : i < endIndex)) {
 				Slot slot = this.slots.get(i);
 				ItemStack itemstack = slot.getItem();
-				if (slot.mayPlace(itemstack) && !itemstack.isEmpty() && ItemStack.isSameItemSameComponents(p_38904_, itemstack)) {
-					int j = itemstack.getCount() + p_38904_.getCount();
+				if (slot.mayPlace(itemstack) && !itemstack.isEmpty() && ItemStack.isSameItemSameComponents(stack, itemstack)) {
+					int j = itemstack.getCount() + stack.getCount();
 					int k = slot.getMaxStackSize(itemstack);
 					if (j <= k) {
-						p_38904_.setCount(0);
+						stack.setCount(0);
 						itemstack.setCount(j);
 						slot.set(itemstack);
 						flag = true;
 					} else if (itemstack.getCount() < k) {
-						p_38904_.shrink(k - itemstack.getCount());
+						stack.shrink(k - itemstack.getCount());
 						itemstack.setCount(k);
 						slot.set(itemstack);
 						flag = true;
 					}
 				}
-				if (p_38907_) {
+				if (reverseDirection) {
 					i--;
 				} else {
 					i++;
 				}
 			}
 		}
-		if (!p_38904_.isEmpty()) {
-			if (p_38907_) {
-				i = p_38906_ - 1;
+		if (!stack.isEmpty()) {
+			if (reverseDirection) {
+				i = endIndex - 1;
 			} else {
-				i = p_38905_;
+				i = startIndex;
 			}
-			while (p_38907_ ? i >= p_38905_ : i < p_38906_) {
+			while (reverseDirection ? i >= startIndex : i < endIndex) {
 				Slot slot1 = this.slots.get(i);
 				ItemStack itemstack1 = slot1.getItem();
-				if (itemstack1.isEmpty() && slot1.mayPlace(p_38904_)) {
-					int l = slot1.getMaxStackSize(p_38904_);
-					slot1.setByPlayer(p_38904_.split(Math.min(p_38904_.getCount(), l)));
+				if (itemstack1.isEmpty() && slot1.mayPlace(stack)) {
+					int l = slot1.getMaxStackSize(stack);
+					slot1.setByPlayer(stack.split(Math.min(stack.getCount(), l)));
 					slot1.setChanged();
 					flag = true;
 					break;
 				}
-				if (p_38907_) {
+				if (reverseDirection) {
 					i--;
 				} else {
 					i++;

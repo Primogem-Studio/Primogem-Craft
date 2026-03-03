@@ -1,19 +1,19 @@
 package net.mcreator.ceshi.client.gui;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.ceshi.world.inventory.GUIhyzhqMenu;
-import net.mcreator.ceshi.procedures.GUIqxzhqsx0Procedure;
 import net.mcreator.ceshi.procedures.GUIhyzhqsxProcedure;
 import net.mcreator.ceshi.init.PrimogemcraftModScreens;
 
+import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.Arrays;
 
@@ -24,6 +24,7 @@ public class GUIhyzhqScreen extends AbstractContainerScreen<GUIhyzhqMenu> implem
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private double smoothBlockNBT = 0.0;
 
 	public GUIhyzhqScreen(GUIhyzhqMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -65,8 +66,14 @@ public class GUIhyzhqScreen extends AbstractContainerScreen<GUIhyzhqMenu> implem
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-		guiGraphics.blit(ResourceLocation.parse("primogemcraft:textures/screens/qunxingzhuanhuanqi_sx.png"), this.leftPos + 7, this.topPos + 9, Mth.clamp((int) GUIqxzhqsx0Procedure.execute(world, x, y, z) * 32, 0, 320), 0, 32, 48, 352, 48);
 		RenderSystem.disableBlend();
+
+		guiGraphics.blit(ResourceLocation.parse("primogemcraft:textures/screens/jindutiao.png"), this.leftPos + 7, this.topPos + 9, 0, 0, 32, 48, 32, 48);
+		double blockNBT = Objects.requireNonNull(world.getBlockEntity(BlockPos.containing(x, y, z))).getPersistentData().getDouble("shan_bian");
+		if (smoothBlockNBT == 0) smoothBlockNBT = blockNBT;
+		smoothBlockNBT = Math.max(0, Math.min(smoothBlockNBT + (blockNBT - smoothBlockNBT) * 0.1, 330));
+		guiGraphics.blit(ResourceLocation.parse("primogemcraft:textures/screens/jindutiao2.png"), this.leftPos + 11, this.topPos + 13, 0.0f, 0.0f, 24, (int)Math.round(40 * (1 - smoothBlockNBT / 330)), 24, 1);
+
 	}
 
 	@Override
