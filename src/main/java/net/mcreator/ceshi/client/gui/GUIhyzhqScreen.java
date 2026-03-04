@@ -71,7 +71,7 @@ public class GUIhyzhqScreen extends AbstractContainerScreen<GUIhyzhqMenu> implem
 		guiGraphics.blit(ResourceLocation.parse("primogemcraft:textures/screens/jindutiao.png"), this.leftPos + 7, this.topPos + 9, 0, 0, 32, 48, 32, 48);
 		double blockNBT = Objects.requireNonNull(world.getBlockEntity(BlockPos.containing(x, y, z))).getPersistentData().getDouble("shan_bian");
 		if (smoothBlockNBT == 0) smoothBlockNBT = blockNBT;
-		smoothBlockNBT = Math.max(0, Math.min(smoothBlockNBT + (blockNBT - smoothBlockNBT) * 0.1, 330));
+		smoothBlockNBT = Math.max(0, Math.min(smoothBlockNBT + (blockNBT - smoothBlockNBT) * 0.09, 330));
 		guiGraphics.blit(ResourceLocation.parse("primogemcraft:textures/screens/jindutiao2.png"), this.leftPos + 11, this.topPos + 13, 0.0f, 0.0f, 24, (int)Math.round(40 * (1 - smoothBlockNBT / 330)), 24, 1);
 
 	}
