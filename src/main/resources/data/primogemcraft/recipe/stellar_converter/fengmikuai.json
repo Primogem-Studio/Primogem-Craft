@@ -1,0 +1,12 @@
+{
+  "type": "primogemcraft:stardust_converter",
+  "first": {
+    "id": "minecraft:slime_block",
+    "count": 1
+  },
+  "second": {
+    "id": "minecraft:honey_block",
+    "count": 1
+  },
+  "cost": 13
+}

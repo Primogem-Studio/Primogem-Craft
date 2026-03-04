@@ -1,0 +1,12 @@
+{
+  "type": "primogemcraft:stardust_converter",
+  "first": {
+    "id": "minecraft:glass_bottle",
+    "count": 1
+  },
+  "second": {
+    "id": "minecraft:dragon_breath",
+    "count": 1
+  },
+  "cost": 42
+}

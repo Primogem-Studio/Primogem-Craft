@@ -1,0 +1,12 @@
+{
+  "type": "primogemcraft:stardust_converter",
+  "first": {
+    "id": "minecraft:amethyst_block",
+    "count": 1
+  },
+  "second": {
+    "id": "minecraft:amethyst_shard",
+    "count": 4
+  },
+  "cost": 1
+}

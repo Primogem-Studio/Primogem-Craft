@@ -1,0 +1,12 @@
+{
+  "type": "primogemcraft:stardust_converter",
+  "first": {
+    "id": "primogemcraft:ysrzspsx",
+    "count": 1
+  },
+  "second": {
+    "id": "primogemcraft:ysrzspsx",
+    "count": 2
+  },
+  "cost": 330
+}
