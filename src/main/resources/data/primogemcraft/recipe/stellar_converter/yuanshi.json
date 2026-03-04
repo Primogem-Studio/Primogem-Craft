@@ -1,0 +1,12 @@
+{
+  "type": "primogemcraft:stardust_converter",
+  "first": {
+    "id": "primogemcraft:yuanshi",
+    "count": 2
+  },
+  "second": {
+    "id": "minecraft:diamond",
+    "count": 1
+  },
+  "cost": 8
+}

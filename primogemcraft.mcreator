@@ -36051,6 +36051,18 @@
           "src/main/java/net/mcreator/ceshi/procedures/CompasspProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Pfevent",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "pfevent",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/primogemcraft/recipe/pfevent.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
