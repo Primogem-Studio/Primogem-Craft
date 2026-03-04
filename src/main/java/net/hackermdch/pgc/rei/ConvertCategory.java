@@ -22,7 +22,7 @@ import static net.mcreator.ceshi.PrimogemcraftMod.MODID;
 
 @OnlyIn(Dist.CLIENT)
 public class ConvertCategory implements DisplayCategory<ConvertDisplay> {
-    private static final ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(MODID, "textures/screens/qunxingzhuanhuanqi_sx.png");
+    private static final ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(MODID, "textures/screens/jindutiao.png");
     private static final ResourceLocation itemTexture = ResourceLocation.fromNamespaceAndPath(MODID, "textures/item/shan_bian_zhi_chen_.png");
 
     @Override
@@ -35,7 +35,7 @@ public class ConvertCategory implements DisplayCategory<ConvertDisplay> {
         var widgets = ImmutableList.<Widget>builder();
         var startPoint = new Point(bounds.getCenterX(), bounds.getCenterY());
         widgets.add(Widgets.createRecipeBase(bounds));
-        widgets.add(Widgets.createDrawableWidget((graphics, mouseX, mouseY, delta) -> graphics.blit(texture, startPoint.x - 50, startPoint.y - 12, 16, 24, 320, 0, 32, 48, 352, 48)));
+        widgets.add(Widgets.createTexturedWidget(texture, new Rectangle(startPoint.x - 50 , startPoint.y -12, 16, 24), 0, 0, 16, 24));
         widgets.add(Widgets.createTooltip(new Rectangle(startPoint.x - 50, startPoint.y - 12, 16, 24), Component.translatable("rei.pgc.tooltip.convert", display.cost)));
         widgets.add(Widgets.createTexturedWidget(itemTexture, new Rectangle(startPoint.x - 56, startPoint.y + 20, 8, 8), 0, 16, 8, 8));
         widgets.add(Widgets.withTranslate(Widgets.createLabel(new Point(0, 0), Component.literal( "x" + String.format("%.1f", (float) display.cost / 3))).color(0x000000).noShadow(), (new Matrix4f()).translate(startPoint.x - 43, startPoint.y + 22.5f, 0).scale(0.5F, 0.5F, 1.0F)));
