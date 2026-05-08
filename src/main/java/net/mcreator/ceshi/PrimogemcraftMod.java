@@ -57,6 +57,7 @@ public class PrimogemcraftMod {
 		PrimogemcraftModVillagerProfessions.PROFESSIONS.register(modEventBus);
 		PrimogemcraftModAttributes.REGISTRY.register(modEventBus);
 		// Start of user code block mod init
+		net.per.registry.ElixirPGC.ACTIONS.register(modEventBus);
 		CustomRegister.register(modEventBus);
 		// End of user code block mod init
 	}

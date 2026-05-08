@@ -1,0 +1,8 @@
+{
+  "item": "primogemcraft:yuanshi",
+  "calc": "elixir:plus",
+  "prefix": "item.elixir.prefix.plus",
+  "pharm": 25,
+  "base": 10,
+  "stability": 25
+}
