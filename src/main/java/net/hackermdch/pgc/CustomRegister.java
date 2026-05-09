@@ -12,6 +12,7 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemConditionType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.per.registry.ElixirPGC;
 
 import java.util.function.Supplier;
 
@@ -48,5 +49,6 @@ public class CustomRegister {
         RECIPE_TYPES.register(modBus);
         RECIPE_SERIALIZERS.register(modBus);
         if (ModList.get().isLoaded("tacz")) TaczEventHandler.register();
+        if (ModList.get().isLoaded("elixir")) ElixirPGC.init(modBus);
     }
 }
