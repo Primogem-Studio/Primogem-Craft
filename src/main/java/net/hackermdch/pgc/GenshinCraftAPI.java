@@ -1,7 +1,7 @@
 package net.hackermdch.pgc;
 
-import net.hacker.genshincraft.element.Element;
-import net.hacker.genshincraft.element.ElementDamageSource;
+import net.hackermdch.genshincraft.element.Element;
+import net.hackermdch.genshincraft.element.ElementDamageSource;
 import net.minecraft.world.damagesource.DamageSource;
 
 public class GenshinCraftAPI {

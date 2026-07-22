@@ -44,7 +44,7 @@ side="BOTH"
 [[dependencies.primogemcraft]]
 modId="genshincraft"
 type="optional"
-versionRange="[2.7.0,)"
+versionRange="[3.0.0,)"
 ordering="AFTER"
 side="BOTH"
 # End of user code block dependencies configuration

@@ -4,15 +4,12 @@ import net.hackermdch.pgc.network.ParticlePacket;
 import net.hackermdch.pgc.network.WishInfoConfiguration;
 import net.hackermdch.pgc.network.WishInfoPacket;
 import net.mcreator.ceshi.CustomBarRegister;
-import net.mcreator.ceshi.GenshinCraftLinkage;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 import net.mcreator.ceshi.init.PrimogemcraftModMobEffects;
 import net.mcreator.ceshi.init.PrimogemcraftModTabs;
 import net.minecraft.client.gui.Gui;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -22,7 +19,6 @@ import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerHeartTypeEvent;
 import net.neoforged.neoforge.network.event.RegisterConfigurationTasksEvent;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
-import net.neoforged.neoforge.registries.RegisterEvent;
 
 import java.util.function.BiConsumer;
 
@@ -50,13 +46,6 @@ public class EventHandler {
         if (ModList.get().isLoaded("roughlyenoughitems")) {
             WishInfoPacket.register(registrar);
         }
-    }
-
-    @SubscribeEvent(priority = EventPriority.LOWEST, receiveCanceled = true)
-    private static void onRegister(RegisterEvent event) {
-        if (!ModList.get().isLoaded("genshincraft")) return;
-        if (event.getRegistry() == BuiltInRegistries.ITEM) GenshinCraftLinkage.items();
-        else if (event.getRegistry() == BuiltInRegistries.MOB_EFFECT) GenshinCraftLinkage.effects();
     }
 
     @SubscribeEvent

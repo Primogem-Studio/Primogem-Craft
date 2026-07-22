@@ -36805,17 +36805,6 @@
       "TAG:c:tools/melee_weapon",
       "TAG:c:tools/shield"
     ],
-    "ITEMS:genshincraft:anemo_infusion": [
-      "CUSTOM:Zizaitiejian",
-      "CUSTOM:Zizaizuanshijian",
-      "CUSTOM:Zizaihejinjian",
-      "CUSTOM:Zizgao",
-      "CUSTOM:Zizaifu",
-      "CUSTOM:Zizaiqiao",
-      "CUSTOM:Zizaichu",
-      "CUSTOM:Tkzr",
-      "Items.HePuYuan"
-    ],
     "ENTITIES:pgc:qiyuan": [
       "CUSTOM:QQyuanchuzi01",
       "CUSTOM:QQQyuanchulan01",
@@ -37044,17 +37033,6 @@
       "CUSTOM:Ydggz",
       "CUSTOM:Shenmiwanou"
     ],
-    "ITEMS:genshincraft:dendro_infusion": [
-      "CUSTOM:Sztj",
-      "CUSTOM:Szzsj",
-      "CUSTOM:Szhjj",
-      "CUSTOM:Szg",
-      "CUSTOM:Szf",
-      "CUSTOM:Szq",
-      "CUSTOM:Szc",
-      "CUSTOM:Zfg",
-      "CUSTOM:Pyjl"
-    ],
     "ITEMS:pgc:wuqi/5": [
       "CUSTOM:Zfzr",
       "CUSTOM:Wqzhg",
@@ -37072,16 +37050,6 @@
     ],
     "ITEMS:pgc:token_mending": [
       "TAG:c:curio"
-    ],
-    "ITEMS:genshincraft:cryo_infusion": [
-      "CUSTOM:Axtj",
-      "CUSTOM:Axzsj",
-      "CUSTOM:Axhjj",
-      "CUSTOM:Axg",
-      "CUSTOM:Yxaxg",
-      "CUSTOM:Axf",
-      "CUSTOM:Axq",
-      "CUSTOM:Axc"
     ],
     "BLOCKS:minecraft:fences": [
       "CUSTOM:Yishijiemuzhalan",
@@ -37283,28 +37251,6 @@
     ],
     "ITEMS:c:curio/special/code": [
       "CUSTOM:Qwjcdm"
-    ],
-    "ITEMS:genshincraft:pyro_infusion": [
-      "CUSTOM:Rytj",
-      "CUSTOM:Ryzsj",
-      "CUSTOM:Ryhjj",
-      "CUSTOM:Ryg",
-      "CUSTOM:Ryf",
-      "CUSTOM:Ryq",
-      "CUSTOM:Ryc",
-      "CUSTOM:Hmzz"
-    ],
-    "ITEMS:genshincraft:electro_infusion": [
-      "CUSTOM:Zstj",
-      "CUSTOM:Zszsj",
-      "CUSTOM:Zshjj",
-      "CUSTOM:Zsg",
-      "CUSTOM:Zsq",
-      "CUSTOM:Zsf",
-      "CUSTOM:Zsc",
-      "CUSTOM:Tiaoguozhang",
-      "CUSTOM:Wqzhg",
-      "CUSTOM:Tczdg"
     ],
     "ITEMS:c:curio/other/ealing_wax": [
       "CUSTOM:Hqfeng",
@@ -38047,16 +37993,6 @@
     "ITEMS:minecraft:foot_armor": [
       "~CUSTOM:Kkuijiaceshi.boots"
     ],
-    "ITEMS:genshincraft:geo_infusion": [
-      "CUSTOM:Jljtie",
-      "CUSTOM:Jljzs",
-      "CUSTOM:Jjljxjhj",
-      "CUSTOM:Jlg",
-      "CUSTOM:Jlf",
-      "CUSTOM:Jlq",
-      "CUSTOM:Jlc",
-      "CUSTOM:Zfzr"
-    ],
     "ITEMS:primogemcraft:yuansujingticailiaobiaoqian": [
       "CUSTOM:Zziyousongshi",
       "CUSTOM:Jianlaohuangyu",
@@ -38087,17 +38023,6 @@
       "CUSTOM:Mlxdml02",
       "CUSTOM:Mlxdml03",
       "CUSTOM:Dbmlk"
-    ],
-    "ITEMS:genshincraft:hydro_infusion": [
-      "CUSTOM:Djtj",
-      "CUSTOM:Ddjzsj",
-      "CUSTOM:Djhjj",
-      "CUSTOM:Djg",
-      "CUSTOM:Djf",
-      "CUSTOM:Djq",
-      "CUSTOM:Djc",
-      "CUSTOM:Zfg",
-      "CUSTOM:Jslyzh"
     ],
     "ITEMS:minecraft:axes": [
       "~CUSTOM:Axf",

@@ -2,6 +2,7 @@ package net.hackermdch.pgc;
 
 import net.hackermdch.pgc.network.WishInfoConfiguration;
 import net.hackermdch.pgc.tacz.TaczEventHandler;
+import net.mcreator.ceshi.GenshinCraftLinkage;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -50,5 +51,6 @@ public class CustomRegister {
         RECIPE_SERIALIZERS.register(modBus);
         if (ModList.get().isLoaded("tacz")) TaczEventHandler.register();
         if (ModList.get().isLoaded("elixir")) ElixirPGC.init(modBus);
+        if (ModList.get().isLoaded("genshincraft")) modBus.register(GenshinCraftLinkage.class);
     }
 }
