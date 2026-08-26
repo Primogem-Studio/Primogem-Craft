@@ -17,7 +17,7 @@ public class ElixirPGC {
 
     static {
         ACTIONS.register("yuanshi", () -> (pharm, time, stack, level, entity) -> {
-            if (!level.isClientSide) {
+            if (!level.isClientSide && pharm > 1) {
                 if (entity instanceof Player player)
                     new SpawnWishiEntity.Spawn(level, player, pharm, pharm, false).Spawn();
                 else
