@@ -78,7 +78,7 @@ repositories {
  */
 dependencies {
     implementation "maven.modrinth:genshincraft:3.1.1"
-    implementation "maven.modrinth:elixir_dan:1.2.3"
+    implementation "maven.modrinth:elixir_dan:1.2.4"
     implementation "com.tacz:tacz-neoforge:1.1.6-hotfix-r5-hm"
     implementation "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1"
     api "me.shedaniel:RoughlyEnoughItems-neoforge:16.0.799"

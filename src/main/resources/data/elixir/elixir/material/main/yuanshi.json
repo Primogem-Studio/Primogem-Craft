@@ -3,6 +3,7 @@
   "effect": "primogemcraft:yuanshi",
   "pharm": 10,
   "stability": -10,
+  "description": "item.elixir.material.desc.primogemcraft.main.yuanshi",
   "colors": [
     4294967295,
     4294436800,

@@ -1,0 +1,9 @@
+{
+  "item": "primogemcraft:jlliang",
+  "calc": "primogemcraft:jianshao",
+  "prefix": "item.elixir.prefix.jianshao",
+  "pharm": 40,
+  "base": 40,
+  "stability": -50,
+  "description": "item.elixir.material.desc.primogemcraft.off.jlliang"
+}

@@ -1,0 +1,10 @@
+{
+  "item": "primogemcraft:jlliang",
+  "effect": "primogemcraft:jlliang",
+  "pharm": 40,
+  "stability": -50,
+  "colors": [
+    4294955597
+  ],
+  "description": "item.elixir.material.desc.primogemcraft.main.jlliang"
+}

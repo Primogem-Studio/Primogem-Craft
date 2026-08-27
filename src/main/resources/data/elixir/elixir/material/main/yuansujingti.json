@@ -1,0 +1,10 @@
+{
+  "item": "primogemcraft:yuansujingti",
+  "effect": "primogemcraft:yuansujingti",
+  "pharm": 3,
+  "stability": -3,
+  "colors": [
+    4289947391
+  ],
+  "description": "item.elixir.material.desc.primogemcraft.main.yuansujingti"
+}

@@ -12,6 +12,7 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -56,7 +57,9 @@ public class LivingItemRenderer extends EntityRenderer<LivingItemEntity> {
 			applySwingPose(entity, stack, poseStack);
 		}
 		if (displayContext != ItemDisplayContext.THIRD_PERSON_RIGHT_HAND || model.getTransforms() == ItemTransforms.NO_TRANSFORMS) {
-			poseStack.scale(1.6F, 1.6F, 1.6F);
+			boolean blockLike = stack.getItem() instanceof BlockItem || model.getTransforms() == ItemTransforms.NO_TRANSFORMS;
+			float scale = blockLike ? 3.2F : 1.6F;
+			poseStack.scale(scale, scale, scale);
 		}
 		int rotate = entity.getRotateTicks();
 		if (rotate > 0) {

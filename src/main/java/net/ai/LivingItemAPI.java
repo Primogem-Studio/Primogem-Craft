@@ -4,6 +4,7 @@ import net.mcreator.ceshi.init.PrimogemcraftModEntities;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -80,6 +81,31 @@ public final class LivingItemAPI {
 	/** 在指定世界中以指定物品召唤一个无限持续的生命物品实体 */
 	public static LivingItemEntity summonInfinite(Level level, Player player, ItemStack stack) {
 		return summon(level, player, stack, -1, false);
+	}
+
+	/** 将玩家背包所有物品（主背包与副手）逐个幻化为生命物品实体，持续 ticks 刻；召唤成功的物品从背包移除，返回召唤数量 */
+	public static int summonAllFromInventory(Player player, int ticks) {
+		if (player == null || player.level().isClientSide) {
+			return 0;
+		}
+		int count = 0;
+		Inventory inv = player.getInventory();
+		for (int i = 0; i < inv.items.size(); i++) {
+			ItemStack stack = inv.items.get(i);
+			if (stack.isEmpty()) {
+				continue;
+			}
+			if (summon(player.level(), player, stack, ticks, false) != null) {
+				inv.setItem(i, ItemStack.EMPTY);
+				count++;
+			}
+		}
+		ItemStack offhand = player.getOffhandItem();
+		if (!offhand.isEmpty() && summon(player.level(), player, offhand, ticks, false) != null) {
+			player.setItemInHand(InteractionHand.OFF_HAND, ItemStack.EMPTY);
+			count++;
+		}
+		return count;
 	}
 
 	/** 设置主人所有正在生存的生命物品的剩余时长为 ticks（-1 表示无限），返回受影响数量 */
