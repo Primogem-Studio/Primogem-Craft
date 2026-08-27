@@ -56,10 +56,12 @@ public class LivingItemRenderer extends EntityRenderer<LivingItemEntity> {
 		} else {
 			applySwingPose(entity, stack, poseStack);
 		}
-		if (displayContext != ItemDisplayContext.THIRD_PERSON_RIGHT_HAND || model.getTransforms() == ItemTransforms.NO_TRANSFORMS) {
-			boolean blockLike = stack.getItem() instanceof BlockItem || model.getTransforms() == ItemTransforms.NO_TRANSFORMS;
-			float scale = blockLike ? 3.2F : 1.6F;
-			poseStack.scale(scale, scale, scale);
+		boolean blockLike = stack.getItem() instanceof BlockItem || model.getTransforms() == ItemTransforms.NO_TRANSFORMS;
+		if (blockLike) {
+			displayContext = ItemDisplayContext.NONE;
+			poseStack.translate(0.0, 0.15, 0.0);
+		} else if (displayContext != ItemDisplayContext.THIRD_PERSON_RIGHT_HAND || model.getTransforms() == ItemTransforms.NO_TRANSFORMS) {
+			poseStack.scale(1.6F, 1.6F, 1.6F);
 		}
 		int rotate = entity.getRotateTicks();
 		if (rotate > 0) {
