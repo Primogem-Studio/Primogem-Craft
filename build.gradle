@@ -9,7 +9,7 @@ base.archivesName = "modid"
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 neoForge {
-    version = "21.1.242"
+    version = "21.1.248"
 
     runs {
         client {
@@ -77,11 +77,12 @@ repositories {
  * compileOnly = false 
  */
 dependencies {
-    compileOnly "maven.modrinth:genshincraft:3.0.0"
-    implementation "maven.modrinth:elixir_dan:1.0.1"
+    implementation "maven.modrinth:genshincraft:3.1.1"
+    implementation "maven.modrinth:elixir_dan:1.2.3"
     implementation "com.tacz:tacz-neoforge:1.1.6-hotfix-r5-hm"
     implementation "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1"
     api "me.shedaniel:RoughlyEnoughItems-neoforge:16.0.799"
+    runtimeOnly "maven.modrinth:jade:15.10.5+neoforge"
 }
 
 tasks.withType(JavaCompile).configureEach {
