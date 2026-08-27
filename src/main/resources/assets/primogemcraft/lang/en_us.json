@@ -1825,5 +1825,6 @@
   "item.primogemcraft.mysterylottery.description_1": "§7But there is also a chance it breaks and resets the player's event cap",
   "item.primogemcraft.mysterylottery.description_0": "§7Hold it in the off-hand and break blocks for a chance to obtain a random event",
   "item.primogemcraft.mysterylottery": "§5§l'Curio'§dMystery Lottery",
-  "guidebook.category.primogemcraft.common": "Primogem Craft"
+  "guidebook.category.primogemcraft.common": "Primogem Craft",
+  "entity.primogemcraft.living_item": "Living Item"
 }

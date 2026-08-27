@@ -58,6 +58,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.entity.EntityTypeTest;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.scores.PlayerTeam;
 import net.neoforged.neoforge.common.ItemAbilities;
@@ -67,6 +68,7 @@ import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
 import net.neoforged.neoforge.event.entity.player.SweepAttackEvent;
 import net.neoforged.neoforge.fluids.FluidType;
 
+import javax.annotation.Nullable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -89,17 +91,17 @@ public class LivingItemEntity extends PathfinderMob {
 
 	private static final TagKey<Item> TAG_RIGHT_CLICK = TagKey.create(Registries.ITEM, ResourceLocation.parse("pgc:living_item_right_click"));
 
-	/** 基础攻击力：0.3 + 物品的攻击力 ADD_VALUE 修饰符（ADD1） */
 	private static final double BASE_ATTACK_DAMAGE = 0.3;
-	/** 弓类攻击的拉弓动画总时长（刻），渲染器据此计算拉弓进度 */
 	public static final int BOW_DRAW_TICKS = 16;
 	private static final double MAX_CHASE_DISTANCE = 24.0;
 	private static final long OWNER_ATTACK_MEMORY = 100;
 	private static final long ATTACK_BLACKLIST_TIME = 100;
 	private static final String MODIFIER_PREFIX = "pgc:living_item_";
-	private static final double MOVE_SPEED_BASE = 0.6;
-	private static final double MOVE_SPEED_ATTACK_FACTOR = 0.4;
-	private static final double MOVE_SPEED_MAX = 1024.0;
+	private static final double MOVE_SPEED_IDLE = 0.1;
+	private static final double MOVE_SPEED_ATTACK = 0.6;
+	private static final double COMBAT_SPREAD_RADIUS = 1.8;
+	private static final int CHASE_STUCK_TICKS = 40;
+	private static final float RETARGET_CHANCE = 0.35F;
 
 	private int remainingTicks;
 	private int attackCooldown;
@@ -110,6 +112,9 @@ public class LivingItemEntity extends PathfinderMob {
 	private Vec3 hoverTarget;
 	private int hoverTimer;
 	private boolean reverted;
+	private double orbitAngle = Double.NaN;
+	private double lastChaseDist = Double.MAX_VALUE;
+	private int chaseStuckTicks;
 	private final Map<UUID, Long> ownerAttackMemory = new HashMap<>();
 	private final Map<UUID, Long> attackBlacklist = new HashMap<>();
 
@@ -173,19 +178,6 @@ public class LivingItemEntity extends PathfinderMob {
 			clearItemModifiers(attack);
 			attack.setBaseValue(BASE_ATTACK_DAMAGE);
 			addItemModifiers(attack, mods, Attributes.ATTACK_DAMAGE);
-		}
-		double attackDamage = this.getAttributeValue(Attributes.ATTACK_DAMAGE);
-		double moveSpeed = Math.min(MOVE_SPEED_MAX, Math.max(0.1, MOVE_SPEED_BASE + attackDamage * MOVE_SPEED_ATTACK_FACTOR));
-		AttributeInstance move = this.getAttribute(Attributes.MOVEMENT_SPEED);
-		if (move != null) {
-			clearItemModifiers(move);
-			move.setBaseValue(moveSpeed);
-			addItemModifiers(move, mods, Attributes.MOVEMENT_SPEED);
-		}
-		AttributeInstance fly = this.getAttribute(Attributes.FLYING_SPEED);
-		if (fly != null) {
-			clearItemModifiers(fly);
-			fly.setBaseValue(this.getAttributeValue(Attributes.MOVEMENT_SPEED));
 		}
 	}
 
@@ -266,6 +258,37 @@ public class LivingItemEntity extends PathfinderMob {
 	}
 
 	@Override
+	public void setTarget(@Nullable LivingEntity target) {
+		super.setTarget(target);
+		if (target == null) {
+			this.lastChaseDist = Double.MAX_VALUE;
+			this.chaseStuckTicks = 0;
+		} else {
+			if (Double.isNaN(this.orbitAngle)) {
+				this.orbitAngle = this.random.nextDouble() * Math.PI * 2.0;
+			}
+		}
+	}
+
+	@Override
+	public boolean canBeCollidedWith() {
+		return false;
+	}
+
+	@Override
+	public boolean isPushable() {
+		return false;
+	}
+
+	@Override
+	protected void doPush(Entity entity) {
+	}
+
+	@Override
+	public void push(Entity entity) {
+	}
+
+	@Override
 	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
 		return false;
 	}
@@ -298,7 +321,7 @@ public class LivingItemEntity extends PathfinderMob {
 		}
 		if (this.getHealth() <= 0.0F) {
 			this.setHealth(0.0F);
-			revertToItem();
+			revertByDeath();
 			return true;
 		}
 		return true;
@@ -360,6 +383,21 @@ public class LivingItemEntity extends PathfinderMob {
 			}
 		}
 		this.calculateEntityAnimation(false);
+	}
+
+	private void steerTo(double x, double y, double z, double speed) {
+		double dx = x - this.getX();
+		double dy = y - this.getY();
+		double dz = z - this.getZ();
+		double distSq = dx * dx + dy * dy + dz * dz;
+		if (distSq < 1.0E-4) {
+			this.setDeltaMovement(0.0, 0.0, 0.0);
+			return;
+		}
+		double dist = Math.sqrt(distSq);
+		double step = Math.min(speed, dist);
+		double k = step / dist;
+		this.setDeltaMovement(dx * k, dy * k, dz * k);
 	}
 
 	@Override
@@ -445,6 +483,9 @@ public class LivingItemEntity extends PathfinderMob {
 			return;
 		}
 		if (owner.isDeadOrDying() || !owner.isAlive()) {
+			if (this.isInfinite()) {
+				return;
+			}
 			revertToItem();
 			return;
 		}
@@ -507,12 +548,22 @@ public class LivingItemEntity extends PathfinderMob {
 		}
 		double distToHover = this.distanceToSqr(this.hoverTarget.x, this.hoverTarget.y, this.hoverTarget.z);
 		if (distToHover > 0.5 * 0.5) {
-			this.getMoveControl().setWantedPosition(this.hoverTarget.x, this.hoverTarget.y, this.hoverTarget.z, 0.9);
+			steerTo(this.hoverTarget.x, this.hoverTarget.y, this.hoverTarget.z, MOVE_SPEED_IDLE);
 			this.lookAt(owner, 30.0F, 30.0F);
 		}
 	}
 
 	private Vec3 pickHoverPoint(Player owner) {
+		for (int attempt = 0; attempt < 5; attempt++) {
+			Vec3 point = randomHoverPoint(owner);
+			if (isHoverPointFree(point)) {
+				return point;
+			}
+		}
+		return randomHoverPoint(owner);
+	}
+
+	private Vec3 randomHoverPoint(Player owner) {
 		double angle = this.random.nextDouble() * Math.PI * 2.0;
 		double radius = 1.5 + this.random.nextDouble() * 2.5;
 		double x = owner.getX() + Math.cos(angle) * radius;
@@ -524,7 +575,17 @@ public class LivingItemEntity extends PathfinderMob {
 		return new Vec3(x, y, z);
 	}
 
+	private boolean isHoverPointFree(Vec3 point) {
+		if (this.level().isClientSide) {
+			return true;
+		}
+		AABB box = new AABB(point.x - 1.2, point.y - 1.2, point.z - 1.2, point.x + 1.2, point.y + 1.2, point.z + 1.2);
+		return this.level().getEntities(EntityTypeTest.forClass(LivingItemEntity.class), box,
+				e -> e != this && Objects.equals(e.getOwnerUuid(), this.getOwnerUuid())).isEmpty();
+	}
+
 	private void updateCombat(Player owner, LivingEntity target) {
+		this.hoverTarget = null;
 		this.lookAt(target, 30.0F, 30.0F);
 		ItemStack stack = this.getCarriedStack();
 		if (isBowLike(stack)) {
@@ -543,23 +604,73 @@ public class LivingItemEntity extends PathfinderMob {
 			this.attackCooldown--;
 			return;
 		}
-		double distSq = this.distanceToSqr(target);
+		double distSq = target.getBoundingBox().distanceToSqr(this.position());
 		if (distSq > this.attackRange * this.attackRange) {
-			this.getNavigation().moveTo(target.getX(), target.getY() + 1.0, target.getZ(), 1.0);
-			this.attackCooldown = 2;
+			chaseTarget(owner, target, distSq);
+			return;
+		}
+		if (target.invulnerableTime > 0) {
+			this.attackCooldown = 3;
+			if (this.random.nextFloat() < 0.25F) {
+				Mob alt = findTarget(owner);
+				if (alt != null && alt != target && isValidTarget(alt, owner)) {
+					this.setTarget(alt);
+				}
+			}
 			return;
 		}
 		if (attackWithStack(owner, target)) {
 			this.entityData.set(DATA_SWING, 5);
 			this.attackCooldown = this.attackInterval;
+			if (this.random.nextFloat() < RETARGET_CHANCE) {
+				Mob alt = findTarget(owner);
+				if (alt != null && alt != target && isValidTarget(alt, owner)) {
+					this.setTarget(alt);
+				}
+			}
 		}
 	}
 
-	/**
-	 * 使用携带的物品、以主人为攻击者执行一次完整攻击，与玩家攻击的附魔流程对齐：
-	 * 伤害源为主人，先算附魔加成伤害（锋利/亡灵杀手/节肢杀手等），结算伤害后依次触发
-	 * hurtEnemy → 附魔后置效果（火焰附加等）→ postHurtEnemy，并计算附魔击退，同步耐久。
-	 */
+	private void chaseTarget(Player owner, LivingEntity target, double distSq) {
+		double prev = this.lastChaseDist;
+		this.lastChaseDist = distSq;
+		if (distSq < prev - 0.25) {
+			this.chaseStuckTicks = 0;
+		} else {
+			this.chaseStuckTicks++;
+		}
+		if (this.chaseStuckTicks >= CHASE_STUCK_TICKS) {
+			this.chaseStuckTicks = 0;
+			this.orbitAngle += 1.0 + this.random.nextDouble() * 2.0;
+		}
+		if (isCrowded()) {
+			this.orbitAngle += 0.35;
+		}
+		Vec3 point = combatHoverPoint(target);
+		steerTo(point.x, point.y, point.z, MOVE_SPEED_ATTACK);
+		this.attackCooldown = 2;
+	}
+
+	private Vec3 combatHoverPoint(LivingEntity target) {
+		double radius = Math.max(1.0, this.attackRange * 0.65);
+		double x = target.getX() + Math.cos(this.orbitAngle) * radius;
+		double z = target.getZ() + Math.sin(this.orbitAngle) * radius;
+		double y = target.getY() + 1.0;
+		if (!this.level().getBlockState(BlockPos.containing(x, y, z)).canBeReplaced()) {
+			y += 1.0;
+		}
+		return new Vec3(x, y, z);
+	}
+
+	private boolean isCrowded() {
+		if (this.level().isClientSide) {
+			return false;
+		}
+		return !this.level().getEntities(EntityTypeTest.forClass(LivingItemEntity.class),
+				this.getBoundingBox().inflate(COMBAT_SPREAD_RADIUS),
+				e -> e != this && Objects.equals(e.getOwnerUuid(), this.getOwnerUuid())).isEmpty();
+	}
+
 	private boolean attackWithStack(Player owner, LivingEntity target) {
 		if (this.level().isClientSide) {
 			return false;
@@ -577,9 +688,6 @@ public class LivingItemEntity extends PathfinderMob {
 		DamageSource source = this.level().damageSources().playerAttack(owner);
 		float baseDamage = (float) this.getAttributeValue(Attributes.ATTACK_DAMAGE);
 		float finalDamage = EnchantmentHelper.modifyDamage(serverLevel, stack, target, source, baseDamage);
-		if (stack.canPerformAction(ItemAbilities.SWORD_SWEEP) || stack.getItem().getAttackDamageBonus(target, baseDamage, source) > 0.0F) {
-			sweepAttack(serverLevel, owner, target, stack, baseDamage);
-		}
 		if (CustomAPI.GenshinCraftLoaded) {
 			source = LivingItemGenshin.elementSource(stack, source, target);
 		}
@@ -587,6 +695,9 @@ public class LivingItemEntity extends PathfinderMob {
 			this.attackBlacklist.put(target.getUUID(), this.level().getGameTime());
 			this.setTarget(null);
 			return false;
+		}
+		if (stack.canPerformAction(ItemAbilities.SWORD_SWEEP) || stack.getItem().getAttackDamageBonus(target, baseDamage, source) > 0.0F) {
+			sweepAttack(serverLevel, owner, target, stack, baseDamage);
 		}
 		double knockback = this.getAttributeValue(Attributes.ATTACK_KNOCKBACK) + EnchantmentHelper.modifyKnockback(serverLevel, stack, target, source, 0.0F);
 		if (knockback > 0.0) {
@@ -599,7 +710,7 @@ public class LivingItemEntity extends PathfinderMob {
 		if (hurtEnemy) {
 			stack.getItem().postHurtEnemy(stack, target, owner);
 		}
-		if (!stack.isEmpty()) {
+		if (!stack.isEmpty() && !this.isInfinite()) {
 			stack.hurtAndBreak(1, owner, EquipmentSlot.MAINHAND);
 		}
 		this.entityData.set(DATA_ITEM, stack.copy());
@@ -657,18 +768,37 @@ public class LivingItemEntity extends PathfinderMob {
 		this.attackBlacklist.entrySet().removeIf(entry -> now - entry.getValue() >= ATTACK_BLACKLIST_TIME);
 		this.ownerAttackMemory.entrySet().removeIf(entry -> now - entry.getValue() >= OWNER_ATTACK_MEMORY);
 		Mob best = null;
+		int bestLock = Integer.MAX_VALUE;
 		double bestDistance = Double.MAX_VALUE;
 		for (Mob mob : mobs) {
 			if (!isThreat(mob, owner, now)) {
 				continue;
 			}
+			int lock = countLocksOn(mob);
 			double d = this.distanceToSqr(mob);
-			if (d < bestDistance) {
+			if (lock < bestLock || (lock == bestLock && d < bestDistance)) {
+				bestLock = lock;
 				bestDistance = d;
 				best = mob;
 			}
 		}
 		return best;
+	}
+
+	private int countLocksOn(LivingEntity candidate) {
+		if (this.level().isClientSide) {
+			return 0;
+		}
+		int count = 0;
+		List<LivingItemEntity> allies = this.level().getEntities(EntityTypeTest.forClass(LivingItemEntity.class),
+				this.getBoundingBox().inflate(MAX_CHASE_DISTANCE),
+				e -> e != this && Objects.equals(e.getOwnerUuid(), this.getOwnerUuid()));
+		for (LivingItemEntity ally : allies) {
+			if (ally.getTarget() == candidate) {
+				count++;
+			}
+		}
+		return count;
 	}
 
 	private boolean isThreat(Mob mob, Player owner, long now) {
@@ -700,7 +830,9 @@ public class LivingItemEntity extends PathfinderMob {
 		}
 		if (target instanceof LivingEntity living && living.isAlive() && !living.isRemoved()) {
 			this.ownerAttackMemory.put(living.getUUID(), this.level().getGameTime());
-			this.setTarget(living);
+			if (this.getTarget() == null && countLocksOn(living) < 1) {
+				this.setTarget(living);
+			}
 		}
 	}
 
@@ -741,7 +873,9 @@ public class LivingItemEntity extends PathfinderMob {
 		if (!throwProjectile(owner, stack.copy(), pos, dir)) {
 			return;
 		}
-		stack.shrink(1);
+		if (!this.isInfinite()) {
+			stack.shrink(1);
+		}
 		if (stack.isEmpty()) {
 			this.entityData.set(DATA_ITEM, ItemStack.EMPTY);
 			revertToItem();
@@ -811,6 +945,9 @@ public class LivingItemEntity extends PathfinderMob {
 			owner.getInventory().setItem(slot, oldHand);
 		}
 		if (out.isEmpty()) {
+			if (this.isInfinite()) {
+				return;
+			}
 			this.entityData.set(DATA_ITEM, ItemStack.EMPTY);
 			revertToItem();
 			return;
@@ -824,7 +961,6 @@ public class LivingItemEntity extends PathfinderMob {
 		return stack.is(TAG_RIGHT_CLICK);
 	}
 
-	/** 弓类判断：不写死原版弓类，按物品的使用动画识别，兼容其他模组的弓/弩 */
 	public static boolean isBowLike(ItemStack stack) {
 		if (stack == null || stack.isEmpty()) {
 			return false;
@@ -901,6 +1037,21 @@ public class LivingItemEntity extends PathfinderMob {
 	}
 
 	public void revertToItem() {
+		if (this.isInfinite()) {
+			return;
+		}
+		revert();
+	}
+
+	public void revertByDeath() {
+		revert();
+	}
+
+	public void revertByOwner() {
+		revert();
+	}
+
+	private void revert() {
 		if (this.reverted) {
 			return;
 		}

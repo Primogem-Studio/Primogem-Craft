@@ -50,7 +50,7 @@ public class LivingItemEvents {
 		if (entity.getOwnerUuid() == null || !entity.getOwnerUuid().equals(player.getUUID())) {
 			return;
 		}
-		entity.revertToItem();
+		entity.revertByOwner();
 		event.setCanceled(true);
 		event.setCancellationResult(InteractionResult.SUCCESS);
 	}

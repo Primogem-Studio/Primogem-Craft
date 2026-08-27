@@ -1,6 +1,7 @@
 package net.mcreator.ceshi.procedures;
 
 import net.hackermdch.pgc.Timer;
+import net.ai.LivingItemAPI;
 import net.mcreator.ceshi.PrimogemcraftMod;
 import net.mcreator.ceshi.init.PrimogemcraftModGameRules;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
@@ -9,6 +10,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.damagesource.DamageSource;
@@ -102,6 +104,22 @@ public class Event_item_sxRProcedure {
         registerEventInternal(47, ctx -> {Timer.set(ctx.player, "lotteryX",72000);ctx.set.createSimpleGroup(48,49,0,"§e交付勒索");ctx.prompt("§c一小时内无法使用乐透奇物！",false); return true;});
         registerEventInternal(48, ctx -> {boolean ok = ctx.costItem(new ItemStack(YUZHOUSUIPIAN.get()), 20);if (ok) Timer.set(ctx.player, "lotteryX", 6000 );ctx.prompt(ok?"§e5分钟内无法使用乐透奇物！":"§c条件不足",false); ;return ok;});
         registerEventInternal(49, ctx -> {boolean ok = ctx.costItem(new ItemStack(YUZHOUSUIPIAN.get()), 40);if (ok) Timer.set(ctx.player, "lotteryX", 0 );ctx.prompt(ok?"§a遭遇解除，你可以使用乐透类奇物了！":"§c条件不足",false);return ok;});
+        registerEventInternal(50, ctx -> {
+            if (ctx.getWorld() instanceof ServerLevel serverLevel) {
+                for (int i = 0; i < 3; i++) {
+                    LivingItemAPI.summonInfinite(serverLevel, ctx.getPlayer(), new ItemStack(Items.DIAMOND));
+                }
+                return true;
+            }
+            return false;
+        });
+        registerEventInternal(51, ctx -> {
+            if (ctx.getWorld() instanceof ServerLevel serverLevel) {
+                LivingItemAPI.summonInfinite(serverLevel, ctx.getPlayer(), new ItemStack(PrimogemcraftModItems.YUANSHI.get()));
+                return true;
+            }
+            return false;
+        });
     }
 
     public static boolean execute(LevelAccessor world, Entity entity, ItemStack itemstack) {

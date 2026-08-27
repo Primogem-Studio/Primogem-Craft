@@ -61,6 +61,7 @@ public class ElixirPGC {
             if (pharm <= 0) {
                 return;
             }
+            stack.shrink(1);
             LivingItemAPI.summonAllFromInventory(player, Math.min(time/8, 400));
         });
         ACTIONS.register("ysrz_0", () -> (pharm, time, stack, level, entity) -> {

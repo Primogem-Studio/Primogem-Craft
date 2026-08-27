@@ -61,6 +61,8 @@ public class EventitemmssxrProcedure {
         registerDescription(47, () -> "§e交付宇宙碎片，破财免灾");
         registerDescription(48, () -> "§c消耗20宇宙碎片"+"\n"+"§e5分钟无法使用乐透");
         registerDescription(49, () -> "§c消耗40宇宙碎片"+"\n"+"§a破财免灾");
+        registerDescription(50, () -> "§e获得三个§b永久§e钻石生命物品");
+        registerDescription(51, () -> "§e获得一个§b永久§e原石生命物品");
     }
 
     public static void registerDescription(int eventId, Supplier<String> descriptionProvider) {
