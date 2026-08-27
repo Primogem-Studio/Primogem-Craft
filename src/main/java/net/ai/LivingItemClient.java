@@ -1,4 +1,4 @@
-package net.AI;
+package net.ai;
 
 import net.mcreator.ceshi.init.PrimogemcraftModEntities;
 import net.neoforged.api.distmarker.Dist;

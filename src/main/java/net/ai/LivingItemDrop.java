@@ -1,4 +1,4 @@
-package net.AI;
+package net.ai;
 
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.item.ItemEntity;

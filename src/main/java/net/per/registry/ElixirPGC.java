@@ -1,6 +1,6 @@
 package net.per.registry;
 
-import net.AI.LivingItemAPI;
+import net.ai.LivingItemAPI;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
@@ -9,7 +9,6 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.per.elixir.registry.ElixirRegistries;
 import net.per.elixir.util.IElixirAction;
-import net.per.wish.SpawnWishiEntity;
 
 import static net.mcreator.ceshi.PrimogemcraftMod.MODID;
 
