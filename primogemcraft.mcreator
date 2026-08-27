@@ -38800,6 +38800,7 @@
   "language_map": {
     "en_us": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
+      "guidebook.category.primogemcraft.common": "Primogem Craft"
       "item.primogemcraft.qwwcn.description_7": "§c -40%当前生命值",
       "item.primogemcraft.qwwcn.description_6": "§c击杀生物后：",
       "item.primogemcraft.qwwcn.description_5": "§9 +100%额外基础攻击力",
@@ -42468,6 +42469,7 @@
     },
     "zh_cn": {
       "item.primogemcraft.yuanshigao": "§b原石 镐",
+      "guidebook.category.primogemcraft.common": "原石工艺"
       "item.primogemcraft.qwwcn.description_7": "§c -40%当前生命值",
       "item.primogemcraft.qwwcn.description_6": "§c击杀生物后：",
       "item.primogemcraft.qwwcn.description_5": "§9 +100%额外基础攻击力",

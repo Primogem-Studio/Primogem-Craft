@@ -1,0 +1,28 @@
+<category name=common>
+<title>祈愿武器</title>
+<item-tag>pgc:wuqi</item-tag>
+这些异世界武器，统称<color value=ffb915>祈愿武器</color>，在原作中五星的武器在此可
+通过<color value=00ffff>祈愿</color>获取，除此之外的<color value=ffb915>祈愿武器</color>可通过制作或宝箱中获取。
+
+祈愿武器允许<color value=00ff00>升级</color>和<color value=ffff44>强化</color>，使用<item name=true>primogemcraft:tezhidieyingqi</item>来精炼祈愿武器，提
+升被动效果和技能效果的倍率，使用
+<items>
+    <item>primogemcraft:jlza</item>
+    <item>primogemcraft:jlliang</item>
+    <item>primogemcraft:jlmo</item>
+</items>
+来升级祈愿武器，提升基础
+攻击力，初始玩家的强化加成有限，使用
+<items name=true>
+    <item>primogemcraft:jhsb_0</item>
+    <item>primogemcraft:jhsb_1</item>
+    <item>primogemcraft:jhsb_2</item>
+</items>
+来突破这一上
+限，获得高额攻击力加成。
+
+使用指令或提升精炼可以调整<color value=ffff44>强化</color>倍率和等级上限：\n
+<color value=ffff00>当精炼等级大于等于<color value=00ffff>5</color>时，提升额外强化等级，提升值相当于基本上
+限的<color value=00ffff>九分之一</color></color>\n
+使用 <color value=aaaaaa>/gamerule guizewuqishangxian <color value=00ff00>值</color></color> 来提升强化上限
+使用 <color value=aaaaaa>/gamerule guizewuqishanghai <color value=00ff00>值</color></color> 来改变强化收益

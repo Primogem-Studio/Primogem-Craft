@@ -1824,5 +1824,6 @@
   "item.primogemcraft.feiqiupingzheng.description_4": "§8乐透损坏极小概率获得",
   "item.primogemcraft.mysterylottery.description_1": "§7但也有概率损坏并清空玩家的事件上限",
   "item.primogemcraft.mysterylottery.description_0": "§7副手持破坏方块，将有概率获得随机事件",
-  "item.primogemcraft.mysterylottery": "§5§l『奇物』§d奥秘大乐透"
+  "item.primogemcraft.mysterylottery": "§5§l『奇物』§d奥秘大乐透",
+  "guidebook.category.primogemcraft.common": "原石工艺"
 }
