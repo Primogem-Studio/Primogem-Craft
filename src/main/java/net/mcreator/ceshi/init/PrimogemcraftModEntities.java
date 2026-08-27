@@ -57,6 +57,13 @@ public class PrimogemcraftModEntities {
 			EntityType.Builder.<SWfengraojiangshiEntity>of(SWfengraojiangshiEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().ridingOffset(-0.6f).sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
+	public static final DeferredHolder<EntityType<?>, EntityType<net.AI.LivingItemEntity>> LIVING_ITEM = register("living_item",
+			EntityType.Builder.<net.AI.LivingItemEntity>of(net.AI.LivingItemEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).sized(0.6f, 0.6f));
+
+	@SubscribeEvent
+	public static void registerLivingItemAttributes(EntityAttributeCreationEvent event) {
+		event.put(LIVING_ITEM.get(), net.AI.LivingItemEntity.createAttributes().build());
+	}
 	// End of user code block custom entities
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

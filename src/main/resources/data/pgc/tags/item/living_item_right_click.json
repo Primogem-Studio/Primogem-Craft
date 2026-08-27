@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#pgc:wuqi",
+      "required": false
+    },
+    "minecraft:water_bucket",
+    "minecraft:lava_bucket",
+    "minecraft:ender_pearl",
+    "minecraft:wind_charge",
+    "minecraft:powder_snow_bucket"
+  ]
+}

@@ -1,5 +1,6 @@
 package net.per.registry;
 
+import net.AI.LivingItemAPI;
 import net.mcreator.ceshi.init.PrimogemcraftModItems;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
@@ -18,8 +19,10 @@ public class ElixirPGC {
     static {
         ACTIONS.register("yuanshi", () -> (pharm, time, stack, level, entity) -> {
             if (!level.isClientSide && pharm > 1) {
-                if (entity instanceof Player player)
-                    new SpawnWishiEntity.Spawn(level, player, pharm, pharm, false).Spawn();
+                if (entity instanceof Player player) {
+//                    new SpawnWishiEntity.Spawn(level, player, pharm, pharm, false).Spawn();
+                    LivingItemAPI.summon(player,2000);
+                }
                 else
                     level.addFreshEntity(new ItemEntity(level, entity.getX(), entity.getY(), entity.getZ(), new ItemStack(PrimogemcraftModItems.YUANSHI.get(), level.random.nextInt(1, pharm))));
             }

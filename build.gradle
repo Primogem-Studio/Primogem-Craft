@@ -77,7 +77,7 @@ repositories {
  * compileOnly = false 
  */
 dependencies {
-    implementation "maven.modrinth:genshincraft:3.0.0"
+    compileOnly "maven.modrinth:genshincraft:3.0.0"
     implementation "maven.modrinth:elixir_dan:1.0.1"
     implementation "com.tacz:tacz-neoforge:1.1.6-hotfix-r5-hm"
     implementation "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1"
