@@ -56,4 +56,8 @@ public class LivingItemDrop extends ItemEntity {
 	public boolean isPushable() {
 		return false;
 	}
+
+	@Override
+	public void checkBelowWorld() {
+	}
 }

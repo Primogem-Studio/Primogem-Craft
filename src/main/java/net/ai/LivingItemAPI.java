@@ -19,6 +19,7 @@ public final class LivingItemAPI {
 	private LivingItemAPI() {
 	}
 
+	/** 从玩家副手召唤生命物品实体，持续 ticks 刻（-1 表示无限），召唤成功后清空副手物品 */
 	public static LivingItemEntity summon(Player player, int ticks) {
 		if (player == null) {
 			return null;
@@ -26,6 +27,7 @@ public final class LivingItemAPI {
 		return summon(player.level(), player, player.getOffhandItem(), ticks, true);
 	}
 
+	/** 从玩家副手召唤生命物品实体；infinite 为 true 时无限持续，否则持续默认时长 */
 	public static LivingItemEntity summon(Player player, boolean infinite) {
 		if (player == null) {
 			return null;
@@ -33,6 +35,7 @@ public final class LivingItemAPI {
 		return summon(player.level(), player, player.getOffhandItem(), infinite ? -1 : DEFAULT_TICKS, true);
 	}
 
+	/** 在指定世界中从玩家副手召唤生命物品实体，持续 ticks 刻（-1 表示无限） */
 	public static LivingItemEntity summon(Level level, Player player, int ticks) {
 		if (player == null) {
 			return null;
@@ -40,6 +43,7 @@ public final class LivingItemAPI {
 		return summon(level, player, player.getOffhandItem(), ticks, true);
 	}
 
+	/** 在指定世界中从玩家副手召唤生命物品实体；infinite 为 true 时无限持续，否则持续默认时长 */
 	public static LivingItemEntity summon(Level level, Player player, boolean infinite) {
 		if (player == null) {
 			return null;
@@ -47,14 +51,17 @@ public final class LivingItemAPI {
 		return summon(level, player, player.getOffhandItem(), infinite ? -1 : DEFAULT_TICKS, true);
 	}
 
+	/** 在指定世界中以指定物品召唤生命物品实体，持续 ticks 刻（-1 表示无限） */
 	public static LivingItemEntity summon(Level level, Player player, ItemStack stack, int ticks) {
 		return summon(level, player, stack, ticks, false);
 	}
 
+	/** 在指定世界中以指定物品召唤生命物品实体；infinite 为 true 时无限持续，否则持续默认时长 */
 	public static LivingItemEntity summon(Level level, Player player, ItemStack stack, boolean infinite) {
 		return summon(level, player, stack, infinite ? -1 : DEFAULT_TICKS, false);
 	}
 
+	/** 从玩家副手召唤一个无限持续的生命物品实体 */
 	public static LivingItemEntity summonInfinite(Player player) {
 		if (player == null) {
 			return null;
@@ -62,6 +69,7 @@ public final class LivingItemAPI {
 		return summon(player.level(), player, player.getOffhandItem(), -1, true);
 	}
 
+	/** 在指定世界中从玩家副手召唤一个无限持续的生命物品实体 */
 	public static LivingItemEntity summonInfinite(Level level, Player player) {
 		if (player == null) {
 			return null;
@@ -69,6 +77,7 @@ public final class LivingItemAPI {
 		return summon(level, player, player.getOffhandItem(), -1, true);
 	}
 
+	/** 在指定世界中以指定物品召唤一个无限持续的生命物品实体 */
 	public static LivingItemEntity summonInfinite(Level level, Player player, ItemStack stack) {
 		return summon(level, player, stack, -1, false);
 	}
@@ -91,7 +100,8 @@ public final class LivingItemAPI {
 		return items.size();
 	}
 
-	private static List<LivingItemEntity> collectAll(Player owner) {
+	/** 收集主人所有正在生存的生命物品 */
+	public static List<LivingItemEntity> collectAll(Player owner) {
 		if (owner == null || owner.level().isClientSide) {
 			return List.of();
 		}
