@@ -82,6 +82,7 @@ dependencies {
     implementation "com.tacz:tacz-neoforge:1.1.6-hotfix-r5-hm"
     implementation "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1"
     api "me.shedaniel:RoughlyEnoughItems-neoforge:16.0.799"
+    runtimeOnly "maven.modrinth:jade:15.10.5+neoforge"
 }
 
 tasks.withType(JavaCompile).configureEach {
