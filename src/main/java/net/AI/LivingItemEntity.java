@@ -46,8 +46,10 @@ import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.entity.EntityTypeTest;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.scores.PlayerTeam;
 import net.neoforged.neoforge.common.NeoForgeMod;
@@ -114,7 +116,7 @@ public class LivingItemEntity extends PathfinderMob {
 
 	public void applyItemStats() {
 		ItemStack stack = this.getCarriedStack();
-		double damage = 2.0;
+		double damage = 0.0;
 		double speed = 4.0;
 		ItemAttributeModifiers mods = stack.get(DataComponents.ATTRIBUTE_MODIFIERS);
 		if (mods != null) {
@@ -132,7 +134,7 @@ public class LivingItemEntity extends PathfinderMob {
 		if (this.getAttribute(Attributes.ATTACK_DAMAGE) != null) {
 			this.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(Math.max(0.0, damage));
 		}
-		this.attackInterval = (int) Math.max(1, Math.round(20.0 / Math.max(0.1, speed)));
+		this.attackInterval = (int) Math.max(1, Math.round(20.0 / Math.max(0.1, speed))) + 4;
 	}
 
 	public void setAttackRange(double range) {
@@ -164,6 +166,10 @@ public class LivingItemEntity extends PathfinderMob {
 			return serverLevel.getServer().getPlayerList().getPlayer(uuid);
 		}
 		return null;
+	}
+
+	public UUID getOwnerUuid() {
+		return this.entityData.get(DATA_OWNER).orElse(null);
 	}
 
 	public void joinOwnerTeam(Player owner) {
@@ -401,6 +407,7 @@ public class LivingItemEntity extends PathfinderMob {
 		if (target.hurt(this.level().damageSources().playerAttack(owner), damage)) {
 			this.entityData.set(DATA_SWING, 5);
 			this.attackCooldown = this.attackInterval;
+			stack.getItem().hurtEnemy(stack, target, owner);
 		}
 	}
 
@@ -429,7 +436,7 @@ public class LivingItemEntity extends PathfinderMob {
 
 	private void attemptRightClick(Player owner) {
 		ItemStack stack = this.getCarriedStack();
-		if (stack.isEmpty()) {
+		if (stack.isEmpty() || owner == null) {
 			return;
 		}
 		Item item = stack.getItem();
@@ -440,19 +447,76 @@ public class LivingItemEntity extends PathfinderMob {
 			return;
 		}
 		this.entityData.set(DATA_ROTATE, 10);
+		LivingEntity focus = this.getTarget() != null ? this.getTarget() : owner;
 		if (isBowLike(stack)) {
-			LivingEntity target = this.getTarget();
-			if (target != null) {
-				bowShot(owner, target);
+			if (focus != owner) {
+				bowShot(owner, focus);
 			}
 			return;
 		}
+		if (item == Items.WATER_BUCKET || item == Items.LAVA_BUCKET || item == Items.POWDER_SNOW_BUCKET) {
+			placeFluidAt(focus, item);
+			return;
+		}
+		if (item instanceof ProjectileItem projectileItem) {
+			launchProjectile(owner, focus, stack, projectileItem);
+			return;
+		}
+		useAsPlayer(owner, stack);
+	}
+
+	private void launchProjectile(Player owner, LivingEntity focus, ItemStack stack, ProjectileItem projectileItem) {
+		Vec3 pos = this.position().add(0, this.getBbHeight() * 0.8, 0);
+		Vec3 dir = focus.getEyePosition().subtract(pos).normalize();
+		if (stack.getItem() instanceof EnderpearlItem) {
+			if (owner != null) {
+				ThrownEnderpearl pearl = new ThrownEnderpearl(this.level(), owner);
+				pearl.setPos(pos.x, pos.y, pos.z);
+				pearl.setItem(stack);
+				pearl.shoot(dir.x, dir.y, dir.z, 1.5F, 1.0F);
+				this.level().addFreshEntity(pearl);
+			}
+		} else {
+			Projectile projectile = projectileItem.asProjectile(this.level(), pos, stack, Direction.UP);
+			if (owner != null) {
+				projectile.setOwner(owner);
+			}
+			projectile.setPos(pos.x, pos.y, pos.z);
+			projectile.setDeltaMovement(dir.scale(1.2));
+			this.level().addFreshEntity(projectile);
+		}
+	}
+
+	private void placeFluidAt(LivingEntity focus, Item item) {
+		Level level = this.level();
+		if (level.isClientSide) {
+			return;
+		}
+		BlockPos pos = focus.blockPosition();
+		if (!level.getBlockState(pos).canBeReplaced()) {
+			pos = pos.above();
+		}
+		BlockState state = null;
+		if (item == Items.WATER_BUCKET) {
+			state = Fluids.WATER.defaultFluidState().createLegacyBlock();
+		} else if (item == Items.LAVA_BUCKET) {
+			state = Fluids.LAVA.defaultFluidState().createLegacyBlock();
+		} else if (item == Items.POWDER_SNOW_BUCKET) {
+			state = Blocks.POWDER_SNOW.defaultBlockState();
+		}
+		if (state != null && level.getBlockState(pos).canBeReplaced()) {
+			level.setBlockAndUpdate(pos, state);
+			level.playSound(null, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 1.0F, 1.0F);
+		}
+	}
+
+	private void useAsPlayer(Player owner, ItemStack stack) {
 		int slot = owner.getInventory().selected;
 		ItemStack oldHand = owner.getInventory().getItem(slot);
 		owner.getInventory().setItem(slot, stack);
 		ItemStack out;
 		try {
-			out = item.use(this.level(), owner, InteractionHand.MAIN_HAND).getObject();
+			out = stack.getItem().use(this.level(), owner, InteractionHand.MAIN_HAND).getObject();
 		} finally {
 			owner.getInventory().setItem(slot, oldHand);
 		}
@@ -518,8 +582,9 @@ public class LivingItemEntity extends PathfinderMob {
 		}
 		Item item = stack.getItem();
 		Player owner = getOwner();
+		LivingEntity aim = this.getTarget() != null ? this.getTarget() : owner;
 		Vec3 pos = this.position().add(0, this.getBbHeight() * 0.8, 0);
-		Vec3 dir = this.getLookAngle();
+		Vec3 dir = aim != null ? aim.getEyePosition().subtract(pos).normalize() : this.getLookAngle();
 		if (item instanceof EnderpearlItem) {
 			if (owner != null) {
 				ThrownEnderpearl pearl = new ThrownEnderpearl(this.level(), owner);

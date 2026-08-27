@@ -66,8 +66,8 @@ public class LivingItemRenderer extends EntityRenderer<LivingItemEntity> {
 		}
 		float progress = 1.0F - swing / 5.0F;
 		if (stack.getItem() instanceof DiggerItem) {
-			// 工具类：从侧面挥动（绕水平轴翻转，像抡镐/斧）
-			poseStack.mulPose(Axis.XP.rotationDegrees(-70.0F * progress));
+			// 工具类：向前刺出（沿朝向平移捅出去）
+			poseStack.translate(0.0, 0.0, progress * 0.5F);
 		} else {
 			// 其他物品：正面摆动（绕物品平面法线轴）
 			poseStack.mulPose(Axis.ZP.rotationDegrees(-45.0F * progress));

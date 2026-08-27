@@ -3,9 +3,14 @@ package net.AI;
 import net.mcreator.ceshi.init.PrimogemcraftModEntities;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.entity.EntityTypeTest;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public final class LivingItemAPI {
 
@@ -66,6 +71,33 @@ public final class LivingItemAPI {
 
 	public static LivingItemEntity summonInfinite(Level level, Player player, ItemStack stack) {
 		return summon(level, player, stack, -1, false);
+	}
+
+	/** 设置主人所有正在生存的生命物品的剩余时长为 ticks（-1 表示无限），返回受影响数量 */
+	public static int setDurationForAll(Player owner, int ticks) {
+		List<LivingItemEntity> items = collectAll(owner);
+		for (LivingItemEntity entity : items) {
+			entity.setRemainingTicks(ticks);
+		}
+		return items.size();
+	}
+
+	/** 给主人所有正在生存的生命物品的时长增减 deltaTicks（正数延长、负数缩短），返回受影响数量 */
+	public static int addDurationForAll(Player owner, int deltaTicks) {
+		List<LivingItemEntity> items = collectAll(owner);
+		for (LivingItemEntity entity : items) {
+			entity.setRemainingTicks(entity.getRemainingTicks() + deltaTicks);
+		}
+		return items.size();
+	}
+
+	private static List<LivingItemEntity> collectAll(Player owner) {
+		if (owner == null || owner.level().isClientSide) {
+			return List.of();
+		}
+		ServerLevel serverLevel = (ServerLevel) owner.level();
+		EntityTypeTest<Entity, LivingItemEntity> test = EntityTypeTest.forClass(LivingItemEntity.class);
+		return new ArrayList<>(serverLevel.getEntities(test, entity -> owner.getUUID().equals(entity.getOwnerUuid())));
 	}
 
 	private static LivingItemEntity summon(Level level, Player player, ItemStack stack, int ticks, boolean takeOffhand) {
