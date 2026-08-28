@@ -9,6 +9,8 @@
     "minecraft:lava_bucket",
     "minecraft:ender_pearl",
     "minecraft:wind_charge",
-    "minecraft:powder_snow_bucket"
+    "minecraft:powder_snow_bucket",
+    "minecraft:flint_and_steel",
+    "minecraft:fishing_rod"
   ]
 }

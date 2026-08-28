@@ -24,6 +24,10 @@ public class LivingItemDrop extends ItemEntity {
 		}
 	}
 
+	public UUID getOwnerUuid() {
+		return this.ownerUuid;
+	}
+
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
 		return false;

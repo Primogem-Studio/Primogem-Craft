@@ -1,0 +1,10 @@
+{
+  "item": "primogemcraft:xingqiong",
+  "effect": "primogemcraft:zhaohui",
+  "pharm": 8,
+  "stability": -10,
+  "colors": [
+    4284055551
+  ],
+  "description": "item.elixir.material.desc.primogemcraft.main.zhaohui"
+}

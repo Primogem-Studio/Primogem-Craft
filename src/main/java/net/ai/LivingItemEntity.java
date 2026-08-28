@@ -27,6 +27,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MoverType;
 import net.minecraft.world.entity.PathfinderMob;
+import net.minecraft.world.entity.RelativeMovement;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
@@ -52,6 +53,7 @@ import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Explosion;
+import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Blocks;
@@ -74,6 +76,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.Set;
 import java.util.UUID;
 
 public class LivingItemEntity extends PathfinderMob {
@@ -525,6 +528,15 @@ public class LivingItemEntity extends PathfinderMob {
 	}
 
 	private void followOwner(Player owner) {
+		if (this.level().dimension() != owner.level().dimension()) {
+			if (owner.level() instanceof ServerLevel ownerLevel) {
+				this.teleportTo(ownerLevel, owner.getX(), owner.getY() + 2.5, owner.getZ(), Set.of(), owner.getYRot(), 0);
+			} else {
+				this.teleportTo(owner.getX(), owner.getY() + 2.5, owner.getZ());
+			}
+			this.hoverTarget = null;
+			return;
+		}
 		double distSq = this.distanceToSqr(owner);
 		if (distSq > 24.0 * 24.0) {
 			this.teleportTo(owner.getX(), owner.getY() + 2.5, owner.getZ());
@@ -545,6 +557,8 @@ public class LivingItemEntity extends PathfinderMob {
 		if (distToHover > 0.5 * 0.5) {
 			steerTo(this.hoverTarget.x, this.hoverTarget.y, this.hoverTarget.z, MOVE_SPEED_IDLE);
 			this.lookAt(owner, 30.0F, 30.0F);
+		} else {
+			this.hoverTarget = null;
 		}
 	}
 
@@ -691,6 +705,9 @@ public class LivingItemEntity extends PathfinderMob {
 			this.setTarget(null);
 			return false;
 		}
+		if (target.invulnerableTime > 0) {
+			target.invulnerableTime = Math.max(1, target.invulnerableTime / 4);
+		}
 		if (stack.canPerformAction(ItemAbilities.SWORD_SWEEP) || stack.getItem().getAttackDamageBonus(target, baseDamage, source) > 0.0F) {
 			sweepAttack(serverLevel, owner, target, stack, baseDamage);
 		}
@@ -735,7 +752,9 @@ public class LivingItemEntity extends PathfinderMob {
 						&& !(e instanceof LivingItemEntity li && Objects.equals(li.getOwnerUuid(), this.getOwnerUuid()))
 						&& this.distanceToSqr(e) < 9.0);
 		for (LivingEntity e : list) {
-			e.hurt(source, EnchantmentHelper.modifyDamage(serverLevel, stack, e, source, sweepDamage));
+			if (e.hurt(source, EnchantmentHelper.modifyDamage(serverLevel, stack, e, source, sweepDamage)) && e.invulnerableTime > 0) {
+				e.invulnerableTime = Math.max(1, e.invulnerableTime / 4);
+			}
 		}
 		serverLevel.playSound(null, this.getX(), this.getY(), this.getZ(), SoundEvents.PLAYER_ATTACK_SWEEP, SoundSource.PLAYERS, 1.0F, 1.0F);
 		serverLevel.sendParticles(ParticleTypes.SWEEP_ATTACK, this.getX(), this.getY() + 0.3, this.getZ(), 1, 0.0, 0.0, 0.0, 0.0);
@@ -1054,14 +1073,15 @@ public class LivingItemEntity extends PathfinderMob {
 		playDisappearEffects();
 		ItemStack stack = this.getCarriedStack();
 		Player owner = getOwner();
+		boolean deathDrop = owner != null && owner.isDeadOrDying() && !owner.level().getGameRules().getBoolean(GameRules.RULE_KEEPINVENTORY);
 		boolean added = false;
-		if (owner != null && !stack.isEmpty()) {
+		if (owner != null && !stack.isEmpty() && !deathDrop) {
 			added = owner.getInventory().add(stack);
 		}
 		if (!stack.isEmpty() && !added) {
-			double x = owner != null ? owner.getX() : this.getX();
-			double y = owner != null ? owner.getY() : this.getY();
-			double z = owner != null ? owner.getZ() : this.getZ();
+			double x = owner != null && !deathDrop ? owner.getX() : this.getX();
+			double y = owner != null && !deathDrop ? owner.getY() : this.getY();
+			double z = owner != null && !deathDrop ? owner.getZ() : this.getZ();
 			if (this.level() instanceof ServerLevel serverLevel && y < serverLevel.getMinBuildHeight() + 5) {
 				BlockPos spawn = serverLevel.getSharedSpawnPos();
 				x = spawn.getX() + 0.5;

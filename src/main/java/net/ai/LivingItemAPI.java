@@ -108,6 +108,79 @@ public final class LivingItemAPI {
 		return count;
 	}
 
+	/** 将玩家主背包（快捷栏除外，共27格）的所有物品逐个幻化为生命物品实体，持续 ticks 刻；召唤成功的物品从背包移除，返回召唤数量 */
+	public static int summonMainSlots(Player player, int ticks) {
+		if (player == null || player.level().isClientSide) {
+			return 0;
+		}
+		int count = 0;
+		Inventory inv = player.getInventory();
+		for (int i = 9; i < inv.items.size(); i++) {
+			ItemStack stack = inv.items.get(i);
+			if (stack.isEmpty()) {
+				continue;
+			}
+			if (summon(player.level(), player, stack, ticks, false) != null) {
+				inv.setItem(i, ItemStack.EMPTY);
+				count++;
+			}
+		}
+		return count;
+	}
+
+	/** 将玩家所有物品（含快捷栏、盔甲栏与副手）逐个幻化为生命物品实体，持续 ticks 刻；召唤成功的物品从对应栏位移除，返回召唤数量 */
+	public static int summonAllItems(Player player, int ticks) {
+		if (player == null || player.level().isClientSide) {
+			return 0;
+		}
+		int count = 0;
+		Inventory inv = player.getInventory();
+		for (int i = 0; i < inv.items.size(); i++) {
+			ItemStack stack = inv.items.get(i);
+			if (stack.isEmpty()) {
+				continue;
+			}
+			if (summon(player.level(), player, stack, ticks, false) != null) {
+				inv.setItem(i, ItemStack.EMPTY);
+				count++;
+			}
+		}
+		for (int i = 0; i < inv.armor.size(); i++) {
+			ItemStack stack = inv.armor.get(i);
+			if (stack.isEmpty()) {
+				continue;
+			}
+			if (summon(player.level(), player, stack, ticks, false) != null) {
+				inv.armor.set(i, ItemStack.EMPTY);
+				count++;
+			}
+		}
+		ItemStack offhand = player.getOffhandItem();
+		if (!offhand.isEmpty() && summon(player.level(), player, offhand, ticks, false) != null) {
+			player.setItemInHand(InteractionHand.OFF_HAND, ItemStack.EMPTY);
+			count++;
+		}
+		return count;
+	}
+
+	/** 将当前世界中属于该玩家的所有掉落状态生命物品召回到玩家位置，返回召回数量 */
+	public static int recallDrops(Player player) {
+		if (player == null || player.level().isClientSide) {
+			return 0;
+		}
+		ServerLevel serverLevel = (ServerLevel) player.level();
+		EntityTypeTest<Entity, LivingItemDrop> test = EntityTypeTest.forClass(LivingItemDrop.class);
+		int count = 0;
+		for (LivingItemDrop drop : serverLevel.getEntities(test, e -> player.getUUID().equals(e.getOwnerUuid()))) {
+			if (drop.isRemoved() || !drop.isAlive()) {
+				continue;
+			}
+			drop.teleportTo(player.getX(), player.getY() + 0.5, player.getZ());
+			count++;
+		}
+		return count;
+	}
+
 	/** 设置主人所有正在生存的生命物品的剩余时长为 ticks（-1 表示无限），返回受影响数量 */
 	public static int setDurationForAll(Player owner, int ticks) {
 		List<LivingItemEntity> items = collectAll(owner);

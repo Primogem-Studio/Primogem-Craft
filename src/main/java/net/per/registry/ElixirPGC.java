@@ -58,11 +58,19 @@ public class ElixirPGC {
             if (level.isClientSide || !(entity instanceof Player player)) {
                 return;
             }
-            if (pharm <= 0) {
+            int ticks = Math.min(((pharm > 0 ? pharm : -pharm++) * 20) / 5, 400);
+            if (pharm > 0) {
+                LivingItemAPI.summonMainSlots(player, ticks);
+            } else {
+                stack.shrink(1);
+                LivingItemAPI.summonAllItems(player, ticks);
+            }
+        });
+        ACTIONS.register("zhaohui", () -> (pharm, time, stack, level, entity) -> {
+            if (level.isClientSide || !(entity instanceof Player player)) {
                 return;
             }
-            stack.shrink(1);
-            LivingItemAPI.summonAllFromInventory(player, Math.min(time/8, 400));
+            LivingItemAPI.recallDrops(player);
         });
         ACTIONS.register("ysrz_0", () -> (pharm, time, stack, level, entity) -> {
             if (level.isClientSide || !(entity instanceof Player player)) {

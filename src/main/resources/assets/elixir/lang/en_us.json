@@ -9,6 +9,8 @@
   "item.elixir.material.desc.primogemcraft.main.qwfjjwl": "药理为正时延长所有生命物品持续时间，为负时缩短；调整后时长介于3秒与8秒之间（模组自定义效果）",
   "item.elixir.material.desc.primogemcraft.main.jlliang": "药理为正时将副手物品幻化为生命物品（持续时长随药理增加），为负时将所有生命物品持续时间归零（模组自定义效果）",
   "item.elixir.material.desc.primogemcraft.off.jlliang": "辅料：渐少计算——贡献为基础值减去当前药理绝对值，最低为0，药理越多药理越少（模组自定义计算）",
-  "item.elixir.material.desc.primogemcraft.main.yuansujingti": "将背包所有物品幻化为生命物品，药理越多持续时间越久，最多20秒；负药理无事发生（模组自定义效果）",
+  "item.elixir.material.desc.primogemcraft.main.yuansujingti": "药理为正：幻化背包除快捷栏外的27格物品；为负：幻化全部物品（含快捷栏与盔甲）。持续时间与药理无关（模组自定义效果）",
+  "item.elixir.action.primogemcraft.zhaohui": "召回",
+  "item.elixir.material.desc.primogemcraft.main.zhaohui": "将掉落状态的所有生命物品召回至玩家位置（模组自定义效果）",
   "item.elixir.material.desc.primogemcraft.main.ysrz_0": "将副手物品幻化为永久的生命物品（不受药理影响）；手动收回后物品返还，需重新炼制才能再次幻化（模组自定义效果）"
 }
