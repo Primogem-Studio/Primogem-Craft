@@ -305,12 +305,7 @@ public class LivingItemEntity extends PathfinderMob {
 		if (ownerUuid != null && ownerUuid.equals(attacker.getUUID())) {
 			return false;
 		}
-		if (this.invulnerableTime > 0) {
-			return false;
-		}
-		float finalAmount = Math.max(0.0F, amount);
-		this.setHealth(Math.max(0.0F, this.getHealth() - finalAmount));
-		this.invulnerableTime = 20;
+		if (!super.hurt(source, amount)) return false;
 		if (attacker.isAlive() && this.isAlive()) {
 			this.setLastHurtByMob(attacker);
 			this.ownerAttackMemory.put(attacker.getUUID(), this.level().getGameTime());
