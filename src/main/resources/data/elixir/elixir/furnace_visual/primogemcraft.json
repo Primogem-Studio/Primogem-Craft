@@ -3,7 +3,8 @@
   "options": [
     {
       "texture": "elixir:block/elixir_furnace_morua",
-      "cover_texture": "elixir:block/elixir_furnace_cover_morua"
+      "cover_texture": "elixir:block/elixir_furnace_cover_morua",
+      "active_texture": "primogemcraft:block/yuanshi2"
     }
   ]
 }
